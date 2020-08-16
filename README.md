@@ -1,4 +1,4 @@
-# VBB Software proyecto final
+# VVB Software proyecto final
 ## Auto Consulta Medica
 ---
 ### Institucion
@@ -14,7 +14,7 @@ Type | id | pass
 --- | --- | ---
 Paciente | 22222222 | paciente1
 Gerente | 11111111 | contraseña1
-Medico |  | 
+Medico | 66666666 | medico1
 
 ---
 [Software page]()

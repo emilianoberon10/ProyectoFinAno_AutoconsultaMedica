@@ -31,7 +31,9 @@ Public Class Medico
     End Sub
 
 #End Region
+
 #Region "Metodos"
+
     Public Overloads Function Listar() As DataTable
         Dim consu As New DBMedicos()
         Return consu.ObtenerMedicos()
@@ -39,7 +41,9 @@ Public Class Medico
 
     Public Overloads Function Guardar() As Boolean
         Dim consu As New DBMedicos()
-        Return consu.SetMedico(Me._ci, Me._especialidad, Me._numMed)
+        Return consu.SetMedico(Me._ci, Me._especialidad, Me._numMed, Me._contraseña,
+                   Me._tel_cel, Me._edad, Me._domicilio,
+                   Me._sexo, Me._pNom, Me._sNom, Me._pApe, Me._sApe)
     End Function
 
     Public Overloads Function Modificar() As Boolean
@@ -63,4 +67,5 @@ Public Class Medico
     End Function
 
 #End Region
+
 End Class

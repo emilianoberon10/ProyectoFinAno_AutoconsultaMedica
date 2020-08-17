@@ -13,6 +13,10 @@ Public Class Paciente
 
 #Region "construc"
 
+    Public Sub New()
+
+    End Sub
+
     Public Sub New(ci As String)
         MyBase.New(ci)
     End Sub
@@ -58,15 +62,21 @@ Public Class Paciente
     End Function
 
     Public Overrides Function Guardar() As Boolean
-        Return MyBase.Guardar()
+        Dim cons As New DBPaciente
+        Return cons.SetPaciente(Me._ci, Me._mail, Me._contraseña,
+                   Me._tel_cel, Me._edad, Me._domicilio,
+                   Me._sexo, Me._pNom, Me._sNom,
+                   Me._pApe, Me._sApe, Me._fechaNac)
     End Function
 
     Public Overrides Function Borrar() As Boolean
-        Return MyBase.Borrar()
+        Dim cons As New DBPaciente
+
     End Function
 
     Public Overrides Function Modificar() As Boolean
-        Return MyBase.Modificar()
+        Dim cons As New DBPaciente
+
     End Function
 
     Public Overrides Function Listar() As Boolean

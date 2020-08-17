@@ -14,7 +14,6 @@ C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Deb
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\DataAccess.pdb
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\DataAccess.xml
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\MySql.Data.xml
-C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Form1.resources
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Resources.resources
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.vbproj.GenerateResource.cache
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.vbproj.CoreCompileInputs.cache

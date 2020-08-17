@@ -7,10 +7,14 @@ Public Class DBMedicos
     End Sub
 
     'Guardar medicos
-    Public Function SetMedico(ciMedico As String, especialidad As String, numMedico As Integer) As Boolean
+    Public Function SetMedico(ciMedico As String, especialidad As String, numMedico As Integer, LugarTrabajo As String,
+                              contraseña As String, tel_cel As Object, domicilio As String, sexo As String, pNom As String,
+                              sNom As String, pApe As String, sApe As String) As Boolean
         Try
             Using _connection = GetConnection()
                 Using _command = New MySqlCommand
+                    _command.Connection = _connection
+
                     _command.CommandText = "SELECT * FROM medico WHERE EXISTS (SELECT ciM FROM medico WHERE ciM=@ci"
                     _command.Parameters.AddWithValue("@ci", ciMedico)
                     _command.CommandType = CommandType.Text
@@ -19,9 +23,21 @@ Public Class DBMedicos
                         reader.Dispose()
                         Return True
                     Else
-                        _command.CommandText = "INSERT INTO medico(ciM,numMed,especialidad) VALUES('@ci','@num','@espec')"
+                        reader.Dispose()
+
+                        _command.CommandText = "INSERT INTO persona VALUES(@ci,@tel,@domi,@sexo,@pnom,@pape,@snom,@sape);"
+                        _command.CommandText &= "INSERT INTO medico(ciM,numMed,especialidad,lugarTrabajo,contraseña) VALUES(@ci,@num,@espec,@lugartrab,@contraseña)"
+                        _command.Parameters.AddWithValue("@tel", tel_cel)
+                        _command.Parameters.AddWithValue("@domi", domicilio)
+                        _command.Parameters.AddWithValue("@sexo", sexo)
+                        _command.Parameters.AddWithValue("@pnom", pNom)
+                        _command.Parameters.AddWithValue("@snom", sNom)
+                        _command.Parameters.AddWithValue("@pape", pApe)
+                        _command.Parameters.AddWithValue("@sape", sApe)
                         _command.Parameters.AddWithValue("@num", numMedico)
                         _command.Parameters.AddWithValue("@espec", especialidad)
+                        _command.Parameters.AddWithValue("@lugartrab", LugarTrabajo)
+                        _command.Parameters.AddWithValue("@contraseña", contraseña)
                         _command.ExecuteNonQuery()
                         Return False
                     End If
@@ -54,6 +70,8 @@ Public Class DBMedicos
                         reader.Dispose()
                         Return True
                     Else
+                        reader.Dispose()
+
                         _command.CommandText = "DELETE FROM medico WHERE ciM=@ci;"
                         _command.ExecuteNonQuery()
                         Return False

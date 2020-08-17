@@ -4,12 +4,14 @@ Public Class DBPaciente
     Inherits ConexionBD
 
     Public Function SetPaciente(ci As String, mail As String, contraseña As String,
-                   tel_cel As Object, edad As Object, domicilio As String,
+                   tel_cel As Integer, edad As Integer, domicilio As String,
                    sexo As String, pNom As String, sNom As String,
                    pApe As String, sApe As String, fechaNac As Date) As Boolean
         Try
             Using _connection = GetConnection()
                 Using _command = New MySqlCommand
+                    _command.Connection = _connection
+
                     _command.CommandText = "SELECT * FROM paciente WHERE EXISTS (SELECT ciP FROM paciente WHERE ciP=@ci"
                     _command.Parameters.AddWithValue("@ci", ci)
                     _command.CommandType = CommandType.Text
@@ -21,7 +23,7 @@ Public Class DBPaciente
                         reader.Dispose()
 
                         _command.CommandText = "INSERT INTO persona VALUES(@ci,@tel,@domi,@sexo,@pnom,@pape,@snom,@sape);"
-                        _command.CommandText = "INSERT INTO paciente VALUES(@ci,@mail,@fechaNac,@contraseña);"
+                        _command.CommandText &= "INSERT INTO paciente VALUES(@ci,@mail,@fechaNac,@contraseña);"
 
                         _command.Parameters.AddWithValue("@tel", tel_cel)
                         _command.Parameters.AddWithValue("@domi", domicilio)

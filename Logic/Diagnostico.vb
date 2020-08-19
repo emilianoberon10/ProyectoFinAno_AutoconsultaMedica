@@ -15,7 +15,7 @@ Public Class Diagnostico
         _fecha = fecha
     End Sub
 
-    Public Function Generar() As DataTable
+    Public Function Generar(ci As String) As DataTable
         Dim cons As New DBDiagnostico
         Return cons.Diagnostico()
     End Function

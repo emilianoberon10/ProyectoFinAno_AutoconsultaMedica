@@ -35,8 +35,8 @@ Public Class FrmConsultaPaciente
         'y lo muestro en un dataGrid
         dgvDiagnostico.DataSource = diag.Generar(FrmLogIn.paci._ci)
         btnChat.Show()
-
-        diag.GuardarDiagnostico(FrmLogIn.paci._ci, ObtenerValoresDataGrid(0))
+        Dim enfermedad As String = ObtenerValoresDataGrid(0)
+        diag.GuardarDiagnostico(FrmLogIn.paci._ci, enfermedad)
     End Sub
 
     Private Function ObtenerValoresDataGrid(rowIndex As Integer) As String

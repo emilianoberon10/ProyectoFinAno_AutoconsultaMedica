@@ -13,7 +13,7 @@ Public Class DBDiagnostico
             connection.Open()
             Using command = New MySqlCommand()
                 command.Connection = connection
-                command.CommandText = "Insert into diagnostico(idDiag,idP,nomE,fecha) Values(null,@idP,@nomE,CURTIME());"
+                command.CommandText = "Insert into diagnostico(idDiag,idP,nomE,fecha) Values(null,@idP,@nomE,CURDATE());"
                 command.Parameters.AddWithValue("@idP", ci)
                 command.Parameters.AddWithValue("@nomE", enfermedades)
                 command.CommandType = CommandType.Text

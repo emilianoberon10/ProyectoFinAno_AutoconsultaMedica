@@ -35,7 +35,7 @@ Public Class FrmConsultaPaciente
         FrmLogIn.paci.Selcciona(_sintomas, FrmLogIn.paci._ci, fechaSeleccion, hora)
         'apartir de la tabla selec genero el diagnostico
         'y lo muestro en un dataGrid
-        dgvDiagnostico.DataSource = diag.Generar()
+        dgvDiagnostico.DataSource = diag.Generar(FrmLogIn.paci._ci)
         btnChat.Show()
 
         diag.GuardarDiagnostico(FrmLogIn.paci._ci, ObtenerValoresDataGrid(0), fechaSeleccion)

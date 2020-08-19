@@ -3,8 +3,8 @@
 Public Class DBDiagnostico
     Inherits ConexionBD
 
-    Public Function Diagnostico() As DataTable
-        Dim _consultaSQL As String = "select nomEnf from define E, selec S where E.nomSint=S.nomSint and idPac='22222222' and dia=CURDATE() and hora between curtime()-1 and curtime()+1 group by nomEnf;"
+    Public Function Diagnostico(ci As String) As DataTable
+        Dim _consultaSQL As String = "select nomEnf from define E, selec S where E.nomSint=S.nomSint and idPac='"& ci &"' and dia=CURDATE() and hora between curtime()-1 and curtime()+1 group by nomEnf;"
         Return DevolverTabla(_consultaSQL)
     End Function
 

@@ -41,9 +41,9 @@ Public Class Paciente
 
 #Region "Metodos"
 
-    Public Sub Selcciona(sintomas As ArrayList, ci As String, dia As String, hora As String)
+    Public Sub Selcciona(sintomas As ArrayList)
         Dim cons As New DBSintomas
-        cons.GuardarSeleccion(sintomas, ci, dia, hora)
+        cons.GuardarSeleccion(sintomas, Me._ci)
     End Sub
 
     Public Function Solicita() As Boolean

@@ -17,8 +17,6 @@ Public Class FrmConsultaPaciente
     Private Sub btnConsul_Click(sender As Object, e As EventArgs) Handles btnConsul.Click
         Dim diag As New Diagnostico()
 
-        Dim fechaSeleccion As String = DateString
-        Dim hora As String = TimeString
         'creo un array de los sintomas seleccionados
         Dim _sintomas As New ArrayList
         'agrego cada sintoma del comboBox al array
@@ -32,13 +30,13 @@ Public Class FrmConsultaPaciente
         If cbSintoma8.Text = "SINTOMA" Then Else _sintomas.Add(cbSintoma8.Text)
 
         'lo agrego para diagnosticar
-        FrmLogIn.paci.Selcciona(_sintomas, FrmLogIn.paci._ci, fechaSeleccion, hora)
+        FrmLogIn.paci.Selcciona(_sintomas)
         'apartir de la tabla selec genero el diagnostico
         'y lo muestro en un dataGrid
-        dgvDiagnostico.DataSource = diag.Generar()
+        dgvDiagnostico.DataSource = diag.Generar(FrmLogIn.paci._ci)
         btnChat.Show()
 
-        diag.GuardarDiagnostico(FrmLogIn.paci._ci, ObtenerValoresDataGrid(0), fechaSeleccion)
+        diag.GuardarDiagnostico(FrmLogIn.paci._ci, ObtenerValoresDataGrid(0))
     End Sub
 
     Private Function ObtenerValoresDataGrid(rowIndex As Integer) As String

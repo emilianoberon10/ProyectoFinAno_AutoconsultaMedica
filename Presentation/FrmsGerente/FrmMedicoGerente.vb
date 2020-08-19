@@ -14,7 +14,7 @@ Public Class FrmMedicoGerente
         Else
             Dim medico As New Medico(txtCedula.Text, Integer.Parse(txtTelefono.Text), txtEdad.Text,
                                      txtDomicilio.Text, cbSexo.Text, txtPNom.Text, txtPApe.Text, txtSnom.Text,
-                                     txtSape.Text, txtEspecialidad.Text, txtLugarTrabajo.Text)
+                                     txtSape.Text, txtEspecialidad.Text, txtLugarTrabajo.Text, txtCedula.Text)
             If medico.Guardar() Then
                 MsgBox("Ya existe un medico con esa cedula")
             Else

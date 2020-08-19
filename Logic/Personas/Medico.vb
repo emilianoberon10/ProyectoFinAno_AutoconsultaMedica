@@ -23,11 +23,12 @@ Public Class Medico
 
     Public Sub New(ci As String, tel_cel As Integer, edad As Integer,
                    domicilio As String, sexo As String, sNom As String,
-                   pNom As String, pApe As String, sApe As String, especialidad As String, lugarTrabajo As String)
+                   pNom As String, pApe As String, sApe As String, especialidad As String, lugarTrabajo As String, contraseña As String)
 
         MyBase.New(ci, tel_cel, edad, domicilio, sexo, pNom, pApe, sNom, sApe)
         _especialidad = especialidad
         _lugarTrabajo = lugarTrabajo
+        _contraseña = contraseña
     End Sub
 
 #End Region

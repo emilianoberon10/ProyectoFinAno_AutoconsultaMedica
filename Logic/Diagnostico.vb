@@ -15,14 +15,14 @@ Public Class Diagnostico
         _fecha = fecha
     End Sub
 
-    Public Function Generar() As DataTable
+    Public Function Generar(ci As String) As DataTable
         Dim cons As New DBDiagnostico
-        Return cons.Diagnostico()
+        Return cons.Diagnostico(ci)
     End Function
 
-    Public Sub GuardarDiagnostico(ci As String, enfermedad As String, dia As String)
+    Public Sub GuardarDiagnostico(ci As String, enfermedad As String)
         Dim cons As New DBDiagnostico
-        cons.GuardarDiagnostico(ci, enfermedad, dia)
+        cons.GuardarDiagnostico(ci, enfermedad)
     End Sub
 
 End Class

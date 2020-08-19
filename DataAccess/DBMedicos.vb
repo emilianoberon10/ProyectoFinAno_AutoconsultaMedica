@@ -26,7 +26,8 @@ Public Class DBMedicos
                         reader.Dispose()
 
                         _command.CommandText = "INSERT INTO persona VALUES(@ci,@tel,@domi,@sexo,@pnom,@pape,@snom,@sape);"
-                        _command.CommandText &= "INSERT INTO medico(ciM,numMed,especialidad,lugarTrabajo,contraseña) VALUES(@ci,@num,@espec,@lugartrab,@contraseña)"
+                        _command.CommandText &= "DECLARE @idEspec NVARCHAR(50); SET @idEspec = (SELECT id FROM Especialidad WHERE nombre=@espec );"
+                        _command.CommandText &= "INSERT INTO medico(ciM,numMed,especialidad,lugarTrabajo,contraseña) VALUES(@ci,@num,@idEspec,@lugartrab,@contraseña)"
                         _command.Parameters.AddWithValue("@tel", tel_cel)
                         _command.Parameters.AddWithValue("@domi", domicilio)
                         _command.Parameters.AddWithValue("@sexo", sexo)
@@ -51,7 +52,7 @@ Public Class DBMedicos
     ' Obtener tabla medicos
     Public Function ObtenerMedicos() As DataTable
         Dim _consultaSQL As String
-        _consultaSQL = "SELECT * FROM medico"
+        _consultaSQL = "SELECT *,nombre FROM medico M, especialidad E WHERE M.idEspecialidad = E.id"
         Return DevolverTabla(_consultaSQL)
     End Function
 
@@ -72,7 +73,7 @@ Public Class DBMedicos
                     Else
                         reader.Dispose()
 
-                        _command.CommandText = "DELETE FROM medico WHERE ciM=@ci;"
+                        _command.CommandText = "DELETE FROM chat WHERE idMEd=@ci;DELETE FROM medico WHERE ciM=@ci;DELETE FROM persona WHERE ci=@ci;"
                         _command.ExecuteNonQuery()
                         Return False
                     End If

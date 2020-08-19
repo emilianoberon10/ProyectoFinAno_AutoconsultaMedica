@@ -9,8 +9,7 @@ Public Class DBSintomas
     End Sub
 
     'Guardar sintomas seleccionados
-    Public Function GuardarSeleccion(sintomas As ArrayList, ci As String,
-                                     dia As String, hora As String) As Boolean
+    Public Function GuardarSeleccion(sintomas As ArrayList, ci As String) As Boolean
         Try
             Using _connection = GetConnection()
                 _connection.Open()

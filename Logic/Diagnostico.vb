@@ -17,7 +17,7 @@ Public Class Diagnostico
 
     Public Function Generar(ci As String) As DataTable
         Dim cons As New DBDiagnostico
-        Return cons.Diagnostico()
+        Return cons.Diagnostico(ci)
     End Function
 
     Public Sub GuardarDiagnostico(ci As String, enfermedad As String, dia As String)

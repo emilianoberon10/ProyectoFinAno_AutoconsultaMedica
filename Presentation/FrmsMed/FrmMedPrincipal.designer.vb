@@ -25,7 +25,7 @@ Partial Class FrmMedPrincipal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMedPrincipal))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnCerrarPrograma = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
@@ -39,7 +39,7 @@ Partial Class FrmMedPrincipal
         Me.panelChildMedico = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnCerrarPrograma, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,7 +52,7 @@ Partial Class FrmMedPrincipal
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
         Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.btnCerrarPrograma)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -69,15 +69,16 @@ Partial Class FrmMedPrincipal
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
-        'PictureBox1
+        'btnCerrarPrograma
         '
-        Me.PictureBox1.Image = Global.Presentation.My.Resources.Resources.Close_Icon
-        Me.PictureBox1.Location = New System.Drawing.Point(996, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(16, 16)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.btnCerrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCerrarPrograma.Image = Global.Presentation.My.Resources.Resources.Close_Icon
+        Me.btnCerrarPrograma.Location = New System.Drawing.Point(996, 12)
+        Me.btnCerrarPrograma.Name = "btnCerrarPrograma"
+        Me.btnCerrarPrograma.Size = New System.Drawing.Size(16, 16)
+        Me.btnCerrarPrograma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.btnCerrarPrograma.TabIndex = 0
+        Me.btnCerrarPrograma.TabStop = False
         '
         'Panel2
         '
@@ -226,7 +227,7 @@ Partial Class FrmMedPrincipal
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnCerrarPrograma, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -244,7 +245,7 @@ Partial Class FrmMedPrincipal
     Friend WithEvents panelChildMedico As Panel
     Friend WithEvents btnCerrar As Button
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnCerrarPrograma As PictureBox
     Friend WithEvents btnChats As Button
     Friend WithEvents btnSolicitudes As Button
     Friend WithEvents PictureBox3 As PictureBox

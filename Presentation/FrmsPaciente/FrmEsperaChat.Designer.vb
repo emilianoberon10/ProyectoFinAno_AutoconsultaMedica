@@ -26,7 +26,7 @@ Partial Class FrmEsperaChat
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CircularProgressBar1 = New CircularProgressBar.CircularProgressBar()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lbNombre = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
@@ -88,16 +88,16 @@ Partial Class FrmEsperaChat
         Me.CircularProgressBar1.TextMargin = New System.Windows.Forms.Padding(8, 8, 0, 0)
         Me.CircularProgressBar1.Value = 68
         '
-        'Label3
+        'lbNombre
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Silver
-        Me.Label3.Location = New System.Drawing.Point(326, 105)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 22)
-        Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Usuario"
+        Me.lbNombre.AutoSize = True
+        Me.lbNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbNombre.ForeColor = System.Drawing.Color.Silver
+        Me.lbNombre.Location = New System.Drawing.Point(326, 105)
+        Me.lbNombre.Name = "lbNombre"
+        Me.lbNombre.Size = New System.Drawing.Size(75, 22)
+        Me.lbNombre.TabIndex = 11
+        Me.lbNombre.Text = "Usuario"
         '
         'Label2
         '
@@ -127,7 +127,7 @@ Partial Class FrmEsperaChat
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(732, 310)
         Me.Controls.Add(Me.CircularProgressBar1)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lbNombre)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label1)
@@ -143,7 +143,7 @@ Partial Class FrmEsperaChat
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents CircularProgressBar1 As CircularProgressBar.CircularProgressBar
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lbNombre As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer

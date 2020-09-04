@@ -6,29 +6,34 @@ Public Class DBMedicos
     Public Sub New()
     End Sub
 
+#Region "ABM"
+
     'Guardar medicos
     Public Function SetMedico(ciMedico As String, especialidad As String, numMedico As Integer, LugarTrabajo As String,
                               contraseña As String, tel_cel As Object, domicilio As String, sexo As String, pNom As String,
-                              sNom As String, pApe As String, sApe As String) As Boolean
-        Try
-            Using _connection = GetConnection()
-                Using _command = New MySqlCommand
-                    _command.Connection = _connection
+                              sNom As String, pApe As String, sApe As String, edad As Integer) As Boolean
+        Using _connection = GetConnection()
+            _connection.Open()
 
-                    _command.CommandText = "SELECT * FROM medico WHERE EXISTS (SELECT ciM FROM medico WHERE ciM=@ci"
-                    _command.Parameters.AddWithValue("@ci", ciMedico)
-                    _command.CommandType = CommandType.Text
-                    Dim reader As MySqlDataReader = _command.ExecuteReader
-                    If reader.HasRows Then
-                        reader.Dispose()
-                        Return True
-                    Else
+            Using _command = New MySqlCommand
+                _command.Connection = _connection
+
+                _command.CommandText = "SELECT * FROM medico WHERE EXISTS (SELECT ciM FROM medico WHERE ciM=@ci)"
+                _command.Parameters.AddWithValue("@ci", ciMedico)
+                _command.CommandType = CommandType.Text
+                Dim reader As MySqlDataReader = _command.ExecuteReader
+                If reader.HasRows Then
+                    reader.Dispose()
+                    Return True
+                Else
+                    Try
                         reader.Dispose()
 
-                        _command.CommandText = "INSERT INTO persona VALUES(@ci,@tel,@domi,@sexo,@pnom,@pape,@snom,@sape);"
-                        _command.CommandText &= "DECLARE @idEspec NVARCHAR(50); SET @idEspec = (SELECT id FROM Especialidad WHERE nombre=@espec );"
-                        _command.CommandText &= "INSERT INTO medico(ciM,numMed,especialidad,lugarTrabajo,contraseña) VALUES(@ci,@num,@idEspec,@lugartrab,@contraseña)"
+                        _command.CommandText = "SET @idEspec = (SELECT id FROM especialidad WHERE nombre=@espec);"
+                        _command.CommandText &= "INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe) VALUES(@ci,@tel,@edad,@domi,@sexo,@pnom,@snom,@pape,@sape);"
+                        _command.CommandText &= "INSERT INTO medico(ciM,numMed,idEspecialidad,lugarTrabajo,contraseña) VALUES(@ci,@num,@idEspec,@lugartrab,@contraseña)"
                         _command.Parameters.AddWithValue("@tel", tel_cel)
+                        _command.Parameters.AddWithValue("@edad", edad)
                         _command.Parameters.AddWithValue("@domi", domicilio)
                         _command.Parameters.AddWithValue("@sexo", sexo)
                         _command.Parameters.AddWithValue("@pnom", pNom)
@@ -40,13 +45,79 @@ Public Class DBMedicos
                         _command.Parameters.AddWithValue("@lugartrab", LugarTrabajo)
                         _command.Parameters.AddWithValue("@contraseña", contraseña)
                         _command.ExecuteNonQuery()
-                        Return False
-                    End If
-                End Using
+                    Catch ex As MySqlException
+                        Throw New SystemException("ERROR:(setMedico):" & ex.Message)
+                    End Try
+                    Return False
+                End If
             End Using
-        Catch ex As Exception
-            MsgBox("ERROR(DBMedicos,SetMedico)" & ex.Message)
-        End Try
+        End Using
+    End Function
+
+    Public Function SetHorariosMedico(ci As String, horario As String, dia As String) As Boolean
+
+        Using _connection = GetConnection()
+            _connection.Open()
+
+            Using _command = New MySqlCommand
+                _command.Connection = _connection
+
+                _command.CommandText = "SELECT * FROM medico WHERE EXISTS (SELECT ciM FROM medico WHERE ciM=@ci)"
+                _command.Parameters.AddWithValue("@ci", ci)
+                _command.CommandType = CommandType.Text
+                Dim reader As MySqlDataReader = _command.ExecuteReader
+
+                If reader.HasRows Then
+                    reader.Dispose()
+                    Select Case dia
+                        Case "lun"
+                            _command.CommandText = "UPDATE medico SET lun=@horario WHERE ciM=@ci;"
+                            _command.Parameters.AddWithValue("@horario", horario)
+                            _command.ExecuteNonQuery()
+                            Return False
+
+                        Case "mar"
+                            _command.CommandText = "UPDATE medico SET mar=@horario WHERE ciM=@ci;"
+                            _command.Parameters.AddWithValue("@horario", horario)
+                            _command.ExecuteNonQuery()
+                            Return False
+
+                        Case "mie"
+                            _command.CommandText = "UPDATE medico SET mie=@horario WHERE ciM=@ci;"
+                            _command.Parameters.AddWithValue("@horario", horario)
+                            _command.ExecuteNonQuery()
+                            Return False
+
+                        Case "jue"
+                            _command.CommandText = "UPDATE medico SET jue=@horario WHERE ciM=@ci;"
+                            _command.Parameters.AddWithValue("@horario", horario)
+                            _command.ExecuteNonQuery()
+                            Return False
+
+                        Case "vie"
+                            _command.CommandText = "UPDATE medico SET vie=@horario WHERE ciM=@ci;"
+                            _command.Parameters.AddWithValue("@horario", horario)
+                            _command.ExecuteNonQuery()
+                            Return False
+
+                        Case "sab"
+                            _command.CommandText = "UPDATE medico SET sab=@horario WHERE ciM=@ci;"
+                            _command.Parameters.AddWithValue("@horario", horario)
+                            _command.ExecuteNonQuery()
+                            Return False
+
+                        Case "dom"
+                            _command.CommandText = "UPDATE medico SET dom=@horario WHERE ciM=@ci;"
+                            _command.Parameters.AddWithValue("@horario", horario)
+                            _command.ExecuteNonQuery()
+                            Return False
+
+                    End Select
+                Else
+                    Return True
+                End If
+            End Using
+        End Using
     End Function
 
     ' Obtener tabla medicos
@@ -69,18 +140,18 @@ Public Class DBMedicos
                     Dim reader = _command.ExecuteReader()
                     If reader.HasRows Then
                         reader.Dispose()
-                        Return True
-                    Else
-                        reader.Dispose()
 
                         _command.CommandText = "DELETE FROM chat WHERE idMEd=@ci;DELETE FROM medico WHERE ciM=@ci;DELETE FROM persona WHERE ci=@ci;"
                         _command.ExecuteNonQuery()
                         Return False
+                    Else
+                        Return True
                     End If
                 End Using
             End Using
         Catch ex As Exception
-            MsgBox("ERROR(DBMedicos,BorarMedico):" & ex.Message)
+            Throw New SystemException("ERROR:(BorrarMedico):" & ex.Message)
+
             Return Nothing
         End Try
     End Function
@@ -92,7 +163,7 @@ Public Class DBMedicos
                 _connection.Open()
                 Using _command = New MySqlCommand()
                     _command.Connection = _connection
-                    _command.CommandText = "UPDATE medico SET ciM=@ci,numMed=@num,especialidad=@espec"
+                    _command.CommandText = "UPDATE medico SET numMed=@num,especialidad=@espec WHERE ciM=@ci"
                     _command.Parameters.AddWithValue("@ci", ciMedico)
                     _command.Parameters.AddWithValue("@numMed", numMedico)
                     _command.Parameters.AddWithValue("@especialidad", especialidad)
@@ -102,10 +173,12 @@ Public Class DBMedicos
                 End Using
             End Using
         Catch ex As Exception
-            MsgBox("ERROR(DBMedicos,ModifMedico):" & ex.Message)
+            Throw New SystemException("ERROR:(ModifMedico):" & ex.Message)
             Return Nothing
         End Try
     End Function
+
+#End Region
 
     Public Function AceptarChat(ciM As String, ciP As String, diagnostico As String) As Boolean
         Using _connection = GetConnection()
@@ -121,6 +194,34 @@ Public Class DBMedicos
                 Return True
             End Using
         End Using
+    End Function
+
+    Public Function VerAgenda() As DataTable
+        Dim sql As String = "SELECT pNom,sNom,pApe,sApe,nombre,lugarTrabajo,lun,mar,mie,jue,vie,sab,dom FROM Persona JOIN medico ON ci=ciM JOIN especialidad ON idEspecialidad=id"
+        Return DevolverTabla(sql)
+    End Function
+
+    Public Function VerAgendaFiltradoEsp(espe As String) As DataTable
+        Dim sql As String = "SELECT pNom,sNom,pApe,sApe,nombre,lugarTrabajo,lun,mar,mie,jue,vie,sab,dom FROM Persona
+                             JOIN medico ON ci=ciM
+                             JOIN especialidad as e ON idEspecialidad=id
+                             where e.nombre='" & espe & "';"
+
+        Return DevolverTabla(sql)
+    End Function
+
+    Public Function VerAgendaFiltradoCi(ci As String) As DataTable
+        Dim sql As String = "SELECT pNom,sNom,pApe,sApe,nombre,lugarTrabajo,lun,mar,mie,jue,vie,sab,dom FROM Persona
+                             JOIN medico as m ON ci=ciM
+                             JOIN especialidad as e ON idEspecialidad=id
+                             where m.ciM='" & ci & "';"
+
+        Return DevolverTabla(sql)
+    End Function
+
+    Public Function Especialidades() As DataSet
+        Dim sql As String = "SELECT * FROM especialidad"
+        Return DevolverParaComboBox(sql)
     End Function
 
 End Class

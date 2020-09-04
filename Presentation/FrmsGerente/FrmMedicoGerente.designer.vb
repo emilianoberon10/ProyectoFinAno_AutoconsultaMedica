@@ -38,22 +38,22 @@ Partial Class FrmMedicoGerente
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtHoraEntradaLunes = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.chkLun = New System.Windows.Forms.CheckBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.chkMar = New System.Windows.Forms.CheckBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.chkMier = New System.Windows.Forms.CheckBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.chkJuev = New System.Windows.Forms.CheckBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.chkVier = New System.Windows.Forms.CheckBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.chkSab = New System.Windows.Forms.CheckBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.chkDom = New System.Windows.Forms.CheckBox()
         Me.txtHoraSalidaLunes = New System.Windows.Forms.TextBox()
         Me.txtHoraEntradaMartes = New System.Windows.Forms.TextBox()
         Me.txtHoraSalidaMartes = New System.Windows.Forms.TextBox()
@@ -252,17 +252,17 @@ Partial Class FrmMedicoGerente
         Me.Label8.TabIndex = 3
         Me.Label8.Text = "Ingeras Medico"
         '
-        'CheckBox1
+        'chkLun
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.CheckBox1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.ForeColor = System.Drawing.Color.Silver
-        Me.CheckBox1.Location = New System.Drawing.Point(171, 31)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox1.TabIndex = 4
-        Me.CheckBox1.UseVisualStyleBackColor = False
+        Me.chkLun.AutoSize = True
+        Me.chkLun.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.chkLun.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkLun.ForeColor = System.Drawing.Color.Silver
+        Me.chkLun.Location = New System.Drawing.Point(171, 31)
+        Me.chkLun.Name = "chkLun"
+        Me.chkLun.Size = New System.Drawing.Size(15, 14)
+        Me.chkLun.TabIndex = 4
+        Me.chkLun.UseVisualStyleBackColor = False
         '
         'Label9
         '
@@ -308,17 +308,17 @@ Partial Class FrmMedicoGerente
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "Martes"
         '
-        'CheckBox2
+        'chkMar
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.CheckBox2.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.ForeColor = System.Drawing.Color.Silver
-        Me.CheckBox2.Location = New System.Drawing.Point(242, 31)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox2.TabIndex = 4
-        Me.CheckBox2.UseVisualStyleBackColor = False
+        Me.chkMar.AutoSize = True
+        Me.chkMar.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.chkMar.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkMar.ForeColor = System.Drawing.Color.Silver
+        Me.chkMar.Location = New System.Drawing.Point(242, 31)
+        Me.chkMar.Name = "chkMar"
+        Me.chkMar.Size = New System.Drawing.Size(15, 14)
+        Me.chkMar.TabIndex = 4
+        Me.chkMar.UseVisualStyleBackColor = False
         '
         'Label13
         '
@@ -331,17 +331,17 @@ Partial Class FrmMedicoGerente
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "Miercoles"
         '
-        'CheckBox3
+        'chkMier
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.CheckBox3.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox3.ForeColor = System.Drawing.Color.Silver
-        Me.CheckBox3.Location = New System.Drawing.Point(309, 31)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox3.TabIndex = 4
-        Me.CheckBox3.UseVisualStyleBackColor = False
+        Me.chkMier.AutoSize = True
+        Me.chkMier.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.chkMier.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkMier.ForeColor = System.Drawing.Color.Silver
+        Me.chkMier.Location = New System.Drawing.Point(309, 31)
+        Me.chkMier.Name = "chkMier"
+        Me.chkMier.Size = New System.Drawing.Size(15, 14)
+        Me.chkMier.TabIndex = 4
+        Me.chkMier.UseVisualStyleBackColor = False
         '
         'Label14
         '
@@ -354,17 +354,17 @@ Partial Class FrmMedicoGerente
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "Jueves"
         '
-        'CheckBox4
+        'chkJuev
         '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.CheckBox4.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.ForeColor = System.Drawing.Color.Silver
-        Me.CheckBox4.Location = New System.Drawing.Point(383, 31)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox4.TabIndex = 4
-        Me.CheckBox4.UseVisualStyleBackColor = False
+        Me.chkJuev.AutoSize = True
+        Me.chkJuev.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.chkJuev.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkJuev.ForeColor = System.Drawing.Color.Silver
+        Me.chkJuev.Location = New System.Drawing.Point(383, 31)
+        Me.chkJuev.Name = "chkJuev"
+        Me.chkJuev.Size = New System.Drawing.Size(15, 14)
+        Me.chkJuev.TabIndex = 4
+        Me.chkJuev.UseVisualStyleBackColor = False
         '
         'Label15
         '
@@ -377,17 +377,17 @@ Partial Class FrmMedicoGerente
         Me.Label15.TabIndex = 0
         Me.Label15.Text = "Viernes"
         '
-        'CheckBox5
+        'chkVier
         '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.CheckBox5.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox5.ForeColor = System.Drawing.Color.Silver
-        Me.CheckBox5.Location = New System.Drawing.Point(444, 30)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox5.TabIndex = 4
-        Me.CheckBox5.UseVisualStyleBackColor = False
+        Me.chkVier.AutoSize = True
+        Me.chkVier.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.chkVier.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkVier.ForeColor = System.Drawing.Color.Silver
+        Me.chkVier.Location = New System.Drawing.Point(444, 30)
+        Me.chkVier.Name = "chkVier"
+        Me.chkVier.Size = New System.Drawing.Size(15, 14)
+        Me.chkVier.TabIndex = 4
+        Me.chkVier.UseVisualStyleBackColor = False
         '
         'Label16
         '
@@ -400,17 +400,17 @@ Partial Class FrmMedicoGerente
         Me.Label16.TabIndex = 0
         Me.Label16.Text = "Sabado"
         '
-        'CheckBox6
+        'chkSab
         '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.CheckBox6.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox6.ForeColor = System.Drawing.Color.Silver
-        Me.CheckBox6.Location = New System.Drawing.Point(511, 30)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox6.TabIndex = 4
-        Me.CheckBox6.UseVisualStyleBackColor = False
+        Me.chkSab.AutoSize = True
+        Me.chkSab.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.chkSab.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkSab.ForeColor = System.Drawing.Color.Silver
+        Me.chkSab.Location = New System.Drawing.Point(511, 30)
+        Me.chkSab.Name = "chkSab"
+        Me.chkSab.Size = New System.Drawing.Size(15, 14)
+        Me.chkSab.TabIndex = 4
+        Me.chkSab.UseVisualStyleBackColor = False
         '
         'Label17
         '
@@ -423,17 +423,17 @@ Partial Class FrmMedicoGerente
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "Domingo"
         '
-        'CheckBox7
+        'chkDom
         '
-        Me.CheckBox7.AutoSize = True
-        Me.CheckBox7.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.CheckBox7.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox7.ForeColor = System.Drawing.Color.Silver
-        Me.CheckBox7.Location = New System.Drawing.Point(588, 31)
-        Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox7.TabIndex = 4
-        Me.CheckBox7.UseVisualStyleBackColor = False
+        Me.chkDom.AutoSize = True
+        Me.chkDom.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.chkDom.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkDom.ForeColor = System.Drawing.Color.Silver
+        Me.chkDom.Location = New System.Drawing.Point(588, 31)
+        Me.chkDom.Name = "chkDom"
+        Me.chkDom.Size = New System.Drawing.Size(15, 14)
+        Me.chkDom.TabIndex = 4
+        Me.chkDom.UseVisualStyleBackColor = False
         '
         'txtHoraSalidaLunes
         '
@@ -655,13 +655,13 @@ Partial Class FrmMedicoGerente
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.CheckBox7)
-        Me.Panel1.Controls.Add(Me.CheckBox6)
-        Me.Panel1.Controls.Add(Me.CheckBox5)
-        Me.Panel1.Controls.Add(Me.CheckBox4)
-        Me.Panel1.Controls.Add(Me.CheckBox3)
-        Me.Panel1.Controls.Add(Me.CheckBox2)
-        Me.Panel1.Controls.Add(Me.CheckBox1)
+        Me.Panel1.Controls.Add(Me.chkDom)
+        Me.Panel1.Controls.Add(Me.chkSab)
+        Me.Panel1.Controls.Add(Me.chkVier)
+        Me.Panel1.Controls.Add(Me.chkJuev)
+        Me.Panel1.Controls.Add(Me.chkMier)
+        Me.Panel1.Controls.Add(Me.chkMar)
+        Me.Panel1.Controls.Add(Me.chkLun)
         Me.Panel1.Controls.Add(Me.Label16)
         Me.Panel1.Controls.Add(Me.Label15)
         Me.Panel1.Controls.Add(Me.Label14)
@@ -690,7 +690,7 @@ Partial Class FrmMedicoGerente
         Me.Panel1.Size = New System.Drawing.Size(635, 144)
         Me.Panel1.TabIndex = 6
         '
-        'FrmMedico
+        'FrmMedicoGerente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -721,7 +721,7 @@ Partial Class FrmMedicoGerente
         Me.Controls.Add(Me.txtCedula)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FrmMedico"
+        Me.Name = "FrmMedicoGerente"
         Me.Text = "FrmMedico"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -746,22 +746,22 @@ Partial Class FrmMedicoGerente
     Friend WithEvents Label7 As Label
     Friend WithEvents txtHoraEntradaLunes As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents chkLun As CheckBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents chkMar As CheckBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents chkMier As CheckBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents chkJuev As CheckBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents CheckBox5 As CheckBox
+    Friend WithEvents chkVier As CheckBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents CheckBox6 As CheckBox
+    Friend WithEvents chkSab As CheckBox
     Friend WithEvents Label17 As Label
-    Friend WithEvents CheckBox7 As CheckBox
+    Friend WithEvents chkDom As CheckBox
     Friend WithEvents txtHoraSalidaLunes As TextBox
     Friend WithEvents txtHoraEntradaMartes As TextBox
     Friend WithEvents txtHoraSalidaMartes As TextBox

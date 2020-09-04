@@ -66,9 +66,8 @@
   <ItemGroup>
     <Compile Include="common\Login.vb" />
     <Compile Include="Define.vb" />
-    <Compile Include="Diagnostico.vb" />
     <Compile Include="Enfermedad.vb" />
-    <Compile Include="Personas\HorariosMedico.vb" />
+    <Compile Include="FichaMedica.vb" />
     <Compile Include="Personas\Gerente.vb" />
     <Compile Include="Personas\Medico.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

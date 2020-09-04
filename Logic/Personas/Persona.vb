@@ -1,4 +1,6 @@
-﻿Public MustInherit Class Persona
+﻿Imports DataAccess
+
+Public MustInherit Class Persona
 
 #Region "Atributos"
 
@@ -41,21 +43,27 @@
 #End Region
 
 #Region "Metodos"
+
     Public Overridable Function Guardar() As Boolean
 
     End Function
+
     Public Overridable Function Borrar() As Boolean
 
     End Function
+
     Public Overridable Function Modificar() As Boolean
 
     End Function
+
     Public Overridable Function Listar() As Boolean
 
     End Function
+
     Public Overridable Function ObtenerNombre() As String
 
     End Function
+
 #End Region
 
 End Class

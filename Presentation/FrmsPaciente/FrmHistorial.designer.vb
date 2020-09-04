@@ -27,20 +27,14 @@ Partial Class FrmHistorial
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHistorial))
         Me.btnFiltrar = New System.Windows.Forms.Button()
-        Me.cbFiltro = New System.Windows.Forms.ComboBox()
         Me.DgvHistorial = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.btnEntre = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DgvHistorial, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,26 +46,13 @@ Partial Class FrmHistorial
         Me.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFiltrar.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFiltrar.ForeColor = System.Drawing.Color.Silver
-        Me.btnFiltrar.Location = New System.Drawing.Point(277, 83)
+        Me.btnFiltrar.Location = New System.Drawing.Point(219, 88)
         Me.btnFiltrar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnFiltrar.Name = "btnFiltrar"
-        Me.btnFiltrar.Size = New System.Drawing.Size(233, 32)
+        Me.btnFiltrar.Size = New System.Drawing.Size(88, 28)
         Me.btnFiltrar.TabIndex = 41
         Me.btnFiltrar.Text = "FILTRAR"
         Me.btnFiltrar.UseVisualStyleBackColor = False
-        '
-        'cbFiltro
-        '
-        Me.cbFiltro.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.cbFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbFiltro.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbFiltro.ForeColor = System.Drawing.Color.Silver
-        Me.cbFiltro.FormattingEnabled = True
-        Me.cbFiltro.Location = New System.Drawing.Point(13, 86)
-        Me.cbFiltro.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.cbFiltro.Name = "cbFiltro"
-        Me.cbFiltro.Size = New System.Drawing.Size(256, 24)
-        Me.cbFiltro.TabIndex = 40
         '
         'DgvHistorial
         '
@@ -91,7 +72,6 @@ Partial Class FrmHistorial
         Me.DgvHistorial.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DgvHistorial.ColumnHeadersHeight = 30
         Me.DgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DgvHistorial.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -117,70 +97,16 @@ Partial Class FrmHistorial
         Me.DgvHistorial.Size = New System.Drawing.Size(752, 258)
         Me.DgvHistorial.TabIndex = 39
         '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Column1"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Width = 79
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Column2"
-        Me.Column2.Name = "Column2"
-        Me.Column2.Width = 79
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Column3"
-        Me.Column3.Name = "Column3"
-        Me.Column3.Width = 79
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Column4"
-        Me.Column4.Name = "Column4"
-        Me.Column4.Width = 79
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Column5"
-        Me.Column5.Name = "Column5"
-        Me.Column5.Width = 79
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Column6"
-        Me.Column6.Name = "Column6"
-        Me.Column6.Width = 79
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Column7"
-        Me.Column7.Name = "Column7"
-        Me.Column7.Width = 79
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Column8"
-        Me.Column8.Name = "Column8"
-        Me.Column8.Width = 79
-        '
-        'Column9
-        '
-        Me.Column9.HeaderText = "Column9"
-        Me.Column9.Name = "Column9"
-        Me.Column9.Width = 79
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(210, 3)
+        Me.Label2.Location = New System.Drawing.Point(198, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(311, 36)
+        Me.Label2.Size = New System.Drawing.Size(374, 36)
         Me.Label2.TabIndex = 38
-        Me.Label2.Text = "Historial de consultas"
+        Me.Label2.Text = "HISTORIAL DE CONSULTAS"
         '
         'LineShape1
         '
@@ -201,14 +127,63 @@ Partial Class FrmHistorial
         Me.ShapeContainer1.TabIndex = 42
         Me.ShapeContainer1.TabStop = False
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.CustomFormat = "yyyy-MM-dd"
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker1.Location = New System.Drawing.Point(13, 90)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 21)
+        Me.DateTimePicker1.TabIndex = 43
+        Me.DateTimePicker1.Value = New Date(2020, 8, 25, 0, 0, 0, 0)
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.CustomFormat = "yyyy-MM-dd"
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker2.Location = New System.Drawing.Point(425, 90)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 21)
+        Me.DateTimePicker2.TabIndex = 43
+        Me.DateTimePicker2.Value = New Date(2020, 8, 25, 0, 0, 0, 0)
+        '
+        'btnEntre
+        '
+        Me.btnEntre.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.btnEntre.FlatAppearance.BorderSize = 0
+        Me.btnEntre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnEntre.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEntre.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEntre.ForeColor = System.Drawing.Color.Silver
+        Me.btnEntre.Location = New System.Drawing.Point(331, 88)
+        Me.btnEntre.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnEntre.Name = "btnEntre"
+        Me.btnEntre.Size = New System.Drawing.Size(88, 28)
+        Me.btnEntre.TabIndex = 41
+        Me.btnEntre.Text = "ENTRE"
+        Me.btnEntre.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.Silver
+        Me.Label1.Location = New System.Drawing.Point(441, 71)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(152, 16)
+        Me.Label1.TabIndex = 44
+        Me.Label1.Text = "Esta fecha debe ser mayor"
+        '
         'FrmHistorial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(778, 699)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnEntre)
+        Me.Controls.Add(Me.DateTimePicker2)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.btnFiltrar)
-        Me.Controls.Add(Me.cbFiltro)
         Me.Controls.Add(Me.DgvHistorial)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ShapeContainer1)
@@ -224,18 +199,12 @@ Partial Class FrmHistorial
 
     End Sub
     Friend WithEvents btnFiltrar As Button
-    Friend WithEvents cbFiltro As ComboBox
     Friend WithEvents DgvHistorial As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Label2 As Label
     Friend WithEvents LineShape1 As PowerPacks.LineShape
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents btnEntre As Button
+    Friend WithEvents Label1 As Label
 End Class

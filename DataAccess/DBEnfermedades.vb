@@ -7,7 +7,7 @@ Public Class DBEnfermedades
     End Sub
 
     'Guardar una enfermedad
-    Public Function SetEnfermedad(nombreEnfermedad As String, riesgo As String, descripcion As String) As Boolean
+    Public Function SetEnfermedad(nombreEnfermedad As String, riesgo As Integer, descripcion As String) As Boolean
         Try
             Using _connection = GetConnection()
                 _connection.Open()
@@ -41,7 +41,7 @@ Public Class DBEnfermedades
     'Obtener tabla enfermedades
     Public Function ObtenerEnfermedades() As DataTable
         Dim _consultaSQL As String
-        _consultaSQL = "select idEnf,nombre,riesgo,descripcion,nomSint FROM enfermedad join define ON nombre=nomENf Group by nomEnf;"
+        _consultaSQL = "select idEnf,nombre,riesgo,descripcion,nomSint FROM enfermedad JOIN define ON nombre=nomENf Group by nomEnf;"
         Return DevolverTabla(_consultaSQL)
     End Function
 

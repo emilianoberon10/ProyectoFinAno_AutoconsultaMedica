@@ -34,11 +34,14 @@ CREATE TABLE Gerente(
     contraseña VARCHAR(40) NOT NULL UNIQUE KEY,
     CONSTRAINT fk_ciG FOREIGN KEY(ciG) REFERENCES Persona(ci)
 );
-
+CREATE TABLE especialidad(
+    id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(40) NOT NULL UNIQUE KEY
+);
 CREATE TABLE Medico(
     ciM CHAR(8) NOT NULL primary key,
     numMed INT(4),
-    especialidad VARCHAR(30) NOT NULL,
+    idEspecialidad INT(4) NOT NULL ,
     Lun char(15),
     Mar char(15),
     Mie char(15),
@@ -48,7 +51,8 @@ CREATE TABLE Medico(
     Dom char(15),
     lugarTrabajo VARCHAR(30) NOT NULL,
     contraseña VARCHAR(40) NOT NULL UNIQUE KEY,
-    CONSTRAINT fk_ciM FOREIGN KEY(ciM) REFERENCES Persona(ci)
+    CONSTRAINT fk_ciM FOREIGN KEY(ciM) REFERENCES Persona(ci),
+    CONSTRAINT fk_idEsp FOREIGN KEY(idEspecialidad) REFERENCES especialidad(id)
 );
 
 CREATE TABLE Riesgo (
@@ -170,6 +174,7 @@ CREATE TABLE solicita(
     )
 );
 
+
 -- Inserts -------------------------------------------------------------------------------
 -- PERSONAS: --
 INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('11111111',22344568,49,'Av.Libertad','Hombre','Marco','','Aurelio','De Partabas');
@@ -189,11 +194,15 @@ INSERT INTO paciente(ciP,contraseña,mail) VALUES('22222222','paciente1','elpaci
 INSERT INTO paciente(ciP,contraseña,mail) VALUES('44444444','paciente2','elpacientenumero2@mail.com');
 INSERT INTO paciente(ciP,contraseña,mail) VALUES('55555555','paciente3','elpacientenumero3@mail.com');
 INSERT INTO paciente(ciP,contraseña,mail) VALUES('88888888','paciente4','elpacientenumero4@mail.com');
+-- especialidad -- 
+insert into especialidad values (null,'Medico General');
+insert into especialidad values (null,'Pediatra');
+insert into especialidad values (null,'Nutricionista');
 -- Medicos: --
 INSERT INTO medico values
-	('66666666',0123,'Medicina General','08:15-14:00','','9:00-16:00','11:00-17:30','','','','Clinica Central','medico1');
+	('66666666',0123,1,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central','medico1');
 INSERT INTO medico values 
-	('77777777',1234,'Nutricionista','','07:00 - 13:00','08:20 - 16:40','','13:00-19:40','','','Clinica Central','medico2');
+	('77777777',1234,3,'','07:00 a 13:00','08:20 a 16:40','','13:00 a 19:40','','','Clinica Central','medico2');
     
 -- RIESGO --
 insert into Riesgo values (1,'rojo');

@@ -2,6 +2,7 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         OpenChildForm(New FrmConsultaPaciente, PanelChildFormPac)
+        lbNombre.Text = FrmLogIn.paci._pNom
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs)

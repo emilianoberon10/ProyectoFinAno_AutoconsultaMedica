@@ -29,7 +29,7 @@ Partial Class FrmBienvenida
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lbNombre = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.CircularProgressBar1 = New CircularProgressBar.CircularProgressBar()
@@ -63,7 +63,7 @@ Partial Class FrmBienvenida
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(71, 9)
+        Me.Label1.Location = New System.Drawing.Point(56, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(393, 33)
         Me.Label1.TabIndex = 1
@@ -90,16 +90,16 @@ Partial Class FrmBienvenida
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
-        'Label3
+        'lbNombre
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Silver
-        Me.Label3.Location = New System.Drawing.Point(470, 111)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 22)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Usuario"
+        Me.lbNombre.AutoSize = True
+        Me.lbNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbNombre.ForeColor = System.Drawing.Color.Silver
+        Me.lbNombre.Location = New System.Drawing.Point(470, 111)
+        Me.lbNombre.Name = "lbNombre"
+        Me.lbNombre.Size = New System.Drawing.Size(75, 22)
+        Me.lbNombre.TabIndex = 4
+        Me.lbNombre.Text = "Usuario"
         '
         'Timer1
         '
@@ -145,9 +145,9 @@ Partial Class FrmBienvenida
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Presentation.My.Resources.Resources.isotipoProyectowhite
-        Me.PictureBox2.Location = New System.Drawing.Point(8, 7)
+        Me.PictureBox2.Location = New System.Drawing.Point(7, 6)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(53, 39)
+        Me.PictureBox2.Size = New System.Drawing.Size(42, 42)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 7
         Me.PictureBox2.TabStop = False
@@ -160,7 +160,7 @@ Partial Class FrmBienvenida
         Me.ClientSize = New System.Drawing.Size(732, 310)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.CircularProgressBar1)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lbNombre)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -183,7 +183,7 @@ Partial Class FrmBienvenida
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lbNombre As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents CircularProgressBar1 As CircularProgressBar.CircularProgressBar

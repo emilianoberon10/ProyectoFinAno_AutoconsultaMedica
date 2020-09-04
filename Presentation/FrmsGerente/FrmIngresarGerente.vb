@@ -4,14 +4,14 @@ Public Class FrmIngresarGerente
 
     Private Sub FrmIngresar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim sintoma As New Sintoma()
-        cargarComboBox(cbSintoma1)
-        cargarComboBox(cbSintoma2)
-        cargarComboBox(cbSintoma3)
-        cargarComboBox(cbSintoma4)
-        cargarComboBox(cbSintoma5)
-        cargarComboBox(cbSintoma6)
-        cargarComboBox(cbSintoma7)
-        cargarComboBox(cbSintoma8)
+        cargarComboBoxSintomas(cbSintoma1)
+        cargarComboBoxSintomas(cbSintoma2)
+        cargarComboBoxSintomas(cbSintoma3)
+        cargarComboBoxSintomas(cbSintoma4)
+        cargarComboBoxSintomas(cbSintoma5)
+        cargarComboBoxSintomas(cbSintoma6)
+        cargarComboBoxSintomas(cbSintoma7)
+        cargarComboBoxSintomas(cbSintoma8)
     End Sub
 
     Private Sub btnIngresarSintoma_Click(sender As Object, e As EventArgs) Handles btnIngresarSintoma.Click
@@ -77,7 +77,7 @@ Public Class FrmIngresarGerente
             define = New Define(enfermedad._nombre, listaSintomas)
 
             If enfermedad.GuardarEnfermedad() Then
-                MsgBox("Ya existe ese sintoma")
+                MsgBox("Ya existe esa enfermedad")
             Else
                 define.GuardarDefine(define)
                 MsgBox("Se guardo con exito")

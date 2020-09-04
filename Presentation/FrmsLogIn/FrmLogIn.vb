@@ -6,6 +6,7 @@ Public Class FrmLogIn
     Public paci As Paciente
     Public gere As Gerente
     Public medic As Medico
+    Public tipoLogin As String
 
     ' Las letras In y Es al final de los labels significan Ingles y Español
     Private _languageState As String
@@ -31,27 +32,39 @@ Public Class FrmLogIn
             Case "Paciente"
                 Me.Hide()
                 Dim formwelcome As New FrmBienvenida()
+
+                paci = New Paciente(txtUser.Text) 'Guardo la ci del paciente para poder usarla luego
+                tipoLogin = "Paciente"
+
                 formwelcome.ShowDialog()
-                paci = New Paciente(txtUser.Text)
-                paci._pNom = paci.ObtenerNombre()
                 Dim form As New FrmPrincipalPaciente
                 form.Show()
                 AddHandler form.FormClosed, AddressOf Me.Logout
                 Me.Hide()
+
             Case "Gerente"
                 Me.Hide()
                 Dim formwelcome As New FrmBienvenida()
+
+                gere = New Gerente(txtUser.Text)  'Guardo la ci del paciente para poder usarla luego
+                tipoLogin = "Gerente"
+
                 formwelcome.ShowDialog()
-                gere = New Gerente(txtUser.Text)
+
                 Dim form As New FrmPrincipalGerente
                 form.Show()
                 AddHandler form.FormClosed, AddressOf Me.Logout
                 Me.Hide()
+
             Case "Medico"
                 Me.Hide()
                 Dim formwelcome As New FrmBienvenida()
+
+                medic = New Medico(txtUser.Text) 'Guardo la ci del paciente para poder usarla luego
+                tipoLogin = "Medico"
+
                 formwelcome.ShowDialog()
-                medic = New Medico(txtUser.Text)
+
                 Dim form As New FrmMedPrincipal
                 form.Show()
                 AddHandler form.FormClosed, AddressOf Me.Logout
@@ -105,6 +118,16 @@ Public Class FrmLogIn
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles btnInfo.Click
         Dim frm As New FrmInfo
         frm.ShowDialog()
+    End Sub
+
+    Private Sub PictureBox2_Click_1(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        If txtPass.UseSystemPasswordChar = True Then
+            PictureBox2.Image = My.Resources.password_open
+            txtPass.UseSystemPasswordChar = False
+        Else
+            PictureBox2.Image = My.Resources.password
+            txtPass.UseSystemPasswordChar = True
+        End If
     End Sub
 
 #Region "Estilisado"
@@ -167,6 +190,11 @@ Public Class FrmLogIn
 
 #Region "poder mover el form"
 
+    'DLLImport,Significa que el método declarado a
+    'continuación no está en .NET, sino en un archivo DLL externo (nativo).
+    'En este caso, se encuentra en el archivo User32.dll, que es un componente
+    'estándar de Windows. El cual nos permite utilizar los eventos/método del sistema
+    'operativo, en este caso capturar las señales del mouse.
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
     End Sub
@@ -180,11 +208,16 @@ Public Class FrmLogIn
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
-    'DLLImport,Significa que el método declarado a
-    'continuación no está en .NET, sino en un archivo DLL externo (nativo).
-    'En este caso, se encuentra en el archivo User32.dll, que es un componente
-    'estándar de Windows. El cual nos permite utilizar los eventos/método del sistema
-    'operativo, en este caso capturar las señales del mouse.
+    Private Sub txtPass_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPass.KeyPress
+        'al dar enter en el textBox de la contraseña genero un evento click para el boton login
+        'con el if compruebo que el keypress fue un enter y no otra letra
+        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
+            SendKeys.Send("{TAB}")
+            e.Handled = True
+            'aqui genero el evento click
+            btnLogin.PerformClick()
+        End If
+    End Sub
 
 #End Region 'region de mover form
 

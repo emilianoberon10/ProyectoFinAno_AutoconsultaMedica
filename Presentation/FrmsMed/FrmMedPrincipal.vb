@@ -1,7 +1,7 @@
 ﻿Public Class FrmMedPrincipal
 
     Private Sub FrmMedPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        lbNombre.Text = FrmLogIn.medic._pNom
     End Sub
 
     Private Sub btnSolicitudes_Click(sender As Object, e As EventArgs) Handles btnSolicitudes.Click

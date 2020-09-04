@@ -4,7 +4,10 @@ Public Class DBDiagnostico
     Inherits ConexionBD
 
     Public Function Diagnostico(ci As String) As DataTable
-        Dim _consultaSQL As String = "select nomEnf from define E, selec S where E.nomSint=S.nomSint and idPac='" & ci & "' and dia=CURDATE() and hora between curtime()-1 and curtime()+1 group by nomEnf;"
+        Dim _consultaSQL As String = "SELECT nomEnf FROM define E, selec S
+                                      WHERE E.nomSint=S.nomSint AND idPac='" & ci & "' and dia=CURDATE() AND
+                                      hora BETWEEN CURTIME()-1
+                                      AND CURTIME()+1 GROUP BY nomEnf;"
         Return DevolverTabla(_consultaSQL)
     End Function
 
@@ -13,19 +16,26 @@ Public Class DBDiagnostico
             connection.Open()
             Using command = New MySqlCommand()
                 command.Connection = connection
-                command.CommandText = "Insert into diagnostico(idDiag,idP,nomE,fecha) Values(null,@idP,@nomE,CURDATE());"
+                command.CommandText = "INSERT INTO diagnostico(idDiag,idP,nomE,fecha) VALUES(null,@idP,@nomE,CURDATE());"
                 command.Parameters.AddWithValue("@idP", ci)
                 command.Parameters.AddWithValue("@nomE", enfermedades)
                 command.CommandType = CommandType.Text
-                Dim reader = command.ExecuteReader()
-                If reader.HasRows Then
-                    reader.Dispose()
-                    Return True
-                Else
-                    Return False
-                End If
+                command.ExecuteNonQuery()
+                Return True
             End Using
         End Using
+    End Function
+
+    Public Function VerDiagnostico(ci As String) As DataTable
+        Return DevolverTabla("SELECT nomE,fecha FROM diagnostico WHERE idP='" & ci & "'")
+    End Function
+
+    Public Function VerDiagnosticoFecha(ci As String, fecha As String) As DataTable
+        Return DevolverTabla("SELECT nomE,fecha FROM diagnostico WHERE idP='" & ci & "' AND fecha='" & fecha & "'")
+    End Function
+
+    Public Function VerDiagnosticoEntreFecha(ci As String, fecha As String, fecha2 As String) As DataTable
+        Return DevolverTabla("SELECT nomE,fecha FROM diagnostico WHERE idP='" & ci & "' AND fecha >'" & fecha & "' AND fecha <'" & fecha2 & "'")
     End Function
 
 End Class

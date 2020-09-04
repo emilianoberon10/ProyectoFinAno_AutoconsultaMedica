@@ -4,68 +4,127 @@ Public Class FrmConsultaPaciente
 
     Private Sub Consulta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnChat.Visible = False
-        cargarComboBox(cbSintoma1)
-        cargarComboBox(cbSintoma2)
-        cargarComboBox(cbSintoma3)
-        cargarComboBox(cbSintoma4)
-        cargarComboBox(cbSintoma5)
-        cargarComboBox(cbSintoma6)
-        cargarComboBox(cbSintoma7)
-        cargarComboBox(cbSintoma8)
+        cargarComboBoxSintomas(cbSintoma1)
+        cargarComboBoxSintomas(cbSintoma2)
+        cargarComboBoxSintomas(cbSintoma3)
+        cargarComboBoxSintomas(cbSintoma4)
+        cargarComboBoxSintomas(cbSintoma5)
+        cargarComboBoxSintomas(cbSintoma6)
+        cargarComboBoxSintomas(cbSintoma7)
+        cargarComboBoxSintomas(cbSintoma8)
     End Sub
 
     Private Sub btnConsul_Click(sender As Object, e As EventArgs) Handles btnConsul.Click
-        Dim diag As New Diagnostico()
+        Try
+            'creo un array de los sintomas seleccionados
+            Dim _sintomas As New ArrayList
+            'agrego cada sintoma del comboBox al array
+            If cbSintoma1.Enabled = True Then _sintomas.Add(cbSintoma1.Text)
+            If cbSintoma2.Enabled = True Then _sintomas.Add(cbSintoma2.Text)
+            If cbSintoma3.Enabled = True Then _sintomas.Add(cbSintoma3.Text)
+            If cbSintoma4.Enabled = True Then _sintomas.Add(cbSintoma4.Text)
+            If cbSintoma5.Enabled = True Then _sintomas.Add(cbSintoma5.Text)
+            If cbSintoma6.Enabled = True Then _sintomas.Add(cbSintoma6.Text)
+            If cbSintoma7.Enabled = True Then _sintomas.Add(cbSintoma7.Text)
+            If cbSintoma8.Enabled = True Then _sintomas.Add(cbSintoma8.Text)
 
-        'creo un array de los sintomas seleccionados
-        Dim _sintomas As New ArrayList
-        'agrego cada sintoma del comboBox al array
-        If cbSintoma1.Text = "SINTOMA" Then Else _sintomas.Add(cbSintoma1.Text)
-        If cbSintoma2.Text = "SINTOMA" Then Else _sintomas.Add(cbSintoma2.Text)
-        If cbSintoma3.Text = "SINTOMA" Then Else _sintomas.Add(cbSintoma3.Text)
-        If cbSintoma4.Text = "SINTOMA" Then Else _sintomas.Add(cbSintoma4.Text)
-        If cbSintoma5.Text = "SINTOMA" Then Else _sintomas.Add(cbSintoma5.Text)
-        If cbSintoma6.Text = "SINTOMA" Then Else _sintomas.Add(cbSintoma6.Text)
-        If cbSintoma7.Text = "SINTOMA" Then Else _sintomas.Add(cbSintoma7.Text)
-        If cbSintoma8.Text = "SINTOMA" Then Else _sintomas.Add(cbSintoma8.Text)
+            'agrego los sintomas seleccionados para diagnosticar
+            FrmLogIn.paci.Selcciona(_sintomas)
 
-        'lo agrego para diagnosticar
-        FrmLogIn.paci.Selcciona(_sintomas)
-        'apartir de la tabla selec genero el diagnostico
-        'y lo muestro en un dataGrid
-        dgvDiagnostico.DataSource = diag.Generar(FrmLogIn.paci._ci)
-        btnChat.Show()
-        Dim enfermedad As String = ObtenerValoresDataGrid(0)
-        diag.GuardarDiagnostico(FrmLogIn.paci._ci, enfermedad)
+            'apartir de la tabla selec genero el diagnostico y lo muestro en un dataGridView
+            dgvDiagnostico.DataSource = FrmLogIn.paci.Generar()
+
+            Dim enfermedad As String
+
+            For filas As Integer = 0 To dgvDiagnostico.RowCount - 1
+                For Columnas As Integer = 0 To dgvDiagnostico.ColumnCount - 1
+                    enfermedad = dgvDiagnostico.Item(Columnas, filas).Value
+                    FrmLogIn.paci._diagnostico = enfermedad
+                    FrmLogIn.paci.GuardarDiagnostico()
+                Next
+            Next
+            'Dim f As New FrmFichaMedicaPaciente
+            'f.ShowDialog()
+            btnChat.Show()
+        Catch ex As Exception
+            ErrorProvider1.SetError(Me.Label2, ex.Message)
+        End Try
     End Sub
-
-    Private Function ObtenerValoresDataGrid(rowIndex As Integer) As String
-        If ((rowIndex < 0) OrElse (rowIndex > dgvDiagnostico.Rows.Count - 1)) Then
-            ' Si el índice especificado es menor que 0 o mayor que el número
-            ' total de filas existentes en el control DataGridView, abandonar
-            ' la función.
-            Return Nothing
-        End If
-        ' Nº de columnas del control DataGridView
-        Dim columnCount As Integer = dgvDiagnostico.ColumnCount - 1
-        ' Crear un nuevo objeto ArrayList cuyo número de elementos
-        ' será igual al número de columnas existentes en el control
-        ' DataGridView
-        Dim datosDGV As String
-        ' Añadir los elementos del objeto ArrayList conforme recorremos
-        ' las colección de celdas de la fila especificada
-        For n As Integer = 0 To columnCount
-            datosDGV = (dgvDiagnostico.Rows(rowIndex).Cells(n).Value)
-        Next
-        ' Devolver el objeto ArrayList.
-        Return datosDGV
-    End Function
 
     Private Sub btnChat_Click(sender As Object, e As EventArgs) Handles btnChat.Click
         FrmLogIn.paci.Solicita()
         Dim formwelcome As New FrmEsperaChat()
         formwelcome.ShowDialog()
     End Sub
+
+#Region "Activar sintomas"
+
+    Private Sub chb1_CheckedChanged(sender As Object, e As EventArgs) Handles chb1.CheckedChanged
+        If chb1.Checked Then
+            cbSintoma2.Enabled = True
+        Else
+            cbSintoma2.Enabled = False
+        End If
+    End Sub
+
+    Private Sub chb2_CheckedChanged(sender As Object, e As EventArgs) Handles chb2.CheckedChanged
+        If chb2.Checked Then
+            cbSintoma3.Enabled = True
+        Else
+            cbSintoma3.Enabled = False
+        End If
+    End Sub
+
+    Private Sub chb3_CheckedChanged(sender As Object, e As EventArgs) Handles chb3.CheckedChanged
+        If chb3.Checked Then
+            cbSintoma4.Enabled = True
+        Else
+            cbSintoma4.Enabled = False
+        End If
+    End Sub
+
+    Private Sub chb4_CheckedChanged(sender As Object, e As EventArgs) Handles chb4.CheckedChanged
+        cbSintoma5.Enabled = True
+        If chb4.Checked Then
+            cbSintoma5.Enabled = True
+        Else
+            cbSintoma5.Enabled = False
+        End If
+    End Sub
+
+    Private Sub chb5_CheckedChanged(sender As Object, e As EventArgs) Handles chb5.CheckedChanged
+        If chb5.Checked Then
+            cbSintoma6.Enabled = True
+        Else
+            cbSintoma6.Enabled = False
+        End If
+    End Sub
+
+    Private Sub chb6_CheckedChanged(sender As Object, e As EventArgs) Handles chb6.CheckedChanged
+        If chb6.Checked Then
+            cbSintoma7.Enabled = True
+        Else
+            cbSintoma7.Enabled = False
+        End If
+    End Sub
+
+    Private Sub chb7_CheckedChanged(sender As Object, e As EventArgs) Handles chb7.CheckedChanged
+        If chb7.Checked Then
+            cbSintoma8.Enabled = True
+        Else
+            cbSintoma8.Enabled = False
+        End If
+    End Sub
+
+    Private Sub chb8_CheckedChanged(sender As Object, e As EventArgs) Handles chb8.CheckedChanged
+        If chb8.Checked Then
+            cbSintoma9.Enabled = True
+        Else
+            cbSintoma9.Enabled = False
+        End If
+    End Sub
+
+#End Region
 
 #Region "styles"
 
@@ -89,10 +148,6 @@ Public Class FrmConsultaPaciente
     Private Sub btnChat_Paint(sender As Object, e As PaintEventArgs) Handles btnConsul.Paint, btnChat.Paint
         BotonRedondeado(btnConsul)
         BotonRedondeado(btnChat)
-    End Sub
-
-    Private Sub pnChildCons_Paint(sender As Object, e As PaintEventArgs) Handles pnChildCons.Paint
-
     End Sub
 
 #End Region

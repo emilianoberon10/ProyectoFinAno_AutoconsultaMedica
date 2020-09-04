@@ -1,6 +1,7 @@
 ﻿Public Class FrmPrincipalGerente
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lbNombre.Text = FrmLogIn.gere._pNom
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click

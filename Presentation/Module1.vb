@@ -45,7 +45,7 @@ Module Module1
 
     End Function
 
-    Public Sub cargarComboBox(cb As ComboBox)
+    Public Sub cargarComboBoxSintomas(cb As ComboBox)
         Dim sinObt As New Sintoma
         With cb
             .DataSource = sinObt.DevolverSintomaComboBox.Tables(0)

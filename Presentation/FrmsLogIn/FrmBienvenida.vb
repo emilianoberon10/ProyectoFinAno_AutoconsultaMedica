@@ -4,6 +4,16 @@
         CircularProgressBar1.Value = 0
         Me.Opacity = 0 'Iniciamos la opacidad en 0'
         Timer1.Start() 'Iniciamos el temporizador 1'
+        If FrmLogIn.tipoLogin = "Paciente" Then
+            FrmLogIn.paci._pNom = FrmLogIn.paci.ObtenerNombre() 'Guardo el nombre del paciente para personalizar su interfaz y mostrarlo en el chat
+            lbNombre.Text = FrmLogIn.paci._pNom
+        ElseIf FrmLogIn.tipoLogin = "Gerente" Then
+            FrmLogIn.gere._pNom = FrmLogIn.gere.ObtenerNombre() 'Guardo el nombre del paciente para personalizar su interfaz y mostrarlo en el chat
+            lbNombre.Text = FrmLogIn.gere._pNom
+        Else
+            FrmLogIn.medic._pNom = FrmLogIn.medic.ObtenerNombre() 'Guardo el nombre del paciente para personalizar su interfaz y mostrarlo en el chat
+            lbNombre.Text = FrmLogIn.medic._pNom
+        End If
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

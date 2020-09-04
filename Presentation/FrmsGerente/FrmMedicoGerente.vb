@@ -18,7 +18,16 @@ Public Class FrmMedicoGerente
             If medico.Guardar() Then
                 MsgBox("Ya existe un medico con esa cedula")
             Else
+                If chkLun.Checked Then medico._horario = txtHoraEntradaLunes.Text & " a " & txtHoraSalidaLunes.Text And medico.SetHorario("lun")
+                If chkMar.Checked Then medico._horario = txtHoraEntradaMartes.Text & " a " & txtHoraSalidaMartes.Text And medico.SetHorario("mar")
+                If chkMier.Checked Then medico._horario = txtHoraEntradaMiercoles.Text & " a " & txtHoraSalidaMiercoles.Text And medico.SetHorario("mie")
+                If chkJuev.Checked Then medico._horario = txtHoraEntradaJueves.Text & " a " & txtHoraSalidaJueves.Text And medico.SetHorario("jue")
+                If chkVier.Checked Then medico._horario = txtHoraEntradaViernes.Text & " a " & txtHoraSalidaViernes.Text And medico.SetHorario("vie")
+                If chkSab.Checked Then medico._horario = txtHoraEntradaSabado.Text & " a " & txtHoraSalidaSabado.Text And medico.SetHorario("sab")
+                If chkDom.Checked Then medico._horario = txtHoraEntradaDomingo.Text & " a " & txtHoraSalidaDomingo.Text And medico.SetHorario("dom")
+
                 MsgBox("Se ingreso con exito")
+
             End If
         End If
 

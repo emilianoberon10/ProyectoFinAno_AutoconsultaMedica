@@ -1,25 +1,41 @@
 ﻿Imports MySql.Data.MySqlClient
+
 Public MustInherit Class ConexionBD
+
     'declaro MustInherits para que no se pueda crear una instancia(objeto) de esta clase
     'cadena de conexion a la bd
-    Private connString As String = "server=localhost;database=medicaproyecto;user id=root;password=;port=3306;"
-    Private conn As MySqlConnection
+    Private connString As String = "server=localhost;database=medicaproyecto;Uid=eberon;Pwd =silomontolomeo;port=3306;AllowUserVariables=True;"
 
-    Protected Sub New()
-        conn = New MySqlConnection(connString)
-    End Sub
+    Protected conn As New MySqlConnection(connString)
 
     Protected Function GetConnection() As MySqlConnection
         Return New MySqlConnection(connString)
     End Function
 
-    Public Sub OpenConnection() 'Metodo para abrir conexion
-        conn.Open()
-    End Sub
+    Public Function ObtenerNombre(ci As String) As String
 
-    Public Sub CloseConnection() 'Metodo para cerrar conexion
-        conn.Open()
-    End Sub
+        Using _connection = GetConnection()
+            _connection.Open()
+
+            Using _command = New MySqlCommand
+                _command.Connection = _connection
+
+                _command.CommandText = "SELECT pNom FROM persona WHERE ci=@ci"
+                _command.Parameters.AddWithValue("@ci", ci)
+                _command.CommandType = CommandType.Text
+                Dim reader As MySqlDataReader = _command.ExecuteReader()
+                If (reader.HasRows) Then
+                    While (reader.Read())
+                        Dim nombre As String = reader.GetString(0)
+                        Return nombre
+                    End While
+                Else
+                    MsgBox("No se pudo obtener en nombre")
+                End If
+
+            End Using
+        End Using
+    End Function
 
     ' Para ejecutar las consultas
     Public Sub consultaEjecutar(consulta As String)
@@ -75,6 +91,7 @@ Public MustInherit Class ConexionBD
         End Try
         Return dataTable
     End Function
+
     Public Function DevolverParaComboBox(consulta As String) As DataSet
         Dim dataSet As New DataSet
         Dim adapter As MySqlDataAdapter
@@ -96,4 +113,5 @@ Public MustInherit Class ConexionBD
         End Try
         Return dataSet
     End Function
+
 End Class

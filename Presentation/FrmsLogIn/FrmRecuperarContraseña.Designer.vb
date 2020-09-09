@@ -142,7 +142,7 @@ Partial Class FrmRecuperarContraseña
         Me.Panel1.Controls.Add(Me.TextBox3)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.ShapeContainer2)
-        Me.Panel1.Location = New System.Drawing.Point(114, 201)
+        Me.Panel1.Location = New System.Drawing.Point(108, 161)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(239, 231)
         Me.Panel1.TabIndex = 5
@@ -155,11 +155,11 @@ Partial Class FrmRecuperarContraseña
         Me.btnRestablecer.FlatAppearance.BorderSize = 0
         Me.btnRestablecer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.btnRestablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRestablecer.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRestablecer.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRestablecer.ForeColor = System.Drawing.Color.Silver
-        Me.btnRestablecer.Location = New System.Drawing.Point(26, 176)
+        Me.btnRestablecer.Location = New System.Drawing.Point(55, 180)
         Me.btnRestablecer.Name = "btnRestablecer"
-        Me.btnRestablecer.Size = New System.Drawing.Size(180, 36)
+        Me.btnRestablecer.Size = New System.Drawing.Size(129, 36)
         Me.btnRestablecer.TabIndex = 6
         Me.btnRestablecer.Text = "RESTABLECER"
         Me.btnRestablecer.UseVisualStyleBackColor = False
@@ -277,11 +277,11 @@ Partial Class FrmRecuperarContraseña
         Me.btnRecuperar.FlatAppearance.BorderSize = 0
         Me.btnRecuperar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.btnRecuperar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRecuperar.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRecuperar.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRecuperar.ForeColor = System.Drawing.Color.Silver
-        Me.btnRecuperar.Location = New System.Drawing.Point(136, 139)
+        Me.btnRecuperar.Location = New System.Drawing.Point(163, 119)
         Me.btnRecuperar.Name = "btnRecuperar"
-        Me.btnRecuperar.Size = New System.Drawing.Size(180, 36)
+        Me.btnRecuperar.Size = New System.Drawing.Size(129, 36)
         Me.btnRecuperar.TabIndex = 6
         Me.btnRecuperar.Text = "Recuperar"
         Me.btnRecuperar.UseVisualStyleBackColor = False
@@ -293,11 +293,11 @@ Partial Class FrmRecuperarContraseña
         Me.btnCancelar.FlatAppearance.BorderSize = 0
         Me.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancelar.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.Silver
-        Me.btnCancelar.Location = New System.Drawing.Point(15, 396)
+        Me.btnCancelar.Location = New System.Drawing.Point(3, 398)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(93, 36)
+        Me.btnCancelar.Size = New System.Drawing.Size(129, 36)
         Me.btnCancelar.TabIndex = 6
         Me.btnCancelar.Text = "CANCELAR"
         Me.btnCancelar.UseVisualStyleBackColor = False

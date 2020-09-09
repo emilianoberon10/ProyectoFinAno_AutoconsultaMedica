@@ -1,4 +1,6 @@
-﻿Public Class FrmPrincipalPaciente
+﻿Imports System.Runtime.InteropServices
+
+Public Class FrmPrincipalPaciente
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         OpenChildForm(New FrmConsultaPaciente, PanelChildFormPac)
@@ -34,5 +36,36 @@
     Private Sub btnConsulta_Click(sender As Object, e As EventArgs) Handles btnConsulta.Click
         OpenChildForm(New FrmConsultaPaciente, PanelChildFormPac)
     End Sub
+
+    Private Sub btnOpciones_Click(sender As Object, e As EventArgs) Handles btnOpciones.Click
+        Dim opciones As New FrmOpciones
+        opciones.ShowDialog()
+    End Sub
+
+#Region "poder mover el form"
+
+    'DLLImport,Significa que el método declarado a
+    'continuación no está en .NET, sino en un archivo DLL externo (nativo).
+    'En este caso, se encuentra en el archivo User32.dll, que es un componente
+    'estándar de Windows. El cual nos permite utilizar los eventos/método del sistema
+    'operativo, en este caso capturar las señales del mouse.
+    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
+    Private Shared Sub ReleaseCapture()
+    End Sub
+
+    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
+    Private Shared Sub SendMessage(hWnd As IntPtr, wMsg As Integer, wParam As Integer, lParam As Integer)
+    End Sub
+
+    Private Sub titleBar_MouseDown(sender As Object, e As MouseEventArgs) Handles TopPanel.MouseDown
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    End Sub
+
+    Private Sub topPanel_Paint(sender As Object, e As PaintEventArgs) Handles TopPanel.Paint
+
+    End Sub
+
+#End Region 'region de mover form
 
 End Class

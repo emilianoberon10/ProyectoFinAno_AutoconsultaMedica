@@ -23,95 +23,137 @@ Partial Class FrmChats
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmChats))
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnSalirChat = New System.Windows.Forms.Button()
+        Me.btnEnviarMensaje = New System.Windows.Forms.Button()
+        Me.txtMensaje = New System.Windows.Forms.TextBox()
+        Me.panelChat = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnVerFichaMedica = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'Panel2
-        '
-        Me.Panel2.Location = New System.Drawing.Point(0, 56)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(603, 160)
-        Me.Panel2.TabIndex = 1
-        '
-        'Panel3
-        '
-        Me.Panel3.Location = New System.Drawing.Point(0, 222)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(603, 160)
-        Me.Panel3.TabIndex = 2
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(525, 388)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 30)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "ENVIAR"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(7, 12)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(82, 30)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "FINALIZAR"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(249, 451)
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.Silver
+        Me.Button3.Location = New System.Drawing.Point(196, 696)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(94, 30)
-        Me.Button3.TabIndex = 5
+        Me.Button3.Size = New System.Drawing.Size(120, 30)
+        Me.Button3.TabIndex = 3
         Me.Button3.Text = "MODIFICAR"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(7, 388)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(515, 23)
-        Me.TextBox1.TabIndex = 6
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(7, 455)
+        Me.TextBox2.Location = New System.Drawing.Point(12, 700)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(236, 23)
-        Me.TextBox2.TabIndex = 7
+        Me.TextBox2.Size = New System.Drawing.Size(178, 23)
+        Me.TextBox2.TabIndex = 3
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(8, 436)
+        Me.Label1.Location = New System.Drawing.Point(9, 680)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(86, 17)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Diagnostico"
+        '
+        'btnSalirChat
+        '
+        Me.btnSalirChat.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.btnSalirChat.FlatAppearance.BorderSize = 0
+        Me.btnSalirChat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnSalirChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSalirChat.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalirChat.ForeColor = System.Drawing.Color.Silver
+        Me.btnSalirChat.Location = New System.Drawing.Point(12, 9)
+        Me.btnSalirChat.Name = "btnSalirChat"
+        Me.btnSalirChat.Size = New System.Drawing.Size(120, 30)
+        Me.btnSalirChat.TabIndex = 5
+        Me.btnSalirChat.Text = "SALIR"
+        Me.btnSalirChat.UseVisualStyleBackColor = False
+        '
+        'btnEnviarMensaje
+        '
+        Me.btnEnviarMensaje.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.btnEnviarMensaje.FlatAppearance.BorderSize = 0
+        Me.btnEnviarMensaje.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnEnviarMensaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEnviarMensaje.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEnviarMensaje.ForeColor = System.Drawing.Color.Silver
+        Me.btnEnviarMensaje.Location = New System.Drawing.Point(460, 621)
+        Me.btnEnviarMensaje.Name = "btnEnviarMensaje"
+        Me.btnEnviarMensaje.Size = New System.Drawing.Size(120, 30)
+        Me.btnEnviarMensaje.TabIndex = 2
+        Me.btnEnviarMensaje.Text = "Enviar"
+        Me.btnEnviarMensaje.UseVisualStyleBackColor = False
+        '
+        'txtMensaje
+        '
+        Me.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtMensaje.Location = New System.Drawing.Point(3, 621)
+        Me.txtMensaje.Multiline = True
+        Me.txtMensaje.Name = "txtMensaje"
+        Me.txtMensaje.Size = New System.Drawing.Size(460, 30)
+        Me.txtMensaje.TabIndex = 1
+        '
+        'panelChat
+        '
+        Me.panelChat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.panelChat.Location = New System.Drawing.Point(3, 45)
+        Me.panelChat.Name = "panelChat"
+        Me.panelChat.Size = New System.Drawing.Size(577, 570)
+        Me.panelChat.TabIndex = 11
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel1.Location = New System.Drawing.Point(586, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(192, 740)
+        Me.Panel1.TabIndex = 9
+        '
+        'btnVerFichaMedica
+        '
+        Me.btnVerFichaMedica.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.btnVerFichaMedica.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnVerFichaMedica.FlatAppearance.BorderSize = 0
+        Me.btnVerFichaMedica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.btnVerFichaMedica.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVerFichaMedica.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVerFichaMedica.ForeColor = System.Drawing.Color.Silver
+        Me.btnVerFichaMedica.Location = New System.Drawing.Point(460, 693)
+        Me.btnVerFichaMedica.Name = "btnVerFichaMedica"
+        Me.btnVerFichaMedica.Size = New System.Drawing.Size(120, 30)
+        Me.btnVerFichaMedica.TabIndex = 4
+        Me.btnVerFichaMedica.Text = "FICHA MEDICA"
+        Me.btnVerFichaMedica.UseVisualStyleBackColor = False
         '
         'FrmChats
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(612, 495)
+        Me.ClientSize = New System.Drawing.Size(778, 740)
+        Me.Controls.Add(Me.btnSalirChat)
+        Me.Controls.Add(Me.btnEnviarMensaje)
+        Me.Controls.Add(Me.txtMensaje)
+        Me.Controls.Add(Me.panelChat)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnVerFichaMedica)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel2)
         Me.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -121,12 +163,13 @@ Partial Class FrmChats
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnSalirChat As Button
+    Friend WithEvents btnEnviarMensaje As Button
+    Friend WithEvents txtMensaje As TextBox
+    Friend WithEvents panelChat As Panel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnVerFichaMedica As Button
 End Class

@@ -4,14 +4,14 @@ Public Class FrmConsultaPaciente
 
     Private Sub Consulta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnChat.Visible = False
-        cargarComboBoxSintomas(cbSintoma1)
-        cargarComboBoxSintomas(cbSintoma2)
-        cargarComboBoxSintomas(cbSintoma3)
-        cargarComboBoxSintomas(cbSintoma4)
-        cargarComboBoxSintomas(cbSintoma5)
-        cargarComboBoxSintomas(cbSintoma6)
-        cargarComboBoxSintomas(cbSintoma7)
-        cargarComboBoxSintomas(cbSintoma8)
+        CargarComboBoxSintomas(cbSintoma1)
+        CargarComboBoxSintomas(cbSintoma2)
+        CargarComboBoxSintomas(cbSintoma3)
+        CargarComboBoxSintomas(cbSintoma4)
+        CargarComboBoxSintomas(cbSintoma5)
+        CargarComboBoxSintomas(cbSintoma6)
+        CargarComboBoxSintomas(cbSintoma7)
+        CargarComboBoxSintomas(cbSintoma8)
     End Sub
 
     Private Sub btnConsul_Click(sender As Object, e As EventArgs) Handles btnConsul.Click
@@ -43,9 +43,9 @@ Public Class FrmConsultaPaciente
                     FrmLogIn.paci.GuardarDiagnostico()
                 Next
             Next
-            'Dim f As New FrmFichaMedicaPaciente
-            'f.ShowDialog()
             btnChat.Show()
+            Dim f As New FrmFichaMedicaPaciente
+            f.ShowDialog()
         Catch ex As Exception
             ErrorProvider1.SetError(Me.Label2, ex.Message)
         End Try

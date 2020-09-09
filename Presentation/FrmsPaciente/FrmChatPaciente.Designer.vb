@@ -23,21 +23,11 @@ Partial Class FrmChatPaciente
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmChatPaciente))
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.panelChat = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtMensaje = New System.Windows.Forms.TextBox()
         Me.btnEnviarMensaje = New System.Windows.Forms.Button()
         Me.btnSalirChat = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel1.Location = New System.Drawing.Point(586, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(192, 699)
-        Me.Panel1.TabIndex = 0
         '
         'panelChat
         '
@@ -47,24 +37,29 @@ Partial Class FrmChatPaciente
         Me.panelChat.Size = New System.Drawing.Size(577, 570)
         Me.panelChat.TabIndex = 1
         '
-        'TextBox1
+        'txtMensaje
         '
-        Me.TextBox1.Location = New System.Drawing.Point(3, 631)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(460, 31)
-        Me.TextBox1.TabIndex = 1
+        Me.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtMensaje.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMensaje.Location = New System.Drawing.Point(3, 631)
+        Me.txtMensaje.Multiline = True
+        Me.txtMensaje.Name = "txtMensaje"
+        Me.txtMensaje.Size = New System.Drawing.Size(460, 30)
+        Me.txtMensaje.TabIndex = 1
         '
         'btnEnviarMensaje
         '
+        Me.btnEnviarMensaje.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.btnEnviarMensaje.FlatAppearance.BorderSize = 0
+        Me.btnEnviarMensaje.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
         Me.btnEnviarMensaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEnviarMensaje.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEnviarMensaje.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEnviarMensaje.Location = New System.Drawing.Point(460, 631)
         Me.btnEnviarMensaje.Name = "btnEnviarMensaje"
-        Me.btnEnviarMensaje.Size = New System.Drawing.Size(120, 31)
+        Me.btnEnviarMensaje.Size = New System.Drawing.Size(120, 30)
         Me.btnEnviarMensaje.TabIndex = 2
         Me.btnEnviarMensaje.Text = "Enviar"
-        Me.btnEnviarMensaje.UseVisualStyleBackColor = True
+        Me.btnEnviarMensaje.UseVisualStyleBackColor = False
         '
         'btnSalirChat
         '
@@ -72,11 +67,11 @@ Partial Class FrmChatPaciente
         Me.btnSalirChat.FlatAppearance.BorderSize = 0
         Me.btnSalirChat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
         Me.btnSalirChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSalirChat.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalirChat.Location = New System.Drawing.Point(528, 12)
+        Me.btnSalirChat.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalirChat.Location = New System.Drawing.Point(12, 12)
         Me.btnSalirChat.Name = "btnSalirChat"
-        Me.btnSalirChat.Size = New System.Drawing.Size(52, 37)
-        Me.btnSalirChat.TabIndex = 2
+        Me.btnSalirChat.Size = New System.Drawing.Size(120, 30)
+        Me.btnSalirChat.TabIndex = 3
         Me.btnSalirChat.Text = "SALIR"
         Me.btnSalirChat.UseVisualStyleBackColor = False
         '
@@ -85,14 +80,14 @@ Partial Class FrmChatPaciente
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(778, 699)
+        Me.ClientSize = New System.Drawing.Size(589, 674)
         Me.Controls.Add(Me.btnSalirChat)
         Me.Controls.Add(Me.btnEnviarMensaje)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtMensaje)
         Me.Controls.Add(Me.panelChat)
-        Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Silver
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FrmChatPaciente"
@@ -100,10 +95,8 @@ Partial Class FrmChatPaciente
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents panelChat As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtMensaje As TextBox
     Friend WithEvents btnEnviarMensaje As Button
     Friend WithEvents btnSalirChat As Button
 End Class

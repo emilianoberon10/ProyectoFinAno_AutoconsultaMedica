@@ -23,10 +23,13 @@ Partial Class FrmSolicitudesChat
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panelSolicitudes = New System.Windows.Forms.Panel()
+        Me.dgvSolicitudes = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.dgvSolicitudes = New System.Windows.Forms.DataGridView()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.panelSolicitudes.SuspendLayout()
         CType(Me.dgvSolicitudes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -34,19 +37,69 @@ Partial Class FrmSolicitudesChat
         '
         'panelSolicitudes
         '
+        Me.panelSolicitudes.Controls.Add(Me.dgvSolicitudes)
         Me.panelSolicitudes.Controls.Add(Me.Label2)
         Me.panelSolicitudes.Controls.Add(Me.Label1)
-        Me.panelSolicitudes.Controls.Add(Me.dgvSolicitudes)
         Me.panelSolicitudes.Location = New System.Drawing.Point(23, 2)
         Me.panelSolicitudes.Name = "panelSolicitudes"
         Me.panelSolicitudes.Size = New System.Drawing.Size(756, 681)
         Me.panelSolicitudes.TabIndex = 0
         '
+        'dgvSolicitudes
+        '
+        Me.dgvSolicitudes.AllowUserToAddRows = False
+        Me.dgvSolicitudes.AllowUserToDeleteRows = False
+        Me.dgvSolicitudes.AllowUserToOrderColumns = True
+        Me.dgvSolicitudes.AllowUserToResizeColumns = False
+        Me.dgvSolicitudes.AllowUserToResizeRows = False
+        Me.dgvSolicitudes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvSolicitudes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvSolicitudes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.dgvSolicitudes.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvSolicitudes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvSolicitudes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(73, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvSolicitudes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvSolicitudes.ColumnHeadersHeight = 30
+        Me.dgvSolicitudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvSolicitudes.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvSolicitudes.EnableHeadersVisualStyles = False
+        Me.dgvSolicitudes.GridColor = System.Drawing.Color.SteelBlue
+        Me.dgvSolicitudes.Location = New System.Drawing.Point(207, 154)
+        Me.dgvSolicitudes.Name = "dgvSolicitudes"
+        Me.dgvSolicitudes.ReadOnly = True
+        Me.dgvSolicitudes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvSolicitudes.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvSolicitudes.RowHeadersVisible = False
+        Me.dgvSolicitudes.Size = New System.Drawing.Size(325, 356)
+        Me.dgvSolicitudes.TabIndex = 37
+        Me.dgvSolicitudes.TabStop = False
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(3, 76)
+        Me.Label2.Location = New System.Drawing.Point(266, 134)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(232, 17)
         Me.Label2.TabIndex = 2
@@ -62,14 +115,6 @@ Partial Class FrmSolicitudesChat
         Me.Label1.Size = New System.Drawing.Size(182, 22)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Solicitudes de chat"
-        '
-        'dgvSolicitudes
-        '
-        Me.dgvSolicitudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSolicitudes.Location = New System.Drawing.Point(3, 96)
-        Me.dgvSolicitudes.Name = "dgvSolicitudes"
-        Me.dgvSolicitudes.Size = New System.Drawing.Size(753, 356)
-        Me.dgvSolicitudes.TabIndex = 0
         '
         'Timer1
         '
@@ -97,6 +142,6 @@ Partial Class FrmSolicitudesChat
     Friend WithEvents panelSolicitudes As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents dgvSolicitudes As DataGridView
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents dgvSolicitudes As DataGridView
 End Class

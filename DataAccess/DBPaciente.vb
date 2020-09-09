@@ -118,7 +118,10 @@ Public Class DBPaciente
             Using _command = New MySqlCommand
                 Try
                     _command.Connection = _connection
-                    _command.CommandText = "SET @diagnostico = (SELECT nomE FROM diagnostico JOIN enfermedad ON nomE=nombre WHERE idP=@ci AND fecha=CURDATE() ORDER BY riesgo ASC LIMIT 1);"
+                    _command.CommandText = "SET @diagnostico = (SELECT nomE FROM diagnostico
+                                                                JOIN enfermedad ON nomE=nombre
+                                                                WHERE idP=@ci AND fecha=CURDATE()
+                                                                ORDER BY riesgo ASC LIMIT 1);"
                     _command.CommandText &= "INSERT INTO solicita(id,ci,nombre,diagnostico,estado) VALUES(null,@ci,@nombre,@diagnostico,'Pendiente')"
                     _command.Parameters.AddWithValue("@ci", ci)
                     _command.Parameters.AddWithValue("@nombre", nombre)
@@ -181,7 +184,8 @@ Public Class DBPaciente
             Using _command As New MySqlCommand
                 _command.Connection = _connection
                 _command.CommandText = "SET @idDiag = (SELECT idDiag FROM diagnostico WHERE idP=@co AND fecha=CURDATE());
-                                        INSERT INTO fichaMedica VALUES(CURDATE(),@proced,@idDiag,null,@ci,@ocupacion,@medicacion,@motCons,@enfermedades)"
+                                        INSERT INTO fichaMedica(fecha,procedencia,idDiag,id,cedP,ocup,medicacion,Motiv_Cons, antecedentesFamiliares)
+                                                    VALUES(CURDATE(),@proced,@idDiag,null,@ci,@ocupacion,@medicacion,@motCons,@enfermedades)"
                 _command.Parameters.AddWithValue("@ci", ci)
                 _command.Parameters.AddWithValue("@proced", procedencia)
                 _command.Parameters.AddWithValue("@ocupacion", ocupacion)

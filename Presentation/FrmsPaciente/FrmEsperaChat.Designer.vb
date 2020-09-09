@@ -23,7 +23,6 @@ Partial Class FrmEsperaChat
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CircularProgressBar1 = New CircularProgressBar.CircularProgressBar()
         Me.lbNombre = New System.Windows.Forms.Label()
@@ -31,29 +30,22 @@ Partial Class FrmEsperaChat
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.TimerComprobarChatAceptado = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Presentation.My.Resources.Resources.isotipoProyectowhite
-        Me.PictureBox2.Location = New System.Drawing.Point(5, 7)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(53, 39)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 9
-        Me.PictureBox2.TabStop = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(68, 9)
+        Me.Label1.Location = New System.Drawing.Point(61, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(393, 33)
+        Me.Label1.Size = New System.Drawing.Size(484, 33)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Sistema de Consulta Medica"
+        Me.Label1.Text = "SISTEMA DE AUTOCONSULTA MEDICA"
         '
         'CircularProgressBar1
         '
@@ -65,7 +57,7 @@ Partial Class FrmEsperaChat
         Me.CircularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.CircularProgressBar1.InnerMargin = 2
         Me.CircularProgressBar1.InnerWidth = -1
-        Me.CircularProgressBar1.Location = New System.Drawing.Point(288, 130)
+        Me.CircularProgressBar1.Location = New System.Drawing.Point(466, 135)
         Me.CircularProgressBar1.MarqueeAnimationSpeed = 2000
         Me.CircularProgressBar1.Name = "CircularProgressBar1"
         Me.CircularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(66, Byte), Integer))
@@ -93,7 +85,7 @@ Partial Class FrmEsperaChat
         Me.lbNombre.AutoSize = True
         Me.lbNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbNombre.ForeColor = System.Drawing.Color.Silver
-        Me.lbNombre.Location = New System.Drawing.Point(326, 105)
+        Me.lbNombre.Location = New System.Drawing.Point(503, 110)
         Me.lbNombre.Name = "lbNombre"
         Me.lbNombre.Size = New System.Drawing.Size(75, 22)
         Me.lbNombre.TabIndex = 11
@@ -104,11 +96,11 @@ Partial Class FrmEsperaChat
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 21.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(182, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(130, 59)
+        Me.Label2.Location = New System.Drawing.Point(412, 52)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(463, 36)
+        Me.Label2.Size = New System.Drawing.Size(247, 36)
         Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Por favor espere a ser atendido"
+        Me.Label2.Text = "Por favor espere"
         '
         'Timer1
         '
@@ -120,20 +112,44 @@ Partial Class FrmEsperaChat
         '
         Me.TimerComprobarChatAceptado.Interval = 1000
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Presentation.My.Resources.Resources.socialdistancing_Mesa_de_trabajo_1
+        Me.PictureBox1.Location = New System.Drawing.Point(5, 52)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(370, 256)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Presentation.My.Resources.Resources.isotipoProyectowhite
+        Me.PictureBox2.Location = New System.Drawing.Point(5, 7)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 9
+        Me.PictureBox2.TabStop = False
+        '
         'FrmEsperaChat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(732, 310)
+        Me.ClientSize = New System.Drawing.Size(720, 310)
         Me.Controls.Add(Me.CircularProgressBar1)
         Me.Controls.Add(Me.lbNombre)
         Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmEsperaChat"
-        Me.Text = "FrmEsperaChat"
+        Me.Opacity = 0.8R
+        Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -148,4 +164,5 @@ Partial Class FrmEsperaChat
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents TimerComprobarChatAceptado As Timer
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

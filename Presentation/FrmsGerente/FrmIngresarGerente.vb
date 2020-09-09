@@ -4,14 +4,14 @@ Public Class FrmIngresarGerente
 
     Private Sub FrmIngresar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim sintoma As New Sintoma()
-        cargarComboBoxSintomas(cbSintoma1)
-        cargarComboBoxSintomas(cbSintoma2)
-        cargarComboBoxSintomas(cbSintoma3)
-        cargarComboBoxSintomas(cbSintoma4)
-        cargarComboBoxSintomas(cbSintoma5)
-        cargarComboBoxSintomas(cbSintoma6)
-        cargarComboBoxSintomas(cbSintoma7)
-        cargarComboBoxSintomas(cbSintoma8)
+        CargarComboBoxSintomas(cbSintoma1)
+        CargarComboBoxSintomas(cbSintoma2)
+        CargarComboBoxSintomas(cbSintoma3)
+        CargarComboBoxSintomas(cbSintoma4)
+        CargarComboBoxSintomas(cbSintoma5)
+        CargarComboBoxSintomas(cbSintoma6)
+        CargarComboBoxSintomas(cbSintoma7)
+        CargarComboBoxSintomas(cbSintoma8)
     End Sub
 
     Private Sub btnIngresarSintoma_Click(sender As Object, e As EventArgs) Handles btnIngresarSintoma.Click

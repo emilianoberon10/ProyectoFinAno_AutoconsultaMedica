@@ -4,15 +4,15 @@ Public Class FrmModificarGerente
 
     Private Sub FrmModificar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim sintoma As New Sintoma
-        cargarComboBoxSintomas(cbSintoma1)
-        cargarComboBoxSintomas(cbSintoma2)
-        cargarComboBoxSintomas(cbSintoma3)
-        cargarComboBoxSintomas(cbSintoma4)
-        cargarComboBoxSintomas(cbSintoma5)
-        cargarComboBoxSintomas(cbSintoma6)
-        cargarComboBoxSintomas(cbSintoma7)
-        cargarComboBoxSintomas(cbSintoma8)
-        cargarComboBoxSintomas(cbSintoma9)
+        CargarComboBoxSintomas(cbSintoma1)
+        CargarComboBoxSintomas(cbSintoma2)
+        CargarComboBoxSintomas(cbSintoma3)
+        CargarComboBoxSintomas(cbSintoma4)
+        CargarComboBoxSintomas(cbSintoma5)
+        CargarComboBoxSintomas(cbSintoma6)
+        CargarComboBoxSintomas(cbSintoma7)
+        CargarComboBoxSintomas(cbSintoma8)
+        CargarComboBoxSintomas(cbSintoma9)
     End Sub
 
     Private Sub cbFiltro_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbFiltro.SelectedIndexChanged, ComboBox1.SelectedIndexChanged

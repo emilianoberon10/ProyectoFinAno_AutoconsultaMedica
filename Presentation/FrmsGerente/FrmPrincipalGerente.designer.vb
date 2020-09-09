@@ -24,32 +24,39 @@ Partial Class FrmPrincipalGerente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipalGerente))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btnIngresarMedico = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.picturePerfile = New System.Windows.Forms.PictureBox()
         Me.lbNombre = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TopPanel = New System.Windows.Forms.Panel()
+        Me.lbTitulo = New System.Windows.Forms.Label()
+        Me.PanelChildForm = New System.Windows.Forms.Panel()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.picturePerfile = New System.Windows.Forms.PictureBox()
+        Me.btnOpciones = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnClose = New System.Windows.Forms.PictureBox()
         Me.btnMinimize = New System.Windows.Forms.PictureBox()
-        Me.PanelChildForm = New System.Windows.Forms.Panel()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.TopPanel.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
         CType(Me.picturePerfile, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel3.SuspendLayout()
+        CType(Me.btnOpciones, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -58,6 +65,7 @@ Partial Class FrmPrincipalGerente
         Me.Panel1.Controls.Add(Me.PictureBox5)
         Me.Panel1.Controls.Add(Me.PictureBox4)
         Me.Panel1.Controls.Add(Me.PictureBox3)
+        Me.Panel1.Controls.Add(Me.PictureBox6)
         Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.btnIngresarMedico)
         Me.Panel1.Controls.Add(Me.btnIngresar)
@@ -72,55 +80,15 @@ Partial Class FrmPrincipalGerente
         Me.Panel1.Size = New System.Drawing.Size(222, 683)
         Me.Panel1.TabIndex = 0
         '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = Global.Presentation.My.Resources.Resources.logout
-        Me.PictureBox5.Location = New System.Drawing.Point(11, 651)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(24, 24)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 302
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.Presentation.My.Resources.Resources.column
-        Me.PictureBox4.Location = New System.Drawing.Point(11, 343)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(24, 24)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 302
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.Presentation.My.Resources.Resources.update
-        Me.PictureBox3.Location = New System.Drawing.Point(11, 293)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(24, 24)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 302
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Presentation.My.Resources.Resources.file_upload
-        Me.PictureBox2.Location = New System.Drawing.Point(11, 247)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(24, 24)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 302
-        Me.PictureBox2.TabStop = False
-        '
         'btnIngresarMedico
         '
         Me.btnIngresarMedico.FlatAppearance.BorderSize = 0
         Me.btnIngresarMedico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.btnIngresarMedico.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIngresarMedico.Font = New System.Drawing.Font("Century Gothic", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIngresarMedico.Location = New System.Drawing.Point(0, 238)
+        Me.btnIngresarMedico.Location = New System.Drawing.Point(0, 239)
         Me.btnIngresarMedico.Name = "btnIngresarMedico"
-        Me.btnIngresarMedico.Size = New System.Drawing.Size(219, 41)
+        Me.btnIngresarMedico.Size = New System.Drawing.Size(222, 41)
         Me.btnIngresarMedico.TabIndex = 300
         Me.btnIngresarMedico.Text = "MEDICOS"
         Me.btnIngresarMedico.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -132,11 +100,11 @@ Partial Class FrmPrincipalGerente
         Me.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIngresar.Font = New System.Drawing.Font("Century Gothic", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIngresar.Location = New System.Drawing.Point(0, 191)
+        Me.btnIngresar.Location = New System.Drawing.Point(0, 192)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(222, 41)
         Me.btnIngresar.TabIndex = 300
-        Me.btnIngresar.Text = "SINTOMAS-ENFERMEDADES"
+        Me.btnIngresar.Text = "PATOLOGIAS"
         Me.btnIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnIngresar.UseVisualStyleBackColor = True
         '
@@ -146,7 +114,7 @@ Partial Class FrmPrincipalGerente
         Me.BtnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEliminar.Font = New System.Drawing.Font("Century Gothic", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminar.Location = New System.Drawing.Point(0, 332)
+        Me.BtnEliminar.Location = New System.Drawing.Point(0, 335)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(222, 41)
         Me.BtnEliminar.TabIndex = 300
@@ -186,6 +154,7 @@ Partial Class FrmPrincipalGerente
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.Panel2.Controls.Add(Me.picturePerfile)
+        Me.Panel2.Controls.Add(Me.btnOpciones)
         Me.Panel2.Controls.Add(Me.lbNombre)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
@@ -193,14 +162,6 @@ Partial Class FrmPrincipalGerente
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(222, 184)
         Me.Panel2.TabIndex = 0
-        '
-        'picturePerfile
-        '
-        Me.picturePerfile.Location = New System.Drawing.Point(46, 16)
-        Me.picturePerfile.Name = "picturePerfile"
-        Me.picturePerfile.Size = New System.Drawing.Size(130, 130)
-        Me.picturePerfile.TabIndex = 3
-        Me.picturePerfile.TabStop = False
         '
         'lbNombre
         '
@@ -212,17 +173,110 @@ Partial Class FrmPrincipalGerente
         Me.lbNombre.TabIndex = 2
         Me.lbNombre.Text = "NOMBRE"
         '
-        'Panel3
+        'TopPanel
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.btnClose)
-        Me.Panel3.Controls.Add(Me.btnMinimize)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(997, 37)
-        Me.Panel3.TabIndex = 1
+        Me.TopPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.TopPanel.Controls.Add(Me.PictureBox1)
+        Me.TopPanel.Controls.Add(Me.btnClose)
+        Me.TopPanel.Controls.Add(Me.lbTitulo)
+        Me.TopPanel.Controls.Add(Me.btnMinimize)
+        Me.TopPanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TopPanel.Location = New System.Drawing.Point(0, 0)
+        Me.TopPanel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TopPanel.Name = "TopPanel"
+        Me.TopPanel.Size = New System.Drawing.Size(997, 37)
+        Me.TopPanel.TabIndex = 1
+        '
+        'lbTitulo
+        '
+        Me.lbTitulo.AutoSize = True
+        Me.lbTitulo.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTitulo.ForeColor = System.Drawing.Color.Silver
+        Me.lbTitulo.Location = New System.Drawing.Point(42, 8)
+        Me.lbTitulo.Name = "lbTitulo"
+        Me.lbTitulo.Size = New System.Drawing.Size(345, 23)
+        Me.lbTitulo.TabIndex = 8
+        Me.lbTitulo.Text = "SISTEMA DE AUTOCONSULTA MEDICA"
+        '
+        'PanelChildForm
+        '
+        Me.PanelChildForm.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelChildForm.Location = New System.Drawing.Point(222, 37)
+        Me.PanelChildForm.Name = "PanelChildForm"
+        Me.PanelChildForm.Size = New System.Drawing.Size(775, 683)
+        Me.PanelChildForm.TabIndex = 2
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.Presentation.My.Resources.Resources.logout
+        Me.PictureBox5.Location = New System.Drawing.Point(11, 650)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 302
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.Presentation.My.Resources.Resources.column
+        Me.PictureBox4.Location = New System.Drawing.Point(11, 343)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 302
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Presentation.My.Resources.Resources.update
+        Me.PictureBox3.Location = New System.Drawing.Point(11, 293)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 302
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Presentation.My.Resources.Resources.file_upload
+        Me.PictureBox2.Location = New System.Drawing.Point(11, 247)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 302
+        Me.PictureBox2.TabStop = False
+        '
+        'picturePerfile
+        '
+        Me.picturePerfile.Enabled = False
+        Me.picturePerfile.Image = Global.Presentation.My.Resources.Resources.profileEmpty
+        Me.picturePerfile.Location = New System.Drawing.Point(46, 16)
+        Me.picturePerfile.Name = "picturePerfile"
+        Me.picturePerfile.Size = New System.Drawing.Size(130, 130)
+        Me.picturePerfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picturePerfile.TabIndex = 4
+        Me.picturePerfile.TabStop = False
+        '
+        'btnOpciones
+        '
+        Me.btnOpciones.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnOpciones.Image = Global.Presentation.My.Resources.Resources.settings
+        Me.btnOpciones.Location = New System.Drawing.Point(191, 7)
+        Me.btnOpciones.Name = "btnOpciones"
+        Me.btnOpciones.Size = New System.Drawing.Size(24, 24)
+        Me.btnOpciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnOpciones.TabIndex = 3
+        Me.btnOpciones.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Presentation.My.Resources.Resources.isotipoProyectowhite
+        Me.PictureBox1.Location = New System.Drawing.Point(6, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
         '
         'btnClose
         '
@@ -248,13 +302,15 @@ Partial Class FrmPrincipalGerente
         Me.btnMinimize.TabIndex = 2
         Me.btnMinimize.TabStop = False
         '
-        'PanelChildForm
+        'PictureBox6
         '
-        Me.PanelChildForm.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelChildForm.Location = New System.Drawing.Point(222, 37)
-        Me.PanelChildForm.Name = "PanelChildForm"
-        Me.PanelChildForm.Size = New System.Drawing.Size(775, 683)
-        Me.PanelChildForm.TabIndex = 2
+        Me.PictureBox6.Image = Global.Presentation.My.Resources.Resources.file_upload
+        Me.PictureBox6.Location = New System.Drawing.Point(11, 200)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 302
+        Me.PictureBox6.TabStop = False
         '
         'FrmPrincipalGerente
         '
@@ -264,7 +320,7 @@ Partial Class FrmPrincipalGerente
         Me.ClientSize = New System.Drawing.Size(997, 720)
         Me.Controls.Add(Me.PanelChildForm)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.TopPanel)
         Me.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Silver
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -274,24 +330,27 @@ Partial Class FrmPrincipalGerente
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " "
         Me.Panel1.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.TopPanel.ResumeLayout(False)
+        Me.TopPanel.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         CType(Me.picturePerfile, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        CType(Me.btnOpciones, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents TopPanel As Panel
     Friend WithEvents btnClose As PictureBox
     Friend WithEvents btnMinimize As PictureBox
     Friend WithEvents PanelChildForm As Panel
@@ -304,6 +363,10 @@ Partial Class FrmPrincipalGerente
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents picturePerfile As PictureBox
     Friend WithEvents lbNombre As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lbTitulo As Label
+    Friend WithEvents btnOpciones As PictureBox
+    Friend WithEvents picturePerfile As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
 End Class

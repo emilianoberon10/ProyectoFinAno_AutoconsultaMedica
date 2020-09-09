@@ -81,6 +81,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmNotificacion.designer.vb">
+      <DependentUpon>frmNotificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNotificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOpciones.Designer.vb">
+      <DependentUpon>FrmOpciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOpciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmsPaciente\FrmAgendaMedica.designer.vb">
       <DependentUpon>FrmAgendaMedica.vb</DependentUpon>
     </Compile>
@@ -218,8 +230,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Resource.es-ES.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.es-ES.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmNotificacion.resx">
+      <DependentUpon>frmNotificacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOpciones.resx">
+      <DependentUpon>FrmOpciones.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmsPaciente\FrmAgendaMedica.resx">
       <DependentUpon>FrmAgendaMedica.vb</DependentUpon>
     </EmbeddedResource>
@@ -285,6 +308,10 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource.es-ES.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.es-ES.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -362,6 +389,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profileEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\socialdistancing_Mesa de trabajo 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\england.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HighPriority_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_96px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

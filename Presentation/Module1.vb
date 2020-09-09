@@ -1,4 +1,5 @@
-﻿Imports Logic
+﻿Imports System.Drawing.Drawing2D
+Imports Logic
 
 Module Module1
 
@@ -10,10 +11,9 @@ Module Module1
         btn.Region = New Region(buttonPath)
     End Sub
 
-    Private currentForm As Form = Nothing 'form en el panel no esta visible porque es el inicio de la app
-
     'Metodo para abrir ventanas dentro de la principal
     Public Sub OpenChildForm(childForm As Form, PanelChildForm As Panel)
+        Dim currentForm As Form = Nothing 'form en el panel no esta visible porque es el inicio de la app
         If currentForm IsNot Nothing Then currentForm.Close() 'prenguto si hay un form abierto
         currentForm = childForm 'cargo el form que quiero abrir
         'Le pongo los estilos que necesito
@@ -45,7 +45,7 @@ Module Module1
 
     End Function
 
-    Public Sub cargarComboBoxSintomas(cb As ComboBox)
+    Public Sub CargarComboBoxSintomas(cb As ComboBox)
         Dim sinObt As New Sintoma
         With cb
             .DataSource = sinObt.DevolverSintomaComboBox.Tables(0)

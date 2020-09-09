@@ -65,20 +65,20 @@ Partial Class FrmBienvenida
         Me.Label1.ForeColor = System.Drawing.Color.Silver
         Me.Label1.Location = New System.Drawing.Point(56, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(393, 33)
+        Me.Label1.Size = New System.Drawing.Size(484, 33)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Sistema de Consulta Medica"
+        Me.Label1.Text = "SISTEMA DE AUTOCONSULTA MEDICA"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 21.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(182, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(417, 61)
+        Me.Label2.Location = New System.Drawing.Point(409, 75)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(176, 36)
+        Me.Label2.Size = New System.Drawing.Size(190, 36)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Bienvenido"
+        Me.Label2.Text = "BIENVENIDO"
         '
         'PictureBox1
         '
@@ -95,7 +95,7 @@ Partial Class FrmBienvenida
         Me.lbNombre.AutoSize = True
         Me.lbNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbNombre.ForeColor = System.Drawing.Color.Silver
-        Me.lbNombre.Location = New System.Drawing.Point(470, 111)
+        Me.lbNombre.Location = New System.Drawing.Point(467, 112)
         Me.lbNombre.Name = "lbNombre"
         Me.lbNombre.Size = New System.Drawing.Size(75, 22)
         Me.lbNombre.TabIndex = 4
@@ -119,7 +119,7 @@ Partial Class FrmBienvenida
         Me.CircularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.CircularProgressBar1.InnerMargin = 2
         Me.CircularProgressBar1.InnerWidth = -1
-        Me.CircularProgressBar1.Location = New System.Drawing.Point(423, 136)
+        Me.CircularProgressBar1.Location = New System.Drawing.Point(429, 135)
         Me.CircularProgressBar1.MarqueeAnimationSpeed = 2000
         Me.CircularProgressBar1.Name = "CircularProgressBar1"
         Me.CircularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(66, Byte), Integer))
@@ -168,7 +168,7 @@ Partial Class FrmBienvenida
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmBienvenida"
-        Me.Opacity = 0.9R
+        Me.Opacity = 0.8R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Bienvenida"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

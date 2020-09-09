@@ -84,10 +84,10 @@ Partial Class FrmInfo
         Me.llbCrearUsuario.LinkColor = System.Drawing.Color.Silver
         Me.llbCrearUsuario.Location = New System.Drawing.Point(321, 150)
         Me.llbCrearUsuario.Name = "llbCrearUsuario"
-        Me.llbCrearUsuario.Size = New System.Drawing.Size(41, 17)
+        Me.llbCrearUsuario.Size = New System.Drawing.Size(51, 17)
         Me.llbCrearUsuario.TabIndex = 1
         Me.llbCrearUsuario.TabStop = True
-        Me.llbCrearUsuario.Text = "crear"
+        Me.llbCrearUsuario.Text = "CREAR"
         '
         'btnLogin
         '

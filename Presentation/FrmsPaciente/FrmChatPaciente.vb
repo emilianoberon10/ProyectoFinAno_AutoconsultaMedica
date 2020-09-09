@@ -8,4 +8,13 @@
         Me.Visible = False
     End Sub
 
+    Private Sub txtMensaje_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMensaje.KeyPress
+        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
+            SendKeys.Send("{TAB}")
+            e.Handled = True
+            'aqui genero el evento click
+            btnEnviarMensaje.PerformClick()
+        End If
+    End Sub
+
 End Class

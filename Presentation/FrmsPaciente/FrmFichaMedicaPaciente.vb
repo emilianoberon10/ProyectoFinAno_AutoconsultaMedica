@@ -7,6 +7,7 @@ Public Class FrmFichaMedicaPaciente
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+
         If txtProcedencia.Text = "" Or txtOcupacion.Text = "" Or txtMotivoConsulta.Text = "" Then
             ErrorProvider1.SetError(lbMotiv, "Los campos con ( * ) son obligatorios.")
             ErrorProvider1.SetError(lbOcup, "Los campos con ( * ) son obligatorios.")

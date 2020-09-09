@@ -1,7 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class DBMedicos
-    Inherits ConexionBD
+Public Class DBMedicos : Inherits ConexionBD
 
     Public Sub New()
     End Sub
@@ -178,23 +177,13 @@ Public Class DBMedicos
         End Try
     End Function
 
-#End Region
-
-    Public Function AceptarChat(ciM As String, ciP As String, diagnostico As String) As Boolean
-        Using _connection = GetConnection()
-            _connection.Open()
-            Using _command = New MySqlCommand()
-                _command.Connection = _connection
-                _command.CommandText = "INSERT INTO chat VALUES (CURDATE(),@ciP,@Diag,null,@ciM,'Atendido');UPDATE solicita SET estado='Atendido' WHERE ci=@ciP"
-                _command.Parameters.AddWithValue("@ciP", ciP)
-                _command.Parameters.AddWithValue("@ciM", ciM)
-                _command.Parameters.AddWithValue("@Diag", diagnostico)
-                _command.CommandType = CommandType.Text
-                _command.ExecuteNonQuery()
-                Return True
-            End Using
-        End Using
+    'Obtener especialidades de medicos para comboBox
+    Public Function Especialidades() As DataSet
+        Dim sql As String = "SELECT * FROM especialidad"
+        Return DevolverParaComboBox(sql)
     End Function
+
+#Region "Agenda"
 
     Public Function VerAgenda() As DataTable
         Dim sql As String = "SELECT pNom,sNom,pApe,sApe,nombre,lugarTrabajo,lun,mar,mie,jue,vie,sab,dom FROM Persona JOIN medico ON ci=ciM JOIN especialidad ON idEspecialidad=id"
@@ -219,9 +208,25 @@ Public Class DBMedicos
         Return DevolverTabla(sql)
     End Function
 
-    Public Function Especialidades() As DataSet
-        Dim sql As String = "SELECT * FROM especialidad"
-        Return DevolverParaComboBox(sql)
+#End Region
+
+#End Region
+
+    Public Function AceptarChat(ciM, ciP, diagnostico) As Boolean
+        Using _connection = GetConnection()
+            _connection.Open()
+            Using _command = New MySqlCommand()
+                _command.Connection = _connection
+                _command.CommandText = "INSERT INTO chat VALUES (CURDATE(),@ciP,@Diag,null,@ciM,'Proceso');
+                                        UPDATE solicita SET estado='Atendido' WHERE ci=@ciP"
+                _command.Parameters.AddWithValue("@ciP", ciP)
+                _command.Parameters.AddWithValue("@ciM", ciM)
+                _command.Parameters.AddWithValue("@Diag", diagnostico)
+                _command.CommandType = CommandType.Text
+                _command.ExecuteNonQuery()
+                Return True
+            End Using
+        End Using
     End Function
 
 End Class

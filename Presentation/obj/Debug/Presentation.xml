@@ -57,6 +57,16 @@ Presentation
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Resources.england">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Resources.Error_96px">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Resources.file_upload">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -68,6 +78,11 @@ Presentation
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Resources.form">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Resources.HighPriority_96px">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -97,6 +112,11 @@ Presentation
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Resources.ok_96px">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Resources.password">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -107,7 +127,27 @@ Presentation
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Resources.profileEmpty">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Resources.question">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Resources.settings">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Resources.socialdistancing_Mesa_de_trabajo_1">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Resources.spain">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

@@ -23,9 +23,9 @@ Partial Class FrmMedPrincipal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMedPrincipal))
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.btnCerrarPrograma = New System.Windows.Forms.PictureBox()
+        Me.TopPanel = New System.Windows.Forms.Panel()
+        Me.btnMinimize = New System.Windows.Forms.PictureBox()
+        Me.btnClose = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
@@ -37,48 +37,56 @@ Partial Class FrmMedPrincipal
         Me.picturePerfile = New System.Windows.Forms.PictureBox()
         Me.lbNombre = New System.Windows.Forms.Label()
         Me.panelChildMedico = New System.Windows.Forms.Panel()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnCerrarPrograma, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.lbTitulo = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnOpciones = New System.Windows.Forms.PictureBox()
+        Me.TopPanel.SuspendLayout()
+        CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.picturePerfile, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnOpciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Panel1
+        'TopPanel
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Controls.Add(Me.btnCerrarPrograma)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1024, 37)
-        Me.Panel1.TabIndex = 0
+        Me.TopPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.TopPanel.Controls.Add(Me.PictureBox1)
+        Me.TopPanel.Controls.Add(Me.lbTitulo)
+        Me.TopPanel.Controls.Add(Me.btnMinimize)
+        Me.TopPanel.Controls.Add(Me.btnClose)
+        Me.TopPanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TopPanel.Location = New System.Drawing.Point(0, 0)
+        Me.TopPanel.Name = "TopPanel"
+        Me.TopPanel.Size = New System.Drawing.Size(1024, 37)
+        Me.TopPanel.TabIndex = 0
         '
-        'PictureBox2
+        'btnMinimize
         '
-        Me.PictureBox2.Image = Global.Presentation.My.Resources.Resources.Minimize_Icon
-        Me.PictureBox2.Location = New System.Drawing.Point(959, 12)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(16, 16)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
+        Me.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMinimize.Image = Global.Presentation.My.Resources.Resources.Minimize_Icon
+        Me.btnMinimize.Location = New System.Drawing.Point(964, 12)
+        Me.btnMinimize.Name = "btnMinimize"
+        Me.btnMinimize.Size = New System.Drawing.Size(16, 16)
+        Me.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.btnMinimize.TabIndex = 1
+        Me.btnMinimize.TabStop = False
         '
-        'btnCerrarPrograma
+        'btnClose
         '
-        Me.btnCerrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCerrarPrograma.Image = Global.Presentation.My.Resources.Resources.Close_Icon
-        Me.btnCerrarPrograma.Location = New System.Drawing.Point(996, 12)
-        Me.btnCerrarPrograma.Name = "btnCerrarPrograma"
-        Me.btnCerrarPrograma.Size = New System.Drawing.Size(16, 16)
-        Me.btnCerrarPrograma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.btnCerrarPrograma.TabIndex = 0
-        Me.btnCerrarPrograma.TabStop = False
+        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClose.Image = Global.Presentation.My.Resources.Resources.Close_Icon
+        Me.btnClose.Location = New System.Drawing.Point(996, 12)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(16, 16)
+        Me.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.btnClose.TabIndex = 0
+        Me.btnClose.TabStop = False
         '
         'Panel2
         '
@@ -174,6 +182,7 @@ Partial Class FrmMedPrincipal
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(73, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.btnOpciones)
         Me.Panel3.Controls.Add(Me.picturePerfile)
         Me.Panel3.Controls.Add(Me.lbNombre)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
@@ -184,9 +193,12 @@ Partial Class FrmMedPrincipal
         '
         'picturePerfile
         '
+        Me.picturePerfile.Enabled = False
+        Me.picturePerfile.Image = Global.Presentation.My.Resources.Resources.profileEmpty
         Me.picturePerfile.Location = New System.Drawing.Point(46, 16)
         Me.picturePerfile.Name = "picturePerfile"
         Me.picturePerfile.Size = New System.Drawing.Size(130, 130)
+        Me.picturePerfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picturePerfile.TabIndex = 3
         Me.picturePerfile.TabStop = False
         '
@@ -210,6 +222,38 @@ Partial Class FrmMedPrincipal
         Me.panelChildMedico.Size = New System.Drawing.Size(802, 683)
         Me.panelChildMedico.TabIndex = 2
         '
+        'lbTitulo
+        '
+        Me.lbTitulo.AutoSize = True
+        Me.lbTitulo.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTitulo.ForeColor = System.Drawing.Color.Silver
+        Me.lbTitulo.Location = New System.Drawing.Point(48, 8)
+        Me.lbTitulo.Name = "lbTitulo"
+        Me.lbTitulo.Size = New System.Drawing.Size(345, 23)
+        Me.lbTitulo.TabIndex = 3
+        Me.lbTitulo.Text = "SISTEMA DE AUTOCONSULTA MEDICA"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Presentation.My.Resources.Resources.isotipoProyectowhite
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
+        '
+        'btnOpciones
+        '
+        Me.btnOpciones.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnOpciones.Image = Global.Presentation.My.Resources.Resources.settings
+        Me.btnOpciones.Location = New System.Drawing.Point(191, 6)
+        Me.btnOpciones.Name = "btnOpciones"
+        Me.btnOpciones.Size = New System.Drawing.Size(25, 25)
+        Me.btnOpciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnOpciones.TabIndex = 8
+        Me.btnOpciones.TabStop = False
+        '
         'FrmMedPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
@@ -217,17 +261,18 @@ Partial Class FrmMedPrincipal
         Me.ClientSize = New System.Drawing.Size(1024, 720)
         Me.Controls.Add(Me.panelChildMedico)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.TopPanel)
         Me.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmMedPrincipal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmMedPrincipal"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnCerrarPrograma, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TopPanel.ResumeLayout(False)
+        Me.TopPanel.PerformLayout()
+        CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -235,17 +280,19 @@ Partial Class FrmMedPrincipal
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.picturePerfile, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnOpciones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents TopPanel As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents panelChildMedico As Panel
     Friend WithEvents btnCerrar As Button
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents btnCerrarPrograma As PictureBox
+    Friend WithEvents btnMinimize As PictureBox
+    Friend WithEvents btnClose As PictureBox
     Friend WithEvents btnChats As Button
     Friend WithEvents btnSolicitudes As Button
     Friend WithEvents PictureBox3 As PictureBox
@@ -253,4 +300,7 @@ Partial Class FrmMedPrincipal
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents picturePerfile As PictureBox
     Friend WithEvents lbNombre As Label
+    Friend WithEvents lbTitulo As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnOpciones As PictureBox
 End Class

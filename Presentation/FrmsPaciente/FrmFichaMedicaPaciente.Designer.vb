@@ -293,7 +293,7 @@ Partial Class FrmFichaMedicaPaciente
         Me.Controls.Add(Me.txtMedicina)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ShapeContainer1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmFichaMedicaPaciente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -4,6 +4,7 @@ Public Class FrmPrincipalGerente
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbNombre.Text = FrmLogIn.gere._pNom
+        fotoPerfil.Image = ObtenerImagen(FrmLogIn.gere._ci)
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
@@ -36,6 +37,13 @@ Public Class FrmPrincipalGerente
         End If
     End Sub
 
+    Private Sub fotoPerfil_Click(sender As Object, e As EventArgs) Handles fotoPerfil.Click
+        GuardarImagen(FrmLogIn.gere._ci, ofdFoto, fotoPerfil)
+
+    End Sub
+
+#Region "Hover's"
+
     Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
@@ -56,6 +64,8 @@ Public Class FrmPrincipalGerente
     Private Sub btnMinimize_MouseLeave(sender As Object, e As EventArgs) Handles btnMinimize.MouseLeave
         btnMinimize.BackColor = Color.FromArgb(26, 31, 55)
     End Sub
+
+#End Region
 
 #Region "poder mover el form"
 

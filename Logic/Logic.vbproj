@@ -68,6 +68,7 @@
     <Compile Include="Define.vb" />
     <Compile Include="Enfermedad.vb" />
     <Compile Include="FichaMedica.vb" />
+    <Compile Include="Personas\fotoPerfil.vb" />
     <Compile Include="Personas\Gerente.vb" />
     <Compile Include="Personas\Medico.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

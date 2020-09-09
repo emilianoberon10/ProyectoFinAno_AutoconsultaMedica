@@ -4,6 +4,7 @@ Public Class FrmMedPrincipal
 
     Private Sub FrmMedPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbNombre.Text = FrmLogIn.medic._pNom
+        fotoPerfil.Image = ObtenerImagen(FrmLogIn.medic._ci)
     End Sub
 
     Private Sub btnSolicitudes_Click(sender As Object, e As EventArgs) Handles btnSolicitudes.Click
@@ -31,6 +32,10 @@ Public Class FrmMedPrincipal
 
     Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
         Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub fotoPerfil_Click(sender As Object, e As EventArgs) Handles fotoPerfil.Click
+        GuardarImagen(FrmLogIn.medic._ci, ofdFoto, fotoPerfil)
 
     End Sub
 

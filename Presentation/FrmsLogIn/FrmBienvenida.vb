@@ -7,6 +7,7 @@
         If FrmLogIn.tipoLogin = "Paciente" Then
             FrmLogIn.paci._pNom = FrmLogIn.paci.ObtenerNombre() 'Guardo el nombre del paciente para personalizar su interfaz y mostrarlo en el chat
             lbNombre.Text = FrmLogIn.paci._pNom
+
         ElseIf FrmLogIn.tipoLogin = "Gerente" Then
             FrmLogIn.gere._pNom = FrmLogIn.gere.ObtenerNombre() 'Guardo el nombre del paciente para personalizar su interfaz y mostrarlo en el chat
             lbNombre.Text = FrmLogIn.gere._pNom

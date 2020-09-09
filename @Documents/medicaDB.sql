@@ -54,7 +54,11 @@ CREATE TABLE Medico(
     CONSTRAINT fk_ciM FOREIGN KEY(ciM) REFERENCES Persona(ci),
     CONSTRAINT fk_idEsp FOREIGN KEY(idEspecialidad) REFERENCES especialidad(id)
 );
-
+drop table fotoPerfil;
+CREATE TABLE fotoPerfil(
+ci CHAR(8) UNIQUE KEY REFERENCES persona(ci),
+foto longText
+);
 CREATE TABLE Riesgo (
 idRiesgo int(1) primary key,
 riesgo varchar(10)

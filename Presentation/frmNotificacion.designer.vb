@@ -32,7 +32,7 @@ Partial Class frmNotificacion
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(83, 0)
         Me.Label1.Name = "Label1"
@@ -60,7 +60,7 @@ Partial Class frmNotificacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(283, 67)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)

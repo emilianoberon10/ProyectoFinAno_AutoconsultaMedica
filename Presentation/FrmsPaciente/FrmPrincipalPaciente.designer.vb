@@ -34,23 +34,24 @@ Partial Class FrmPrincipalPaciente
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.lbInstrucciones = New System.Windows.Forms.Label()
         Me.PanelinfoPac = New System.Windows.Forms.Panel()
+        Me.fotoPerfil = New System.Windows.Forms.PictureBox()
         Me.btnOpciones = New System.Windows.Forms.PictureBox()
         Me.lbNombre = New System.Windows.Forms.Label()
         Me.TopPanel = New System.Windows.Forms.Panel()
-        Me.PanelChildFormPac = New System.Windows.Forms.Panel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.lbTitulo = New System.Windows.Forms.Label()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PanelChildFormPac = New System.Windows.Forms.Panel()
+        Me.ofdFoto = New System.Windows.Forms.OpenFileDialog()
         Me.PanelMenuPac.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelinfoPac.SuspendLayout()
+        CType(Me.fotoPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnOpciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TopPanel.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelMenuPac
@@ -181,7 +182,7 @@ Partial Class FrmPrincipalPaciente
         'PanelinfoPac
         '
         Me.PanelinfoPac.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(73, Byte), Integer))
-        Me.PanelinfoPac.Controls.Add(Me.PictureBox6)
+        Me.PanelinfoPac.Controls.Add(Me.fotoPerfil)
         Me.PanelinfoPac.Controls.Add(Me.btnOpciones)
         Me.PanelinfoPac.Controls.Add(Me.lbNombre)
         Me.PanelinfoPac.Dock = System.Windows.Forms.DockStyle.Top
@@ -190,6 +191,17 @@ Partial Class FrmPrincipalPaciente
         Me.PanelinfoPac.Name = "PanelinfoPac"
         Me.PanelinfoPac.Size = New System.Drawing.Size(222, 184)
         Me.PanelinfoPac.TabIndex = 0
+        '
+        'fotoPerfil
+        '
+        Me.fotoPerfil.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.fotoPerfil.Image = Global.Presentation.My.Resources.Resources.profileEmpty
+        Me.fotoPerfil.Location = New System.Drawing.Point(45, 20)
+        Me.fotoPerfil.Name = "fotoPerfil"
+        Me.fotoPerfil.Size = New System.Drawing.Size(130, 130)
+        Me.fotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.fotoPerfil.TabIndex = 10
+        Me.fotoPerfil.TabStop = False
         '
         'btnOpciones
         '
@@ -224,14 +236,6 @@ Partial Class FrmPrincipalPaciente
         Me.TopPanel.Size = New System.Drawing.Size(1024, 37)
         Me.TopPanel.TabIndex = 1
         '
-        'PanelChildFormPac
-        '
-        Me.PanelChildFormPac.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelChildFormPac.Location = New System.Drawing.Point(222, 37)
-        Me.PanelChildFormPac.Name = "PanelChildFormPac"
-        Me.PanelChildFormPac.Size = New System.Drawing.Size(802, 683)
-        Me.PanelChildFormPac.TabIndex = 2
-        '
         'PictureBox5
         '
         Me.PictureBox5.Image = Global.Presentation.My.Resources.Resources.isotipoProyectowhite
@@ -253,16 +257,17 @@ Partial Class FrmPrincipalPaciente
         Me.lbTitulo.TabIndex = 8
         Me.lbTitulo.Text = "SISTEMA DE AUTOCONSULTA MEDICA"
         '
-        'PictureBox6
+        'PanelChildFormPac
         '
-        Me.PictureBox6.Enabled = False
-        Me.PictureBox6.Image = Global.Presentation.My.Resources.Resources.profileEmpty
-        Me.PictureBox6.Location = New System.Drawing.Point(45, 20)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(130, 130)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox6.TabIndex = 10
-        Me.PictureBox6.TabStop = False
+        Me.PanelChildFormPac.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelChildFormPac.Location = New System.Drawing.Point(222, 37)
+        Me.PanelChildFormPac.Name = "PanelChildFormPac"
+        Me.PanelChildFormPac.Size = New System.Drawing.Size(802, 683)
+        Me.PanelChildFormPac.TabIndex = 2
+        '
+        'ofdFoto
+        '
+        Me.ofdFoto.FileName = "OpenFileDialog1"
         '
         'FrmPrincipalPaciente
         '
@@ -290,11 +295,11 @@ Partial Class FrmPrincipalPaciente
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelinfoPac.ResumeLayout(False)
         Me.PanelinfoPac.PerformLayout()
+        CType(Me.fotoPerfil, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnOpciones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TopPanel.ResumeLayout(False)
         Me.TopPanel.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -316,5 +321,6 @@ Partial Class FrmPrincipalPaciente
     Friend WithEvents btnOpciones As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents lbTitulo As Label
-    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents fotoPerfil As PictureBox
+    Friend WithEvents ofdFoto As OpenFileDialog
 End Class

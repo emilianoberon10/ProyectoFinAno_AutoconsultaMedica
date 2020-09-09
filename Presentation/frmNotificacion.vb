@@ -2,6 +2,7 @@
     Private aIndex As Byte = nIdex
     Private Altura As Integer = 100
     Dim x As Integer = 0
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If Opacity = 0 Then
             Close()
@@ -35,15 +36,19 @@
             Altura = 260
         End If
     End Sub
+
     '50; 194; 77
 End Class
+
 Public Module General
     Public nIdex As Byte = 1
+
     Enum Estado
         [Ok]
         [Error]
         [Critical]
     End Enum
+
     Public Sub GetForm(estado As Estado, mensaje As String)
         Dim frm As New frmNotificacion
         frm.Label1.Text = mensaje
@@ -56,4 +61,5 @@ Public Module General
         End If
         frm.Show()
     End Sub
+
 End Module

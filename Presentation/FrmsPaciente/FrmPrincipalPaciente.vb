@@ -5,6 +5,7 @@ Public Class FrmPrincipalPaciente
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         OpenChildForm(New FrmConsultaPaciente, PanelChildFormPac)
         lbNombre.Text = FrmLogIn.paci._pNom
+        fotoPerfil.Image = ObtenerImagen(FrmLogIn.paci._ci)
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs)
@@ -40,6 +41,13 @@ Public Class FrmPrincipalPaciente
     Private Sub btnOpciones_Click(sender As Object, e As EventArgs) Handles btnOpciones.Click
         Dim opciones As New FrmOpciones
         opciones.ShowDialog()
+    End Sub
+
+    Dim foto As String
+
+    Private Sub fotoPerfil_Click(sender As Object, e As EventArgs) Handles fotoPerfil.Click
+        GuardarImagen(FrmLogIn.paci._ci, ofdFoto, fotoPerfil)
+
     End Sub
 
 #Region "poder mover el form"

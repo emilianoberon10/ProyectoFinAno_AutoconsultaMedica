@@ -316,11 +316,13 @@ Partial Class FrmLogIn
         '
         'ErrorProvider3
         '
+        Me.ErrorProvider3.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.ErrorProvider3.ContainerControl = Me
         Me.ErrorProvider3.Icon = CType(resources.GetObject("ErrorProvider3.Icon"), System.Drawing.Icon)
         '
         'ErrorProvider4
         '
+        Me.ErrorProvider4.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.ErrorProvider4.ContainerControl = Me
         Me.ErrorProvider4.Icon = CType(resources.GetObject("ErrorProvider4.Icon"), System.Drawing.Icon)
         '

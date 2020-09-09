@@ -73,6 +73,7 @@
     <Compile Include="DBDiagnostico.vb" />
     <Compile Include="DBEnfermedades.vb" />
     <Compile Include="DBGerente.vb" />
+    <Compile Include="DBImagen.vb" />
     <Compile Include="DBMedicos.vb" />
     <Compile Include="DBPaciente.vb" />
     <Compile Include="DBSintomas.vb" />

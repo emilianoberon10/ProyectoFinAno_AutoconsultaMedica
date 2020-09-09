@@ -3,7 +3,7 @@ Imports Logic
 
 Public Class FrmLogIn
 
-    Public paci As Paciente
+    Protected Friend paci As Paciente
     Public gere As Gerente
     Public medic As Medico
     Public tipoLogin As String
@@ -12,6 +12,9 @@ Public Class FrmLogIn
     Private lenguaje As String = "ES"
 
     Private Sub Logout(sender As Object, e As FormClosedEventArgs)
+        ErrorProvider3.Clear()
+        ErrorProvider4.Clear()
+        txtUser.BackColor = Color.FromArgb(48, 63, 105)
         txtUser.Clear()
         txtPass.Clear()
         Me.Show()
@@ -32,22 +35,26 @@ Public Class FrmLogIn
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
         ErrorProvider1.Clear()
-        If txtPass.Text.Length < 8 Then
+        If txtPass.Text.Length < 6 Then
+
+            ErrorProvider4.Clear()
             ErrorProvider4.SetError(Me.lbContraseña, "La contraseña debe contener almenos 8 caracteres")
+
         ElseIf txtUser.Text.Length < 8 Then
+
             ErrorProvider2.Clear()
             ErrorProvider2.SetError(Me.lbUsuario, "El nombre de usuario es muy corto")
         Else
-
             Select Case ConfirmarLogin(txtUser.Text, txtPass.Text)
                 Case "Paciente"
+                    General.GetForm(Estado.Ok, "Inicio de sesion exitoso")
+
                     Me.Hide()
                     Dim formwelcome As New FrmBienvenida()
 
                     paci = New Paciente(txtUser.Text) 'Guardo la ci del paciente para poder usarla luego
                     tipoLogin = "Paciente"
 
-                    General.GetForm(Estado.Ok, "Inicio de sesion exitoso")
                     formwelcome.ShowDialog()
                     Dim form As New FrmPrincipalPaciente
                     form.Show()
@@ -55,13 +62,14 @@ Public Class FrmLogIn
                     Me.Hide()
 
                 Case "Gerente"
+                    General.GetForm(Estado.Ok, "Inicio de sesion exitoso")
+
                     Me.Hide()
                     Dim formwelcome As New FrmBienvenida()
 
                     gere = New Gerente(txtUser.Text)  'Guardo la ci del paciente para poder usarla luego
                     tipoLogin = "Gerente"
 
-                    General.GetForm(Estado.Ok, "Inicio de sesion exitoso")
                     formwelcome.ShowDialog()
 
                     Dim form As New FrmPrincipalGerente
@@ -70,13 +78,14 @@ Public Class FrmLogIn
                     Me.Hide()
 
                 Case "Medico"
+                    General.GetForm(Estado.Ok, "Inicio de sesion exitoso")
+
                     Me.Hide()
                     Dim formwelcome As New FrmBienvenida()
 
                     medic = New Medico(txtUser.Text) 'Guardo la ci del paciente para poder usarla luego
                     tipoLogin = "Medico"
 
-                    General.GetForm(Estado.Ok, "Inicio de sesion exitoso")
                     formwelcome.ShowDialog()
 
                     Dim form As New FrmMedPrincipal
@@ -152,8 +161,6 @@ Public Class FrmLogIn
         End With
     End Sub
 
-#End Region 'region estilos text area
-
     Private Sub txtPass_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPass.KeyPress
         'al dar enter en el textBox de la contraseña genero un evento click para el boton login
         'con el if compruebo que el keypress fue un enter y no otra letra
@@ -164,6 +171,21 @@ Public Class FrmLogIn
             btnLogin.PerformClick()
         End If
     End Sub
+
+    'para mostrar si el largo de la ci es correcto
+    Private Sub txtUser_Leave(sender As Object, e As EventArgs) Handles txtUser.Leave
+        ErrorProvider2.Clear()
+        ErrorProvider3.Clear()
+        If txtUser.Text.Length < 8 Then
+            ErrorProvider2.SetError(Me.lbUsuario, "El nombre de usuario es muy corto")
+            txtUser.BackColor = Color.FromArgb(48, 63, 105)
+        Else
+            ErrorProvider3.SetError(Me.lbUsuario, "El largo es correcto")
+            txtUser.BackColor = Color.FromArgb(50, 194, 77)
+        End If
+    End Sub
+
+#End Region 'region estilos text area
 
 #Region "poder mover el form"
 
@@ -185,7 +207,9 @@ Public Class FrmLogIn
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
-#Region "btn cerrar y minimizar"
+#End Region 'region de mover form
+
+#Region "bnts Hover"
 
     Private Sub btnClose_MouseHover(sender As Object, e As EventArgs) Handles btnClose.MouseHover
         btnClose.BackColor = Color.FromArgb(48, 63, 105)
@@ -205,21 +229,7 @@ Public Class FrmLogIn
 
     End Sub
 
-    Private Sub txtUser_Leave(sender As Object, e As EventArgs) Handles txtUser.Leave
-        ErrorProvider2.Clear()
-        ErrorProvider3.Clear()
-        If txtUser.Text.Length < 8 Then
-            ErrorProvider2.SetError(Me.lbUsuario, "El nombre de usuario es muy corto")
-            txtUser.BackColor = Color.FromArgb(48, 63, 105)
-        Else
-            ErrorProvider3.SetError(Me.lbUsuario, "El largo es correcto")
-            txtUser.BackColor = Color.Green
-        End If
-    End Sub
-
 #End Region
-
-#End Region 'region de mover form
 
 #End Region 'region de estilos
 

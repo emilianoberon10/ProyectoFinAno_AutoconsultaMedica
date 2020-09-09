@@ -118,10 +118,13 @@ Public Class DBPaciente
             Using _command = New MySqlCommand
                 Try
                     _command.Connection = _connection
-                    _command.CommandText = "SET @diagnostico = (SELECT nomE FROM diagnostico
-                                                                JOIN enfermedad ON nomE=nombre
-                                                                WHERE idP=@ci AND fecha=CURDATE()
-                                                                ORDER BY riesgo ASC LIMIT 1);"
+                    _command.CommandText = "SET @diagnostico = (Select r.riesgo,nombre
+					                                            from Riesgo R,enfermedad E
+					                                            where E.riesgo=idRiesgo
+					                                            and nombre =(Select nomE
+					                                            			from diagnostico
+					                                            			where idP=22222222 and fecha=CURDATE()
+					                                            			order by idDiag DESC limit 1)order by idriesgo asc);"
                     _command.CommandText &= "INSERT INTO solicita(id,ci,nombre,diagnostico,estado) VALUES(null,@ci,@nombre,@diagnostico,'Pendiente')"
                     _command.Parameters.AddWithValue("@ci", ci)
                     _command.Parameters.AddWithValue("@nombre", nombre)

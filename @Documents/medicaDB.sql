@@ -54,7 +54,7 @@ CREATE TABLE Medico(
     CONSTRAINT fk_ciM FOREIGN KEY(ciM) REFERENCES Persona(ci),
     CONSTRAINT fk_idEsp FOREIGN KEY(idEspecialidad) REFERENCES especialidad(id)
 );
-drop table fotoPerfil;
+
 CREATE TABLE fotoPerfil(
 ci CHAR(8) UNIQUE KEY REFERENCES persona(ci),
 foto longText
@@ -236,7 +236,6 @@ INSERT INTO sintoma VALUES(null,"sudores nocturnos");
 
 INSERT INTO enfermedad VALUES(null,"covid","2","tos seca");
 INSERT INTO enfermedad VALUES(null,"gripe","5","enfermedad infecciosa aguda de las vías respiratorias");
-INSERT INTO enfermedad VALUES(null,"gastritis","2","inflamación de la mucosa que recubre las paredes del estómago");
 
 INSERT INTO enfermedad VALUES(null,"alergia","5","puede ser producida por hongos ambientales, los ácaros de polvo y los epitelios de algunos animales, como los perros, gatos, caballos y roedores.");
 INSERT INTO enfermedad VALUES(null,"dengue","1","producido por la picadura de un mosquito");
@@ -245,18 +244,15 @@ INSERT INTO enfermedad VALUES(null,"leucemia","1","La leucemia es una enfermedad
 -- Gestiona --
 insert into gestiona values ('alta',33333333,'covid',null,CURDATE(),CURTIME());
 insert into gestiona values ('alta',33333333,'gripe',null,CURDATE(),CURTIME());
-insert into gestiona values ('alta',33333333,'gastritis',null,CURDATE(),CURTIME());
 insert into gestiona values ('alta',33333333,null,'resfrio',CURDATE(),CURTIME());
 insert into gestiona values ('alta',33333333,null,'tos',CURDATE(),CURTIME());
 insert into gestiona values ('alta',33333333,null,'fiebre',CURDATE(),CURTIME());
 insert into gestiona values ('alta',33333333,null,'flemas',CURDATE(),CURTIME());
-insert into gestiona values ('alta',33333333,null,'dolor de estomago',CURDATE(),CURTIME());
 -- Define --
 INSERT INTO define VALUES("covid","tos");
 INSERT INTO define VALUES("covid","resfrio");
 INSERT INTO define VALUES("gripe","resfrio");
 INSERT INTO define VALUES("gripe","tos");
-INSERT INTO define VALUES("gastritis","dolor de estomago");
 
 INSERT INTO define VALUES("dengue","fiebre alta");
 INSERT INTO define VALUES("dengue","sangrado en encias");
@@ -274,27 +270,26 @@ INSERT INTO define VALUES("leucemia","sudores nocturnos");
 
 -- Paciente Selecciona Sintomas--
 insert into selec values (curdate(),curtime(),'resfrio',22222222);
-insert into selec values (curdate(),curtime(),'sangrado en encias',22222222);
-insert into selec values (curdate(),curtime(),'dolor muscular',22222222);
-insert into selec values (curdate(),curtime(),'debilidad general',22222222);
-insert into selec values (curdate(),curtime(),'tos',44444444);
-insert into selec values (curdate(),curtime(),'dolor de estomago',88888888);
-insert into selec values (curdate(),curtime(),'resfrio',55555555);
+insert into selec values (curdate(),curtime()+1,'sangrado en encias',22222222);
+insert into selec values (curdate(),curtime()+2,'dolor muscular',22222222);
+insert into selec values (curdate(),curtime()+3,'debilidad general',22222222);
+insert into selec values (curdate(),curtime()+4,'tos',44444444);
+insert into selec values (curdate(),curtime()+5,'resfrio',55555555);
 insert into selec values (curdate(),curtime(),'tos',55555555);
-insert into selec values (curdate(),curtime(),'fiebre',55555555);
+insert into selec values (curdate(),curtime()+8,'fiebre',55555555);
 -- -------------------------- Diagnostico -------------------------- -- 
 Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'22222222','covid',CURDATE());
 Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'22222222','dengue',CURDATE());
 Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'44444444','covid',CURDATE());
 Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'55555555','gripe',CURDATE());
-Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'88888888','gastritis',CURDATE());
 Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'55555555','covid',CURDATE());
 Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'88888888','gripe',CURDATE());
 -- Ficha medica --
-insert into fichamedica values (CURDATE(),'Uruguay',15,null,44444444,'Ingeniero en Sistemas','Antialergico','Por malestar','Diabetes');
-insert into fichamedica values (CURDATE(),'Uruguay',7,null,22222222,'En paro','','Por enfermedad','');
-insert into fichamedica values (CURDATE(),'Uruguay',21,null,55555555,'En paro','Analgesicos','Por enfermedad','Hipertension');
-insert into fichamedica values (CURDATE(),'Uruguay',20,null,88888888,'Docente','','Por enfermedad',''); 
+insert into fichamedica(Fecha,procedencia,idDiag,id,cedP,Ocup,Medicacion,Motiv_Cons,antecedentesFamiliares) 
+values (CURDATE(),'Uruguay',15,null,44444444,'Ingeniero en Sistemas','Antialergico','Por malestar','Diabetes'),
+(CURDATE(),'Uruguay',7,null,22222222,'En paro','','Por enfermedad',''),
+(CURDATE(),'Uruguay',21,null,55555555,'En paro','Analgesicos','Por enfermedad','Hipertension'),
+(CURDATE(),'Uruguay',20,null,88888888,'Docente','','Por enfermedad',''); 
 -- ----------------------------- Solicita Chat, Acepta y Chat --------------------------- --
 insert into solicita values (null,22222222,'Romina','covid','Pendiente');
 insert into solicita values (null,44444444,'Romina','dengue','Pendiente');

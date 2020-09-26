@@ -22,6 +22,7 @@ Partial Class FrmChats
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmChats))
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -29,9 +30,10 @@ Partial Class FrmChats
         Me.btnSalirChat = New System.Windows.Forms.Button()
         Me.btnEnviarMensaje = New System.Windows.Forms.Button()
         Me.txtMensaje = New System.Windows.Forms.TextBox()
-        Me.panelChat = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnVerFichaMedica = New System.Windows.Forms.Button()
+        Me.txtChat = New System.Windows.Forms.TextBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'Button3
@@ -90,7 +92,7 @@ Partial Class FrmChats
         Me.btnEnviarMensaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEnviarMensaje.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEnviarMensaje.ForeColor = System.Drawing.Color.Silver
-        Me.btnEnviarMensaje.Location = New System.Drawing.Point(460, 621)
+        Me.btnEnviarMensaje.Location = New System.Drawing.Point(460, 640)
         Me.btnEnviarMensaje.Name = "btnEnviarMensaje"
         Me.btnEnviarMensaje.Size = New System.Drawing.Size(120, 30)
         Me.btnEnviarMensaje.TabIndex = 2
@@ -100,19 +102,11 @@ Partial Class FrmChats
         'txtMensaje
         '
         Me.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtMensaje.Location = New System.Drawing.Point(3, 621)
+        Me.txtMensaje.Location = New System.Drawing.Point(3, 640)
         Me.txtMensaje.Multiline = True
         Me.txtMensaje.Name = "txtMensaje"
         Me.txtMensaje.Size = New System.Drawing.Size(460, 30)
         Me.txtMensaje.TabIndex = 1
-        '
-        'panelChat
-        '
-        Me.panelChat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.panelChat.Location = New System.Drawing.Point(3, 45)
-        Me.panelChat.Name = "panelChat"
-        Me.panelChat.Size = New System.Drawing.Size(577, 570)
-        Me.panelChat.TabIndex = 11
         '
         'Panel1
         '
@@ -139,16 +133,32 @@ Partial Class FrmChats
         Me.btnVerFichaMedica.Text = "FICHA MEDICA"
         Me.btnVerFichaMedica.UseVisualStyleBackColor = False
         '
+        'txtChat
+        '
+        Me.txtChat.BackColor = System.Drawing.Color.White
+        Me.txtChat.Enabled = False
+        Me.txtChat.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtChat.ForeColor = System.Drawing.Color.DarkBlue
+        Me.txtChat.Location = New System.Drawing.Point(3, 58)
+        Me.txtChat.Multiline = True
+        Me.txtChat.Name = "txtChat"
+        Me.txtChat.Size = New System.Drawing.Size(577, 576)
+        Me.txtChat.TabIndex = 10
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'FrmChats
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(778, 740)
+        Me.Controls.Add(Me.txtChat)
         Me.Controls.Add(Me.btnSalirChat)
         Me.Controls.Add(Me.btnEnviarMensaje)
         Me.Controls.Add(Me.txtMensaje)
-        Me.Controls.Add(Me.panelChat)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox2)
@@ -159,6 +169,7 @@ Partial Class FrmChats
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmChats"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -169,7 +180,8 @@ Partial Class FrmChats
     Friend WithEvents btnSalirChat As Button
     Friend WithEvents btnEnviarMensaje As Button
     Friend WithEvents txtMensaje As TextBox
-    Friend WithEvents panelChat As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnVerFichaMedica As Button
+    Friend WithEvents txtChat As TextBox
+    Friend WithEvents Timer1 As Timer
 End Class

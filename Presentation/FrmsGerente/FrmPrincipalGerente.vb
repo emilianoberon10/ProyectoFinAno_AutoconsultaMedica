@@ -7,7 +7,7 @@ Public Class FrmPrincipalGerente
         fotoPerfil.Image = ObtenerImagen(FrmLogIn.gere._ci)
     End Sub
 
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         If MessageBox.Show("Seguro que desa salir?", "Advertencia",
          MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
             Me.Close()

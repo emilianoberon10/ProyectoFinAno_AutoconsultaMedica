@@ -14,7 +14,7 @@ Imports Logic
             ._contraseña = "micontraseña"
             ._domicilio = "Cno.Carrasco 2671"
             ._edad = "19"
-            ._fechaNac = "2001-02-10"
+            ._edad = "2001-02-10"
             ._mail = "miemail@gmail.com"
             ._pNom = "Emiliano"
             ._sNom = ""

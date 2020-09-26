@@ -7,7 +7,7 @@ Public Class Paciente
     Inherits Persona
     Property _mail As String
     Property _contraseña As String
-    Property _fechaNac As Date
+    Property _edad As Integer
     Property _diagnostico As String
     Private cons As New DBPaciente
     Private consD As New DBDiagnostico
@@ -30,14 +30,13 @@ Public Class Paciente
     End Sub
 
     Public Sub New(ci As String, mail As String, contraseña As String,
-                   tel_cel As Object, edad As Object, domicilio As String,
+                   tel_cel As Object, edad As Integer, domicilio As String,
                    sexo As String, pNom As String, sNom As String,
-                   pApe As String, sApe As String, fechaNac As Date)
+                   pApe As String, sApe As String)
 
         MyBase.New(ci, tel_cel, edad, domicilio, sexo, pNom, sNom, pApe, sApe)
         _mail = mail
         _contraseña = contraseña
-        _fechaNac = fechaNac
     End Sub
 
 #End Region
@@ -50,7 +49,7 @@ Public Class Paciente
         Return cons.SetPaciente(Me._ci, Me._mail, Me._contraseña,
                    Me._tel_cel, Me._edad, Me._domicilio,
                    Me._sexo, Me._pNom, Me._sNom,
-                   Me._pApe, Me._sApe, Me._fechaNac)
+                   Me._pApe, Me._sApe)
     End Function
 
     Public Overrides Function Borrar() As Boolean
@@ -96,9 +95,6 @@ Public Class Paciente
 
     End Function
 
-    Public Overridable Function GuardarFicha() As Boolean
-    End Function
-
 #End Region
 
 #Region "Chat"
@@ -108,7 +104,6 @@ Public Class Paciente
     End Function
 
     Public Function ComprobarChatAceptado()
-        Dim cons As New DBPaciente
         Return cons.PreguntarSolicitudAceptada(Me._ci)
     End Function
 
@@ -116,10 +111,24 @@ Public Class Paciente
         Return cons.EliminarSolicitudAceptada(Me._ci)
     End Function
 
+    Public Function EnviarMsj(msg As String) As Boolean
+        Return cons.EnviarMensajePac(Me._ci, msg)
+    End Function
+
+    Public Function ComprobarMsj() As String
+        Return cons.ComprobarMsjPac(Me._ci)
+    End Function
+
 #End Region
 
     Public Overrides Function ObtenerNombre() As String
         Return cons.ObtenerNombre(Me._ci)
+    End Function
+
+    Public Overridable Function GuardarFicha() As Boolean
+    End Function
+
+    Public Overridable Function GetFicha() As DataTable
     End Function
 
 #End Region

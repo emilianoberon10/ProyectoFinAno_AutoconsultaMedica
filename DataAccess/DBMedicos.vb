@@ -30,7 +30,7 @@ Public Class DBMedicos : Inherits ConexionBD
 
                         _command.CommandText = "SET @idEspec = (SELECT id FROM especialidad WHERE nombre=@espec);"
                         _command.CommandText &= "INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe) VALUES(@ci,@tel,@edad,@domi,@sexo,@pnom,@snom,@pape,@sape);"
-                        _command.CommandText &= "INSERT INTO medico(ciM,numMed,idEspecialidad,lugarTrabajo,contraseña) VALUES(@ci,@num,@idEspec,@lugartrab,@contraseña)"
+                        _command.CommandText &= "INSERT INTO medico(ciM,numMed,idEspecialidad,lugarTrabajo,contrasena) VALUES(@ci,@num,@idEspec,@lugartrab,@contraseña)"
                         _command.Parameters.AddWithValue("@tel", tel_cel)
                         _command.Parameters.AddWithValue("@edad", edad)
                         _command.Parameters.AddWithValue("@domi", domicilio)
@@ -51,6 +51,35 @@ Public Class DBMedicos : Inherits ConexionBD
                 End If
             End Using
         End Using
+    End Function
+
+    Public Function ModificarContraseña(ci As String, contraseña As String) As Boolean
+
+        Using _connection = GetConnection()
+            _connection.Open()
+
+            Using _command = New MySqlCommand
+                _command.Connection = _connection
+
+                _command.CommandText = "SELECT * FROM medico WHERE EXISTS (SELECT ciM FROM medico WHERE ciM=@ci);"
+                _command.Parameters.AddWithValue("@ci", ci)
+                _command.CommandType = CommandType.Text
+                Dim reader As MySqlDataReader = _command.ExecuteReader
+
+                If reader.HasRows Then
+                    reader.Dispose()
+                    _command.CommandText = "UPDATE medico SET contrasena=@pass WHERE ciM=@ci;"
+                    _command.Parameters.AddWithValue("@pass", contraseña)
+
+                    _command.ExecuteNonQuery()
+                    Return False
+                Else
+                    Return True
+                End If
+
+            End Using
+        End Using
+
     End Function
 
     Public Function SetHorariosMedico(ci As String, horario As String, dia As String) As Boolean
@@ -122,7 +151,12 @@ Public Class DBMedicos : Inherits ConexionBD
     ' Obtener tabla medicos
     Public Function ObtenerMedicos() As DataTable
         Dim _consultaSQL As String
-        _consultaSQL = "SELECT *,nombre FROM medico M, especialidad E WHERE M.idEspecialidad = E.id"
+
+        _consultaSQL = "SELECT ciM Cedula,pNom PrimerNombre,sNom SegundoNombre,pApe PrimerApellido,sApe SegundoApellido,
+                                lugarTrabajo,nombre Especialidad,Tel_cel,Domicilio,sexo,Lun,Mar, Mie, Jue, Vie, Sab,Dom
+                        FROM medico M
+                        JOIN especialidad E ON id=idEspecialidad
+                        JOIN persona ON ciM=ci"
         Return DevolverTabla(_consultaSQL)
     End Function
 
@@ -217,16 +251,58 @@ Public Class DBMedicos : Inherits ConexionBD
             _connection.Open()
             Using _command = New MySqlCommand()
                 _command.Connection = _connection
-                _command.CommandText = "INSERT INTO chat VALUES (CURDATE(),@ciP,@Diag,null,@ciM,'Proceso');
+                _command.CommandText = "INSERT INTO chat VALUES (null,@ciP,@ciM,CURDATE(),@diag,'Proceso');
                                         UPDATE solicita SET estado='Atendido' WHERE ci=@ciP"
                 _command.Parameters.AddWithValue("@ciP", ciP)
                 _command.Parameters.AddWithValue("@ciM", ciM)
-                _command.Parameters.AddWithValue("@Diag", diagnostico)
+                _command.Parameters.AddWithValue("@diag", diagnostico)
                 _command.CommandType = CommandType.Text
                 _command.ExecuteNonQuery()
                 Return True
             End Using
         End Using
+    End Function
+
+    Public Function EnviarMensaje(ci, msj) As Boolean
+        Using _connection = GetConnection()
+            _connection.Open()
+            Using _command = New MySqlCommand
+                _command.Connection = _connection
+
+                _command.CommandText = "SET @pac = (SELECT ciPac FROM chat WHERE idMed=@ci AND estado='Proceso');
+                                        SET @chat = (SELECT idChat FROM chat WHERE ciPac=@ci AND estado='Proceso');
+                                        INSERT INTO mensaje VALUES (null,curtime(),'1',@ci,@pac,@msj);"
+                _command.Parameters.AddWithValue("@ci", ci)
+                _command.Parameters.AddWithValue("@msj", msj)
+                _command.CommandType = CommandType.Text
+                _command.ExecuteNonQuery()
+                Return True
+            End Using
+        End Using
+    End Function
+
+    Public Function ComprobarMsjMed(ci) As String
+        Dim msj As String = ""
+        Using _connection = GetConnection()
+            _connection.Open()
+            Using _command = New MySqlCommand
+                _command.Connection = _connection
+
+                _command.CommandText = "SET @pac = (SELECT ciPac FROM chat WHERE idMed=@ci AND estado='Proceso');
+                                        SELECT txt FROM mensaje WHERE emisor=@pac AND receptor=@ci AND
+                                        hora BETWEEN CURTIME()-1 AND CURTIME()+2 order by idMsj DESC LIMIT 1;"
+                _command.Parameters.AddWithValue("@ci", ci)
+                _command.CommandType = CommandType.Text
+                Dim reader As MySqlDataReader = _command.ExecuteReader()
+                If (reader.HasRows) Then
+                    While (reader.Read())
+                        msj = reader.GetString(0)
+                    End While
+                End If
+
+            End Using
+        End Using
+        Return msj
     End Function
 
 End Class

@@ -33,7 +33,7 @@ Partial Class FrmPrincipalGerente
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
-        Me.btnLogOut = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.fotoPerfil = New System.Windows.Forms.PictureBox()
         Me.btnOpciones = New System.Windows.Forms.PictureBox()
@@ -72,7 +72,7 @@ Partial Class FrmPrincipalGerente
         Me.Panel1.Controls.Add(Me.btnIngresar)
         Me.Panel1.Controls.Add(Me.BtnEliminar)
         Me.Panel1.Controls.Add(Me.btnModificar)
-        Me.Panel1.Controls.Add(Me.btnLogOut)
+        Me.Panel1.Controls.Add(Me.btnCerrar)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 37)
@@ -187,19 +187,19 @@ Partial Class FrmPrincipalGerente
         Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModificar.UseVisualStyleBackColor = True
         '
-        'btnLogOut
+        'btnCerrar
         '
-        Me.btnLogOut.FlatAppearance.BorderSize = 0
-        Me.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.Font = New System.Drawing.Font("Century Gothic", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.Location = New System.Drawing.Point(0, 642)
-        Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(222, 41)
-        Me.btnLogOut.TabIndex = 300
-        Me.btnLogOut.Text = "CERRAR SESION"
-        Me.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnLogOut.UseVisualStyleBackColor = True
+        Me.btnCerrar.FlatAppearance.BorderSize = 0
+        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Font = New System.Drawing.Font("Century Gothic", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCerrar.Location = New System.Drawing.Point(0, 642)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(222, 41)
+        Me.btnCerrar.TabIndex = 300
+        Me.btnCerrar.Text = "CERRAR SESION"
+        Me.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -359,7 +359,7 @@ Partial Class FrmPrincipalGerente
     Friend WithEvents btnClose As PictureBox
     Friend WithEvents btnMinimize As PictureBox
     Friend WithEvents PanelChildForm As Panel
-    Friend WithEvents btnLogOut As Button
+    Friend WithEvents btnCerrar As Button
     Friend WithEvents btnIngresar As Button
     Friend WithEvents BtnEliminar As Button
     Friend WithEvents btnModificar As Button

@@ -50,8 +50,8 @@ Partial Class FrmInfo
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(405, 71)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "En caso de no haber cambiado su contraseña, esta sera su cedula en ambos caso." & Global.Microsoft.VisualBasic.ChrW(10) & "Si" &
-    " la modifico puede dar click en el siguiente enlace para restablecerla"
+        Me.Label2.Text = "En caso de no haber cambiado su contraseña, esta sera su cedula. " & Global.Microsoft.VisualBasic.ChrW(10) & "Si la modifico " &
+    "puede dar click en el siguiente enlace para restablecerla"
         '
         'llbRecuperarPass
         '

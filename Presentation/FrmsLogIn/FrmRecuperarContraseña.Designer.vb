@@ -65,6 +65,7 @@ Partial Class FrmRecuperarContraseña
         Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.Silver
         Me.TextBox1.Location = New System.Drawing.Point(24, 91)
+        Me.TextBox1.MaxLength = 8
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(180, 16)
         Me.TextBox1.TabIndex = 2
@@ -128,6 +129,7 @@ Partial Class FrmRecuperarContraseña
         Me.TextBox2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.ForeColor = System.Drawing.Color.Silver
         Me.TextBox2.Location = New System.Drawing.Point(244, 92)
+        Me.TextBox2.MaxLength = 255
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(180, 16)
         Me.TextBox2.TabIndex = 2

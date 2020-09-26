@@ -60,6 +60,10 @@ Public Class Medico
         Return cons.BorarMedico(ci)
     End Function
 
+    Public Function comboEspec() As DataSet
+        Return cons.Especialidades()
+    End Function
+
 #End Region
 
 #Region "chat"
@@ -71,6 +75,14 @@ Public Class Medico
     Public Function ComprobarSoli() As DataTable
         Dim cons As New DBChat
         Return cons.ComprobarSolicitudes()
+    End Function
+
+    Public Function EnviarMsj(msg As String) As Boolean
+        Return cons.EnviarMensaje(Me._ci, msg)
+    End Function
+
+    Public Function ComprobarMsj() As String
+        Return cons.ComprobarMsjMed(Me._ci)
     End Function
 
 #End Region

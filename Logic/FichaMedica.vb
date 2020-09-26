@@ -7,6 +7,10 @@ Public Class FichaMedica : Inherits Paciente
     Property _motivoConsulta As String
     Property _antecedentes As String
 
+    Public Sub New(ci)
+        MyBase.New(ci)
+    End Sub
+
     Public Sub New(ci As String, procedencia As String, ocupacion As String, medicacion As String,
                    motivoConsulta As String, antecedentes As String)
         MyBase.New(ci)
@@ -21,6 +25,11 @@ Public Class FichaMedica : Inherits Paciente
         Dim cons As New DBPaciente
         Return cons.SetFichaMedica(Me._ci, Me._procedencia, Me._ocupacion,
                                    Me._medicacion, Me._motivoConsulta, Me._antecedentes)
+    End Function
+
+    Public Overrides Function GetFicha() As DataTable
+        Dim cons As New DBPaciente
+        Return cons.GetFichaMedica(Me._ci)
     End Function
 
 End Class

@@ -22,20 +22,14 @@ Partial Class FrmChatPaciente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmChatPaciente))
-        Me.panelChat = New System.Windows.Forms.Panel()
         Me.txtMensaje = New System.Windows.Forms.TextBox()
         Me.btnEnviarMensaje = New System.Windows.Forms.Button()
         Me.btnSalirChat = New System.Windows.Forms.Button()
+        Me.txtChat = New System.Windows.Forms.TextBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
-        '
-        'panelChat
-        '
-        Me.panelChat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.panelChat.Location = New System.Drawing.Point(3, 55)
-        Me.panelChat.Name = "panelChat"
-        Me.panelChat.Size = New System.Drawing.Size(577, 570)
-        Me.panelChat.TabIndex = 1
         '
         'txtMensaje
         '
@@ -75,28 +69,46 @@ Partial Class FrmChatPaciente
         Me.btnSalirChat.Text = "SALIR"
         Me.btnSalirChat.UseVisualStyleBackColor = False
         '
+        'txtChat
+        '
+        Me.txtChat.BackColor = System.Drawing.Color.White
+        Me.txtChat.Enabled = False
+        Me.txtChat.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtChat.ForeColor = System.Drawing.Color.DarkBlue
+        Me.txtChat.Location = New System.Drawing.Point(3, 48)
+        Me.txtChat.Multiline = True
+        Me.txtChat.Name = "txtChat"
+        Me.txtChat.Size = New System.Drawing.Size(577, 576)
+        Me.txtChat.TabIndex = 4
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'FrmChatPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(589, 674)
+        Me.Controls.Add(Me.txtChat)
         Me.Controls.Add(Me.btnSalirChat)
         Me.Controls.Add(Me.btnEnviarMensaje)
         Me.Controls.Add(Me.txtMensaje)
-        Me.Controls.Add(Me.panelChat)
         Me.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Silver
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FrmChatPaciente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents panelChat As Panel
     Friend WithEvents txtMensaje As TextBox
     Friend WithEvents btnEnviarMensaje As Button
     Friend WithEvents btnSalirChat As Button
+    Friend WithEvents txtChat As TextBox
+    Friend WithEvents Timer1 As Timer
 End Class

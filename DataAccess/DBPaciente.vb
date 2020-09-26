@@ -5,18 +5,16 @@ Public Class DBPaciente
 
 #Region "ABM paciente"
 
-    Public Function SetPaciente(ci As String, mail As String, contraseña As String,
-                   tel_cel As Integer, edad As Integer, domicilio As String,
-                   sexo As String, pNom As String, sNom As String,
-                   pApe As String, sApe As String, fechaNac As Date) As Boolean
-        Try
-            Using _connection = GetConnection()
-                _connection.Open()
+    Public Function SetPaciente(ci, mail, contraseña, tel_cel, edad, domicilio, sexo, pNom, sNom, pApe, sApe) As Boolean
 
-                Using _command = New MySqlCommand
+        Using _connection = GetConnection()
+            _connection.Open()
+
+            Using _command = New MySqlCommand
+                Try
                     _command.Connection = _connection
 
-                    _command.CommandText = "SELECT * FROM paciente WHERE EXISTS (SELECT ciP FROM paciente WHERE ciP=@ci"
+                    _command.CommandText = "SELECT * FROM paciente WHERE EXISTS (SELECT ciP FROM paciente WHERE ciP=@ci)"
                     _command.Parameters.AddWithValue("@ci", ci)
                     _command.CommandType = CommandType.Text
                     Dim reader As MySqlDataReader = _command.ExecuteReader
@@ -26,8 +24,8 @@ Public Class DBPaciente
                     Else
                         reader.Dispose()
 
-                        _command.CommandText = "INSERT INTO persona VALUES(@ci,@tel,@domi,@sexo,@pnom,@pape,@snom,@sape);"
-                        _command.CommandText &= "INSERT INTO paciente VALUES(@ci,@mail,@fechaNac,@contraseña);"
+                        _command.CommandText = "INSERT INTO persona VALUES(@ci,@tel,,@edad,@domi,@sexo,@pnom,@pape,@snom,@sape);"
+                        _command.CommandText &= "INSERT INTO paciente VALUES(LAST_INSERT_ID(persona),@ci,@mail,@contraseña);"
 
                         _command.Parameters.AddWithValue("@tel", tel_cel)
                         _command.Parameters.AddWithValue("@domi", domicilio)
@@ -37,20 +35,20 @@ Public Class DBPaciente
                         _command.Parameters.AddWithValue("@snom", sNom)
                         _command.Parameters.AddWithValue("@sape", sApe)
                         _command.Parameters.AddWithValue("@mail", mail)
-                        _command.Parameters.AddWithValue("@fechaNac", fechaNac.ToString)
+                        _command.Parameters.AddWithValue("@edad", edad)
                         _command.Parameters.AddWithValue("@contraseña", contraseña)
 
                         _command.ExecuteNonQuery()
                         Return False
                     End If
-                End Using
+                Catch ex As MySqlException
+                    Throw New SystemException("ERROR(DBPaciente,SetPaciente)" & ex.Message)
+                End Try
             End Using
-        Catch ex As Exception
-            MsgBox("ERROR(DBPaciente,SetPaciente)" & ex.Message)
-        End Try
+        End Using
     End Function
 
-    Public Function BorrarPaciente(ci As String) As Boolean
+    Public Function BorrarPaciente(ci) As Boolean
 
         Using _connection = GetConnection()
             _connection.Open()
@@ -79,7 +77,7 @@ Public Class DBPaciente
 
     End Function
 
-    Public Function ModificarContraseña(ci As String, contraseña As String) As Boolean
+    Public Function ModificarContraseña(ci, contraseña) As Boolean
 
         Using _connection = GetConnection()
             _connection.Open()
@@ -94,7 +92,7 @@ Public Class DBPaciente
 
                 If reader.HasRows Then
                     reader.Dispose()
-                    _command.CommandText = "UPDATE paciente SET contraseña=@pass WHERE ciP=@ci;"
+                    _command.CommandText = "UPDATE paciente SET contrasena=@pass WHERE ciP=@ci;"
                     _command.Parameters.AddWithValue("@pass", contraseña)
 
                     _command.ExecuteNonQuery()
@@ -118,12 +116,12 @@ Public Class DBPaciente
             Using _command = New MySqlCommand
                 Try
                     _command.Connection = _connection
-                    _command.CommandText = "SET @diagnostico = (Select r.riesgo,nombre
+                    _command.CommandText = "SET @diagnostico = (Select nombre
 					                                            from Riesgo R,enfermedad E
 					                                            where E.riesgo=idRiesgo
 					                                            and nombre =(Select nomE
 					                                            			from diagnostico
-					                                            			where idP=22222222 and fecha=CURDATE()
+					                                            			where idP=@ci and fecha=CURDATE()
 					                                            			order by idDiag DESC limit 1)order by idriesgo asc);"
                     _command.CommandText &= "INSERT INTO solicita(id,ci,nombre,diagnostico,estado) VALUES(null,@ci,@nombre,@diagnostico,'Pendiente')"
                     _command.Parameters.AddWithValue("@ci", ci)
@@ -146,7 +144,7 @@ Public Class DBPaciente
             Using _command = New MySqlCommand
                 _command.Connection = _connection
 
-                _command.CommandText = "SELECT estado FROM solicita WHERE ci=@ci"
+                _command.CommandText = "SELECT estado FROM solicita WHERE ci=@ci AND estado='Atendido' ORDER BY id DESC"
                 _command.Parameters.AddWithValue("@ci", ci)
                 _command.CommandType = CommandType.Text
                 Dim reader = _command.ExecuteReader
@@ -172,13 +170,56 @@ Public Class DBPaciente
                 _command.Parameters.AddWithValue("@ci", ci)
                 _command.CommandType = CommandType.Text
                 _command.ExecuteNonQuery()
+                Return True
             End Using
         End Using
     End Function
 
+    Public Function EnviarMensajePac(ci, msj) As Boolean
+        Using _connection = GetConnection()
+            _connection.Open()
+            Using _command = New MySqlCommand
+                _command.Connection = _connection
+
+                _command.CommandText = "SET @med = (SELECT idMed FROM chat WHERE ciPac=@ci AND estado='Proceso');
+                                        SET @chat = (SELECT idChat FROM chat WHERE ciPac=@ci AND estado='Proceso');
+                                        insert into mensaje values (null,curtime(),@chat,@ci,@med,@msj);"
+                _command.Parameters.AddWithValue("@ci", ci)
+                _command.Parameters.AddWithValue("@msj", msj)
+                _command.CommandType = CommandType.Text
+                _command.ExecuteNonQuery()
+                Return True
+            End Using
+        End Using
+    End Function
+
+    Public Function ComprobarMsjPac(ci) As String
+        Dim msj As String = ""
+        Using _connection = GetConnection()
+            _connection.Open()
+            Using _command = New MySqlCommand
+                _command.Connection = _connection
+
+                _command.CommandText = "SET @med = (SELECT idMed FROM chat WHERE ciPac=@ci AND estado='Proceso');
+                                        SELECT txt FROM mensaje WHERE emisor=@med AND receptor=@ci AND
+                                        hora BETWEEN CURTIME()-1 AND CURTIME()+2 order by idMsj DESC LIMIT 1;"
+                _command.Parameters.AddWithValue("@ci", ci)
+                _command.CommandType = CommandType.Text
+                Dim reader As MySqlDataReader = _command.ExecuteReader()
+                If (reader.HasRows) Then
+                    While (reader.Read())
+                        msj = reader.GetString(0)
+                    End While
+                End If
+
+            End Using
+        End Using
+        Return msj
+    End Function
+
 #End Region
 
-#Region "Diagnostico"
+#Region "ficha"
 
     Public Function SetFichaMedica(ci As String, procedencia As String, ocupacion As String,
                                    medicacion As String, motConsu As String, enfermedades As String) As Boolean
@@ -200,6 +241,10 @@ Public Class DBPaciente
                 Return True
             End Using
         End Using
+    End Function
+
+    Public Function GetFichaMedica(ci) As DataTable
+        Return DevolverTabla("SELECT procedencia,ocup,medicacion,Motiv_Cons,antecedentesFamiliares FROM fichaMedica WHERE cedP='" & ci & "' ORDER BY id DESC")
     End Function
 
 #End Region

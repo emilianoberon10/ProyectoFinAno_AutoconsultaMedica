@@ -1,5 +1,4 @@
-﻿Imports System.Drawing
-Imports System.IO
+﻿Imports System.IO
 Imports Logic
 
 Module Module1
@@ -53,6 +52,16 @@ Module Module1
             .DisplayMember = "nombre" 'elnombre de tu columna de tu base de datos q deseas mostrar
             .ValueMember = "id" 'el id de tu tabla relacionada con el nombre que muestras muy importante para saber el ide de quien seleccionas en tu combobox
             .Text = "SINTOMA"
+        End With
+
+    End Sub
+
+    Public Sub CargarComboBoxEspec(cb As ComboBox)
+        Dim med As New Medico
+        With cb
+            .DataSource = med.comboEspec.Tables(0)
+            .DisplayMember = "nombre" 'elnombre de tu columna de tu base de datos q deseas mostrar
+            .ValueMember = "id" 'el id de tu tabla relacionada con el nombre que muestras muy importante para saber el ide de quien seleccionas en tu combobox
         End With
 
     End Sub

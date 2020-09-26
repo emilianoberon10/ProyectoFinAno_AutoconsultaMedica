@@ -1,9 +1,17 @@
 ﻿Imports Logic
 
 Public Class FrmFichaMedicaPaciente
+    Dim ficha As FichaMedica
 
     Private Sub btnConsul_Paint(sender As Object, e As PaintEventArgs) Handles btnAceptar.Paint
         BotonRedondeado(btnAceptar)
+        'ficha = New FichaMedica(FrmLogIn.paci._ci)
+        'Dim dt As New DataGridView With {
+        '    .DataSource = ficha.GetFicha()
+        '}
+
+        'txtProcedencia.Text = dt.Rows(0).Cells(0).Value
+
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
@@ -13,9 +21,8 @@ Public Class FrmFichaMedicaPaciente
             ErrorProvider1.SetError(lbOcup, "Los campos con ( * ) son obligatorios.")
             ErrorProvider1.SetError(lbProc, "Los campos con ( * ) son obligatorios.")
         Else
-            Dim ficha As New FichaMedica(FrmLogIn.paci._ci, txtProcedencia.Text,
-                                     txtOcupacion.Text, txtMedicina.Text, txtMotivoConsulta.Text,
-            txtAntecedentes.Text)
+            ficha = New FichaMedica(FrmLogIn.paci._ci, txtProcedencia.Text,
+                                     txtOcupacion.Text, txtMedicina.Text, txtMotivoConsulta.Text, txtAntecedentes.Text)
             If ficha.GuardarFicha() Then
                 Me.Close()
             Else

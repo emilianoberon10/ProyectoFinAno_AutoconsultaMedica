@@ -2,6 +2,7 @@
 
     Private Sub FrmChats_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBox2.Text = FrmSolicitudesChat.diag
+        Timer1.Start()
     End Sub
 
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
@@ -22,6 +23,20 @@
             'aqui genero el evento click
             btnEnviarMensaje.PerformClick()
         End If
+    End Sub
+
+    Private Sub btnEnviarMensaje_Click(sender As Object, e As EventArgs) Handles btnEnviarMensaje.Click
+        Dim msj As String = txtMensaje.Text
+        txtChat.Text &= msj & vbNewLine
+        FrmLogIn.medic.EnviarMsj(msj)
+        txtMensaje.Text = ""
+        txtMensaje.Focus()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Dim mensaje As String = FrmLogIn.medic.ComprobarMsj()
+        If mensaje IsNot "" Then txtChat.Text &= mensaje & vbNewLine
+
     End Sub
 
 End Class

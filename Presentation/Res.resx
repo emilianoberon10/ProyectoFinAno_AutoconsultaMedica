@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bienvenida_bienvenida" xml:space="preserve">
+    <value>BIENVENIDO</value>
+  </data>
+  <data name="Bienvenida_titulo" xml:space="preserve">
+    <value>SISTEMA DE AUTOCONSULTA MEDICA</value>
+  </data>
+  <data name="Bienvenido" xml:space="preserve">
+    <value>BIENVENIDO</value>
+  </data>
+  <data name="btn_aceptar" xml:space="preserve">
+    <value>ACEPTAR</value>
+  </data>
+  <data name="btn_Agenda" xml:space="preserve">
+    <value>AGENDA MEDICA</value>
+  </data>
+  <data name="btn_cancelar" xml:space="preserve">
+    <value>CANCELAR</value>
+  </data>
+  <data name="btn_cerrar" xml:space="preserve">
+    <value>CERRAR</value>
+  </data>
+  <data name="btn_cerrarSesion" xml:space="preserve">
+    <value>CERRAR SESION</value>
+  </data>
+  <data name="btn_chat" xml:space="preserve">
+    <value>CHAT</value>
+  </data>
+  <data name="btn_chats" xml:space="preserve">
+    <value>CHATS</value>
+  </data>
+  <data name="btn_consultar" xml:space="preserve">
+    <value>CONSULTAR</value>
+  </data>
+  <data name="btn_crear" xml:space="preserve">
+    <value>CREAR</value>
+  </data>
+  <data name="btn_eliminar" xml:space="preserve">
+    <value>ELIMINAR</value>
+  </data>
+  <data name="btn_Entre" xml:space="preserve">
+    <value>ENTRE</value>
+  </data>
+  <data name="btn_enviar" xml:space="preserve">
+    <value>ENVIAR</value>
+  </data>
+  <data name="btn_fichaMed" xml:space="preserve">
+    <value>FICHA MEDICA</value>
+  </data>
+  <data name="btn_Filtrar" xml:space="preserve">
+    <value>FILTRAR</value>
+  </data>
+  <data name="btn_historial" xml:space="preserve">
+    <value>HISTORIAL</value>
+  </data>
+  <data name="btn_ingresar" xml:space="preserve">
+    <value>INGRESAR</value>
+  </data>
+  <data name="btn_ingrMed" xml:space="preserve">
+    <value>MEDICOS</value>
+  </data>
+  <data name="btn_Iniciar" xml:space="preserve">
+    <value>INICIAR</value>
+  </data>
+  <data name="btn_modificar" xml:space="preserve">
+    <value>MODIFICAR</value>
+  </data>
+  <data name="btn_recuperar" xml:space="preserve">
+    <value>RECUPERAR</value>
+  </data>
+  <data name="btn_restablecer" xml:space="preserve">
+    <value>RESTABLECER</value>
+  </data>
+  <data name="btn_salir" xml:space="preserve">
+    <value>SALIR</value>
+  </data>
+  <data name="btn_soliChat" xml:space="preserve">
+    <value>SOLICITUDES DE CHAT</value>
+  </data>
+  <data name="contra" xml:space="preserve">
+    <value>CONTRASEÑA</value>
+  </data>
+  <data name="crearUsuario" xml:space="preserve">
+    <value>CREAR USUARIO</value>
+  </data>
+  <data name="Dom" xml:space="preserve">
+    <value>Domingo</value>
+  </data>
+  <data name="EsperaChat" xml:space="preserve">
+    <value>Por favor espere</value>
+  </data>
+  <data name="filtro" xml:space="preserve">
+    <value>Filtro</value>
+  </data>
+  <data name="Info_recordatorio2" xml:space="preserve">
+    <value>En caso de no haber cambiado su contraseña, esta sera su cedula. 
+Si la modifico puede dar click en el siguiente enlace para restablecerla</value>
+  </data>
+  <data name="Info_recordatorio3" xml:space="preserve">
+    <value>En caso de no tener una cuenta de click aquí</value>
+  </data>
+  <data name="Info_rocordatorio" xml:space="preserve">
+    <value>Recuerde que la cedula NO debe contener puntos ni guiones</value>
+  </data>
+  <data name="Jue" xml:space="preserve">
+    <value>Jueves</value>
+  </data>
+  <data name="Lun" xml:space="preserve">
+    <value>Lunes</value>
+  </data>
+  <data name="Mar" xml:space="preserve">
+    <value>Martes</value>
+  </data>
+  <data name="MChat_diag" xml:space="preserve">
+    <value>Diagnostico</value>
+  </data>
+  <data name="MhoraEntrada" xml:space="preserve">
+    <value>Hora de entrada</value>
+  </data>
+  <data name="MhoraSalida" xml:space="preserve">
+    <value>Hora de salida</value>
+  </data>
+  <data name="Mie" xml:space="preserve">
+    <value>Miercoles</value>
+  </data>
+  <data name="MSoli_aclaracion" xml:space="preserve">
+    <value>De doble click para iniciar chat</value>
+  </data>
+  <data name="MSoli_titulo" xml:space="preserve">
+    <value>SOLICITUDES DE CHAT</value>
+  </data>
+  <data name="passPerdida" xml:space="preserve">
+    <value>OLVIDO SU CONTRASEÑA ?</value>
+  </data>
+  <data name="PConsulta_titulo" xml:space="preserve">
+    <value>SELECCIONE SUS SINTOMAS</value>
+  </data>
+  <data name="Persona_antece" xml:space="preserve">
+    <value>Antecedentes Familiares</value>
+  </data>
+  <data name="Persona_ci" xml:space="preserve">
+    <value>Cedula Identidad</value>
+  </data>
+  <data name="Persona_correo" xml:space="preserve">
+    <value>Correo Electronico</value>
+  </data>
+  <data name="Persona_dir" xml:space="preserve">
+    <value>Direccion</value>
+  </data>
+  <data name="Persona_edad" xml:space="preserve">
+    <value>Edad</value>
+  </data>
+  <data name="Persona_pApe" xml:space="preserve">
+    <value>Primer Nombre</value>
+  </data>
+  <data name="Persona_pass" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="Persona_pNom" xml:space="preserve">
+    <value>Primer Apellido</value>
+  </data>
+  <data name="Persona_sApe" xml:space="preserve">
+    <value>Segundo Apellido</value>
+  </data>
+  <data name="Persona_sNom" xml:space="preserve">
+    <value>Segundo Nombre</value>
+  </data>
+  <data name="Persona_tel" xml:space="preserve">
+    <value>Telefono</value>
+  </data>
+  <data name="PFicha_antecedentes" xml:space="preserve">
+    <value>Antecedentes</value>
+  </data>
+  <data name="PFicha_cual" xml:space="preserve">
+    <value>Cual</value>
+  </data>
+  <data name="PFicha_motCons" xml:space="preserve">
+    <value>Motivo de la consulta</value>
+  </data>
+  <data name="PFicha_ocup" xml:space="preserve">
+    <value>Ocupacion</value>
+  </data>
+  <data name="PFicha_proced" xml:space="preserve">
+    <value>Procedencia</value>
+  </data>
+  <data name="PFicha_titulo" xml:space="preserve">
+    <value>FICHA MEDICA</value>
+  </data>
+  <data name="PFicha_tomaMed" xml:space="preserve">
+    <value>¿Toma medicina?</value>
+  </data>
+  <data name="Phistorial Aclaracion" xml:space="preserve">
+    <value>Esta fecha debe ser mayor</value>
+  </data>
+  <data name="RecuperarPass_passNueva" xml:space="preserve">
+    <value>Contraseña nueva</value>
+  </data>
+  <data name="RecuperarPass_passNueva2" xml:space="preserve">
+    <value>Repita la contraseña</value>
+  </data>
+  <data name="RecuperarPass_titulo" xml:space="preserve">
+    <value>RECUPERAR CONTRASEÑA</value>
+  </data>
+  <data name="RecuperarPass_usuario" xml:space="preserve">
+    <value>Su usuario es:</value>
+  </data>
+  <data name="Sab" xml:space="preserve">
+    <value>Sabado</value>
+  </data>
+  <data name="titulo-app" xml:space="preserve">
+    <value>SISTEMA DE AUTOCONSULTA MEDICA</value>
+  </data>
+  <data name="usuario" xml:space="preserve">
+    <value>USUARIO</value>
+  </data>
+  <data name="Vie" xml:space="preserve">
+    <value>Viernes</value>
+  </data>
+</root>

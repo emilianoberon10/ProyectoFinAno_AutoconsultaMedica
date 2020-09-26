@@ -51,13 +51,18 @@
     <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
       <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\[FTUApps.com] - Guna UI Framework Ultimate v2.0.0.1 + Keygen\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -91,6 +96,12 @@
       <DependentUpon>FrmOpciones.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmOpciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmsGerente\FrmDatosUso.Designer.vb">
+      <DependentUpon>FrmDatosUso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmsGerente\FrmDatosUso.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmsPaciente\FrmAgendaMedica.designer.vb">
@@ -230,10 +241,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Resource.es-ES.Designer.vb">
+    <Compile Include="Res.en-US.Designer.vb">
+      <DependentUpon>Res.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Res.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -242,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOpciones.resx">
       <DependentUpon>FrmOpciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmsGerente\FrmDatosUso.resx">
+      <DependentUpon>FrmDatosUso.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmsPaciente\FrmAgendaMedica.resx">
       <DependentUpon>FrmAgendaMedica.vb</DependentUpon>
@@ -309,9 +328,13 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resource.es-ES.resx">
+    <EmbeddedResource Include="Res.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.es-ES.Designer.vb</LastGenOutput>
+      <LastGenOutput>Res.en-US.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Res.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

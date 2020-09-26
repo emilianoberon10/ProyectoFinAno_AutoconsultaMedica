@@ -12,7 +12,7 @@ Public Class DBLogin
             connection.Open()
             Using command = New MySqlCommand()
                 command.Connection = connection
-                command.CommandText = "SELECT * FROM paciente WHERE ciP=@user and contraseña=@pass;"
+                command.CommandText = "SELECT * FROM paciente WHERE ciP=@user and contrasena=@pass;"
                 command.Parameters.AddWithValue("@user", ci)
                 command.Parameters.AddWithValue("@pass", pass)
                 command.CommandType = CommandType.Text
@@ -32,7 +32,7 @@ Public Class DBLogin
             connection.Open()
             Using command = New MySqlCommand()
                 command.Connection = connection
-                command.CommandText &= "SELECT * FROM gerente WHERE ciG=@user and contraseña=@pass;"
+                command.CommandText &= "SELECT * FROM gerente WHERE ciG=@user and contrasena=@pass;"
                 command.Parameters.AddWithValue("@user", ci)
                 command.Parameters.AddWithValue("@pass", pass)
                 command.CommandType = CommandType.Text
@@ -52,7 +52,7 @@ Public Class DBLogin
             connection.Open()
             Using command = New MySqlCommand()
                 command.Connection = connection
-                command.CommandText &= "SELECT * FROM medico WHERE ciM=@user and contraseña=@pass;"
+                command.CommandText &= "SELECT * FROM medico WHERE ciM=@user and contrasena=@pass;"
                 command.Parameters.AddWithValue("@user", ci)
                 command.Parameters.AddWithValue("@pass", pass)
                 command.CommandType = CommandType.Text

@@ -48,7 +48,10 @@ C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Deb
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.FrmModificarGerente.resources
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.FrmSolicitudesChat.resources
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.FrmOpciones.resources
-C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\es-ES\Presentation.resources.dll
-C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Resource.es-ES.resources
-C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\es-ES\Presentation.resources.dll
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.frmNotificacion.resources
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Res.resources
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\en-US\Presentation.resources.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Res.en-US.resources
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\en-US\Presentation.resources.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.FrmDatosUso.resources
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\Guna.UI2.dll

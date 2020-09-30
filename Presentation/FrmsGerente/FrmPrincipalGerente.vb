@@ -5,6 +5,13 @@ Public Class FrmPrincipalGerente
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbNombre.Text = FrmLogIn.gere._pNom
         fotoPerfil.Image = ObtenerImagen(FrmLogIn.gere._ci)
+
+        'Me.lbTitulo.Text = Res.titulo_app
+        'Me.btnIngresar.Text = Res.btn_ingresar
+        'Me.btnIngresarMedico.Text = Res.btn_ingrMed
+        'Me.btnModificar.Text = Res.btn_modificar
+        'Me.BtnEliminar.Text = Res.btn_eliminar
+        'Me.btnCerrar.Text = Res.btn_cerrarSesion
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click

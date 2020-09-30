@@ -64,6 +64,10 @@ Public MustInherit Class Persona
 
     End Function
 
+    Public Overridable Function EncriptarContraseña() As String
+
+    End Function
+
 #End Region
 
 End Class

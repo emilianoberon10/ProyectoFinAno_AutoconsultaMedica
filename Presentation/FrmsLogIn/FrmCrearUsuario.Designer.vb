@@ -53,11 +53,11 @@ Partial Class FrmCrearUsuario
         Me.txtApe = New System.Windows.Forms.TextBox()
         Me.lbCorreo = New System.Windows.Forms.Label()
         Me.txtCorreo = New System.Windows.Forms.TextBox()
-        Me.btnCrear = New System.Windows.Forms.Button()
-        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.cbSexo = New System.Windows.Forms.ComboBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnCrear = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnCancelar = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -381,38 +381,6 @@ Partial Class FrmCrearUsuario
         Me.txtCorreo.Size = New System.Drawing.Size(374, 20)
         Me.txtCorreo.TabIndex = 10
         '
-        'btnCrear
-        '
-        Me.btnCrear.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.btnCrear.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCrear.FlatAppearance.BorderSize = 0
-        Me.btnCrear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCrear.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCrear.ForeColor = System.Drawing.Color.Silver
-        Me.btnCrear.Location = New System.Drawing.Point(270, 300)
-        Me.btnCrear.Name = "btnCrear"
-        Me.btnCrear.Size = New System.Drawing.Size(382, 36)
-        Me.btnCrear.TabIndex = 14
-        Me.btnCrear.Text = "CREAR"
-        Me.btnCrear.UseVisualStyleBackColor = False
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCancelar.FlatAppearance.BorderSize = 0
-        Me.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancelar.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ForeColor = System.Drawing.Color.Silver
-        Me.btnCancelar.Location = New System.Drawing.Point(55, 300)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(120, 36)
-        Me.btnCancelar.TabIndex = 4
-        Me.btnCancelar.Text = "CANCELAR"
-        Me.btnCancelar.UseVisualStyleBackColor = False
-        '
         'cbSexo
         '
         Me.cbSexo.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
@@ -443,16 +411,68 @@ Partial Class FrmCrearUsuario
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Sexo"
         '
+        'btnCrear
+        '
+        Me.btnCrear.Animated = True
+        Me.btnCrear.BackColor = System.Drawing.Color.Transparent
+        Me.btnCrear.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCrear.BorderRadius = 15
+        Me.btnCrear.BorderThickness = 2
+        Me.btnCrear.CheckedState.Parent = Me.btnCrear
+        Me.btnCrear.CustomImages.Parent = Me.btnCrear
+        Me.btnCrear.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.btnCrear.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCrear.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btnCrear.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnCrear.HoverState.Parent = Me.btnCrear
+        Me.btnCrear.Location = New System.Drawing.Point(273, 300)
+        Me.btnCrear.Name = "btnCrear"
+        Me.btnCrear.PressedColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btnCrear.ShadowDecoration.BorderRadius = 20
+        Me.btnCrear.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(171, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCrear.ShadowDecoration.Depth = 25
+        Me.btnCrear.ShadowDecoration.Enabled = True
+        Me.btnCrear.ShadowDecoration.Parent = Me.btnCrear
+        Me.btnCrear.Size = New System.Drawing.Size(382, 36)
+        Me.btnCrear.TabIndex = 15
+        Me.btnCrear.Text = "CREAR"
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.Animated = True
+        Me.btnCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.btnCancelar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCancelar.BorderRadius = 15
+        Me.btnCancelar.BorderThickness = 2
+        Me.btnCancelar.CheckedState.Parent = Me.btnCancelar
+        Me.btnCancelar.CustomImages.Parent = Me.btnCancelar
+        Me.btnCancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btnCancelar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnCancelar.HoverState.Parent = Me.btnCancelar
+        Me.btnCancelar.Location = New System.Drawing.Point(52, 300)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btnCancelar.ShadowDecoration.BorderRadius = 20
+        Me.btnCancelar.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(171, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCancelar.ShadowDecoration.Depth = 25
+        Me.btnCancelar.ShadowDecoration.Enabled = True
+        Me.btnCancelar.ShadowDecoration.Parent = Me.btnCancelar
+        Me.btnCancelar.Size = New System.Drawing.Size(120, 36)
+        Me.btnCancelar.TabIndex = 15
+        Me.btnCancelar.Text = "CERRAR"
+        '
         'FrmCrearUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(681, 359)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.cbSexo)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnCrear)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.cbSexo)
         Me.Controls.Add(Me.txtCorreo)
         Me.Controls.Add(Me.lbCorreo)
         Me.Controls.Add(Me.txtApe)
@@ -515,9 +535,9 @@ Partial Class FrmCrearUsuario
     Friend WithEvents txtApe As TextBox
     Friend WithEvents lbCorreo As Label
     Friend WithEvents txtCorreo As TextBox
-    Friend WithEvents btnCrear As Button
-    Friend WithEvents btnCancelar As Button
     Friend WithEvents cbSexo As ComboBox
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents Label2 As Label
+    Friend WithEvents btnCrear As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnCancelar As Guna.UI2.WinForms.Guna2Button
 End Class

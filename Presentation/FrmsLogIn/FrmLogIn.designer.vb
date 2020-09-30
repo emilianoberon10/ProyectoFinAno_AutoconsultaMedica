@@ -33,10 +33,7 @@ Partial Class FrmLogIn
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.txtPass = New System.Windows.Forms.TextBox()
-        Me.btnLogin = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.llbForgotPassEs = New System.Windows.Forms.LinkLabel()
-        Me.llbCrearUsuarioEs = New System.Windows.Forms.LinkLabel()
         Me.ErrorProviderLogIn = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lbUsuario = New System.Windows.Forms.Label()
         Me.lbContraseña = New System.Windows.Forms.Label()
@@ -47,6 +44,9 @@ Partial Class FrmLogIn
         Me.ErrorProviderUserMal = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProviderUserBien = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProviderPass = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.btnLogin = New Guna.UI2.WinForms.Guna2Button()
+        Me.llbCrearUsuarioEs = New System.Windows.Forms.LinkLabel()
+        Me.llbForgotPassEs = New System.Windows.Forms.LinkLabel()
         Me.topPanel.SuspendLayout()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,13 +101,13 @@ Partial Class FrmLogIn
         Me.txtUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUser.CausesValidation = False
-        Me.txtUser.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUser.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUser.ForeColor = System.Drawing.Color.Silver
-        Me.txtUser.Location = New System.Drawing.Point(40, 265)
+        Me.txtUser.Location = New System.Drawing.Point(40, 263)
         Me.txtUser.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtUser.MaxLength = 8
         Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(350, 21)
+        Me.txtUser.Size = New System.Drawing.Size(350, 22)
         Me.txtUser.TabIndex = 1
         '
         'ShapeContainer1
@@ -126,8 +126,8 @@ Partial Class FrmLogIn
         Me.LineShape3.Name = "LineShape3"
         Me.LineShape3.X1 = 41
         Me.LineShape3.X2 = 390
-        Me.LineShape3.Y1 = 534
-        Me.LineShape3.Y2 = 534
+        Me.LineShape3.Y1 = 528
+        Me.LineShape3.Y2 = 528
         '
         'LineShape2
         '
@@ -153,30 +153,15 @@ Partial Class FrmLogIn
         '
         Me.txtPass.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPass.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPass.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.ForeColor = System.Drawing.Color.Silver
         Me.ErrorProviderLogIn.SetIconAlignment(Me.txtPass, System.Windows.Forms.ErrorIconAlignment.BottomRight)
-        Me.txtPass.Location = New System.Drawing.Point(41, 334)
+        Me.txtPass.Location = New System.Drawing.Point(41, 332)
         Me.txtPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtPass.MaxLength = 150
         Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(350, 21)
+        Me.txtPass.Size = New System.Drawing.Size(350, 22)
         Me.txtPass.TabIndex = 2
-        '
-        'btnLogin
-        '
-        Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLogin.FlatAppearance.BorderSize = 0
-        Me.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogin.Font = New System.Drawing.Font("Century Gothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(38, 463)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(352, 50)
-        Me.btnLogin.TabIndex = 3
-        Me.btnLogin.Text = "INICIAR"
-        Me.btnLogin.UseVisualStyleBackColor = False
         '
         'Panel1
         '
@@ -187,30 +172,6 @@ Partial Class FrmLogIn
         Me.Panel1.Size = New System.Drawing.Size(430, 10)
         Me.Panel1.TabIndex = 7
         '
-        'llbForgotPassEs
-        '
-        Me.llbForgotPassEs.AutoSize = True
-        Me.llbForgotPassEs.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llbForgotPassEs.LinkColor = System.Drawing.Color.Silver
-        Me.llbForgotPassEs.Location = New System.Drawing.Point(123, 545)
-        Me.llbForgotPassEs.Name = "llbForgotPassEs"
-        Me.llbForgotPassEs.Size = New System.Drawing.Size(184, 21)
-        Me.llbForgotPassEs.TabIndex = 0
-        Me.llbForgotPassEs.TabStop = True
-        Me.llbForgotPassEs.Text = "Olvido su contraseña?"
-        '
-        'llbCrearUsuarioEs
-        '
-        Me.llbCrearUsuarioEs.AutoSize = True
-        Me.llbCrearUsuarioEs.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llbCrearUsuarioEs.LinkColor = System.Drawing.Color.Silver
-        Me.llbCrearUsuarioEs.Location = New System.Drawing.Point(155, 566)
-        Me.llbCrearUsuarioEs.Name = "llbCrearUsuarioEs"
-        Me.llbCrearUsuarioEs.Size = New System.Drawing.Size(113, 21)
-        Me.llbCrearUsuarioEs.TabIndex = 0
-        Me.llbCrearUsuarioEs.TabStop = True
-        Me.llbCrearUsuarioEs.Text = "Crear usuario"
-        '
         'ErrorProviderLogIn
         '
         Me.ErrorProviderLogIn.ContainerControl = Me
@@ -219,21 +180,21 @@ Partial Class FrmLogIn
         'lbUsuario
         '
         Me.lbUsuario.AutoSize = True
-        Me.lbUsuario.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbUsuario.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ErrorProviderUserBien.SetIconAlignment(Me.lbUsuario, System.Windows.Forms.ErrorIconAlignment.TopRight)
-        Me.lbUsuario.Location = New System.Drawing.Point(40, 241)
+        Me.lbUsuario.Location = New System.Drawing.Point(40, 239)
         Me.lbUsuario.Name = "lbUsuario"
-        Me.lbUsuario.Size = New System.Drawing.Size(75, 19)
+        Me.lbUsuario.Size = New System.Drawing.Size(77, 21)
         Me.lbUsuario.TabIndex = 10
         Me.lbUsuario.Text = "USUARIO"
         '
         'lbContraseña
         '
         Me.lbContraseña.AutoSize = True
-        Me.lbContraseña.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbContraseña.Location = New System.Drawing.Point(41, 308)
+        Me.lbContraseña.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbContraseña.Location = New System.Drawing.Point(41, 306)
         Me.lbContraseña.Name = "lbContraseña"
-        Me.lbContraseña.Size = New System.Drawing.Size(114, 19)
+        Me.lbContraseña.Size = New System.Drawing.Size(111, 21)
         Me.lbContraseña.TabIndex = 10
         Me.lbContraseña.Text = "CONTRASEÑA"
         '
@@ -298,22 +259,77 @@ Partial Class FrmLogIn
         Me.ErrorProviderPass.ContainerControl = Me
         Me.ErrorProviderPass.Icon = CType(resources.GetObject("ErrorProviderPass.Icon"), System.Drawing.Icon)
         '
+        'btnLogin
+        '
+        Me.btnLogin.Animated = True
+        Me.btnLogin.BackColor = System.Drawing.Color.Transparent
+        Me.btnLogin.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btnLogin.BorderRadius = 20
+        Me.btnLogin.BorderThickness = 2
+        Me.btnLogin.CheckedState.Parent = Me.btnLogin
+        Me.btnLogin.CustomImages.Parent = Me.btnLogin
+        Me.btnLogin.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btnLogin.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btnLogin.HoverState.Parent = Me.btnLogin
+        Me.btnLogin.Location = New System.Drawing.Point(39, 423)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.btnLogin.ShadowDecoration.BorderRadius = 20
+        Me.btnLogin.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btnLogin.ShadowDecoration.Depth = 15
+        Me.btnLogin.ShadowDecoration.Enabled = True
+        Me.btnLogin.ShadowDecoration.Parent = Me.btnLogin
+        Me.btnLogin.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(6)
+        Me.btnLogin.Size = New System.Drawing.Size(352, 50)
+        Me.btnLogin.TabIndex = 11
+        Me.btnLogin.Text = "INICIAR"
+        '
+        'llbCrearUsuarioEs
+        '
+        Me.llbCrearUsuarioEs.AutoSize = True
+        Me.llbCrearUsuarioEs.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llbCrearUsuarioEs.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.llbCrearUsuarioEs.LinkColor = System.Drawing.Color.Silver
+        Me.llbCrearUsuarioEs.Location = New System.Drawing.Point(151, 566)
+        Me.llbCrearUsuarioEs.Name = "llbCrearUsuarioEs"
+        Me.llbCrearUsuarioEs.Size = New System.Drawing.Size(129, 21)
+        Me.llbCrearUsuarioEs.TabIndex = 12
+        Me.llbCrearUsuarioEs.TabStop = True
+        Me.llbCrearUsuarioEs.Text = "CREAR USUARIO"
+        Me.llbCrearUsuarioEs.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'llbForgotPassEs
+        '
+        Me.llbForgotPassEs.AutoSize = True
+        Me.llbForgotPassEs.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llbForgotPassEs.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.llbForgotPassEs.LinkColor = System.Drawing.Color.Silver
+        Me.llbForgotPassEs.Location = New System.Drawing.Point(112, 541)
+        Me.llbForgotPassEs.Name = "llbForgotPassEs"
+        Me.llbForgotPassEs.Size = New System.Drawing.Size(206, 21)
+        Me.llbForgotPassEs.TabIndex = 13
+        Me.llbForgotPassEs.TabStop = True
+        Me.llbForgotPassEs.Text = "OLVIDO SU CONTRASEÑA ?"
+        Me.llbForgotPassEs.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'FrmLogIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(430, 600)
+        Me.Controls.Add(Me.llbCrearUsuarioEs)
+        Me.Controls.Add(Me.llbForgotPassEs)
+        Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lbContraseña)
         Me.Controls.Add(Me.lbUsuario)
         Me.Controls.Add(Me.btnVerPass)
         Me.Controls.Add(Me.btnInfo)
-        Me.Controls.Add(Me.llbCrearUsuarioEs)
         Me.Controls.Add(Me.btnChangeLanguage)
-        Me.Controls.Add(Me.llbForgotPassEs)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.topPanel)
@@ -350,13 +366,10 @@ Partial Class FrmLogIn
     Friend WithEvents LineShape1 As PowerPacks.LineShape
     Friend WithEvents txtPass As TextBox
     Friend WithEvents LineShape2 As PowerPacks.LineShape
-    Friend WithEvents btnLogin As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LineShape3 As PowerPacks.LineShape
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents llbForgotPassEs As LinkLabel
     Friend WithEvents btnChangeLanguage As PictureBox
-    Friend WithEvents llbCrearUsuarioEs As LinkLabel
     Friend WithEvents btnInfo As PictureBox
     Friend WithEvents ErrorProviderLogIn As ErrorProvider
     Friend WithEvents btnVerPass As PictureBox
@@ -365,4 +378,7 @@ Partial Class FrmLogIn
     Friend WithEvents ErrorProviderUserMal As ErrorProvider
     Friend WithEvents ErrorProviderUserBien As ErrorProvider
     Friend WithEvents ErrorProviderPass As ErrorProvider
+    Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents llbCrearUsuarioEs As LinkLabel
+    Friend WithEvents llbForgotPassEs As LinkLabel
 End Class

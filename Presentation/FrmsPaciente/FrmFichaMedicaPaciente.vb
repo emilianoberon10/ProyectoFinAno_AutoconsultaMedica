@@ -3,8 +3,7 @@
 Public Class FrmFichaMedicaPaciente
     Dim ficha As FichaMedica
 
-    Private Sub btnConsul_Paint(sender As Object, e As PaintEventArgs) Handles btnAceptar.Paint
-        BotonRedondeado(btnAceptar)
+    Private Sub btnConsul_Paint(sender As Object, e As PaintEventArgs)
         'ficha = New FichaMedica(FrmLogIn.paci._ci)
         'Dim dt As New DataGridView With {
         '    .DataSource = ficha.GetFicha()
@@ -14,7 +13,7 @@ Public Class FrmFichaMedicaPaciente
 
     End Sub
 
-    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
         If txtProcedencia.Text = "" Or txtOcupacion.Text = "" Or txtMotivoConsulta.Text = "" Then
             ErrorProvider1.SetError(lbMotiv, "Los campos con ( * ) son obligatorios.")
@@ -45,6 +44,10 @@ Public Class FrmFichaMedicaPaciente
         Else
             txtAntecedentes.Enabled = False
         End If
+    End Sub
+
+    Private Sub txtMedicina_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProcedencia.KeyPress, txtOcupacion.KeyPress, txtMotivoConsulta.KeyPress, txtMedicina.KeyPress, txtAntecedentes.KeyPress
+        DesecharCaracteresEspeciales(e)
     End Sub
 
 End Class

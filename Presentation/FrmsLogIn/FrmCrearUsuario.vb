@@ -2,15 +2,11 @@
 
 Public Class FrmCrearUsuario
 
-    Private Sub FrmCrearUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
     End Sub
 
-    Private Sub btnCrear_Click(sender As Object, e As EventArgs) Handles btnCrear.Click
+    Private Sub btnCrear_Click(sender As Object, e As EventArgs) Handles MyBase.Load, btnCrear.Click
 
         If ComprobarCamposUsuario() Then
             ErrorProvider1.SetError(Label1, "TODOS LOS CAMPOS SON OBLIGATORIOS!!")
@@ -21,7 +17,7 @@ Public Class FrmCrearUsuario
                 With paciente
                     ._ci = txtCedu.Text
                     ._mail = txtCorreo.Text
-                    ._contraseña = txtCedu.Text
+                    ._contraseña = EncriptarContraseña(txtCedu.Text)
                     ._tel_cel = Integer.Parse(txtTel.Text)
                     ._edad = Integer.Parse(txtEdad.Text)
                     ._domicilio = txtDir.Text
@@ -51,16 +47,20 @@ Public Class FrmCrearUsuario
         End If
     End Function
 
-    Private Sub btn_Paint(sender As Object, e As PaintEventArgs) Handles btnCancelar.Paint, btnCrear.Paint
-        BotonRedondeado(btnCancelar)
-        BotonRedondeado(btnCrear)
+    Private Sub btn_Paint(sender As Object, e As PaintEventArgs)
+        'BotonRedondeado(btnCancelar)
+        'BotonRedondeado(btnCrear)
     End Sub
 
-    Private Sub txtCedu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTel.KeyPress, txtEdad.KeyPress, txtCedu.KeyPress
+    Private Sub txtCedu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCedu.KeyPress
         e.Handled = Not Char.IsDigit(e.KeyChar)
         If Asc(e.KeyChar) = 8 Then
             e.Handled = Char.IsDigit(e.KeyChar)
         End If
+    End Sub
+
+    Private Sub ControlCaracteres_keyPress(sender As Object, e As KeyPressEventArgs) Handles txtTel.KeyPress, txtSegNom.KeyPress, txtSegApe.KeyPress, txtPriNom.KeyPress, txtEdad.KeyPress, txtDir.KeyPress, txtCorreo.KeyPress, txtApe.KeyPress
+        DesecharCaracteresEspeciales(e)
     End Sub
 
     'txtCedu.Text, txtCorreo.Text, txtCedu.Text,

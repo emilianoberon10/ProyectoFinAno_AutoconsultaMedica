@@ -72,6 +72,10 @@ Public Class Medico
         Return cons.AceptarChat(Me._ci, ciP, idDIag)
     End Function
 
+    Public Function FinalizarChat() As String
+
+    End Function
+
     Public Function ComprobarSoli() As DataTable
         Dim cons As New DBChat
         Return cons.ComprobarSolicitudes()
@@ -97,8 +101,8 @@ Public Class Medico
         Return cons.VerAgendaFiltradoEsp(fil)
     End Function
 
-    Public Function AgendaFiltroCi(fil As String) As DataTable
-        Return cons.VerAgendaFiltradoCi(fil)
+    Public Function AgendaFiltroNom(fil As String) As DataTable
+        Return cons.VerAgendaFiltradoNombre(fil)
     End Function
 
 #End Region

@@ -15,40 +15,66 @@ Public Class FrmConsultaPaciente
     End Sub
 
     Private Sub btnConsul_Click(sender As Object, e As EventArgs) Handles btnConsul.Click
+        guardarSintomas()
+        'apartir de la tabla selec genero el diagnostico y lo muestro en un dataGridView
+        guardarEnfermedades()
+
+        btnChat.Show()
+
+        Dim f As New FrmFichaMedicaPaciente
+        f.ShowDialog()
+    End Sub
+
+    Private Sub guardarSintomas()
+        'creo un array de los sintomas seleccionados
+        Dim _sintomas As New ArrayList
+        'agrego cada sintoma del comboBox al array
+        If cbSintoma1.Enabled = True Then _sintomas.Add(cbSintoma1.Text)
+        If cbSintoma2.Enabled = True Then _sintomas.Add(cbSintoma2.Text)
+        If cbSintoma3.Enabled = True Then _sintomas.Add(cbSintoma3.Text)
+        If cbSintoma4.Enabled = True Then _sintomas.Add(cbSintoma4.Text)
+        If cbSintoma5.Enabled = True Then _sintomas.Add(cbSintoma5.Text)
+        If cbSintoma6.Enabled = True Then _sintomas.Add(cbSintoma6.Text)
+        If cbSintoma7.Enabled = True Then _sintomas.Add(cbSintoma7.Text)
+        If cbSintoma8.Enabled = True Then _sintomas.Add(cbSintoma8.Text)
+
+        'agrego los sintomas seleccionados para diagnosticar
         Try
-            'creo un array de los sintomas seleccionados
-            Dim _sintomas As New ArrayList
-            'agrego cada sintoma del comboBox al array
-            If cbSintoma1.Enabled = True Then _sintomas.Add(cbSintoma1.Text)
-            If cbSintoma2.Enabled = True Then _sintomas.Add(cbSintoma2.Text)
-            If cbSintoma3.Enabled = True Then _sintomas.Add(cbSintoma3.Text)
-            If cbSintoma4.Enabled = True Then _sintomas.Add(cbSintoma4.Text)
-            If cbSintoma5.Enabled = True Then _sintomas.Add(cbSintoma5.Text)
-            If cbSintoma6.Enabled = True Then _sintomas.Add(cbSintoma6.Text)
-            If cbSintoma7.Enabled = True Then _sintomas.Add(cbSintoma7.Text)
-            If cbSintoma8.Enabled = True Then _sintomas.Add(cbSintoma8.Text)
-
-            'agrego los sintomas seleccionados para diagnosticar
             FrmLogIn.paci.Selcciona(_sintomas)
+        Catch ex As Exception
+            General.GetForm(Estado.Error, ex.Message)
+        End Try
+    End Sub
 
-            'apartir de la tabla selec genero el diagnostico y lo muestro en un dataGridView
+    Private Sub guardarEnfermedades()
+        Try
             dgvDiagnostico.DataSource = FrmLogIn.paci.Generar()
+            Try
+                Dim enfermedad As String
 
-            Dim enfermedad As String
+                For filas As Integer = 0 To dgvDiagnostico.RowCount - 1
 
-            For filas As Integer = 0 To dgvDiagnostico.RowCount - 1
-                For Columnas As Integer = 0 To dgvDiagnostico.ColumnCount - 1
-                    enfermedad = dgvDiagnostico.Item(Columnas, filas).Value
-                    FrmLogIn.paci._diagnostico = enfermedad
-                    FrmLogIn.paci.GuardarDiagnostico()
+                    For Columnas As Integer = 0 To dgvDiagnostico.ColumnCount - 1
+
+                        enfermedad = dgvDiagnostico.Item(Columnas, filas).Value
+                        If enfermedad IsNot Nothing Then
+                            FrmLogIn.paci._diagnostico = enfermedad
+                            FrmLogIn.paci.GuardarDiagnostico()
+                        End If
+
+                    Next
+
                 Next
-            Next
-            btnChat.Show()
-            Dim f As New FrmFichaMedicaPaciente
-            f.ShowDialog()
+            Catch ex As Exception
+                ErrorProvider1.SetError(Me.Label2, ex.Message)
+                General.GetForm(Estado.Error, ex.Message)
+            End Try
         Catch ex As Exception
             ErrorProvider1.SetError(Me.Label2, ex.Message)
+            General.GetForm(Estado.Error, ex.Message)
+
         End Try
+
     End Sub
 
     Private Sub btnChat_Click(sender As Object, e As EventArgs) Handles btnChat.Click
@@ -145,9 +171,9 @@ Public Class FrmConsultaPaciente
         childForm.Show()
     End Sub
 
-    Private Sub btnChat_Paint(sender As Object, e As PaintEventArgs) Handles btnConsul.Paint, btnChat.Paint
-        BotonRedondeado(btnConsul)
-        BotonRedondeado(btnChat)
+    Private Sub btnChat_Paint(sender As Object, e As PaintEventArgs)
+        'BotonRedondeado(btnConsul)
+        'BotonRedondeado(btnChat)
     End Sub
 
 #End Region

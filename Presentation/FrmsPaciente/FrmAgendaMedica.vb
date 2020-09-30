@@ -19,7 +19,23 @@ Public Class FrmAgendaMedica
     End Sub
 
     Private Sub btnBuscarMed_Click(sender As Object, e As EventArgs) Handles btnBuscarMed.Click
-        dgvAgenda.DataSource = med.AgendaFiltroCi(txtCiBuscar.Text)
+        dgvAgenda.DataSource = med.AgendaFiltroNom(txtNomBuscar.Text)
+    End Sub
+
+    Private Sub Switch1_CheckedChanged(sender As Object, e As EventArgs) Handles switch.CheckedChanged
+        If switch.Checked Then
+            btnBuscarMed.Enabled = True
+            txtNomBuscar.Enabled = True
+        Else
+            btnBuscarMed.Enabled = False
+            txtNomBuscar.Enabled = False
+        End If
+
+    End Sub
+
+    Private Sub txtNomBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNomBuscar.KeyPress
+        DesecharCaracteresEspeciales(e)
+
     End Sub
 
 End Class

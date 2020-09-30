@@ -4,7 +4,7 @@ Public Class DBDiagnostico
     Inherits ConexionBD
 
     Public Function Diagnostico(ci As String) As DataTable
-        Dim _consultaSQL As String = "SELECT nomEnf FROM define E, selec S
+        Dim _consultaSQL As String = "SELECT nomEnf as DIAGNOSTICO FROM define E, selec S
                                       WHERE E.nomSint=S.nomSint AND idPac='" & ci & "' and dia=CURDATE() AND
                                       hora BETWEEN CURTIME()-1
                                       AND CURTIME()+1 GROUP BY nomEnf;"
@@ -27,15 +27,15 @@ Public Class DBDiagnostico
     End Function
 
     Public Function VerDiagnostico(ci As String) As DataTable
-        Return DevolverTabla("SELECT nomE,fecha FROM diagnostico WHERE idP='" & ci & "'")
+        Return DevolverTabla("SELECT nomE Diagnostico,fecha FROM diagnostico WHERE idP='" & ci & "'")
     End Function
 
     Public Function VerDiagnosticoFecha(ci As String, fecha As String) As DataTable
-        Return DevolverTabla("SELECT nomE,fecha FROM diagnostico WHERE idP='" & ci & "' AND fecha='" & fecha & "'")
+        Return DevolverTabla("SELECT nomE Diagnostico,fecha FROM diagnostico WHERE idP='" & ci & "' AND fecha='" & fecha & "'")
     End Function
 
     Public Function VerDiagnosticoEntreFecha(ci As String, fecha As String, fecha2 As String) As DataTable
-        Return DevolverTabla("SELECT nomE,fecha FROM diagnostico WHERE idP='" & ci & "' AND fecha >'" & fecha & "' AND fecha <'" & fecha2 & "'")
+        Return DevolverTabla("SELECT nomE Diagnostico,fecha FROM diagnostico WHERE idP='" & ci & "' AND fecha >'" & fecha & "' AND fecha <'" & fecha2 & "'")
     End Function
 
 End Class

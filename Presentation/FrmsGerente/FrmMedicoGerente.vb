@@ -24,10 +24,19 @@ Public Class FrmMedicoGerente
             ErrorProvider1.SetError(Label1, "Todos los campos son obligatorios")
             General.GetForm(Estado.Error, "Todos los campos son obligatorios")
         Else
-            medico = New Medico(txtCedula.Text, Integer.Parse(txtTelefono.Text), txtEdad.Text,
-            txtDomicilio.Text, cbSexo.Text, txtPNom.Text, txtPApe.Text, txtSnom.Text,
-            txtSape.Text, cbEsp.Text, txtLugarTrabajo.Text, txtCedula.Text)
-
+            medico = New Medico()
+            With medico
+                ._ci = txtCedula.Text
+                ._numMed = txtNumMed.Text
+                ._contraseña = EncriptarContraseña(txtCedula.Text)
+                ._edad = Integer.Parse(txtEdad.Text)
+                ._sexo = cbSexo.Text
+                ._pNom = txtPNom.Text
+                ._pApe = txtPApe.Text
+                ._sNom = txtSnom.Text
+                ._sApe = txtSape.Text
+                ._domicilio = txtDomicilio.Text
+            End With
             If medico.Guardar() Then
                 General.GetForm(Estado.Error, "Ya existe un medico con esa cedula")
             Else
@@ -35,7 +44,7 @@ Public Class FrmMedicoGerente
 #Region "comprobar y guardar horarios"
 
                 If chkLun.Checked AndAlso txtHoraEntradaLunes.Text IsNot "" Then
-                    medico._horario = txtHoraEntradaLunes.Text And medico.SetHorario("lun")
+                    If txtHoraEntradaLunes.Text.Length <= 30 Then medico._horario = txtHoraEntradaLunes.Text And medico.SetHorario("lun")
                 End If
                 If chkMar.Checked AndAlso txtHoraEntradaMartes.Text IsNot "" Then
                     medico._horario = txtHoraEntradaMartes.Text And medico.SetHorario("mar")

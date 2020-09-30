@@ -13,4 +13,15 @@
 
     End Sub
 
+    Private Sub switch_CheckedChanged(sender As Object, e As EventArgs) Handles switch.CheckedChanged
+        If switch.Checked Then
+            btnEntre.Enabled = True
+            DateTimePicker2.Enabled = True
+        Else
+            btnEntre.Enabled = False
+            DateTimePicker2.Enabled = False
+        End If
+
+    End Sub
+
 End Class

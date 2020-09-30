@@ -220,12 +220,16 @@ Public Class DBMedicos : Inherits ConexionBD
 #Region "Agenda"
 
     Public Function VerAgenda() As DataTable
-        Dim sql As String = "SELECT pNom,sNom,pApe,sApe,nombre,lugarTrabajo,lun,mar,mie,jue,vie,sab,dom FROM Persona JOIN medico ON ci=ciM JOIN especialidad ON idEspecialidad=id"
+        Dim sql As String = "SELECT pNom PrimerNombre,sNom SegundoNombre,pApe PrimerApellido,sApe SegundoApellido,nombre Especialidad,
+                                    lugarTrabajo,lun,mar,mie,jue,vie,sab,dom FROM Persona
+                            JOIN medico ON ci=ciM
+                            JOIN especialidad ON idEspecialidad=id"
         Return DevolverTabla(sql)
     End Function
 
     Public Function VerAgendaFiltradoEsp(espe As String) As DataTable
-        Dim sql As String = "SELECT pNom,sNom,pApe,sApe,nombre,lugarTrabajo,lun,mar,mie,jue,vie,sab,dom FROM Persona
+        Dim sql As String = "SELECT pNom PrimerNombre,sNom SegundoNombre,pApe PrimerApellido,sApe SegundoApellido,nombre Especialidad,
+                                    lugarTrabajo,lun,mar,mie,jue,vie,sab,dom FROM Persona
                              JOIN medico ON ci=ciM
                              JOIN especialidad as e ON idEspecialidad=id
                              where e.nombre='" & espe & "';"
@@ -233,11 +237,12 @@ Public Class DBMedicos : Inherits ConexionBD
         Return DevolverTabla(sql)
     End Function
 
-    Public Function VerAgendaFiltradoCi(ci As String) As DataTable
-        Dim sql As String = "SELECT pNom,sNom,pApe,sApe,nombre,lugarTrabajo,lun,mar,mie,jue,vie,sab,dom FROM Persona
+    Public Function VerAgendaFiltradoNombre(nom As String) As DataTable
+        Dim sql As String = "SELECT pNom PrimerNombre,sNom SegundoNombre,pApe PrimerApellido,sApe SegundoApellido,nombre Especialidad,
+                                    lugarTrabajo,lun,mar,mie,jue,vie,sab,dom FROM Persona
                              JOIN medico as m ON ci=ciM
                              JOIN especialidad as e ON idEspecialidad=id
-                             where m.ciM='" & ci & "';"
+                             where pNom='" & nom & "';"
 
         Return DevolverTabla(sql)
     End Function

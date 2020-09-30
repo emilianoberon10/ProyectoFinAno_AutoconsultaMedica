@@ -1,4 +1,6 @@
 ﻿Imports DataAccess
+Imports System.Text
+Imports System.Security.Cryptography
 
 Public Class Paciente
 
@@ -111,6 +113,10 @@ Public Class Paciente
         Return cons.EliminarSolicitudAceptada(Me._ci)
     End Function
 
+    Public Function FinalizarChat() As String
+
+    End Function
+
     Public Function EnviarMsj(msg As String) As Boolean
         Return cons.EnviarMensajePac(Me._ci, msg)
     End Function
@@ -129,6 +135,19 @@ Public Class Paciente
     End Function
 
     Public Overridable Function GetFicha() As DataTable
+    End Function
+
+    Public Overrides Function EncriptarContraseña() As String
+        Dim sha256 As SHA256 = SHA256.Create()
+        Dim bytes As Byte() = Encoding.UTF8.GetBytes(Me._contraseña)
+        Dim hash As Byte() = sha256.ComputeHash(bytes)
+        Dim stringBuilder As New StringBuilder()
+
+        For i As Integer = 0 To hash.Length - 1
+            stringBuilder.Append(hash(i).ToString("X2"))
+        Next
+
+        Return stringBuilder.ToString()
     End Function
 
 #End Region

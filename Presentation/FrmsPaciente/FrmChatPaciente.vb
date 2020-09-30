@@ -7,10 +7,12 @@
     End Sub
 
     Private Sub btnSalirChat_Click(sender As Object, e As EventArgs) Handles btnSalirChat.Click
-        Me.Visible = False
+        FrmLogIn.paci.FinalizarChat()
+        Me.Close()
     End Sub
 
     Private Sub txtMensaje_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMensaje.KeyPress
+        DesecharCaracteresEspeciales(e)
         If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
             SendKeys.Send("{TAB}")
             e.Handled = True
@@ -20,7 +22,7 @@
     End Sub
 
     Private Sub btnEnviarMensaje_Click(sender As Object, e As EventArgs) Handles btnEnviarMensaje.Click
-        Dim msj As String = txtMensaje.Text
+        Dim msj As String = "Paciente: " & txtMensaje.Text
         txtChat.Text &= msj & vbNewLine
         FrmLogIn.paci.EnviarMsj(msj)
         txtMensaje.Text = ""

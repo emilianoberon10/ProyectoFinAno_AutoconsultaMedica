@@ -6,6 +6,383 @@ Presentation
 </name>
 </assembly>
 <members>
+<member name="T:Presentation.My.Resources.Res">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Bienvenida_bienvenida">
+<summary>
+  Busca una cadena traducida similar a BIENVENIDO.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Bienvenida_titulo">
+<summary>
+  Busca una cadena traducida similar a SISTEMA DE AUTOCONSULTA MEDICA.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Bienvenido">
+<summary>
+  Busca una cadena traducida similar a BIENVENIDO.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_aceptar">
+<summary>
+  Busca una cadena traducida similar a ACEPTAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_Agenda">
+<summary>
+  Busca una cadena traducida similar a AGENDA MEDICA.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_cancelar">
+<summary>
+  Busca una cadena traducida similar a CANCELAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_cerrar">
+<summary>
+  Busca una cadena traducida similar a CERRAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_cerrarSesion">
+<summary>
+  Busca una cadena traducida similar a CERRAR SESION.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_chat">
+<summary>
+  Busca una cadena traducida similar a CHAT.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_chats">
+<summary>
+  Busca una cadena traducida similar a CHATS.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_consultar">
+<summary>
+  Busca una cadena traducida similar a CONSULTAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_crear">
+<summary>
+  Busca una cadena traducida similar a CREAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_eliminar">
+<summary>
+  Busca una cadena traducida similar a ELIMINAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_Entre">
+<summary>
+  Busca una cadena traducida similar a ENTRE.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_enviar">
+<summary>
+  Busca una cadena traducida similar a ENVIAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_fichaMed">
+<summary>
+  Busca una cadena traducida similar a FICHA MEDICA.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_Filtrar">
+<summary>
+  Busca una cadena traducida similar a FILTRAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_historial">
+<summary>
+  Busca una cadena traducida similar a HISTORIAL.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_ingresar">
+<summary>
+  Busca una cadena traducida similar a INGRESAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_ingrMed">
+<summary>
+  Busca una cadena traducida similar a MEDICOS.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_Iniciar">
+<summary>
+  Busca una cadena traducida similar a INICIAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_modificar">
+<summary>
+  Busca una cadena traducida similar a MODIFICAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_recuperar">
+<summary>
+  Busca una cadena traducida similar a RECUPERAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_restablecer">
+<summary>
+  Busca una cadena traducida similar a RESTABLECER.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_salir">
+<summary>
+  Busca una cadena traducida similar a SALIR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.btn_soliChat">
+<summary>
+  Busca una cadena traducida similar a SOLICITUDES DE CHAT.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.contra">
+<summary>
+  Busca una cadena traducida similar a CONTRASEÑA.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.crearUsuario">
+<summary>
+  Busca una cadena traducida similar a CREAR USUARIO.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Dom">
+<summary>
+  Busca una cadena traducida similar a Domingo.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.EsperaChat">
+<summary>
+  Busca una cadena traducida similar a Por favor espere.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.filtro">
+<summary>
+  Busca una cadena traducida similar a Filtro.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Info_recordatorio2">
+<summary>
+  Busca una cadena traducida similar a En caso de no haber cambiado su contraseña, esta sera su cedula. 
+Si la modifico puede dar click en el siguiente enlace para restablecerla.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Info_recordatorio3">
+<summary>
+  Busca una cadena traducida similar a En caso de no tener una cuenta de click aquí.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Info_rocordatorio">
+<summary>
+  Busca una cadena traducida similar a Recuerde que la cedula NO debe contener puntos ni guiones.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Jue">
+<summary>
+  Busca una cadena traducida similar a Jueves.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Lun">
+<summary>
+  Busca una cadena traducida similar a Lunes.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Mar">
+<summary>
+  Busca una cadena traducida similar a Martes.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.MChat_diag">
+<summary>
+  Busca una cadena traducida similar a Diagnostico.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.MhoraEntrada">
+<summary>
+  Busca una cadena traducida similar a Hora de entrada.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.MhoraSalida">
+<summary>
+  Busca una cadena traducida similar a Hora de salida.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Mie">
+<summary>
+  Busca una cadena traducida similar a Miercoles.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.MSoli_aclaracion">
+<summary>
+  Busca una cadena traducida similar a De doble click para iniciar chat.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.MSoli_titulo">
+<summary>
+  Busca una cadena traducida similar a SOLICITUDES DE CHAT.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.passPerdida">
+<summary>
+  Busca una cadena traducida similar a OLVIDO SU CONTRASEÑA ?.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.PConsulta_titulo">
+<summary>
+  Busca una cadena traducida similar a SELECCIONE SUS SINTOMAS.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Persona_antece">
+<summary>
+  Busca una cadena traducida similar a Antecedentes Familiares.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Persona_ci">
+<summary>
+  Busca una cadena traducida similar a Cedula Identidad.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Persona_correo">
+<summary>
+  Busca una cadena traducida similar a Correo Electronico.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Persona_dir">
+<summary>
+  Busca una cadena traducida similar a Direccion.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Persona_edad">
+<summary>
+  Busca una cadena traducida similar a Edad.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Persona_pApe">
+<summary>
+  Busca una cadena traducida similar a Primer Nombre.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Persona_pass">
+<summary>
+  Busca una cadena traducida similar a Contraseña.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Persona_pNom">
+<summary>
+  Busca una cadena traducida similar a Primer Apellido.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Persona_sApe">
+<summary>
+  Busca una cadena traducida similar a Segundo Apellido.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Persona_sNom">
+<summary>
+  Busca una cadena traducida similar a Segundo Nombre.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Persona_tel">
+<summary>
+  Busca una cadena traducida similar a Telefono.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.PFicha_antecedentes">
+<summary>
+  Busca una cadena traducida similar a Antecedentes.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.PFicha_cual">
+<summary>
+  Busca una cadena traducida similar a Cual.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.PFicha_motCons">
+<summary>
+  Busca una cadena traducida similar a Motivo de la consulta.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.PFicha_ocup">
+<summary>
+  Busca una cadena traducida similar a Ocupacion.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.PFicha_proced">
+<summary>
+  Busca una cadena traducida similar a Procedencia.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.PFicha_titulo">
+<summary>
+  Busca una cadena traducida similar a FICHA MEDICA.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.PFicha_tomaMed">
+<summary>
+  Busca una cadena traducida similar a ¿Toma medicina?.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Phistorial_Aclaracion">
+<summary>
+  Busca una cadena traducida similar a Esta fecha debe ser mayor.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.RecuperarPass_passNueva">
+<summary>
+  Busca una cadena traducida similar a Contraseña nueva.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.RecuperarPass_passNueva2">
+<summary>
+  Busca una cadena traducida similar a Repita la contraseña.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.RecuperarPass_titulo">
+<summary>
+  Busca una cadena traducida similar a RECUPERAR CONTRASEÑA.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.RecuperarPass_usuario">
+<summary>
+  Busca una cadena traducida similar a Su usuario es:.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Sab">
+<summary>
+  Busca una cadena traducida similar a Sabado.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.titulo_app">
+<summary>
+  Busca una cadena traducida similar a SISTEMA DE AUTOCONSULTA MEDICA.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.usuario">
+<summary>
+  Busca una cadena traducida similar a USUARIO.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Res.Vie">
+<summary>
+  Busca una cadena traducida similar a Viernes.
+</summary>
+</member>
 <member name="T:Presentation.My.Resources.Resources">
 <summary>
   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
@@ -157,379 +534,756 @@ Presentation
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="T:Presentation.Res">
+<member name="T:Presentation.My.Resources.Español">
 <summary>
   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
 </summary>
 </member>
-<member name="P:Presentation.Res.ResourceManager">
+<member name="P:Presentation.My.Resources.Español.ResourceManager">
 <summary>
   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
 </member>
-<member name="P:Presentation.Res.Culture">
+<member name="P:Presentation.My.Resources.Español.Culture">
 <summary>
   Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
-<member name="P:Presentation.Res.Bienvenida_bienvenida">
+<member name="P:Presentation.My.Resources.Español.Bienvenida_bienvenida">
 <summary>
   Busca una cadena traducida similar a BIENVENIDO.
 </summary>
 </member>
-<member name="P:Presentation.Res.Bienvenida_titulo">
+<member name="P:Presentation.My.Resources.Español.Bienvenida_titulo">
 <summary>
   Busca una cadena traducida similar a SISTEMA DE AUTOCONSULTA MEDICA.
 </summary>
 </member>
-<member name="P:Presentation.Res.Bienvenido">
+<member name="P:Presentation.My.Resources.Español.Bienvenido">
 <summary>
   Busca una cadena traducida similar a BIENVENIDO.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_aceptar">
+<member name="P:Presentation.My.Resources.Español.btn_aceptar">
 <summary>
   Busca una cadena traducida similar a ACEPTAR.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_Agenda">
+<member name="P:Presentation.My.Resources.Español.btn_Agenda">
 <summary>
   Busca una cadena traducida similar a AGENDA MEDICA.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_cancelar">
+<member name="P:Presentation.My.Resources.Español.btn_cancelar">
 <summary>
   Busca una cadena traducida similar a CANCELAR.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_cerrar">
+<member name="P:Presentation.My.Resources.Español.btn_cerrar">
 <summary>
   Busca una cadena traducida similar a CERRAR.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_cerrarSesion">
+<member name="P:Presentation.My.Resources.Español.btn_cerrarSesion">
 <summary>
   Busca una cadena traducida similar a CERRAR SESION.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_chat">
+<member name="P:Presentation.My.Resources.Español.btn_chat">
 <summary>
   Busca una cadena traducida similar a CHAT.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_chats">
+<member name="P:Presentation.My.Resources.Español.btn_chats">
 <summary>
   Busca una cadena traducida similar a CHATS.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_consultar">
+<member name="P:Presentation.My.Resources.Español.btn_consultar">
 <summary>
   Busca una cadena traducida similar a CONSULTAR.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_crear">
+<member name="P:Presentation.My.Resources.Español.btn_crear">
 <summary>
   Busca una cadena traducida similar a CREAR.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_eliminar">
+<member name="P:Presentation.My.Resources.Español.btn_eliminar">
 <summary>
   Busca una cadena traducida similar a ELIMINAR.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_Entre">
+<member name="P:Presentation.My.Resources.Español.btn_Entre">
 <summary>
   Busca una cadena traducida similar a ENTRE.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_enviar">
+<member name="P:Presentation.My.Resources.Español.btn_enviar">
 <summary>
   Busca una cadena traducida similar a ENVIAR.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_fichaMed">
+<member name="P:Presentation.My.Resources.Español.btn_fichaMed">
 <summary>
   Busca una cadena traducida similar a FICHA MEDICA.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_Filtrar">
+<member name="P:Presentation.My.Resources.Español.btn_Filtrar">
 <summary>
   Busca una cadena traducida similar a FILTRAR.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_historial">
+<member name="P:Presentation.My.Resources.Español.btn_historial">
 <summary>
   Busca una cadena traducida similar a HISTORIAL.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_ingresar">
+<member name="P:Presentation.My.Resources.Español.btn_ingresar">
 <summary>
   Busca una cadena traducida similar a INGRESAR.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_ingrMed">
+<member name="P:Presentation.My.Resources.Español.btn_ingrMed">
 <summary>
   Busca una cadena traducida similar a MEDICOS.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_Iniciar">
+<member name="P:Presentation.My.Resources.Español.btn_Iniciar">
 <summary>
   Busca una cadena traducida similar a INICIAR.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_modificar">
+<member name="P:Presentation.My.Resources.Español.btn_modificar">
 <summary>
   Busca una cadena traducida similar a MODIFICAR.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_recuperar">
+<member name="P:Presentation.My.Resources.Español.btn_recuperar">
 <summary>
   Busca una cadena traducida similar a RECUPERAR.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_restablecer">
+<member name="P:Presentation.My.Resources.Español.btn_restablecer">
 <summary>
   Busca una cadena traducida similar a RESTABLECER.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_salir">
+<member name="P:Presentation.My.Resources.Español.btn_salir">
 <summary>
   Busca una cadena traducida similar a SALIR.
 </summary>
 </member>
-<member name="P:Presentation.Res.btn_soliChat">
+<member name="P:Presentation.My.Resources.Español.btn_soliChat">
 <summary>
   Busca una cadena traducida similar a SOLICITUDES DE CHAT.
 </summary>
 </member>
-<member name="P:Presentation.Res.contra">
+<member name="P:Presentation.My.Resources.Español.contra">
 <summary>
   Busca una cadena traducida similar a CONTRASEÑA.
 </summary>
 </member>
-<member name="P:Presentation.Res.crearUsuario">
+<member name="P:Presentation.My.Resources.Español.crearUsuario">
 <summary>
   Busca una cadena traducida similar a CREAR USUARIO.
 </summary>
 </member>
-<member name="P:Presentation.Res.Dom">
+<member name="P:Presentation.My.Resources.Español.Dom">
 <summary>
   Busca una cadena traducida similar a Domingo.
 </summary>
 </member>
-<member name="P:Presentation.Res.EsperaChat">
+<member name="P:Presentation.My.Resources.Español.EsperaChat">
 <summary>
   Busca una cadena traducida similar a Por favor espere.
 </summary>
 </member>
-<member name="P:Presentation.Res.filtro">
+<member name="P:Presentation.My.Resources.Español.filtro">
 <summary>
   Busca una cadena traducida similar a Filtro.
 </summary>
 </member>
-<member name="P:Presentation.Res.Info_recordatorio2">
+<member name="P:Presentation.My.Resources.Español.Info_recordatorio2">
 <summary>
   Busca una cadena traducida similar a En caso de no haber cambiado su contraseña, esta sera su cedula. 
 Si la modifico puede dar click en el siguiente enlace para restablecerla.
 </summary>
 </member>
-<member name="P:Presentation.Res.Info_recordatorio3">
+<member name="P:Presentation.My.Resources.Español.Info_recordatorio3">
 <summary>
   Busca una cadena traducida similar a En caso de no tener una cuenta de click aquí.
 </summary>
 </member>
-<member name="P:Presentation.Res.Info_rocordatorio">
+<member name="P:Presentation.My.Resources.Español.Info_rocordatorio">
 <summary>
   Busca una cadena traducida similar a Recuerde que la cedula NO debe contener puntos ni guiones.
 </summary>
 </member>
-<member name="P:Presentation.Res.Jue">
+<member name="P:Presentation.My.Resources.Español.Jue">
 <summary>
   Busca una cadena traducida similar a Jueves.
 </summary>
 </member>
-<member name="P:Presentation.Res.Lun">
+<member name="P:Presentation.My.Resources.Español.Lun">
 <summary>
   Busca una cadena traducida similar a Lunes.
 </summary>
 </member>
-<member name="P:Presentation.Res.Mar">
+<member name="P:Presentation.My.Resources.Español.Mar">
 <summary>
   Busca una cadena traducida similar a Martes.
 </summary>
 </member>
-<member name="P:Presentation.Res.MChat_diag">
+<member name="P:Presentation.My.Resources.Español.MChat_diag">
 <summary>
   Busca una cadena traducida similar a Diagnostico.
 </summary>
 </member>
-<member name="P:Presentation.Res.MhoraEntrada">
+<member name="P:Presentation.My.Resources.Español.MhoraEntrada">
 <summary>
   Busca una cadena traducida similar a Hora de entrada.
 </summary>
 </member>
-<member name="P:Presentation.Res.MhoraSalida">
+<member name="P:Presentation.My.Resources.Español.MhoraSalida">
 <summary>
   Busca una cadena traducida similar a Hora de salida.
 </summary>
 </member>
-<member name="P:Presentation.Res.Mie">
+<member name="P:Presentation.My.Resources.Español.Mie">
 <summary>
   Busca una cadena traducida similar a Miercoles.
 </summary>
 </member>
-<member name="P:Presentation.Res.MSoli_aclaracion">
+<member name="P:Presentation.My.Resources.Español.MSoli_aclaracion">
 <summary>
   Busca una cadena traducida similar a De doble click para iniciar chat.
 </summary>
 </member>
-<member name="P:Presentation.Res.MSoli_titulo">
+<member name="P:Presentation.My.Resources.Español.MSoli_titulo">
 <summary>
   Busca una cadena traducida similar a SOLICITUDES DE CHAT.
 </summary>
 </member>
-<member name="P:Presentation.Res.passPerdida">
+<member name="P:Presentation.My.Resources.Español.passPerdida">
 <summary>
   Busca una cadena traducida similar a OLVIDO SU CONTRASEÑA ?.
 </summary>
 </member>
-<member name="P:Presentation.Res.PConsulta_titulo">
+<member name="P:Presentation.My.Resources.Español.PConsulta_titulo">
 <summary>
   Busca una cadena traducida similar a SELECCIONE SUS SINTOMAS.
 </summary>
 </member>
-<member name="P:Presentation.Res.Persona_antece">
+<member name="P:Presentation.My.Resources.Español.Persona_antece">
 <summary>
   Busca una cadena traducida similar a Antecedentes Familiares.
 </summary>
 </member>
-<member name="P:Presentation.Res.Persona_ci">
+<member name="P:Presentation.My.Resources.Español.Persona_ci">
 <summary>
   Busca una cadena traducida similar a Cedula Identidad.
 </summary>
 </member>
-<member name="P:Presentation.Res.Persona_correo">
+<member name="P:Presentation.My.Resources.Español.Persona_correo">
 <summary>
   Busca una cadena traducida similar a Correo Electronico.
 </summary>
 </member>
-<member name="P:Presentation.Res.Persona_dir">
+<member name="P:Presentation.My.Resources.Español.Persona_dir">
 <summary>
   Busca una cadena traducida similar a Direccion.
 </summary>
 </member>
-<member name="P:Presentation.Res.Persona_edad">
+<member name="P:Presentation.My.Resources.Español.Persona_edad">
 <summary>
   Busca una cadena traducida similar a Edad.
 </summary>
 </member>
-<member name="P:Presentation.Res.Persona_pApe">
+<member name="P:Presentation.My.Resources.Español.Persona_pApe">
 <summary>
   Busca una cadena traducida similar a Primer Nombre.
 </summary>
 </member>
-<member name="P:Presentation.Res.Persona_pass">
+<member name="P:Presentation.My.Resources.Español.Persona_pass">
 <summary>
   Busca una cadena traducida similar a Contraseña.
 </summary>
 </member>
-<member name="P:Presentation.Res.Persona_pNom">
+<member name="P:Presentation.My.Resources.Español.Persona_pNom">
 <summary>
   Busca una cadena traducida similar a Primer Apellido.
 </summary>
 </member>
-<member name="P:Presentation.Res.Persona_sApe">
+<member name="P:Presentation.My.Resources.Español.Persona_sApe">
 <summary>
   Busca una cadena traducida similar a Segundo Apellido.
 </summary>
 </member>
-<member name="P:Presentation.Res.Persona_sNom">
+<member name="P:Presentation.My.Resources.Español.Persona_sNom">
 <summary>
   Busca una cadena traducida similar a Segundo Nombre.
 </summary>
 </member>
-<member name="P:Presentation.Res.Persona_tel">
+<member name="P:Presentation.My.Resources.Español.Persona_tel">
 <summary>
   Busca una cadena traducida similar a Telefono.
 </summary>
 </member>
-<member name="P:Presentation.Res.PFicha_antecedentes">
+<member name="P:Presentation.My.Resources.Español.PFicha_antecedentes">
 <summary>
   Busca una cadena traducida similar a Antecedentes.
 </summary>
 </member>
-<member name="P:Presentation.Res.PFicha_cual">
+<member name="P:Presentation.My.Resources.Español.PFicha_cual">
 <summary>
   Busca una cadena traducida similar a Cual.
 </summary>
 </member>
-<member name="P:Presentation.Res.PFicha_motCons">
+<member name="P:Presentation.My.Resources.Español.PFicha_motCons">
 <summary>
   Busca una cadena traducida similar a Motivo de la consulta.
 </summary>
 </member>
-<member name="P:Presentation.Res.PFicha_ocup">
+<member name="P:Presentation.My.Resources.Español.PFicha_ocup">
 <summary>
   Busca una cadena traducida similar a Ocupacion.
 </summary>
 </member>
-<member name="P:Presentation.Res.PFicha_proced">
+<member name="P:Presentation.My.Resources.Español.PFicha_proced">
 <summary>
   Busca una cadena traducida similar a Procedencia.
 </summary>
 </member>
-<member name="P:Presentation.Res.PFicha_titulo">
+<member name="P:Presentation.My.Resources.Español.PFicha_titulo">
 <summary>
   Busca una cadena traducida similar a FICHA MEDICA.
 </summary>
 </member>
-<member name="P:Presentation.Res.PFicha_tomaMed">
+<member name="P:Presentation.My.Resources.Español.PFicha_tomaMed">
 <summary>
   Busca una cadena traducida similar a ¿Toma medicina?.
 </summary>
 </member>
-<member name="P:Presentation.Res.Phistorial_Aclaracion">
+<member name="P:Presentation.My.Resources.Español.Phistorial_Aclaracion">
 <summary>
   Busca una cadena traducida similar a Esta fecha debe ser mayor.
 </summary>
 </member>
-<member name="P:Presentation.Res.RecuperarPass_passNueva">
+<member name="P:Presentation.My.Resources.Español.RecuperarPass_passNueva">
 <summary>
   Busca una cadena traducida similar a Contraseña nueva.
 </summary>
 </member>
-<member name="P:Presentation.Res.RecuperarPass_passNueva2">
+<member name="P:Presentation.My.Resources.Español.RecuperarPass_passNueva2">
 <summary>
   Busca una cadena traducida similar a Repita la contraseña.
 </summary>
 </member>
-<member name="P:Presentation.Res.RecuperarPass_titulo">
+<member name="P:Presentation.My.Resources.Español.RecuperarPass_titulo">
 <summary>
   Busca una cadena traducida similar a RECUPERAR CONTRASEÑA.
 </summary>
 </member>
-<member name="P:Presentation.Res.RecuperarPass_usuario">
+<member name="P:Presentation.My.Resources.Español.RecuperarPass_usuario">
 <summary>
   Busca una cadena traducida similar a Su usuario es:.
 </summary>
 </member>
-<member name="P:Presentation.Res.Sab">
+<member name="P:Presentation.My.Resources.Español.Sab">
 <summary>
   Busca una cadena traducida similar a Sabado.
 </summary>
 </member>
-<member name="P:Presentation.Res.titulo_app">
+<member name="P:Presentation.My.Resources.Español.titulo_app">
 <summary>
   Busca una cadena traducida similar a SISTEMA DE AUTOCONSULTA MEDICA.
 </summary>
 </member>
-<member name="P:Presentation.Res.usuario">
+<member name="P:Presentation.My.Resources.Español.usuario">
 <summary>
   Busca una cadena traducida similar a USUARIO.
 </summary>
 </member>
-<member name="P:Presentation.Res.Vie">
+<member name="P:Presentation.My.Resources.Español.Vie">
+<summary>
+  Busca una cadena traducida similar a Viernes.
+</summary>
+</member>
+<member name="T:Presentation.My.Resources.Ingles">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Bienvenida_bienvenida">
+<summary>
+  Busca una cadena traducida similar a BIENVENIDO.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Bienvenida_titulo">
+<summary>
+  Busca una cadena traducida similar a SISTEMA DE AUTOCONSULTA MEDICA.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Bienvenido">
+<summary>
+  Busca una cadena traducida similar a BIENVENIDO.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_aceptar">
+<summary>
+  Busca una cadena traducida similar a ACEPTAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_Agenda">
+<summary>
+  Busca una cadena traducida similar a AGENDA MEDICA.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_cancelar">
+<summary>
+  Busca una cadena traducida similar a CANCELAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_cerrar">
+<summary>
+  Busca una cadena traducida similar a CERRAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_cerrarSesion">
+<summary>
+  Busca una cadena traducida similar a CERRAR SESION.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_chat">
+<summary>
+  Busca una cadena traducida similar a CHAT.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_chats">
+<summary>
+  Busca una cadena traducida similar a CHATS.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_consultar">
+<summary>
+  Busca una cadena traducida similar a CONSULTAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_crear">
+<summary>
+  Busca una cadena traducida similar a CREAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_eliminar">
+<summary>
+  Busca una cadena traducida similar a ELIMINAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_Entre">
+<summary>
+  Busca una cadena traducida similar a ENTRE.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_enviar">
+<summary>
+  Busca una cadena traducida similar a ENVIAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_fichaMed">
+<summary>
+  Busca una cadena traducida similar a FICHA MEDICA.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_Filtrar">
+<summary>
+  Busca una cadena traducida similar a FILTRAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_historial">
+<summary>
+  Busca una cadena traducida similar a HISTORIAL.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_ingresar">
+<summary>
+  Busca una cadena traducida similar a INGRESAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_ingrMed">
+<summary>
+  Busca una cadena traducida similar a MEDICOS.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_Iniciar">
+<summary>
+  Busca una cadena traducida similar a LOG IN.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_modificar">
+<summary>
+  Busca una cadena traducida similar a MODIFICAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_recuperar">
+<summary>
+  Busca una cadena traducida similar a RECUPERAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_restablecer">
+<summary>
+  Busca una cadena traducida similar a RESTABLECER.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_salir">
+<summary>
+  Busca una cadena traducida similar a SALIR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_soliChat">
+<summary>
+  Busca una cadena traducida similar a SOLICITUDES DE CHAT.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.contra">
+<summary>
+  Busca una cadena traducida similar a PASSWORD.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.crearUsuario">
+<summary>
+  Busca una cadena traducida similar a CREAR USUARIO.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Dom">
+<summary>
+  Busca una cadena traducida similar a Domingo.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.EsperaChat">
+<summary>
+  Busca una cadena traducida similar a Por favor espere.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.filtro">
+<summary>
+  Busca una cadena traducida similar a Filtro.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Info_recordatorio2">
+<summary>
+  Busca una cadena traducida similar a En caso de no haber cambiado su contraseña, esta sera su cedula. 
+Si la modifico puede dar click en el siguiente enlace para restablecerla.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Info_recordatorio3">
+<summary>
+  Busca una cadena traducida similar a En caso de no tener una cuenta de click aquí.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Info_rocordatorio">
+<summary>
+  Busca una cadena traducida similar a Recuerde que la cedula NO debe contener puntos ni guiones.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Jue">
+<summary>
+  Busca una cadena traducida similar a Jueves.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Lun">
+<summary>
+  Busca una cadena traducida similar a Lunes.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Mar">
+<summary>
+  Busca una cadena traducida similar a Martes.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.MChat_diag">
+<summary>
+  Busca una cadena traducida similar a Diagnostico.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.MhoraEntrada">
+<summary>
+  Busca una cadena traducida similar a Hora de entrada.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.MhoraSalida">
+<summary>
+  Busca una cadena traducida similar a Hora de salida.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Mie">
+<summary>
+  Busca una cadena traducida similar a Miercoles.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.MSoli_aclaracion">
+<summary>
+  Busca una cadena traducida similar a De doble click para iniciar chat.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.MSoli_titulo">
+<summary>
+  Busca una cadena traducida similar a SOLICITUDES DE CHAT.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.passPerdida">
+<summary>
+  Busca una cadena traducida similar a OLVIDO SU CONTRASEÑA ?.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.PConsulta_titulo">
+<summary>
+  Busca una cadena traducida similar a SELECCIONE SUS SINTOMAS.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Persona_antece">
+<summary>
+  Busca una cadena traducida similar a Antecedentes Familiares.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Persona_ci">
+<summary>
+  Busca una cadena traducida similar a Cedula Identidad.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Persona_correo">
+<summary>
+  Busca una cadena traducida similar a Correo Electronico.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Persona_dir">
+<summary>
+  Busca una cadena traducida similar a Direccion.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Persona_edad">
+<summary>
+  Busca una cadena traducida similar a Edad.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Persona_pApe">
+<summary>
+  Busca una cadena traducida similar a Primer Nombre.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Persona_pass">
+<summary>
+  Busca una cadena traducida similar a Contraseña.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Persona_pNom">
+<summary>
+  Busca una cadena traducida similar a Primer Apellido.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Persona_sApe">
+<summary>
+  Busca una cadena traducida similar a Segundo Apellido.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Persona_sNom">
+<summary>
+  Busca una cadena traducida similar a Segundo Nombre.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Persona_tel">
+<summary>
+  Busca una cadena traducida similar a Telefono.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.PFicha_antecedentes">
+<summary>
+  Busca una cadena traducida similar a Antecedentes.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.PFicha_cual">
+<summary>
+  Busca una cadena traducida similar a Cual.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.PFicha_motCons">
+<summary>
+  Busca una cadena traducida similar a Motivo de la consulta.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.PFicha_ocup">
+<summary>
+  Busca una cadena traducida similar a Ocupacion.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.PFicha_proced">
+<summary>
+  Busca una cadena traducida similar a Procedencia.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.PFicha_titulo">
+<summary>
+  Busca una cadena traducida similar a FICHA MEDICA.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.PFicha_tomaMed">
+<summary>
+  Busca una cadena traducida similar a ¿Toma medicina?.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Phistorial_Aclaracion">
+<summary>
+  Busca una cadena traducida similar a Esta fecha debe ser mayor.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.RecuperarPass_passNueva">
+<summary>
+  Busca una cadena traducida similar a Contraseña nueva.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.RecuperarPass_passNueva2">
+<summary>
+  Busca una cadena traducida similar a Repita la contraseña.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.RecuperarPass_titulo">
+<summary>
+  Busca una cadena traducida similar a RECUPERAR CONTRASEÑA.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.RecuperarPass_usuario">
+<summary>
+  Busca una cadena traducida similar a Su usuario es:.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Sab">
+<summary>
+  Busca una cadena traducida similar a Sabado.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.titulo_app">
+<summary>
+  Busca una cadena traducida similar a SISTEMA DE AUTOCONSULTA MEDICA.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.usuario">
+<summary>
+  Busca una cadena traducida similar a USER.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.Vie">
 <summary>
   Busca una cadena traducida similar a Viernes.
 </summary>

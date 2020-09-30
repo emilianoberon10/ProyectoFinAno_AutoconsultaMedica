@@ -33,16 +33,18 @@ Partial Class FrmChatPaciente
         '
         'txtMensaje
         '
+        Me.txtMensaje.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtMensaje.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMensaje.Location = New System.Drawing.Point(3, 631)
+        Me.txtMensaje.Location = New System.Drawing.Point(12, 631)
         Me.txtMensaje.Multiline = True
         Me.txtMensaje.Name = "txtMensaje"
-        Me.txtMensaje.Size = New System.Drawing.Size(460, 30)
+        Me.txtMensaje.Size = New System.Drawing.Size(451, 30)
         Me.txtMensaje.TabIndex = 1
         '
         'btnEnviarMensaje
         '
+        Me.btnEnviarMensaje.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnEnviarMensaje.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
         Me.btnEnviarMensaje.FlatAppearance.BorderSize = 0
         Me.btnEnviarMensaje.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
@@ -57,6 +59,7 @@ Partial Class FrmChatPaciente
         '
         'btnSalirChat
         '
+        Me.btnSalirChat.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSalirChat.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
         Me.btnSalirChat.FlatAppearance.BorderSize = 0
         Me.btnSalirChat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
@@ -71,19 +74,21 @@ Partial Class FrmChatPaciente
         '
         'txtChat
         '
+        Me.txtChat.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtChat.BackColor = System.Drawing.Color.White
         Me.txtChat.Enabled = False
-        Me.txtChat.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtChat.ForeColor = System.Drawing.Color.DarkBlue
-        Me.txtChat.Location = New System.Drawing.Point(3, 48)
+        Me.txtChat.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtChat.ForeColor = System.Drawing.Color.Black
+        Me.txtChat.Location = New System.Drawing.Point(12, 48)
         Me.txtChat.Multiline = True
         Me.txtChat.Name = "txtChat"
-        Me.txtChat.Size = New System.Drawing.Size(577, 576)
+        Me.txtChat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtChat.Size = New System.Drawing.Size(565, 576)
         Me.txtChat.TabIndex = 4
         '
         'Timer1
         '
-        Me.Timer1.Interval = 1000
+        Me.Timer1.Interval = 1200
         '
         'FrmChatPaciente
         '

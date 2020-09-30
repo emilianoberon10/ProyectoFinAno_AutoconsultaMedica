@@ -28,7 +28,7 @@ Partial Class FrmInfo
         Me.llbRecuperarPass = New System.Windows.Forms.LinkLabel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.llbCrearUsuario = New System.Windows.Forms.LinkLabel()
-        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.btnCerrar = New Guna.UI2.WinForms.Guna2Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -89,20 +89,23 @@ Partial Class FrmInfo
         Me.llbCrearUsuario.TabStop = True
         Me.llbCrearUsuario.Text = "CREAR"
         '
-        'btnLogin
+        'btnCerrar
         '
-        Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLogin.FlatAppearance.BorderSize = 0
-        Me.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogin.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(115, 221)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(200, 35)
-        Me.btnLogin.TabIndex = 4
-        Me.btnLogin.Text = "CERRAR"
-        Me.btnLogin.UseVisualStyleBackColor = False
+        Me.btnCerrar.Animated = True
+        Me.btnCerrar.BorderColor = System.Drawing.Color.Transparent
+        Me.btnCerrar.BorderRadius = 20
+        Me.btnCerrar.CheckedState.Parent = Me.btnCerrar
+        Me.btnCerrar.CustomImages.Parent = Me.btnCerrar
+        Me.btnCerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCerrar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCerrar.ForeColor = System.Drawing.Color.White
+        Me.btnCerrar.HoverState.Parent = Me.btnCerrar
+        Me.btnCerrar.Location = New System.Drawing.Point(113, 234)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.ShadowDecoration.Parent = Me.btnCerrar
+        Me.btnCerrar.Size = New System.Drawing.Size(200, 35)
+        Me.btnCerrar.TabIndex = 5
+        Me.btnCerrar.Text = "CERRAR"
         '
         'FrmInfo
         '
@@ -110,7 +113,7 @@ Partial Class FrmInfo
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(426, 281)
-        Me.Controls.Add(Me.btnLogin)
+        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.llbCrearUsuario)
         Me.Controls.Add(Me.llbRecuperarPass)
         Me.Controls.Add(Me.Label3)
@@ -133,5 +136,5 @@ Partial Class FrmInfo
     Friend WithEvents llbRecuperarPass As LinkLabel
     Friend WithEvents Label3 As Label
     Friend WithEvents llbCrearUsuario As LinkLabel
-    Friend WithEvents btnLogin As Button
+    Friend WithEvents btnCerrar As Guna.UI2.WinForms.Guna2Button
 End Class

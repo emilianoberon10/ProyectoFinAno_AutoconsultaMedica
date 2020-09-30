@@ -26,7 +26,7 @@
     End Sub
 
     Private Sub btnEnviarMensaje_Click(sender As Object, e As EventArgs) Handles btnEnviarMensaje.Click
-        Dim msj As String = txtMensaje.Text
+        Dim msj As String = "Medico: " & txtMensaje.Text
         txtChat.Text &= msj & vbNewLine
         FrmLogIn.medic.EnviarMsj(msj)
         txtMensaje.Text = ""

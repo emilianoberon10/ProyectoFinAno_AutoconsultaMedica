@@ -1,5 +1,7 @@
 ﻿Imports System.IO
 Imports Logic
+Imports System.Text
+Imports System.Security.Cryptography
 
 Module Module1
 
@@ -128,5 +130,37 @@ Module Module1
             General.GetForm(Estado.Critical, ex.Message)
         End Try
     End Function
+
+    Public Function EncriptarContraseña(strg) As String
+        Dim sha256 As SHA256 = SHA256.Create()
+        Dim bytes As Byte() = Encoding.UTF8.GetBytes(strg)
+        Dim hash As Byte() = sha256.ComputeHash(bytes)
+        Dim stringBuilder As New StringBuilder()
+
+        For i As Integer = 0 To hash.Length - 1
+            stringBuilder.Append(hash(i).ToString("X2"))
+        Next
+
+        Return stringBuilder.ToString()
+    End Function
+
+    Public Sub DesecharCaracteresEspeciales(e As KeyPressEventArgs)
+        Dim caracteres() As Char = {"%"c, "&"c, "$"c, "#"c, "/"c, "-"c, "_"c}
+
+        ' Carácter presionado
+        '
+        Dim c As Char = e.KeyChar
+
+        ' Comprobamos si la matriz contiene el carácter tecleado.
+        '
+        If caracteres.Contains(c) Then
+
+            MessageBox.Show("Se ha tecleado un carácter especial.")
+
+            ' Deshechamos el carácter
+            e.Handled = True
+
+        End If
+    End Sub
 
 End Module

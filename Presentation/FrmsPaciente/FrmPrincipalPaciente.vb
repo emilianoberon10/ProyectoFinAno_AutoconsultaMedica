@@ -6,6 +6,12 @@ Public Class FrmPrincipalPaciente
         OpenChildForm(New FrmConsultaPaciente, PanelChildFormPac)
         lbNombre.Text = FrmLogIn.paci._pNom
         fotoPerfil.Image = ObtenerImagen(FrmLogIn.paci._ci)
+
+        'Me.lbTitulo.Text = Res.titulo_app
+        'Me.btnConsulta.Text = Res.btn_Agenda
+        'Me.btnConsulta.Text = Res.btn_consultar
+        'Me.btnHistorial.Text = Res.btn_historial
+        'Me.btnCerrar.Text = Res.btn_cerrarSesion
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs)
@@ -20,18 +26,16 @@ Public Class FrmPrincipalPaciente
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         If MessageBox.Show("Seguro que desa salir?", "Advertencia",
          MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
-            Me.Close()
+            Close()
         End If
     End Sub
 
     Private Sub btnAgendaMedica_Click(sender As Object, e As EventArgs) Handles btnAgendaMedica.Click
         OpenChildForm(New FrmAgendaMedica, PanelChildFormPac)
-
     End Sub
 
     Private Sub btnHistorial_Click(sender As Object, e As EventArgs) Handles btnHistorial.Click
         OpenChildForm(New FrmHistorial, PanelChildFormPac)
-
     End Sub
 
     Private Sub btnConsulta_Click(sender As Object, e As EventArgs) Handles btnConsulta.Click
@@ -47,7 +51,6 @@ Public Class FrmPrincipalPaciente
 
     Private Sub fotoPerfil_Click(sender As Object, e As EventArgs) Handles fotoPerfil.Click
         GuardarImagen(FrmLogIn.paci._ci, ofdFoto, fotoPerfil)
-
     End Sub
 
 #Region "poder mover el form"

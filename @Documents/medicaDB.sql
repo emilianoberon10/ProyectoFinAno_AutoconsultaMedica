@@ -191,22 +191,22 @@ INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('7
 INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('88888888',25072542,65,'Av.Italia 6544','Hombre','Roberto','','Diaz','Garcia');
 -- ------------------------------------------ Gerentes, Medicos y Pacientes --------------------------------------------------------------- --
 -- Gerentes: --
-INSERT INTO Gerente(ciG, contrasena) VALUES('11111111', 'contraseña1');
-INSERT INTO Gerente(ciG, contrasena) VALUES('33333333', 'contraseña2');
+INSERT INTO Gerente(ciG, contrasena) VALUES('11111111', sha2('contraseña1');
+INSERT INTO Gerente(ciG, contrasena) VALUES('33333333', sha2('contraseña2');
 -- Pacientes: --
-INSERT INTO paciente(ciP,contrasena,mail) VALUES('22222222','paciente1','elpacientenumero1@mail.com');
-INSERT INTO paciente(ciP,contrasena,mail) VALUES('44444444','paciente2','elpacientenumero2@mail.com');
-INSERT INTO paciente(ciP,contrasena,mail) VALUES('55555555','paciente3','elpacientenumero3@mail.com');
-INSERT INTO paciente(ciP,contrasena,mail) VALUES('88888888','paciente4','elpacientenumero4@mail.com');
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('22222222',sha2('paciente1', 256),'elpacientenumero1@mail.com');
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('44444444',sha2('paciente2', 256),'elpacientenumero2@mail.com');
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('55555555',sha2('paciente3', 256),'elpacientenumero3@mail.com');
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('88888888',sha2('paciente4', 256),'elpacientenumero4@mail.com');
 -- especialidad -- 
 insert into especialidad values (null,'Medico General');
 insert into especialidad values (null,'Pediatra');
 insert into especialidad values (null,'Nutricionista');
 -- Medicos: --
 INSERT INTO medico values
-	('66666666',0123,1,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central','medico1');
+	('66666666',0123,1,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',sha2('medico1', 256));
 INSERT INTO medico values 
-	('77777777',1234,3,'','07:00 a 13:00','08:20 a 16:40','','13:00 a 19:40','','','Clinica Central','medico2');
+	('77777777',1234,3,'','07:00 a 13:00','08:20 a 16:40','','13:00 a 19:40','','','Clinica Central',sha2('medico2', 256));
     
 -- RIESGO --
 insert into Riesgo values (1,'rojo');

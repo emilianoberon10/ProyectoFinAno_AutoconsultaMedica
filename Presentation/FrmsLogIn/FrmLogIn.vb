@@ -1,6 +1,8 @@
 ﻿Imports System.Runtime.InteropServices
 Imports Logic
 
+Imports Presentation.My.Resources
+
 Public Class FrmLogIn
 
     'objetos para el usuario que se loguea
@@ -20,18 +22,18 @@ Public Class FrmLogIn
 
     ReadOnly frmCrear As New FrmCrearUsuario
     ReadOnly frmRecuPass As New FrmRecuperarContraseña
-    ReadOnly formwelcome As New FrmBienvenida()
+    ReadOnly formwelcome As New FrmBienvenida
 
     'forms de usuarios
-    ReadOnly frmPaciente As New FrmPrincipalPaciente
+    Private frmPaciente As FrmPrincipalPaciente
 
-    ReadOnly frmGerente As New FrmPrincipalGerente
-    ReadOnly frmMedico As New FrmMedPrincipal
+    Private frmGerente As FrmPrincipalGerente
+    Private frmMedico As FrmMedPrincipal
 
 #End Region
 
     ' Las letras In y Es al final de los labels significan Ingles y Español
-    Private lenguaje As String = "ES"
+    Shared lenguaje As String = "ES"
 
     Private Sub Logout(sender As Object, e As FormClosedEventArgs)
         ErrorProviderUserBien.Clear()
@@ -71,7 +73,7 @@ Public Class FrmLogIn
             ErrorProviderUserMal.Clear()
             ErrorProviderUserMal.SetError(Me.lbUsuario, "El nombre de usuario es muy corto")
         Else
-            Select Case ConfirmarLogin(txtUser.Text, txtPass.Text)
+            Select Case ConfirmarLogin(txtUser.Text, EncriptarContraseña(txtPass.Text))
                 Case "Paciente"
                     General.GetForm(Estado.Ok, "Inicio de sesion exitoso")
 
@@ -81,6 +83,7 @@ Public Class FrmLogIn
                     tipoLogin = "Paciente"
 
                     formwelcome.ShowDialog()
+                    frmPaciente = New FrmPrincipalPaciente
                     frmPaciente.Show()
                     AddHandler frmPaciente.FormClosed, AddressOf Me.Logout
                     Me.Hide()
@@ -95,6 +98,7 @@ Public Class FrmLogIn
 
                     formwelcome.ShowDialog()
 
+                    frmGerente = New FrmPrincipalGerente
                     frmGerente.Show()
                     AddHandler frmGerente.FormClosed, AddressOf Me.Logout
                     Me.Hide()
@@ -109,6 +113,7 @@ Public Class FrmLogIn
 
                     formwelcome.ShowDialog()
 
+                    frmMedico = New FrmMedPrincipal
                     frmMedico.Show()
                     AddHandler frmMedico.FormClosed, AddressOf Me.Logout
                     Me.Hide()
@@ -121,11 +126,11 @@ Public Class FrmLogIn
         End If
     End Sub
 
-    Private Sub llbForgotPass_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbForgotPassEs.LinkClicked
+    Private Sub llbForgotPass_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
         frmRecuPass.ShowDialog()
     End Sub
 
-    Private Sub llbCrearUsuario_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbCrearUsuarioEs.LinkClicked
+    Private Sub llbCrearUsuario_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
         frmCrear.ShowDialog()
     End Sub
 
@@ -148,11 +153,11 @@ Public Class FrmLogIn
     Private Sub btnChangeLanguage_Click(sender As Object, e As EventArgs) Handles btnChangeLanguage.Click
 
         If lenguaje = "ES" Then
-            btnChangeLanguage.Image = My.Resources.england
+            btnChangeLanguage.Image = Resources.england
             lenguaje = "EN"
-            Threading.Thread.CurrentThread.CurrentUICulture = New Globalization.CultureInfo("un-US")
+            Threading.Thread.CurrentThread.CurrentUICulture = New Globalization.CultureInfo("en-US")
         ElseIf lenguaje = "EN" Then
-            btnChangeLanguage.Image = My.Resources.spain
+            btnChangeLanguage.Image = Resources.spain
             lenguaje = "ES"
             SetTextos()
         End If
@@ -199,39 +204,31 @@ Public Class FrmLogIn
             .btnRecuperar.Text = Res.btn_recuperar
             .btnRestablecer.Text = Res.btn_restablecer
         End With
-        With frmPaciente
-            .lbTitulo.Text = Res.titulo_app
-            .btnAgendaMedica.Text = Res.btn_Agenda
-            .btnConsulta.Text = Res.btn_consultar
-            .btnHistorial.Text = Res.btn_historial
-            .btnCerrar.Text = Res.btn_cerrarSesion
-        End With
-        With frmGerente
-            .lbTitulo.Text = Res.titulo_app
-            .btnIngresar.Text = Res.btn_ingresar
-            .btnIngresarMedico.Text = Res.btn_ingrMed
-            .btnModificar.Text = Res.btn_modificar
-            .BtnEliminar.Text = Res.btn_eliminar
-            .btnCerrar.Text = Res.btn_cerrarSesion
-        End With
-        With frmMedico
-            .lbTitulo.Text = Res.titulo_app
-            .btnChats.Text = Res.btn_chats
-            .btnSolicitudes.Text = Res.btn_soliChat
-            .btnCerrar.Text = Res.btn_cerrarSesion
-        End With
     End Sub
 
-    Private Sub Button1_Paint(sender As Object, e As PaintEventArgs) Handles btnLogin.Paint
-        BotonRedondeado(btnLogin)
+    Private Sub Button1_Paint(sender As Object, e As PaintEventArgs)
+        'BotonRedondeado(btnLogin)
     End Sub
 
 #Region "funcionamiento text area"
 
     Private Sub txtUser_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUser.KeyPress
+
         e.Handled = Not Char.IsDigit(e.KeyChar)
         If Asc(e.KeyChar) = 8 Then
             e.Handled = Char.IsDigit(e.KeyChar)
+        End If
+    End Sub
+
+    Private Sub txtPass_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPass.KeyPress
+        DesecharCaracteresEspeciales(e)
+        'al dar enter en el textBox de la contraseña genero un evento click para el boton login
+        'con el if compruebo que el keypress fue un enter y no otra letra
+        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
+            SendKeys.Send("{TAB}")
+            e.Handled = True
+            'aqui genero el evento click
+            btnLogin.PerformClick()
         End If
     End Sub
 
@@ -249,17 +246,6 @@ Public Class FrmLogIn
             .ForeColor = Color.FromArgb(240, 240, 240)
 
         End With
-    End Sub
-
-    Private Sub txtPass_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPass.KeyPress
-        'al dar enter en el textBox de la contraseña genero un evento click para el boton login
-        'con el if compruebo que el keypress fue un enter y no otra letra
-        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
-            SendKeys.Send("{TAB}")
-            e.Handled = True
-            'aqui genero el evento click
-            btnLogin.PerformClick()
-        End If
     End Sub
 
     'para mostrar si el largo de la ci es correcto

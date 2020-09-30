@@ -178,7 +178,7 @@
     <value>MEDICOS</value>
   </data>
   <data name="btn_Iniciar" xml:space="preserve">
-    <value>INICIAR</value>
+    <value>LOG IN</value>
   </data>
   <data name="btn_modificar" xml:space="preserve">
     <value>MODIFICAR</value>
@@ -196,7 +196,7 @@
     <value>SOLICITUDES DE CHAT</value>
   </data>
   <data name="contra" xml:space="preserve">
-    <value>CONTRASEÑA</value>
+    <value>PASSWORD</value>
   </data>
   <data name="crearUsuario" xml:space="preserve">
     <value>CREAR USUARIO</value>
@@ -329,7 +329,7 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla</value>
     <value>SISTEMA DE AUTOCONSULTA MEDICA</value>
   </data>
   <data name="usuario" xml:space="preserve">
-    <value>USUARIO</value>
+    <value>USER</value>
   </data>
   <data name="Vie" xml:space="preserve">
     <value>Viernes</value>

@@ -17,7 +17,6 @@ Gerente | 11111111 | contraseña1
 Medico | 66666666 | medico1
 
 ---
-[Software page]()
 Made by:
 * Beron Emiliano
 * Vargas Mateo

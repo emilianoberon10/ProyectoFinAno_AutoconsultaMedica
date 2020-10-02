@@ -14,26 +14,26 @@ Public Class FrmPrincipalGerente
         'Me.btnCerrar.Text = Res.btn_cerrarSesion
     End Sub
 
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
         If MessageBox.Show("Seguro que desa salir?", "Advertencia",
          MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
             Me.Close()
         End If
     End Sub
 
-    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
+    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnSolicitudes.Click
         OpenChildForm(New FrmIngresarGerente, PanelChildForm)
     End Sub
 
-    Private Sub btnIngresarMedico_Click(sender As Object, e As EventArgs) Handles btnIngresarMedico.Click
+    Private Sub btnIngresarMedico_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         OpenChildForm(New FrmMedicoGerente, PanelChildForm)
     End Sub
 
-    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
         OpenChildForm(New FrmModificarGerente, PanelChildForm)
     End Sub
 
-    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
         OpenChildForm(New FrmEliminarGerente, PanelChildForm)
     End Sub
 

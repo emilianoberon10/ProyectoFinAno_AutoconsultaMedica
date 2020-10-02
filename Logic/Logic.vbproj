@@ -64,10 +64,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="common\Login.vb" />
-    <Compile Include="Define.vb" />
-    <Compile Include="Enfermedad.vb" />
-    <Compile Include="FichaMedica.vb" />
+    <Compile Include="Login.vb" />
+    <Compile Include="Patologias\Define.vb" />
+    <Compile Include="Patologias\Enfermedad.vb" />
+    <Compile Include="Personas\Paciente\FichaMedica.vb" />
     <Compile Include="Personas\fotoPerfil.vb" />
     <Compile Include="Personas\Gerente.vb" />
     <Compile Include="Personas\Medico.vb" />
@@ -87,9 +87,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Personas\Paciente.vb" />
-    <Compile Include="Personas\Persona.vb" />
-    <Compile Include="Selecciona.vb" />
-    <Compile Include="Sintoma.vb" />
+    <Compile Include="Personas\Paciente\Persona.vb" />
+    <Compile Include="Personas\Paciente\Selecciona.vb" />
+    <Compile Include="Patologias\Sintoma.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

@@ -64,24 +64,24 @@ Partial Class FrmCrearUsuario
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Silver
         Me.ErrorProvider1.SetIconAlignment(Me.Label1, System.Windows.Forms.ErrorIconAlignment.TopRight)
         Me.ErrorProvider1.SetIconPadding(Me.Label1, 5)
-        Me.Label1.Location = New System.Drawing.Point(162, 9)
+        Me.Label1.Location = New System.Drawing.Point(170, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(357, 36)
+        Me.Label1.Size = New System.Drawing.Size(341, 40)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "CREAR NUEVO USUARIO"
         '
         'lbci
         '
         Me.lbci.AutoSize = True
-        Me.lbci.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbci.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbci.ForeColor = System.Drawing.Color.Silver
-        Me.lbci.Location = New System.Drawing.Point(52, 69)
+        Me.lbci.Location = New System.Drawing.Point(52, 62)
         Me.lbci.Name = "lbci"
-        Me.lbci.Size = New System.Drawing.Size(138, 18)
+        Me.lbci.Size = New System.Drawing.Size(127, 21)
         Me.lbci.TabIndex = 1
         Me.lbci.Text = "Cedula identidad"
         '
@@ -89,12 +89,12 @@ Partial Class FrmCrearUsuario
         '
         Me.txtCedu.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtCedu.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCedu.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCedu.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCedu.ForeColor = System.Drawing.Color.Silver
-        Me.txtCedu.Location = New System.Drawing.Point(52, 86)
+        Me.txtCedu.Location = New System.Drawing.Point(56, 86)
         Me.txtCedu.MaxLength = 8
         Me.txtCedu.Name = "txtCedu"
-        Me.txtCedu.Size = New System.Drawing.Size(180, 20)
+        Me.txtCedu.Size = New System.Drawing.Size(180, 22)
         Me.txtCedu.TabIndex = 1
         '
         'ShapeContainer1
@@ -200,11 +200,11 @@ Partial Class FrmCrearUsuario
         'lbDir
         '
         Me.lbDir.AutoSize = True
-        Me.lbDir.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbDir.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbDir.ForeColor = System.Drawing.Color.Silver
-        Me.lbDir.Location = New System.Drawing.Point(270, 69)
+        Me.lbDir.Location = New System.Drawing.Point(270, 62)
         Me.lbDir.Name = "lbDir"
-        Me.lbDir.Size = New System.Drawing.Size(81, 18)
+        Me.lbDir.Size = New System.Drawing.Size(75, 21)
         Me.lbDir.TabIndex = 1
         Me.lbDir.Text = "Direccion"
         '
@@ -212,22 +212,22 @@ Partial Class FrmCrearUsuario
         '
         Me.txtDir.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtDir.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtDir.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDir.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDir.ForeColor = System.Drawing.Color.Silver
-        Me.txtDir.Location = New System.Drawing.Point(270, 86)
+        Me.txtDir.Location = New System.Drawing.Point(270, 84)
         Me.txtDir.MaxLength = 255
         Me.txtDir.Name = "txtDir"
-        Me.txtDir.Size = New System.Drawing.Size(381, 20)
+        Me.txtDir.Size = New System.Drawing.Size(381, 22)
         Me.txtDir.TabIndex = 5
         '
         'lbedad
         '
         Me.lbedad.AutoSize = True
-        Me.lbedad.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbedad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbedad.ForeColor = System.Drawing.Color.Silver
-        Me.lbedad.Location = New System.Drawing.Point(52, 116)
+        Me.lbedad.Location = New System.Drawing.Point(52, 111)
         Me.lbedad.Name = "lbedad"
-        Me.lbedad.Size = New System.Drawing.Size(46, 18)
+        Me.lbedad.Size = New System.Drawing.Size(44, 21)
         Me.lbedad.TabIndex = 1
         Me.lbedad.Text = "Edad"
         '
@@ -235,22 +235,22 @@ Partial Class FrmCrearUsuario
         '
         Me.txtEdad.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtEdad.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtEdad.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEdad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEdad.ForeColor = System.Drawing.Color.Silver
-        Me.txtEdad.Location = New System.Drawing.Point(52, 133)
+        Me.txtEdad.Location = New System.Drawing.Point(56, 133)
         Me.txtEdad.MaxLength = 2
         Me.txtEdad.Name = "txtEdad"
-        Me.txtEdad.Size = New System.Drawing.Size(180, 20)
+        Me.txtEdad.Size = New System.Drawing.Size(180, 22)
         Me.txtEdad.TabIndex = 3
         '
         'lbTel
         '
         Me.lbTel.AutoSize = True
-        Me.lbTel.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbTel.ForeColor = System.Drawing.Color.Silver
-        Me.lbTel.Location = New System.Drawing.Point(52, 171)
+        Me.lbTel.Location = New System.Drawing.Point(52, 166)
         Me.lbTel.Name = "lbTel"
-        Me.lbTel.Size = New System.Drawing.Size(71, 18)
+        Me.lbTel.Size = New System.Drawing.Size(68, 21)
         Me.lbTel.TabIndex = 1
         Me.lbTel.Text = "Telefono"
         '
@@ -258,22 +258,22 @@ Partial Class FrmCrearUsuario
         '
         Me.txtTel.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtTel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTel.ForeColor = System.Drawing.Color.Silver
-        Me.txtTel.Location = New System.Drawing.Point(52, 188)
+        Me.txtTel.Location = New System.Drawing.Point(56, 188)
         Me.txtTel.MaxLength = 9
         Me.txtTel.Name = "txtTel"
-        Me.txtTel.Size = New System.Drawing.Size(180, 20)
+        Me.txtTel.Size = New System.Drawing.Size(180, 22)
         Me.txtTel.TabIndex = 4
         '
         'lbPnom
         '
         Me.lbPnom.AutoSize = True
-        Me.lbPnom.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbPnom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbPnom.ForeColor = System.Drawing.Color.Silver
-        Me.lbPnom.Location = New System.Drawing.Point(270, 117)
+        Me.lbPnom.Location = New System.Drawing.Point(270, 111)
         Me.lbPnom.Name = "lbPnom"
-        Me.lbPnom.Size = New System.Drawing.Size(118, 18)
+        Me.lbPnom.Size = New System.Drawing.Size(119, 21)
         Me.lbPnom.TabIndex = 1
         Me.lbPnom.Text = "Primer Nombre"
         '
@@ -281,22 +281,22 @@ Partial Class FrmCrearUsuario
         '
         Me.txtPriNom.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtPriNom.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPriNom.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPriNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPriNom.ForeColor = System.Drawing.Color.Silver
         Me.txtPriNom.Location = New System.Drawing.Point(270, 135)
         Me.txtPriNom.MaxLength = 30
         Me.txtPriNom.Name = "txtPriNom"
-        Me.txtPriNom.Size = New System.Drawing.Size(180, 20)
+        Me.txtPriNom.Size = New System.Drawing.Size(180, 22)
         Me.txtPriNom.TabIndex = 6
         '
         'lbSnom
         '
         Me.lbSnom.AutoSize = True
-        Me.lbSnom.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbSnom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbSnom.ForeColor = System.Drawing.Color.Silver
-        Me.lbSnom.Location = New System.Drawing.Point(469, 117)
+        Me.lbSnom.Location = New System.Drawing.Point(468, 111)
         Me.lbSnom.Name = "lbSnom"
-        Me.lbSnom.Size = New System.Drawing.Size(138, 18)
+        Me.lbSnom.Size = New System.Drawing.Size(134, 21)
         Me.lbSnom.TabIndex = 1
         Me.lbSnom.Text = "Segundo Nombre"
         '
@@ -304,22 +304,22 @@ Partial Class FrmCrearUsuario
         '
         Me.txtSegNom.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtSegNom.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSegNom.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSegNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSegNom.ForeColor = System.Drawing.Color.Silver
         Me.txtSegNom.Location = New System.Drawing.Point(469, 135)
         Me.txtSegNom.MaxLength = 30
         Me.txtSegNom.Name = "txtSegNom"
-        Me.txtSegNom.Size = New System.Drawing.Size(180, 20)
+        Me.txtSegNom.Size = New System.Drawing.Size(180, 22)
         Me.txtSegNom.TabIndex = 7
         '
         'lbSape
         '
         Me.lbSape.AutoSize = True
-        Me.lbSape.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbSape.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbSape.ForeColor = System.Drawing.Color.Silver
-        Me.lbSape.Location = New System.Drawing.Point(469, 172)
+        Me.lbSape.Location = New System.Drawing.Point(468, 166)
         Me.lbSape.Name = "lbSape"
-        Me.lbSape.Size = New System.Drawing.Size(141, 18)
+        Me.lbSape.Size = New System.Drawing.Size(133, 21)
         Me.lbSape.TabIndex = 1
         Me.lbSape.Text = "Segundo Apellido"
         '
@@ -327,22 +327,22 @@ Partial Class FrmCrearUsuario
         '
         Me.txtSegApe.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtSegApe.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSegApe.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSegApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSegApe.ForeColor = System.Drawing.Color.Silver
         Me.txtSegApe.Location = New System.Drawing.Point(469, 191)
         Me.txtSegApe.MaxLength = 30
         Me.txtSegApe.Name = "txtSegApe"
-        Me.txtSegApe.Size = New System.Drawing.Size(180, 20)
+        Me.txtSegApe.Size = New System.Drawing.Size(180, 22)
         Me.txtSegApe.TabIndex = 9
         '
         'lbPape
         '
         Me.lbPape.AutoSize = True
-        Me.lbPape.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbPape.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbPape.ForeColor = System.Drawing.Color.Silver
-        Me.lbPape.Location = New System.Drawing.Point(270, 172)
+        Me.lbPape.Location = New System.Drawing.Point(270, 166)
         Me.lbPape.Name = "lbPape"
-        Me.lbPape.Size = New System.Drawing.Size(121, 18)
+        Me.lbPape.Size = New System.Drawing.Size(118, 21)
         Me.lbPape.TabIndex = 1
         Me.lbPape.Text = "Primer Apellido"
         '
@@ -350,22 +350,22 @@ Partial Class FrmCrearUsuario
         '
         Me.txtApe.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtApe.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtApe.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtApe.ForeColor = System.Drawing.Color.Silver
-        Me.txtApe.Location = New System.Drawing.Point(270, 194)
+        Me.txtApe.Location = New System.Drawing.Point(270, 188)
         Me.txtApe.MaxLength = 30
         Me.txtApe.Name = "txtApe"
-        Me.txtApe.Size = New System.Drawing.Size(180, 16)
+        Me.txtApe.Size = New System.Drawing.Size(180, 22)
         Me.txtApe.TabIndex = 8
         '
         'lbCorreo
         '
         Me.lbCorreo.AutoSize = True
-        Me.lbCorreo.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbCorreo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbCorreo.ForeColor = System.Drawing.Color.Silver
         Me.lbCorreo.Location = New System.Drawing.Point(270, 216)
         Me.lbCorreo.Name = "lbCorreo"
-        Me.lbCorreo.Size = New System.Drawing.Size(148, 18)
+        Me.lbCorreo.Size = New System.Drawing.Size(138, 21)
         Me.lbCorreo.TabIndex = 1
         Me.lbCorreo.Text = "Correo Electronico"
         '
@@ -373,12 +373,12 @@ Partial Class FrmCrearUsuario
         '
         Me.txtCorreo.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCorreo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCorreo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCorreo.ForeColor = System.Drawing.Color.Silver
         Me.txtCorreo.Location = New System.Drawing.Point(270, 236)
         Me.txtCorreo.MaxLength = 255
         Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(374, 20)
+        Me.txtCorreo.Size = New System.Drawing.Size(374, 22)
         Me.txtCorreo.TabIndex = 10
         '
         'cbSexo
@@ -386,13 +386,13 @@ Partial Class FrmCrearUsuario
         Me.cbSexo.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.cbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbSexo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbSexo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSexo.ForeColor = System.Drawing.Color.Silver
         Me.cbSexo.FormattingEnabled = True
         Me.cbSexo.Items.AddRange(New Object() {"Hombre", "Mujer", "Otro"})
-        Me.cbSexo.Location = New System.Drawing.Point(52, 234)
+        Me.cbSexo.Location = New System.Drawing.Point(52, 240)
         Me.cbSexo.Name = "cbSexo"
-        Me.cbSexo.Size = New System.Drawing.Size(180, 27)
+        Me.cbSexo.Size = New System.Drawing.Size(180, 29)
         Me.cbSexo.TabIndex = 11
         '
         'ErrorProvider1
@@ -403,11 +403,11 @@ Partial Class FrmCrearUsuario
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Silver
         Me.Label2.Location = New System.Drawing.Point(52, 216)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 18)
+        Me.Label2.Size = New System.Drawing.Size(43, 21)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Sexo"
         '

@@ -12,10 +12,9 @@ Public Class FrmModificarGerente
         CargarComboBoxSintomas(cbSintoma6)
         CargarComboBoxSintomas(cbSintoma7)
         CargarComboBoxSintomas(cbSintoma8)
-        CargarComboBoxSintomas(cbSintoma9)
     End Sub
 
-    Private Sub cbFiltro_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbFiltro.SelectedIndexChanged, cbSexo.SelectedIndexChanged, cbEsp.SelectedIndexChanged
+    Private Sub cbFiltro_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbFiltro.SelectedIndexChanged
         Select Case cbFiltro.Text
             Case "Sintomas"
                 PanelModSintoma.Visible = True
@@ -35,10 +34,6 @@ Public Class FrmModificarGerente
         End Select
     End Sub
 
-    Private Sub btnModificar_Paint(sender As Object, e As PaintEventArgs) Handles btnModificar.Paint
-        BotonRedondeado(btnModificar)
-    End Sub
-
     Private Sub DgvDatos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvDatos.CellClick
         Dim columna As Integer
         columna = e.ColumnIndex
@@ -52,14 +47,14 @@ Public Class FrmModificarGerente
                 Case "Medicos"
                     'PrimerNombre,SegundoNombre,PrimerApellido,SegundoApellido,
                     'lugarTrabajo, Tel_cel, Domicilio, sexo, Lun, Mar, Mie, Jue, Vie, Sab, Dom, nombre Especialidad
-                    txtPriNom.Text = DgvDatos.Item(1, FilaActual).Value()
+                    txtPNom.Text = DgvDatos.Item(1, FilaActual).Value()
                     txtSnom.Text = DgvDatos.Item(2, FilaActual).Value()
-                    txtPriApe.Text = DgvDatos.Item(3, FilaActual).Value()
+                    txtPape.Text = DgvDatos.Item(3, FilaActual).Value()
                     txtSape.Text = DgvDatos.Item(4, FilaActual).Value()
                     txtLugarTrabajo.Text = DgvDatos.Item(5, FilaActual).Value()
                     cbEsp.Text = DgvDatos.Item(6, FilaActual).Value()
-                    txtTel.Text = DgvDatos.Item(7, FilaActual).Value()
-                    txtDom.Text = DgvDatos.Item(8, FilaActual).Value()
+                    txtTelefono.Text = DgvDatos.Item(7, FilaActual).Value()
+                    txtDomicilio.Text = DgvDatos.Item(8, FilaActual).Value()
                     cbSexo.Text = DgvDatos.Item(9, FilaActual).Value()
                     CargarComboBoxEspec(cbEsp)
 
@@ -84,7 +79,6 @@ Public Class FrmModificarGerente
                     cbSintoma6.Text = DgvDatos.Item(10, FilaActual).Value()
                     cbSintoma7.Text = DgvDatos.Item(11, FilaActual).Value()
                     cbSintoma8.Text = DgvDatos.Item(12, FilaActual).Value()
-                    cbSintoma9.Text = DgvDatos.Item(13, FilaActual).Value()
             End Select
         Catch ex As Exception
 
@@ -92,7 +86,7 @@ Public Class FrmModificarGerente
 
     End Sub
 
-    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs)
         Try
             Select Case cbFiltro.Text
                 Case "Sintomas"
@@ -118,7 +112,6 @@ Public Class FrmModificarGerente
                         .Add(cbSintoma6.Text)
                         .Add(cbSintoma7.Text)
                         .Add(cbSintoma8.Text)
-                        .Add(cbSintoma9.Text)
                     End With
 
                     For Each elemet As String In sintomasComboBox
@@ -177,7 +170,7 @@ Public Class FrmModificarGerente
         txtHoraEntradaDomingo.Enabled = True
     End Sub
 
-    Private Sub txtHoraEntradaLunes_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtHoraEntradaViernes.KeyPress, txtHoraEntradaSabado.KeyPress, txtHoraEntradaMiercoles.KeyPress, txtHoraEntradaMartes.KeyPress, txtHoraEntradaLunes.KeyPress, txtHoraEntradaJueves.KeyPress, txtHoraEntradaDomingo.KeyPress
+    Private Sub txtHoraEntradaLunes_KeyPress(sender As Object, e As KeyPressEventArgs)
         e.Handled = Not (Char.IsDigit(e.KeyChar) Or e.KeyChar = "a" Or e.KeyChar = ":")
         If e.KeyChar = ":" And sender.Text.IndexOf(":") > -2 OrElse e.KeyChar = "a" And sender.Text.IndexOf("a") > -1 Then
 
@@ -188,6 +181,10 @@ Public Class FrmModificarGerente
         If Asc(e.KeyChar) = 8 Or e.KeyChar = " " Then
             e.Handled = Char.IsDigit(e.KeyChar)
         End If
+    End Sub
+
+    Private Sub btnModificar_Click_1(sender As Object, e As EventArgs) Handles btnModificar.Click
+
     End Sub
 
 #End Region

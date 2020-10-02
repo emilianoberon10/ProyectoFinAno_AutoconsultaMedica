@@ -83,21 +83,22 @@ Partial Class FrmHistorial
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(198, 9)
+        Me.Label2.Location = New System.Drawing.Point(205, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(374, 36)
+        Me.Label2.Size = New System.Drawing.Size(369, 40)
         Me.Label2.TabIndex = 38
         Me.Label2.Text = "HISTORIAL DE CONSULTAS"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(13, 140)
+        Me.Label1.Location = New System.Drawing.Point(24, 140)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(152, 16)
+        Me.Label1.Size = New System.Drawing.Size(154, 17)
         Me.Label1.TabIndex = 44
         Me.Label1.Text = "Esta fecha debe ser mayor"
         '

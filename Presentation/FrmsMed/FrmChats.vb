@@ -1,18 +1,21 @@
 ﻿Public Class FrmChats
 
     Private Sub FrmChats_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TextBox2.Text = FrmSolicitudesChat.diag
-        Timer1.Start()
+        'Timer1.Start()
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
 
     End Sub
 
-    Private Sub btnSalirChat_Click(sender As Object, e As EventArgs) Handles btnSalirChat.Click
+    Private Sub btnVerFichaMedica_Click(sender As Object, e As EventArgs) Handles btnVerFichaMedica.Click
+
+    End Sub
+
+    Private Sub btnSalirChat_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         If MessageBox.Show("Esta seguro de cerrar el chat?", "Advertencia",
          MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
-            Application.Exit()
+            Me.Close()
         End If
     End Sub
 
@@ -25,7 +28,7 @@
         End If
     End Sub
 
-    Private Sub btnEnviarMensaje_Click(sender As Object, e As EventArgs) Handles btnEnviarMensaje.Click
+    Private Sub btnEnviarMensaje_Click(sender As Object, e As EventArgs)
         Dim msj As String = "Medico: " & txtMensaje.Text
         txtChat.Text &= msj & vbNewLine
         FrmLogIn.medic.EnviarMsj(msj)

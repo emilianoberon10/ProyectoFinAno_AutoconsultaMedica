@@ -8,24 +8,28 @@
         Solicitudes()
     End Sub
 
+    Private Sub dgvSolicitudes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSolicitudes.CellDoubleClick
+
+        If MessageBox.Show("Sera redireccionado al chat con, desea continuar?", "Advertencia",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+
+            Dim FilaActual As Integer = dgvSolicitudes.CurrentRow.Index
+            Dim ci As String = dgvSolicitudes.Rows(FilaActual).Cells(0).Value
+            diag = dgvSolicitudes.Rows(FilaActual).Cells(2).Value
+
+            If FrmLogIn.medic.AceptarChat(ci, diag) Then
+                Dim form As New FrmChats
+                form.txtDiagnostico.Text = diag
+                form.Show()
+            End If
+
+        End If
+
+    End Sub
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'actualizo el datagrid de solicitudes cada 5segundos
         Solicitudes()
-    End Sub
-
-    Private Sub dgvSolicitudes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSolicitudes.CellDoubleClick
-        Dim FilaActual As Integer = dgvSolicitudes.CurrentRow.Index
-
-        Dim ci As String = dgvSolicitudes.Rows(FilaActual).Cells(0).Value
-        diag = dgvSolicitudes.Rows(FilaActual).Cells(2).Value
-
-        If MessageBox.Show("Sera redireccionado al chat con, desea continuar?", "Advertencia",
-         MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
-            If FrmLogIn.medic.AceptarChat(ci, diag) Then
-                Dim form As New FrmChats
-                form.Show()
-            End If
-        End If
     End Sub
 
     Private Sub Solicitudes()

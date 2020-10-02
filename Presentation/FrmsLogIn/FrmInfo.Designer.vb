@@ -34,17 +34,17 @@ Partial Class FrmInfo
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Silver
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(405, 17)
+        Me.Label1.Size = New System.Drawing.Size(429, 21)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Recuerde que la cedula NO debe contener puntos ni guiones"
         '
         'Label2
         '
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Silver
         Me.Label2.Location = New System.Drawing.Point(12, 45)
         Me.Label2.Name = "Label2"
@@ -56,19 +56,19 @@ Partial Class FrmInfo
         'llbRecuperarPass
         '
         Me.llbRecuperarPass.AutoSize = True
-        Me.llbRecuperarPass.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llbRecuperarPass.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.llbRecuperarPass.ForeColor = System.Drawing.Color.Silver
         Me.llbRecuperarPass.LinkColor = System.Drawing.Color.Silver
-        Me.llbRecuperarPass.Location = New System.Drawing.Point(100, 95)
+        Me.llbRecuperarPass.Location = New System.Drawing.Point(12, 116)
         Me.llbRecuperarPass.Name = "llbRecuperarPass"
-        Me.llbRecuperarPass.Size = New System.Drawing.Size(147, 17)
+        Me.llbRecuperarPass.Size = New System.Drawing.Size(157, 21)
         Me.llbRecuperarPass.TabIndex = 1
         Me.llbRecuperarPass.TabStop = True
         Me.llbRecuperarPass.Text = "recuperar contraseña"
         '
         'Label3
         '
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Silver
         Me.Label3.Location = New System.Drawing.Point(12, 150)
         Me.Label3.Name = "Label3"
@@ -79,12 +79,12 @@ Partial Class FrmInfo
         'llbCrearUsuario
         '
         Me.llbCrearUsuario.AutoSize = True
-        Me.llbCrearUsuario.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llbCrearUsuario.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.llbCrearUsuario.ForeColor = System.Drawing.Color.Silver
         Me.llbCrearUsuario.LinkColor = System.Drawing.Color.Silver
-        Me.llbCrearUsuario.Location = New System.Drawing.Point(321, 150)
+        Me.llbCrearUsuario.Location = New System.Drawing.Point(293, 150)
         Me.llbCrearUsuario.Name = "llbCrearUsuario"
-        Me.llbCrearUsuario.Size = New System.Drawing.Size(51, 17)
+        Me.llbCrearUsuario.Size = New System.Drawing.Size(58, 21)
         Me.llbCrearUsuario.TabIndex = 1
         Me.llbCrearUsuario.TabStop = True
         Me.llbCrearUsuario.Text = "CREAR"
@@ -103,7 +103,7 @@ Partial Class FrmInfo
         Me.btnCerrar.Location = New System.Drawing.Point(113, 234)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.ShadowDecoration.Parent = Me.btnCerrar
-        Me.btnCerrar.Size = New System.Drawing.Size(200, 35)
+        Me.btnCerrar.Size = New System.Drawing.Size(200, 40)
         Me.btnCerrar.TabIndex = 5
         Me.btnCerrar.Text = "CERRAR"
         '

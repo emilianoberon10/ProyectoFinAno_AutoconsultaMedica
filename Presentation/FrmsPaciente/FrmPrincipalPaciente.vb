@@ -73,10 +73,6 @@ Public Class FrmPrincipalPaciente
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
-    Private Sub topPanel_Paint(sender As Object, e As PaintEventArgs) Handles TopPanel.Paint
-
-    End Sub
-
 #End Region 'region de mover form
 
 End Class

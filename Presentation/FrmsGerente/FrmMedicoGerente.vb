@@ -17,7 +17,7 @@ Public Class FrmMedicoGerente
         End If
     End Function
 
-    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
+    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnConsul.Click
 
         If ComprobarDatos() Then
 
@@ -106,11 +106,7 @@ Public Class FrmMedicoGerente
 
 #End Region
 
-    Private Sub FrmMedico_Paint(sender As Object, e As PaintEventArgs) Handles MyBase.Paint
-        BotonRedondeado(btnIngresar)
-    End Sub
-
-    Private Sub txtCedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelefono.KeyPress, txtNumMed.KeyPress, txtEdad.KeyPress, txtCedula.KeyPress
+    Private Sub txtCedula_KeyPress(sender As Object, e As KeyPressEventArgs)
         e.Handled = Not Char.IsDigit(e.KeyChar)
         If Asc(e.KeyChar) = 8 Then
             e.Handled = Char.IsDigit(e.KeyChar)
@@ -128,6 +124,18 @@ Public Class FrmMedicoGerente
         If Asc(e.KeyChar) = 8 Or e.KeyChar = " " Then
             e.Handled = Char.IsDigit(e.KeyChar)
         End If
+    End Sub
+
+    Private Sub txts_KeyPress_1(sender As Object, e As KeyPressEventArgs) Handles txtTelefono.KeyPress, txtSnom.KeyPress, txtSape.KeyPress, txtPNom.KeyPress, txtPApe.KeyPress, txtNumMed.KeyPress, txtLugarTrabajo.KeyPress, txtEdad.KeyPress, txtDomicilio.KeyPress
+        DesecharCaracteresEspeciales(e)
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+
+    End Sub
+
+    Private Sub txtLugarTrabajo_TextChanged(sender As Object, e As EventArgs) Handles txtLugarTrabajo.TextChanged
+
     End Sub
 
 End Class

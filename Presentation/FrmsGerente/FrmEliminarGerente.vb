@@ -10,7 +10,7 @@ Public Class FrmEliminarGerente
 
     End Sub
 
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs)
         Try
             Select Case cbFiltro.Text
                 Case "Sintomas"
@@ -28,7 +28,7 @@ Public Class FrmEliminarGerente
         End Try
     End Sub
 
-    Private Sub cbFiltro_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbFiltro.SelectedIndexChanged
+    Private Sub cbFiltro_SelectedIndexChanged(sender As Object, e As EventArgs)
         Select Case cbFiltro.Text
             Case "Sintomas"
                 dgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
@@ -37,14 +37,6 @@ Public Class FrmEliminarGerente
             Case "Medicos"
                 dgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
         End Select
-    End Sub
-
-    Private Sub dgvDatos_CellClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
-    Private Sub btnFiltrar_Paint(sender As Object, e As PaintEventArgs) Handles btnEliminar.Paint
-        BotonRedondeado(btnEliminar)
     End Sub
 
     Private Sub dgvDatos_CellClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDatos.CellClick

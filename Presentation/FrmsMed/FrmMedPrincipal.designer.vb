@@ -29,26 +29,20 @@ Partial Class FrmMedPrincipal
         Me.btnMinimize = New System.Windows.Forms.PictureBox()
         Me.btnClose = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.btnChats = New System.Windows.Forms.Button()
-        Me.btnSolicitudes = New System.Windows.Forms.Button()
-        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.btnSolicitudes = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnChats = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnCerrar = New Guna.UI2.WinForms.Guna2Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnOpciones = New System.Windows.Forms.PictureBox()
-        Me.fotoPerfil = New System.Windows.Forms.PictureBox()
         Me.lbNombre = New System.Windows.Forms.Label()
         Me.panelChildMedico = New System.Windows.Forms.Panel()
         Me.ofdFoto = New System.Windows.Forms.OpenFileDialog()
+        Me.fotoPerfil = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.TopPanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.btnOpciones, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fotoPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,11 +107,8 @@ Partial Class FrmMedPrincipal
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(73, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.PictureBox5)
-        Me.Panel2.Controls.Add(Me.PictureBox4)
-        Me.Panel2.Controls.Add(Me.PictureBox3)
-        Me.Panel2.Controls.Add(Me.btnChats)
         Me.Panel2.Controls.Add(Me.btnSolicitudes)
+        Me.Panel2.Controls.Add(Me.btnChats)
         Me.Panel2.Controls.Add(Me.btnCerrar)
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
@@ -126,86 +117,92 @@ Partial Class FrmMedPrincipal
         Me.Panel2.Size = New System.Drawing.Size(222, 683)
         Me.Panel2.TabIndex = 1
         '
-        'PictureBox5
+        'btnSolicitudes
         '
-        Me.PictureBox5.Image = Global.Presentation.My.Resources.Resources.logout
-        Me.PictureBox5.Location = New System.Drawing.Point(4, 651)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(24, 24)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 302
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.Presentation.My.Resources.Resources.chat
-        Me.PictureBox4.Location = New System.Drawing.Point(3, 258)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(24, 24)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 302
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.Presentation.My.Resources.Resources.question
-        Me.PictureBox3.Location = New System.Drawing.Point(3, 198)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(24, 24)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 302
-        Me.PictureBox3.TabStop = False
+        Me.btnSolicitudes.Animated = True
+        Me.btnSolicitudes.BorderColor = System.Drawing.Color.Transparent
+        Me.btnSolicitudes.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnSolicitudes.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btnSolicitudes.CheckedState.Parent = Me.btnSolicitudes
+        Me.btnSolicitudes.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnSolicitudes.CustomImages.Parent = Me.btnSolicitudes
+        Me.btnSolicitudes.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.btnSolicitudes.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSolicitudes.ForeColor = System.Drawing.Color.White
+        Me.btnSolicitudes.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnSolicitudes.HoverState.Parent = Me.btnSolicitudes
+        Me.btnSolicitudes.Image = Global.Presentation.My.Resources.Resources.question
+        Me.btnSolicitudes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnSolicitudes.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnSolicitudes.ImageSize = New System.Drawing.Size(24, 24)
+        Me.btnSolicitudes.Location = New System.Drawing.Point(0, 190)
+        Me.btnSolicitudes.Name = "btnSolicitudes"
+        Me.btnSolicitudes.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnSolicitudes.ShadowDecoration.Parent = Me.btnSolicitudes
+        Me.btnSolicitudes.Size = New System.Drawing.Size(222, 46)
+        Me.btnSolicitudes.TabIndex = 303
+        Me.btnSolicitudes.Text = "SOLICITUDES"
+        Me.btnSolicitudes.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'btnChats
         '
-        Me.btnChats.FlatAppearance.BorderSize = 0
-        Me.btnChats.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.btnChats.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnChats.Font = New System.Drawing.Font("Century Gothic", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnChats.ForeColor = System.Drawing.Color.Silver
-        Me.btnChats.Location = New System.Drawing.Point(0, 248)
+        Me.btnChats.Animated = True
+        Me.btnChats.BorderColor = System.Drawing.Color.Transparent
+        Me.btnChats.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnChats.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btnChats.CheckedState.Parent = Me.btnChats
+        Me.btnChats.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnChats.CustomImages.Parent = Me.btnChats
+        Me.btnChats.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.btnChats.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnChats.ForeColor = System.Drawing.Color.White
+        Me.btnChats.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnChats.HoverState.Parent = Me.btnChats
+        Me.btnChats.Image = Global.Presentation.My.Resources.Resources.chat
+        Me.btnChats.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnChats.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnChats.ImageSize = New System.Drawing.Size(24, 24)
+        Me.btnChats.Location = New System.Drawing.Point(0, 236)
         Me.btnChats.Name = "btnChats"
-        Me.btnChats.Size = New System.Drawing.Size(222, 41)
-        Me.btnChats.TabIndex = 301
+        Me.btnChats.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnChats.ShadowDecoration.Parent = Me.btnChats
+        Me.btnChats.Size = New System.Drawing.Size(222, 46)
+        Me.btnChats.TabIndex = 304
         Me.btnChats.Text = "CHATS"
-        Me.btnChats.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnChats.UseVisualStyleBackColor = True
-        '
-        'btnSolicitudes
-        '
-        Me.btnSolicitudes.FlatAppearance.BorderSize = 0
-        Me.btnSolicitudes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.btnSolicitudes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSolicitudes.Font = New System.Drawing.Font("Century Gothic", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSolicitudes.ForeColor = System.Drawing.Color.Silver
-        Me.btnSolicitudes.Location = New System.Drawing.Point(3, 190)
-        Me.btnSolicitudes.Name = "btnSolicitudes"
-        Me.btnSolicitudes.Size = New System.Drawing.Size(219, 41)
-        Me.btnSolicitudes.TabIndex = 301
-        Me.btnSolicitudes.Text = "SOLICITUDES DE CHAT"
-        Me.btnSolicitudes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSolicitudes.UseVisualStyleBackColor = True
+        Me.btnChats.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'btnCerrar
         '
-        Me.btnCerrar.FlatAppearance.BorderSize = 0
-        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Font = New System.Drawing.Font("Century Gothic", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCerrar.ForeColor = System.Drawing.Color.Silver
-        Me.btnCerrar.Location = New System.Drawing.Point(0, 642)
+        Me.btnCerrar.Animated = True
+        Me.btnCerrar.BorderColor = System.Drawing.Color.Transparent
+        Me.btnCerrar.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCerrar.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btnCerrar.CheckedState.Parent = Me.btnCerrar
+        Me.btnCerrar.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCerrar.CustomImages.Parent = Me.btnCerrar
+        Me.btnCerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.btnCerrar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCerrar.ForeColor = System.Drawing.Color.White
+        Me.btnCerrar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnCerrar.HoverState.Parent = Me.btnCerrar
+        Me.btnCerrar.Image = Global.Presentation.My.Resources.Resources.logout
+        Me.btnCerrar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnCerrar.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnCerrar.ImageSize = New System.Drawing.Size(24, 24)
+        Me.btnCerrar.Location = New System.Drawing.Point(0, 637)
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(222, 41)
-        Me.btnCerrar.TabIndex = 301
+        Me.btnCerrar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCerrar.ShadowDecoration.Parent = Me.btnCerrar
+        Me.btnCerrar.Size = New System.Drawing.Size(222, 46)
+        Me.btnCerrar.TabIndex = 305
         Me.btnCerrar.Text = "CERRAR SESION"
-        Me.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnCerrar.UseVisualStyleBackColor = True
+        Me.btnCerrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(73, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.btnOpciones)
         Me.Panel3.Controls.Add(Me.fotoPerfil)
+        Me.Panel3.Controls.Add(Me.btnOpciones)
         Me.Panel3.Controls.Add(Me.lbNombre)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
@@ -224,24 +221,12 @@ Partial Class FrmMedPrincipal
         Me.btnOpciones.TabIndex = 8
         Me.btnOpciones.TabStop = False
         '
-        'fotoPerfil
-        '
-        Me.fotoPerfil.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.fotoPerfil.Enabled = False
-        Me.fotoPerfil.Image = Global.Presentation.My.Resources.Resources.profileEmpty
-        Me.fotoPerfil.Location = New System.Drawing.Point(46, 16)
-        Me.fotoPerfil.Name = "fotoPerfil"
-        Me.fotoPerfil.Size = New System.Drawing.Size(130, 130)
-        Me.fotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.fotoPerfil.TabIndex = 3
-        Me.fotoPerfil.TabStop = False
-        '
         'lbNombre
         '
         Me.lbNombre.AutoSize = True
         Me.lbNombre.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbNombre.ForeColor = System.Drawing.Color.Silver
-        Me.lbNombre.Location = New System.Drawing.Point(76, 149)
+        Me.lbNombre.Location = New System.Drawing.Point(75, 157)
         Me.lbNombre.Name = "lbNombre"
         Me.lbNombre.Size = New System.Drawing.Size(74, 19)
         Me.lbNombre.TabIndex = 2
@@ -259,6 +244,19 @@ Partial Class FrmMedPrincipal
         'ofdFoto
         '
         Me.ofdFoto.FileName = "OpenFileDialog1"
+        '
+        'fotoPerfil
+        '
+        Me.fotoPerfil.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.fotoPerfil.Image = Global.Presentation.My.Resources.Resources.profileEmpty
+        Me.fotoPerfil.Location = New System.Drawing.Point(47, 24)
+        Me.fotoPerfil.Name = "fotoPerfil"
+        Me.fotoPerfil.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.fotoPerfil.ShadowDecoration.Parent = Me.fotoPerfil
+        Me.fotoPerfil.Size = New System.Drawing.Size(130, 130)
+        Me.fotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.fotoPerfil.TabIndex = 306
+        Me.fotoPerfil.TabStop = False
         '
         'FrmMedPrincipal
         '
@@ -281,9 +279,6 @@ Partial Class FrmMedPrincipal
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.btnOpciones, System.ComponentModel.ISupportInitialize).EndInit()
@@ -296,18 +291,15 @@ Partial Class FrmMedPrincipal
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents panelChildMedico As Panel
-    Friend WithEvents btnCerrar As Button
     Friend WithEvents btnMinimize As PictureBox
     Friend WithEvents btnClose As PictureBox
-    Friend WithEvents btnChats As Button
-    Friend WithEvents btnSolicitudes As Button
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents fotoPerfil As PictureBox
     Friend WithEvents lbNombre As Label
     Friend WithEvents lbTitulo As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnOpciones As PictureBox
     Friend WithEvents ofdFoto As OpenFileDialog
+    Friend WithEvents btnSolicitudes As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnChats As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnCerrar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents fotoPerfil As Guna.UI2.WinForms.Guna2CirclePictureBox
 End Class

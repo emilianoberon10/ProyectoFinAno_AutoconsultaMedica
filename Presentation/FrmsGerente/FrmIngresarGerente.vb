@@ -14,7 +14,7 @@ Public Class FrmIngresarGerente
         CargarComboBoxSintomas(cbSintoma8)
     End Sub
 
-    Private Sub btnIngresarSintoma_Click(sender As Object, e As EventArgs) Handles btnIngresarSintoma.Click
+    Private Sub btnIngresarSintoma_Click(sender As Object, e As EventArgs) Handles btnConsul.Click
         ErrorProviderNomSint.Clear()
         Dim sintoma As Sintoma
         Dim sintomaIngresar As String = txtNombreSintoma.Text
@@ -38,7 +38,7 @@ Public Class FrmIngresarGerente
 
     End Sub
 
-    Private Sub btnIngresarEnfermedad_Click(sender As Object, e As EventArgs) Handles btnIngresarEnfermedad.Click
+    Private Sub btnIngresarEnfermedad_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         Dim enfermedad As Enfermedad
         Dim sintoma As Sintoma
         Dim define As Define
@@ -97,14 +97,9 @@ Public Class FrmIngresarGerente
 
 #Region "Estilos"
 
-    Private Sub btnIngresarSintoma_Paint(sender As Object, e As PaintEventArgs) Handles btnIngresarSintoma.Paint, btnIngresarEnfermedad.Paint
-        BotonRedondeado(btnIngresarEnfermedad)
-        BotonRedondeado(btnIngresarSintoma)
-    End Sub
-
 #Region "Activar sintomas"
 
-    Private Sub chb1_CheckedChanged(sender As Object, e As EventArgs) Handles chb1.CheckedChanged
+    Private Sub chb1_CheckedChanged(sender As Object, e As EventArgs)
         If chb1.Checked Then
             cbSintoma2.Enabled = True
         Else
@@ -112,7 +107,7 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-    Private Sub chb2_CheckedChanged(sender As Object, e As EventArgs) Handles chb2.CheckedChanged
+    Private Sub chb2_CheckedChanged(sender As Object, e As EventArgs)
         If chb2.Checked Then
             cbSintoma3.Enabled = True
         Else
@@ -120,7 +115,7 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-    Private Sub chb3_CheckedChanged(sender As Object, e As EventArgs) Handles chb3.CheckedChanged
+    Private Sub chb3_CheckedChanged(sender As Object, e As EventArgs)
         If chb3.Checked Then
             cbSintoma4.Enabled = True
         Else
@@ -128,7 +123,7 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-    Private Sub chb4_CheckedChanged(sender As Object, e As EventArgs) Handles chb4.CheckedChanged
+    Private Sub chb4_CheckedChanged(sender As Object, e As EventArgs)
         cbSintoma5.Enabled = True
         If chb4.Checked Then
             cbSintoma5.Enabled = True
@@ -137,7 +132,7 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-    Private Sub chb5_CheckedChanged(sender As Object, e As EventArgs) Handles chb5.CheckedChanged
+    Private Sub chb5_CheckedChanged(sender As Object, e As EventArgs)
         If chb5.Checked Then
             cbSintoma6.Enabled = True
         Else
@@ -145,7 +140,7 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-    Private Sub chb6_CheckedChanged(sender As Object, e As EventArgs) Handles chb6.CheckedChanged
+    Private Sub chb6_CheckedChanged(sender As Object, e As EventArgs)
         If chb6.Checked Then
             cbSintoma7.Enabled = True
         Else
@@ -153,7 +148,7 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-    Private Sub chb7_CheckedChanged(sender As Object, e As EventArgs) Handles chb7.CheckedChanged
+    Private Sub chb7_CheckedChanged(sender As Object, e As EventArgs)
         If chb7.Checked Then
             cbSintoma8.Enabled = True
         Else
@@ -161,7 +156,7 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-    Private Sub chb8_CheckedChanged(sender As Object, e As EventArgs) Handles chb8.CheckedChanged
+    Private Sub chb8_CheckedChanged(sender As Object, e As EventArgs)
         If chb8.Checked Then
             cbSintoma9.Enabled = True
         Else

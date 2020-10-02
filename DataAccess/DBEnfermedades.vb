@@ -41,7 +41,9 @@ Public Class DBEnfermedades
     'Obtener tabla enfermedades
     Public Function ObtenerEnfermedades() As DataTable
         Dim _consultaSQL As String
-        _consultaSQL = "select idEnf,nombre,riesgo,descripcion,nomSint FROM enfermedad JOIN define ON nombre=nomENf Group by nomEnf;"
+        _consultaSQL = "select idEnf id,nombre,riesgo,descripcion,nomSint Sintomas FROM enfermedad
+                        JOIN define ON nombre=nomENf
+                        Group by nomEnf;"
         Return DevolverTabla(_consultaSQL)
     End Function
 

@@ -6,7 +6,7 @@ Public Class FrmCrearUsuario
         Me.Close()
     End Sub
 
-    Private Sub btnCrear_Click(sender As Object, e As EventArgs) Handles MyBase.Load, btnCrear.Click
+    Private Sub btnCrear_Click(sender As Object, e As EventArgs) Handles btnCrear.Click
 
         If ComprobarCamposUsuario() Then
             ErrorProvider1.SetError(Label1, "TODOS LOS CAMPOS SON OBLIGATORIOS!!")
@@ -47,11 +47,6 @@ Public Class FrmCrearUsuario
         End If
     End Function
 
-    Private Sub btn_Paint(sender As Object, e As PaintEventArgs)
-        'BotonRedondeado(btnCancelar)
-        'BotonRedondeado(btnCrear)
-    End Sub
-
     Private Sub txtCedu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCedu.KeyPress
         e.Handled = Not Char.IsDigit(e.KeyChar)
         If Asc(e.KeyChar) = 8 Then
@@ -63,7 +58,4 @@ Public Class FrmCrearUsuario
         DesecharCaracteresEspeciales(e)
     End Sub
 
-    'txtCedu.Text, txtCorreo.Text, txtCedu.Text,
-    'Integer.Parse(txtTel.Text), Integer.Parse(txtEdad.Text), txtDir.Text, cbSexo.Text,
-    'txtPriNom.Text, txtSegNom.Text, txtApe.Text, txtSegApe.Text
 End Class

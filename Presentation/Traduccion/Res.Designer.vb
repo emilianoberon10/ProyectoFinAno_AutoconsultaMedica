@@ -381,6 +381,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a OLVIDO SU CONTRASEÑA ?.
+        '''</summary>
+        Friend Shared ReadOnly Property llbForgotPassEs() As String
+            Get
+                Return ResourceManager.GetString("llbForgotPassEs", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Lunes.
         '''</summary>
         Friend Shared ReadOnly Property Lun() As String
@@ -449,15 +458,6 @@ Namespace My.Resources
         Friend Shared ReadOnly Property MSoli_titulo() As String
             Get
                 Return ResourceManager.GetString("MSoli_titulo", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca una cadena traducida similar a OLVIDO SU CONTRASEÑA ?.
-        '''</summary>
-        Friend Shared ReadOnly Property passPerdida() As String
-            Get
-                Return ResourceManager.GetString("passPerdida", resourceCulture)
             End Get
         End Property
         

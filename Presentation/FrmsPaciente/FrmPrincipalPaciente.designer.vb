@@ -24,8 +24,13 @@ Partial Class FrmPrincipalPaciente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipalPaciente))
         Me.PanelMenuPac = New System.Windows.Forms.Panel()
+        Me.btnCerrar = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnAgendaMedica = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnHistorial = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnConsulta = New Guna.UI2.WinForms.Guna2Button()
         Me.lbInstrucciones = New System.Windows.Forms.Label()
         Me.PanelinfoPac = New System.Windows.Forms.Panel()
+        Me.fotoPerfil = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.btnOpciones = New System.Windows.Forms.PictureBox()
         Me.lbNombre = New System.Windows.Forms.Label()
         Me.TopPanel = New System.Windows.Forms.Panel()
@@ -33,17 +38,12 @@ Partial Class FrmPrincipalPaciente
         Me.lbTitulo = New System.Windows.Forms.Label()
         Me.PanelChildFormPac = New System.Windows.Forms.Panel()
         Me.ofdFoto = New System.Windows.Forms.OpenFileDialog()
-        Me.btnConsulta = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnHistorial = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnAgendaMedica = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnCerrar = New Guna.UI2.WinForms.Guna2Button()
-        Me.fotoPerfil = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.PanelMenuPac.SuspendLayout()
         Me.PanelinfoPac.SuspendLayout()
+        CType(Me.fotoPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnOpciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TopPanel.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.fotoPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelMenuPac
@@ -61,6 +61,114 @@ Partial Class FrmPrincipalPaciente
         Me.PanelMenuPac.Name = "PanelMenuPac"
         Me.PanelMenuPac.Size = New System.Drawing.Size(222, 683)
         Me.PanelMenuPac.TabIndex = 0
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.Animated = True
+        Me.btnCerrar.BorderColor = System.Drawing.Color.Transparent
+        Me.btnCerrar.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCerrar.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btnCerrar.CheckedState.Parent = Me.btnCerrar
+        Me.btnCerrar.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCerrar.CustomImages.Parent = Me.btnCerrar
+        Me.btnCerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.btnCerrar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCerrar.ForeColor = System.Drawing.Color.White
+        Me.btnCerrar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnCerrar.HoverState.Parent = Me.btnCerrar
+        Me.btnCerrar.Image = Global.Presentation.My.Resources.Resources.logout
+        Me.btnCerrar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnCerrar.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnCerrar.ImageSize = New System.Drawing.Size(24, 24)
+        Me.btnCerrar.Location = New System.Drawing.Point(0, 634)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCerrar.ShadowDecoration.Parent = Me.btnCerrar
+        Me.btnCerrar.Size = New System.Drawing.Size(222, 46)
+        Me.btnCerrar.TabIndex = 302
+        Me.btnCerrar.Text = "CERRAR SESION"
+        Me.btnCerrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'btnAgendaMedica
+        '
+        Me.btnAgendaMedica.Animated = True
+        Me.btnAgendaMedica.BorderColor = System.Drawing.Color.Transparent
+        Me.btnAgendaMedica.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnAgendaMedica.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btnAgendaMedica.CheckedState.Parent = Me.btnAgendaMedica
+        Me.btnAgendaMedica.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnAgendaMedica.CustomImages.Parent = Me.btnAgendaMedica
+        Me.btnAgendaMedica.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.btnAgendaMedica.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgendaMedica.ForeColor = System.Drawing.Color.White
+        Me.btnAgendaMedica.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnAgendaMedica.HoverState.Parent = Me.btnAgendaMedica
+        Me.btnAgendaMedica.Image = Global.Presentation.My.Resources.Resources.agenda
+        Me.btnAgendaMedica.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnAgendaMedica.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnAgendaMedica.ImageSize = New System.Drawing.Size(24, 24)
+        Me.btnAgendaMedica.Location = New System.Drawing.Point(0, 283)
+        Me.btnAgendaMedica.Name = "btnAgendaMedica"
+        Me.btnAgendaMedica.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnAgendaMedica.ShadowDecoration.Parent = Me.btnAgendaMedica
+        Me.btnAgendaMedica.Size = New System.Drawing.Size(222, 46)
+        Me.btnAgendaMedica.TabIndex = 302
+        Me.btnAgendaMedica.Text = "AGENDA MEDICA"
+        Me.btnAgendaMedica.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'btnHistorial
+        '
+        Me.btnHistorial.Animated = True
+        Me.btnHistorial.BorderColor = System.Drawing.Color.Transparent
+        Me.btnHistorial.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnHistorial.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btnHistorial.CheckedState.Parent = Me.btnHistorial
+        Me.btnHistorial.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnHistorial.CustomImages.Parent = Me.btnHistorial
+        Me.btnHistorial.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.btnHistorial.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHistorial.ForeColor = System.Drawing.Color.White
+        Me.btnHistorial.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnHistorial.HoverState.Parent = Me.btnHistorial
+        Me.btnHistorial.Image = Global.Presentation.My.Resources.Resources.form
+        Me.btnHistorial.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnHistorial.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnHistorial.ImageSize = New System.Drawing.Size(24, 24)
+        Me.btnHistorial.Location = New System.Drawing.Point(0, 237)
+        Me.btnHistorial.Name = "btnHistorial"
+        Me.btnHistorial.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnHistorial.ShadowDecoration.Parent = Me.btnHistorial
+        Me.btnHistorial.Size = New System.Drawing.Size(222, 46)
+        Me.btnHistorial.TabIndex = 302
+        Me.btnHistorial.Text = "HISTORIAL"
+        Me.btnHistorial.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'btnConsulta
+        '
+        Me.btnConsulta.Animated = True
+        Me.btnConsulta.BorderColor = System.Drawing.Color.Transparent
+        Me.btnConsulta.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnConsulta.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btnConsulta.CheckedState.Parent = Me.btnConsulta
+        Me.btnConsulta.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnConsulta.CustomImages.Parent = Me.btnConsulta
+        Me.btnConsulta.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.btnConsulta.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnConsulta.ForeColor = System.Drawing.Color.White
+        Me.btnConsulta.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnConsulta.HoverState.Parent = Me.btnConsulta
+        Me.btnConsulta.Image = Global.Presentation.My.Resources.Resources.consulting
+        Me.btnConsulta.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnConsulta.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnConsulta.ImageSize = New System.Drawing.Size(24, 24)
+        Me.btnConsulta.Location = New System.Drawing.Point(0, 191)
+        Me.btnConsulta.Name = "btnConsulta"
+        Me.btnConsulta.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnConsulta.ShadowDecoration.Parent = Me.btnConsulta
+        Me.btnConsulta.Size = New System.Drawing.Size(222, 46)
+        Me.btnConsulta.TabIndex = 302
+        Me.btnConsulta.Text = "CONSULTAR"
+        Me.btnConsulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'lbInstrucciones
         '
@@ -83,6 +191,19 @@ Partial Class FrmPrincipalPaciente
         Me.PanelinfoPac.Name = "PanelinfoPac"
         Me.PanelinfoPac.Size = New System.Drawing.Size(222, 184)
         Me.PanelinfoPac.TabIndex = 0
+        '
+        'fotoPerfil
+        '
+        Me.fotoPerfil.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.fotoPerfil.Image = Global.Presentation.My.Resources.Resources.profileEmpty
+        Me.fotoPerfil.Location = New System.Drawing.Point(47, 20)
+        Me.fotoPerfil.Name = "fotoPerfil"
+        Me.fotoPerfil.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.fotoPerfil.ShadowDecoration.Parent = Me.fotoPerfil
+        Me.fotoPerfil.Size = New System.Drawing.Size(130, 130)
+        Me.fotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.fotoPerfil.TabIndex = 0
+        Me.fotoPerfil.TabStop = False
         '
         'btnOpciones
         '
@@ -150,127 +271,6 @@ Partial Class FrmPrincipalPaciente
         '
         Me.ofdFoto.FileName = "OpenFileDialog1"
         '
-        'btnConsulta
-        '
-        Me.btnConsulta.Animated = True
-        Me.btnConsulta.BorderColor = System.Drawing.Color.Transparent
-        Me.btnConsulta.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnConsulta.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.btnConsulta.CheckedState.Parent = Me.btnConsulta
-        Me.btnConsulta.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnConsulta.CustomImages.Parent = Me.btnConsulta
-        Me.btnConsulta.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
-        Me.btnConsulta.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConsulta.ForeColor = System.Drawing.Color.White
-        Me.btnConsulta.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnConsulta.HoverState.Parent = Me.btnConsulta
-        Me.btnConsulta.Image = Global.Presentation.My.Resources.Resources.consulting
-        Me.btnConsulta.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnConsulta.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.btnConsulta.ImageSize = New System.Drawing.Size(24, 24)
-        Me.btnConsulta.Location = New System.Drawing.Point(0, 201)
-        Me.btnConsulta.Name = "btnConsulta"
-        Me.btnConsulta.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnConsulta.ShadowDecoration.Parent = Me.btnConsulta
-        Me.btnConsulta.Size = New System.Drawing.Size(222, 46)
-        Me.btnConsulta.TabIndex = 302
-        Me.btnConsulta.Text = "CONSULTAR"
-        Me.btnConsulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'btnHistorial
-        '
-        Me.btnHistorial.Animated = True
-        Me.btnHistorial.BorderColor = System.Drawing.Color.Transparent
-        Me.btnHistorial.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnHistorial.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.btnHistorial.CheckedState.Parent = Me.btnHistorial
-        Me.btnHistorial.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnHistorial.CustomImages.Parent = Me.btnHistorial
-        Me.btnHistorial.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
-        Me.btnHistorial.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHistorial.ForeColor = System.Drawing.Color.White
-        Me.btnHistorial.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnHistorial.HoverState.Parent = Me.btnHistorial
-        Me.btnHistorial.Image = Global.Presentation.My.Resources.Resources.form
-        Me.btnHistorial.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnHistorial.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.btnHistorial.ImageSize = New System.Drawing.Size(24, 24)
-        Me.btnHistorial.Location = New System.Drawing.Point(0, 252)
-        Me.btnHistorial.Name = "btnHistorial"
-        Me.btnHistorial.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnHistorial.ShadowDecoration.Parent = Me.btnHistorial
-        Me.btnHistorial.Size = New System.Drawing.Size(222, 46)
-        Me.btnHistorial.TabIndex = 302
-        Me.btnHistorial.Text = "HISTORIAL"
-        Me.btnHistorial.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'btnAgendaMedica
-        '
-        Me.btnAgendaMedica.Animated = True
-        Me.btnAgendaMedica.BorderColor = System.Drawing.Color.Transparent
-        Me.btnAgendaMedica.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnAgendaMedica.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.btnAgendaMedica.CheckedState.Parent = Me.btnAgendaMedica
-        Me.btnAgendaMedica.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnAgendaMedica.CustomImages.Parent = Me.btnAgendaMedica
-        Me.btnAgendaMedica.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
-        Me.btnAgendaMedica.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgendaMedica.ForeColor = System.Drawing.Color.White
-        Me.btnAgendaMedica.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnAgendaMedica.HoverState.Parent = Me.btnAgendaMedica
-        Me.btnAgendaMedica.Image = Global.Presentation.My.Resources.Resources.agenda
-        Me.btnAgendaMedica.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnAgendaMedica.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.btnAgendaMedica.ImageSize = New System.Drawing.Size(24, 24)
-        Me.btnAgendaMedica.Location = New System.Drawing.Point(0, 303)
-        Me.btnAgendaMedica.Name = "btnAgendaMedica"
-        Me.btnAgendaMedica.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnAgendaMedica.ShadowDecoration.Parent = Me.btnAgendaMedica
-        Me.btnAgendaMedica.Size = New System.Drawing.Size(222, 46)
-        Me.btnAgendaMedica.TabIndex = 302
-        Me.btnAgendaMedica.Text = "AGENDA MEDICA"
-        Me.btnAgendaMedica.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.Animated = True
-        Me.btnCerrar.BorderColor = System.Drawing.Color.Transparent
-        Me.btnCerrar.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCerrar.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.btnCerrar.CheckedState.Parent = Me.btnCerrar
-        Me.btnCerrar.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCerrar.CustomImages.Parent = Me.btnCerrar
-        Me.btnCerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
-        Me.btnCerrar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCerrar.ForeColor = System.Drawing.Color.White
-        Me.btnCerrar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnCerrar.HoverState.Parent = Me.btnCerrar
-        Me.btnCerrar.Image = Global.Presentation.My.Resources.Resources.logout
-        Me.btnCerrar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnCerrar.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.btnCerrar.ImageSize = New System.Drawing.Size(24, 24)
-        Me.btnCerrar.Location = New System.Drawing.Point(0, 634)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCerrar.ShadowDecoration.Parent = Me.btnCerrar
-        Me.btnCerrar.Size = New System.Drawing.Size(222, 46)
-        Me.btnCerrar.TabIndex = 302
-        Me.btnCerrar.Text = "CERRAR SESION"
-        Me.btnCerrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'fotoPerfil
-        '
-        Me.fotoPerfil.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.fotoPerfil.Image = Global.Presentation.My.Resources.Resources.profileEmpty
-        Me.fotoPerfil.Location = New System.Drawing.Point(47, 20)
-        Me.fotoPerfil.Name = "fotoPerfil"
-        Me.fotoPerfil.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.fotoPerfil.ShadowDecoration.Parent = Me.fotoPerfil
-        Me.fotoPerfil.Size = New System.Drawing.Size(130, 130)
-        Me.fotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.fotoPerfil.TabIndex = 0
-        Me.fotoPerfil.TabStop = False
-        '
         'FrmPrincipalPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -293,11 +293,11 @@ Partial Class FrmPrincipalPaciente
         Me.PanelMenuPac.PerformLayout()
         Me.PanelinfoPac.ResumeLayout(False)
         Me.PanelinfoPac.PerformLayout()
+        CType(Me.fotoPerfil, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnOpciones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TopPanel.ResumeLayout(False)
         Me.TopPanel.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.fotoPerfil, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

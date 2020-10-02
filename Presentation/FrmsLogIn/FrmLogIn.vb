@@ -1,9 +1,13 @@
 ﻿Imports System.Runtime.InteropServices
 Imports Logic
-
+Imports System.Threading.Thread
+Imports System.Globalization
 Imports Presentation.My.Resources
+Imports System.ComponentModel
 
 Public Class FrmLogIn
+
+#Region "variables"
 
     'objetos para el usuario que se loguea
     Protected Friend paci As Paciente
@@ -33,8 +37,11 @@ Public Class FrmLogIn
 #End Region
 
     ' Las letras In y Es al final de los labels significan Ingles y Español
-    Shared lenguaje As String = "ES"
+    Public lenguaje As String = "ES"
 
+#End Region
+
+    'Metodo que se ejecuta al cerrar el frm principal, no el login
     Private Sub Logout(sender As Object, e As FormClosedEventArgs)
         ErrorProviderUserBien.Clear()
         ErrorProviderPass.Clear()
@@ -126,11 +133,11 @@ Public Class FrmLogIn
         End If
     End Sub
 
-    Private Sub llbForgotPass_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
+    Private Sub llbForgotPass_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbForgotPassEs.LinkClicked
         frmRecuPass.ShowDialog()
     End Sub
 
-    Private Sub llbCrearUsuario_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
+    Private Sub llbCrearUsuario_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbCrearUsuarioEs.LinkClicked
         frmCrear.ShowDialog()
     End Sub
 
@@ -155,11 +162,12 @@ Public Class FrmLogIn
         If lenguaje = "ES" Then
             btnChangeLanguage.Image = Resources.england
             lenguaje = "EN"
-            Threading.Thread.CurrentThread.CurrentUICulture = New Globalization.CultureInfo("en-US")
+            CurrentThread.CurrentUICulture = New CultureInfo("en-US")
+
         ElseIf lenguaje = "EN" Then
             btnChangeLanguage.Image = Resources.spain
             lenguaje = "ES"
-            SetTextos()
+            CurrentThread.CurrentUICulture = New CultureInfo("es-ES")
         End If
     End Sub
 
@@ -170,7 +178,7 @@ Public Class FrmLogIn
             lbContraseña.Text = Res.contra
             btnLogin.Text = Res.btn_Iniciar
             llbCrearUsuarioEs.Text = Res.crearUsuario
-            llbForgotPassEs.Text = Res.passPerdida
+            llbForgotPassEs.Text = Res.llbForgotPassEs
         End With
 
         With frmInfo
@@ -178,7 +186,7 @@ Public Class FrmLogIn
             .Label2.Text = Res.Info_recordatorio2
             .Label3.Text = Res.Info_recordatorio3
             .llbCrearUsuario.Text = Res.crearUsuario
-            .llbRecuperarPass.Text = Res.passPerdida
+            .llbRecuperarPass.Text = Res.llbForgotPassEs
         End With
         With frmCrear
             .lbci.Text = Res.Persona_ci

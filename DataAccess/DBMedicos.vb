@@ -6,7 +6,30 @@ Public Class DBMedicos : Inherits ConexionBD
     End Sub
 
 #Region "ABM"
+    Public Function GetCi(numMed) As String
+        Using _connection = GetConnection()
+            _connection.Open()
 
+            Using _command = New MySqlCommand
+                _command.Connection = _connection
+
+                _command.CommandText = "SELECT ciM FROM medico WHERE numMed=@numMed"
+                _command.Parameters.AddWithValue("@numMed", numMed)
+                _command.CommandType = CommandType.Text
+
+                Dim reader As MySqlDataReader = _command.ExecuteReader()
+                If (reader.HasRows) Then
+                    While (reader.Read())
+                        Dim ciM As String = reader.GetString(0)
+                        Return ciM
+                    End While
+                Else
+                    MsgBox("No se pudo obtener en nombre")
+                End If
+
+            End Using
+        End Using
+    End Function
     'Guardar medicos
     Public Function SetMedico(ciMedico As String, especialidad As String, numMedico As Integer, LugarTrabajo As String,
                               contraseña As String, tel_cel As Object, domicilio As String, sexo As String, pNom As String,
@@ -276,7 +299,7 @@ Public Class DBMedicos : Inherits ConexionBD
 
                 _command.CommandText = "SET @pac = (SELECT ciPac FROM chat WHERE idMed=@ci AND estado='Proceso');
                                         SET @chat = (SELECT idChat FROM chat WHERE ciPac=@ci AND estado='Proceso');
-                                        INSERT INTO mensaje VALUES (null,curtime(),'1',@ci,@pac,@msj);"
+                                        INSERT INTO mensaje VALUES (null,curtime(),@chat,@ci,@pac,@msj);"
                 _command.Parameters.AddWithValue("@ci", ci)
                 _command.Parameters.AddWithValue("@msj", msj)
                 _command.CommandType = CommandType.Text

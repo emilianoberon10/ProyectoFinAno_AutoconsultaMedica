@@ -13,6 +13,7 @@
             lbNombre.Text = FrmLogIn.gere._pNom
         Else
             FrmLogIn.medic._pNom = FrmLogIn.medic.ObtenerNombre() 'Guardo el nombre del paciente para personalizar su interfaz y mostrarlo en el chat
+            FrmLogIn.medic._ci = FrmLogIn.medic.GetCiDb
             lbNombre.Text = FrmLogIn.medic._pNom
         End If
     End Sub

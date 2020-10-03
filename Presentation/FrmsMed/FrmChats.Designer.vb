@@ -104,7 +104,7 @@ Partial Class FrmChats
         Me.DataRepeater1.ItemTemplate.Controls.Add(Me.Label2)
         Me.DataRepeater1.ItemTemplate.Controls.Add(Me.Guna2CirclePictureBox1)
         Me.DataRepeater1.ItemTemplate.Margin = New System.Windows.Forms.Padding(2)
-        Me.DataRepeater1.ItemTemplate.Size = New System.Drawing.Size(184, 35)
+        Me.DataRepeater1.ItemTemplate.Size = New System.Drawing.Size(184, 21)
         Me.DataRepeater1.Location = New System.Drawing.Point(586, 28)
         Me.DataRepeater1.Name = "DataRepeater1"
         Me.DataRepeater1.Size = New System.Drawing.Size(192, 731)
@@ -115,7 +115,7 @@ Partial Class FrmChats
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(27, 9)
+        Me.Label2.Location = New System.Drawing.Point(15, 5)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 21)
@@ -125,12 +125,12 @@ Partial Class FrmChats
         'Guna2CirclePictureBox1
         '
         Me.Guna2CirclePictureBox1.Image = Global.Presentation.My.Resources.Resources.profileEmpty
-        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(2, 5)
+        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(2, 3)
         Me.Guna2CirclePictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
         Me.Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.Guna2CirclePictureBox1.ShadowDecoration.Parent = Me.Guna2CirclePictureBox1
-        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(22, 23)
+        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(12, 14)
         Me.Guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Guna2CirclePictureBox1.TabIndex = 0
         Me.Guna2CirclePictureBox1.TabStop = False

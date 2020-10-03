@@ -198,8 +198,7 @@ INSERT INTO paciente(ciP,contrasena,mail) VALUES('22222222','paciente1','elpacie
 INSERT INTO paciente(ciP,contrasena,mail) VALUES('44444444','paciente2','elpacientenumero2@mail.com');
 INSERT INTO paciente(ciP,contrasena,mail) VALUES('55555555','paciente3','elpacientenumero3@mail.com');
 INSERT INTO paciente(ciP,contrasena,mail) VALUES('88888888','paciente4','elpacientenumero4@mail.com');
-
-Update medico SET contrasena=sha2('medico2', 256) WHERE ciM=77777777;
+update Paciente set contrasena="D7DA03125FDB8E761AFB5039D7AE99ACA95AFA43E43D9BA3C044C5120C43242A" where ciP='22222222';
 -- especialidad -- 
 insert into especialidad values (null,'Medico General');
 insert into especialidad values (null,'Pediatra');
@@ -209,6 +208,8 @@ INSERT INTO medico values
 	('66666666',0123,1,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central','medico1');
 INSERT INTO medico values 
 	('77777777',1234,3,'','07:00 a 13:00','08:20 a 16:40','','13:00 a 19:40','','','Clinica Central','medico2');
+    
+    Update medico SET contrasena=sha2('medico1', 256) WHERE numMed='123';
     
 -- RIESGO --
 insert into Riesgo values (1,'rojo');
@@ -293,15 +294,14 @@ values (CURDATE(),'Uruguay',15,null,44444444,'Ingeniero en Sistemas','Antialergi
 (CURDATE(),'Uruguay',21,null,55555555,'En paro','Analgesicos','Por enfermedad','Hipertension'),
 (CURDATE(),'Uruguay',20,null,88888888,'Docente','','Por enfermedad',''); 
 -- ----------------------------- Solicita Chat, Acepta y Chat --------------------------- --
-insert into solicita values (null,22222222,'Romina','alergia','Pendiente');
-insert into solicita values (null,44444444,'Romina','dengue','Pendiente');
-insert into solicita values (null,88888888,'Romina','alergia','Pendiente');
-insert into solicita values (null,55555555,'Agustina','gripe','Pendiente');
+-- insert into solicita values (null,22222222,'Romina','alergia','Pendiente');
+-- insert into solicita values (null,44444444,'Romina','dengue','Pendiente');
+-- insert into solicita values (null,88888888,'Romina','alergia','Pendiente');
+-- insert into solicita values (null,55555555,'Agustina','gripe','Pendiente');
 -- Chat --
-insert into chat values (null,'22222222',66666666,CURDATE(),'covid','Proceso');
-insert into chat values (CURDATE(),'55555555','gripe',null,66666666,'Proceso');
+insert into chat values (curdate(),'22222222',66666666,CURDATE(),'covid','Finalizado');
+insert into chat values (CURDATE(),'55555555','gripe',curdate(),66666666,'Finalizado');
 -- ---------------- Mensaje ------------------- --
-insert into mensaje values (curtime(),'1',66666666,22222222,"Buenas dias, en que puedo ayudarle?");
-insert into mensaje values (curtime(),'1',22222222,66666666,"Queria saber que medicamento me recomienda");
-insert into mensaje values (curtime(),'1',66666666,22222222,"Actualmente para el covid no hay medicamento como tal para tratarlo,
-								lo mejor que le puedo recomendar es hacer reposo y en caso de tener mucho dolor, tomar un analgesico");
+                                
+select * from solicita;
+update chat set estado='Finalizado';

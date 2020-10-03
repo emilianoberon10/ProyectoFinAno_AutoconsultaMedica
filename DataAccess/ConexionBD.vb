@@ -4,7 +4,7 @@ Public MustInherit Class ConexionBD
 
     'declaro MustInherits para que no se pueda crear una instancia(objeto) de esta clase
     'cadena de conexion a la bd
-    Private connString As String = "server=localhost;database=medicaproyecto;Uid=eberon;Pwd =silomontolomeo;port=3306;AllowUserVariables=True;"
+    Private connString As String = "server=localhost;database=medicaproyecto;Uid=root;Pwd =;port=3306;AllowUserVariables=True;"
 
     Protected conn As New MySqlConnection(connString)
 
@@ -12,7 +12,7 @@ Public MustInherit Class ConexionBD
         Return New MySqlConnection(connString)
     End Function
 
-    Public Function ObtenerNombre(ci As String) As String
+    Public Function ObtenerNombre(ci) As String
 
         Using _connection = GetConnection()
             _connection.Open()
@@ -20,7 +20,8 @@ Public MustInherit Class ConexionBD
             Using _command = New MySqlCommand
                 _command.Connection = _connection
 
-                _command.CommandText = "SELECT pNom FROM persona WHERE ci=@ci"
+                _command.CommandText = "SET @ciM=(SELECT ciM FROM medico WHERE numMed=@ci);
+                                        SELECT pNom FROM persona WHERE ci=@ci OR ci=@ciM"
                 _command.Parameters.AddWithValue("@ci", ci)
                 _command.CommandType = CommandType.Text
                 Dim reader As MySqlDataReader = _command.ExecuteReader()
@@ -38,7 +39,7 @@ Public MustInherit Class ConexionBD
     End Function
 
     ' Para ejecutar las consultas
-    Public Sub consultaEjecutar(consulta As String)
+    Public Sub EjecutarConsulta(consulta As String)
         Dim commandSQL As New MySqlCommand(consulta, conn)
         Try
             conn.Open()

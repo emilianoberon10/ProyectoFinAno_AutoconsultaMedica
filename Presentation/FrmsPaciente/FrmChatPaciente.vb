@@ -28,10 +28,18 @@ Public Class FrmChatPaciente
 
     Private Sub btnEnviarMensaje_Click(sender As Object, e As EventArgs) Handles btnEnviarMensaje.Click
         Dim msj As String = "Paciente: " & txtMensaje.Text
-        txtChat.Text &= msj & vbNewLine
-        FrmLogIn.paci.EnviarMsj(msj)
-        txtMensaje.Text = ""
-        txtMensaje.Focus()
+        If msj IsNot "Paciente: " Then
+            Try
+                txtChat.Text &= msj & vbNewLine
+                FrmLogIn.paci.EnviarMsj(msj)
+                txtMensaje.Text = ""
+                txtMensaje.Focus()
+
+            Catch ex As Exception
+                General.GetForm(Estado.Error, ex.Message)
+            End Try
+
+        End If
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

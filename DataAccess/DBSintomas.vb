@@ -92,7 +92,7 @@ Public Class DBSintomas
         Dim _consultaSQL As String
         Try
             _consultaSQL = "UPDATE sintoma SET nombre='" & nombreSintoma & "'"
-            consultaEjecutar(_consultaSQL)
+            EjecutarConsulta(_consultaSQL)
             Return True
         Catch ex As Exception
             Return False
@@ -134,7 +134,7 @@ Public Class DBSintomas
     Public Sub LimpiarSeleccion()
         Dim _consultaSQL As String
         _consultaSQL = "TRUNCATE TABLE selec"
-        consultaEjecutar(_consultaSQL)
+        EjecutarConsulta(_consultaSQL)
     End Sub
 
 End Class

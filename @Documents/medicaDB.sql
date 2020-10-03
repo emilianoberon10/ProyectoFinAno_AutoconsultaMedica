@@ -296,6 +296,7 @@ values (CURDATE(),'Uruguay',15,null,44444444,'Ingeniero en Sistemas','Antialergi
 -- insert into solicita values (null,88888888,'Romina','alergia','Pendiente');
 -- insert into solicita values (null,55555555,'Agustina','gripe','Pendiente');
 -- Chat --
-insert into chat values (curdate(),'22222222',66666666,CURDATE(),'covid','Finalizado');
-insert into chat values (CURDATE(),'55555555','gripe',curdate(),66666666,'Finalizado');
+insert into chat values (null,'22222222',66666666,CURDATE(),'covid','Finalizado');
+insert into chat values (null,'55555555',66666666,CURDATE(),'gripe','Finalizado');
+
 

@@ -29,10 +29,11 @@ SELECT COUNT(idChat)INTO cantChats FROM chat;
 
 END$$
 DELIMITER ;
+-- FIN DASHBOARD -------------------------------------------------------------------------------------------------------------------------------------
 
 -- ABM PACIENTE -------------------------------------------------------------------------------------------------------------------------------------
 DELIMITER $$
-CREATE PROCEDURE `SetPaciente`(
+CREATE PROCEDURE `PacienteSet`(
 IN ci CHAR(8),
 IN Tel_cel VARCHAR(9) ,
 IN edad INT(3) ,
@@ -65,7 +66,7 @@ END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE PROCEDURE `DelPaciente`(
+CREATE PROCEDURE `PacienteDelete`(
 IN ci CHAR(8),
 OUT estado BOOLEAN
 )
@@ -90,7 +91,7 @@ END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE PROCEDURE `updatePaciente`(
+CREATE PROCEDURE `PacienteUpdate`(
 IN ci CHAR(8),
 IN Tel_cel VARCHAR(9) ,
 IN edad INT(3) ,
@@ -120,9 +121,17 @@ END IF;
 END$$
 DELIMITER ;
 
+DELIMITER $$
+CREATE PROCEDURE `PacienteGet`()
+BEGIN
+	SELECT ci Cedula,pnom Primer_Nombre, snom Segundo_Nombre, pape Primer_Apellido, sape Segundo_Apellido,edad, sexo, tel_cel Celular, mail, domicilio
+	FROM persona JOIN paciente ON ciP=ci;
+END$$
+DELIMITER ;
+
 -- ABM MEDICOS -------------------------------------------------------------------------------------------------------------------------------------
 DELIMITER $$
-CREATE PROCEDURE `SetMedico`(
+CREATE PROCEDURE `MedicoSet`(
 IN ci CHAR(8),
 IN Tel_cel VARCHAR(9) ,
 IN edad INT(3) ,
@@ -164,7 +173,7 @@ END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE PROCEDURE `DelMedico`(
+CREATE PROCEDURE `MedicoDelete`(
 IN ci CHAR(8),
 OUT estado BOOLEAN
 )
@@ -189,7 +198,7 @@ END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE PROCEDURE `UpdateMedico`(
+CREATE PROCEDURE `MedicoUpdate`(
 IN ci CHAR(8),
 IN Tel_cel VARCHAR(9) ,
 IN edad INT(3) ,
@@ -228,9 +237,19 @@ END IF;
 END$$
 DELIMITER ;
 
+DELIMITER $$
+CREATE PROCEDURE `MedicoGet`()
+BEGIN
+	SELECT ci Cedula,numMed,pnom Primer_Nombre, snom Segundo_Nombre, pape Primer_Apellido, sape Segundo_Apellido,lugarTrabajo,nombre Especialidad,Tel_cel,Domicilio,sexo,Lun Lunes,Mar Martes, Mie Miercoles, Jue Jueves, Vie Viernes, Sab Sabado,Dom Domingo,edad, sexo, tel_cel Celular,domicilio
+	FROM medico
+	JOIN especialidad ON id=idEspecialidad
+	JOIN persona ON ciM=ci;
+END$$
+DELIMITER ;
+
 -- ABM GERENTE -------------------------------------------------------------------------------------------------------------------------------------
 DELIMITER $$
-CREATE PROCEDURE `SetGerente`(
+CREATE PROCEDURE `GerenteSet`(
 IN ci CHAR(8),
 IN Tel_cel VARCHAR(9) ,
 IN edad INT(3) ,
@@ -261,7 +280,7 @@ END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE PROCEDURE `DelGerente`(
+CREATE PROCEDURE `GerenteDelete`(
 IN ci CHAR(8),
 OUT estado BOOLEAN
 )
@@ -286,7 +305,7 @@ END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE PROCEDURE `UpdateGerente`(
+CREATE PROCEDURE `GerenteUpdate`(
 IN ci CHAR(8),
 IN Tel_cel VARCHAR(9) ,
 IN edad INT(3) ,
@@ -299,7 +318,7 @@ IN sApe VARCHAR(30),
 OUT estado BOOLEAN
 )
 BEGIN
-IF EXISTS(SELECT ciP FROM paciente WHERE ciP=ci)THEN
+IF EXISTS(SELECT ciG FROM gerente WHERE ciG=ci)THEN
 	BEGIN
 		UPDATE persona SET tel_cel=tel_cel,edad=edad,domi=domicilio,sexo=sexo,pnom=pnom,snom=snom,pape=pape,sape=sape
         WHERE persona.ci=ci;
@@ -313,6 +332,197 @@ END IF;
 
 END$$
 DELIMITER ;
--- -----------------------------------------------------------------------------------------------------------------------------------
 
+DELIMITER $$
+CREATE PROCEDURE `GerenteGet`()
+BEGIN
+	SELECT ci Cedula,pnom Primer_Nombre, snom Segundo_Nombre, pape Primer_Apellido, sape Segundo_Apellido,edad, sexo, tel_cel Celular, mail, domicilio
+	FROM persona JOIN paciente ON ciG=ci;
+END$$
+DELIMITER ;
 
+/*IMAGENES*/
+DELIMITER $$
+CREATE PROCEDURE `ImaagenSet`(
+	IN ci CHAR(8),
+	IN foto LONGTEXT,
+	OUT estado BOOLEAN
+)
+BEGIN
+	INSERT INTO fotoPerfil(ci,foto)VALUES (ci,foto)ON DUPLICATE KEY UPDATE foto=foto;
+	SET estado = TRUE;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE `ImagenGet`(
+	IN ci CHAR(8),
+	OUT foto LONGTEXT
+)
+BEGIN
+	SELECT * FROM fotoPerfil WHERE ci=ci;
+END$$
+DELIMITER ;
+
+--Sintomas -----------------------------------------------------------------------------------------------------------------------------------
+DELIMITER $$
+CREATE PROCEDURE `SintomaSet`(
+	IN nombre VARCHAR(30),
+	OUT estado BOOLEAN
+)
+BEGIN
+	IF NOT EXISTS (SELECT nombre FROM sintoma s WHERE s.nombre=nombre)THEN
+		BEGIN
+			INSERT INTO sintoma(id,nombre) VALUES(null,nombre);
+			SET estado = TRUE;
+		END;
+	ELSE
+		BEGIN
+			SET estado = FALSE;
+		END;
+	END IF;
+END$$
+DELIMITER ;
+DELIMITER $$
+CREATE PROCEDURE `SintomaDelete`(
+	IN nombre VARCHAR(30),
+	OUT estado BOOLEAN
+)
+BEGIN
+IF EXISTS (SELECT nombre FROM sintoma s WHERE s.nombre=nombre)THEN
+	BEGIN
+		DELETE FROM define WHERE nomSint=nombre;
+		IF NOT EXISTS(SELECT nomSint FROM define WHERE nomSint=nombre)THEN
+			BEGIN
+				DELETE FROM sintoma s WHERE s.nombre=nombre;
+				SET estado = TRUE;
+			END;
+		END IF;
+	END;
+ELSE
+	BEGIN
+		SET estado = FALSE;
+	END;
+END IF;
+
+END$$
+DELIMITER ;
+DELIMITER $$
+CREATE PROCEDURE `SintomaUpdate`(
+	IN nombre VARCHAR(30),
+	OUT estado BOOLEAN
+)
+BEGIN
+	IF EXISTS (SELECT nombre FROM sintoma s WHERE s.nombre=nombre)THEN
+	BEGIN
+		SET @id=(SELECT id FROM sintoma WHERE nombre=nombre);
+		UPDATE define SET nomSint=nombre WHERE idSint=@id;
+		UPDATE sintoma s SET s.nombre = nombre WHERE id=@id;
+		SET estado = TRUE;
+	END;
+ELSE
+	BEGIN
+    SET estado = FALSE;
+    END;
+end if;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE `SintomaGet`()
+BEGIN
+	SELECT nombre Nombre_Sintoma FROM sintoma;
+END$$
+DELIMITER ;
+
+--Enfermedad -----------------------------------------------------------------------------------------------------------------------------------
+DELIMITER $$
+CREATE PROCEDURE `EnfermedadSet`(
+	IN nombre VARCHAR(30),
+	IN riesgo INT(1),
+	IN descripcion TEXT,
+	OUT estado BOOLEAN
+)
+BEGIN
+IF NOT EXISTS (SELECT nombre FROM enfermedad WHERE nombre=nombre)THEN
+	BEGIN
+		INSERT INTO sintoma(idEnf,nombre,riesgo,descripcion) VALUES(null,nombre,riesgo,descripcion);
+		SET estado = TRUE;
+	END;
+ELSE
+	BEGIN
+		SET estado = FALSE;
+	END;
+END IF;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE `EnfermedadDelete`(
+	IN nombre VARCHAR(30),
+	OUT estado BOOLEAN
+)
+BEGIN
+	IF EXISTS (SELECT nombre FROM enfermedad WHERE nombre=nombre)THEN
+		BEGIN
+			IF NOT EXISTS(SELECT diagnostico FROM solicita WHERE nomE=nombre )THEN
+				BEGIN
+					SET @id = (SELECT idEnf FROM enfermedad WHERE nombre=nombre);
+
+					DELETE FROM diagnostico WHERE idE=@id;
+					DO SLEEP(2);
+					DELETE FROM define WHERE idENf=@id;
+					DO SLEEP(1);
+					DELETE FROM enfermedad WHERE nombre=nombre;
+					SET estado = TRUE;
+				END;
+			END IF;
+		END;
+	ELSE
+		BEGIN
+			SET estado = FALSE;
+		END;
+	END IF;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE `EnfermedadUpdate`(
+	IN nombre VARCHAR(30),
+	IN riesgo INT(1),
+	IN descripcion TEXT,
+	OUT estado BOOLEAN
+)
+BEGIN
+	IF EXISTS (SELECT nombre FROM enfermedad WHERE nombre=nombre)THEN
+		BEGIN
+			SET @id = (SELECT idEnf FROM enfermedad WHERE nombre=nombre);
+			UPDATE define SET nomEnf=nombre WHERE idEnf=@id;
+			UPDATE enfermedad e SET e.nombre=nombre WHERE id=@id;
+			SET estado = TRUE;
+		END;
+	ELSE
+		BEGIN
+			SET estado = FALSE;
+		END;
+	END IF;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE `EnfermedadGet`()
+BEGIN
+IF EXISTS (SELECT nombre FROM enfermedad WHERE nombre=nombre)THEN
+	BEGIN
+		select idEnf id,nombre,riesgo,descripcion,nomSint Sintomas FROM enfermedad
+		JOIN define ON nombre=nomENf
+		Group by nomEnf;
+		SET estado = TRUE;
+	END;
+ELSE
+	BEGIN
+		SET estado = FALSE;
+	END;
+END IF;
+END$$
+DELIMITER ;

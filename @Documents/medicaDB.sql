@@ -64,13 +64,13 @@ riesgo varchar(10)
 );
 
 CREATE TABLE Sintoma(
-    id INT(4) NOT NULL AUTO_INCREMENT UNIQUE KEY,
-    nombre VARCHAR(20) NOT NULL PRIMARY KEY
+    id INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    nombre VARCHAR(30) NOT NULL UNIQUE KEY
 );
 
 CREATE TABLE Enfermedad(
-    idEnf INT(4) NOT NULL AUTO_INCREMENT UNIQUE KEY,
-    nombre VARCHAR(30) NOT NULL PRIMARY KEY,
+    idEnf INT(4) NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+    nombre VARCHAR(30) NOT NULL  UNIQUE KEY,
     riesgo int(1) NOT NULL,
     descripcion TEXT,
     constraint fk_riesgo FOREIGN KEY(riesgo) REFERENCES Riesgo(idRiesgo),
@@ -86,7 +86,7 @@ CREATE TABLE Enfermedad(
 CREATE TABLE diagnostico(
     idDiag INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     idP CHAR(8) NOT NULL,
-    nomE VARCHAR(20) NOT NULL,
+    nomE VARCHAR(30) NOT NULL,
     Fecha DATE NOT NULL,
     CONSTRAINT fk_idP FOREIGN KEY(idP) REFERENCES Paciente(ciP),
     CONSTRAINT fk_nomE FOREIGN KEY(nomE) REFERENCES Enfermedad(nombre)
@@ -108,7 +108,7 @@ CREATE TABLE FichaMedica(
 CREATE TABLE Selec(
     dia DATE NOT NULL,
     hora TIME NOT NULL,
-    nomSint VARCHAR(20) NOT NULL,
+    nomSint VARCHAR(30) NOT NULL,
     idPac CHAR(8) NOT NULL,
     constraint pk_clav PRIMARY KEY (dia, hora, idPac),
     CONSTRAINT fk_idPac FOREIGN KEY(idPac) REFERENCES Paciente(ciP),

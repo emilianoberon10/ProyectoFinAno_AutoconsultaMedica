@@ -24,7 +24,7 @@ Public Class DBEnfermedades
                     Else
                         reader.Dispose()
 
-                        _command.CommandText = "INSERT INTO sintoma(idEnf,nombre,riesgo,descripcion) VALUES(null,@nombre,@riesgo,@desc)"
+                        _command.CommandText = "INSERT INTO enfermedad(idEnf,nombre,riesgo,descripcion) VALUES(null,@nombre,@riesgo,@desc)"
                         _command.Parameters.AddWithValue("@riesgo", riesgo)
                         _command.Parameters.AddWithValue("@desc", descripcion)
                         _command.ExecuteNonQuery()

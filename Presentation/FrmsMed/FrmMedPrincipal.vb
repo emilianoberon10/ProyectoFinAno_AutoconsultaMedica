@@ -5,6 +5,7 @@ Public Class FrmMedPrincipal
     Private Sub FrmMedPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbNombre.Text = FrmLogIn.medic._pNom
         fotoPerfil.Image = ObtenerImagen(FrmLogIn.medic._ci)
+
         'Me.lbTitulo.Text = Res.titulo_app
         'Me.btnChats.Text = Res.btn_chats
         'Me.btnSolicitudes.Text = Res.btn_soliChat

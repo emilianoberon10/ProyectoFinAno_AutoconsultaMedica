@@ -9,5 +9,7 @@ Public Class DBChat : Inherits ConexionBD
                               WHERE s.estado='pendiente'
                               ORDER BY e.riesgo ASC;")
     End Function
-
+    Public Sub Finalizar(ci)
+        EjecutarConsulta("UPDATE chat SET estado='Finalizado' WHERE ciPac=" & ci & " OR idMed=" & ci)
+    End Sub
 End Class

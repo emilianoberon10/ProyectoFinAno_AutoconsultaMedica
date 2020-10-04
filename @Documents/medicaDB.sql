@@ -191,24 +191,22 @@ INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('7
 INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('88888888',25072542,65,'Av.Italia 6544','Hombre','Roberto','','Diaz','Garcia');
 -- ------------------------------------------ Gerentes, Medicos y Pacientes --------------------------------------------------------------- --
 -- Gerentes: --
-INSERT INTO Gerente(ciG, contrasena) VALUES('11111111', 'contraseña1');
-INSERT INTO Gerente(ciG, contrasena) VALUES('33333333', 'contraseña2');
+INSERT INTO Gerente(ciG, contrasena) VALUES('11111111', sha2('contraseña1', 256));
+INSERT INTO Gerente(ciG, contrasena) VALUES('33333333', sha2('contraseña2', 256));
 -- Pacientes: --
-INSERT INTO paciente(ciP,contrasena,mail) VALUES('22222222','paciente1','elpacientenumero1@mail.com');
-INSERT INTO paciente(ciP,contrasena,mail) VALUES('44444444','paciente2','elpacientenumero2@mail.com');
-INSERT INTO paciente(ciP,contrasena,mail) VALUES('55555555','paciente3','elpacientenumero3@mail.com');
-INSERT INTO paciente(ciP,contrasena,mail) VALUES('88888888','paciente4','elpacientenumero4@mail.com');
-
-Update medico SET contrasena=sha2('medico2', 256) WHERE ciM=77777777;
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('22222222',sha2('paciente1', 256),'elpacientenumero1@mail.com');
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('44444444',sha2('paciente2', 256),'elpacientenumero2@mail.com');
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('55555555',sha2('paciente3', 256),'elpacientenumero3@mail.com');
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('88888888',sha2('paciente4', 256),'elpacientenumero4@mail.com');
 -- especialidad -- 
 insert into especialidad values (null,'Medico General');
 insert into especialidad values (null,'Pediatra');
 insert into especialidad values (null,'Nutricionista');
 -- Medicos: --
 INSERT INTO medico values
-	('66666666',0123,1,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central','medico1');
+	('66666666',0123,1,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',sha2('medico1', 256));
 INSERT INTO medico values 
-	('77777777',1234,3,'','07:00 a 13:00','08:20 a 16:40','','13:00 a 19:40','','','Clinica Central','medico2');
+	('77777777',1234,3,'','07:00 a 13:00','08:20 a 16:40','','13:00 a 19:40','','','Clinica Central',sha2('medico2', 256));
     
 -- RIESGO --
 insert into Riesgo values (1,'rojo');
@@ -293,15 +291,12 @@ values (CURDATE(),'Uruguay',15,null,44444444,'Ingeniero en Sistemas','Antialergi
 (CURDATE(),'Uruguay',21,null,55555555,'En paro','Analgesicos','Por enfermedad','Hipertension'),
 (CURDATE(),'Uruguay',20,null,88888888,'Docente','','Por enfermedad',''); 
 -- ----------------------------- Solicita Chat, Acepta y Chat --------------------------- --
-insert into solicita values (null,22222222,'Romina','alergia','Pendiente');
-insert into solicita values (null,44444444,'Romina','dengue','Pendiente');
-insert into solicita values (null,88888888,'Romina','alergia','Pendiente');
-insert into solicita values (null,55555555,'Agustina','gripe','Pendiente');
+-- insert into solicita values (null,22222222,'Romina','alergia','Pendiente');
+-- insert into solicita values (null,44444444,'Romina','dengue','Pendiente');
+-- insert into solicita values (null,88888888,'Romina','alergia','Pendiente');
+-- insert into solicita values (null,55555555,'Agustina','gripe','Pendiente');
 -- Chat --
-insert into chat values (null,'22222222',66666666,CURDATE(),'covid','Proceso');
-insert into chat values (CURDATE(),'55555555','gripe',null,66666666,'Proceso');
--- ---------------- Mensaje ------------------- --
-insert into mensaje values (curtime(),'1',66666666,22222222,"Buenas dias, en que puedo ayudarle?");
-insert into mensaje values (curtime(),'1',22222222,66666666,"Queria saber que medicamento me recomienda");
-insert into mensaje values (curtime(),'1',66666666,22222222,"Actualmente para el covid no hay medicamento como tal para tratarlo,
-								lo mejor que le puedo recomendar es hacer reposo y en caso de tener mucho dolor, tomar un analgesico");
+insert into chat values (null,'22222222',66666666,CURDATE(),'covid','Finalizado');
+insert into chat values (null,'55555555',66666666,CURDATE(),'gripe','Finalizado');
+
+

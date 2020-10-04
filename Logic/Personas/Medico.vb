@@ -63,6 +63,9 @@ Public Class Medico
     Public Function comboEspec() As DataSet
         Return cons.Especialidades()
     End Function
+    Public Function GetCiDb() As String
+        Return cons.GetCi(Me._numMed)
+    End Function
 
 #End Region
 
@@ -72,9 +75,10 @@ Public Class Medico
         Return cons.AceptarChat(Me._ci, ciP, idDIag)
     End Function
 
-    Public Function FinalizarChat() As String
-
-    End Function
+    Public Sub FinalizarChat()
+        Dim con As New DBChat
+        con.Finalizar(Me._ci)
+    End Sub
 
     Public Function ComprobarSoli() As DataTable
         Dim cons As New DBChat
@@ -113,7 +117,7 @@ Public Class Medico
     End Function
 
     Public Overrides Function ObtenerNombre() As String
-        Return cons.ObtenerNombre(Me._ci)
+        Return cons.ObtenerNombre(Me._numMed)
     End Function
 
 #End Region

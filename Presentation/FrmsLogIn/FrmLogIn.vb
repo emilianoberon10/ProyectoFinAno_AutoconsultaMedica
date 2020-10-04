@@ -75,7 +75,7 @@ Public Class FrmLogIn
             ErrorProviderPass.Clear()
             ErrorProviderPass.SetError(Me.lbContraseña, "La contraseña debe contener almenos 8 caracteres")
 
-        ElseIf txtUser.Text.Length < 8 Then
+        ElseIf txtUser.Text.Length < 4 Then
 
             ErrorProviderUserMal.Clear()
             ErrorProviderUserMal.SetError(Me.lbUsuario, "El nombre de usuario es muy corto")
@@ -115,7 +115,8 @@ Public Class FrmLogIn
 
                     Me.Hide()
 
-                    medic = New Medico(txtUser.Text) 'Guardo la ci del paciente para poder usarla luego
+                    medic = New Medico() 'Guardo la ci del paciente para poder usarla luego
+                    medic._numMed = txtUser.Text
                     tipoLogin = "Medico"
 
                     formwelcome.ShowDialog()
@@ -260,7 +261,7 @@ Public Class FrmLogIn
     Private Sub txtUser_Leave(sender As Object, e As EventArgs) Handles txtUser.Leave
         ErrorProviderUserMal.Clear()
         ErrorProviderUserBien.Clear()
-        If txtUser.Text.Length < 8 Then
+        If txtUser.Text.Length < 4 Then
             ErrorProviderUserMal.SetError(Me.lbUsuario, "El nombre de usuario es muy corto")
             txtUser.BackColor = Color.FromArgb(48, 63, 105)
         Else

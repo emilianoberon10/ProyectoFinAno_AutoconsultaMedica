@@ -113,9 +113,10 @@ Public Class Paciente
         Return cons.EliminarSolicitudAceptada(Me._ci)
     End Function
 
-    Public Function FinalizarChat() As String
-
-    End Function
+    Public Sub FinalizarChat()
+        Dim con As New DBChat
+        con.Finalizar(Me._ci)
+    End Sub
 
     Public Function EnviarMsj(msg As String) As Boolean
         Return cons.EnviarMensajePac(Me._ci, msg)

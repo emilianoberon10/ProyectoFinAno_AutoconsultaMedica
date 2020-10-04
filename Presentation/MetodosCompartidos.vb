@@ -97,24 +97,31 @@ Module MetodosCompartidos
         ofdFoto.Title = "SUBIR ARCHIVO" 'titulo de la ventana
 
         If ofdFoto.ShowDialog = Windows.Forms.DialogResult.OK Then
+            Dim fs As FileStream = New FileStream(ofdFoto.FileName, FileMode.Open, FileAccess.Read, FileShare.Read)
+            Dim tamaño = (Convert.ToInt64(fs.Length) / 1024) / 1024
 
-            foto = ofdFoto.FileName
-            fotoPerfil.Image = Image.FromFile(foto) 'guardo la foto seleccionada en un pictureBox
+            If tamaño <= 1 Then
+                foto = ofdFoto.FileName
+                fotoPerfil.Image = Image.FromFile(foto) 'guardo la foto seleccionada en un pictureBox
 
-            Using ms As New MemoryStream()
-                'convierto a base 64
-                fotoPerfil.Image.Save(ms, Imaging.ImageFormat.Jpeg)
-                Dim obyte = ms.ToArray()
-                Dim imagen64 As String = Convert.ToBase64String(obyte)
+                Using ms As New MemoryStream()
+                    'convierto a base 64
+                    fotoPerfil.Image.Save(ms, Imaging.ImageFormat.Jpeg)
+                    Dim obyte = ms.ToArray()
+                    Dim imagen64 As String = Convert.ToBase64String(obyte)
 
-                'guardo la imagen en base 64 en la bd
-                Dim img As New fotoPerfil(ci, imagen64)
-                If img.Guardar() Then
-                    General.GetForm(Estado.Ok, "Imagen guardada con exito")
-                Else
-                    General.GetForm(Estado.Critical, "No se puedo guardar la imagen")
-                End If
-            End Using
+                    'guardo la imagen en base 64 en la bd
+                    Dim img As New fotoPerfil(ci, imagen64)
+                    If img.Guardar() Then
+                        General.GetForm(Estado.Ok, "Imagen guardada con exito")
+                    Else
+                        General.GetForm(Estado.Critical, "No se puedo guardar la imagen")
+                    End If
+                End Using
+            Else
+                General.GetForm(Estado.Critical, "La imagen no puede pesar mas de 1MB")
+            End If
+
         End If
 
     End Sub

@@ -1,7 +1,7 @@
 ﻿Public Class FrmChats
 
     Private Sub FrmChats_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Timer1.Start()
+        Timer1.Start()
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
@@ -15,6 +15,7 @@
     Private Sub btnSalirChat_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         If MessageBox.Show("Esta seguro de cerrar el chat?", "Advertencia",
          MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
+            FrmLogIn.medic.FinalizarChat()
             Me.Close()
         End If
     End Sub
@@ -28,12 +29,18 @@
         End If
     End Sub
 
-    Private Sub btnEnviarMensaje_Click(sender As Object, e As EventArgs)
+    Private Sub btnEnviarMensaje_Click(sender As Object, e As EventArgs) Handles btnEnviarMensaje.Click
         Dim msj As String = "Medico: " & txtMensaje.Text
-        txtChat.Text &= msj & vbNewLine
-        FrmLogIn.medic.EnviarMsj(msj)
-        txtMensaje.Text = ""
-        txtMensaje.Focus()
+        If msj IsNot "Medico: " Then
+            Try
+                txtChat.Text &= msj & vbNewLine
+                FrmLogIn.medic.EnviarMsj(msj)
+                txtMensaje.Text = ""
+                txtMensaje.Focus()
+            Catch ex As Exception
+                General.GetForm(Estado.Error, ex.Message)
+            End Try
+        End If
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

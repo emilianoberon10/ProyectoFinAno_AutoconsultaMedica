@@ -14,7 +14,7 @@
             _consultaSQL &= "'" & nombreEnfermedad & "',"
             _consultaSQL &= "'" & nombreSintoma & "')"
 
-            consultaEjecutar(_consultaSQL)
+            EjecutarConsulta(_consultaSQL)
             Return False
         End If
     End Function
@@ -26,7 +26,7 @@
 
         If ConsultaComprobarExistencia(_consultaSQL) Then
             _consultaSQL = "Delete * FROM Define WHERE nomEnf=" & nombreEnfermedad & ""
-            consultaEjecutar(_consultaSQL)
+            EjecutarConsulta(_consultaSQL)
             Return True
         Else
             Return False
@@ -40,7 +40,7 @@
             _consultaSQL &= "nomEnf = '" & nombreEnfermedad & "',"
             _consultaSQL &= "nomSint = '" & nombreSintoma & "' "
             _consultaSQL &= "where nomEnf= '" & nombreEnfermedad & "';"
-            consultaEjecutar(_consultaSQL)
+            EjecutarConsulta(_consultaSQL)
             Return True
         Catch ex As Exception
             MsgBox("ERROR::modifDefine" & ex.Message)

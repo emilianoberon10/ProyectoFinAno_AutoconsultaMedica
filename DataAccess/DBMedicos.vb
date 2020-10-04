@@ -298,7 +298,7 @@ Public Class DBMedicos : Inherits ConexionBD
                 _command.Connection = _connection
 
                 _command.CommandText = "SET @pac = (SELECT ciPac FROM chat WHERE idMed=@ci AND estado='Proceso');
-                                        SET @chat = (SELECT idChat FROM chat WHERE ciPac=@ci AND estado='Proceso');
+                                        SET @chat = (SELECT idChat FROM chat WHERE ciPac=@pac AND estado='Proceso');
                                         INSERT INTO mensaje VALUES (null,curtime(),@chat,@ci,@pac,@msj);"
                 _command.Parameters.AddWithValue("@ci", ci)
                 _command.Parameters.AddWithValue("@msj", msj)

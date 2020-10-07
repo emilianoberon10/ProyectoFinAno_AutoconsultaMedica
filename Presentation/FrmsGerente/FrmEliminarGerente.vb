@@ -3,11 +3,7 @@
 Public Class FrmEliminarGerente
 
     Private Sub FrmEliminar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub btnFiltrar_Click(sender As Object, e As EventArgs)
-
+        Traductor.traducirForm(Me)
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs)
@@ -28,7 +24,7 @@ Public Class FrmEliminarGerente
         End Try
     End Sub
 
-    Private Sub cbFiltro_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub cbFiltro_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbFiltro.SelectedIndexChanged
         Select Case cbFiltro.Text
             Case "Sintomas"
                 dgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)

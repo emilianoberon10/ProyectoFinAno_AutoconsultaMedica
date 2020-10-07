@@ -24,23 +24,23 @@ Partial Class FrmIngresarGerente
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmIngresarGerente))
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ingGerente = New System.Windows.Forms.Label()
+        Me.enfermedad = New System.Windows.Forms.Label()
+        Me.sintoma = New System.Windows.Forms.Label()
         Me.lbNomEnf = New System.Windows.Forms.Label()
         Me.lbNomSint = New System.Windows.Forms.Label()
         Me.ErrorProviderNomSint = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProviderNomDesEnf = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProviderSintEnf = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lbRiesgo = New System.Windows.Forms.Label()
+        Me.lbDescripcion = New System.Windows.Forms.Label()
         Me.txtNombreSintoma = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btnConsul = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btn_ingresar = New Guna.UI2.WinForms.Guna2Button()
+        Me.btn_ingresar2 = New Guna.UI2.WinForms.Guna2Button()
         Me.txtNombreEnfermedad = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtDescripcion = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
-        Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.groupBoxSintomas = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.cbSintoma6 = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.cbSintoma8 = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.cbSintoma5 = New Guna.UI2.WinForms.Guna2ComboBox()
@@ -60,49 +60,49 @@ Partial Class FrmIngresarGerente
         CType(Me.ErrorProviderNomSint, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProviderNomDesEnf, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProviderSintEnf, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Guna2GroupBox1.SuspendLayout()
+        Me.groupBoxSintomas.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'ingGerente
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(177, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(421, 40)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Ingresar sintomas/enfermadad"
+        Me.ingGerente.AutoSize = True
+        Me.ingGerente.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ingGerente.ForeColor = System.Drawing.Color.Silver
+        Me.ingGerente.Location = New System.Drawing.Point(119, 3)
+        Me.ingGerente.Name = "ingGerente"
+        Me.ingGerente.Size = New System.Drawing.Size(537, 40)
+        Me.ingGerente.TabIndex = 0
+        Me.ingGerente.Text = "INGRESAR SINTOMAS/ENFERMEDADES"
         '
-        'Label3
+        'enfermedad
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Silver
-        Me.Label3.Location = New System.Drawing.Point(323, 186)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(129, 30)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Enfermedad"
+        Me.enfermedad.AutoSize = True
+        Me.enfermedad.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.enfermedad.ForeColor = System.Drawing.Color.Silver
+        Me.enfermedad.Location = New System.Drawing.Point(323, 186)
+        Me.enfermedad.Name = "enfermedad"
+        Me.enfermedad.Size = New System.Drawing.Size(129, 30)
+        Me.enfermedad.TabIndex = 3
+        Me.enfermedad.Text = "Enfermedad"
         '
-        'Label4
+        'sintoma
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Silver
-        Me.Label4.Location = New System.Drawing.Point(337, 55)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(92, 30)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Sintoma"
+        Me.sintoma.AutoSize = True
+        Me.sintoma.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sintoma.ForeColor = System.Drawing.Color.Silver
+        Me.sintoma.Location = New System.Drawing.Point(337, 55)
+        Me.sintoma.Name = "sintoma"
+        Me.sintoma.Size = New System.Drawing.Size(92, 30)
+        Me.sintoma.TabIndex = 3
+        Me.sintoma.Text = "Sintoma"
         '
         'lbNomEnf
         '
         Me.lbNomEnf.AutoSize = True
         Me.lbNomEnf.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbNomEnf.ForeColor = System.Drawing.Color.Silver
-        Me.ErrorProviderNomSint.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopLeft)
         Me.ErrorProviderNomDesEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
+        Me.ErrorProviderNomSint.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopLeft)
         Me.ErrorProviderSintEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
         Me.lbNomEnf.Location = New System.Drawing.Point(22, 206)
         Me.lbNomEnf.Name = "lbNomEnf"
@@ -134,27 +134,27 @@ Partial Class FrmIngresarGerente
         '
         Me.ErrorProviderSintEnf.ContainerControl = Me
         '
-        'Label2
+        'lbRiesgo
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(457, 268)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 21)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "RIESGO"
+        Me.lbRiesgo.AutoSize = True
+        Me.lbRiesgo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbRiesgo.ForeColor = System.Drawing.Color.Silver
+        Me.lbRiesgo.Location = New System.Drawing.Point(457, 268)
+        Me.lbRiesgo.Name = "lbRiesgo"
+        Me.lbRiesgo.Size = New System.Drawing.Size(64, 21)
+        Me.lbRiesgo.TabIndex = 3
+        Me.lbRiesgo.Text = "RIESGO"
         '
-        'Label6
+        'lbDescripcion
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Silver
-        Me.Label6.Location = New System.Drawing.Point(22, 274)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(109, 21)
-        Me.Label6.TabIndex = 3
-        Me.Label6.Text = "DESCRIPCION"
+        Me.lbDescripcion.AutoSize = True
+        Me.lbDescripcion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbDescripcion.ForeColor = System.Drawing.Color.Silver
+        Me.lbDescripcion.Location = New System.Drawing.Point(22, 274)
+        Me.lbDescripcion.Name = "lbDescripcion"
+        Me.lbDescripcion.Size = New System.Drawing.Size(109, 21)
+        Me.lbDescripcion.TabIndex = 3
+        Me.lbDescripcion.Text = "DESCRIPCION"
         '
         'txtNombreSintoma
         '
@@ -189,59 +189,59 @@ Partial Class FrmIngresarGerente
         Me.txtNombreSintoma.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.txtNombreSintoma.TabIndex = 53
         '
-        'btnConsul
+        'btn_ingresar
         '
-        Me.btnConsul.Animated = True
-        Me.btnConsul.BackColor = System.Drawing.Color.Transparent
-        Me.btnConsul.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnConsul.BorderRadius = 15
-        Me.btnConsul.BorderThickness = 2
-        Me.btnConsul.CheckedState.Parent = Me.btnConsul
-        Me.btnConsul.CustomImages.Parent = Me.btnConsul
-        Me.btnConsul.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.btnConsul.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConsul.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnConsul.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnConsul.HoverState.Parent = Me.btnConsul
-        Me.btnConsul.Location = New System.Drawing.Point(563, 104)
-        Me.btnConsul.Name = "btnConsul"
-        Me.btnConsul.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.btnConsul.ShadowDecoration.BorderRadius = 20
-        Me.btnConsul.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.btnConsul.ShadowDecoration.Depth = 15
-        Me.btnConsul.ShadowDecoration.Enabled = True
-        Me.btnConsul.ShadowDecoration.Parent = Me.btnConsul
-        Me.btnConsul.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
-        Me.btnConsul.Size = New System.Drawing.Size(200, 40)
-        Me.btnConsul.TabIndex = 54
-        Me.btnConsul.Text = "INGRESAR"
+        Me.btn_ingresar.Animated = True
+        Me.btn_ingresar.BackColor = System.Drawing.Color.Transparent
+        Me.btn_ingresar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_ingresar.BorderRadius = 15
+        Me.btn_ingresar.BorderThickness = 2
+        Me.btn_ingresar.CheckedState.Parent = Me.btn_ingresar
+        Me.btn_ingresar.CustomImages.Parent = Me.btn_ingresar
+        Me.btn_ingresar.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.btn_ingresar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_ingresar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_ingresar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_ingresar.HoverState.Parent = Me.btn_ingresar
+        Me.btn_ingresar.Location = New System.Drawing.Point(563, 104)
+        Me.btn_ingresar.Name = "btn_ingresar"
+        Me.btn_ingresar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.btn_ingresar.ShadowDecoration.BorderRadius = 20
+        Me.btn_ingresar.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btn_ingresar.ShadowDecoration.Depth = 15
+        Me.btn_ingresar.ShadowDecoration.Enabled = True
+        Me.btn_ingresar.ShadowDecoration.Parent = Me.btn_ingresar
+        Me.btn_ingresar.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
+        Me.btn_ingresar.Size = New System.Drawing.Size(200, 40)
+        Me.btn_ingresar.TabIndex = 54
+        Me.btn_ingresar.Text = "INGRESAR"
         '
-        'Guna2Button1
+        'btn_ingresar2
         '
-        Me.Guna2Button1.Animated = True
-        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Button1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.Guna2Button1.BorderRadius = 15
-        Me.Guna2Button1.BorderThickness = 2
-        Me.Guna2Button1.CheckedState.Parent = Me.Guna2Button1
-        Me.Guna2Button1.CustomImages.Parent = Me.Guna2Button1
-        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.Guna2Button1.HoverState.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Location = New System.Drawing.Point(563, 612)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.Guna2Button1.ShadowDecoration.BorderRadius = 20
-        Me.Guna2Button1.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.Guna2Button1.ShadowDecoration.Depth = 15
-        Me.Guna2Button1.ShadowDecoration.Enabled = True
-        Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
-        Me.Guna2Button1.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
-        Me.Guna2Button1.Size = New System.Drawing.Size(200, 40)
-        Me.Guna2Button1.TabIndex = 55
-        Me.Guna2Button1.Text = "INGRESAR"
+        Me.btn_ingresar2.Animated = True
+        Me.btn_ingresar2.BackColor = System.Drawing.Color.Transparent
+        Me.btn_ingresar2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_ingresar2.BorderRadius = 15
+        Me.btn_ingresar2.BorderThickness = 2
+        Me.btn_ingresar2.CheckedState.Parent = Me.btn_ingresar2
+        Me.btn_ingresar2.CustomImages.Parent = Me.btn_ingresar2
+        Me.btn_ingresar2.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.btn_ingresar2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_ingresar2.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_ingresar2.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_ingresar2.HoverState.Parent = Me.btn_ingresar2
+        Me.btn_ingresar2.Location = New System.Drawing.Point(563, 612)
+        Me.btn_ingresar2.Name = "btn_ingresar2"
+        Me.btn_ingresar2.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.btn_ingresar2.ShadowDecoration.BorderRadius = 20
+        Me.btn_ingresar2.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btn_ingresar2.ShadowDecoration.Depth = 15
+        Me.btn_ingresar2.ShadowDecoration.Enabled = True
+        Me.btn_ingresar2.ShadowDecoration.Parent = Me.btn_ingresar2
+        Me.btn_ingresar2.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
+        Me.btn_ingresar2.Size = New System.Drawing.Size(200, 40)
+        Me.btn_ingresar2.TabIndex = 55
+        Me.btn_ingresar2.Text = "INGRESAR"
         '
         'txtNombreEnfermedad
         '
@@ -298,7 +298,6 @@ Partial Class FrmIngresarGerente
         Me.txtDescripcion.HoverState.Parent = Me.txtDescripcion
         Me.txtDescripcion.Location = New System.Drawing.Point(22, 298)
         Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtDescripcion.MaxLength = 255
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtDescripcion.PlaceholderText = ""
@@ -317,35 +316,35 @@ Partial Class FrmIngresarGerente
         Me.Guna2Separator1.Size = New System.Drawing.Size(779, 11)
         Me.Guna2Separator1.TabIndex = 56
         '
-        'Guna2GroupBox1
+        'groupBoxSintomas
         '
-        Me.Guna2GroupBox1.BorderColor = System.Drawing.Color.WhiteSmoke
-        Me.Guna2GroupBox1.BorderThickness = 2
-        Me.Guna2GroupBox1.Controls.Add(Me.cbSintoma6)
-        Me.Guna2GroupBox1.Controls.Add(Me.cbSintoma8)
-        Me.Guna2GroupBox1.Controls.Add(Me.cbSintoma5)
-        Me.Guna2GroupBox1.Controls.Add(Me.cbSintoma7)
-        Me.Guna2GroupBox1.Controls.Add(Me.cbSintoma3)
-        Me.Guna2GroupBox1.Controls.Add(Me.cbSintoma4)
-        Me.Guna2GroupBox1.Controls.Add(Me.cbSintoma2)
-        Me.Guna2GroupBox1.Controls.Add(Me.cbSintoma1)
-        Me.Guna2GroupBox1.Controls.Add(Me.chb7)
-        Me.Guna2GroupBox1.Controls.Add(Me.chb6)
-        Me.Guna2GroupBox1.Controls.Add(Me.chb5)
-        Me.Guna2GroupBox1.Controls.Add(Me.chb4)
-        Me.Guna2GroupBox1.Controls.Add(Me.chb3)
-        Me.Guna2GroupBox1.Controls.Add(Me.chb2)
-        Me.Guna2GroupBox1.Controls.Add(Me.chb1)
-        Me.Guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.Guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.Guna2GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Guna2GroupBox1.Location = New System.Drawing.Point(22, 351)
-        Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
-        Me.Guna2GroupBox1.ShadowDecoration.Parent = Me.Guna2GroupBox1
-        Me.Guna2GroupBox1.Size = New System.Drawing.Size(623, 245)
-        Me.Guna2GroupBox1.TabIndex = 57
-        Me.Guna2GroupBox1.Text = "SINTOMAS RELACIONADOS"
+        Me.groupBoxSintomas.BorderColor = System.Drawing.Color.WhiteSmoke
+        Me.groupBoxSintomas.BorderThickness = 2
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma6)
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma8)
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma5)
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma7)
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma3)
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma4)
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma2)
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma1)
+        Me.groupBoxSintomas.Controls.Add(Me.chb7)
+        Me.groupBoxSintomas.Controls.Add(Me.chb6)
+        Me.groupBoxSintomas.Controls.Add(Me.chb5)
+        Me.groupBoxSintomas.Controls.Add(Me.chb4)
+        Me.groupBoxSintomas.Controls.Add(Me.chb3)
+        Me.groupBoxSintomas.Controls.Add(Me.chb2)
+        Me.groupBoxSintomas.Controls.Add(Me.chb1)
+        Me.groupBoxSintomas.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.groupBoxSintomas.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.groupBoxSintomas.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.groupBoxSintomas.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.groupBoxSintomas.Location = New System.Drawing.Point(22, 351)
+        Me.groupBoxSintomas.Name = "groupBoxSintomas"
+        Me.groupBoxSintomas.ShadowDecoration.Parent = Me.groupBoxSintomas
+        Me.groupBoxSintomas.Size = New System.Drawing.Size(623, 245)
+        Me.groupBoxSintomas.TabIndex = 57
+        Me.groupBoxSintomas.Text = "RELACIONADOS"
         '
         'cbSintoma6
         '
@@ -635,53 +634,53 @@ Partial Class FrmIngresarGerente
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(775, 681)
         Me.Controls.Add(Me.Guna2Separator1)
-        Me.Controls.Add(Me.Guna2Button1)
-        Me.Controls.Add(Me.btnConsul)
+        Me.Controls.Add(Me.btn_ingresar2)
+        Me.Controls.Add(Me.btn_ingresar)
         Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.cbRiesgo)
         Me.Controls.Add(Me.txtNombreEnfermedad)
         Me.Controls.Add(Me.txtNombreSintoma)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lbDescripcion)
+        Me.Controls.Add(Me.lbRiesgo)
         Me.Controls.Add(Me.lbNomSint)
         Me.Controls.Add(Me.lbNomEnf)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Guna2GroupBox1)
+        Me.Controls.Add(Me.sintoma)
+        Me.Controls.Add(Me.enfermedad)
+        Me.Controls.Add(Me.ingGerente)
+        Me.Controls.Add(Me.groupBoxSintomas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmIngresarGerente"
         Me.Text = "FrmIngresar"
         CType(Me.ErrorProviderNomSint, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProviderNomDesEnf, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProviderSintEnf, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Guna2GroupBox1.ResumeLayout(False)
-        Me.Guna2GroupBox1.PerformLayout()
+        Me.groupBoxSintomas.ResumeLayout(False)
+        Me.groupBoxSintomas.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents ingGerente As Label
+    Friend WithEvents enfermedad As Label
+    Friend WithEvents sintoma As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents lbNomEnf As Label
     Friend WithEvents lbNomSint As Label
     Friend WithEvents ErrorProviderNomSint As ErrorProvider
     Friend WithEvents ErrorProviderNomDesEnf As ErrorProvider
     Friend WithEvents ErrorProviderSintEnf As ErrorProvider
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lbRiesgo As Label
+    Friend WithEvents lbDescripcion As Label
     Friend WithEvents chb8 As CheckBox
     Friend WithEvents cbSintoma9 As ComboBox
     Friend WithEvents txtNombreSintoma As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnConsul As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_ingresar2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_ingresar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtNombreEnfermedad As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtDescripcion As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
-    Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents groupBoxSintomas As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents cbSintoma6 As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents cbSintoma8 As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents cbSintoma5 As Guna.UI2.WinForms.Guna2ComboBox

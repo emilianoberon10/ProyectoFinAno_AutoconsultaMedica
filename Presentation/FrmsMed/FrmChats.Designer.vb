@@ -25,7 +25,7 @@ Partial Class FrmChats
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmChats))
         Me.txtDiagnostico = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.MChat_diag = New System.Windows.Forms.Label()
         Me.txtMensaje = New System.Windows.Forms.TextBox()
         Me.txtChat = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -34,36 +34,39 @@ Partial Class FrmChats
         Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.TopPanel = New System.Windows.Forms.Panel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.lbTitulo = New System.Windows.Forms.Label()
-        Me.btnCerrar = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnEnviarMensaje = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnModificar = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnVerFichaMedica = New Guna.UI2.WinForms.Guna2Button()
+        Me.app_titulo = New System.Windows.Forms.Label()
+        Me.btn_salir = New Guna.UI2.WinForms.Guna2Button()
+        Me.btn_enviar = New Guna.UI2.WinForms.Guna2Button()
+        Me.btn_modificar = New Guna.UI2.WinForms.Guna2Button()
+        Me.btn_fichaMed = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnMinimize = New System.Windows.Forms.PictureBox()
         Me.DataRepeater1.ItemTemplate.SuspendLayout()
         Me.DataRepeater1.SuspendLayout()
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TopPanel.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtDiagnostico
         '
         Me.txtDiagnostico.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDiagnostico.Location = New System.Drawing.Point(5, 713)
+        Me.txtDiagnostico.MaxLength = 30
         Me.txtDiagnostico.Name = "txtDiagnostico"
         Me.txtDiagnostico.Size = New System.Drawing.Size(178, 29)
         Me.txtDiagnostico.TabIndex = 3
         '
-        'Label1
+        'MChat_diag
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(5, 692)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(92, 21)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Diagnostico"
+        Me.MChat_diag.AutoSize = True
+        Me.MChat_diag.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MChat_diag.ForeColor = System.Drawing.Color.Silver
+        Me.MChat_diag.Location = New System.Drawing.Point(5, 692)
+        Me.MChat_diag.Name = "MChat_diag"
+        Me.MChat_diag.Size = New System.Drawing.Size(92, 21)
+        Me.MChat_diag.TabIndex = 8
+        Me.MChat_diag.Text = "Diagnostico"
         '
         'txtMensaje
         '
@@ -104,7 +107,7 @@ Partial Class FrmChats
         Me.DataRepeater1.ItemTemplate.Controls.Add(Me.Label2)
         Me.DataRepeater1.ItemTemplate.Controls.Add(Me.Guna2CirclePictureBox1)
         Me.DataRepeater1.ItemTemplate.Margin = New System.Windows.Forms.Padding(2)
-        Me.DataRepeater1.ItemTemplate.Size = New System.Drawing.Size(184, 21)
+        Me.DataRepeater1.ItemTemplate.Size = New System.Drawing.Size(184, 14)
         Me.DataRepeater1.Location = New System.Drawing.Point(586, 28)
         Me.DataRepeater1.Name = "DataRepeater1"
         Me.DataRepeater1.Size = New System.Drawing.Size(192, 731)
@@ -115,7 +118,7 @@ Partial Class FrmChats
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(15, 5)
+        Me.Label2.Location = New System.Drawing.Point(14, 4)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 21)
@@ -125,12 +128,12 @@ Partial Class FrmChats
         'Guna2CirclePictureBox1
         '
         Me.Guna2CirclePictureBox1.Image = Global.Presentation.My.Resources.Resources.profileEmpty
-        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(2, 3)
+        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(2, 2)
         Me.Guna2CirclePictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
         Me.Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.Guna2CirclePictureBox1.ShadowDecoration.Parent = Me.Guna2CirclePictureBox1
-        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(12, 14)
+        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(12, 13)
         Me.Guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Guna2CirclePictureBox1.TabIndex = 0
         Me.Guna2CirclePictureBox1.TabStop = False
@@ -138,8 +141,9 @@ Partial Class FrmChats
         'TopPanel
         '
         Me.TopPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.TopPanel.Controls.Add(Me.btnMinimize)
         Me.TopPanel.Controls.Add(Me.PictureBox5)
-        Me.TopPanel.Controls.Add(Me.lbTitulo)
+        Me.TopPanel.Controls.Add(Me.app_titulo)
         Me.TopPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.TopPanel.Location = New System.Drawing.Point(0, 0)
         Me.TopPanel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -157,98 +161,110 @@ Partial Class FrmChats
         Me.PictureBox5.TabIndex = 9
         Me.PictureBox5.TabStop = False
         '
-        'lbTitulo
+        'app_titulo
         '
-        Me.lbTitulo.AutoSize = True
-        Me.lbTitulo.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbTitulo.ForeColor = System.Drawing.Color.Silver
-        Me.lbTitulo.Location = New System.Drawing.Point(38, 2)
-        Me.lbTitulo.Name = "lbTitulo"
-        Me.lbTitulo.Size = New System.Drawing.Size(344, 25)
-        Me.lbTitulo.TabIndex = 8
-        Me.lbTitulo.Text = "SISTEMA DE AUTOCONSULTA MEDICA"
+        Me.app_titulo.AutoSize = True
+        Me.app_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.app_titulo.ForeColor = System.Drawing.Color.Silver
+        Me.app_titulo.Location = New System.Drawing.Point(38, 2)
+        Me.app_titulo.Name = "app_titulo"
+        Me.app_titulo.Size = New System.Drawing.Size(344, 25)
+        Me.app_titulo.TabIndex = 8
+        Me.app_titulo.Text = "SISTEMA DE AUTOCONSULTA MEDICA"
         '
-        'btnCerrar
+        'btn_salir
         '
-        Me.btnCerrar.Animated = True
-        Me.btnCerrar.BorderColor = System.Drawing.Color.Transparent
-        Me.btnCerrar.BorderRadius = 10
-        Me.btnCerrar.CheckedState.Parent = Me.btnCerrar
-        Me.btnCerrar.CustomImages.Parent = Me.btnCerrar
-        Me.btnCerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCerrar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCerrar.ForeColor = System.Drawing.Color.White
-        Me.btnCerrar.HoverState.Parent = Me.btnCerrar
-        Me.btnCerrar.Location = New System.Drawing.Point(12, 36)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.ShadowDecoration.Parent = Me.btnCerrar
-        Me.btnCerrar.Size = New System.Drawing.Size(120, 30)
-        Me.btnCerrar.TabIndex = 13
-        Me.btnCerrar.Text = "SALIR"
+        Me.btn_salir.Animated = True
+        Me.btn_salir.BorderColor = System.Drawing.Color.Transparent
+        Me.btn_salir.BorderRadius = 10
+        Me.btn_salir.CheckedState.Parent = Me.btn_salir
+        Me.btn_salir.CustomImages.Parent = Me.btn_salir
+        Me.btn_salir.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_salir.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_salir.ForeColor = System.Drawing.Color.White
+        Me.btn_salir.HoverState.Parent = Me.btn_salir
+        Me.btn_salir.Location = New System.Drawing.Point(12, 36)
+        Me.btn_salir.Name = "btn_salir"
+        Me.btn_salir.ShadowDecoration.Parent = Me.btn_salir
+        Me.btn_salir.Size = New System.Drawing.Size(120, 30)
+        Me.btn_salir.TabIndex = 13
+        Me.btn_salir.Text = "SALIR"
         '
-        'btnEnviarMensaje
+        'btn_enviar
         '
-        Me.btnEnviarMensaje.Animated = True
-        Me.btnEnviarMensaje.BackColor = System.Drawing.Color.Transparent
-        Me.btnEnviarMensaje.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnEnviarMensaje.BorderThickness = 2
-        Me.btnEnviarMensaje.CheckedState.Parent = Me.btnEnviarMensaje
-        Me.btnEnviarMensaje.CustomImages.Parent = Me.btnEnviarMensaje
-        Me.btnEnviarMensaje.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.btnEnviarMensaje.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEnviarMensaje.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnEnviarMensaje.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnEnviarMensaje.HoverState.Parent = Me.btnEnviarMensaje
-        Me.btnEnviarMensaje.Location = New System.Drawing.Point(464, 658)
-        Me.btnEnviarMensaje.Name = "btnEnviarMensaje"
-        Me.btnEnviarMensaje.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.btnEnviarMensaje.ShadowDecoration.BorderRadius = 20
-        Me.btnEnviarMensaje.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.btnEnviarMensaje.ShadowDecoration.Depth = 15
-        Me.btnEnviarMensaje.ShadowDecoration.Enabled = True
-        Me.btnEnviarMensaje.ShadowDecoration.Parent = Me.btnEnviarMensaje
-        Me.btnEnviarMensaje.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(6)
-        Me.btnEnviarMensaje.Size = New System.Drawing.Size(113, 32)
-        Me.btnEnviarMensaje.TabIndex = 14
-        Me.btnEnviarMensaje.Text = "ENVIAR"
+        Me.btn_enviar.Animated = True
+        Me.btn_enviar.BackColor = System.Drawing.Color.Transparent
+        Me.btn_enviar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_enviar.BorderThickness = 2
+        Me.btn_enviar.CheckedState.Parent = Me.btn_enviar
+        Me.btn_enviar.CustomImages.Parent = Me.btn_enviar
+        Me.btn_enviar.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.btn_enviar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_enviar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_enviar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_enviar.HoverState.Parent = Me.btn_enviar
+        Me.btn_enviar.Location = New System.Drawing.Point(464, 658)
+        Me.btn_enviar.Name = "btn_enviar"
+        Me.btn_enviar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.btn_enviar.ShadowDecoration.BorderRadius = 20
+        Me.btn_enviar.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btn_enviar.ShadowDecoration.Depth = 15
+        Me.btn_enviar.ShadowDecoration.Enabled = True
+        Me.btn_enviar.ShadowDecoration.Parent = Me.btn_enviar
+        Me.btn_enviar.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(6)
+        Me.btn_enviar.Size = New System.Drawing.Size(113, 32)
+        Me.btn_enviar.TabIndex = 14
+        Me.btn_enviar.Text = "ENVIAR"
         '
-        'btnModificar
+        'btn_modificar
         '
-        Me.btnModificar.Animated = True
-        Me.btnModificar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnModificar.BorderRadius = 10
-        Me.btnModificar.BorderThickness = 2
-        Me.btnModificar.CheckedState.Parent = Me.btnModificar
-        Me.btnModificar.CustomImages.Parent = Me.btnModificar
-        Me.btnModificar.FillColor = System.Drawing.Color.Empty
-        Me.btnModificar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificar.ForeColor = System.Drawing.Color.White
-        Me.btnModificar.HoverState.Parent = Me.btnModificar
-        Me.btnModificar.Location = New System.Drawing.Point(189, 713)
-        Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.ShadowDecoration.Parent = Me.btnModificar
-        Me.btnModificar.Size = New System.Drawing.Size(120, 30)
-        Me.btnModificar.TabIndex = 15
-        Me.btnModificar.Text = "MODIFICAR"
+        Me.btn_modificar.Animated = True
+        Me.btn_modificar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_modificar.BorderRadius = 10
+        Me.btn_modificar.BorderThickness = 2
+        Me.btn_modificar.CheckedState.Parent = Me.btn_modificar
+        Me.btn_modificar.CustomImages.Parent = Me.btn_modificar
+        Me.btn_modificar.FillColor = System.Drawing.Color.Empty
+        Me.btn_modificar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_modificar.ForeColor = System.Drawing.Color.White
+        Me.btn_modificar.HoverState.Parent = Me.btn_modificar
+        Me.btn_modificar.Location = New System.Drawing.Point(189, 713)
+        Me.btn_modificar.Name = "btn_modificar"
+        Me.btn_modificar.ShadowDecoration.Parent = Me.btn_modificar
+        Me.btn_modificar.Size = New System.Drawing.Size(120, 30)
+        Me.btn_modificar.TabIndex = 15
+        Me.btn_modificar.Text = "MODIFICAR"
         '
-        'btnVerFichaMedica
+        'btn_fichaMed
         '
-        Me.btnVerFichaMedica.Animated = True
-        Me.btnVerFichaMedica.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnVerFichaMedica.BorderRadius = 10
-        Me.btnVerFichaMedica.BorderThickness = 2
-        Me.btnVerFichaMedica.CheckedState.Parent = Me.btnVerFichaMedica
-        Me.btnVerFichaMedica.CustomImages.Parent = Me.btnVerFichaMedica
-        Me.btnVerFichaMedica.FillColor = System.Drawing.Color.Empty
-        Me.btnVerFichaMedica.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnVerFichaMedica.ForeColor = System.Drawing.Color.White
-        Me.btnVerFichaMedica.HoverState.Parent = Me.btnVerFichaMedica
-        Me.btnVerFichaMedica.Location = New System.Drawing.Point(457, 713)
-        Me.btnVerFichaMedica.Name = "btnVerFichaMedica"
-        Me.btnVerFichaMedica.ShadowDecoration.Parent = Me.btnVerFichaMedica
-        Me.btnVerFichaMedica.Size = New System.Drawing.Size(120, 30)
-        Me.btnVerFichaMedica.TabIndex = 15
-        Me.btnVerFichaMedica.Text = "FICHA"
+        Me.btn_fichaMed.Animated = True
+        Me.btn_fichaMed.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_fichaMed.BorderRadius = 10
+        Me.btn_fichaMed.BorderThickness = 2
+        Me.btn_fichaMed.CheckedState.Parent = Me.btn_fichaMed
+        Me.btn_fichaMed.CustomImages.Parent = Me.btn_fichaMed
+        Me.btn_fichaMed.FillColor = System.Drawing.Color.Empty
+        Me.btn_fichaMed.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_fichaMed.ForeColor = System.Drawing.Color.White
+        Me.btn_fichaMed.HoverState.Parent = Me.btn_fichaMed
+        Me.btn_fichaMed.Location = New System.Drawing.Point(417, 713)
+        Me.btn_fichaMed.Name = "btn_fichaMed"
+        Me.btn_fichaMed.ShadowDecoration.Parent = Me.btn_fichaMed
+        Me.btn_fichaMed.Size = New System.Drawing.Size(160, 30)
+        Me.btn_fichaMed.TabIndex = 15
+        Me.btn_fichaMed.Text = "FICHA MEDICA"
+        '
+        'btnMinimize
+        '
+        Me.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMinimize.Image = Global.Presentation.My.Resources.Resources.Minimize_Icon
+        Me.btnMinimize.Location = New System.Drawing.Point(744, 5)
+        Me.btnMinimize.Name = "btnMinimize"
+        Me.btnMinimize.Padding = New System.Windows.Forms.Padding(3)
+        Me.btnMinimize.Size = New System.Drawing.Size(22, 22)
+        Me.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.btnMinimize.TabIndex = 10
+        Me.btnMinimize.TabStop = False
         '
         'FrmChats
         '
@@ -256,15 +272,15 @@ Partial Class FrmChats
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(778, 760)
-        Me.Controls.Add(Me.btnVerFichaMedica)
-        Me.Controls.Add(Me.btnModificar)
-        Me.Controls.Add(Me.btnEnviarMensaje)
-        Me.Controls.Add(Me.btnCerrar)
+        Me.Controls.Add(Me.btn_fichaMed)
+        Me.Controls.Add(Me.btn_modificar)
+        Me.Controls.Add(Me.btn_enviar)
+        Me.Controls.Add(Me.btn_salir)
         Me.Controls.Add(Me.TopPanel)
         Me.Controls.Add(Me.DataRepeater1)
         Me.Controls.Add(Me.txtChat)
         Me.Controls.Add(Me.txtMensaje)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.MChat_diag)
         Me.Controls.Add(Me.txtDiagnostico)
         Me.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -279,12 +295,13 @@ Partial Class FrmChats
         Me.TopPanel.ResumeLayout(False)
         Me.TopPanel.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents txtDiagnostico As TextBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents MChat_diag As Label
     Friend WithEvents txtMensaje As TextBox
     Friend WithEvents txtChat As TextBox
     Friend WithEvents Timer1 As Timer
@@ -293,9 +310,10 @@ Partial Class FrmChats
     Friend WithEvents Guna2CirclePictureBox1 As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents TopPanel As Panel
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents lbTitulo As Label
-    Friend WithEvents btnCerrar As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnEnviarMensaje As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnModificar As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnVerFichaMedica As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents app_titulo As Label
+    Friend WithEvents btn_salir As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_enviar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_modificar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_fichaMed As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnMinimize As PictureBox
 End Class

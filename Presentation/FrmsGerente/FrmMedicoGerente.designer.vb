@@ -24,19 +24,19 @@ Partial Class FrmMedicoGerente
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMedicoGerente))
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtPriNombre = New System.Windows.Forms.Label()
-        Me.txtSegNombre = New System.Windows.Forms.Label()
-        Me.txtPriApellido = New System.Windows.Forms.Label()
-        Me.txtSegApellido = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Persona_ci = New System.Windows.Forms.Label()
+        Me.Persona_especialidad = New System.Windows.Forms.Label()
+        Me.Persona_pNom = New System.Windows.Forms.Label()
+        Me.Persona_sNom = New System.Windows.Forms.Label()
+        Me.Persona_pApe = New System.Windows.Forms.Label()
+        Me.Persona_sApe = New System.Windows.Forms.Label()
+        Me.Persona_lugarTrabajo = New System.Windows.Forms.Label()
+        Me.ingreMed = New System.Windows.Forms.Label()
+        Me.Persona_tel = New System.Windows.Forms.Label()
+        Me.Persona_domicilio = New System.Windows.Forms.Label()
+        Me.Persona_edad = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Persona_numMed = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.chkDom = New System.Windows.Forms.CheckBox()
         Me.chkJuev = New System.Windows.Forms.CheckBox()
@@ -45,23 +45,23 @@ Partial Class FrmMedicoGerente
         Me.chkMar = New System.Windows.Forms.CheckBox()
         Me.chkVier = New System.Windows.Forms.CheckBox()
         Me.chkLun = New System.Windows.Forms.CheckBox()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Jue = New System.Windows.Forms.Label()
         Me.txtHoraEntradaDomingo = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Sab = New System.Windows.Forms.Label()
         Me.txtHoraEntradaSabado = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Dom = New System.Windows.Forms.Label()
         Me.txtHoraEntradaViernes = New System.Windows.Forms.TextBox()
         Me.txtHoraEntradaMiercoles = New System.Windows.Forms.TextBox()
         Me.txtHoraEntradaJueves = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Vie = New System.Windows.Forms.Label()
         Me.txtHoraEntradaMartes = New System.Windows.Forms.TextBox()
         Me.txtHoraEntradaLunes = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.btnConsul = New Guna.UI2.WinForms.Guna2Button()
+        Me.Mie = New System.Windows.Forms.Label()
+        Me.Mar = New System.Windows.Forms.Label()
+        Me.Lun = New System.Windows.Forms.Label()
+        Me.horaEjemplo = New System.Windows.Forms.Label()
+        Me.Mhora = New System.Windows.Forms.Label()
+        Me.btn_ingresar = New Guna.UI2.WinForms.Guna2Button()
         Me.txtCedula = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtSnom = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtLugarTrabajo = New Guna.UI2.WinForms.Guna2TextBox()
@@ -74,147 +74,147 @@ Partial Class FrmMedicoGerente
         Me.txtTelefono = New Guna.UI2.WinForms.Guna2TextBox()
         Me.cbEsp = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.cbSexo = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Persona_sexo = New System.Windows.Forms.Label()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'Persona_ci
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(31, 44)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(68, 21)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Cedula"
+        Me.Persona_ci.AutoSize = True
+        Me.Persona_ci.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_ci.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_ci.Location = New System.Drawing.Point(31, 44)
+        Me.Persona_ci.Name = "Persona_ci"
+        Me.Persona_ci.Size = New System.Drawing.Size(58, 21)
+        Me.Persona_ci.TabIndex = 0
+        Me.Persona_ci.Text = "Cedula"
         '
-        'Label2
+        'Persona_especialidad
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(31, 106)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(109, 21)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Especialidad"
+        Me.Persona_especialidad.AutoSize = True
+        Me.Persona_especialidad.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_especialidad.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_especialidad.Location = New System.Drawing.Point(31, 111)
+        Me.Persona_especialidad.Name = "Persona_especialidad"
+        Me.Persona_especialidad.Size = New System.Drawing.Size(109, 21)
+        Me.Persona_especialidad.TabIndex = 0
+        Me.Persona_especialidad.Text = "Especialidad"
         '
-        'txtPriNombre
+        'Persona_pNom
         '
-        Me.txtPriNombre.AutoSize = True
-        Me.txtPriNombre.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPriNombre.ForeColor = System.Drawing.Color.Silver
-        Me.txtPriNombre.Location = New System.Drawing.Point(268, 44)
-        Me.txtPriNombre.Name = "txtPriNombre"
-        Me.txtPriNombre.Size = New System.Drawing.Size(124, 21)
-        Me.txtPriNombre.TabIndex = 0
-        Me.txtPriNombre.Text = "Primer Nombre"
+        Me.Persona_pNom.AutoSize = True
+        Me.Persona_pNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_pNom.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_pNom.Location = New System.Drawing.Point(268, 44)
+        Me.Persona_pNom.Name = "Persona_pNom"
+        Me.Persona_pNom.Size = New System.Drawing.Size(119, 21)
+        Me.Persona_pNom.TabIndex = 0
+        Me.Persona_pNom.Text = "Primer Nombre"
         '
-        'txtSegNombre
+        'Persona_sNom
         '
-        Me.txtSegNombre.AutoSize = True
-        Me.txtSegNombre.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSegNombre.ForeColor = System.Drawing.Color.Silver
-        Me.txtSegNombre.Location = New System.Drawing.Point(268, 106)
-        Me.txtSegNombre.Name = "txtSegNombre"
-        Me.txtSegNombre.Size = New System.Drawing.Size(147, 21)
-        Me.txtSegNombre.TabIndex = 0
-        Me.txtSegNombre.Text = "Segundo Nombre"
+        Me.Persona_sNom.AutoSize = True
+        Me.Persona_sNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_sNom.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_sNom.Location = New System.Drawing.Point(268, 111)
+        Me.Persona_sNom.Name = "Persona_sNom"
+        Me.Persona_sNom.Size = New System.Drawing.Size(134, 21)
+        Me.Persona_sNom.TabIndex = 0
+        Me.Persona_sNom.Text = "Segundo Nombre"
         '
-        'txtPriApellido
+        'Persona_pApe
         '
-        Me.txtPriApellido.AutoSize = True
-        Me.txtPriApellido.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPriApellido.ForeColor = System.Drawing.Color.Silver
-        Me.txtPriApellido.Location = New System.Drawing.Point(531, 45)
-        Me.txtPriApellido.Name = "txtPriApellido"
-        Me.txtPriApellido.Size = New System.Drawing.Size(125, 21)
-        Me.txtPriApellido.TabIndex = 0
-        Me.txtPriApellido.Text = "Primer Apellido"
+        Me.Persona_pApe.AutoSize = True
+        Me.Persona_pApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_pApe.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_pApe.Location = New System.Drawing.Point(531, 45)
+        Me.Persona_pApe.Name = "Persona_pApe"
+        Me.Persona_pApe.Size = New System.Drawing.Size(118, 21)
+        Me.Persona_pApe.TabIndex = 0
+        Me.Persona_pApe.Text = "Primer Apellido"
         '
-        'txtSegApellido
+        'Persona_sApe
         '
-        Me.txtSegApellido.AutoSize = True
-        Me.txtSegApellido.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSegApellido.ForeColor = System.Drawing.Color.Silver
-        Me.txtSegApellido.Location = New System.Drawing.Point(531, 106)
-        Me.txtSegApellido.Name = "txtSegApellido"
-        Me.txtSegApellido.Size = New System.Drawing.Size(148, 21)
-        Me.txtSegApellido.TabIndex = 0
-        Me.txtSegApellido.Text = "Segundo Apellido"
+        Me.Persona_sApe.AutoSize = True
+        Me.Persona_sApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_sApe.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_sApe.Location = New System.Drawing.Point(531, 111)
+        Me.Persona_sApe.Name = "Persona_sApe"
+        Me.Persona_sApe.Size = New System.Drawing.Size(133, 21)
+        Me.Persona_sApe.TabIndex = 0
+        Me.Persona_sApe.Text = "Segundo Apellido"
         '
-        'Label7
+        'Persona_lugarTrabajo
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Silver
-        Me.Label7.Location = New System.Drawing.Point(31, 315)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(142, 21)
-        Me.Label7.TabIndex = 0
-        Me.Label7.Text = "Lugar de Trabajo"
+        Me.Persona_lugarTrabajo.AutoSize = True
+        Me.Persona_lugarTrabajo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_lugarTrabajo.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_lugarTrabajo.Location = New System.Drawing.Point(31, 322)
+        Me.Persona_lugarTrabajo.Name = "Persona_lugarTrabajo"
+        Me.Persona_lugarTrabajo.Size = New System.Drawing.Size(126, 21)
+        Me.Persona_lugarTrabajo.TabIndex = 0
+        Me.Persona_lugarTrabajo.Text = "Lugar de Trabajo"
         '
-        'Label8
+        'ingreMed
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Silver
-        Me.Label8.Location = New System.Drawing.Point(267, 6)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(241, 36)
-        Me.Label8.TabIndex = 3
-        Me.Label8.Text = "Ingeras Medico"
+        Me.ingreMed.AutoSize = True
+        Me.ingreMed.Font = New System.Drawing.Font("Century Gothic", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ingreMed.ForeColor = System.Drawing.Color.Silver
+        Me.ingreMed.Location = New System.Drawing.Point(243, 6)
+        Me.ingreMed.Name = "ingreMed"
+        Me.ingreMed.Size = New System.Drawing.Size(288, 36)
+        Me.ingreMed.TabIndex = 3
+        Me.ingreMed.Text = "INGRESAR MEDICO"
         '
-        'Label3
+        'Persona_tel
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Silver
-        Me.Label3.Location = New System.Drawing.Point(530, 172)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(76, 21)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Telefono"
+        Me.Persona_tel.AutoSize = True
+        Me.Persona_tel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_tel.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_tel.Location = New System.Drawing.Point(530, 179)
+        Me.Persona_tel.Name = "Persona_tel"
+        Me.Persona_tel.Size = New System.Drawing.Size(68, 21)
+        Me.Persona_tel.TabIndex = 0
+        Me.Persona_tel.Text = "Telefono"
         '
-        'Label4
+        'Persona_domicilio
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Silver
-        Me.Label4.Location = New System.Drawing.Point(31, 249)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(79, 21)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Domicilio"
+        Me.Persona_domicilio.AutoSize = True
+        Me.Persona_domicilio.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_domicilio.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_domicilio.Location = New System.Drawing.Point(31, 256)
+        Me.Persona_domicilio.Name = "Persona_domicilio"
+        Me.Persona_domicilio.Size = New System.Drawing.Size(76, 21)
+        Me.Persona_domicilio.TabIndex = 0
+        Me.Persona_domicilio.Text = "Domicilio"
         '
-        'Label5
+        'Persona_edad
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Silver
-        Me.Label5.Location = New System.Drawing.Point(272, 176)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(52, 21)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Edad"
+        Me.Persona_edad.AutoSize = True
+        Me.Persona_edad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_edad.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_edad.Location = New System.Drawing.Point(272, 183)
+        Me.Persona_edad.Name = "Persona_edad"
+        Me.Persona_edad.Size = New System.Drawing.Size(44, 21)
+        Me.Persona_edad.TabIndex = 0
+        Me.Persona_edad.Text = "Edad"
         '
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
         Me.ErrorProvider1.Icon = CType(resources.GetObject("ErrorProvider1.Icon"), System.Drawing.Icon)
         '
-        'Label6
+        'Persona_numMed
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Silver
-        Me.Label6.Location = New System.Drawing.Point(531, 246)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(135, 21)
-        Me.Label6.TabIndex = 0
-        Me.Label6.Text = "Numero Medico"
+        Me.Persona_numMed.AutoSize = True
+        Me.Persona_numMed.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_numMed.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_numMed.Location = New System.Drawing.Point(531, 253)
+        Me.Persona_numMed.Name = "Persona_numMed"
+        Me.Persona_numMed.Size = New System.Drawing.Size(123, 21)
+        Me.Persona_numMed.TabIndex = 0
+        Me.Persona_numMed.Text = "Numero Medico"
         '
         'Panel1
         '
@@ -225,23 +225,23 @@ Partial Class FrmMedicoGerente
         Me.Panel1.Controls.Add(Me.chkMar)
         Me.Panel1.Controls.Add(Me.chkVier)
         Me.Panel1.Controls.Add(Me.chkLun)
-        Me.Panel1.Controls.Add(Me.Label14)
+        Me.Panel1.Controls.Add(Me.Jue)
         Me.Panel1.Controls.Add(Me.txtHoraEntradaDomingo)
-        Me.Panel1.Controls.Add(Me.Label16)
+        Me.Panel1.Controls.Add(Me.Sab)
         Me.Panel1.Controls.Add(Me.txtHoraEntradaSabado)
-        Me.Panel1.Controls.Add(Me.Label17)
+        Me.Panel1.Controls.Add(Me.Dom)
         Me.Panel1.Controls.Add(Me.txtHoraEntradaViernes)
         Me.Panel1.Controls.Add(Me.txtHoraEntradaMiercoles)
         Me.Panel1.Controls.Add(Me.txtHoraEntradaJueves)
-        Me.Panel1.Controls.Add(Me.Label15)
+        Me.Panel1.Controls.Add(Me.Vie)
         Me.Panel1.Controls.Add(Me.txtHoraEntradaMartes)
         Me.Panel1.Controls.Add(Me.txtHoraEntradaLunes)
-        Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Controls.Add(Me.Label12)
-        Me.Panel1.Controls.Add(Me.Label11)
-        Me.Panel1.Controls.Add(Me.Label18)
-        Me.Panel1.Controls.Add(Me.Label24)
-        Me.Panel1.Location = New System.Drawing.Point(12, 370)
+        Me.Panel1.Controls.Add(Me.Mie)
+        Me.Panel1.Controls.Add(Me.Mar)
+        Me.Panel1.Controls.Add(Me.Lun)
+        Me.Panel1.Controls.Add(Me.horaEjemplo)
+        Me.Panel1.Controls.Add(Me.Mhora)
+        Me.Panel1.Location = New System.Drawing.Point(12, 392)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(756, 165)
         Me.Panel1.TabIndex = 48
@@ -264,7 +264,7 @@ Partial Class FrmMedicoGerente
         Me.chkJuev.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.chkJuev.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkJuev.ForeColor = System.Drawing.Color.Silver
-        Me.chkJuev.Location = New System.Drawing.Point(386, 55)
+        Me.chkJuev.Location = New System.Drawing.Point(389, 55)
         Me.chkJuev.Name = "chkJuev"
         Me.chkJuev.Size = New System.Drawing.Size(15, 14)
         Me.chkJuev.TabIndex = 4
@@ -288,7 +288,7 @@ Partial Class FrmMedicoGerente
         Me.chkMier.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.chkMier.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkMier.ForeColor = System.Drawing.Color.Silver
-        Me.chkMier.Location = New System.Drawing.Point(284, 55)
+        Me.chkMier.Location = New System.Drawing.Point(289, 55)
         Me.chkMier.Name = "chkMier"
         Me.chkMier.Size = New System.Drawing.Size(15, 14)
         Me.chkMier.TabIndex = 4
@@ -300,7 +300,7 @@ Partial Class FrmMedicoGerente
         Me.chkMar.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.chkMar.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkMar.ForeColor = System.Drawing.Color.Silver
-        Me.chkMar.Location = New System.Drawing.Point(182, 55)
+        Me.chkMar.Location = New System.Drawing.Point(189, 55)
         Me.chkMar.Name = "chkMar"
         Me.chkMar.Size = New System.Drawing.Size(15, 14)
         Me.chkMar.TabIndex = 4
@@ -324,214 +324,214 @@ Partial Class FrmMedicoGerente
         Me.chkLun.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.chkLun.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkLun.ForeColor = System.Drawing.Color.Silver
-        Me.chkLun.Location = New System.Drawing.Point(80, 55)
+        Me.chkLun.Location = New System.Drawing.Point(90, 55)
         Me.chkLun.Name = "chkLun"
         Me.chkLun.Size = New System.Drawing.Size(15, 14)
         Me.chkLun.TabIndex = 4
         Me.chkLun.UseVisualStyleBackColor = False
         '
-        'Label14
+        'Jue
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.Silver
-        Me.Label14.Location = New System.Drawing.Point(359, 31)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(64, 21)
-        Me.Label14.TabIndex = 0
-        Me.Label14.Text = "Jueves"
+        Me.Jue.AutoSize = True
+        Me.Jue.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Jue.ForeColor = System.Drawing.Color.Silver
+        Me.Jue.Location = New System.Drawing.Point(366, 31)
+        Me.Jue.Name = "Jue"
+        Me.Jue.Size = New System.Drawing.Size(56, 21)
+        Me.Jue.TabIndex = 0
+        Me.Jue.Text = "Jueves"
         '
         'txtHoraEntradaDomingo
         '
         Me.txtHoraEntradaDomingo.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtHoraEntradaDomingo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHoraEntradaDomingo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaDomingo.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaDomingo.Location = New System.Drawing.Point(661, 70)
         Me.txtHoraEntradaDomingo.MaxLength = 13
         Me.txtHoraEntradaDomingo.Name = "txtHoraEntradaDomingo"
-        Me.txtHoraEntradaDomingo.Size = New System.Drawing.Size(78, 27)
+        Me.txtHoraEntradaDomingo.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaDomingo.TabIndex = 1
         '
-        'Label16
+        'Sab
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Silver
-        Me.Label16.Location = New System.Drawing.Point(554, 32)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(72, 21)
-        Me.Label16.TabIndex = 0
-        Me.Label16.Text = "Sabado"
+        Me.Sab.AutoSize = True
+        Me.Sab.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Sab.ForeColor = System.Drawing.Color.Silver
+        Me.Sab.Location = New System.Drawing.Point(565, 31)
+        Me.Sab.Name = "Sab"
+        Me.Sab.Size = New System.Drawing.Size(62, 21)
+        Me.Sab.TabIndex = 0
+        Me.Sab.Text = "Sabado"
         '
         'txtHoraEntradaSabado
         '
         Me.txtHoraEntradaSabado.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtHoraEntradaSabado.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHoraEntradaSabado.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaSabado.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaSabado.Location = New System.Drawing.Point(560, 70)
         Me.txtHoraEntradaSabado.MaxLength = 13
         Me.txtHoraEntradaSabado.Name = "txtHoraEntradaSabado"
-        Me.txtHoraEntradaSabado.Size = New System.Drawing.Size(78, 27)
+        Me.txtHoraEntradaSabado.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaSabado.TabIndex = 1
         '
-        'Label17
+        'Dom
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.Silver
-        Me.Label17.Location = New System.Drawing.Point(659, 32)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(81, 21)
-        Me.Label17.TabIndex = 0
-        Me.Label17.Text = "Domingo"
+        Me.Dom.AutoSize = True
+        Me.Dom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Dom.ForeColor = System.Drawing.Color.Silver
+        Me.Dom.Location = New System.Drawing.Point(661, 31)
+        Me.Dom.Name = "Dom"
+        Me.Dom.Size = New System.Drawing.Size(75, 21)
+        Me.Dom.TabIndex = 0
+        Me.Dom.Text = "Domingo"
         '
         'txtHoraEntradaViernes
         '
         Me.txtHoraEntradaViernes.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtHoraEntradaViernes.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHoraEntradaViernes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaViernes.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaViernes.Location = New System.Drawing.Point(459, 70)
         Me.txtHoraEntradaViernes.MaxLength = 13
         Me.txtHoraEntradaViernes.Name = "txtHoraEntradaViernes"
-        Me.txtHoraEntradaViernes.Size = New System.Drawing.Size(78, 27)
+        Me.txtHoraEntradaViernes.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaViernes.TabIndex = 1
         '
         'txtHoraEntradaMiercoles
         '
         Me.txtHoraEntradaMiercoles.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtHoraEntradaMiercoles.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHoraEntradaMiercoles.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaMiercoles.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaMiercoles.Location = New System.Drawing.Point(257, 70)
         Me.txtHoraEntradaMiercoles.MaxLength = 13
         Me.txtHoraEntradaMiercoles.Name = "txtHoraEntradaMiercoles"
-        Me.txtHoraEntradaMiercoles.Size = New System.Drawing.Size(78, 27)
+        Me.txtHoraEntradaMiercoles.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaMiercoles.TabIndex = 1
         '
         'txtHoraEntradaJueves
         '
         Me.txtHoraEntradaJueves.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtHoraEntradaJueves.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHoraEntradaJueves.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaJueves.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaJueves.Location = New System.Drawing.Point(358, 70)
         Me.txtHoraEntradaJueves.MaxLength = 13
         Me.txtHoraEntradaJueves.Name = "txtHoraEntradaJueves"
-        Me.txtHoraEntradaJueves.Size = New System.Drawing.Size(78, 27)
+        Me.txtHoraEntradaJueves.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaJueves.TabIndex = 1
         '
-        'Label15
+        'Vie
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.Silver
-        Me.Label15.Location = New System.Drawing.Point(456, 31)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(65, 21)
-        Me.Label15.TabIndex = 0
-        Me.Label15.Text = "Viernes"
+        Me.Vie.AutoSize = True
+        Me.Vie.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Vie.ForeColor = System.Drawing.Color.Silver
+        Me.Vie.Location = New System.Drawing.Point(466, 31)
+        Me.Vie.Name = "Vie"
+        Me.Vie.Size = New System.Drawing.Size(62, 21)
+        Me.Vie.TabIndex = 0
+        Me.Vie.Text = "Viernes"
         '
         'txtHoraEntradaMartes
         '
         Me.txtHoraEntradaMartes.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtHoraEntradaMartes.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHoraEntradaMartes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaMartes.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaMartes.Location = New System.Drawing.Point(156, 70)
         Me.txtHoraEntradaMartes.MaxLength = 13
         Me.txtHoraEntradaMartes.Name = "txtHoraEntradaMartes"
-        Me.txtHoraEntradaMartes.Size = New System.Drawing.Size(78, 27)
+        Me.txtHoraEntradaMartes.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaMartes.TabIndex = 1
         '
         'txtHoraEntradaLunes
         '
         Me.txtHoraEntradaLunes.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtHoraEntradaLunes.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHoraEntradaLunes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaLunes.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaLunes.Location = New System.Drawing.Point(55, 70)
         Me.txtHoraEntradaLunes.MaxLength = 13
         Me.txtHoraEntradaLunes.Name = "txtHoraEntradaLunes"
-        Me.txtHoraEntradaLunes.Size = New System.Drawing.Size(78, 27)
+        Me.txtHoraEntradaLunes.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaLunes.TabIndex = 1
         '
-        'Label13
+        'Mie
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Silver
-        Me.Label13.Location = New System.Drawing.Point(244, 31)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(82, 21)
-        Me.Label13.TabIndex = 0
-        Me.Label13.Text = "Miercoles"
+        Me.Mie.AutoSize = True
+        Me.Mie.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Mie.ForeColor = System.Drawing.Color.Silver
+        Me.Mie.Location = New System.Drawing.Point(256, 31)
+        Me.Mie.Name = "Mie"
+        Me.Mie.Size = New System.Drawing.Size(77, 21)
+        Me.Mie.TabIndex = 0
+        Me.Mie.Text = "Miercoles"
         '
-        'Label12
+        'Mar
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.Silver
-        Me.Label12.Location = New System.Drawing.Point(147, 31)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(64, 21)
-        Me.Label12.TabIndex = 0
-        Me.Label12.Text = "Martes"
+        Me.Mar.AutoSize = True
+        Me.Mar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Mar.ForeColor = System.Drawing.Color.Silver
+        Me.Mar.Location = New System.Drawing.Point(171, 32)
+        Me.Mar.Name = "Mar"
+        Me.Mar.Size = New System.Drawing.Size(58, 21)
+        Me.Mar.TabIndex = 0
+        Me.Mar.Text = "Martes"
         '
-        'Label11
+        'Lun
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.Silver
-        Me.Label11.Location = New System.Drawing.Point(61, 31)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(53, 21)
-        Me.Label11.TabIndex = 0
-        Me.Label11.Text = "Lunes"
+        Me.Lun.AutoSize = True
+        Me.Lun.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lun.ForeColor = System.Drawing.Color.Silver
+        Me.Lun.Location = New System.Drawing.Point(71, 31)
+        Me.Lun.Name = "Lun"
+        Me.Lun.Size = New System.Drawing.Size(51, 21)
+        Me.Lun.TabIndex = 0
+        Me.Lun.Text = "Lunes"
         '
-        'Label18
+        'horaEjemplo
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.Silver
-        Me.Label18.Location = New System.Drawing.Point(3, 120)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(178, 21)
-        Me.Label18.TabIndex = 0
-        Me.Label18.Text = "Ejemplo: 09:00 a 19:30"
+        Me.horaEjemplo.AutoSize = True
+        Me.horaEjemplo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.horaEjemplo.ForeColor = System.Drawing.Color.Silver
+        Me.horaEjemplo.Location = New System.Drawing.Point(7, 118)
+        Me.horaEjemplo.Name = "horaEjemplo"
+        Me.horaEjemplo.Size = New System.Drawing.Size(135, 17)
+        Me.horaEjemplo.TabIndex = 0
+        Me.horaEjemplo.Text = "Ejemplo: 09:00 a 19:30"
         '
-        'Label24
+        'Mhora
         '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.ForeColor = System.Drawing.Color.Silver
-        Me.Label24.Location = New System.Drawing.Point(6, 76)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(47, 21)
-        Me.Label24.TabIndex = 0
-        Me.Label24.Text = "Hora"
+        Me.Mhora.AutoSize = True
+        Me.Mhora.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Mhora.ForeColor = System.Drawing.Color.Silver
+        Me.Mhora.Location = New System.Drawing.Point(6, 76)
+        Me.Mhora.Name = "Mhora"
+        Me.Mhora.Size = New System.Drawing.Size(44, 21)
+        Me.Mhora.TabIndex = 0
+        Me.Mhora.Text = "Hora"
         '
-        'btnConsul
+        'btn_ingresar
         '
-        Me.btnConsul.Animated = True
-        Me.btnConsul.BackColor = System.Drawing.Color.Transparent
-        Me.btnConsul.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnConsul.BorderRadius = 15
-        Me.btnConsul.BorderThickness = 2
-        Me.btnConsul.CheckedState.Parent = Me.btnConsul
-        Me.btnConsul.CustomImages.Parent = Me.btnConsul
-        Me.btnConsul.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.btnConsul.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConsul.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnConsul.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnConsul.HoverState.Parent = Me.btnConsul
-        Me.btnConsul.Location = New System.Drawing.Point(551, 553)
-        Me.btnConsul.Name = "btnConsul"
-        Me.btnConsul.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.btnConsul.ShadowDecoration.BorderRadius = 20
-        Me.btnConsul.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.btnConsul.ShadowDecoration.Depth = 15
-        Me.btnConsul.ShadowDecoration.Enabled = True
-        Me.btnConsul.ShadowDecoration.Parent = Me.btnConsul
-        Me.btnConsul.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
-        Me.btnConsul.Size = New System.Drawing.Size(200, 40)
-        Me.btnConsul.TabIndex = 55
-        Me.btnConsul.Text = "INGRESAR"
+        Me.btn_ingresar.Animated = True
+        Me.btn_ingresar.BackColor = System.Drawing.Color.Transparent
+        Me.btn_ingresar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_ingresar.BorderRadius = 15
+        Me.btn_ingresar.BorderThickness = 2
+        Me.btn_ingresar.CheckedState.Parent = Me.btn_ingresar
+        Me.btn_ingresar.CustomImages.Parent = Me.btn_ingresar
+        Me.btn_ingresar.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.btn_ingresar.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_ingresar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_ingresar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_ingresar.HoverState.Parent = Me.btn_ingresar
+        Me.btn_ingresar.Location = New System.Drawing.Point(563, 563)
+        Me.btn_ingresar.Name = "btn_ingresar"
+        Me.btn_ingresar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.btn_ingresar.ShadowDecoration.BorderRadius = 20
+        Me.btn_ingresar.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btn_ingresar.ShadowDecoration.Depth = 15
+        Me.btn_ingresar.ShadowDecoration.Enabled = True
+        Me.btn_ingresar.ShadowDecoration.Parent = Me.btn_ingresar
+        Me.btn_ingresar.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
+        Me.btn_ingresar.Size = New System.Drawing.Size(200, 40)
+        Me.btn_ingresar.TabIndex = 55
+        Me.btn_ingresar.Text = "INGRESAR"
         '
         'txtCedula
         '
@@ -580,7 +580,7 @@ Partial Class FrmMedicoGerente
         Me.txtSnom.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtSnom.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtSnom.HoverState.Parent = Me.txtSnom
-        Me.txtSnom.Location = New System.Drawing.Point(268, 130)
+        Me.txtSnom.Location = New System.Drawing.Point(268, 137)
         Me.txtSnom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSnom.Name = "txtSnom"
         Me.txtSnom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -610,7 +610,7 @@ Partial Class FrmMedicoGerente
         Me.txtLugarTrabajo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtLugarTrabajo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtLugarTrabajo.HoverState.Parent = Me.txtLugarTrabajo
-        Me.txtLugarTrabajo.Location = New System.Drawing.Point(31, 337)
+        Me.txtLugarTrabajo.Location = New System.Drawing.Point(31, 344)
         Me.txtLugarTrabajo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLugarTrabajo.Name = "txtLugarTrabajo"
         Me.txtLugarTrabajo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -640,7 +640,7 @@ Partial Class FrmMedicoGerente
         Me.txtNumMed.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtNumMed.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtNumMed.HoverState.Parent = Me.txtNumMed
-        Me.txtNumMed.Location = New System.Drawing.Point(531, 271)
+        Me.txtNumMed.Location = New System.Drawing.Point(531, 278)
         Me.txtNumMed.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNumMed.Name = "txtNumMed"
         Me.txtNumMed.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -700,7 +700,7 @@ Partial Class FrmMedicoGerente
         Me.txtSape.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtSape.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtSape.HoverState.Parent = Me.txtSape
-        Me.txtSape.Location = New System.Drawing.Point(535, 130)
+        Me.txtSape.Location = New System.Drawing.Point(535, 137)
         Me.txtSape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSape.Name = "txtSape"
         Me.txtSape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -730,7 +730,7 @@ Partial Class FrmMedicoGerente
         Me.txtEdad.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtEdad.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtEdad.HoverState.Parent = Me.txtEdad
-        Me.txtEdad.Location = New System.Drawing.Point(272, 202)
+        Me.txtEdad.Location = New System.Drawing.Point(272, 209)
         Me.txtEdad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtEdad.Name = "txtEdad"
         Me.txtEdad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -760,7 +760,7 @@ Partial Class FrmMedicoGerente
         Me.txtDomicilio.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtDomicilio.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtDomicilio.HoverState.Parent = Me.txtDomicilio
-        Me.txtDomicilio.Location = New System.Drawing.Point(31, 275)
+        Me.txtDomicilio.Location = New System.Drawing.Point(31, 282)
         Me.txtDomicilio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -820,7 +820,7 @@ Partial Class FrmMedicoGerente
         Me.txtTelefono.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtTelefono.HoverState.Parent = Me.txtTelefono
-        Me.txtTelefono.Location = New System.Drawing.Point(531, 202)
+        Me.txtTelefono.Location = New System.Drawing.Point(531, 209)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -850,7 +850,7 @@ Partial Class FrmMedicoGerente
         Me.cbEsp.ItemHeight = 30
         Me.cbEsp.Items.AddRange(New Object() {"Medicos", "Enfermedades", "Sintomas"})
         Me.cbEsp.ItemsAppearance.Parent = Me.cbEsp
-        Me.cbEsp.Location = New System.Drawing.Point(31, 124)
+        Me.cbEsp.Location = New System.Drawing.Point(31, 131)
         Me.cbEsp.Name = "cbEsp"
         Me.cbEsp.ShadowDecoration.Parent = Me.cbEsp
         Me.cbEsp.Size = New System.Drawing.Size(220, 36)
@@ -875,23 +875,23 @@ Partial Class FrmMedicoGerente
         Me.cbSexo.ItemHeight = 30
         Me.cbSexo.Items.AddRange(New Object() {"Hombre", "Mujer", "Otro"})
         Me.cbSexo.ItemsAppearance.Parent = Me.cbSexo
-        Me.cbSexo.Location = New System.Drawing.Point(31, 196)
+        Me.cbSexo.Location = New System.Drawing.Point(31, 203)
         Me.cbSexo.Name = "cbSexo"
         Me.cbSexo.ShadowDecoration.Parent = Me.cbSexo
         Me.cbSexo.Size = New System.Drawing.Size(220, 36)
         Me.cbSexo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSexo.TabIndex = 57
         '
-        'Label9
+        'Persona_sexo
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Silver
-        Me.Label9.Location = New System.Drawing.Point(31, 172)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(46, 21)
-        Me.Label9.TabIndex = 0
-        Me.Label9.Text = "Sexo"
+        Me.Persona_sexo.AutoSize = True
+        Me.Persona_sexo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_sexo.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_sexo.Location = New System.Drawing.Point(31, 179)
+        Me.Persona_sexo.Name = "Persona_sexo"
+        Me.Persona_sexo.Size = New System.Drawing.Size(43, 21)
+        Me.Persona_sexo.TabIndex = 0
+        Me.Persona_sexo.Text = "Sexo"
         '
         'FrmMedicoGerente
         '
@@ -911,21 +911,21 @@ Partial Class FrmMedicoGerente
         Me.Controls.Add(Me.txtPNom)
         Me.Controls.Add(Me.txtSnom)
         Me.Controls.Add(Me.txtCedula)
-        Me.Controls.Add(Me.btnConsul)
+        Me.Controls.Add(Me.btn_ingresar)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtSegApellido)
-        Me.Controls.Add(Me.txtSegNombre)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.txtPriApellido)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtPriNombre)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.ingreMed)
+        Me.Controls.Add(Me.Persona_domicilio)
+        Me.Controls.Add(Me.Persona_numMed)
+        Me.Controls.Add(Me.Persona_edad)
+        Me.Controls.Add(Me.Persona_tel)
+        Me.Controls.Add(Me.Persona_sApe)
+        Me.Controls.Add(Me.Persona_sNom)
+        Me.Controls.Add(Me.Persona_sexo)
+        Me.Controls.Add(Me.Persona_lugarTrabajo)
+        Me.Controls.Add(Me.Persona_pApe)
+        Me.Controls.Add(Me.Persona_especialidad)
+        Me.Controls.Add(Me.Persona_pNom)
+        Me.Controls.Add(Me.Persona_ci)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmMedicoGerente"
         Me.Text = "FrmMedico"
@@ -937,19 +937,19 @@ Partial Class FrmMedicoGerente
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtPriNombre As Label
-    Friend WithEvents txtSegNombre As Label
-    Friend WithEvents txtPriApellido As Label
-    Friend WithEvents txtSegApellido As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents Persona_ci As Label
+    Friend WithEvents Persona_especialidad As Label
+    Friend WithEvents Persona_pNom As Label
+    Friend WithEvents Persona_sNom As Label
+    Friend WithEvents Persona_pApe As Label
+    Friend WithEvents Persona_sApe As Label
+    Friend WithEvents Persona_lugarTrabajo As Label
+    Friend WithEvents ingreMed As Label
+    Friend WithEvents Persona_tel As Label
+    Friend WithEvents Persona_domicilio As Label
+    Friend WithEvents Persona_edad As Label
     Friend WithEvents ErrorProvider1 As ErrorProvider
-    Friend WithEvents Label6 As Label
+    Friend WithEvents Persona_numMed As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents chkDom As CheckBox
     Friend WithEvents chkJuev As CheckBox
@@ -958,23 +958,23 @@ Partial Class FrmMedicoGerente
     Friend WithEvents chkMar As CheckBox
     Friend WithEvents chkVier As CheckBox
     Friend WithEvents chkLun As CheckBox
-    Friend WithEvents Label14 As Label
+    Friend WithEvents Jue As Label
     Friend WithEvents txtHoraEntradaDomingo As TextBox
-    Friend WithEvents Label16 As Label
+    Friend WithEvents Sab As Label
     Friend WithEvents txtHoraEntradaSabado As TextBox
-    Friend WithEvents Label17 As Label
+    Friend WithEvents Dom As Label
     Friend WithEvents txtHoraEntradaViernes As TextBox
     Friend WithEvents txtHoraEntradaMiercoles As TextBox
     Friend WithEvents txtHoraEntradaJueves As TextBox
-    Friend WithEvents Label15 As Label
+    Friend WithEvents Vie As Label
     Friend WithEvents txtHoraEntradaMartes As TextBox
     Friend WithEvents txtHoraEntradaLunes As TextBox
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label24 As Label
-    Friend WithEvents btnConsul As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Mie As Label
+    Friend WithEvents Mar As Label
+    Friend WithEvents Lun As Label
+    Friend WithEvents horaEjemplo As Label
+    Friend WithEvents Mhora As Label
+    Friend WithEvents btn_ingresar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtDomicilio As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtEdad As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtTelefono As Guna.UI2.WinForms.Guna2TextBox
@@ -987,5 +987,5 @@ Partial Class FrmMedicoGerente
     Friend WithEvents txtCedula As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents cbEsp As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents cbSexo As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Label9 As Label
+    Friend WithEvents Persona_sexo As Label
 End Class

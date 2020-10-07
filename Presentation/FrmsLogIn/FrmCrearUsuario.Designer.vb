@@ -25,39 +25,30 @@ Partial Class FrmCrearUsuario
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCrearUsuario))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lbci = New System.Windows.Forms.Label()
-        Me.txtCedu = New System.Windows.Forms.TextBox()
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.LineShape10 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape9 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape8 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape7 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape6 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.lbDir = New System.Windows.Forms.Label()
-        Me.txtDir = New System.Windows.Forms.TextBox()
-        Me.lbedad = New System.Windows.Forms.Label()
-        Me.txtEdad = New System.Windows.Forms.TextBox()
-        Me.lbTel = New System.Windows.Forms.Label()
-        Me.txtTel = New System.Windows.Forms.TextBox()
-        Me.lbPnom = New System.Windows.Forms.Label()
-        Me.txtPriNom = New System.Windows.Forms.TextBox()
-        Me.lbSnom = New System.Windows.Forms.Label()
-        Me.txtSegNom = New System.Windows.Forms.TextBox()
-        Me.lbSape = New System.Windows.Forms.Label()
-        Me.txtSegApe = New System.Windows.Forms.TextBox()
-        Me.lbPape = New System.Windows.Forms.Label()
-        Me.txtApe = New System.Windows.Forms.TextBox()
-        Me.lbCorreo = New System.Windows.Forms.Label()
-        Me.txtCorreo = New System.Windows.Forms.TextBox()
-        Me.cbSexo = New System.Windows.Forms.ComboBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnCrear = New Guna.UI2.WinForms.Guna2Button()
         Me.btnCancelar = New Guna.UI2.WinForms.Guna2Button()
+        Me.cbSexo = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.txtDomicilio = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtEdad = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtTelefono = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtSape = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtPape = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtCorreo = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtPNom = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtSnom = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtCedula = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.lbDomi = New System.Windows.Forms.Label()
+        Me.lbEdad = New System.Windows.Forms.Label()
+        Me.lbTel = New System.Windows.Forms.Label()
+        Me.lbSape = New System.Windows.Forms.Label()
+        Me.lbSnom = New System.Windows.Forms.Label()
+        Me.lbSexo = New System.Windows.Forms.Label()
+        Me.lbCorreo = New System.Windows.Forms.Label()
+        Me.lbPape = New System.Windows.Forms.Label()
+        Me.lbPnom = New System.Windows.Forms.Label()
+        Me.lbCi = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,348 +59,16 @@ Partial Class FrmCrearUsuario
         Me.Label1.ForeColor = System.Drawing.Color.Silver
         Me.ErrorProvider1.SetIconAlignment(Me.Label1, System.Windows.Forms.ErrorIconAlignment.TopRight)
         Me.ErrorProvider1.SetIconPadding(Me.Label1, 5)
-        Me.Label1.Location = New System.Drawing.Point(170, 9)
+        Me.Label1.Location = New System.Drawing.Point(216, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(341, 40)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "CREAR NUEVO USUARIO"
         '
-        'lbci
-        '
-        Me.lbci.AutoSize = True
-        Me.lbci.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbci.ForeColor = System.Drawing.Color.Silver
-        Me.lbci.Location = New System.Drawing.Point(52, 62)
-        Me.lbci.Name = "lbci"
-        Me.lbci.Size = New System.Drawing.Size(127, 21)
-        Me.lbci.TabIndex = 1
-        Me.lbci.Text = "Cedula identidad"
-        '
-        'txtCedu
-        '
-        Me.txtCedu.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtCedu.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCedu.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCedu.ForeColor = System.Drawing.Color.Silver
-        Me.txtCedu.Location = New System.Drawing.Point(56, 86)
-        Me.txtCedu.MaxLength = 8
-        Me.txtCedu.Name = "txtCedu"
-        Me.txtCedu.Size = New System.Drawing.Size(180, 22)
-        Me.txtCedu.TabIndex = 1
-        '
-        'ShapeContainer1
-        '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape10, Me.LineShape9, Me.LineShape8, Me.LineShape7, Me.LineShape6, Me.LineShape4, Me.LineShape3, Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(681, 359)
-        Me.ShapeContainer1.TabIndex = 3
-        Me.ShapeContainer1.TabStop = False
-        '
-        'LineShape10
-        '
-        Me.LineShape10.BorderColor = System.Drawing.Color.Silver
-        Me.LineShape10.Enabled = False
-        Me.LineShape10.Name = "LineShape10"
-        Me.LineShape10.X1 = 271
-        Me.LineShape10.X2 = 646
-        Me.LineShape10.Y1 = 260
-        Me.LineShape10.Y2 = 260
-        '
-        'LineShape9
-        '
-        Me.LineShape9.BorderColor = System.Drawing.Color.Silver
-        Me.LineShape9.Enabled = False
-        Me.LineShape9.Name = "LineShape9"
-        Me.LineShape9.X1 = 468
-        Me.LineShape9.X2 = 648
-        Me.LineShape9.Y1 = 214
-        Me.LineShape9.Y2 = 214
-        '
-        'LineShape8
-        '
-        Me.LineShape8.BorderColor = System.Drawing.Color.Silver
-        Me.LineShape8.Enabled = False
-        Me.LineShape8.Name = "LineShape8"
-        Me.LineShape8.X1 = 271
-        Me.LineShape8.X2 = 451
-        Me.LineShape8.Y1 = 213
-        Me.LineShape8.Y2 = 213
-        '
-        'LineShape7
-        '
-        Me.LineShape7.BorderColor = System.Drawing.Color.Silver
-        Me.LineShape7.Enabled = False
-        Me.LineShape7.Name = "LineShape7"
-        Me.LineShape7.X1 = 468
-        Me.LineShape7.X2 = 648
-        Me.LineShape7.Y1 = 158
-        Me.LineShape7.Y2 = 158
-        '
-        'LineShape6
-        '
-        Me.LineShape6.BorderColor = System.Drawing.Color.Silver
-        Me.LineShape6.Enabled = False
-        Me.LineShape6.Name = "LineShape6"
-        Me.LineShape6.X1 = 271
-        Me.LineShape6.X2 = 451
-        Me.LineShape6.Y1 = 158
-        Me.LineShape6.Y2 = 158
-        '
-        'LineShape4
-        '
-        Me.LineShape4.BorderColor = System.Drawing.Color.Silver
-        Me.LineShape4.Enabled = False
-        Me.LineShape4.Name = "LineShape4"
-        Me.LineShape4.X1 = 54
-        Me.LineShape4.X2 = 234
-        Me.LineShape4.Y1 = 210
-        Me.LineShape4.Y2 = 210
-        '
-        'LineShape3
-        '
-        Me.LineShape3.BorderColor = System.Drawing.Color.Silver
-        Me.LineShape3.Enabled = False
-        Me.LineShape3.Name = "LineShape3"
-        Me.LineShape3.X1 = 54
-        Me.LineShape3.X2 = 234
-        Me.LineShape3.Y1 = 155
-        Me.LineShape3.Y2 = 155
-        '
-        'LineShape2
-        '
-        Me.LineShape2.BorderColor = System.Drawing.Color.Silver
-        Me.LineShape2.Enabled = False
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 271
-        Me.LineShape2.X2 = 651
-        Me.LineShape2.Y1 = 107
-        Me.LineShape2.Y2 = 107
-        '
-        'LineShape1
-        '
-        Me.LineShape1.BorderColor = System.Drawing.Color.Silver
-        Me.LineShape1.Enabled = False
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 54
-        Me.LineShape1.X2 = 234
-        Me.LineShape1.Y1 = 110
-        Me.LineShape1.Y2 = 110
-        '
-        'lbDir
-        '
-        Me.lbDir.AutoSize = True
-        Me.lbDir.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbDir.ForeColor = System.Drawing.Color.Silver
-        Me.lbDir.Location = New System.Drawing.Point(270, 62)
-        Me.lbDir.Name = "lbDir"
-        Me.lbDir.Size = New System.Drawing.Size(75, 21)
-        Me.lbDir.TabIndex = 1
-        Me.lbDir.Text = "Direccion"
-        '
-        'txtDir
-        '
-        Me.txtDir.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtDir.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtDir.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDir.ForeColor = System.Drawing.Color.Silver
-        Me.txtDir.Location = New System.Drawing.Point(270, 84)
-        Me.txtDir.MaxLength = 255
-        Me.txtDir.Name = "txtDir"
-        Me.txtDir.Size = New System.Drawing.Size(381, 22)
-        Me.txtDir.TabIndex = 5
-        '
-        'lbedad
-        '
-        Me.lbedad.AutoSize = True
-        Me.lbedad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbedad.ForeColor = System.Drawing.Color.Silver
-        Me.lbedad.Location = New System.Drawing.Point(52, 111)
-        Me.lbedad.Name = "lbedad"
-        Me.lbedad.Size = New System.Drawing.Size(44, 21)
-        Me.lbedad.TabIndex = 1
-        Me.lbedad.Text = "Edad"
-        '
-        'txtEdad
-        '
-        Me.txtEdad.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtEdad.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtEdad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEdad.ForeColor = System.Drawing.Color.Silver
-        Me.txtEdad.Location = New System.Drawing.Point(56, 133)
-        Me.txtEdad.MaxLength = 2
-        Me.txtEdad.Name = "txtEdad"
-        Me.txtEdad.Size = New System.Drawing.Size(180, 22)
-        Me.txtEdad.TabIndex = 3
-        '
-        'lbTel
-        '
-        Me.lbTel.AutoSize = True
-        Me.lbTel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbTel.ForeColor = System.Drawing.Color.Silver
-        Me.lbTel.Location = New System.Drawing.Point(52, 166)
-        Me.lbTel.Name = "lbTel"
-        Me.lbTel.Size = New System.Drawing.Size(68, 21)
-        Me.lbTel.TabIndex = 1
-        Me.lbTel.Text = "Telefono"
-        '
-        'txtTel
-        '
-        Me.txtTel.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtTel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTel.ForeColor = System.Drawing.Color.Silver
-        Me.txtTel.Location = New System.Drawing.Point(56, 188)
-        Me.txtTel.MaxLength = 9
-        Me.txtTel.Name = "txtTel"
-        Me.txtTel.Size = New System.Drawing.Size(180, 22)
-        Me.txtTel.TabIndex = 4
-        '
-        'lbPnom
-        '
-        Me.lbPnom.AutoSize = True
-        Me.lbPnom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbPnom.ForeColor = System.Drawing.Color.Silver
-        Me.lbPnom.Location = New System.Drawing.Point(270, 111)
-        Me.lbPnom.Name = "lbPnom"
-        Me.lbPnom.Size = New System.Drawing.Size(119, 21)
-        Me.lbPnom.TabIndex = 1
-        Me.lbPnom.Text = "Primer Nombre"
-        '
-        'txtPriNom
-        '
-        Me.txtPriNom.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtPriNom.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPriNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPriNom.ForeColor = System.Drawing.Color.Silver
-        Me.txtPriNom.Location = New System.Drawing.Point(270, 135)
-        Me.txtPriNom.MaxLength = 30
-        Me.txtPriNom.Name = "txtPriNom"
-        Me.txtPriNom.Size = New System.Drawing.Size(180, 22)
-        Me.txtPriNom.TabIndex = 6
-        '
-        'lbSnom
-        '
-        Me.lbSnom.AutoSize = True
-        Me.lbSnom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbSnom.ForeColor = System.Drawing.Color.Silver
-        Me.lbSnom.Location = New System.Drawing.Point(468, 111)
-        Me.lbSnom.Name = "lbSnom"
-        Me.lbSnom.Size = New System.Drawing.Size(134, 21)
-        Me.lbSnom.TabIndex = 1
-        Me.lbSnom.Text = "Segundo Nombre"
-        '
-        'txtSegNom
-        '
-        Me.txtSegNom.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtSegNom.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSegNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSegNom.ForeColor = System.Drawing.Color.Silver
-        Me.txtSegNom.Location = New System.Drawing.Point(469, 135)
-        Me.txtSegNom.MaxLength = 30
-        Me.txtSegNom.Name = "txtSegNom"
-        Me.txtSegNom.Size = New System.Drawing.Size(180, 22)
-        Me.txtSegNom.TabIndex = 7
-        '
-        'lbSape
-        '
-        Me.lbSape.AutoSize = True
-        Me.lbSape.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbSape.ForeColor = System.Drawing.Color.Silver
-        Me.lbSape.Location = New System.Drawing.Point(468, 166)
-        Me.lbSape.Name = "lbSape"
-        Me.lbSape.Size = New System.Drawing.Size(133, 21)
-        Me.lbSape.TabIndex = 1
-        Me.lbSape.Text = "Segundo Apellido"
-        '
-        'txtSegApe
-        '
-        Me.txtSegApe.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtSegApe.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSegApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSegApe.ForeColor = System.Drawing.Color.Silver
-        Me.txtSegApe.Location = New System.Drawing.Point(469, 191)
-        Me.txtSegApe.MaxLength = 30
-        Me.txtSegApe.Name = "txtSegApe"
-        Me.txtSegApe.Size = New System.Drawing.Size(180, 22)
-        Me.txtSegApe.TabIndex = 9
-        '
-        'lbPape
-        '
-        Me.lbPape.AutoSize = True
-        Me.lbPape.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbPape.ForeColor = System.Drawing.Color.Silver
-        Me.lbPape.Location = New System.Drawing.Point(270, 166)
-        Me.lbPape.Name = "lbPape"
-        Me.lbPape.Size = New System.Drawing.Size(118, 21)
-        Me.lbPape.TabIndex = 1
-        Me.lbPape.Text = "Primer Apellido"
-        '
-        'txtApe
-        '
-        Me.txtApe.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtApe.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApe.ForeColor = System.Drawing.Color.Silver
-        Me.txtApe.Location = New System.Drawing.Point(270, 188)
-        Me.txtApe.MaxLength = 30
-        Me.txtApe.Name = "txtApe"
-        Me.txtApe.Size = New System.Drawing.Size(180, 22)
-        Me.txtApe.TabIndex = 8
-        '
-        'lbCorreo
-        '
-        Me.lbCorreo.AutoSize = True
-        Me.lbCorreo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCorreo.ForeColor = System.Drawing.Color.Silver
-        Me.lbCorreo.Location = New System.Drawing.Point(270, 216)
-        Me.lbCorreo.Name = "lbCorreo"
-        Me.lbCorreo.Size = New System.Drawing.Size(138, 21)
-        Me.lbCorreo.TabIndex = 1
-        Me.lbCorreo.Text = "Correo Electronico"
-        '
-        'txtCorreo
-        '
-        Me.txtCorreo.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCorreo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCorreo.ForeColor = System.Drawing.Color.Silver
-        Me.txtCorreo.Location = New System.Drawing.Point(270, 236)
-        Me.txtCorreo.MaxLength = 255
-        Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(374, 22)
-        Me.txtCorreo.TabIndex = 10
-        '
-        'cbSexo
-        '
-        Me.cbSexo.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.cbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbSexo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbSexo.ForeColor = System.Drawing.Color.Silver
-        Me.cbSexo.FormattingEnabled = True
-        Me.cbSexo.Items.AddRange(New Object() {"Hombre", "Mujer", "Otro"})
-        Me.cbSexo.Location = New System.Drawing.Point(52, 240)
-        Me.cbSexo.Name = "cbSexo"
-        Me.cbSexo.Size = New System.Drawing.Size(180, 29)
-        Me.cbSexo.TabIndex = 11
-        '
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
         Me.ErrorProvider1.Icon = CType(resources.GetObject("ErrorProvider1.Icon"), System.Drawing.Icon)
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(52, 216)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 21)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Sexo"
         '
         'btnCrear
         '
@@ -425,7 +84,7 @@ Partial Class FrmCrearUsuario
         Me.btnCrear.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnCrear.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnCrear.HoverState.Parent = Me.btnCrear
-        Me.btnCrear.Location = New System.Drawing.Point(273, 300)
+        Me.btnCrear.Location = New System.Drawing.Point(494, 272)
         Me.btnCrear.Name = "btnCrear"
         Me.btnCrear.PressedColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.btnCrear.ShadowDecoration.BorderRadius = 20
@@ -433,25 +92,26 @@ Partial Class FrmCrearUsuario
         Me.btnCrear.ShadowDecoration.Depth = 25
         Me.btnCrear.ShadowDecoration.Enabled = True
         Me.btnCrear.ShadowDecoration.Parent = Me.btnCrear
-        Me.btnCrear.Size = New System.Drawing.Size(382, 36)
+        Me.btnCrear.Size = New System.Drawing.Size(267, 36)
         Me.btnCrear.TabIndex = 15
         Me.btnCrear.Text = "CREAR"
         '
         'btnCancelar
         '
         Me.btnCancelar.Animated = True
+        Me.btnCancelar.AutoRoundedCorners = True
         Me.btnCancelar.BackColor = System.Drawing.Color.Transparent
         Me.btnCancelar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCancelar.BorderRadius = 15
+        Me.btnCancelar.BorderRadius = 14
         Me.btnCancelar.BorderThickness = 2
         Me.btnCancelar.CheckedState.Parent = Me.btnCancelar
         Me.btnCancelar.CustomImages.Parent = Me.btnCancelar
         Me.btnCancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
         Me.btnCancelar.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnCancelar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnCancelar.HoverState.Parent = Me.btnCancelar
-        Me.btnCancelar.Location = New System.Drawing.Point(52, 300)
+        Me.btnCancelar.Location = New System.Drawing.Point(30, 355)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.btnCancelar.ShadowDecoration.BorderRadius = 20
@@ -459,40 +119,464 @@ Partial Class FrmCrearUsuario
         Me.btnCancelar.ShadowDecoration.Depth = 25
         Me.btnCancelar.ShadowDecoration.Enabled = True
         Me.btnCancelar.ShadowDecoration.Parent = Me.btnCancelar
-        Me.btnCancelar.Size = New System.Drawing.Size(120, 36)
+        Me.btnCancelar.Size = New System.Drawing.Size(94, 31)
         Me.btnCancelar.TabIndex = 15
-        Me.btnCancelar.Text = "CERRAR"
+        Me.btnCancelar.Text = "CANCELAR"
+        '
+        'cbSexo
+        '
+        Me.cbSexo.Animated = True
+        Me.cbSexo.BackColor = System.Drawing.Color.Transparent
+        Me.cbSexo.BorderThickness = 2
+        Me.cbSexo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbSexo.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.cbSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbSexo.FocusedColor = System.Drawing.Color.Empty
+        Me.cbSexo.FocusedState.Parent = Me.cbSexo
+        Me.cbSexo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbSexo.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.cbSexo.FormattingEnabled = True
+        Me.cbSexo.HoverState.Parent = Me.cbSexo
+        Me.cbSexo.ItemHeight = 30
+        Me.cbSexo.Items.AddRange(New Object() {"Hombre", "Mujer", "Otro"})
+        Me.cbSexo.ItemsAppearance.Parent = Me.cbSexo
+        Me.cbSexo.Location = New System.Drawing.Point(30, 143)
+        Me.cbSexo.Name = "cbSexo"
+        Me.cbSexo.ShadowDecoration.Parent = Me.cbSexo
+        Me.cbSexo.Size = New System.Drawing.Size(220, 36)
+        Me.cbSexo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.cbSexo.TabIndex = 81
+        '
+        'txtDomicilio
+        '
+        Me.txtDomicilio.Animated = True
+        Me.txtDomicilio.BorderThickness = 2
+        Me.txtDomicilio.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtDomicilio.DefaultText = ""
+        Me.txtDomicilio.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtDomicilio.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtDomicilio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtDomicilio.DisabledState.Parent = Me.txtDomicilio
+        Me.txtDomicilio.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtDomicilio.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtDomicilio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtDomicilio.FocusedState.Parent = Me.txtDomicilio
+        Me.txtDomicilio.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDomicilio.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtDomicilio.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtDomicilio.HoverState.Parent = Me.txtDomicilio
+        Me.txtDomicilio.Location = New System.Drawing.Point(530, 214)
+        Me.txtDomicilio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtDomicilio.MaxLength = 255
+        Me.txtDomicilio.Name = "txtDomicilio"
+        Me.txtDomicilio.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtDomicilio.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtDomicilio.PlaceholderText = ""
+        Me.txtDomicilio.SelectedText = ""
+        Me.txtDomicilio.ShadowDecoration.Parent = Me.txtDomicilio
+        Me.txtDomicilio.Size = New System.Drawing.Size(224, 30)
+        Me.txtDomicilio.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.txtDomicilio.TabIndex = 78
+        '
+        'txtEdad
+        '
+        Me.txtEdad.Animated = True
+        Me.txtEdad.BorderThickness = 2
+        Me.txtEdad.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtEdad.DefaultText = ""
+        Me.txtEdad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtEdad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtEdad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtEdad.DisabledState.Parent = Me.txtEdad
+        Me.txtEdad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtEdad.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtEdad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtEdad.FocusedState.Parent = Me.txtEdad
+        Me.txtEdad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEdad.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtEdad.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtEdad.HoverState.Parent = Me.txtEdad
+        Me.txtEdad.Location = New System.Drawing.Point(32, 214)
+        Me.txtEdad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtEdad.MaxLength = 2
+        Me.txtEdad.Name = "txtEdad"
+        Me.txtEdad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtEdad.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtEdad.PlaceholderText = ""
+        Me.txtEdad.SelectedText = ""
+        Me.txtEdad.ShadowDecoration.Parent = Me.txtEdad
+        Me.txtEdad.Size = New System.Drawing.Size(220, 30)
+        Me.txtEdad.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.txtEdad.TabIndex = 77
+        '
+        'txtTelefono
+        '
+        Me.txtTelefono.Animated = True
+        Me.txtTelefono.BorderThickness = 2
+        Me.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtTelefono.DefaultText = ""
+        Me.txtTelefono.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtTelefono.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtTelefono.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtTelefono.DisabledState.Parent = Me.txtTelefono
+        Me.txtTelefono.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtTelefono.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtTelefono.FocusedState.Parent = Me.txtTelefono
+        Me.txtTelefono.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelefono.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtTelefono.HoverState.Parent = Me.txtTelefono
+        Me.txtTelefono.Location = New System.Drawing.Point(281, 214)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtTelefono.MaxLength = 9
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtTelefono.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtTelefono.PlaceholderText = ""
+        Me.txtTelefono.SelectedText = ""
+        Me.txtTelefono.ShadowDecoration.Parent = Me.txtTelefono
+        Me.txtTelefono.Size = New System.Drawing.Size(220, 30)
+        Me.txtTelefono.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.txtTelefono.TabIndex = 76
+        '
+        'txtSape
+        '
+        Me.txtSape.Animated = True
+        Me.txtSape.BorderThickness = 2
+        Me.txtSape.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtSape.DefaultText = ""
+        Me.txtSape.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtSape.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtSape.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtSape.DisabledState.Parent = Me.txtSape
+        Me.txtSape.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtSape.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtSape.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtSape.FocusedState.Parent = Me.txtSape
+        Me.txtSape.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSape.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtSape.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtSape.HoverState.Parent = Me.txtSape
+        Me.txtSape.Location = New System.Drawing.Point(534, 149)
+        Me.txtSape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSape.MaxLength = 30
+        Me.txtSape.Name = "txtSape"
+        Me.txtSape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtSape.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtSape.PlaceholderText = ""
+        Me.txtSape.SelectedText = ""
+        Me.txtSape.ShadowDecoration.Parent = Me.txtSape
+        Me.txtSape.Size = New System.Drawing.Size(220, 30)
+        Me.txtSape.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.txtSape.TabIndex = 74
+        '
+        'txtPape
+        '
+        Me.txtPape.Animated = True
+        Me.txtPape.BorderThickness = 2
+        Me.txtPape.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPape.DefaultText = ""
+        Me.txtPape.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtPape.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtPape.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPape.DisabledState.Parent = Me.txtPape
+        Me.txtPape.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPape.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtPape.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtPape.FocusedState.Parent = Me.txtPape
+        Me.txtPape.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPape.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtPape.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtPape.HoverState.Parent = Me.txtPape
+        Me.txtPape.Location = New System.Drawing.Point(530, 86)
+        Me.txtPape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPape.MaxLength = 30
+        Me.txtPape.Name = "txtPape"
+        Me.txtPape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPape.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtPape.PlaceholderText = ""
+        Me.txtPape.SelectedText = ""
+        Me.txtPape.ShadowDecoration.Parent = Me.txtPape
+        Me.txtPape.Size = New System.Drawing.Size(220, 30)
+        Me.txtPape.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.txtPape.TabIndex = 73
+        '
+        'txtCorreo
+        '
+        Me.txtCorreo.Animated = True
+        Me.txtCorreo.BorderThickness = 2
+        Me.txtCorreo.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtCorreo.DefaultText = ""
+        Me.txtCorreo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtCorreo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtCorreo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCorreo.DisabledState.Parent = Me.txtCorreo
+        Me.txtCorreo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCorreo.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtCorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtCorreo.FocusedState.Parent = Me.txtCorreo
+        Me.txtCorreo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCorreo.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtCorreo.HoverState.Parent = Me.txtCorreo
+        Me.txtCorreo.Location = New System.Drawing.Point(30, 278)
+        Me.txtCorreo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtCorreo.MaxLength = 255
+        Me.txtCorreo.Name = "txtCorreo"
+        Me.txtCorreo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtCorreo.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtCorreo.PlaceholderText = ""
+        Me.txtCorreo.SelectedText = ""
+        Me.txtCorreo.ShadowDecoration.Parent = Me.txtCorreo
+        Me.txtCorreo.Size = New System.Drawing.Size(457, 30)
+        Me.txtCorreo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.txtCorreo.TabIndex = 72
+        '
+        'txtPNom
+        '
+        Me.txtPNom.Animated = True
+        Me.txtPNom.BorderThickness = 2
+        Me.txtPNom.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPNom.DefaultText = ""
+        Me.txtPNom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtPNom.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtPNom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPNom.DisabledState.Parent = Me.txtPNom
+        Me.txtPNom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPNom.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtPNom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtPNom.FocusedState.Parent = Me.txtPNom
+        Me.txtPNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPNom.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtPNom.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtPNom.HoverState.Parent = Me.txtPNom
+        Me.txtPNom.Location = New System.Drawing.Point(281, 86)
+        Me.txtPNom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPNom.MaxLength = 30
+        Me.txtPNom.Name = "txtPNom"
+        Me.txtPNom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPNom.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtPNom.PlaceholderText = ""
+        Me.txtPNom.SelectedText = ""
+        Me.txtPNom.ShadowDecoration.Parent = Me.txtPNom
+        Me.txtPNom.Size = New System.Drawing.Size(220, 30)
+        Me.txtPNom.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.txtPNom.TabIndex = 71
+        '
+        'txtSnom
+        '
+        Me.txtSnom.BorderThickness = 2
+        Me.txtSnom.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtSnom.DefaultText = ""
+        Me.txtSnom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtSnom.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtSnom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtSnom.DisabledState.Parent = Me.txtSnom
+        Me.txtSnom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtSnom.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtSnom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtSnom.FocusedState.Parent = Me.txtSnom
+        Me.txtSnom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSnom.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtSnom.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtSnom.HoverState.Parent = Me.txtSnom
+        Me.txtSnom.Location = New System.Drawing.Point(281, 149)
+        Me.txtSnom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSnom.MaxLength = 30
+        Me.txtSnom.Name = "txtSnom"
+        Me.txtSnom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtSnom.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtSnom.PlaceholderText = ""
+        Me.txtSnom.SelectedText = ""
+        Me.txtSnom.ShadowDecoration.Parent = Me.txtSnom
+        Me.txtSnom.Size = New System.Drawing.Size(220, 30)
+        Me.txtSnom.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.txtSnom.TabIndex = 79
+        '
+        'txtCedula
+        '
+        Me.txtCedula.Animated = True
+        Me.txtCedula.BorderThickness = 2
+        Me.txtCedula.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtCedula.DefaultText = ""
+        Me.txtCedula.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtCedula.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtCedula.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCedula.DisabledState.Parent = Me.txtCedula
+        Me.txtCedula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCedula.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtCedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtCedula.FocusedState.Parent = Me.txtCedula
+        Me.txtCedula.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCedula.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtCedula.HoverState.Parent = Me.txtCedula
+        Me.txtCedula.Location = New System.Drawing.Point(30, 85)
+        Me.txtCedula.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtCedula.MaxLength = 8
+        Me.txtCedula.Name = "txtCedula"
+        Me.txtCedula.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtCedula.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtCedula.PlaceholderText = ""
+        Me.txtCedula.SelectedText = ""
+        Me.txtCedula.ShadowDecoration.Parent = Me.txtCedula
+        Me.txtCedula.Size = New System.Drawing.Size(220, 30)
+        Me.txtCedula.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.txtCedula.TabIndex = 70
+        '
+        'lbDomi
+        '
+        Me.lbDomi.AutoSize = True
+        Me.lbDomi.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbDomi.ForeColor = System.Drawing.Color.Silver
+        Me.lbDomi.Location = New System.Drawing.Point(530, 188)
+        Me.lbDomi.Name = "lbDomi"
+        Me.lbDomi.Size = New System.Drawing.Size(76, 21)
+        Me.lbDomi.TabIndex = 68
+        Me.lbDomi.Text = "Domicilio"
+        '
+        'lbEdad
+        '
+        Me.lbEdad.AutoSize = True
+        Me.lbEdad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbEdad.ForeColor = System.Drawing.Color.Silver
+        Me.lbEdad.Location = New System.Drawing.Point(32, 188)
+        Me.lbEdad.Name = "lbEdad"
+        Me.lbEdad.Size = New System.Drawing.Size(44, 21)
+        Me.lbEdad.TabIndex = 66
+        Me.lbEdad.Text = "Edad"
+        '
+        'lbTel
+        '
+        Me.lbTel.AutoSize = True
+        Me.lbTel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTel.ForeColor = System.Drawing.Color.Silver
+        Me.lbTel.Location = New System.Drawing.Point(281, 184)
+        Me.lbTel.Name = "lbTel"
+        Me.lbTel.Size = New System.Drawing.Size(121, 21)
+        Me.lbTel.TabIndex = 65
+        Me.lbTel.Text = "Telefono Celular"
+        '
+        'lbSape
+        '
+        Me.lbSape.AutoSize = True
+        Me.lbSape.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbSape.ForeColor = System.Drawing.Color.Silver
+        Me.lbSape.Location = New System.Drawing.Point(530, 121)
+        Me.lbSape.Name = "lbSape"
+        Me.lbSape.Size = New System.Drawing.Size(133, 21)
+        Me.lbSape.TabIndex = 64
+        Me.lbSape.Text = "Segundo Apellido"
+        '
+        'lbSnom
+        '
+        Me.lbSnom.AutoSize = True
+        Me.lbSnom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbSnom.ForeColor = System.Drawing.Color.Silver
+        Me.lbSnom.Location = New System.Drawing.Point(281, 121)
+        Me.lbSnom.Name = "lbSnom"
+        Me.lbSnom.Size = New System.Drawing.Size(134, 21)
+        Me.lbSnom.TabIndex = 63
+        Me.lbSnom.Text = "Segundo Nombre"
+        '
+        'lbSexo
+        '
+        Me.lbSexo.AutoSize = True
+        Me.lbSexo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbSexo.ForeColor = System.Drawing.Color.Silver
+        Me.lbSexo.Location = New System.Drawing.Point(30, 119)
+        Me.lbSexo.Name = "lbSexo"
+        Me.lbSexo.Size = New System.Drawing.Size(43, 21)
+        Me.lbSexo.TabIndex = 62
+        Me.lbSexo.Text = "Sexo"
+        '
+        'lbCorreo
+        '
+        Me.lbCorreo.AutoSize = True
+        Me.lbCorreo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbCorreo.ForeColor = System.Drawing.Color.Silver
+        Me.lbCorreo.Location = New System.Drawing.Point(30, 256)
+        Me.lbCorreo.Name = "lbCorreo"
+        Me.lbCorreo.Size = New System.Drawing.Size(138, 21)
+        Me.lbCorreo.TabIndex = 61
+        Me.lbCorreo.Text = "Correo Electronico"
+        '
+        'lbPape
+        '
+        Me.lbPape.AutoSize = True
+        Me.lbPape.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbPape.ForeColor = System.Drawing.Color.Silver
+        Me.lbPape.Location = New System.Drawing.Point(530, 60)
+        Me.lbPape.Name = "lbPape"
+        Me.lbPape.Size = New System.Drawing.Size(118, 21)
+        Me.lbPape.TabIndex = 60
+        Me.lbPape.Text = "Primer Apellido"
+        '
+        'lbPnom
+        '
+        Me.lbPnom.AutoSize = True
+        Me.lbPnom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbPnom.ForeColor = System.Drawing.Color.Silver
+        Me.lbPnom.Location = New System.Drawing.Point(281, 59)
+        Me.lbPnom.Name = "lbPnom"
+        Me.lbPnom.Size = New System.Drawing.Size(119, 21)
+        Me.lbPnom.TabIndex = 69
+        Me.lbPnom.Text = "Primer Nombre"
+        '
+        'lbCi
+        '
+        Me.lbCi.AutoSize = True
+        Me.lbCi.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbCi.ForeColor = System.Drawing.Color.Silver
+        Me.lbCi.Location = New System.Drawing.Point(30, 59)
+        Me.lbCi.Name = "lbCi"
+        Me.lbCi.Size = New System.Drawing.Size(58, 21)
+        Me.lbCi.TabIndex = 58
+        Me.lbCi.Text = "Cedula"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Silver
+        Me.Label2.Location = New System.Drawing.Point(82, 62)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(126, 17)
+        Me.Label2.TabIndex = 58
+        Me.Label2.Text = "(Sin puntos ni guines)"
         '
         'FrmCrearUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(681, 359)
+        Me.ClientSize = New System.Drawing.Size(773, 398)
+        Me.Controls.Add(Me.cbSexo)
+        Me.Controls.Add(Me.txtDomicilio)
+        Me.Controls.Add(Me.txtEdad)
+        Me.Controls.Add(Me.txtTelefono)
+        Me.Controls.Add(Me.txtSape)
+        Me.Controls.Add(Me.txtPape)
+        Me.Controls.Add(Me.txtCorreo)
+        Me.Controls.Add(Me.txtPNom)
+        Me.Controls.Add(Me.txtSnom)
+        Me.Controls.Add(Me.txtCedula)
+        Me.Controls.Add(Me.lbDomi)
+        Me.Controls.Add(Me.lbEdad)
+        Me.Controls.Add(Me.lbTel)
+        Me.Controls.Add(Me.lbSape)
+        Me.Controls.Add(Me.lbSnom)
+        Me.Controls.Add(Me.lbSexo)
+        Me.Controls.Add(Me.lbCorreo)
+        Me.Controls.Add(Me.lbPape)
+        Me.Controls.Add(Me.lbPnom)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lbCi)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnCrear)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.cbSexo)
-        Me.Controls.Add(Me.txtCorreo)
-        Me.Controls.Add(Me.lbCorreo)
-        Me.Controls.Add(Me.txtApe)
-        Me.Controls.Add(Me.lbPape)
-        Me.Controls.Add(Me.txtSegApe)
-        Me.Controls.Add(Me.lbSape)
-        Me.Controls.Add(Me.txtSegNom)
-        Me.Controls.Add(Me.lbSnom)
-        Me.Controls.Add(Me.txtPriNom)
-        Me.Controls.Add(Me.lbPnom)
-        Me.Controls.Add(Me.txtTel)
-        Me.Controls.Add(Me.lbTel)
-        Me.Controls.Add(Me.txtEdad)
-        Me.Controls.Add(Me.lbedad)
-        Me.Controls.Add(Me.txtDir)
-        Me.Controls.Add(Me.lbDir)
-        Me.Controls.Add(Me.txtCedu)
-        Me.Controls.Add(Me.lbci)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ShapeContainer1)
         Me.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -507,37 +591,28 @@ Partial Class FrmCrearUsuario
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents lbci As Label
-    Friend WithEvents txtCedu As TextBox
-    Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
-    Friend WithEvents LineShape10 As PowerPacks.LineShape
-    Friend WithEvents LineShape9 As PowerPacks.LineShape
-    Friend WithEvents LineShape8 As PowerPacks.LineShape
-    Friend WithEvents LineShape7 As PowerPacks.LineShape
-    Friend WithEvents LineShape6 As PowerPacks.LineShape
-    Friend WithEvents LineShape4 As PowerPacks.LineShape
-    Friend WithEvents LineShape3 As PowerPacks.LineShape
-    Friend WithEvents LineShape2 As PowerPacks.LineShape
-    Friend WithEvents LineShape1 As PowerPacks.LineShape
-    Friend WithEvents lbDir As Label
-    Friend WithEvents txtDir As TextBox
-    Friend WithEvents lbedad As Label
-    Friend WithEvents txtEdad As TextBox
-    Friend WithEvents lbTel As Label
-    Friend WithEvents txtTel As TextBox
-    Friend WithEvents lbPnom As Label
-    Friend WithEvents txtPriNom As TextBox
-    Friend WithEvents lbSnom As Label
-    Friend WithEvents txtSegNom As TextBox
-    Friend WithEvents lbSape As Label
-    Friend WithEvents txtSegApe As TextBox
-    Friend WithEvents lbPape As Label
-    Friend WithEvents txtApe As TextBox
-    Friend WithEvents lbCorreo As Label
-    Friend WithEvents txtCorreo As TextBox
-    Friend WithEvents cbSexo As ComboBox
     Friend WithEvents ErrorProvider1 As ErrorProvider
-    Friend WithEvents Label2 As Label
     Friend WithEvents btnCrear As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnCancelar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents cbSexo As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents txtDomicilio As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtEdad As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtTelefono As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtSape As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtPape As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtCorreo As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtPNom As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtSnom As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtCedula As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents lbDomi As Label
+    Friend WithEvents lbEdad As Label
+    Friend WithEvents lbTel As Label
+    Friend WithEvents lbSape As Label
+    Friend WithEvents lbSnom As Label
+    Friend WithEvents lbSexo As Label
+    Friend WithEvents lbCorreo As Label
+    Friend WithEvents lbPape As Label
+    Friend WithEvents lbPnom As Label
+    Friend WithEvents lbCi As Label
+    Friend WithEvents Label2 As Label
 End Class

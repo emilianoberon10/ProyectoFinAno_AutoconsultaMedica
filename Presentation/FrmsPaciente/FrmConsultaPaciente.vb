@@ -3,7 +3,8 @@
 Public Class FrmConsultaPaciente
 
     Private Sub Consulta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        btnChat.Visible = False
+        Traductor.traducirForm(Me)
+        btn_chat.Visible = False
         CargarComboBoxSintomas(cbSintoma1)
         CargarComboBoxSintomas(cbSintoma2)
         CargarComboBoxSintomas(cbSintoma3)
@@ -14,12 +15,12 @@ Public Class FrmConsultaPaciente
         CargarComboBoxSintomas(cbSintoma8)
     End Sub
 
-    Private Sub btnConsul_Click(sender As Object, e As EventArgs) Handles btnConsul.Click
+    Private Sub btnConsul_Click(sender As Object, e As EventArgs) Handles btn_consultar.Click
         guardarSintomas()
         'apartir de la tabla selec genero el diagnostico y lo muestro en un dataGridView
         guardarEnfermedades()
 
-        btnChat.Show()
+        btn_chat.Show()
 
         Dim f As New FrmFichaMedicaPaciente
         f.ShowDialog()
@@ -66,18 +67,18 @@ Public Class FrmConsultaPaciente
 
                 Next
             Catch ex As Exception
-                ErrorProvider1.SetError(Me.Label2, ex.Message)
+                ErrorProvider1.SetError(Me.consu_titulo, ex.Message)
                 General.GetForm(Estado.Error, ex.Message)
             End Try
         Catch ex As Exception
-            ErrorProvider1.SetError(Me.Label2, ex.Message)
+            ErrorProvider1.SetError(Me.consu_titulo, ex.Message)
             General.GetForm(Estado.Error, ex.Message)
 
         End Try
 
     End Sub
 
-    Private Sub btnChat_Click(sender As Object, e As EventArgs) Handles btnChat.Click
+    Private Sub btnChat_Click(sender As Object, e As EventArgs) Handles btn_chat.Click
         FrmLogIn.paci.Solicita()
         Dim formwelcome As New FrmEsperaChat()
         formwelcome.ShowDialog()
@@ -85,7 +86,7 @@ Public Class FrmConsultaPaciente
 
 #Region "Activar sintomas"
 
-    Private Sub chb1_CheckedChanged(sender As Object, e As EventArgs) Handles chb1.CheckedChanged
+    Private Sub chb1_CheckedChanged(sender As Object, e As EventArgs)
         If chb1.Checked Then
             cbSintoma2.Enabled = True
         Else
@@ -93,7 +94,7 @@ Public Class FrmConsultaPaciente
         End If
     End Sub
 
-    Private Sub chb2_CheckedChanged(sender As Object, e As EventArgs) Handles chb2.CheckedChanged
+    Private Sub chb2_CheckedChanged(sender As Object, e As EventArgs)
         If chb2.Checked Then
             cbSintoma3.Enabled = True
         Else
@@ -101,7 +102,7 @@ Public Class FrmConsultaPaciente
         End If
     End Sub
 
-    Private Sub chb3_CheckedChanged(sender As Object, e As EventArgs) Handles chb3.CheckedChanged
+    Private Sub chb3_CheckedChanged(sender As Object, e As EventArgs)
         If chb3.Checked Then
             cbSintoma4.Enabled = True
         Else
@@ -109,7 +110,7 @@ Public Class FrmConsultaPaciente
         End If
     End Sub
 
-    Private Sub chb4_CheckedChanged(sender As Object, e As EventArgs) Handles chb4.CheckedChanged
+    Private Sub chb4_CheckedChanged(sender As Object, e As EventArgs)
         cbSintoma5.Enabled = True
         If chb4.Checked Then
             cbSintoma5.Enabled = True
@@ -118,7 +119,7 @@ Public Class FrmConsultaPaciente
         End If
     End Sub
 
-    Private Sub chb5_CheckedChanged(sender As Object, e As EventArgs) Handles chb5.CheckedChanged
+    Private Sub chb5_CheckedChanged(sender As Object, e As EventArgs)
         If chb5.Checked Then
             cbSintoma6.Enabled = True
         Else
@@ -126,7 +127,7 @@ Public Class FrmConsultaPaciente
         End If
     End Sub
 
-    Private Sub chb6_CheckedChanged(sender As Object, e As EventArgs) Handles chb6.CheckedChanged
+    Private Sub chb6_CheckedChanged(sender As Object, e As EventArgs)
         If chb6.Checked Then
             cbSintoma7.Enabled = True
         Else
@@ -134,7 +135,7 @@ Public Class FrmConsultaPaciente
         End If
     End Sub
 
-    Private Sub chb7_CheckedChanged(sender As Object, e As EventArgs) Handles chb7.CheckedChanged
+    Private Sub chb7_CheckedChanged(sender As Object, e As EventArgs)
         If chb7.Checked Then
             cbSintoma8.Enabled = True
         Else
@@ -142,7 +143,7 @@ Public Class FrmConsultaPaciente
         End If
     End Sub
 
-    Private Sub chb8_CheckedChanged(sender As Object, e As EventArgs) Handles chb8.CheckedChanged
+    Private Sub chb8_CheckedChanged(sender As Object, e As EventArgs)
         If chb8.Checked Then
             cbSintoma9.Enabled = True
         Else
@@ -153,23 +154,6 @@ Public Class FrmConsultaPaciente
 #End Region
 
 #Region "styles"
-
-    Private currentForm As Form = Nothing 'form en el panel no esta visible porque es el inicio de la app
-
-    'Metodo para abrir ventanas dentro de la principal
-    Public Sub OpenChildForm(childForm As Form)
-        If currentForm IsNot Nothing Then currentForm.Close() 'prenguto si hay un form abierto
-        currentForm = childForm 'cargo el form que quiero abrir
-        'Le pongo los estilos que necesito
-        childForm.TopLevel = False
-        childForm.FormBorderStyle = FormBorderStyle.None
-        childForm.Dock = DockStyle.Fill
-        pnChildCons.Controls.Add(childForm)
-        pnChildCons.Tag = childForm
-        'muestro el form
-        childForm.BringToFront()
-        childForm.Show()
-    End Sub
 
     Private Sub btnChat_Paint(sender As Object, e As PaintEventArgs)
         'BotonRedondeado(btnConsul)

@@ -1,6 +1,6 @@
 ﻿Public Class FrmInfo
 
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbRecuperarPass.LinkClicked
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbForgotPassEs.LinkClicked
         Dim frm As New FrmRecuperarContraseña
         frm.ShowDialog()
         Me.Close()
@@ -12,8 +12,12 @@
         Me.Close()
     End Sub
 
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btn_cerrar.Click
         Me.Close()
+    End Sub
+
+    Private Sub FrmInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Traductor.traducirForm(Me)
     End Sub
 
 End Class

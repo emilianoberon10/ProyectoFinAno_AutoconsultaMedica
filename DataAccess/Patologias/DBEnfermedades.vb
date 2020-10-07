@@ -24,7 +24,7 @@ Public Class DBEnfermedades
                     Else
                         reader.Dispose()
 
-                        _command.CommandText = "INSERT INTO sintoma(idEnf,nombre,riesgo,descripcion) VALUES(null,@nombre,@riesgo,@desc)"
+                        _command.CommandText = "INSERT INTO enfermedad(idEnf,nombre,riesgo,descripcion) VALUES(null,@nombre,@riesgo,@desc)"
                         _command.Parameters.AddWithValue("@riesgo", riesgo)
                         _command.Parameters.AddWithValue("@desc", descripcion)
                         _command.ExecuteNonQuery()
@@ -41,7 +41,9 @@ Public Class DBEnfermedades
     'Obtener tabla enfermedades
     Public Function ObtenerEnfermedades() As DataTable
         Dim _consultaSQL As String
-        _consultaSQL = "select idEnf,nombre,riesgo,descripcion,nomSint FROM enfermedad JOIN define ON nombre=nomENf Group by nomEnf;"
+        _consultaSQL = "select idEnf id,nombre,riesgo,descripcion,nomSint Sintomas FROM enfermedad
+                        JOIN define ON nombre=nomENf
+                        Group by nomEnf;"
         Return DevolverTabla(_consultaSQL)
     End Function
 

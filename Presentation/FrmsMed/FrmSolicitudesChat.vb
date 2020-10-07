@@ -8,7 +8,7 @@
         Solicitudes()
     End Sub
 
-    Private Sub dgvSolicitudes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSolicitudes.CellDoubleClick
+    Private Sub dgvSolicitudes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs)
 
         If MessageBox.Show("Sera redireccionado al chat con, desea continuar?", "Advertencia",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
@@ -21,6 +21,7 @@
                 Dim form As New FrmChats
                 form.txtDiagnostico.Text = diag
                 form.Show()
+                form.Timer1.Start()
             End If
 
         End If
@@ -38,7 +39,7 @@
     End Sub
 
     'Metodo para pintar la celda de riesgo segun su respectivo color
-    Private Sub dgvSolicitudes_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvSolicitudes.CellFormatting
+    Private Sub dgvSolicitudes_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs)
         If Me.dgvSolicitudes.Columns(e.ColumnIndex).Name = "riesgo" Then
             If Convert.ToString(e.Value) = "rojo" Then
                 e.CellStyle.ForeColor = Color.Black
@@ -57,6 +58,11 @@
                 e.CellStyle.BackColor = Color.DodgerBlue
             End If
         End If
+    End Sub
+
+    Private Sub panelSolicitudes_Paint(sender As Object, e As PaintEventArgs)
+        Traductor.traducirForm(Me)
+
     End Sub
 
 End Class

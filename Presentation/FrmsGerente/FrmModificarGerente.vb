@@ -3,7 +3,12 @@
 Public Class FrmModificarGerente
 
     Private Sub FrmModificar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim sintoma As New Sintoma
+        Traductor.traducirForm(Me)
+        Traductor.traducirPanel(PanelModSintoma)
+        Traductor.traducirPanel(PanelModEnfermedad)
+        Traductor.traducirPanel(PanelModifMedico)
+        Traductor.traducirPanel(Panel1)
+
         CargarComboBoxSintomas(cbSintoma1)
         CargarComboBoxSintomas(cbSintoma2)
         CargarComboBoxSintomas(cbSintoma3)
@@ -86,7 +91,7 @@ Public Class FrmModificarGerente
 
     End Sub
 
-    Private Sub btnModificar_Click(sender As Object, e As EventArgs)
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btn_modificar.Click
         Try
             Select Case cbFiltro.Text
                 Case "Sintomas"
@@ -181,10 +186,6 @@ Public Class FrmModificarGerente
         If Asc(e.KeyChar) = 8 Or e.KeyChar = " " Then
             e.Handled = Char.IsDigit(e.KeyChar)
         End If
-    End Sub
-
-    Private Sub btnModificar_Click_1(sender As Object, e As EventArgs) Handles btnModificar.Click
-
     End Sub
 
 #End Region

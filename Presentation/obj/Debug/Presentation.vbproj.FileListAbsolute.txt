@@ -52,9 +52,6 @@ C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Deb
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.FrmDatosUso.resources
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\Guna.UI2.dll
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Res.resources
-C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\en-US\Presentation.resources.dll
-C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Res.en-US.resources
-C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\en-US\Presentation.resources.dll
 C:\Users\Mateo\Source\Repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\Presentation.exe.config
 C:\Users\Mateo\Source\Repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\Presentation.exe
 C:\Users\Mateo\Source\Repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\Presentation.pdb
@@ -119,3 +116,5 @@ C:\Users\Mateo\Source\Repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug
 C:\Users\Mateo\Source\Repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.exe
 C:\Users\Mateo\Source\Repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.xml
 C:\Users\Mateo\Source\Repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.pdb
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Español.resources
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Ingles.resources

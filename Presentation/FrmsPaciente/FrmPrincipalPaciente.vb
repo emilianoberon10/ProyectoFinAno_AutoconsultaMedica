@@ -6,12 +6,13 @@ Public Class FrmPrincipalPaciente
         OpenChildForm(New FrmConsultaPaciente, PanelChildFormPac)
         lbNombre.Text = FrmLogIn.paci._pNom
         fotoPerfil.Image = ObtenerImagen(FrmLogIn.paci._ci)
-
-        'Me.lbTitulo.Text = Res.titulo_app
-        'Me.btnConsulta.Text = Res.btn_Agenda
-        'Me.btnConsulta.Text = Res.btn_consultar
-        'Me.btnHistorial.Text = Res.btn_historial
-        'Me.btnCerrar.Text = Res.btn_cerrarSesion
+        If Traductor.idioma Is "ES" Then
+            btnChangeLanguage.Image = My.Resources.spain
+        ElseIf Traductor.idioma Is "EN" Then
+            btnChangeLanguage.Image = My.Resources.england
+        End If
+        Traductor.traducirPanel(Me.PanelMenuPac)
+        Traductor.traducirPanel(Me.TopPanel)
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs)
@@ -23,22 +24,22 @@ Public Class FrmPrincipalPaciente
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btn_cerrarSesion.Click
         If MessageBox.Show("Seguro que desa salir?", "Advertencia",
          MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
             Close()
         End If
     End Sub
 
-    Private Sub btnAgendaMedica_Click(sender As Object, e As EventArgs) Handles btnAgendaMedica.Click
+    Private Sub btnAgendaMedica_Click(sender As Object, e As EventArgs) Handles btn_Agenda.Click
         OpenChildForm(New FrmAgendaMedica, PanelChildFormPac)
     End Sub
 
-    Private Sub btnHistorial_Click(sender As Object, e As EventArgs) Handles btnHistorial.Click
+    Private Sub btnHistorial_Click(sender As Object, e As EventArgs) Handles btn_historial.Click
         OpenChildForm(New FrmHistorial, PanelChildFormPac)
     End Sub
 
-    Private Sub btnConsulta_Click(sender As Object, e As EventArgs) Handles btnConsulta.Click
+    Private Sub btnConsulta_Click(sender As Object, e As EventArgs) Handles btn_consultar.Click
         OpenChildForm(New FrmConsultaPaciente, PanelChildFormPac)
     End Sub
 
@@ -71,6 +72,21 @@ Public Class FrmPrincipalPaciente
     Private Sub titleBar_MouseDown(sender As Object, e As MouseEventArgs) Handles TopPanel.MouseDown
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    End Sub
+
+    Private Sub btnChangeLanguage_Click(sender As Object, e As EventArgs) Handles btnChangeLanguage.Click
+        If Traductor.idioma Is "ES" Then
+            Traductor.idioma = "EN"
+            Traductor.traducirPanel(Me.PanelMenuPac)
+            Traductor.traducirPanel(Me.TopPanel)
+            btnChangeLanguage.Image = My.Resources.england
+        ElseIf Traductor.idioma Is "EN" Then
+            Traductor.idioma = "ES"
+            Traductor.traducirPanel(Me.PanelMenuPac)
+            Traductor.traducirPanel(Me.TopPanel)
+            btnChangeLanguage.Image = My.Resources.spain
+
+        End If
     End Sub
 
 #End Region 'region de mover form

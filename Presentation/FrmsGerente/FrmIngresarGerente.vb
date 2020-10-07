@@ -3,7 +3,8 @@
 Public Class FrmIngresarGerente
 
     Private Sub FrmIngresar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim sintoma As New Sintoma()
+        Traductor.traducirForm(Me)
+
         CargarComboBoxSintomas(cbSintoma1)
         CargarComboBoxSintomas(cbSintoma2)
         CargarComboBoxSintomas(cbSintoma3)
@@ -14,7 +15,7 @@ Public Class FrmIngresarGerente
         CargarComboBoxSintomas(cbSintoma8)
     End Sub
 
-    Private Sub btnIngresarSintoma_Click(sender As Object, e As EventArgs) Handles btnConsul.Click
+    Private Sub btnIngresarSintoma_Click(sender As Object, e As EventArgs) Handles btn_ingresar.Click
         ErrorProviderNomSint.Clear()
         Dim sintoma As Sintoma
         Dim sintomaIngresar As String = txtNombreSintoma.Text
@@ -38,7 +39,7 @@ Public Class FrmIngresarGerente
 
     End Sub
 
-    Private Sub btnIngresarEnfermedad_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+    Private Sub btnIngresarEnfermedad_Click(sender As Object, e As EventArgs) Handles btn_ingresar2.Click
         Dim enfermedad As Enfermedad
         Dim sintoma As Sintoma
         Dim define As Define

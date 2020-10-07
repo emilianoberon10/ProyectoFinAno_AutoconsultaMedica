@@ -71,12 +71,12 @@
     <Compile Include="ConexionBD.vb" />
     <Compile Include="DBChat.vb" />
     <Compile Include="DBDiagnostico.vb" />
-    <Compile Include="DBEnfermedades.vb" />
-    <Compile Include="DBGerente.vb" />
-    <Compile Include="DBImagen.vb" />
-    <Compile Include="DBMedicos.vb" />
-    <Compile Include="DBPaciente.vb" />
-    <Compile Include="DBSintomas.vb" />
+    <Compile Include="Patologias\DBEnfermedades.vb" />
+    <Compile Include="Persona\DBGerente.vb" />
+    <Compile Include="Persona\DBImagen.vb" />
+    <Compile Include="Persona\DBMedicos.vb" />
+    <Compile Include="Persona\DBPaciente.vb" />
+    <Compile Include="Patologias\DBSintomas.vb" />
     <Compile Include="DBLogin.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -93,7 +93,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SintomaDefineEnfermedad.vb" />
+    <Compile Include="Patologias\SintomaDefineEnfermedad.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -114,5 +114,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

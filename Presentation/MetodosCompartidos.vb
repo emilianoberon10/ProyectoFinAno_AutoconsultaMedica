@@ -185,4 +185,24 @@ Module MetodosCompartidos
         End If
     End Sub
 
+    Public Sub DesecharAltF4(e As KeyEventArgs)
+        If e.Alt = True Then
+            If e.KeyCode = Keys.F4 Then
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Public Sub CambiarIdioma(lengPic As PictureBox, frm As Form)
+        If Traductor.idioma Is "ES" Then
+            Traductor.idioma = "EN"
+            Traductor.traducirForm(frm)
+            lengPic.Image = My.Resources.england
+        ElseIf Traductor.idioma Is "EN" Then
+            Traductor.idioma = "ES"
+            Traductor.traducirForm(frm)
+            lengPic.Image = My.Resources.spain
+        End If
+    End Sub
+
 End Module

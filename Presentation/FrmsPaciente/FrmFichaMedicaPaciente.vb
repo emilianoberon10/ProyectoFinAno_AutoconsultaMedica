@@ -13,12 +13,12 @@ Public Class FrmFichaMedicaPaciente
 
     End Sub
 
-    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btn_aceptar.Click
 
         If txtProcedencia.Text = "" Or txtOcupacion.Text = "" Or txtMotivoConsulta.Text = "" Then
-            ErrorProvider1.SetError(lbMotiv, "Los campos con ( * ) son obligatorios.")
-            ErrorProvider1.SetError(lbOcup, "Los campos con ( * ) son obligatorios.")
-            ErrorProvider1.SetError(lbProc, "Los campos con ( * ) son obligatorios.")
+            ErrorProvider1.SetError(PFicha_motCons, "Los campos con ( * ) son obligatorios.")
+            ErrorProvider1.SetError(PFicha_ocup, "Los campos con ( * ) son obligatorios.")
+            ErrorProvider1.SetError(PFicha_proced, "Los campos con ( * ) son obligatorios.")
         Else
             ficha = New FichaMedica(FrmLogIn.paci._ci, txtProcedencia.Text,
                                      txtOcupacion.Text, txtMedicina.Text, txtMotivoConsulta.Text, txtAntecedentes.Text)

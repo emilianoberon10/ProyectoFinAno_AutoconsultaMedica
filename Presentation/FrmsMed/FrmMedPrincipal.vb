@@ -5,23 +5,25 @@ Public Class FrmMedPrincipal
     Private Sub FrmMedPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbNombre.Text = FrmLogIn.medic._pNom
         fotoPerfil.Image = ObtenerImagen(FrmLogIn.medic._ci)
-
-        'Me.lbTitulo.Text = Res.titulo_app
-        'Me.btnChats.Text = Res.btn_chats
-        'Me.btnSolicitudes.Text = Res.btn_soliChat
-        'Me.btnCerrar.Text = Res.btn_cerrarSesion
+        If Traductor.idioma Is "ES" Then
+            btnChangeLanguage.Image = My.Resources.spain
+        ElseIf Traductor.idioma Is "EN" Then
+            btnChangeLanguage.Image = My.Resources.england
+        End If
+        Traductor.traducirPanel(Me.PanelMenu)
+        Traductor.traducirPanel(Me.TopPanel)
     End Sub
 
-    Private Sub btnSolicitudes_Click(sender As Object, e As EventArgs) Handles btnSolicitudes.Click
+    Private Sub btnSolicitudes_Click(sender As Object, e As EventArgs) Handles btn_soliChat.Click
         OpenChildForm(New FrmSolicitudesChat, panelChildMedico)
     End Sub
 
-    Private Sub btnChats_Click(sender As Object, e As EventArgs) Handles btnChats.Click
+    Private Sub btnChats_Click(sender As Object, e As EventArgs) Handles btn_chats.Click
         Dim form As New FrmChats
-        form.ShowDialog()
+        form.Show()
     End Sub
 
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btn_cerrarSesion.Click
         If MessageBox.Show("Seguro que desa cerrar sesion?", "Advertencia",
          MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
             Me.Close()
@@ -87,6 +89,20 @@ Public Class FrmMedPrincipal
 
     Private Sub btnMinimize_MouseLeave(sender As Object, e As EventArgs) Handles btnMinimize.MouseLeave
         btnMinimize.BackColor = Color.FromArgb(26, 31, 55)
+    End Sub
+
+    Private Sub btnChangeLanguage_Click(sender As Object, e As EventArgs) Handles btnChangeLanguage.Click
+        If Traductor.idioma Is "ES" Then
+            Traductor.idioma = "EN"
+            Traductor.traducirPanel(Me.PanelMenu)
+            Traductor.traducirPanel(Me.TopPanel)
+            btnChangeLanguage.Image = My.Resources.england
+        ElseIf Traductor.idioma Is "EN" Then
+            Traductor.idioma = "ES"
+            Traductor.traducirPanel(Me.PanelMenu)
+            Traductor.traducirPanel(Me.TopPanel)
+            btnChangeLanguage.Image = My.Resources.spain
+        End If
     End Sub
 
 #End Region

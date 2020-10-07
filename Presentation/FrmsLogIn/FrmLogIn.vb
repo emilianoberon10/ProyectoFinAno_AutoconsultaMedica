@@ -36,9 +36,6 @@ Public Class FrmLogIn
 
 #End Region
 
-    ' Las letras In y Es al final de los labels significan Ingles y Español
-    Public lenguaje As String = "ES"
-
 #End Region
 
     'Metodo que se ejecuta al cerrar el frm principal, no el login
@@ -48,12 +45,20 @@ Public Class FrmLogIn
         txtUser.BackColor = Color.FromArgb(48, 63, 105)
         txtUser.Clear()
         txtPass.Clear()
+        If Traductor.idioma Is "ES" Then
+            btnChangeLanguage.Image = My.Resources.spain
+        ElseIf Traductor.idioma Is "EN" Then
+            btnChangeLanguage.Image = My.Resources.england
+        End If
+        Traductor.traducirForm(Me)
         Me.Show()
         txtUser.Focus()
     End Sub
 
     Private Sub FrmLogIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        SetTextos()
+        Traductor.traducirForm(Me)
+
+        'SetTextos()
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -67,7 +72,7 @@ Public Class FrmLogIn
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btn_Iniciar.Click
 
         ErrorProviderLogIn.Clear()
         If txtPass.Text.Length < 6 Then
@@ -138,7 +143,7 @@ Public Class FrmLogIn
         frmRecuPass.ShowDialog()
     End Sub
 
-    Private Sub llbCrearUsuario_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbCrearUsuarioEs.LinkClicked
+    Private Sub llbCrearUsuario_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbCrearUsuario.LinkClicked
         frmCrear.ShowDialog()
     End Sub
 
@@ -159,64 +164,11 @@ Public Class FrmLogIn
 #Region "Estilisado"
 
     Private Sub btnChangeLanguage_Click(sender As Object, e As EventArgs) Handles btnChangeLanguage.Click
-
-        If lenguaje = "ES" Then
-            btnChangeLanguage.Image = Resources.england
-            lenguaje = "EN"
-            CurrentThread.CurrentUICulture = New CultureInfo("en-US")
-
-        ElseIf lenguaje = "EN" Then
-            btnChangeLanguage.Image = Resources.spain
-            lenguaje = "ES"
-            CurrentThread.CurrentUICulture = New CultureInfo("es-ES")
-        End If
+        CambiarIdioma(btnChangeLanguage, Me)
     End Sub
 
-    Private Sub SetTextos()
-        'Metodo para setear los labels apartir del archivo Res.resx
-        With Me
-            lbUsuario.Text = Res.usuario
-            lbContraseña.Text = Res.contra
-            btnLogin.Text = Res.btn_Iniciar
-            llbCrearUsuarioEs.Text = Res.crearUsuario
-            llbForgotPassEs.Text = Res.llbForgotPassEs
-        End With
-
-        With frmInfo
-            .Label1.Text = Res.Info_rocordatorio
-            .Label2.Text = Res.Info_recordatorio2
-            .Label3.Text = Res.Info_recordatorio3
-            .llbCrearUsuario.Text = Res.crearUsuario
-            .llbRecuperarPass.Text = Res.llbForgotPassEs
-        End With
-        With frmCrear
-            .lbci.Text = Res.Persona_ci
-            .lbedad.Text = Res.Persona_edad
-            .lbTel.Text = Res.Persona_tel
-            .lbDir.Text = Res.Persona_dir
-            .lbPnom.Text = Res.Persona_pNom
-            .lbPape.Text = Res.Persona_pApe
-            .lbSnom.Text = Res.Persona_sNom
-            .lbSape.Text = Res.Persona_sApe
-            .lbCorreo.Text = Res.Persona_correo
-            .btnCancelar.Text = Res.btn_cancelar
-            .btnCrear.Text = Res.btn_crear
-        End With
-        With frmRecuPass
-            .Label1.Text = Res.RecuperarPass_titulo
-            .Label2.Text = Res.Persona_ci
-            .Label3.Text = Res.Persona_correo
-            .Label4.Text = Res.RecuperarPass_usuario
-            .Label5.Text = Res.RecuperarPass_passNueva
-            .Label6.Text = Res.RecuperarPass_passNueva2
-            .btnCancelar.Text = Res.btn_cancelar
-            .btnRecuperar.Text = Res.btn_recuperar
-            .btnRestablecer.Text = Res.btn_restablecer
-        End With
-    End Sub
-
-    Private Sub Button1_Paint(sender As Object, e As PaintEventArgs)
-        'BotonRedondeado(btnLogin)
+    Private Sub FrmLogIn_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown, txtUser.KeyDown, txtPass.KeyDown, btn_Iniciar.KeyDown
+        DesecharAltF4(e)
     End Sub
 
 #Region "funcionamiento text area"
@@ -237,7 +189,7 @@ Public Class FrmLogIn
             SendKeys.Send("{TAB}")
             e.Handled = True
             'aqui genero el evento click
-            btnLogin.PerformClick()
+            btn_Iniciar.PerformClick()
         End If
     End Sub
 

@@ -44,8 +44,8 @@ Partial Class FrmLogIn
         Me.ErrorProviderUserMal = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProviderUserBien = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProviderPass = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.btnLogin = New Guna.UI2.WinForms.Guna2Button()
-        Me.llbCrearUsuarioEs = New System.Windows.Forms.LinkLabel()
+        Me.btn_Iniciar = New Guna.UI2.WinForms.Guna2Button()
+        Me.llbCrearUsuario = New System.Windows.Forms.LinkLabel()
         Me.llbForgotPassEs = New System.Windows.Forms.LinkLabel()
         Me.topPanel.SuspendLayout()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -182,7 +182,7 @@ Partial Class FrmLogIn
         Me.lbUsuario.AutoSize = True
         Me.lbUsuario.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ErrorProviderUserBien.SetIconAlignment(Me.lbUsuario, System.Windows.Forms.ErrorIconAlignment.TopRight)
-        Me.lbUsuario.Location = New System.Drawing.Point(40, 239)
+        Me.lbUsuario.Location = New System.Drawing.Point(41, 240)
         Me.lbUsuario.Name = "lbUsuario"
         Me.lbUsuario.Size = New System.Drawing.Size(77, 21)
         Me.lbUsuario.TabIndex = 10
@@ -259,49 +259,55 @@ Partial Class FrmLogIn
         Me.ErrorProviderPass.ContainerControl = Me
         Me.ErrorProviderPass.Icon = CType(resources.GetObject("ErrorProviderPass.Icon"), System.Drawing.Icon)
         '
-        'btnLogin
+        'btn_Iniciar
         '
-        Me.btnLogin.Animated = True
-        Me.btnLogin.BackColor = System.Drawing.Color.Transparent
-        Me.btnLogin.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnLogin.BorderRadius = 20
-        Me.btnLogin.BorderThickness = 2
-        Me.btnLogin.CheckedState.Parent = Me.btnLogin
-        Me.btnLogin.CustomImages.Parent = Me.btnLogin
-        Me.btnLogin.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnLogin.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnLogin.HoverState.Parent = Me.btnLogin
-        Me.btnLogin.Location = New System.Drawing.Point(39, 423)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.btnLogin.ShadowDecoration.BorderRadius = 20
-        Me.btnLogin.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.btnLogin.ShadowDecoration.Depth = 15
-        Me.btnLogin.ShadowDecoration.Enabled = True
-        Me.btnLogin.ShadowDecoration.Parent = Me.btnLogin
-        Me.btnLogin.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(6)
-        Me.btnLogin.Size = New System.Drawing.Size(352, 50)
-        Me.btnLogin.TabIndex = 11
-        Me.btnLogin.Text = "INICIAR"
+        Me.btn_Iniciar.Animated = True
+        Me.btn_Iniciar.BackColor = System.Drawing.Color.Transparent
+        Me.btn_Iniciar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_Iniciar.BorderRadius = 20
+        Me.btn_Iniciar.BorderThickness = 2
+        Me.btn_Iniciar.CheckedState.Parent = Me.btn_Iniciar
+        Me.btn_Iniciar.CustomImages.Parent = Me.btn_Iniciar
+        Me.btn_Iniciar.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.btn_Iniciar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_Iniciar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_Iniciar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_Iniciar.HoverState.Parent = Me.btn_Iniciar
+        Me.btn_Iniciar.Location = New System.Drawing.Point(39, 423)
+        Me.btn_Iniciar.Name = "btn_Iniciar"
+        Me.btn_Iniciar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.btn_Iniciar.ShadowDecoration.BorderRadius = 20
+        Me.btn_Iniciar.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btn_Iniciar.ShadowDecoration.Depth = 15
+        Me.btn_Iniciar.ShadowDecoration.Enabled = True
+        Me.btn_Iniciar.ShadowDecoration.Parent = Me.btn_Iniciar
+        Me.btn_Iniciar.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(6)
+        Me.btn_Iniciar.Size = New System.Drawing.Size(352, 50)
+        Me.btn_Iniciar.TabIndex = 11
+        Me.btn_Iniciar.Text = "INICIAR"
         '
-        'llbCrearUsuarioEs
+        'llbCrearUsuario
         '
-        Me.llbCrearUsuarioEs.AutoSize = True
-        Me.llbCrearUsuarioEs.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llbCrearUsuarioEs.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.llbCrearUsuarioEs.LinkColor = System.Drawing.Color.Silver
-        Me.llbCrearUsuarioEs.Location = New System.Drawing.Point(151, 566)
-        Me.llbCrearUsuarioEs.Name = "llbCrearUsuarioEs"
-        Me.llbCrearUsuarioEs.Size = New System.Drawing.Size(129, 21)
-        Me.llbCrearUsuarioEs.TabIndex = 12
-        Me.llbCrearUsuarioEs.TabStop = True
-        Me.llbCrearUsuarioEs.Text = "CREAR USUARIO"
-        Me.llbCrearUsuarioEs.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.llbCrearUsuario.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.llbCrearUsuario.AutoSize = True
+        Me.llbCrearUsuario.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llbCrearUsuario.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.llbCrearUsuario.LinkColor = System.Drawing.Color.Silver
+        Me.llbCrearUsuario.Location = New System.Drawing.Point(151, 562)
+        Me.llbCrearUsuario.Name = "llbCrearUsuario"
+        Me.llbCrearUsuario.Size = New System.Drawing.Size(129, 21)
+        Me.llbCrearUsuario.TabIndex = 12
+        Me.llbCrearUsuario.TabStop = True
+        Me.llbCrearUsuario.Text = "CREAR USUARIO"
+        Me.llbCrearUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'llbForgotPassEs
         '
+        Me.llbForgotPassEs.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.llbForgotPassEs.AutoSize = True
         Me.llbForgotPassEs.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.llbForgotPassEs.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
@@ -312,7 +318,7 @@ Partial Class FrmLogIn
         Me.llbForgotPassEs.TabIndex = 13
         Me.llbForgotPassEs.TabStop = True
         Me.llbForgotPassEs.Text = "OLVIDO SU CONTRASEÑA ?"
-        Me.llbForgotPassEs.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.llbForgotPassEs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmLogIn
         '
@@ -320,9 +326,9 @@ Partial Class FrmLogIn
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(430, 600)
-        Me.Controls.Add(Me.llbCrearUsuarioEs)
+        Me.Controls.Add(Me.llbCrearUsuario)
         Me.Controls.Add(Me.llbForgotPassEs)
-        Me.Controls.Add(Me.btnLogin)
+        Me.Controls.Add(Me.btn_Iniciar)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lbContraseña)
         Me.Controls.Add(Me.lbUsuario)
@@ -378,7 +384,7 @@ Partial Class FrmLogIn
     Friend WithEvents ErrorProviderUserMal As ErrorProvider
     Friend WithEvents ErrorProviderUserBien As ErrorProvider
     Friend WithEvents ErrorProviderPass As ErrorProvider
-    Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents llbCrearUsuarioEs As LinkLabel
+    Friend WithEvents btn_Iniciar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents llbCrearUsuario As LinkLabel
     Friend WithEvents llbForgotPassEs As LinkLabel
 End Class

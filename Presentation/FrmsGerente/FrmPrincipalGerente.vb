@@ -5,35 +5,35 @@ Public Class FrmPrincipalGerente
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbNombre.Text = FrmLogIn.gere._pNom
         fotoPerfil.Image = ObtenerImagen(FrmLogIn.gere._ci)
-
-        'Me.lbTitulo.Text = Res.titulo_app
-        'Me.btnIngresar.Text = Res.btn_ingresar
-        'Me.btnIngresarMedico.Text = Res.btn_ingrMed
-        'Me.btnModificar.Text = Res.btn_modificar
-        'Me.BtnEliminar.Text = Res.btn_eliminar
-        'Me.btnCerrar.Text = Res.btn_cerrarSesion
+        Traductor.traducirPanel(PanelMenu)
+        Traductor.traducirPanel(TopPanel)
+        If Traductor.idioma Is "ES" Then
+            btnChangeLanguage.Image = My.Resources.spain
+        ElseIf Traductor.idioma Is "EN" Then
+            btnChangeLanguage.Image = My.Resources.england
+        End If
     End Sub
 
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btn_cerrarSesion.Click
         If MessageBox.Show("Seguro que desa salir?", "Advertencia",
          MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
             Me.Close()
         End If
     End Sub
 
-    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnSolicitudes.Click
+    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btn_patologia.Click
         OpenChildForm(New FrmIngresarGerente, PanelChildForm)
     End Sub
 
-    Private Sub btnIngresarMedico_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+    Private Sub btnIngresarMedico_Click(sender As Object, e As EventArgs) Handles btn_ingrMed.Click
         OpenChildForm(New FrmMedicoGerente, PanelChildForm)
     End Sub
 
-    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btn_modificar.Click
         OpenChildForm(New FrmModificarGerente, PanelChildForm)
     End Sub
 
-    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
         OpenChildForm(New FrmEliminarGerente, PanelChildForm)
     End Sub
 
@@ -96,6 +96,21 @@ Public Class FrmPrincipalGerente
 
     Private Sub topPanel_Paint(sender As Object, e As PaintEventArgs) Handles TopPanel.Paint
 
+    End Sub
+
+    Private Sub btnChangeLanguage_Click(sender As Object, e As EventArgs) Handles btnChangeLanguage.Click
+        If Traductor.idioma Is "ES" Then
+            Traductor.idioma = "EN"
+            Traductor.traducirPanel(Me.PanelMenu)
+            Traductor.traducirPanel(Me.TopPanel)
+            btnChangeLanguage.Image = My.Resources.england
+        ElseIf Traductor.idioma Is "EN" Then
+            Traductor.idioma = "ES"
+            Traductor.traducirPanel(Me.PanelMenu)
+            Traductor.traducirPanel(Me.TopPanel)
+            btnChangeLanguage.Image = My.Resources.spain
+
+        End If
     End Sub
 
 #End Region 'region de mover form

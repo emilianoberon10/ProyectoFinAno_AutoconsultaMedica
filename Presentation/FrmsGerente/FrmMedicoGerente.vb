@@ -5,6 +5,8 @@ Public Class FrmMedicoGerente
 
     Private Sub FrmMedico_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarComboBoxEspec(cbEsp)
+        Traductor.traducirForm(Me)
+        Traductor.traducirPanel(Panel1)
     End Sub
 
     Private Function ComprobarDatos() As Boolean
@@ -17,11 +19,11 @@ Public Class FrmMedicoGerente
         End If
     End Function
 
-    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnConsul.Click
+    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btn_ingresar.Click
 
         If ComprobarDatos() Then
 
-            ErrorProvider1.SetError(Label1, "Todos los campos son obligatorios")
+            ErrorProvider1.SetError(Persona_ci, "Todos los campos son obligatorios")
             General.GetForm(Estado.Error, "Todos los campos son obligatorios")
         Else
             medico = New Medico()
@@ -130,7 +132,7 @@ Public Class FrmMedicoGerente
         DesecharCaracteresEspeciales(e)
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Persona_lugarTrabajo.Click
 
     End Sub
 

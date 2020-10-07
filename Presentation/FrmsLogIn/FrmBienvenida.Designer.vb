@@ -26,8 +26,8 @@ Partial Class FrmBienvenida
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBienvenida))
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.app_titulo = New System.Windows.Forms.Label()
+        Me.Bienvenido = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lbNombre = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -58,27 +58,27 @@ Partial Class FrmBienvenida
         Me.LineShape1.Y1 = 52
         Me.LineShape1.Y2 = 52
         '
-        'Label1
+        'app_titulo
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(55, 6)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(521, 40)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "SISTEMA DE AUTOCONSULTA MEDICA"
+        Me.app_titulo.AutoSize = True
+        Me.app_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.app_titulo.ForeColor = System.Drawing.Color.Silver
+        Me.app_titulo.Location = New System.Drawing.Point(55, 6)
+        Me.app_titulo.Name = "app_titulo"
+        Me.app_titulo.Size = New System.Drawing.Size(521, 40)
+        Me.app_titulo.TabIndex = 1
+        Me.app_titulo.Text = "SISTEMA DE AUTOCONSULTA MEDICA"
         '
-        'Label2
+        'Bienvenido
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(164, 69)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(136, 30)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "BIENVENIDO"
+        Me.Bienvenido.AutoSize = True
+        Me.Bienvenido.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Bienvenido.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.Bienvenido.Location = New System.Drawing.Point(164, 69)
+        Me.Bienvenido.Name = "Bienvenido"
+        Me.Bienvenido.Size = New System.Drawing.Size(136, 30)
+        Me.Bienvenido.TabIndex = 1
+        Me.Bienvenido.Text = "BIENVENIDO"
         '
         'PictureBox1
         '
@@ -162,8 +162,8 @@ Partial Class FrmBienvenida
         Me.Controls.Add(Me.CircularProgressBar1)
         Me.Controls.Add(Me.lbNombre)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Bienvenido)
+        Me.Controls.Add(Me.app_titulo)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -180,8 +180,8 @@ Partial Class FrmBienvenida
 
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As PowerPacks.LineShape
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents app_titulo As Label
+    Friend WithEvents Bienvenido As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lbNombre As Label
     Friend WithEvents Timer1 As Timer

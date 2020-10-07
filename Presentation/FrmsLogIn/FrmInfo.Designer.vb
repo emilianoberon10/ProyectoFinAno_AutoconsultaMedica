@@ -23,58 +23,58 @@ Partial Class FrmInfo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmInfo))
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.llbRecuperarPass = New System.Windows.Forms.LinkLabel()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lbInfo_rocordatorio1 = New System.Windows.Forms.Label()
+        Me.lbInfo_recordatorio2 = New System.Windows.Forms.Label()
+        Me.llbForgotPassEs = New System.Windows.Forms.LinkLabel()
+        Me.lbInfo_recordatorio3 = New System.Windows.Forms.Label()
         Me.llbCrearUsuario = New System.Windows.Forms.LinkLabel()
-        Me.btnCerrar = New Guna.UI2.WinForms.Guna2Button()
+        Me.btn_cerrar = New Guna.UI2.WinForms.Guna2Button()
         Me.SuspendLayout()
         '
-        'Label1
+        'lbInfo_rocordatorio1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(429, 21)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Recuerde que la cedula NO debe contener puntos ni guiones"
+        Me.lbInfo_rocordatorio1.AutoSize = True
+        Me.lbInfo_rocordatorio1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbInfo_rocordatorio1.ForeColor = System.Drawing.Color.Silver
+        Me.lbInfo_rocordatorio1.Location = New System.Drawing.Point(8, 9)
+        Me.lbInfo_rocordatorio1.Name = "lbInfo_rocordatorio1"
+        Me.lbInfo_rocordatorio1.Size = New System.Drawing.Size(429, 21)
+        Me.lbInfo_rocordatorio1.TabIndex = 0
+        Me.lbInfo_rocordatorio1.Text = "Recuerde que la cedula NO debe contener puntos ni guiones"
         '
-        'Label2
+        'lbInfo_recordatorio2
         '
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(12, 45)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(405, 71)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "En caso de no haber cambiado su contraseña, esta sera su cedula. " & Global.Microsoft.VisualBasic.ChrW(10) & "Si la modifico " &
+        Me.lbInfo_recordatorio2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbInfo_recordatorio2.ForeColor = System.Drawing.Color.Silver
+        Me.lbInfo_recordatorio2.Location = New System.Drawing.Point(8, 45)
+        Me.lbInfo_recordatorio2.Name = "lbInfo_recordatorio2"
+        Me.lbInfo_recordatorio2.Size = New System.Drawing.Size(405, 71)
+        Me.lbInfo_recordatorio2.TabIndex = 0
+        Me.lbInfo_recordatorio2.Text = "En caso de no haber cambiado su contraseña, esta sera su cedula. " & Global.Microsoft.VisualBasic.ChrW(10) & "Si la modifico " &
     "puede dar click en el siguiente enlace para restablecerla"
         '
-        'llbRecuperarPass
+        'llbForgotPassEs
         '
-        Me.llbRecuperarPass.AutoSize = True
-        Me.llbRecuperarPass.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llbRecuperarPass.ForeColor = System.Drawing.Color.Silver
-        Me.llbRecuperarPass.LinkColor = System.Drawing.Color.Silver
-        Me.llbRecuperarPass.Location = New System.Drawing.Point(12, 116)
-        Me.llbRecuperarPass.Name = "llbRecuperarPass"
-        Me.llbRecuperarPass.Size = New System.Drawing.Size(157, 21)
-        Me.llbRecuperarPass.TabIndex = 1
-        Me.llbRecuperarPass.TabStop = True
-        Me.llbRecuperarPass.Text = "recuperar contraseña"
+        Me.llbForgotPassEs.AutoSize = True
+        Me.llbForgotPassEs.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llbForgotPassEs.ForeColor = System.Drawing.Color.Silver
+        Me.llbForgotPassEs.LinkColor = System.Drawing.Color.Silver
+        Me.llbForgotPassEs.Location = New System.Drawing.Point(8, 116)
+        Me.llbForgotPassEs.Name = "llbForgotPassEs"
+        Me.llbForgotPassEs.Size = New System.Drawing.Size(157, 21)
+        Me.llbForgotPassEs.TabIndex = 1
+        Me.llbForgotPassEs.TabStop = True
+        Me.llbForgotPassEs.Text = "recuperar contraseña"
         '
-        'Label3
+        'lbInfo_recordatorio3
         '
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Silver
-        Me.Label3.Location = New System.Drawing.Point(12, 150)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(303, 21)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "En caso de no tener una cuenta de click aquí"
+        Me.lbInfo_recordatorio3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbInfo_recordatorio3.ForeColor = System.Drawing.Color.Silver
+        Me.lbInfo_recordatorio3.Location = New System.Drawing.Point(8, 150)
+        Me.lbInfo_recordatorio3.Name = "lbInfo_recordatorio3"
+        Me.lbInfo_recordatorio3.Size = New System.Drawing.Size(303, 21)
+        Me.lbInfo_recordatorio3.TabIndex = 0
+        Me.lbInfo_recordatorio3.Text = "En caso de no tener una cuenta de click aquí"
         '
         'llbCrearUsuario
         '
@@ -82,43 +82,43 @@ Partial Class FrmInfo
         Me.llbCrearUsuario.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.llbCrearUsuario.ForeColor = System.Drawing.Color.Silver
         Me.llbCrearUsuario.LinkColor = System.Drawing.Color.Silver
-        Me.llbCrearUsuario.Location = New System.Drawing.Point(293, 150)
+        Me.llbCrearUsuario.Location = New System.Drawing.Point(289, 150)
         Me.llbCrearUsuario.Name = "llbCrearUsuario"
         Me.llbCrearUsuario.Size = New System.Drawing.Size(58, 21)
         Me.llbCrearUsuario.TabIndex = 1
         Me.llbCrearUsuario.TabStop = True
         Me.llbCrearUsuario.Text = "CREAR"
         '
-        'btnCerrar
+        'btn_cerrar
         '
-        Me.btnCerrar.Animated = True
-        Me.btnCerrar.BorderColor = System.Drawing.Color.Transparent
-        Me.btnCerrar.BorderRadius = 20
-        Me.btnCerrar.CheckedState.Parent = Me.btnCerrar
-        Me.btnCerrar.CustomImages.Parent = Me.btnCerrar
-        Me.btnCerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCerrar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCerrar.ForeColor = System.Drawing.Color.White
-        Me.btnCerrar.HoverState.Parent = Me.btnCerrar
-        Me.btnCerrar.Location = New System.Drawing.Point(113, 234)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.ShadowDecoration.Parent = Me.btnCerrar
-        Me.btnCerrar.Size = New System.Drawing.Size(200, 40)
-        Me.btnCerrar.TabIndex = 5
-        Me.btnCerrar.Text = "CERRAR"
+        Me.btn_cerrar.Animated = True
+        Me.btn_cerrar.BorderColor = System.Drawing.Color.Transparent
+        Me.btn_cerrar.BorderRadius = 20
+        Me.btn_cerrar.CheckedState.Parent = Me.btn_cerrar
+        Me.btn_cerrar.CustomImages.Parent = Me.btn_cerrar
+        Me.btn_cerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_cerrar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cerrar.ForeColor = System.Drawing.Color.White
+        Me.btn_cerrar.HoverState.Parent = Me.btn_cerrar
+        Me.btn_cerrar.Location = New System.Drawing.Point(122, 234)
+        Me.btn_cerrar.Name = "btn_cerrar"
+        Me.btn_cerrar.ShadowDecoration.Parent = Me.btn_cerrar
+        Me.btn_cerrar.Size = New System.Drawing.Size(200, 40)
+        Me.btn_cerrar.TabIndex = 5
+        Me.btn_cerrar.Text = "CERRAR"
         '
         'FrmInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(426, 281)
-        Me.Controls.Add(Me.btnCerrar)
+        Me.ClientSize = New System.Drawing.Size(445, 281)
+        Me.Controls.Add(Me.btn_cerrar)
         Me.Controls.Add(Me.llbCrearUsuario)
-        Me.Controls.Add(Me.llbRecuperarPass)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.llbForgotPassEs)
+        Me.Controls.Add(Me.lbInfo_recordatorio3)
+        Me.Controls.Add(Me.lbInfo_recordatorio2)
+        Me.Controls.Add(Me.lbInfo_rocordatorio1)
         Me.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -131,10 +131,10 @@ Partial Class FrmInfo
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents llbRecuperarPass As LinkLabel
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lbInfo_rocordatorio1 As Label
+    Friend WithEvents lbInfo_recordatorio2 As Label
+    Friend WithEvents llbForgotPassEs As LinkLabel
+    Friend WithEvents lbInfo_recordatorio3 As Label
     Friend WithEvents llbCrearUsuario As LinkLabel
-    Friend WithEvents btnCerrar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_cerrar As Guna.UI2.WinForms.Guna2Button
 End Class

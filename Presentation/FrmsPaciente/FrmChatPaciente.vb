@@ -34,7 +34,6 @@ Public Class FrmChatPaciente
                 FrmLogIn.paci.EnviarMsj(msj)
                 txtMensaje.Text = ""
                 txtMensaje.Focus()
-
             Catch ex As Exception
                 General.GetForm(Estado.Error, ex.Message)
             End Try
@@ -65,6 +64,10 @@ Public Class FrmChatPaciente
     Private Sub titleBar_MouseDown(sender As Object, e As MouseEventArgs) Handles TopPanel.MouseDown
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    End Sub
+
+    Private Sub btnEnviarMensaje_KeyDown(sender As Object, e As KeyEventArgs) Handles txtMensaje.KeyDown, btnEnviarMensaje.KeyDown, btnCerrar.KeyDown
+        DesecharAltF4(e)
     End Sub
 
 #End Region 'region de mover form

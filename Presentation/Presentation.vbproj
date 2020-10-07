@@ -256,8 +256,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Traduccion\Res.en-US.Designer.vb">
-      <DependentUpon>Res.en-US.resx</DependentUpon>
+    <Compile Include="Traduccion\Español.Designer.vb">
+      <DependentUpon>Español.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Traduccion\Ingles.Designer.vb">
+      <DependentUpon>Ingles.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -266,6 +271,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Res.resx</DependentUpon>
     </Compile>
+    <Compile Include="Traduccion\Traductor.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmNotificacion.resx">
@@ -343,9 +349,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Traduccion\Res.en-US.resx">
+    <EmbeddedResource Include="Traduccion\Español.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Res.en-US.Designer.vb</LastGenOutput>
+      <LastGenOutput>Español.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Traduccion\Ingles.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Ingles.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="Traduccion\Res.resx">

@@ -24,39 +24,39 @@ Partial Class FrmFichaMedicaPaciente
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFichaMedicaPaciente))
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PFicha_titulo = New System.Windows.Forms.Label()
         Me.txtMedicina = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PFicha_cual = New System.Windows.Forms.Label()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.txtOcupacion = New System.Windows.Forms.TextBox()
-        Me.lbOcup = New System.Windows.Forms.Label()
+        Me.PFicha_ocup = New System.Windows.Forms.Label()
         Me.ckbMedicina = New System.Windows.Forms.CheckBox()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.PFicha_tomaMed = New System.Windows.Forms.Label()
         Me.txtMotivoConsulta = New System.Windows.Forms.TextBox()
-        Me.lbMotiv = New System.Windows.Forms.Label()
+        Me.PFicha_motCons = New System.Windows.Forms.Label()
         Me.txtProcedencia = New System.Windows.Forms.TextBox()
-        Me.lbProc = New System.Windows.Forms.Label()
+        Me.PFicha_proced = New System.Windows.Forms.Label()
         Me.txtAntecedentes = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.PFicha_antecedentes = New System.Windows.Forms.Label()
         Me.chbAntecedentes = New System.Windows.Forms.CheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.btnLogin = New Guna.UI2.WinForms.Guna2Button()
+        Me.btn_aceptar = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label2
+        'PFicha_titulo
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(72, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(214, 40)
-        Me.Label2.TabIndex = 30
-        Me.Label2.Text = "FICHA MEDICA"
-        Me.Label2.UseWaitCursor = True
+        Me.PFicha_titulo.AutoSize = True
+        Me.PFicha_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PFicha_titulo.ForeColor = System.Drawing.Color.Silver
+        Me.PFicha_titulo.Location = New System.Drawing.Point(72, 9)
+        Me.PFicha_titulo.Name = "PFicha_titulo"
+        Me.PFicha_titulo.Size = New System.Drawing.Size(214, 40)
+        Me.PFicha_titulo.TabIndex = 30
+        Me.PFicha_titulo.Text = "FICHA MEDICA"
+        Me.PFicha_titulo.UseWaitCursor = True
         '
         'txtMedicina
         '
@@ -71,18 +71,18 @@ Partial Class FrmFichaMedicaPaciente
         Me.txtMedicina.TabIndex = 31
         Me.txtMedicina.UseWaitCursor = True
         '
-        'Label1
+        'PFicha_cual
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(5, 89)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(41, 21)
-        Me.Label1.TabIndex = 32
-        Me.Label1.Text = "Cual"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.UseWaitCursor = True
+        Me.PFicha_cual.AutoSize = True
+        Me.PFicha_cual.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PFicha_cual.ForeColor = System.Drawing.Color.Silver
+        Me.PFicha_cual.Location = New System.Drawing.Point(5, 89)
+        Me.PFicha_cual.Name = "PFicha_cual"
+        Me.PFicha_cual.Size = New System.Drawing.Size(41, 21)
+        Me.PFicha_cual.TabIndex = 32
+        Me.PFicha_cual.Text = "Cual"
+        Me.PFicha_cual.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PFicha_cual.UseWaitCursor = True
         '
         'ShapeContainer1
         '
@@ -127,18 +127,18 @@ Partial Class FrmFichaMedicaPaciente
         Me.txtOcupacion.TabIndex = 31
         Me.txtOcupacion.UseWaitCursor = True
         '
-        'lbOcup
+        'PFicha_ocup
         '
-        Me.lbOcup.AutoSize = True
-        Me.lbOcup.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbOcup.ForeColor = System.Drawing.Color.Silver
-        Me.lbOcup.Location = New System.Drawing.Point(206, 89)
-        Me.lbOcup.Name = "lbOcup"
-        Me.lbOcup.Size = New System.Drawing.Size(91, 21)
-        Me.lbOcup.TabIndex = 32
-        Me.lbOcup.Text = "Ocupacion*"
-        Me.lbOcup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lbOcup.UseWaitCursor = True
+        Me.PFicha_ocup.AutoSize = True
+        Me.PFicha_ocup.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PFicha_ocup.ForeColor = System.Drawing.Color.Silver
+        Me.PFicha_ocup.Location = New System.Drawing.Point(206, 89)
+        Me.PFicha_ocup.Name = "PFicha_ocup"
+        Me.PFicha_ocup.Size = New System.Drawing.Size(91, 21)
+        Me.PFicha_ocup.TabIndex = 32
+        Me.PFicha_ocup.Text = "Ocupacion*"
+        Me.PFicha_ocup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PFicha_ocup.UseWaitCursor = True
         '
         'ckbMedicina
         '
@@ -150,18 +150,18 @@ Partial Class FrmFichaMedicaPaciente
         Me.ckbMedicina.UseVisualStyleBackColor = True
         Me.ckbMedicina.UseWaitCursor = True
         '
-        'Label4
+        'PFicha_tomaMed
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Silver
-        Me.Label4.Location = New System.Drawing.Point(1, 65)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(128, 21)
-        Me.Label4.TabIndex = 32
-        Me.Label4.Text = "¿Toma medicina?"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.UseWaitCursor = True
+        Me.PFicha_tomaMed.AutoSize = True
+        Me.PFicha_tomaMed.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PFicha_tomaMed.ForeColor = System.Drawing.Color.Silver
+        Me.PFicha_tomaMed.Location = New System.Drawing.Point(1, 65)
+        Me.PFicha_tomaMed.Name = "PFicha_tomaMed"
+        Me.PFicha_tomaMed.Size = New System.Drawing.Size(128, 21)
+        Me.PFicha_tomaMed.TabIndex = 32
+        Me.PFicha_tomaMed.Text = "¿Toma medicina?"
+        Me.PFicha_tomaMed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PFicha_tomaMed.UseWaitCursor = True
         '
         'txtMotivoConsulta
         '
@@ -175,18 +175,18 @@ Partial Class FrmFichaMedicaPaciente
         Me.txtMotivoConsulta.TabIndex = 35
         Me.txtMotivoConsulta.UseWaitCursor = True
         '
-        'lbMotiv
+        'PFicha_motCons
         '
-        Me.lbMotiv.AutoSize = True
-        Me.lbMotiv.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbMotiv.ForeColor = System.Drawing.Color.Silver
-        Me.lbMotiv.Location = New System.Drawing.Point(3, 147)
-        Me.lbMotiv.Name = "lbMotiv"
-        Me.lbMotiv.Size = New System.Drawing.Size(165, 21)
-        Me.lbMotiv.TabIndex = 32
-        Me.lbMotiv.Text = "Motivo de la consulta*"
-        Me.lbMotiv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lbMotiv.UseWaitCursor = True
+        Me.PFicha_motCons.AutoSize = True
+        Me.PFicha_motCons.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PFicha_motCons.ForeColor = System.Drawing.Color.Silver
+        Me.PFicha_motCons.Location = New System.Drawing.Point(3, 147)
+        Me.PFicha_motCons.Name = "PFicha_motCons"
+        Me.PFicha_motCons.Size = New System.Drawing.Size(165, 21)
+        Me.PFicha_motCons.TabIndex = 32
+        Me.PFicha_motCons.Text = "Motivo de la consulta*"
+        Me.PFicha_motCons.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PFicha_motCons.UseWaitCursor = True
         '
         'txtProcedencia
         '
@@ -200,18 +200,18 @@ Partial Class FrmFichaMedicaPaciente
         Me.txtProcedencia.TabIndex = 35
         Me.txtProcedencia.UseWaitCursor = True
         '
-        'lbProc
+        'PFicha_proced
         '
-        Me.lbProc.AutoSize = True
-        Me.lbProc.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProc.ForeColor = System.Drawing.Color.Silver
-        Me.lbProc.Location = New System.Drawing.Point(206, 143)
-        Me.lbProc.Name = "lbProc"
-        Me.lbProc.Size = New System.Drawing.Size(101, 21)
-        Me.lbProc.TabIndex = 32
-        Me.lbProc.Text = "Procedencia*"
-        Me.lbProc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lbProc.UseWaitCursor = True
+        Me.PFicha_proced.AutoSize = True
+        Me.PFicha_proced.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PFicha_proced.ForeColor = System.Drawing.Color.Silver
+        Me.PFicha_proced.Location = New System.Drawing.Point(206, 143)
+        Me.PFicha_proced.Name = "PFicha_proced"
+        Me.PFicha_proced.Size = New System.Drawing.Size(101, 21)
+        Me.PFicha_proced.TabIndex = 32
+        Me.PFicha_proced.Text = "Procedencia*"
+        Me.PFicha_proced.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PFicha_proced.UseWaitCursor = True
         '
         'txtAntecedentes
         '
@@ -226,18 +226,18 @@ Partial Class FrmFichaMedicaPaciente
         Me.txtAntecedentes.TabIndex = 35
         Me.txtAntecedentes.UseWaitCursor = True
         '
-        'Label5
+        'PFicha_antecedentes
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Silver
-        Me.Label5.Location = New System.Drawing.Point(2, 266)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(103, 21)
-        Me.Label5.TabIndex = 32
-        Me.Label5.Text = "Antecedentes"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.UseWaitCursor = True
+        Me.PFicha_antecedentes.AutoSize = True
+        Me.PFicha_antecedentes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PFicha_antecedentes.ForeColor = System.Drawing.Color.Silver
+        Me.PFicha_antecedentes.Location = New System.Drawing.Point(2, 266)
+        Me.PFicha_antecedentes.Name = "PFicha_antecedentes"
+        Me.PFicha_antecedentes.Size = New System.Drawing.Size(103, 21)
+        Me.PFicha_antecedentes.TabIndex = 32
+        Me.PFicha_antecedentes.Text = "Antecedentes"
+        Me.PFicha_antecedentes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PFicha_antecedentes.UseWaitCursor = True
         '
         'chbAntecedentes
         '
@@ -254,32 +254,33 @@ Partial Class FrmFichaMedicaPaciente
         Me.ErrorProvider1.ContainerControl = Me
         Me.ErrorProvider1.Icon = CType(resources.GetObject("ErrorProvider1.Icon"), System.Drawing.Icon)
         '
-        'btnLogin
+        'btn_aceptar
         '
-        Me.btnLogin.Animated = True
-        Me.btnLogin.BackColor = System.Drawing.Color.Transparent
-        Me.btnLogin.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnLogin.BorderRadius = 20
-        Me.btnLogin.BorderThickness = 2
-        Me.btnLogin.CheckedState.Parent = Me.btnLogin
-        Me.btnLogin.CustomImages.Parent = Me.btnLogin
-        Me.btnLogin.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnLogin.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnLogin.HoverState.Parent = Me.btnLogin
-        Me.btnLogin.Location = New System.Drawing.Point(3, 380)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.btnLogin.ShadowDecoration.BorderRadius = 20
-        Me.btnLogin.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.btnLogin.ShadowDecoration.Depth = 15
-        Me.btnLogin.ShadowDecoration.Enabled = True
-        Me.btnLogin.ShadowDecoration.Parent = Me.btnLogin
-        Me.btnLogin.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(6)
-        Me.btnLogin.Size = New System.Drawing.Size(353, 50)
-        Me.btnLogin.TabIndex = 37
-        Me.btnLogin.Text = "ACEPTAR"
+        Me.btn_aceptar.Animated = True
+        Me.btn_aceptar.BackColor = System.Drawing.Color.Transparent
+        Me.btn_aceptar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_aceptar.BorderRadius = 20
+        Me.btn_aceptar.BorderThickness = 2
+        Me.btn_aceptar.CheckedState.Parent = Me.btn_aceptar
+        Me.btn_aceptar.CustomImages.Parent = Me.btn_aceptar
+        Me.btn_aceptar.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.btn_aceptar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_aceptar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_aceptar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_aceptar.HoverState.Parent = Me.btn_aceptar
+        Me.btn_aceptar.Location = New System.Drawing.Point(3, 380)
+        Me.btn_aceptar.Name = "btn_aceptar"
+        Me.btn_aceptar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.btn_aceptar.ShadowDecoration.BorderRadius = 20
+        Me.btn_aceptar.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btn_aceptar.ShadowDecoration.Depth = 15
+        Me.btn_aceptar.ShadowDecoration.Enabled = True
+        Me.btn_aceptar.ShadowDecoration.Parent = Me.btn_aceptar
+        Me.btn_aceptar.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(6)
+        Me.btn_aceptar.Size = New System.Drawing.Size(353, 50)
+        Me.btn_aceptar.TabIndex = 37
+        Me.btn_aceptar.Text = "ACEPTAR"
+        Me.btn_aceptar.UseWaitCursor = True
         '
         'FrmFichaMedicaPaciente
         '
@@ -288,21 +289,21 @@ Partial Class FrmFichaMedicaPaciente
         Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(359, 437)
-        Me.Controls.Add(Me.btnLogin)
+        Me.Controls.Add(Me.btn_aceptar)
         Me.Controls.Add(Me.chbAntecedentes)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.PFicha_antecedentes)
         Me.Controls.Add(Me.txtAntecedentes)
-        Me.Controls.Add(Me.lbProc)
+        Me.Controls.Add(Me.PFicha_proced)
         Me.Controls.Add(Me.txtProcedencia)
-        Me.Controls.Add(Me.lbMotiv)
+        Me.Controls.Add(Me.PFicha_motCons)
         Me.Controls.Add(Me.txtMotivoConsulta)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.PFicha_tomaMed)
         Me.Controls.Add(Me.ckbMedicina)
-        Me.Controls.Add(Me.lbOcup)
+        Me.Controls.Add(Me.PFicha_ocup)
         Me.Controls.Add(Me.txtOcupacion)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PFicha_cual)
         Me.Controls.Add(Me.txtMedicina)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.PFicha_titulo)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -315,23 +316,23 @@ Partial Class FrmFichaMedicaPaciente
 
     End Sub
 
-    Friend WithEvents Label2 As Label
+    Friend WithEvents PFicha_titulo As Label
     Friend WithEvents txtMedicina As TextBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents PFicha_cual As Label
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As PowerPacks.LineShape
     Friend WithEvents LineShape2 As PowerPacks.LineShape
     Friend WithEvents txtOcupacion As TextBox
-    Friend WithEvents lbOcup As Label
+    Friend WithEvents PFicha_ocup As Label
     Friend WithEvents ckbMedicina As CheckBox
-    Friend WithEvents Label4 As Label
+    Friend WithEvents PFicha_tomaMed As Label
     Friend WithEvents txtMotivoConsulta As TextBox
-    Friend WithEvents lbMotiv As Label
+    Friend WithEvents PFicha_motCons As Label
     Friend WithEvents txtProcedencia As TextBox
-    Friend WithEvents lbProc As Label
+    Friend WithEvents PFicha_proced As Label
     Friend WithEvents txtAntecedentes As TextBox
-    Friend WithEvents Label5 As Label
+    Friend WithEvents PFicha_antecedentes As Label
     Friend WithEvents chbAntecedentes As CheckBox
     Friend WithEvents ErrorProvider1 As ErrorProvider
-    Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_aceptar As Guna.UI2.WinForms.Guna2Button
 End Class

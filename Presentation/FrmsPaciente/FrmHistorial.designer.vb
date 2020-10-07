@@ -27,10 +27,10 @@ Partial Class FrmHistorial
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHistorial))
         Me.DgvHistorial = New System.Windows.Forms.DataGridView()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnFiltrar = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnEntre = New Guna.UI2.WinForms.Guna2Button()
+        Me.Histo_titulo = New System.Windows.Forms.Label()
+        Me.Histo_aclara = New System.Windows.Forms.Label()
+        Me.btn_Filtrar = New Guna.UI2.WinForms.Guna2Button()
+        Me.btn_Entre = New Guna.UI2.WinForms.Guna2Button()
         Me.switch = New Guna.UI2.WinForms.Guna2ToggleSwitch()
         Me.DateTimePicker2 = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.DateTimePicker1 = New Guna.UI2.WinForms.Guna2DateTimePicker()
@@ -80,82 +80,82 @@ Partial Class FrmHistorial
         Me.DgvHistorial.Size = New System.Drawing.Size(242, 258)
         Me.DgvHistorial.TabIndex = 39
         '
-        'Label2
+        'Histo_titulo
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(205, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(369, 40)
-        Me.Label2.TabIndex = 38
-        Me.Label2.Text = "HISTORIAL DE CONSULTAS"
+        Me.Histo_titulo.AutoSize = True
+        Me.Histo_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Histo_titulo.ForeColor = System.Drawing.Color.Silver
+        Me.Histo_titulo.Location = New System.Drawing.Point(205, 9)
+        Me.Histo_titulo.Name = "Histo_titulo"
+        Me.Histo_titulo.Size = New System.Drawing.Size(369, 40)
+        Me.Histo_titulo.TabIndex = 38
+        Me.Histo_titulo.Text = "HISTORIAL DE CONSULTAS"
         '
-        'Label1
+        'Histo_aclara
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(24, 140)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(154, 17)
-        Me.Label1.TabIndex = 44
-        Me.Label1.Text = "Esta fecha debe ser mayor"
+        Me.Histo_aclara.AutoSize = True
+        Me.Histo_aclara.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Histo_aclara.ForeColor = System.Drawing.Color.Silver
+        Me.Histo_aclara.Location = New System.Drawing.Point(24, 140)
+        Me.Histo_aclara.Name = "Histo_aclara"
+        Me.Histo_aclara.Size = New System.Drawing.Size(154, 17)
+        Me.Histo_aclara.TabIndex = 44
+        Me.Histo_aclara.Text = "Esta fecha debe ser mayor"
         '
-        'btnFiltrar
+        'btn_Filtrar
         '
-        Me.btnFiltrar.Animated = True
-        Me.btnFiltrar.AutoRoundedCorners = True
-        Me.btnFiltrar.BackColor = System.Drawing.Color.Transparent
-        Me.btnFiltrar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnFiltrar.BorderRadius = 17
-        Me.btnFiltrar.CheckedState.Parent = Me.btnFiltrar
-        Me.btnFiltrar.CustomImages.Parent = Me.btnFiltrar
-        Me.btnFiltrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnFiltrar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFiltrar.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnFiltrar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnFiltrar.HoverState.Parent = Me.btnFiltrar
-        Me.btnFiltrar.Location = New System.Drawing.Point(265, 54)
-        Me.btnFiltrar.Name = "btnFiltrar"
-        Me.btnFiltrar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.btnFiltrar.ShadowDecoration.BorderRadius = 20
-        Me.btnFiltrar.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.btnFiltrar.ShadowDecoration.Depth = 15
-        Me.btnFiltrar.ShadowDecoration.Enabled = True
-        Me.btnFiltrar.ShadowDecoration.Parent = Me.btnFiltrar
-        Me.btnFiltrar.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
-        Me.btnFiltrar.Size = New System.Drawing.Size(150, 36)
-        Me.btnFiltrar.TabIndex = 45
-        Me.btnFiltrar.Text = "FILTRAR"
+        Me.btn_Filtrar.Animated = True
+        Me.btn_Filtrar.AutoRoundedCorners = True
+        Me.btn_Filtrar.BackColor = System.Drawing.Color.Transparent
+        Me.btn_Filtrar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_Filtrar.BorderRadius = 17
+        Me.btn_Filtrar.CheckedState.Parent = Me.btn_Filtrar
+        Me.btn_Filtrar.CustomImages.Parent = Me.btn_Filtrar
+        Me.btn_Filtrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_Filtrar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_Filtrar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_Filtrar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_Filtrar.HoverState.Parent = Me.btn_Filtrar
+        Me.btn_Filtrar.Location = New System.Drawing.Point(265, 54)
+        Me.btn_Filtrar.Name = "btn_Filtrar"
+        Me.btn_Filtrar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.btn_Filtrar.ShadowDecoration.BorderRadius = 20
+        Me.btn_Filtrar.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btn_Filtrar.ShadowDecoration.Depth = 15
+        Me.btn_Filtrar.ShadowDecoration.Enabled = True
+        Me.btn_Filtrar.ShadowDecoration.Parent = Me.btn_Filtrar
+        Me.btn_Filtrar.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
+        Me.btn_Filtrar.Size = New System.Drawing.Size(150, 36)
+        Me.btn_Filtrar.TabIndex = 45
+        Me.btn_Filtrar.Text = "FILTRAR"
         '
-        'btnEntre
+        'btn_Entre
         '
-        Me.btnEntre.Animated = True
-        Me.btnEntre.AutoRoundedCorners = True
-        Me.btnEntre.BackColor = System.Drawing.Color.Transparent
-        Me.btnEntre.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnEntre.BorderRadius = 17
-        Me.btnEntre.CheckedState.Parent = Me.btnEntre
-        Me.btnEntre.CustomImages.Parent = Me.btnEntre
-        Me.btnEntre.Enabled = False
-        Me.btnEntre.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnEntre.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEntre.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnEntre.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnEntre.HoverState.Parent = Me.btnEntre
-        Me.btnEntre.Location = New System.Drawing.Point(265, 105)
-        Me.btnEntre.Name = "btnEntre"
-        Me.btnEntre.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.btnEntre.ShadowDecoration.BorderRadius = 20
-        Me.btnEntre.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.btnEntre.ShadowDecoration.Depth = 15
-        Me.btnEntre.ShadowDecoration.Enabled = True
-        Me.btnEntre.ShadowDecoration.Parent = Me.btnEntre
-        Me.btnEntre.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
-        Me.btnEntre.Size = New System.Drawing.Size(150, 36)
-        Me.btnEntre.TabIndex = 46
-        Me.btnEntre.Text = "ENTRE"
+        Me.btn_Entre.Animated = True
+        Me.btn_Entre.AutoRoundedCorners = True
+        Me.btn_Entre.BackColor = System.Drawing.Color.Transparent
+        Me.btn_Entre.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_Entre.BorderRadius = 17
+        Me.btn_Entre.CheckedState.Parent = Me.btn_Entre
+        Me.btn_Entre.CustomImages.Parent = Me.btn_Entre
+        Me.btn_Entre.Enabled = False
+        Me.btn_Entre.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_Entre.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_Entre.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_Entre.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_Entre.HoverState.Parent = Me.btn_Entre
+        Me.btn_Entre.Location = New System.Drawing.Point(265, 105)
+        Me.btn_Entre.Name = "btn_Entre"
+        Me.btn_Entre.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.btn_Entre.ShadowDecoration.BorderRadius = 20
+        Me.btn_Entre.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btn_Entre.ShadowDecoration.Depth = 15
+        Me.btn_Entre.ShadowDecoration.Enabled = True
+        Me.btn_Entre.ShadowDecoration.Parent = Me.btn_Entre
+        Me.btn_Entre.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
+        Me.btn_Entre.Size = New System.Drawing.Size(150, 36)
+        Me.btn_Entre.TabIndex = 46
+        Me.btn_Entre.Text = "ENTRE"
         '
         'switch
         '
@@ -222,11 +222,11 @@ Partial Class FrmHistorial
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.switch)
-        Me.Controls.Add(Me.btnEntre)
-        Me.Controls.Add(Me.btnFiltrar)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btn_Entre)
+        Me.Controls.Add(Me.btn_Filtrar)
+        Me.Controls.Add(Me.Histo_aclara)
         Me.Controls.Add(Me.DgvHistorial)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Histo_titulo)
         Me.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -239,10 +239,10 @@ Partial Class FrmHistorial
 
     End Sub
     Friend WithEvents DgvHistorial As DataGridView
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents btnFiltrar As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnEntre As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Histo_titulo As Label
+    Friend WithEvents Histo_aclara As Label
+    Friend WithEvents btn_Filtrar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_Entre As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents switch As Guna.UI2.WinForms.Guna2ToggleSwitch
     Friend WithEvents DateTimePicker2 As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents DateTimePicker1 As Guna.UI2.WinForms.Guna2DateTimePicker

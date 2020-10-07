@@ -5,6 +5,7 @@ Public Class FrmAgendaMedica
     Private med As New Medico()
 
     Private Sub FrmAgendaMedica_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Traductor.traducirForm(Me)
         dgvAgenda.DataSource = med.Agenda
         With cbFiltro
             .DataSource = med.Especialidad.Tables(0)
@@ -14,20 +15,20 @@ Public Class FrmAgendaMedica
         End With
     End Sub
 
-    Private Sub btnFiltrar_Click(sender As Object, e As EventArgs) Handles btnFiltrar.Click
+    Private Sub btnFiltrar_Click(sender As Object, e As EventArgs) Handles btn_Filtrar.Click
         dgvAgenda.DataSource = med.AgendaFiltroEsp(cbFiltro.Text)
     End Sub
 
-    Private Sub btnBuscarMed_Click(sender As Object, e As EventArgs) Handles btnBuscarMed.Click
+    Private Sub btnBuscarMed_Click(sender As Object, e As EventArgs) Handles btn_Buscar.Click
         dgvAgenda.DataSource = med.AgendaFiltroNom(txtNomBuscar.Text)
     End Sub
 
     Private Sub Switch1_CheckedChanged(sender As Object, e As EventArgs) Handles switch.CheckedChanged
         If switch.Checked Then
-            btnBuscarMed.Enabled = True
+            btn_Buscar.Enabled = True
             txtNomBuscar.Enabled = True
         Else
-            btnBuscarMed.Enabled = False
+            btn_Buscar.Enabled = False
             txtNomBuscar.Enabled = False
         End If
 

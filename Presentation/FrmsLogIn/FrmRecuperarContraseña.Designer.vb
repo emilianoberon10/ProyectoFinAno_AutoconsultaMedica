@@ -304,6 +304,7 @@ Partial Class FrmRecuperarContraseña
         Me.Guna2ShadowPanel1.ShadowShift = 6
         Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(229, 223)
         Me.Guna2ShadowPanel1.TabIndex = 8
+        Me.Guna2ShadowPanel1.Visible = False
         '
         'ShapeContainer2
         '

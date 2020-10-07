@@ -26,24 +26,16 @@ Partial Class FrmSolicitudesChat
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.panelSolicitudes = New System.Windows.Forms.Panel()
-        Me.dgvSolicitudes = New System.Windows.Forms.DataGridView()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.panelSolicitudes.SuspendLayout()
+        Me.dgvSolicitudes = New System.Windows.Forms.DataGridView()
+        Me.MSoli_aclaracion = New System.Windows.Forms.Label()
+        Me.MSoli_titulo = New System.Windows.Forms.Label()
         CType(Me.dgvSolicitudes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'panelSolicitudes
+        'Timer1
         '
-        Me.panelSolicitudes.Controls.Add(Me.dgvSolicitudes)
-        Me.panelSolicitudes.Controls.Add(Me.Label2)
-        Me.panelSolicitudes.Controls.Add(Me.Label1)
-        Me.panelSolicitudes.Location = New System.Drawing.Point(23, 2)
-        Me.panelSolicitudes.Name = "panelSolicitudes"
-        Me.panelSolicitudes.Size = New System.Drawing.Size(756, 681)
-        Me.panelSolicitudes.TabIndex = 0
+        Me.Timer1.Interval = 5000
         '
         'dgvSolicitudes
         '
@@ -78,7 +70,7 @@ Partial Class FrmSolicitudesChat
         Me.dgvSolicitudes.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvSolicitudes.EnableHeadersVisualStyles = False
         Me.dgvSolicitudes.GridColor = System.Drawing.Color.SteelBlue
-        Me.dgvSolicitudes.Location = New System.Drawing.Point(208, 154)
+        Me.dgvSolicitudes.Location = New System.Drawing.Point(236, 173)
         Me.dgvSolicitudes.Name = "dgvSolicitudes"
         Me.dgvSolicitudes.ReadOnly = True
         Me.dgvSolicitudes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -92,34 +84,30 @@ Partial Class FrmSolicitudesChat
         Me.dgvSolicitudes.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvSolicitudes.RowHeadersVisible = False
         Me.dgvSolicitudes.Size = New System.Drawing.Size(325, 356)
-        Me.dgvSolicitudes.TabIndex = 37
+        Me.dgvSolicitudes.TabIndex = 40
         Me.dgvSolicitudes.TabStop = False
         '
-        'Label2
+        'MSoli_aclaracion
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(271, 134)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(199, 17)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "De doble click para iniciar un chat"
+        Me.MSoli_aclaracion.AutoSize = True
+        Me.MSoli_aclaracion.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MSoli_aclaracion.ForeColor = System.Drawing.Color.Silver
+        Me.MSoli_aclaracion.Location = New System.Drawing.Point(299, 153)
+        Me.MSoli_aclaracion.Name = "MSoli_aclaracion"
+        Me.MSoli_aclaracion.Size = New System.Drawing.Size(199, 17)
+        Me.MSoli_aclaracion.TabIndex = 39
+        Me.MSoli_aclaracion.Text = "De doble click para iniciar un chat"
         '
-        'Label1
+        'MSoli_titulo
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(246, 29)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(264, 40)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Solicitudes de chat"
-        '
-        'Timer1
-        '
-        Me.Timer1.Interval = 5000
+        Me.MSoli_titulo.AutoSize = True
+        Me.MSoli_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MSoli_titulo.ForeColor = System.Drawing.Color.Silver
+        Me.MSoli_titulo.Location = New System.Drawing.Point(269, 25)
+        Me.MSoli_titulo.Name = "MSoli_titulo"
+        Me.MSoli_titulo.Size = New System.Drawing.Size(264, 40)
+        Me.MSoli_titulo.TabIndex = 38
+        Me.MSoli_titulo.Text = "Solicitudes de chat"
         '
         'FrmSolicitudesChat
         '
@@ -127,22 +115,21 @@ Partial Class FrmSolicitudesChat
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(802, 683)
-        Me.Controls.Add(Me.panelSolicitudes)
+        Me.Controls.Add(Me.dgvSolicitudes)
+        Me.Controls.Add(Me.MSoli_aclaracion)
+        Me.Controls.Add(Me.MSoli_titulo)
         Me.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmSolicitudesChat"
         Me.Text = "FrmSolicitudesChat"
-        Me.panelSolicitudes.ResumeLayout(False)
-        Me.panelSolicitudes.PerformLayout()
         CType(Me.dgvSolicitudes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents panelSolicitudes As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents dgvSolicitudes As DataGridView
+    Friend WithEvents MSoli_aclaracion As Label
+    Friend WithEvents MSoli_titulo As Label
 End Class

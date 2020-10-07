@@ -26,29 +26,29 @@ Partial Class FrmAgendaMedica
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAgendaMedica))
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Agenda_titulo = New System.Windows.Forms.Label()
         Me.dgvAgenda = New System.Windows.Forms.DataGridView()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.txtNomBuscar = New System.Windows.Forms.TextBox()
-        Me.btnFiltrar = New Guna.UI2.WinForms.Guna2Button()
+        Me.btn_Filtrar = New Guna.UI2.WinForms.Guna2Button()
         Me.cbFiltro = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.btnBuscarMed = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btn_Buscar = New Guna.UI2.WinForms.Guna2Button()
+        Me.Persona_pNom = New System.Windows.Forms.Label()
         Me.switch = New Guna.UI2.WinForms.Guna2ToggleSwitch()
         CType(Me.dgvAgenda, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label2
+        'Agenda_titulo
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(255, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(268, 40)
-        Me.Label2.TabIndex = 30
-        Me.Label2.Text = "AGENDA MEDICOS"
+        Me.Agenda_titulo.AutoSize = True
+        Me.Agenda_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Agenda_titulo.ForeColor = System.Drawing.Color.Silver
+        Me.Agenda_titulo.Location = New System.Drawing.Point(255, 9)
+        Me.Agenda_titulo.Name = "Agenda_titulo"
+        Me.Agenda_titulo.Size = New System.Drawing.Size(268, 40)
+        Me.Agenda_titulo.TabIndex = 30
+        Me.Agenda_titulo.Text = "AGENDA MEDICOS"
         '
         'dgvAgenda
         '
@@ -126,32 +126,32 @@ Partial Class FrmAgendaMedica
         Me.txtNomBuscar.Size = New System.Drawing.Size(211, 22)
         Me.txtNomBuscar.TabIndex = 35
         '
-        'btnFiltrar
+        'btn_Filtrar
         '
-        Me.btnFiltrar.Animated = True
-        Me.btnFiltrar.AutoRoundedCorners = True
-        Me.btnFiltrar.BackColor = System.Drawing.Color.Transparent
-        Me.btnFiltrar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnFiltrar.BorderRadius = 17
-        Me.btnFiltrar.CheckedState.Parent = Me.btnFiltrar
-        Me.btnFiltrar.CustomImages.Parent = Me.btnFiltrar
-        Me.btnFiltrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnFiltrar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFiltrar.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnFiltrar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnFiltrar.HoverState.Parent = Me.btnFiltrar
-        Me.btnFiltrar.Location = New System.Drawing.Point(235, 110)
-        Me.btnFiltrar.Name = "btnFiltrar"
-        Me.btnFiltrar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.btnFiltrar.ShadowDecoration.BorderRadius = 20
-        Me.btnFiltrar.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.btnFiltrar.ShadowDecoration.Depth = 15
-        Me.btnFiltrar.ShadowDecoration.Enabled = True
-        Me.btnFiltrar.ShadowDecoration.Parent = Me.btnFiltrar
-        Me.btnFiltrar.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
-        Me.btnFiltrar.Size = New System.Drawing.Size(180, 36)
-        Me.btnFiltrar.TabIndex = 40
-        Me.btnFiltrar.Text = "FILTRAR"
+        Me.btn_Filtrar.Animated = True
+        Me.btn_Filtrar.AutoRoundedCorners = True
+        Me.btn_Filtrar.BackColor = System.Drawing.Color.Transparent
+        Me.btn_Filtrar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_Filtrar.BorderRadius = 17
+        Me.btn_Filtrar.CheckedState.Parent = Me.btn_Filtrar
+        Me.btn_Filtrar.CustomImages.Parent = Me.btn_Filtrar
+        Me.btn_Filtrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_Filtrar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_Filtrar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_Filtrar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_Filtrar.HoverState.Parent = Me.btn_Filtrar
+        Me.btn_Filtrar.Location = New System.Drawing.Point(235, 110)
+        Me.btn_Filtrar.Name = "btn_Filtrar"
+        Me.btn_Filtrar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.btn_Filtrar.ShadowDecoration.BorderRadius = 20
+        Me.btn_Filtrar.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btn_Filtrar.ShadowDecoration.Depth = 15
+        Me.btn_Filtrar.ShadowDecoration.Enabled = True
+        Me.btn_Filtrar.ShadowDecoration.Parent = Me.btn_Filtrar
+        Me.btn_Filtrar.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
+        Me.btn_Filtrar.Size = New System.Drawing.Size(180, 36)
+        Me.btn_Filtrar.TabIndex = 40
+        Me.btn_Filtrar.Text = "FILTRAR"
         '
         'cbFiltro
         '
@@ -176,44 +176,44 @@ Partial Class FrmAgendaMedica
         Me.cbFiltro.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbFiltro.TabIndex = 41
         '
-        'btnBuscarMed
+        'btn_Buscar
         '
-        Me.btnBuscarMed.Animated = True
-        Me.btnBuscarMed.AutoRoundedCorners = True
-        Me.btnBuscarMed.BackColor = System.Drawing.Color.Transparent
-        Me.btnBuscarMed.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnBuscarMed.BorderRadius = 17
-        Me.btnBuscarMed.CheckedState.Parent = Me.btnBuscarMed
-        Me.btnBuscarMed.CustomImages.Parent = Me.btnBuscarMed
-        Me.btnBuscarMed.Enabled = False
-        Me.btnBuscarMed.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnBuscarMed.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscarMed.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnBuscarMed.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.btnBuscarMed.HoverState.Parent = Me.btnBuscarMed
-        Me.btnBuscarMed.Location = New System.Drawing.Point(235, 171)
-        Me.btnBuscarMed.Name = "btnBuscarMed"
-        Me.btnBuscarMed.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.btnBuscarMed.ShadowDecoration.BorderRadius = 20
-        Me.btnBuscarMed.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.btnBuscarMed.ShadowDecoration.Depth = 15
-        Me.btnBuscarMed.ShadowDecoration.Enabled = True
-        Me.btnBuscarMed.ShadowDecoration.Parent = Me.btnBuscarMed
-        Me.btnBuscarMed.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
-        Me.btnBuscarMed.Size = New System.Drawing.Size(180, 36)
-        Me.btnBuscarMed.TabIndex = 40
-        Me.btnBuscarMed.Text = "BUSCAR"
+        Me.btn_Buscar.Animated = True
+        Me.btn_Buscar.AutoRoundedCorners = True
+        Me.btn_Buscar.BackColor = System.Drawing.Color.Transparent
+        Me.btn_Buscar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_Buscar.BorderRadius = 17
+        Me.btn_Buscar.CheckedState.Parent = Me.btn_Buscar
+        Me.btn_Buscar.CustomImages.Parent = Me.btn_Buscar
+        Me.btn_Buscar.Enabled = False
+        Me.btn_Buscar.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_Buscar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_Buscar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_Buscar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.btn_Buscar.HoverState.Parent = Me.btn_Buscar
+        Me.btn_Buscar.Location = New System.Drawing.Point(235, 171)
+        Me.btn_Buscar.Name = "btn_Buscar"
+        Me.btn_Buscar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.btn_Buscar.ShadowDecoration.BorderRadius = 20
+        Me.btn_Buscar.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btn_Buscar.ShadowDecoration.Depth = 15
+        Me.btn_Buscar.ShadowDecoration.Enabled = True
+        Me.btn_Buscar.ShadowDecoration.Parent = Me.btn_Buscar
+        Me.btn_Buscar.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
+        Me.btn_Buscar.Size = New System.Drawing.Size(180, 36)
+        Me.btn_Buscar.TabIndex = 40
+        Me.btn_Buscar.Text = "BUSCAR"
         '
-        'Label1
+        'Persona_pNom
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label1.Location = New System.Drawing.Point(12, 156)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(134, 21)
-        Me.Label1.TabIndex = 42
-        Me.Label1.Text = "PRIMER NOMBRE"
+        Me.Persona_pNom.AutoSize = True
+        Me.Persona_pNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_pNom.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Persona_pNom.Location = New System.Drawing.Point(12, 156)
+        Me.Persona_pNom.Name = "Persona_pNom"
+        Me.Persona_pNom.Size = New System.Drawing.Size(134, 21)
+        Me.Persona_pNom.TabIndex = 42
+        Me.Persona_pNom.Text = "PRIMER NOMBRE"
         '
         'switch
         '
@@ -241,13 +241,13 @@ Partial Class FrmAgendaMedica
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(778, 699)
         Me.Controls.Add(Me.switch)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnBuscarMed)
+        Me.Controls.Add(Me.Persona_pNom)
+        Me.Controls.Add(Me.btn_Buscar)
         Me.Controls.Add(Me.cbFiltro)
-        Me.Controls.Add(Me.btnFiltrar)
+        Me.Controls.Add(Me.btn_Filtrar)
         Me.Controls.Add(Me.txtNomBuscar)
         Me.Controls.Add(Me.dgvAgenda)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Agenda_titulo)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -261,14 +261,14 @@ Partial Class FrmAgendaMedica
 
     End Sub
 
-    Friend WithEvents Label2 As Label
+    Friend WithEvents Agenda_titulo As Label
     Friend WithEvents dgvAgenda As DataGridView
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents LineShape2 As PowerPacks.LineShape
     Friend WithEvents txtNomBuscar As TextBox
-    Friend WithEvents btnFiltrar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_Filtrar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents cbFiltro As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents btnBuscarMed As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents btn_Buscar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Persona_pNom As Label
     Friend WithEvents switch As Guna.UI2.WinForms.Guna2ToggleSwitch
 End Class

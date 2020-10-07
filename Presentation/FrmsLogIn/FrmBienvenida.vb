@@ -1,6 +1,7 @@
 ﻿Public Class FrmBienvenida
 
     Private Sub Bienvenida_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Traductor.traducirForm(Me)
         CircularProgressBar1.Value = 0
         Me.Opacity = 0 'Iniciamos la opacidad en 0'
         Timer1.Start() 'Iniciamos el temporizador 1'

@@ -81,6 +81,7 @@ Partial Class FrmAgendaMedica
         Me.dgvAgenda.Location = New System.Drawing.Point(22, 232)
         Me.dgvAgenda.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dgvAgenda.Name = "dgvAgenda"
+        Me.dgvAgenda.ReadOnly = True
         Me.dgvAgenda.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))

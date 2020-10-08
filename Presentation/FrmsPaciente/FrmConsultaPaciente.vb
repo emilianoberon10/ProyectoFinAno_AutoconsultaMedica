@@ -86,7 +86,7 @@ Public Class FrmConsultaPaciente
 
 #Region "Activar sintomas"
 
-    Private Sub chb1_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb1_CheckedChanged(sender As Object, e As EventArgs) Handles chb1.CheckedChanged
         If chb1.Checked Then
             cbSintoma2.Enabled = True
         Else
@@ -94,7 +94,7 @@ Public Class FrmConsultaPaciente
         End If
     End Sub
 
-    Private Sub chb2_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb2_CheckedChanged(sender As Object, e As EventArgs) Handles chb2.CheckedChanged
         If chb2.Checked Then
             cbSintoma3.Enabled = True
         Else
@@ -102,7 +102,7 @@ Public Class FrmConsultaPaciente
         End If
     End Sub
 
-    Private Sub chb3_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb3_CheckedChanged(sender As Object, e As EventArgs) Handles chb3.CheckedChanged
         If chb3.Checked Then
             cbSintoma4.Enabled = True
         Else
@@ -110,7 +110,7 @@ Public Class FrmConsultaPaciente
         End If
     End Sub
 
-    Private Sub chb4_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb4_CheckedChanged(sender As Object, e As EventArgs) Handles chb4.CheckedChanged
         cbSintoma5.Enabled = True
         If chb4.Checked Then
             cbSintoma5.Enabled = True
@@ -119,7 +119,7 @@ Public Class FrmConsultaPaciente
         End If
     End Sub
 
-    Private Sub chb5_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb5_CheckedChanged(sender As Object, e As EventArgs) Handles chb5.CheckedChanged
         If chb5.Checked Then
             cbSintoma6.Enabled = True
         Else
@@ -127,7 +127,7 @@ Public Class FrmConsultaPaciente
         End If
     End Sub
 
-    Private Sub chb6_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb6_CheckedChanged(sender As Object, e As EventArgs) Handles chb6.CheckedChanged
         If chb6.Checked Then
             cbSintoma7.Enabled = True
         Else
@@ -135,7 +135,7 @@ Public Class FrmConsultaPaciente
         End If
     End Sub
 
-    Private Sub chb7_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb7_CheckedChanged(sender As Object, e As EventArgs) Handles chb7.CheckedChanged
         If chb7.Checked Then
             cbSintoma8.Enabled = True
         Else
@@ -143,7 +143,7 @@ Public Class FrmConsultaPaciente
         End If
     End Sub
 
-    Private Sub chb8_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb8_CheckedChanged(sender As Object, e As EventArgs) Handles chb8.CheckedChanged
         If chb8.Checked Then
             cbSintoma9.Enabled = True
         Else

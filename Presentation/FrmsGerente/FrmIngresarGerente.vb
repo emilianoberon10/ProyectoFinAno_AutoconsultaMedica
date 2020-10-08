@@ -165,6 +165,10 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
+    Private Sub ingGerente_Click(sender As Object, e As EventArgs) Handles ingGerente.Click
+
+    End Sub
+
 #End Region
 
 #End Region

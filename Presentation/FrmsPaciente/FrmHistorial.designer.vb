@@ -82,14 +82,14 @@ Partial Class FrmHistorial
         '
         'Histo_titulo
         '
-        Me.Histo_titulo.AutoSize = True
         Me.Histo_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Histo_titulo.ForeColor = System.Drawing.Color.Silver
-        Me.Histo_titulo.Location = New System.Drawing.Point(205, 9)
+        Me.Histo_titulo.Location = New System.Drawing.Point(0, 9)
         Me.Histo_titulo.Name = "Histo_titulo"
-        Me.Histo_titulo.Size = New System.Drawing.Size(369, 40)
+        Me.Histo_titulo.Size = New System.Drawing.Size(778, 40)
         Me.Histo_titulo.TabIndex = 38
         Me.Histo_titulo.Text = "HISTORIAL DE CONSULTAS"
+        Me.Histo_titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Histo_aclara
         '

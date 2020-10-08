@@ -65,44 +65,44 @@ Partial Class FrmIngresarGerente
         '
         'ingGerente
         '
-        Me.ingGerente.AutoSize = True
         Me.ingGerente.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ingGerente.ForeColor = System.Drawing.Color.Silver
-        Me.ingGerente.Location = New System.Drawing.Point(119, 3)
+        Me.ingGerente.Location = New System.Drawing.Point(1, 9)
         Me.ingGerente.Name = "ingGerente"
-        Me.ingGerente.Size = New System.Drawing.Size(537, 40)
+        Me.ingGerente.Size = New System.Drawing.Size(774, 40)
         Me.ingGerente.TabIndex = 0
         Me.ingGerente.Text = "INGRESAR SINTOMAS/ENFERMEDADES"
+        Me.ingGerente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'enfermedad
         '
-        Me.enfermedad.AutoSize = True
         Me.enfermedad.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.enfermedad.ForeColor = System.Drawing.Color.Silver
-        Me.enfermedad.Location = New System.Drawing.Point(323, 186)
+        Me.enfermedad.Location = New System.Drawing.Point(1, 186)
         Me.enfermedad.Name = "enfermedad"
-        Me.enfermedad.Size = New System.Drawing.Size(129, 30)
+        Me.enfermedad.Size = New System.Drawing.Size(774, 30)
         Me.enfermedad.TabIndex = 3
         Me.enfermedad.Text = "Enfermedad"
+        Me.enfermedad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'sintoma
         '
-        Me.sintoma.AutoSize = True
         Me.sintoma.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.sintoma.ForeColor = System.Drawing.Color.Silver
-        Me.sintoma.Location = New System.Drawing.Point(337, 55)
+        Me.sintoma.Location = New System.Drawing.Point(1, 55)
         Me.sintoma.Name = "sintoma"
-        Me.sintoma.Size = New System.Drawing.Size(92, 30)
+        Me.sintoma.Size = New System.Drawing.Size(774, 30)
         Me.sintoma.TabIndex = 3
         Me.sintoma.Text = "Sintoma"
+        Me.sintoma.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lbNomEnf
         '
         Me.lbNomEnf.AutoSize = True
         Me.lbNomEnf.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbNomEnf.ForeColor = System.Drawing.Color.Silver
-        Me.ErrorProviderNomDesEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
         Me.ErrorProviderNomSint.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopLeft)
+        Me.ErrorProviderNomDesEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
         Me.ErrorProviderSintEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
         Me.lbNomEnf.Location = New System.Drawing.Point(22, 206)
         Me.lbNomEnf.Name = "lbNomEnf"
@@ -178,6 +178,7 @@ Partial Class FrmIngresarGerente
         Me.txtNombreSintoma.HoverState.Parent = Me.txtNombreSintoma
         Me.txtNombreSintoma.Location = New System.Drawing.Point(22, 114)
         Me.txtNombreSintoma.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtNombreSintoma.MaxLength = 30
         Me.txtNombreSintoma.Name = "txtNombreSintoma"
         Me.txtNombreSintoma.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtNombreSintoma.PlaceholderText = ""
@@ -265,6 +266,7 @@ Partial Class FrmIngresarGerente
         Me.txtNombreEnfermedad.HoverState.Parent = Me.txtNombreEnfermedad
         Me.txtNombreEnfermedad.Location = New System.Drawing.Point(22, 225)
         Me.txtNombreEnfermedad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtNombreEnfermedad.MaxLength = 30
         Me.txtNombreEnfermedad.Name = "txtNombreEnfermedad"
         Me.txtNombreEnfermedad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtNombreEnfermedad.PlaceholderText = ""
@@ -298,6 +300,7 @@ Partial Class FrmIngresarGerente
         Me.txtDescripcion.HoverState.Parent = Me.txtDescripcion
         Me.txtDescripcion.Location = New System.Drawing.Point(22, 298)
         Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtDescripcion.MaxLength = 255
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtDescripcion.PlaceholderText = ""
@@ -311,9 +314,9 @@ Partial Class FrmIngresarGerente
         '
         'Guna2Separator1
         '
-        Me.Guna2Separator1.Location = New System.Drawing.Point(-4, 173)
+        Me.Guna2Separator1.Location = New System.Drawing.Point(1, 173)
         Me.Guna2Separator1.Name = "Guna2Separator1"
-        Me.Guna2Separator1.Size = New System.Drawing.Size(779, 11)
+        Me.Guna2Separator1.Size = New System.Drawing.Size(774, 11)
         Me.Guna2Separator1.TabIndex = 56
         '
         'groupBoxSintomas

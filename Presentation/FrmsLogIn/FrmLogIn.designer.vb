@@ -291,13 +291,12 @@ Partial Class FrmLogIn
         Me.llbCrearUsuario.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.llbCrearUsuario.AutoSize = True
         Me.llbCrearUsuario.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.llbCrearUsuario.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.llbCrearUsuario.LinkColor = System.Drawing.Color.Silver
-        Me.llbCrearUsuario.Location = New System.Drawing.Point(151, 562)
+        Me.llbCrearUsuario.Location = New System.Drawing.Point(0, 562)
         Me.llbCrearUsuario.Name = "llbCrearUsuario"
-        Me.llbCrearUsuario.Size = New System.Drawing.Size(129, 21)
+        Me.llbCrearUsuario.Size = New System.Drawing.Size(430, 21)
         Me.llbCrearUsuario.TabIndex = 12
         Me.llbCrearUsuario.TabStop = True
         Me.llbCrearUsuario.Text = "CREAR USUARIO"
@@ -308,13 +307,12 @@ Partial Class FrmLogIn
         Me.llbForgotPassEs.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.llbForgotPassEs.AutoSize = True
         Me.llbForgotPassEs.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.llbForgotPassEs.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.llbForgotPassEs.LinkColor = System.Drawing.Color.Silver
-        Me.llbForgotPassEs.Location = New System.Drawing.Point(112, 541)
+        Me.llbForgotPassEs.Location = New System.Drawing.Point(0, 541)
         Me.llbForgotPassEs.Name = "llbForgotPassEs"
-        Me.llbForgotPassEs.Size = New System.Drawing.Size(206, 21)
+        Me.llbForgotPassEs.Size = New System.Drawing.Size(430, 21)
         Me.llbForgotPassEs.TabIndex = 13
         Me.llbForgotPassEs.TabStop = True
         Me.llbForgotPassEs.Text = "OLVIDO SU CONTRASEÑA ?"

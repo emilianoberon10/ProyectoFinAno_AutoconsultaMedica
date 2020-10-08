@@ -93,11 +93,11 @@ Partial Class FrmMedicoGerente
         'Persona_especialidad
         '
         Me.Persona_especialidad.AutoSize = True
-        Me.Persona_especialidad.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_especialidad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Persona_especialidad.ForeColor = System.Drawing.Color.Silver
         Me.Persona_especialidad.Location = New System.Drawing.Point(31, 111)
         Me.Persona_especialidad.Name = "Persona_especialidad"
-        Me.Persona_especialidad.Size = New System.Drawing.Size(109, 21)
+        Me.Persona_especialidad.Size = New System.Drawing.Size(95, 21)
         Me.Persona_especialidad.TabIndex = 0
         Me.Persona_especialidad.Text = "Especialidad"
         '
@@ -158,14 +158,14 @@ Partial Class FrmMedicoGerente
         '
         'ingreMed
         '
-        Me.ingreMed.AutoSize = True
-        Me.ingreMed.Font = New System.Drawing.Font("Century Gothic", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ingreMed.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ingreMed.ForeColor = System.Drawing.Color.Silver
-        Me.ingreMed.Location = New System.Drawing.Point(243, 6)
+        Me.ingreMed.Location = New System.Drawing.Point(1, 6)
         Me.ingreMed.Name = "ingreMed"
-        Me.ingreMed.Size = New System.Drawing.Size(288, 36)
+        Me.ingreMed.Size = New System.Drawing.Size(775, 36)
         Me.ingreMed.TabIndex = 3
         Me.ingreMed.Text = "INGRESAR MEDICO"
+        Me.ingreMed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Persona_tel
         '
@@ -347,7 +347,7 @@ Partial Class FrmMedicoGerente
         Me.txtHoraEntradaDomingo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaDomingo.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaDomingo.Location = New System.Drawing.Point(661, 70)
-        Me.txtHoraEntradaDomingo.MaxLength = 13
+        Me.txtHoraEntradaDomingo.MaxLength = 12
         Me.txtHoraEntradaDomingo.Name = "txtHoraEntradaDomingo"
         Me.txtHoraEntradaDomingo.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaDomingo.TabIndex = 1
@@ -369,7 +369,7 @@ Partial Class FrmMedicoGerente
         Me.txtHoraEntradaSabado.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaSabado.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaSabado.Location = New System.Drawing.Point(560, 70)
-        Me.txtHoraEntradaSabado.MaxLength = 13
+        Me.txtHoraEntradaSabado.MaxLength = 12
         Me.txtHoraEntradaSabado.Name = "txtHoraEntradaSabado"
         Me.txtHoraEntradaSabado.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaSabado.TabIndex = 1
@@ -391,7 +391,7 @@ Partial Class FrmMedicoGerente
         Me.txtHoraEntradaViernes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaViernes.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaViernes.Location = New System.Drawing.Point(459, 70)
-        Me.txtHoraEntradaViernes.MaxLength = 13
+        Me.txtHoraEntradaViernes.MaxLength = 12
         Me.txtHoraEntradaViernes.Name = "txtHoraEntradaViernes"
         Me.txtHoraEntradaViernes.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaViernes.TabIndex = 1
@@ -402,7 +402,7 @@ Partial Class FrmMedicoGerente
         Me.txtHoraEntradaMiercoles.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaMiercoles.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaMiercoles.Location = New System.Drawing.Point(257, 70)
-        Me.txtHoraEntradaMiercoles.MaxLength = 13
+        Me.txtHoraEntradaMiercoles.MaxLength = 12
         Me.txtHoraEntradaMiercoles.Name = "txtHoraEntradaMiercoles"
         Me.txtHoraEntradaMiercoles.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaMiercoles.TabIndex = 1
@@ -413,7 +413,7 @@ Partial Class FrmMedicoGerente
         Me.txtHoraEntradaJueves.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaJueves.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaJueves.Location = New System.Drawing.Point(358, 70)
-        Me.txtHoraEntradaJueves.MaxLength = 13
+        Me.txtHoraEntradaJueves.MaxLength = 12
         Me.txtHoraEntradaJueves.Name = "txtHoraEntradaJueves"
         Me.txtHoraEntradaJueves.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaJueves.TabIndex = 1
@@ -435,7 +435,7 @@ Partial Class FrmMedicoGerente
         Me.txtHoraEntradaMartes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaMartes.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaMartes.Location = New System.Drawing.Point(156, 70)
-        Me.txtHoraEntradaMartes.MaxLength = 13
+        Me.txtHoraEntradaMartes.MaxLength = 12
         Me.txtHoraEntradaMartes.Name = "txtHoraEntradaMartes"
         Me.txtHoraEntradaMartes.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaMartes.TabIndex = 1
@@ -446,7 +446,7 @@ Partial Class FrmMedicoGerente
         Me.txtHoraEntradaLunes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaLunes.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaLunes.Location = New System.Drawing.Point(55, 70)
-        Me.txtHoraEntradaLunes.MaxLength = 13
+        Me.txtHoraEntradaLunes.MaxLength = 12
         Me.txtHoraEntradaLunes.Name = "txtHoraEntradaLunes"
         Me.txtHoraEntradaLunes.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaLunes.TabIndex = 1
@@ -553,6 +553,7 @@ Partial Class FrmMedicoGerente
         Me.txtCedula.HoverState.Parent = Me.txtCedula
         Me.txtCedula.Location = New System.Drawing.Point(31, 70)
         Me.txtCedula.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtCedula.MaxLength = 8
         Me.txtCedula.Name = "txtCedula"
         Me.txtCedula.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtCedula.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -582,6 +583,7 @@ Partial Class FrmMedicoGerente
         Me.txtSnom.HoverState.Parent = Me.txtSnom
         Me.txtSnom.Location = New System.Drawing.Point(268, 137)
         Me.txtSnom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSnom.MaxLength = 30
         Me.txtSnom.Name = "txtSnom"
         Me.txtSnom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSnom.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -612,6 +614,7 @@ Partial Class FrmMedicoGerente
         Me.txtLugarTrabajo.HoverState.Parent = Me.txtLugarTrabajo
         Me.txtLugarTrabajo.Location = New System.Drawing.Point(31, 344)
         Me.txtLugarTrabajo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtLugarTrabajo.MaxLength = 255
         Me.txtLugarTrabajo.Name = "txtLugarTrabajo"
         Me.txtLugarTrabajo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtLugarTrabajo.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -642,6 +645,7 @@ Partial Class FrmMedicoGerente
         Me.txtNumMed.HoverState.Parent = Me.txtNumMed
         Me.txtNumMed.Location = New System.Drawing.Point(531, 278)
         Me.txtNumMed.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtNumMed.MaxLength = 4
         Me.txtNumMed.Name = "txtNumMed"
         Me.txtNumMed.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtNumMed.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -672,6 +676,7 @@ Partial Class FrmMedicoGerente
         Me.txtPNom.HoverState.Parent = Me.txtPNom
         Me.txtPNom.Location = New System.Drawing.Point(268, 71)
         Me.txtPNom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPNom.MaxLength = 30
         Me.txtPNom.Name = "txtPNom"
         Me.txtPNom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPNom.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -702,6 +707,7 @@ Partial Class FrmMedicoGerente
         Me.txtSape.HoverState.Parent = Me.txtSape
         Me.txtSape.Location = New System.Drawing.Point(535, 137)
         Me.txtSape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSape.MaxLength = 30
         Me.txtSape.Name = "txtSape"
         Me.txtSape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSape.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -732,6 +738,7 @@ Partial Class FrmMedicoGerente
         Me.txtEdad.HoverState.Parent = Me.txtEdad
         Me.txtEdad.Location = New System.Drawing.Point(272, 209)
         Me.txtEdad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtEdad.MaxLength = 2
         Me.txtEdad.Name = "txtEdad"
         Me.txtEdad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtEdad.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -762,6 +769,7 @@ Partial Class FrmMedicoGerente
         Me.txtDomicilio.HoverState.Parent = Me.txtDomicilio
         Me.txtDomicilio.Location = New System.Drawing.Point(31, 282)
         Me.txtDomicilio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtDomicilio.MaxLength = 255
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtDomicilio.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -792,6 +800,7 @@ Partial Class FrmMedicoGerente
         Me.txtPApe.HoverState.Parent = Me.txtPApe
         Me.txtPApe.Location = New System.Drawing.Point(531, 71)
         Me.txtPApe.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPApe.MaxLength = 30
         Me.txtPApe.Name = "txtPApe"
         Me.txtPApe.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPApe.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -822,6 +831,7 @@ Partial Class FrmMedicoGerente
         Me.txtTelefono.HoverState.Parent = Me.txtTelefono
         Me.txtTelefono.Location = New System.Drawing.Point(531, 209)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtTelefono.MaxLength = 9
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtTelefono.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke

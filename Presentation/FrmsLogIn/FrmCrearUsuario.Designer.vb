@@ -24,10 +24,10 @@ Partial Class FrmCrearUsuario
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCrearUsuario))
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.llbCrearUsuario = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.btnCrear = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnCancelar = New Guna.UI2.WinForms.Guna2Button()
+        Me.btn_crear = New Guna.UI2.WinForms.Guna2Button()
+        Me.btn_cancelar = New Guna.UI2.WinForms.Guna2Button()
         Me.cbSexo = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.txtDomicilio = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtEdad = New Guna.UI2.WinForms.Guna2TextBox()
@@ -38,90 +38,90 @@ Partial Class FrmCrearUsuario
         Me.txtPNom = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtSnom = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtCedula = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.lbDomi = New System.Windows.Forms.Label()
-        Me.lbEdad = New System.Windows.Forms.Label()
-        Me.lbTel = New System.Windows.Forms.Label()
-        Me.lbSape = New System.Windows.Forms.Label()
-        Me.lbSnom = New System.Windows.Forms.Label()
-        Me.lbSexo = New System.Windows.Forms.Label()
-        Me.lbCorreo = New System.Windows.Forms.Label()
-        Me.lbPape = New System.Windows.Forms.Label()
-        Me.lbPnom = New System.Windows.Forms.Label()
-        Me.lbCi = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Persona_domicilio = New System.Windows.Forms.Label()
+        Me.Persona_edad = New System.Windows.Forms.Label()
+        Me.Persona_tel = New System.Windows.Forms.Label()
+        Me.Persona_sApe = New System.Windows.Forms.Label()
+        Me.Persona_sNom = New System.Windows.Forms.Label()
+        Me.Persona_sexo = New System.Windows.Forms.Label()
+        Me.Persona_correo = New System.Windows.Forms.Label()
+        Me.Persona_pApe = New System.Windows.Forms.Label()
+        Me.Persona_pNom = New System.Windows.Forms.Label()
+        Me.Persona_ci = New System.Windows.Forms.Label()
+        Me.Persona_aclaracionCi = New System.Windows.Forms.Label()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'llbCrearUsuario
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.ErrorProvider1.SetIconAlignment(Me.Label1, System.Windows.Forms.ErrorIconAlignment.TopRight)
-        Me.ErrorProvider1.SetIconPadding(Me.Label1, 5)
-        Me.Label1.Location = New System.Drawing.Point(216, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(341, 40)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "CREAR NUEVO USUARIO"
+        Me.llbCrearUsuario.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llbCrearUsuario.ForeColor = System.Drawing.Color.Silver
+        Me.ErrorProvider1.SetIconAlignment(Me.llbCrearUsuario, System.Windows.Forms.ErrorIconAlignment.TopRight)
+        Me.ErrorProvider1.SetIconPadding(Me.llbCrearUsuario, 5)
+        Me.llbCrearUsuario.Location = New System.Drawing.Point(1, 9)
+        Me.llbCrearUsuario.Name = "llbCrearUsuario"
+        Me.llbCrearUsuario.Size = New System.Drawing.Size(772, 40)
+        Me.llbCrearUsuario.TabIndex = 0
+        Me.llbCrearUsuario.Text = "CREAR NUEVO USUARIO"
+        Me.llbCrearUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
         Me.ErrorProvider1.Icon = CType(resources.GetObject("ErrorProvider1.Icon"), System.Drawing.Icon)
         '
-        'btnCrear
+        'btn_crear
         '
-        Me.btnCrear.Animated = True
-        Me.btnCrear.BackColor = System.Drawing.Color.Transparent
-        Me.btnCrear.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCrear.BorderRadius = 15
-        Me.btnCrear.BorderThickness = 2
-        Me.btnCrear.CheckedState.Parent = Me.btnCrear
-        Me.btnCrear.CustomImages.Parent = Me.btnCrear
-        Me.btnCrear.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.btnCrear.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCrear.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnCrear.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnCrear.HoverState.Parent = Me.btnCrear
-        Me.btnCrear.Location = New System.Drawing.Point(494, 272)
-        Me.btnCrear.Name = "btnCrear"
-        Me.btnCrear.PressedColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.btnCrear.ShadowDecoration.BorderRadius = 20
-        Me.btnCrear.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(171, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCrear.ShadowDecoration.Depth = 25
-        Me.btnCrear.ShadowDecoration.Enabled = True
-        Me.btnCrear.ShadowDecoration.Parent = Me.btnCrear
-        Me.btnCrear.Size = New System.Drawing.Size(267, 36)
-        Me.btnCrear.TabIndex = 15
-        Me.btnCrear.Text = "CREAR"
+        Me.btn_crear.Animated = True
+        Me.btn_crear.BackColor = System.Drawing.Color.Transparent
+        Me.btn_crear.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_crear.BorderRadius = 15
+        Me.btn_crear.BorderThickness = 2
+        Me.btn_crear.CheckedState.Parent = Me.btn_crear
+        Me.btn_crear.CustomImages.Parent = Me.btn_crear
+        Me.btn_crear.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.btn_crear.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_crear.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_crear.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btn_crear.HoverState.Parent = Me.btn_crear
+        Me.btn_crear.Location = New System.Drawing.Point(494, 272)
+        Me.btn_crear.Name = "btn_crear"
+        Me.btn_crear.PressedColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btn_crear.ShadowDecoration.BorderRadius = 20
+        Me.btn_crear.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(171, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_crear.ShadowDecoration.Depth = 25
+        Me.btn_crear.ShadowDecoration.Enabled = True
+        Me.btn_crear.ShadowDecoration.Parent = Me.btn_crear
+        Me.btn_crear.Size = New System.Drawing.Size(267, 36)
+        Me.btn_crear.TabIndex = 15
+        Me.btn_crear.Text = "CREAR"
         '
-        'btnCancelar
+        'btn_cancelar
         '
-        Me.btnCancelar.Animated = True
-        Me.btnCancelar.AutoRoundedCorners = True
-        Me.btnCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.btnCancelar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCancelar.BorderRadius = 14
-        Me.btnCancelar.BorderThickness = 2
-        Me.btnCancelar.CheckedState.Parent = Me.btnCancelar
-        Me.btnCancelar.CustomImages.Parent = Me.btnCancelar
-        Me.btnCancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
-        Me.btnCancelar.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnCancelar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnCancelar.HoverState.Parent = Me.btnCancelar
-        Me.btnCancelar.Location = New System.Drawing.Point(30, 355)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.btnCancelar.ShadowDecoration.BorderRadius = 20
-        Me.btnCancelar.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(171, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCancelar.ShadowDecoration.Depth = 25
-        Me.btnCancelar.ShadowDecoration.Enabled = True
-        Me.btnCancelar.ShadowDecoration.Parent = Me.btnCancelar
-        Me.btnCancelar.Size = New System.Drawing.Size(94, 31)
-        Me.btnCancelar.TabIndex = 15
-        Me.btnCancelar.Text = "CANCELAR"
+        Me.btn_cancelar.Animated = True
+        Me.btn_cancelar.AutoRoundedCorners = True
+        Me.btn_cancelar.BackColor = System.Drawing.Color.Transparent
+        Me.btn_cancelar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_cancelar.BorderRadius = 14
+        Me.btn_cancelar.BorderThickness = 2
+        Me.btn_cancelar.CheckedState.Parent = Me.btn_cancelar
+        Me.btn_cancelar.CustomImages.Parent = Me.btn_cancelar
+        Me.btn_cancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.btn_cancelar.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
+        Me.btn_cancelar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_cancelar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btn_cancelar.HoverState.Parent = Me.btn_cancelar
+        Me.btn_cancelar.Location = New System.Drawing.Point(30, 355)
+        Me.btn_cancelar.Name = "btn_cancelar"
+        Me.btn_cancelar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btn_cancelar.ShadowDecoration.BorderRadius = 20
+        Me.btn_cancelar.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(171, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_cancelar.ShadowDecoration.Depth = 25
+        Me.btn_cancelar.ShadowDecoration.Enabled = True
+        Me.btn_cancelar.ShadowDecoration.Parent = Me.btn_cancelar
+        Me.btn_cancelar.Size = New System.Drawing.Size(94, 31)
+        Me.btn_cancelar.TabIndex = 15
+        Me.btn_cancelar.Text = "CANCELAR"
         '
         'cbSexo
         '
@@ -168,7 +168,6 @@ Partial Class FrmCrearUsuario
         Me.txtDomicilio.HoverState.Parent = Me.txtDomicilio
         Me.txtDomicilio.Location = New System.Drawing.Point(530, 214)
         Me.txtDomicilio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtDomicilio.MaxLength = 255
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtDomicilio.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -199,7 +198,6 @@ Partial Class FrmCrearUsuario
         Me.txtEdad.HoverState.Parent = Me.txtEdad
         Me.txtEdad.Location = New System.Drawing.Point(32, 214)
         Me.txtEdad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtEdad.MaxLength = 2
         Me.txtEdad.Name = "txtEdad"
         Me.txtEdad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtEdad.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -230,7 +228,6 @@ Partial Class FrmCrearUsuario
         Me.txtTelefono.HoverState.Parent = Me.txtTelefono
         Me.txtTelefono.Location = New System.Drawing.Point(281, 214)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtTelefono.MaxLength = 9
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtTelefono.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -261,7 +258,6 @@ Partial Class FrmCrearUsuario
         Me.txtSape.HoverState.Parent = Me.txtSape
         Me.txtSape.Location = New System.Drawing.Point(534, 149)
         Me.txtSape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtSape.MaxLength = 30
         Me.txtSape.Name = "txtSape"
         Me.txtSape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSape.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -292,7 +288,6 @@ Partial Class FrmCrearUsuario
         Me.txtPape.HoverState.Parent = Me.txtPape
         Me.txtPape.Location = New System.Drawing.Point(530, 86)
         Me.txtPape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtPape.MaxLength = 30
         Me.txtPape.Name = "txtPape"
         Me.txtPape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPape.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -323,7 +318,6 @@ Partial Class FrmCrearUsuario
         Me.txtCorreo.HoverState.Parent = Me.txtCorreo
         Me.txtCorreo.Location = New System.Drawing.Point(30, 278)
         Me.txtCorreo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtCorreo.MaxLength = 255
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtCorreo.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -354,7 +348,6 @@ Partial Class FrmCrearUsuario
         Me.txtPNom.HoverState.Parent = Me.txtPNom
         Me.txtPNom.Location = New System.Drawing.Point(281, 86)
         Me.txtPNom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtPNom.MaxLength = 30
         Me.txtPNom.Name = "txtPNom"
         Me.txtPNom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPNom.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -384,7 +377,6 @@ Partial Class FrmCrearUsuario
         Me.txtSnom.HoverState.Parent = Me.txtSnom
         Me.txtSnom.Location = New System.Drawing.Point(281, 149)
         Me.txtSnom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtSnom.MaxLength = 30
         Me.txtSnom.Name = "txtSnom"
         Me.txtSnom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSnom.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -415,7 +407,6 @@ Partial Class FrmCrearUsuario
         Me.txtCedula.HoverState.Parent = Me.txtCedula
         Me.txtCedula.Location = New System.Drawing.Point(30, 85)
         Me.txtCedula.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtCedula.MaxLength = 8
         Me.txtCedula.Name = "txtCedula"
         Me.txtCedula.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtCedula.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -426,126 +417,126 @@ Partial Class FrmCrearUsuario
         Me.txtCedula.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.txtCedula.TabIndex = 70
         '
-        'lbDomi
+        'Persona_domicilio
         '
-        Me.lbDomi.AutoSize = True
-        Me.lbDomi.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbDomi.ForeColor = System.Drawing.Color.Silver
-        Me.lbDomi.Location = New System.Drawing.Point(530, 188)
-        Me.lbDomi.Name = "lbDomi"
-        Me.lbDomi.Size = New System.Drawing.Size(76, 21)
-        Me.lbDomi.TabIndex = 68
-        Me.lbDomi.Text = "Domicilio"
+        Me.Persona_domicilio.AutoSize = True
+        Me.Persona_domicilio.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_domicilio.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_domicilio.Location = New System.Drawing.Point(530, 188)
+        Me.Persona_domicilio.Name = "Persona_domicilio"
+        Me.Persona_domicilio.Size = New System.Drawing.Size(76, 21)
+        Me.Persona_domicilio.TabIndex = 68
+        Me.Persona_domicilio.Text = "Domicilio"
         '
-        'lbEdad
+        'Persona_edad
         '
-        Me.lbEdad.AutoSize = True
-        Me.lbEdad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbEdad.ForeColor = System.Drawing.Color.Silver
-        Me.lbEdad.Location = New System.Drawing.Point(32, 188)
-        Me.lbEdad.Name = "lbEdad"
-        Me.lbEdad.Size = New System.Drawing.Size(44, 21)
-        Me.lbEdad.TabIndex = 66
-        Me.lbEdad.Text = "Edad"
+        Me.Persona_edad.AutoSize = True
+        Me.Persona_edad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_edad.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_edad.Location = New System.Drawing.Point(32, 188)
+        Me.Persona_edad.Name = "Persona_edad"
+        Me.Persona_edad.Size = New System.Drawing.Size(44, 21)
+        Me.Persona_edad.TabIndex = 66
+        Me.Persona_edad.Text = "Edad"
         '
-        'lbTel
+        'Persona_tel
         '
-        Me.lbTel.AutoSize = True
-        Me.lbTel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbTel.ForeColor = System.Drawing.Color.Silver
-        Me.lbTel.Location = New System.Drawing.Point(281, 184)
-        Me.lbTel.Name = "lbTel"
-        Me.lbTel.Size = New System.Drawing.Size(121, 21)
-        Me.lbTel.TabIndex = 65
-        Me.lbTel.Text = "Telefono Celular"
+        Me.Persona_tel.AutoSize = True
+        Me.Persona_tel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_tel.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_tel.Location = New System.Drawing.Point(281, 184)
+        Me.Persona_tel.Name = "Persona_tel"
+        Me.Persona_tel.Size = New System.Drawing.Size(121, 21)
+        Me.Persona_tel.TabIndex = 65
+        Me.Persona_tel.Text = "Telefono Celular"
         '
-        'lbSape
+        'Persona_sApe
         '
-        Me.lbSape.AutoSize = True
-        Me.lbSape.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbSape.ForeColor = System.Drawing.Color.Silver
-        Me.lbSape.Location = New System.Drawing.Point(530, 121)
-        Me.lbSape.Name = "lbSape"
-        Me.lbSape.Size = New System.Drawing.Size(133, 21)
-        Me.lbSape.TabIndex = 64
-        Me.lbSape.Text = "Segundo Apellido"
+        Me.Persona_sApe.AutoSize = True
+        Me.Persona_sApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_sApe.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_sApe.Location = New System.Drawing.Point(530, 121)
+        Me.Persona_sApe.Name = "Persona_sApe"
+        Me.Persona_sApe.Size = New System.Drawing.Size(133, 21)
+        Me.Persona_sApe.TabIndex = 64
+        Me.Persona_sApe.Text = "Segundo Apellido"
         '
-        'lbSnom
+        'Persona_sNom
         '
-        Me.lbSnom.AutoSize = True
-        Me.lbSnom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbSnom.ForeColor = System.Drawing.Color.Silver
-        Me.lbSnom.Location = New System.Drawing.Point(281, 121)
-        Me.lbSnom.Name = "lbSnom"
-        Me.lbSnom.Size = New System.Drawing.Size(134, 21)
-        Me.lbSnom.TabIndex = 63
-        Me.lbSnom.Text = "Segundo Nombre"
+        Me.Persona_sNom.AutoSize = True
+        Me.Persona_sNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_sNom.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_sNom.Location = New System.Drawing.Point(281, 121)
+        Me.Persona_sNom.Name = "Persona_sNom"
+        Me.Persona_sNom.Size = New System.Drawing.Size(134, 21)
+        Me.Persona_sNom.TabIndex = 63
+        Me.Persona_sNom.Text = "Segundo Nombre"
         '
-        'lbSexo
+        'Persona_sexo
         '
-        Me.lbSexo.AutoSize = True
-        Me.lbSexo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbSexo.ForeColor = System.Drawing.Color.Silver
-        Me.lbSexo.Location = New System.Drawing.Point(30, 119)
-        Me.lbSexo.Name = "lbSexo"
-        Me.lbSexo.Size = New System.Drawing.Size(43, 21)
-        Me.lbSexo.TabIndex = 62
-        Me.lbSexo.Text = "Sexo"
+        Me.Persona_sexo.AutoSize = True
+        Me.Persona_sexo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_sexo.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_sexo.Location = New System.Drawing.Point(30, 119)
+        Me.Persona_sexo.Name = "Persona_sexo"
+        Me.Persona_sexo.Size = New System.Drawing.Size(43, 21)
+        Me.Persona_sexo.TabIndex = 62
+        Me.Persona_sexo.Text = "Sexo"
         '
-        'lbCorreo
+        'Persona_correo
         '
-        Me.lbCorreo.AutoSize = True
-        Me.lbCorreo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCorreo.ForeColor = System.Drawing.Color.Silver
-        Me.lbCorreo.Location = New System.Drawing.Point(30, 256)
-        Me.lbCorreo.Name = "lbCorreo"
-        Me.lbCorreo.Size = New System.Drawing.Size(138, 21)
-        Me.lbCorreo.TabIndex = 61
-        Me.lbCorreo.Text = "Correo Electronico"
+        Me.Persona_correo.AutoSize = True
+        Me.Persona_correo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_correo.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_correo.Location = New System.Drawing.Point(30, 256)
+        Me.Persona_correo.Name = "Persona_correo"
+        Me.Persona_correo.Size = New System.Drawing.Size(138, 21)
+        Me.Persona_correo.TabIndex = 61
+        Me.Persona_correo.Text = "Correo Electronico"
         '
-        'lbPape
+        'Persona_pApe
         '
-        Me.lbPape.AutoSize = True
-        Me.lbPape.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbPape.ForeColor = System.Drawing.Color.Silver
-        Me.lbPape.Location = New System.Drawing.Point(530, 60)
-        Me.lbPape.Name = "lbPape"
-        Me.lbPape.Size = New System.Drawing.Size(118, 21)
-        Me.lbPape.TabIndex = 60
-        Me.lbPape.Text = "Primer Apellido"
+        Me.Persona_pApe.AutoSize = True
+        Me.Persona_pApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_pApe.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_pApe.Location = New System.Drawing.Point(530, 60)
+        Me.Persona_pApe.Name = "Persona_pApe"
+        Me.Persona_pApe.Size = New System.Drawing.Size(118, 21)
+        Me.Persona_pApe.TabIndex = 60
+        Me.Persona_pApe.Text = "Primer Apellido"
         '
-        'lbPnom
+        'Persona_pNom
         '
-        Me.lbPnom.AutoSize = True
-        Me.lbPnom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbPnom.ForeColor = System.Drawing.Color.Silver
-        Me.lbPnom.Location = New System.Drawing.Point(281, 59)
-        Me.lbPnom.Name = "lbPnom"
-        Me.lbPnom.Size = New System.Drawing.Size(119, 21)
-        Me.lbPnom.TabIndex = 69
-        Me.lbPnom.Text = "Primer Nombre"
+        Me.Persona_pNom.AutoSize = True
+        Me.Persona_pNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_pNom.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_pNom.Location = New System.Drawing.Point(281, 59)
+        Me.Persona_pNom.Name = "Persona_pNom"
+        Me.Persona_pNom.Size = New System.Drawing.Size(119, 21)
+        Me.Persona_pNom.TabIndex = 69
+        Me.Persona_pNom.Text = "Primer Nombre"
         '
-        'lbCi
+        'Persona_ci
         '
-        Me.lbCi.AutoSize = True
-        Me.lbCi.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCi.ForeColor = System.Drawing.Color.Silver
-        Me.lbCi.Location = New System.Drawing.Point(30, 59)
-        Me.lbCi.Name = "lbCi"
-        Me.lbCi.Size = New System.Drawing.Size(58, 21)
-        Me.lbCi.TabIndex = 58
-        Me.lbCi.Text = "Cedula"
+        Me.Persona_ci.AutoSize = True
+        Me.Persona_ci.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_ci.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_ci.Location = New System.Drawing.Point(30, 59)
+        Me.Persona_ci.Name = "Persona_ci"
+        Me.Persona_ci.Size = New System.Drawing.Size(58, 21)
+        Me.Persona_ci.TabIndex = 58
+        Me.Persona_ci.Text = "Cedula"
         '
-        'Label2
+        'Persona_aclaracionCi
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(82, 62)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(126, 17)
-        Me.Label2.TabIndex = 58
-        Me.Label2.Text = "(Sin puntos ni guines)"
+        Me.Persona_aclaracionCi.AutoSize = True
+        Me.Persona_aclaracionCi.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_aclaracionCi.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_aclaracionCi.Location = New System.Drawing.Point(33, 42)
+        Me.Persona_aclaracionCi.Name = "Persona_aclaracionCi"
+        Me.Persona_aclaracionCi.Size = New System.Drawing.Size(126, 17)
+        Me.Persona_aclaracionCi.TabIndex = 58
+        Me.Persona_aclaracionCi.Text = "(Sin puntos ni guines)"
         '
         'FrmCrearUsuario
         '
@@ -563,20 +554,20 @@ Partial Class FrmCrearUsuario
         Me.Controls.Add(Me.txtPNom)
         Me.Controls.Add(Me.txtSnom)
         Me.Controls.Add(Me.txtCedula)
-        Me.Controls.Add(Me.lbDomi)
-        Me.Controls.Add(Me.lbEdad)
-        Me.Controls.Add(Me.lbTel)
-        Me.Controls.Add(Me.lbSape)
-        Me.Controls.Add(Me.lbSnom)
-        Me.Controls.Add(Me.lbSexo)
-        Me.Controls.Add(Me.lbCorreo)
-        Me.Controls.Add(Me.lbPape)
-        Me.Controls.Add(Me.lbPnom)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.lbCi)
-        Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.btnCrear)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Persona_domicilio)
+        Me.Controls.Add(Me.Persona_edad)
+        Me.Controls.Add(Me.Persona_tel)
+        Me.Controls.Add(Me.Persona_sApe)
+        Me.Controls.Add(Me.Persona_sNom)
+        Me.Controls.Add(Me.Persona_sexo)
+        Me.Controls.Add(Me.Persona_correo)
+        Me.Controls.Add(Me.Persona_pApe)
+        Me.Controls.Add(Me.Persona_pNom)
+        Me.Controls.Add(Me.Persona_aclaracionCi)
+        Me.Controls.Add(Me.Persona_ci)
+        Me.Controls.Add(Me.btn_cancelar)
+        Me.Controls.Add(Me.btn_crear)
+        Me.Controls.Add(Me.llbCrearUsuario)
         Me.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -590,10 +581,10 @@ Partial Class FrmCrearUsuario
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents llbCrearUsuario As Label
     Friend WithEvents ErrorProvider1 As ErrorProvider
-    Friend WithEvents btnCrear As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnCancelar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_crear As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_cancelar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents cbSexo As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents txtDomicilio As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtEdad As Guna.UI2.WinForms.Guna2TextBox
@@ -604,15 +595,15 @@ Partial Class FrmCrearUsuario
     Friend WithEvents txtPNom As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtSnom As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtCedula As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents lbDomi As Label
-    Friend WithEvents lbEdad As Label
-    Friend WithEvents lbTel As Label
-    Friend WithEvents lbSape As Label
-    Friend WithEvents lbSnom As Label
-    Friend WithEvents lbSexo As Label
-    Friend WithEvents lbCorreo As Label
-    Friend WithEvents lbPape As Label
-    Friend WithEvents lbPnom As Label
-    Friend WithEvents lbCi As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents Persona_domicilio As Label
+    Friend WithEvents Persona_edad As Label
+    Friend WithEvents Persona_tel As Label
+    Friend WithEvents Persona_sApe As Label
+    Friend WithEvents Persona_sNom As Label
+    Friend WithEvents Persona_sexo As Label
+    Friend WithEvents Persona_correo As Label
+    Friend WithEvents Persona_pApe As Label
+    Friend WithEvents Persona_pNom As Label
+    Friend WithEvents Persona_ci As Label
+    Friend WithEvents Persona_aclaracionCi As Label
 End Class

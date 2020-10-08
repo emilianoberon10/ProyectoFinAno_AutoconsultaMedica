@@ -48,14 +48,14 @@ Partial Class FrmFichaMedicaPaciente
         '
         'PFicha_titulo
         '
-        Me.PFicha_titulo.AutoSize = True
         Me.PFicha_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PFicha_titulo.ForeColor = System.Drawing.Color.Silver
-        Me.PFicha_titulo.Location = New System.Drawing.Point(72, 9)
+        Me.PFicha_titulo.Location = New System.Drawing.Point(0, 9)
         Me.PFicha_titulo.Name = "PFicha_titulo"
-        Me.PFicha_titulo.Size = New System.Drawing.Size(214, 40)
+        Me.PFicha_titulo.Size = New System.Drawing.Size(359, 40)
         Me.PFicha_titulo.TabIndex = 30
         Me.PFicha_titulo.Text = "FICHA MEDICA"
+        Me.PFicha_titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.PFicha_titulo.UseWaitCursor = True
         '
         'txtMedicina

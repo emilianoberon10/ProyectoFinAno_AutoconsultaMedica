@@ -22,16 +22,32 @@ Partial Class FrmModificarGerente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.MODIFICAR = New System.Windows.Forms.Label()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.modificar = New System.Windows.Forms.Label()
         Me.DgvDatos = New System.Windows.Forms.DataGridView()
         Me.modifAclaracion = New System.Windows.Forms.Label()
         Me.PanelModSintoma = New System.Windows.Forms.Panel()
         Me.txtNombreSintoma = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lbNomSint = New System.Windows.Forms.Label()
         Me.PanelModEnfermedad = New System.Windows.Forms.Panel()
+        Me.groupBoxSintomas = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.cbSintoma6 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cbSintoma8 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cbSintoma5 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cbSintoma7 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cbSintoma3 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cbSintoma4 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cbSintoma2 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cbSintoma1 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.chb7 = New System.Windows.Forms.CheckBox()
+        Me.chb6 = New System.Windows.Forms.CheckBox()
+        Me.chb5 = New System.Windows.Forms.CheckBox()
+        Me.chb4 = New System.Windows.Forms.CheckBox()
+        Me.chb3 = New System.Windows.Forms.CheckBox()
+        Me.chb2 = New System.Windows.Forms.CheckBox()
+        Me.chb1 = New System.Windows.Forms.CheckBox()
         Me.txtDescripcion = New Guna.UI2.WinForms.Guna2TextBox()
         Me.cbRiesgo = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.txtNombreEnfermedad = New Guna.UI2.WinForms.Guna2TextBox()
@@ -90,41 +106,25 @@ Partial Class FrmModificarGerente
         Me.txtLugarTrabajo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtPNom = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtCedula = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.groupBoxSintomas = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.cbSintoma6 = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.cbSintoma8 = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.cbSintoma5 = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.cbSintoma7 = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.cbSintoma3 = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.cbSintoma4 = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.cbSintoma2 = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.cbSintoma1 = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.chb7 = New System.Windows.Forms.CheckBox()
-        Me.chb6 = New System.Windows.Forms.CheckBox()
-        Me.chb5 = New System.Windows.Forms.CheckBox()
-        Me.chb4 = New System.Windows.Forms.CheckBox()
-        Me.chb3 = New System.Windows.Forms.CheckBox()
-        Me.chb2 = New System.Windows.Forms.CheckBox()
-        Me.chb1 = New System.Windows.Forms.CheckBox()
         CType(Me.DgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelModSintoma.SuspendLayout()
         Me.PanelModEnfermedad.SuspendLayout()
+        Me.groupBoxSintomas.SuspendLayout()
         Me.PanelModifMedico.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.groupBoxSintomas.SuspendLayout()
         Me.SuspendLayout()
         '
-        'MODIFICAR
+        'modificar
         '
-        Me.MODIFICAR.AutoSize = True
-        Me.MODIFICAR.Cursor = System.Windows.Forms.Cursors.Default
-        Me.MODIFICAR.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MODIFICAR.ForeColor = System.Drawing.Color.Silver
-        Me.MODIFICAR.Location = New System.Drawing.Point(301, 9)
-        Me.MODIFICAR.Name = "MODIFICAR"
-        Me.MODIFICAR.Size = New System.Drawing.Size(173, 40)
-        Me.MODIFICAR.TabIndex = 5
-        Me.MODIFICAR.Text = "MODIFICAR"
+        Me.modificar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.modificar.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.modificar.ForeColor = System.Drawing.Color.Silver
+        Me.modificar.Location = New System.Drawing.Point(1, 9)
+        Me.modificar.Name = "modificar"
+        Me.modificar.Size = New System.Drawing.Size(775, 40)
+        Me.modificar.TabIndex = 5
+        Me.modificar.Text = "MODIFICAR"
+        Me.modificar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'DgvDatos
         '
@@ -134,37 +134,37 @@ Partial Class FrmModificarGerente
         Me.DgvDatos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(73, Byte), Integer))
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvDatos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(73, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvDatos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DgvDatos.ColumnHeadersHeight = 30
         Me.DgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvDatos.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvDatos.DefaultCellStyle = DataGridViewCellStyle2
         Me.DgvDatos.EnableHeadersVisualStyles = False
         Me.DgvDatos.GridColor = System.Drawing.Color.SteelBlue
         Me.DgvDatos.Location = New System.Drawing.Point(12, 66)
         Me.DgvDatos.Name = "DgvDatos"
         Me.DgvDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvDatos.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvDatos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DgvDatos.Size = New System.Drawing.Size(748, 141)
         Me.DgvDatos.TabIndex = 6
         '
@@ -249,6 +249,293 @@ Partial Class FrmModificarGerente
         Me.PanelModEnfermedad.Size = New System.Drawing.Size(748, 384)
         Me.PanelModEnfermedad.TabIndex = 11
         Me.PanelModEnfermedad.Visible = False
+        '
+        'groupBoxSintomas
+        '
+        Me.groupBoxSintomas.BorderColor = System.Drawing.Color.WhiteSmoke
+        Me.groupBoxSintomas.BorderThickness = 2
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma6)
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma8)
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma5)
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma7)
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma3)
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma4)
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma2)
+        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma1)
+        Me.groupBoxSintomas.Controls.Add(Me.chb7)
+        Me.groupBoxSintomas.Controls.Add(Me.chb6)
+        Me.groupBoxSintomas.Controls.Add(Me.chb5)
+        Me.groupBoxSintomas.Controls.Add(Me.chb4)
+        Me.groupBoxSintomas.Controls.Add(Me.chb3)
+        Me.groupBoxSintomas.Controls.Add(Me.chb2)
+        Me.groupBoxSintomas.Controls.Add(Me.chb1)
+        Me.groupBoxSintomas.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.groupBoxSintomas.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.groupBoxSintomas.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.groupBoxSintomas.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.groupBoxSintomas.Location = New System.Drawing.Point(12, 138)
+        Me.groupBoxSintomas.Name = "groupBoxSintomas"
+        Me.groupBoxSintomas.ShadowDecoration.Parent = Me.groupBoxSintomas
+        Me.groupBoxSintomas.Size = New System.Drawing.Size(627, 229)
+        Me.groupBoxSintomas.TabIndex = 65
+        Me.groupBoxSintomas.Text = "RELACIONADOS"
+        '
+        'cbSintoma6
+        '
+        Me.cbSintoma6.Animated = True
+        Me.cbSintoma6.BackColor = System.Drawing.Color.Transparent
+        Me.cbSintoma6.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbSintoma6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbSintoma6.Enabled = False
+        Me.cbSintoma6.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.cbSintoma6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbSintoma6.FocusedColor = System.Drawing.Color.Empty
+        Me.cbSintoma6.FocusedState.Parent = Me.cbSintoma6
+        Me.cbSintoma6.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma6.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma6.FormattingEnabled = True
+        Me.cbSintoma6.HoverState.Parent = Me.cbSintoma6
+        Me.cbSintoma6.ItemHeight = 30
+        Me.cbSintoma6.ItemsAppearance.Parent = Me.cbSintoma6
+        Me.cbSintoma6.Location = New System.Drawing.Point(439, 108)
+        Me.cbSintoma6.Name = "cbSintoma6"
+        Me.cbSintoma6.ShadowDecoration.Parent = Me.cbSintoma6
+        Me.cbSintoma6.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma6.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.cbSintoma6.TabIndex = 45
+        '
+        'cbSintoma8
+        '
+        Me.cbSintoma8.Animated = True
+        Me.cbSintoma8.BackColor = System.Drawing.Color.Transparent
+        Me.cbSintoma8.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbSintoma8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbSintoma8.Enabled = False
+        Me.cbSintoma8.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.cbSintoma8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbSintoma8.FocusedColor = System.Drawing.Color.Empty
+        Me.cbSintoma8.FocusedState.Parent = Me.cbSintoma8
+        Me.cbSintoma8.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma8.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma8.FormattingEnabled = True
+        Me.cbSintoma8.HoverState.Parent = Me.cbSintoma8
+        Me.cbSintoma8.ItemHeight = 30
+        Me.cbSintoma8.ItemsAppearance.Parent = Me.cbSintoma8
+        Me.cbSintoma8.Location = New System.Drawing.Point(240, 169)
+        Me.cbSintoma8.Name = "cbSintoma8"
+        Me.cbSintoma8.ShadowDecoration.Parent = Me.cbSintoma8
+        Me.cbSintoma8.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma8.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.cbSintoma8.TabIndex = 46
+        '
+        'cbSintoma5
+        '
+        Me.cbSintoma5.Animated = True
+        Me.cbSintoma5.BackColor = System.Drawing.Color.Transparent
+        Me.cbSintoma5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbSintoma5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbSintoma5.Enabled = False
+        Me.cbSintoma5.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.cbSintoma5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbSintoma5.FocusedColor = System.Drawing.Color.Empty
+        Me.cbSintoma5.FocusedState.Parent = Me.cbSintoma5
+        Me.cbSintoma5.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma5.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma5.FormattingEnabled = True
+        Me.cbSintoma5.HoverState.Parent = Me.cbSintoma5
+        Me.cbSintoma5.ItemHeight = 30
+        Me.cbSintoma5.ItemsAppearance.Parent = Me.cbSintoma5
+        Me.cbSintoma5.Location = New System.Drawing.Point(240, 108)
+        Me.cbSintoma5.Name = "cbSintoma5"
+        Me.cbSintoma5.ShadowDecoration.Parent = Me.cbSintoma5
+        Me.cbSintoma5.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma5.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.cbSintoma5.TabIndex = 47
+        '
+        'cbSintoma7
+        '
+        Me.cbSintoma7.Animated = True
+        Me.cbSintoma7.BackColor = System.Drawing.Color.Transparent
+        Me.cbSintoma7.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbSintoma7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbSintoma7.Enabled = False
+        Me.cbSintoma7.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.cbSintoma7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbSintoma7.FocusedColor = System.Drawing.Color.Empty
+        Me.cbSintoma7.FocusedState.Parent = Me.cbSintoma7
+        Me.cbSintoma7.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma7.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma7.FormattingEnabled = True
+        Me.cbSintoma7.HoverState.Parent = Me.cbSintoma7
+        Me.cbSintoma7.ItemHeight = 30
+        Me.cbSintoma7.ItemsAppearance.Parent = Me.cbSintoma7
+        Me.cbSintoma7.Location = New System.Drawing.Point(35, 169)
+        Me.cbSintoma7.Name = "cbSintoma7"
+        Me.cbSintoma7.ShadowDecoration.Parent = Me.cbSintoma7
+        Me.cbSintoma7.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma7.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.cbSintoma7.TabIndex = 48
+        '
+        'cbSintoma3
+        '
+        Me.cbSintoma3.Animated = True
+        Me.cbSintoma3.BackColor = System.Drawing.Color.Transparent
+        Me.cbSintoma3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbSintoma3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbSintoma3.Enabled = False
+        Me.cbSintoma3.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.cbSintoma3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbSintoma3.FocusedColor = System.Drawing.Color.Empty
+        Me.cbSintoma3.FocusedState.Parent = Me.cbSintoma3
+        Me.cbSintoma3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma3.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma3.FormattingEnabled = True
+        Me.cbSintoma3.HoverState.Parent = Me.cbSintoma3
+        Me.cbSintoma3.ItemHeight = 30
+        Me.cbSintoma3.ItemsAppearance.Parent = Me.cbSintoma3
+        Me.cbSintoma3.Location = New System.Drawing.Point(439, 49)
+        Me.cbSintoma3.Name = "cbSintoma3"
+        Me.cbSintoma3.ShadowDecoration.Parent = Me.cbSintoma3
+        Me.cbSintoma3.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma3.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.cbSintoma3.TabIndex = 49
+        '
+        'cbSintoma4
+        '
+        Me.cbSintoma4.Animated = True
+        Me.cbSintoma4.BackColor = System.Drawing.Color.Transparent
+        Me.cbSintoma4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbSintoma4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbSintoma4.Enabled = False
+        Me.cbSintoma4.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.cbSintoma4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbSintoma4.FocusedColor = System.Drawing.Color.Empty
+        Me.cbSintoma4.FocusedState.Parent = Me.cbSintoma4
+        Me.cbSintoma4.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma4.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma4.FormattingEnabled = True
+        Me.cbSintoma4.HoverState.Parent = Me.cbSintoma4
+        Me.cbSintoma4.ItemHeight = 30
+        Me.cbSintoma4.ItemsAppearance.Parent = Me.cbSintoma4
+        Me.cbSintoma4.Location = New System.Drawing.Point(35, 108)
+        Me.cbSintoma4.Name = "cbSintoma4"
+        Me.cbSintoma4.ShadowDecoration.Parent = Me.cbSintoma4
+        Me.cbSintoma4.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma4.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.cbSintoma4.TabIndex = 50
+        '
+        'cbSintoma2
+        '
+        Me.cbSintoma2.Animated = True
+        Me.cbSintoma2.BackColor = System.Drawing.Color.Transparent
+        Me.cbSintoma2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbSintoma2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbSintoma2.Enabled = False
+        Me.cbSintoma2.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.cbSintoma2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbSintoma2.FocusedColor = System.Drawing.Color.Empty
+        Me.cbSintoma2.FocusedState.Parent = Me.cbSintoma2
+        Me.cbSintoma2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma2.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma2.FormattingEnabled = True
+        Me.cbSintoma2.HoverState.Parent = Me.cbSintoma2
+        Me.cbSintoma2.ItemHeight = 30
+        Me.cbSintoma2.ItemsAppearance.Parent = Me.cbSintoma2
+        Me.cbSintoma2.Location = New System.Drawing.Point(240, 49)
+        Me.cbSintoma2.Name = "cbSintoma2"
+        Me.cbSintoma2.ShadowDecoration.Parent = Me.cbSintoma2
+        Me.cbSintoma2.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma2.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.cbSintoma2.TabIndex = 51
+        '
+        'cbSintoma1
+        '
+        Me.cbSintoma1.Animated = True
+        Me.cbSintoma1.BackColor = System.Drawing.Color.Transparent
+        Me.cbSintoma1.BorderThickness = 0
+        Me.cbSintoma1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbSintoma1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbSintoma1.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.cbSintoma1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbSintoma1.FocusedColor = System.Drawing.Color.Empty
+        Me.cbSintoma1.FocusedState.Parent = Me.cbSintoma1
+        Me.cbSintoma1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma1.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma1.FormattingEnabled = True
+        Me.cbSintoma1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(164, Byte), Integer))
+        Me.cbSintoma1.HoverState.Parent = Me.cbSintoma1
+        Me.cbSintoma1.ItemHeight = 30
+        Me.cbSintoma1.ItemsAppearance.Parent = Me.cbSintoma1
+        Me.cbSintoma1.Location = New System.Drawing.Point(35, 49)
+        Me.cbSintoma1.Name = "cbSintoma1"
+        Me.cbSintoma1.ShadowDecoration.Parent = Me.cbSintoma1
+        Me.cbSintoma1.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma1.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.cbSintoma1.TabIndex = 52
+        Me.cbSintoma1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'chb7
+        '
+        Me.chb7.AutoSize = True
+        Me.chb7.Location = New System.Drawing.Point(219, 180)
+        Me.chb7.Name = "chb7"
+        Me.chb7.Size = New System.Drawing.Size(15, 14)
+        Me.chb7.TabIndex = 38
+        Me.chb7.UseVisualStyleBackColor = True
+        '
+        'chb6
+        '
+        Me.chb6.AutoSize = True
+        Me.chb6.Location = New System.Drawing.Point(14, 180)
+        Me.chb6.Name = "chb6"
+        Me.chb6.Size = New System.Drawing.Size(15, 14)
+        Me.chb6.TabIndex = 39
+        Me.chb6.UseVisualStyleBackColor = True
+        '
+        'chb5
+        '
+        Me.chb5.AutoSize = True
+        Me.chb5.Location = New System.Drawing.Point(423, 119)
+        Me.chb5.Name = "chb5"
+        Me.chb5.Size = New System.Drawing.Size(15, 14)
+        Me.chb5.TabIndex = 40
+        Me.chb5.UseVisualStyleBackColor = True
+        '
+        'chb4
+        '
+        Me.chb4.AutoSize = True
+        Me.chb4.Location = New System.Drawing.Point(219, 119)
+        Me.chb4.Name = "chb4"
+        Me.chb4.Size = New System.Drawing.Size(15, 14)
+        Me.chb4.TabIndex = 41
+        Me.chb4.UseVisualStyleBackColor = True
+        '
+        'chb3
+        '
+        Me.chb3.AutoSize = True
+        Me.chb3.Location = New System.Drawing.Point(14, 119)
+        Me.chb3.Name = "chb3"
+        Me.chb3.Size = New System.Drawing.Size(15, 14)
+        Me.chb3.TabIndex = 42
+        Me.chb3.UseVisualStyleBackColor = True
+        '
+        'chb2
+        '
+        Me.chb2.AutoSize = True
+        Me.chb2.Location = New System.Drawing.Point(423, 60)
+        Me.chb2.Name = "chb2"
+        Me.chb2.Size = New System.Drawing.Size(15, 14)
+        Me.chb2.TabIndex = 43
+        Me.chb2.UseVisualStyleBackColor = True
+        '
+        'chb1
+        '
+        Me.chb1.AutoSize = True
+        Me.chb1.Location = New System.Drawing.Point(219, 60)
+        Me.chb1.Name = "chb1"
+        Me.chb1.Size = New System.Drawing.Size(15, 14)
+        Me.chb1.TabIndex = 44
+        Me.chb1.UseVisualStyleBackColor = True
         '
         'txtDescripcion
         '
@@ -761,7 +1048,7 @@ Partial Class FrmModificarGerente
         Me.txtHoraEntradaDomingo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaDomingo.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaDomingo.Location = New System.Drawing.Point(654, 43)
-        Me.txtHoraEntradaDomingo.MaxLength = 6
+        Me.txtHoraEntradaDomingo.MaxLength = 12
         Me.txtHoraEntradaDomingo.Name = "txtHoraEntradaDomingo"
         Me.txtHoraEntradaDomingo.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaDomingo.TabIndex = 1
@@ -783,7 +1070,7 @@ Partial Class FrmModificarGerente
         Me.txtHoraEntradaSabado.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaSabado.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaSabado.Location = New System.Drawing.Point(556, 43)
-        Me.txtHoraEntradaSabado.MaxLength = 6
+        Me.txtHoraEntradaSabado.MaxLength = 12
         Me.txtHoraEntradaSabado.Name = "txtHoraEntradaSabado"
         Me.txtHoraEntradaSabado.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaSabado.TabIndex = 1
@@ -805,7 +1092,7 @@ Partial Class FrmModificarGerente
         Me.txtHoraEntradaViernes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaViernes.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaViernes.Location = New System.Drawing.Point(458, 43)
-        Me.txtHoraEntradaViernes.MaxLength = 6
+        Me.txtHoraEntradaViernes.MaxLength = 12
         Me.txtHoraEntradaViernes.Name = "txtHoraEntradaViernes"
         Me.txtHoraEntradaViernes.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaViernes.TabIndex = 1
@@ -816,7 +1103,7 @@ Partial Class FrmModificarGerente
         Me.txtHoraEntradaMiercoles.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaMiercoles.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaMiercoles.Location = New System.Drawing.Point(262, 43)
-        Me.txtHoraEntradaMiercoles.MaxLength = 6
+        Me.txtHoraEntradaMiercoles.MaxLength = 12
         Me.txtHoraEntradaMiercoles.Name = "txtHoraEntradaMiercoles"
         Me.txtHoraEntradaMiercoles.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaMiercoles.TabIndex = 1
@@ -827,7 +1114,7 @@ Partial Class FrmModificarGerente
         Me.txtHoraEntradaJueves.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaJueves.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaJueves.Location = New System.Drawing.Point(360, 43)
-        Me.txtHoraEntradaJueves.MaxLength = 6
+        Me.txtHoraEntradaJueves.MaxLength = 12
         Me.txtHoraEntradaJueves.Name = "txtHoraEntradaJueves"
         Me.txtHoraEntradaJueves.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaJueves.TabIndex = 1
@@ -849,7 +1136,7 @@ Partial Class FrmModificarGerente
         Me.txtHoraEntradaMartes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaMartes.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaMartes.Location = New System.Drawing.Point(164, 43)
-        Me.txtHoraEntradaMartes.MaxLength = 6
+        Me.txtHoraEntradaMartes.MaxLength = 12
         Me.txtHoraEntradaMartes.Name = "txtHoraEntradaMartes"
         Me.txtHoraEntradaMartes.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaMartes.TabIndex = 1
@@ -860,7 +1147,7 @@ Partial Class FrmModificarGerente
         Me.txtHoraEntradaLunes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaLunes.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaLunes.Location = New System.Drawing.Point(66, 43)
-        Me.txtHoraEntradaLunes.MaxLength = 6
+        Me.txtHoraEntradaLunes.MaxLength = 12
         Me.txtHoraEntradaLunes.Name = "txtHoraEntradaLunes"
         Me.txtHoraEntradaLunes.Size = New System.Drawing.Size(78, 29)
         Me.txtHoraEntradaLunes.TabIndex = 1
@@ -1240,293 +1527,6 @@ Partial Class FrmModificarGerente
         Me.txtCedula.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.txtCedula.TabIndex = 70
         '
-        'groupBoxSintomas
-        '
-        Me.groupBoxSintomas.BorderColor = System.Drawing.Color.WhiteSmoke
-        Me.groupBoxSintomas.BorderThickness = 2
-        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma6)
-        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma8)
-        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma5)
-        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma7)
-        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma3)
-        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma4)
-        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma2)
-        Me.groupBoxSintomas.Controls.Add(Me.cbSintoma1)
-        Me.groupBoxSintomas.Controls.Add(Me.chb7)
-        Me.groupBoxSintomas.Controls.Add(Me.chb6)
-        Me.groupBoxSintomas.Controls.Add(Me.chb5)
-        Me.groupBoxSintomas.Controls.Add(Me.chb4)
-        Me.groupBoxSintomas.Controls.Add(Me.chb3)
-        Me.groupBoxSintomas.Controls.Add(Me.chb2)
-        Me.groupBoxSintomas.Controls.Add(Me.chb1)
-        Me.groupBoxSintomas.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.groupBoxSintomas.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.groupBoxSintomas.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.groupBoxSintomas.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.groupBoxSintomas.Location = New System.Drawing.Point(12, 138)
-        Me.groupBoxSintomas.Name = "groupBoxSintomas"
-        Me.groupBoxSintomas.ShadowDecoration.Parent = Me.groupBoxSintomas
-        Me.groupBoxSintomas.Size = New System.Drawing.Size(627, 229)
-        Me.groupBoxSintomas.TabIndex = 65
-        Me.groupBoxSintomas.Text = "RELACIONADOS"
-        '
-        'cbSintoma6
-        '
-        Me.cbSintoma6.Animated = True
-        Me.cbSintoma6.BackColor = System.Drawing.Color.Transparent
-        Me.cbSintoma6.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbSintoma6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbSintoma6.Enabled = False
-        Me.cbSintoma6.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.cbSintoma6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbSintoma6.FocusedColor = System.Drawing.Color.Empty
-        Me.cbSintoma6.FocusedState.Parent = Me.cbSintoma6
-        Me.cbSintoma6.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma6.ForeColor = System.Drawing.Color.White
-        Me.cbSintoma6.FormattingEnabled = True
-        Me.cbSintoma6.HoverState.Parent = Me.cbSintoma6
-        Me.cbSintoma6.ItemHeight = 30
-        Me.cbSintoma6.ItemsAppearance.Parent = Me.cbSintoma6
-        Me.cbSintoma6.Location = New System.Drawing.Point(439, 108)
-        Me.cbSintoma6.Name = "cbSintoma6"
-        Me.cbSintoma6.ShadowDecoration.Parent = Me.cbSintoma6
-        Me.cbSintoma6.Size = New System.Drawing.Size(170, 36)
-        Me.cbSintoma6.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.cbSintoma6.TabIndex = 45
-        '
-        'cbSintoma8
-        '
-        Me.cbSintoma8.Animated = True
-        Me.cbSintoma8.BackColor = System.Drawing.Color.Transparent
-        Me.cbSintoma8.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbSintoma8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbSintoma8.Enabled = False
-        Me.cbSintoma8.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.cbSintoma8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbSintoma8.FocusedColor = System.Drawing.Color.Empty
-        Me.cbSintoma8.FocusedState.Parent = Me.cbSintoma8
-        Me.cbSintoma8.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma8.ForeColor = System.Drawing.Color.White
-        Me.cbSintoma8.FormattingEnabled = True
-        Me.cbSintoma8.HoverState.Parent = Me.cbSintoma8
-        Me.cbSintoma8.ItemHeight = 30
-        Me.cbSintoma8.ItemsAppearance.Parent = Me.cbSintoma8
-        Me.cbSintoma8.Location = New System.Drawing.Point(240, 169)
-        Me.cbSintoma8.Name = "cbSintoma8"
-        Me.cbSintoma8.ShadowDecoration.Parent = Me.cbSintoma8
-        Me.cbSintoma8.Size = New System.Drawing.Size(170, 36)
-        Me.cbSintoma8.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.cbSintoma8.TabIndex = 46
-        '
-        'cbSintoma5
-        '
-        Me.cbSintoma5.Animated = True
-        Me.cbSintoma5.BackColor = System.Drawing.Color.Transparent
-        Me.cbSintoma5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbSintoma5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbSintoma5.Enabled = False
-        Me.cbSintoma5.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.cbSintoma5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbSintoma5.FocusedColor = System.Drawing.Color.Empty
-        Me.cbSintoma5.FocusedState.Parent = Me.cbSintoma5
-        Me.cbSintoma5.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma5.ForeColor = System.Drawing.Color.White
-        Me.cbSintoma5.FormattingEnabled = True
-        Me.cbSintoma5.HoverState.Parent = Me.cbSintoma5
-        Me.cbSintoma5.ItemHeight = 30
-        Me.cbSintoma5.ItemsAppearance.Parent = Me.cbSintoma5
-        Me.cbSintoma5.Location = New System.Drawing.Point(240, 108)
-        Me.cbSintoma5.Name = "cbSintoma5"
-        Me.cbSintoma5.ShadowDecoration.Parent = Me.cbSintoma5
-        Me.cbSintoma5.Size = New System.Drawing.Size(170, 36)
-        Me.cbSintoma5.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.cbSintoma5.TabIndex = 47
-        '
-        'cbSintoma7
-        '
-        Me.cbSintoma7.Animated = True
-        Me.cbSintoma7.BackColor = System.Drawing.Color.Transparent
-        Me.cbSintoma7.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbSintoma7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbSintoma7.Enabled = False
-        Me.cbSintoma7.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.cbSintoma7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbSintoma7.FocusedColor = System.Drawing.Color.Empty
-        Me.cbSintoma7.FocusedState.Parent = Me.cbSintoma7
-        Me.cbSintoma7.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma7.ForeColor = System.Drawing.Color.White
-        Me.cbSintoma7.FormattingEnabled = True
-        Me.cbSintoma7.HoverState.Parent = Me.cbSintoma7
-        Me.cbSintoma7.ItemHeight = 30
-        Me.cbSintoma7.ItemsAppearance.Parent = Me.cbSintoma7
-        Me.cbSintoma7.Location = New System.Drawing.Point(35, 169)
-        Me.cbSintoma7.Name = "cbSintoma7"
-        Me.cbSintoma7.ShadowDecoration.Parent = Me.cbSintoma7
-        Me.cbSintoma7.Size = New System.Drawing.Size(170, 36)
-        Me.cbSintoma7.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.cbSintoma7.TabIndex = 48
-        '
-        'cbSintoma3
-        '
-        Me.cbSintoma3.Animated = True
-        Me.cbSintoma3.BackColor = System.Drawing.Color.Transparent
-        Me.cbSintoma3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbSintoma3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbSintoma3.Enabled = False
-        Me.cbSintoma3.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.cbSintoma3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbSintoma3.FocusedColor = System.Drawing.Color.Empty
-        Me.cbSintoma3.FocusedState.Parent = Me.cbSintoma3
-        Me.cbSintoma3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma3.ForeColor = System.Drawing.Color.White
-        Me.cbSintoma3.FormattingEnabled = True
-        Me.cbSintoma3.HoverState.Parent = Me.cbSintoma3
-        Me.cbSintoma3.ItemHeight = 30
-        Me.cbSintoma3.ItemsAppearance.Parent = Me.cbSintoma3
-        Me.cbSintoma3.Location = New System.Drawing.Point(439, 49)
-        Me.cbSintoma3.Name = "cbSintoma3"
-        Me.cbSintoma3.ShadowDecoration.Parent = Me.cbSintoma3
-        Me.cbSintoma3.Size = New System.Drawing.Size(170, 36)
-        Me.cbSintoma3.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.cbSintoma3.TabIndex = 49
-        '
-        'cbSintoma4
-        '
-        Me.cbSintoma4.Animated = True
-        Me.cbSintoma4.BackColor = System.Drawing.Color.Transparent
-        Me.cbSintoma4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbSintoma4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbSintoma4.Enabled = False
-        Me.cbSintoma4.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.cbSintoma4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbSintoma4.FocusedColor = System.Drawing.Color.Empty
-        Me.cbSintoma4.FocusedState.Parent = Me.cbSintoma4
-        Me.cbSintoma4.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma4.ForeColor = System.Drawing.Color.White
-        Me.cbSintoma4.FormattingEnabled = True
-        Me.cbSintoma4.HoverState.Parent = Me.cbSintoma4
-        Me.cbSintoma4.ItemHeight = 30
-        Me.cbSintoma4.ItemsAppearance.Parent = Me.cbSintoma4
-        Me.cbSintoma4.Location = New System.Drawing.Point(35, 108)
-        Me.cbSintoma4.Name = "cbSintoma4"
-        Me.cbSintoma4.ShadowDecoration.Parent = Me.cbSintoma4
-        Me.cbSintoma4.Size = New System.Drawing.Size(170, 36)
-        Me.cbSintoma4.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.cbSintoma4.TabIndex = 50
-        '
-        'cbSintoma2
-        '
-        Me.cbSintoma2.Animated = True
-        Me.cbSintoma2.BackColor = System.Drawing.Color.Transparent
-        Me.cbSintoma2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbSintoma2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbSintoma2.Enabled = False
-        Me.cbSintoma2.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.cbSintoma2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbSintoma2.FocusedColor = System.Drawing.Color.Empty
-        Me.cbSintoma2.FocusedState.Parent = Me.cbSintoma2
-        Me.cbSintoma2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma2.ForeColor = System.Drawing.Color.White
-        Me.cbSintoma2.FormattingEnabled = True
-        Me.cbSintoma2.HoverState.Parent = Me.cbSintoma2
-        Me.cbSintoma2.ItemHeight = 30
-        Me.cbSintoma2.ItemsAppearance.Parent = Me.cbSintoma2
-        Me.cbSintoma2.Location = New System.Drawing.Point(240, 49)
-        Me.cbSintoma2.Name = "cbSintoma2"
-        Me.cbSintoma2.ShadowDecoration.Parent = Me.cbSintoma2
-        Me.cbSintoma2.Size = New System.Drawing.Size(170, 36)
-        Me.cbSintoma2.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.cbSintoma2.TabIndex = 51
-        '
-        'cbSintoma1
-        '
-        Me.cbSintoma1.Animated = True
-        Me.cbSintoma1.BackColor = System.Drawing.Color.Transparent
-        Me.cbSintoma1.BorderThickness = 0
-        Me.cbSintoma1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbSintoma1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbSintoma1.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.cbSintoma1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbSintoma1.FocusedColor = System.Drawing.Color.Empty
-        Me.cbSintoma1.FocusedState.Parent = Me.cbSintoma1
-        Me.cbSintoma1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma1.ForeColor = System.Drawing.Color.White
-        Me.cbSintoma1.FormattingEnabled = True
-        Me.cbSintoma1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(164, Byte), Integer))
-        Me.cbSintoma1.HoverState.Parent = Me.cbSintoma1
-        Me.cbSintoma1.ItemHeight = 30
-        Me.cbSintoma1.ItemsAppearance.Parent = Me.cbSintoma1
-        Me.cbSintoma1.Location = New System.Drawing.Point(35, 49)
-        Me.cbSintoma1.Name = "cbSintoma1"
-        Me.cbSintoma1.ShadowDecoration.Parent = Me.cbSintoma1
-        Me.cbSintoma1.Size = New System.Drawing.Size(170, 36)
-        Me.cbSintoma1.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.cbSintoma1.TabIndex = 52
-        Me.cbSintoma1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'chb7
-        '
-        Me.chb7.AutoSize = True
-        Me.chb7.Location = New System.Drawing.Point(219, 180)
-        Me.chb7.Name = "chb7"
-        Me.chb7.Size = New System.Drawing.Size(15, 14)
-        Me.chb7.TabIndex = 38
-        Me.chb7.UseVisualStyleBackColor = True
-        '
-        'chb6
-        '
-        Me.chb6.AutoSize = True
-        Me.chb6.Location = New System.Drawing.Point(14, 180)
-        Me.chb6.Name = "chb6"
-        Me.chb6.Size = New System.Drawing.Size(15, 14)
-        Me.chb6.TabIndex = 39
-        Me.chb6.UseVisualStyleBackColor = True
-        '
-        'chb5
-        '
-        Me.chb5.AutoSize = True
-        Me.chb5.Location = New System.Drawing.Point(423, 119)
-        Me.chb5.Name = "chb5"
-        Me.chb5.Size = New System.Drawing.Size(15, 14)
-        Me.chb5.TabIndex = 40
-        Me.chb5.UseVisualStyleBackColor = True
-        '
-        'chb4
-        '
-        Me.chb4.AutoSize = True
-        Me.chb4.Location = New System.Drawing.Point(219, 119)
-        Me.chb4.Name = "chb4"
-        Me.chb4.Size = New System.Drawing.Size(15, 14)
-        Me.chb4.TabIndex = 41
-        Me.chb4.UseVisualStyleBackColor = True
-        '
-        'chb3
-        '
-        Me.chb3.AutoSize = True
-        Me.chb3.Location = New System.Drawing.Point(14, 119)
-        Me.chb3.Name = "chb3"
-        Me.chb3.Size = New System.Drawing.Size(15, 14)
-        Me.chb3.TabIndex = 42
-        Me.chb3.UseVisualStyleBackColor = True
-        '
-        'chb2
-        '
-        Me.chb2.AutoSize = True
-        Me.chb2.Location = New System.Drawing.Point(423, 60)
-        Me.chb2.Name = "chb2"
-        Me.chb2.Size = New System.Drawing.Size(15, 14)
-        Me.chb2.TabIndex = 43
-        Me.chb2.UseVisualStyleBackColor = True
-        '
-        'chb1
-        '
-        Me.chb1.AutoSize = True
-        Me.chb1.Location = New System.Drawing.Point(219, 60)
-        Me.chb1.Name = "chb1"
-        Me.chb1.Size = New System.Drawing.Size(15, 14)
-        Me.chb1.TabIndex = 44
-        Me.chb1.UseVisualStyleBackColor = True
-        '
         'FrmModificarGerente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1538,7 +1538,7 @@ Partial Class FrmModificarGerente
         Me.Controls.Add(Me.btn_modificar)
         Me.Controls.Add(Me.cbFiltro)
         Me.Controls.Add(Me.DgvDatos)
-        Me.Controls.Add(Me.MODIFICAR)
+        Me.Controls.Add(Me.modificar)
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.modifAclaracion)
         Me.Controls.Add(Me.PanelModSintoma)
@@ -1550,18 +1550,18 @@ Partial Class FrmModificarGerente
         Me.PanelModSintoma.PerformLayout()
         Me.PanelModEnfermedad.ResumeLayout(False)
         Me.PanelModEnfermedad.PerformLayout()
+        Me.groupBoxSintomas.ResumeLayout(False)
+        Me.groupBoxSintomas.PerformLayout()
         Me.PanelModifMedico.ResumeLayout(False)
         Me.PanelModifMedico.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.groupBoxSintomas.ResumeLayout(False)
-        Me.groupBoxSintomas.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents MODIFICAR As Label
+    Friend WithEvents modificar As Label
     Friend WithEvents DgvDatos As DataGridView
     Friend WithEvents modifAclaracion As Label
     Friend WithEvents PanelModSintoma As Panel

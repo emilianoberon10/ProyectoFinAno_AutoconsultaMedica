@@ -23,40 +23,40 @@ Partial Class FrmRecuperarContraseña
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmRecuperarContraseña))
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.RecuperarPass_titulo = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Persona_ci = New System.Windows.Forms.Label()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Persona_correo = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.RecuperarPass_passNueva2 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.RecuperarPass_passNueva = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.RecuperarPass_usuario = New System.Windows.Forms.Label()
         Me.LineShape5 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.btnRecuperar = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnRestablecer = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnCancelar = New Guna.UI2.WinForms.Guna2Button()
+        Me.btn_recuperar = New Guna.UI2.WinForms.Guna2Button()
+        Me.btn_restablecer = New Guna.UI2.WinForms.Guna2Button()
+        Me.btn_cancelar = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.Guna2ShadowPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'RecuperarPass_titulo
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(77, 5)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(301, 40)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Recuperar contraseña"
+        Me.RecuperarPass_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecuperarPass_titulo.Location = New System.Drawing.Point(0, 5)
+        Me.RecuperarPass_titulo.Name = "RecuperarPass_titulo"
+        Me.RecuperarPass_titulo.Size = New System.Drawing.Size(454, 40)
+        Me.RecuperarPass_titulo.TabIndex = 0
+        Me.RecuperarPass_titulo.Text = "Recuperar contraseña"
+        Me.RecuperarPass_titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TextBox1
         '
@@ -70,16 +70,16 @@ Partial Class FrmRecuperarContraseña
         Me.TextBox1.Size = New System.Drawing.Size(180, 22)
         Me.TextBox1.TabIndex = 2
         '
-        'Label2
+        'Persona_ci
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(20, 61)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(127, 21)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Cedula identidad"
+        Me.Persona_ci.AutoSize = True
+        Me.Persona_ci.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_ci.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_ci.Location = New System.Drawing.Point(20, 61)
+        Me.Persona_ci.Name = "Persona_ci"
+        Me.Persona_ci.Size = New System.Drawing.Size(127, 21)
+        Me.Persona_ci.TabIndex = 3
+        Me.Persona_ci.Text = "Cedula identidad"
         '
         'LineShape1
         '
@@ -111,16 +111,16 @@ Partial Class FrmRecuperarContraseña
         Me.LineShape2.Y1 = 109
         Me.LineShape2.Y2 = 109
         '
-        'Label3
+        'Persona_correo
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Silver
-        Me.Label3.Location = New System.Drawing.Point(240, 62)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(138, 21)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Correo electronico"
+        Me.Persona_correo.AutoSize = True
+        Me.Persona_correo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_correo.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_correo.Location = New System.Drawing.Point(240, 62)
+        Me.Persona_correo.Name = "Persona_correo"
+        Me.Persona_correo.Size = New System.Drawing.Size(138, 21)
+        Me.Persona_correo.TabIndex = 3
+        Me.Persona_correo.Text = "Correo electronico"
         '
         'TextBox2
         '
@@ -145,16 +145,16 @@ Partial Class FrmRecuperarContraseña
         Me.TextBox5.Size = New System.Drawing.Size(180, 22)
         Me.TextBox5.TabIndex = 2
         '
-        'Label6
+        'RecuperarPass_passNueva2
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Silver
-        Me.Label6.Location = New System.Drawing.Point(28, 109)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(180, 21)
-        Me.Label6.TabIndex = 3
-        Me.Label6.Text = "Repita contraseña nueva"
+        Me.RecuperarPass_passNueva2.AutoSize = True
+        Me.RecuperarPass_passNueva2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecuperarPass_passNueva2.ForeColor = System.Drawing.Color.Silver
+        Me.RecuperarPass_passNueva2.Location = New System.Drawing.Point(28, 109)
+        Me.RecuperarPass_passNueva2.Name = "RecuperarPass_passNueva2"
+        Me.RecuperarPass_passNueva2.Size = New System.Drawing.Size(180, 21)
+        Me.RecuperarPass_passNueva2.TabIndex = 3
+        Me.RecuperarPass_passNueva2.Text = "Repita contraseña nueva"
         '
         'TextBox4
         '
@@ -167,16 +167,16 @@ Partial Class FrmRecuperarContraseña
         Me.TextBox4.Size = New System.Drawing.Size(180, 22)
         Me.TextBox4.TabIndex = 2
         '
-        'Label5
+        'RecuperarPass_passNueva
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Silver
-        Me.Label5.Location = New System.Drawing.Point(28, 60)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(135, 21)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "Contraseña nueva"
+        Me.RecuperarPass_passNueva.AutoSize = True
+        Me.RecuperarPass_passNueva.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecuperarPass_passNueva.ForeColor = System.Drawing.Color.Silver
+        Me.RecuperarPass_passNueva.Location = New System.Drawing.Point(28, 60)
+        Me.RecuperarPass_passNueva.Name = "RecuperarPass_passNueva"
+        Me.RecuperarPass_passNueva.Size = New System.Drawing.Size(135, 21)
+        Me.RecuperarPass_passNueva.TabIndex = 3
+        Me.RecuperarPass_passNueva.Text = "Contraseña nueva"
         '
         'TextBox3
         '
@@ -190,16 +190,16 @@ Partial Class FrmRecuperarContraseña
         Me.TextBox3.Size = New System.Drawing.Size(180, 22)
         Me.TextBox3.TabIndex = 2
         '
-        'Label4
+        'RecuperarPass_usuario
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Silver
-        Me.Label4.Location = New System.Drawing.Point(28, 7)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(103, 21)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Su usuario es"
+        Me.RecuperarPass_usuario.AutoSize = True
+        Me.RecuperarPass_usuario.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecuperarPass_usuario.ForeColor = System.Drawing.Color.Silver
+        Me.RecuperarPass_usuario.Location = New System.Drawing.Point(28, 7)
+        Me.RecuperarPass_usuario.Name = "RecuperarPass_usuario"
+        Me.RecuperarPass_usuario.Size = New System.Drawing.Size(103, 21)
+        Me.RecuperarPass_usuario.TabIndex = 3
+        Me.RecuperarPass_usuario.Text = "Su usuario es"
         '
         'LineShape5
         '
@@ -231,70 +231,70 @@ Partial Class FrmRecuperarContraseña
         Me.LineShape3.Y1 = 55
         Me.LineShape3.Y2 = 55
         '
-        'btnRecuperar
+        'btn_recuperar
         '
-        Me.btnRecuperar.Animated = True
-        Me.btnRecuperar.BorderColor = System.Drawing.Color.Transparent
-        Me.btnRecuperar.BorderRadius = 20
-        Me.btnRecuperar.CheckedState.Parent = Me.btnRecuperar
-        Me.btnRecuperar.CustomImages.Parent = Me.btnRecuperar
-        Me.btnRecuperar.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnRecuperar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRecuperar.ForeColor = System.Drawing.Color.White
-        Me.btnRecuperar.HoverState.Parent = Me.btnRecuperar
-        Me.btnRecuperar.Location = New System.Drawing.Point(163, 119)
-        Me.btnRecuperar.Name = "btnRecuperar"
-        Me.btnRecuperar.ShadowDecoration.Parent = Me.btnRecuperar
-        Me.btnRecuperar.Size = New System.Drawing.Size(129, 39)
-        Me.btnRecuperar.TabIndex = 7
-        Me.btnRecuperar.Text = "RECUPERAR"
+        Me.btn_recuperar.Animated = True
+        Me.btn_recuperar.BorderColor = System.Drawing.Color.Transparent
+        Me.btn_recuperar.BorderRadius = 20
+        Me.btn_recuperar.CheckedState.Parent = Me.btn_recuperar
+        Me.btn_recuperar.CustomImages.Parent = Me.btn_recuperar
+        Me.btn_recuperar.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_recuperar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_recuperar.ForeColor = System.Drawing.Color.White
+        Me.btn_recuperar.HoverState.Parent = Me.btn_recuperar
+        Me.btn_recuperar.Location = New System.Drawing.Point(163, 119)
+        Me.btn_recuperar.Name = "btn_recuperar"
+        Me.btn_recuperar.ShadowDecoration.Parent = Me.btn_recuperar
+        Me.btn_recuperar.Size = New System.Drawing.Size(129, 39)
+        Me.btn_recuperar.TabIndex = 7
+        Me.btn_recuperar.Text = "RECUPERAR"
         '
-        'btnRestablecer
+        'btn_restablecer
         '
-        Me.btnRestablecer.Animated = True
-        Me.btnRestablecer.BorderColor = System.Drawing.Color.Transparent
-        Me.btnRestablecer.BorderRadius = 20
-        Me.btnRestablecer.CheckedState.Parent = Me.btnRestablecer
-        Me.btnRestablecer.CustomImages.Parent = Me.btnRestablecer
-        Me.btnRestablecer.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnRestablecer.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRestablecer.ForeColor = System.Drawing.Color.White
-        Me.btnRestablecer.HoverState.Parent = Me.btnRestablecer
-        Me.btnRestablecer.Location = New System.Drawing.Point(53, 171)
-        Me.btnRestablecer.Name = "btnRestablecer"
-        Me.btnRestablecer.ShadowDecoration.Parent = Me.btnRestablecer
-        Me.btnRestablecer.Size = New System.Drawing.Size(129, 39)
-        Me.btnRestablecer.TabIndex = 7
-        Me.btnRestablecer.Text = "RESTABLECER"
+        Me.btn_restablecer.Animated = True
+        Me.btn_restablecer.BorderColor = System.Drawing.Color.Transparent
+        Me.btn_restablecer.BorderRadius = 20
+        Me.btn_restablecer.CheckedState.Parent = Me.btn_restablecer
+        Me.btn_restablecer.CustomImages.Parent = Me.btn_restablecer
+        Me.btn_restablecer.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_restablecer.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_restablecer.ForeColor = System.Drawing.Color.White
+        Me.btn_restablecer.HoverState.Parent = Me.btn_restablecer
+        Me.btn_restablecer.Location = New System.Drawing.Point(53, 171)
+        Me.btn_restablecer.Name = "btn_restablecer"
+        Me.btn_restablecer.ShadowDecoration.Parent = Me.btn_restablecer
+        Me.btn_restablecer.Size = New System.Drawing.Size(129, 39)
+        Me.btn_restablecer.TabIndex = 7
+        Me.btn_restablecer.Text = "RESTABLECER"
         '
-        'btnCancelar
+        'btn_cancelar
         '
-        Me.btnCancelar.Animated = True
-        Me.btnCancelar.BorderColor = System.Drawing.Color.Transparent
-        Me.btnCancelar.BorderRadius = 20
-        Me.btnCancelar.CheckedState.Parent = Me.btnCancelar
-        Me.btnCancelar.CustomImages.Parent = Me.btnCancelar
-        Me.btnCancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ForeColor = System.Drawing.Color.White
-        Me.btnCancelar.HoverState.Parent = Me.btnCancelar
-        Me.btnCancelar.Location = New System.Drawing.Point(8, 393)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.ShadowDecoration.Parent = Me.btnCancelar
-        Me.btnCancelar.Size = New System.Drawing.Size(129, 39)
-        Me.btnCancelar.TabIndex = 7
-        Me.btnCancelar.Text = "CANCELAR"
+        Me.btn_cancelar.Animated = True
+        Me.btn_cancelar.BorderColor = System.Drawing.Color.Transparent
+        Me.btn_cancelar.BorderRadius = 20
+        Me.btn_cancelar.CheckedState.Parent = Me.btn_cancelar
+        Me.btn_cancelar.CustomImages.Parent = Me.btn_cancelar
+        Me.btn_cancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_cancelar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancelar.ForeColor = System.Drawing.Color.White
+        Me.btn_cancelar.HoverState.Parent = Me.btn_cancelar
+        Me.btn_cancelar.Location = New System.Drawing.Point(8, 393)
+        Me.btn_cancelar.Name = "btn_cancelar"
+        Me.btn_cancelar.ShadowDecoration.Parent = Me.btn_cancelar
+        Me.btn_cancelar.Size = New System.Drawing.Size(129, 39)
+        Me.btn_cancelar.TabIndex = 7
+        Me.btn_cancelar.Text = "CANCELAR"
         '
         'Guna2ShadowPanel1
         '
         Me.Guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ShadowPanel1.Controls.Add(Me.btnRestablecer)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.btn_restablecer)
         Me.Guna2ShadowPanel1.Controls.Add(Me.TextBox5)
-        Me.Guna2ShadowPanel1.Controls.Add(Me.Label6)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.RecuperarPass_passNueva2)
         Me.Guna2ShadowPanel1.Controls.Add(Me.TextBox4)
-        Me.Guna2ShadowPanel1.Controls.Add(Me.Label5)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.RecuperarPass_passNueva)
         Me.Guna2ShadowPanel1.Controls.Add(Me.TextBox3)
-        Me.Guna2ShadowPanel1.Controls.Add(Me.Label4)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.RecuperarPass_usuario)
         Me.Guna2ShadowPanel1.Controls.Add(Me.ShapeContainer2)
         Me.Guna2ShadowPanel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(113, 164)
@@ -323,13 +323,13 @@ Partial Class FrmRecuperarContraseña
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(454, 444)
         Me.Controls.Add(Me.Guna2ShadowPanel1)
-        Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.btnRecuperar)
+        Me.Controls.Add(Me.btn_cancelar)
+        Me.Controls.Add(Me.btn_recuperar)
         Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Persona_correo)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Persona_ci)
+        Me.Controls.Add(Me.RecuperarPass_titulo)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Silver
@@ -346,26 +346,26 @@ Partial Class FrmRecuperarContraseña
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents RecuperarPass_titulo As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents Persona_ci As Label
     Friend WithEvents LineShape1 As PowerPacks.LineShape
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents LineShape2 As PowerPacks.LineShape
-    Friend WithEvents Label3 As Label
+    Friend WithEvents Persona_correo As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Label6 As Label
+    Friend WithEvents RecuperarPass_passNueva2 As Label
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label5 As Label
+    Friend WithEvents RecuperarPass_passNueva As Label
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label4 As Label
+    Friend WithEvents RecuperarPass_usuario As Label
     Friend WithEvents LineShape5 As PowerPacks.LineShape
     Friend WithEvents LineShape4 As PowerPacks.LineShape
     Friend WithEvents LineShape3 As PowerPacks.LineShape
-    Friend WithEvents btnRecuperar As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnRestablecer As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnCancelar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_recuperar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_restablecer As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_cancelar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
     Friend WithEvents ShapeContainer2 As PowerPacks.ShapeContainer
 End Class

@@ -651,6 +651,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Without periods or hyphens.
+        '''</summary>
+        Friend Shared ReadOnly Property Persona_aclaracionCi() As String
+            Get
+                Return ResourceManager.GetString("Persona_aclaracionCi", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Family background.
         '''</summary>
         Friend Shared ReadOnly Property Persona_antece() As String
@@ -687,7 +696,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Busca una cadena traducida similar a Home.
+        '''  Busca una cadena traducida similar a Home Adress.
         '''</summary>
         Friend Shared ReadOnly Property Persona_domicilio() As String
             Get

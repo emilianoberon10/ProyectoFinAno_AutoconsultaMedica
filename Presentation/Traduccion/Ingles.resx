@@ -313,6 +313,9 @@ If I modify it, you can click on the following link to restore it</value>
   <data name="PConsulta_titulo" xml:space="preserve">
     <value>SELECT YOUR SYMPTOMS</value>
   </data>
+  <data name="Persona_aclaracionCi" xml:space="preserve">
+    <value>Without periods or hyphens</value>
+  </data>
   <data name="Persona_antece" xml:space="preserve">
     <value>Family background</value>
   </data>
@@ -326,7 +329,7 @@ If I modify it, you can click on the following link to restore it</value>
     <value>Address</value>
   </data>
   <data name="Persona_domicilio" xml:space="preserve">
-    <value>Home</value>
+    <value>Home Adress</value>
   </data>
   <data name="Persona_edad" xml:space="preserve">
     <value>Age</value>

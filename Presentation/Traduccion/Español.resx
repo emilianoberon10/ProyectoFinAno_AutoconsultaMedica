@@ -316,6 +316,9 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla</value>
   <data name="PConsulta_titulo" xml:space="preserve">
     <value>SELECCIONE SUS SINTOMAS</value>
   </data>
+  <data name="Persona_aclaracionCi" xml:space="preserve">
+    <value>(sin puntos ni guiones)</value>
+  </data>
   <data name="Persona_antece" xml:space="preserve">
     <value>Antecedentes Familiares</value>
   </data>

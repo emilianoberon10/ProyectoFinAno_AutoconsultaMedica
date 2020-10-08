@@ -473,14 +473,14 @@ Partial Class FrmConsultaPaciente
         '
         'consu_titulo
         '
-        Me.consu_titulo.AutoSize = True
         Me.consu_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.consu_titulo.ForeColor = System.Drawing.Color.Silver
-        Me.consu_titulo.Location = New System.Drawing.Point(193, 24)
+        Me.consu_titulo.Location = New System.Drawing.Point(0, 24)
         Me.consu_titulo.Name = "consu_titulo"
-        Me.consu_titulo.Size = New System.Drawing.Size(392, 40)
+        Me.consu_titulo.Size = New System.Drawing.Size(778, 40)
         Me.consu_titulo.TabIndex = 40
         Me.consu_titulo.Text = "SELECCIONE SUS SINTOMAS"
+        Me.consu_titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmConsultaPaciente
         '

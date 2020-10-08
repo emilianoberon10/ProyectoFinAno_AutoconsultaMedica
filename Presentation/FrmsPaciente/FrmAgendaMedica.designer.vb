@@ -41,14 +41,14 @@ Partial Class FrmAgendaMedica
         '
         'Agenda_titulo
         '
-        Me.Agenda_titulo.AutoSize = True
         Me.Agenda_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Agenda_titulo.ForeColor = System.Drawing.Color.Silver
-        Me.Agenda_titulo.Location = New System.Drawing.Point(255, 9)
+        Me.Agenda_titulo.Location = New System.Drawing.Point(0, 9)
         Me.Agenda_titulo.Name = "Agenda_titulo"
-        Me.Agenda_titulo.Size = New System.Drawing.Size(268, 40)
+        Me.Agenda_titulo.Size = New System.Drawing.Size(778, 40)
         Me.Agenda_titulo.TabIndex = 30
         Me.Agenda_titulo.Text = "AGENDA MEDICOS"
+        Me.Agenda_titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'dgvAgenda
         '

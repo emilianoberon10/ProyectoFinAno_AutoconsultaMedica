@@ -1,18 +1,18 @@
 ﻿Public Class FrmRecuperarContraseña
 
     Private Sub FrmRecuperarContraseña_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Traductor.traducirForm(Me)
+    End Sub
+
+    Private Sub btnRestablecer_Click(sender As Object, e As EventArgs) Handles btn_restablecer.Click
 
     End Sub
 
-    Private Sub btnRestablecer_Click(sender As Object, e As EventArgs) Handles btnRestablecer.Click
+    Private Sub btnRecuperar_Click(sender As Object, e As EventArgs) Handles btn_recuperar.Click
 
     End Sub
 
-    Private Sub btnRecuperar_Click(sender As Object, e As EventArgs) Handles btnRecuperar.Click
-
-    End Sub
-
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btn_cancelar.Click
         Me.Close()
     End Sub
 

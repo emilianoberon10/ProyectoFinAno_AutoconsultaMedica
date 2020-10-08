@@ -2,14 +2,15 @@
 
 Public Class FrmCrearUsuario
 
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btn_cancelar.Click
         Me.Close()
+
     End Sub
 
-    Private Sub btnCrear_Click(sender As Object, e As EventArgs) Handles btnCrear.Click
+    Private Sub btnCrear_Click(sender As Object, e As EventArgs) Handles btn_crear.Click
 
         If ComprobarCamposUsuario() Then
-            ErrorProvider1.SetError(Label1, "TODOS LOS CAMPOS SON OBLIGATORIOS!!")
+            ErrorProvider1.SetError(llbCrearUsuario, "TODOS LOS CAMPOS SON OBLIGATORIOS!!")
             General.GetForm(Estado.Error, "Todos los campos son obligatorios!!")
         Else
             Try
@@ -58,9 +59,12 @@ Public Class FrmCrearUsuario
         DesecharCaracteresEspeciales(e)
     End Sub
 
-    Private Sub txtCedu_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown, btnCrear.KeyDown, btnCancelar.KeyDown, txtTelefono.KeyDown, txtSnom.KeyDown, txtSape.KeyDown, txtPNom.KeyDown, txtPape.KeyDown, txtEdad.KeyDown, txtDomicilio.KeyDown, txtCorreo.KeyDown, txtCedula.KeyDown
+    Private Sub txtCedu_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown, btn_crear.KeyDown, btn_cancelar.KeyDown, txtTelefono.KeyDown, txtSnom.KeyDown, txtSape.KeyDown, txtPNom.KeyDown, txtPape.KeyDown, txtEdad.KeyDown, txtDomicilio.KeyDown, txtCorreo.KeyDown, txtCedula.KeyDown
         DesecharAltF4(e)
 
     End Sub
 
+    Private Sub FrmCrearUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Traductor.traducirForm(Me)
+    End Sub
 End Class

@@ -100,14 +100,14 @@ Partial Class FrmSolicitudesChat
         '
         'MSoli_titulo
         '
-        Me.MSoli_titulo.AutoSize = True
         Me.MSoli_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MSoli_titulo.ForeColor = System.Drawing.Color.Silver
-        Me.MSoli_titulo.Location = New System.Drawing.Point(269, 25)
+        Me.MSoli_titulo.Location = New System.Drawing.Point(0, 25)
         Me.MSoli_titulo.Name = "MSoli_titulo"
-        Me.MSoli_titulo.Size = New System.Drawing.Size(264, 40)
+        Me.MSoli_titulo.Size = New System.Drawing.Size(802, 40)
         Me.MSoli_titulo.TabIndex = 38
         Me.MSoli_titulo.Text = "Solicitudes de chat"
+        Me.MSoli_titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmSolicitudesChat
         '

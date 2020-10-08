@@ -499,6 +499,11 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
   Busca una cadena traducida similar a SELECCIONE SUS SINTOMAS.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Español.Persona_aclaracionCi">
+<summary>
+  Busca una cadena traducida similar a (sin puntos ni guiones).
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Español.Persona_antece">
 <summary>
   Busca una cadena traducida similar a Antecedentes Familiares.
@@ -1001,6 +1006,11 @@ If I modify it, you can click on the following link to restore it.
   Busca una cadena traducida similar a SELECT YOUR SYMPTOMS.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Ingles.Persona_aclaracionCi">
+<summary>
+  Busca una cadena traducida similar a Without periods or hyphens.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Ingles.Persona_antece">
 <summary>
   Busca una cadena traducida similar a Family background.
@@ -1023,7 +1033,7 @@ If I modify it, you can click on the following link to restore it.
 </member>
 <member name="P:Presentation.My.Resources.Ingles.Persona_domicilio">
 <summary>
-  Busca una cadena traducida similar a Home.
+  Busca una cadena traducida similar a Home Adress.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.Persona_edad">

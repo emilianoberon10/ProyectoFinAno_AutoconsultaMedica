@@ -4,12 +4,12 @@
     Public Function SetDefine(nombreEnfermedad As String, nombreSintoma As String) As Boolean
         Dim _consultaSQL As String
 
-        _consultaSQL = "SELECT * FROM Define WHERE EXISTS (SELECT nomEnf FROM define WHERE nomEnf='" & nombreEnfermedad & "')"
+        _consultaSQL = "SELECT * FROM define WHERE EXISTS (SELECT nomEnf FROM define WHERE nomEnf='" & nombreEnfermedad & "')"
 
         If ConsultaComprobarExistencia(_consultaSQL) Then
             Return True
         Else
-            _consultaSQL = "INSERT INTO sintoma(nomEnf,nomSint)"
+            _consultaSQL = "INSERT INTO define(nomEnf,nomSint)"
             _consultaSQL &= " VALUES ( "
             _consultaSQL &= "'" & nombreEnfermedad & "',"
             _consultaSQL &= "'" & nombreSintoma & "')"
@@ -22,10 +22,10 @@
     Public Function BorrarDefine(nombreEnfermedad As String) As Boolean
         Dim _consultaSQL As String
 
-        _consultaSQL = "SELECT * FROM Define WHERE EXISTS (SELECT nomEnf FROM define WHERE nomEnf='" & nombreEnfermedad & "')"
+        _consultaSQL = "SELECT * FROM define WHERE EXISTS (SELECT nomEnf FROM define WHERE nomEnf='" & nombreEnfermedad & "')"
 
         If ConsultaComprobarExistencia(_consultaSQL) Then
-            _consultaSQL = "Delete * FROM Define WHERE nomEnf=" & nombreEnfermedad & ""
+            _consultaSQL = "DELETE * FROM define WHERE nomEnf=" & nombreEnfermedad & ""
             EjecutarConsulta(_consultaSQL)
             Return True
         Else

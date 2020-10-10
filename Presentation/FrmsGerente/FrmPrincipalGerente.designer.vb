@@ -24,6 +24,7 @@ Partial Class FrmPrincipalGerente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipalGerente))
         Me.PanelMenu = New System.Windows.Forms.Panel()
+        Me.btn_dashBoard = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_eliminar = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_modificar = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_cerrarSesion = New Guna.UI2.WinForms.Guna2Button()
@@ -55,6 +56,7 @@ Partial Class FrmPrincipalGerente
         'PanelMenu
         '
         Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.PanelMenu.Controls.Add(Me.btn_dashBoard)
         Me.PanelMenu.Controls.Add(Me.btn_eliminar)
         Me.PanelMenu.Controls.Add(Me.btn_modificar)
         Me.PanelMenu.Controls.Add(Me.btn_cerrarSesion)
@@ -67,6 +69,33 @@ Partial Class FrmPrincipalGerente
         Me.PanelMenu.Name = "PanelMenu"
         Me.PanelMenu.Size = New System.Drawing.Size(222, 683)
         Me.PanelMenu.TabIndex = 0
+        '
+        'btn_dashBoard
+        '
+        Me.btn_dashBoard.Animated = True
+        Me.btn_dashBoard.BorderColor = System.Drawing.Color.Transparent
+        Me.btn_dashBoard.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_dashBoard.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btn_dashBoard.CheckedState.Parent = Me.btn_dashBoard
+        Me.btn_dashBoard.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_dashBoard.CustomImages.Parent = Me.btn_dashBoard
+        Me.btn_dashBoard.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.btn_dashBoard.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_dashBoard.ForeColor = System.Drawing.Color.White
+        Me.btn_dashBoard.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btn_dashBoard.HoverState.Parent = Me.btn_dashBoard
+        Me.btn_dashBoard.Image = Global.Presentation.My.Resources.Resources.dashboard
+        Me.btn_dashBoard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btn_dashBoard.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btn_dashBoard.ImageSize = New System.Drawing.Size(24, 24)
+        Me.btn_dashBoard.Location = New System.Drawing.Point(0, 381)
+        Me.btn_dashBoard.Name = "btn_dashBoard"
+        Me.btn_dashBoard.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_dashBoard.ShadowDecoration.Parent = Me.btn_dashBoard
+        Me.btn_dashBoard.Size = New System.Drawing.Size(222, 46)
+        Me.btn_dashBoard.TabIndex = 307
+        Me.btn_dashBoard.Text = "DATOS USO"
+        Me.btn_dashBoard.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'btn_eliminar
         '
@@ -386,4 +415,5 @@ Partial Class FrmPrincipalGerente
     Friend WithEvents btn_cerrarSesion As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents fotoPerfil As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents btnChangeLanguage As PictureBox
+    Friend WithEvents btn_dashBoard As Guna.UI2.WinForms.Guna2Button
 End Class

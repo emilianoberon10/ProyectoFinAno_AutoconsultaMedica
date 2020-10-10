@@ -26,16 +26,21 @@ Public Class FrmModificarGerente
                 PanelModifMedico.Visible = False
                 PanelModEnfermedad.Visible = False
                 DgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
+                txtNombreSintoma.Focus()
             Case "Medicos"
                 PanelModifMedico.Visible = True
                 PanelModSintoma.Visible = False
                 PanelModEnfermedad.Visible = False
                 DgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
+                txtCedula.Focus()
+
             Case "Enfermedades"
                 PanelModEnfermedad.Visible = True
                 PanelModSintoma.Visible = False
                 PanelModifMedico.Visible = False
                 DgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
+                txtNombreEnfermedad.Focus()
+
         End Select
     End Sub
 
@@ -50,26 +55,29 @@ Public Class FrmModificarGerente
                 Case "Sintomas"
                     txtNombreSintoma.Text = DgvDatos.Rows(FilaActual).Cells(columna).Value
                 Case "Medicos"
-                    'PrimerNombre,SegundoNombre,PrimerApellido,SegundoApellido,
-                    'lugarTrabajo, Tel_cel, Domicilio, sexo, Lun, Mar, Mie, Jue, Vie, Sab, Dom, nombre Especialidad
+                    'Cedula, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido,edad
+                    'lugarTrabajo, Especialidad, Tel_cel, Domicilio, sexo, Lun, Mar, Mie, Jue, Vie, Sab, Dom
+                    CargarComboBoxEspec(cbEsp)
+
+                    txtCedula.Text = DgvDatos.Item(0, FilaActual).Value()
                     txtPNom.Text = DgvDatos.Item(1, FilaActual).Value()
                     txtSnom.Text = DgvDatos.Item(2, FilaActual).Value()
                     txtPape.Text = DgvDatos.Item(3, FilaActual).Value()
                     txtSape.Text = DgvDatos.Item(4, FilaActual).Value()
-                    txtLugarTrabajo.Text = DgvDatos.Item(5, FilaActual).Value()
-                    cbEsp.Text = DgvDatos.Item(6, FilaActual).Value()
-                    txtTelefono.Text = DgvDatos.Item(7, FilaActual).Value()
-                    txtDomicilio.Text = DgvDatos.Item(8, FilaActual).Value()
-                    cbSexo.Text = DgvDatos.Item(9, FilaActual).Value()
-                    CargarComboBoxEspec(cbEsp)
+                    txtEdad.Text = DgvDatos.Item(5, FilaActual).Value()
+                    txtLugarTrabajo.Text = DgvDatos.Item(6, FilaActual).Value()
+                    cbEsp.Text = DgvDatos.Item(7, FilaActual).Value()
+                    txtTelefono.Text = DgvDatos.Item(8, FilaActual).Value()
+                    txtDomicilio.Text = DgvDatos.Item(9, FilaActual).Value()
+                    cbSexo.Text = DgvDatos.Item(10, FilaActual).Value()
 
-                    txtHoraEntradaLunes.Text = DgvDatos.Item(10, FilaActual).Value()
-                    txtHoraEntradaMartes.Text = DgvDatos.Item(11, FilaActual).Value()
-                    txtHoraEntradaMiercoles.Text = DgvDatos.Item(12, FilaActual).Value()
-                    txtHoraEntradaJueves.Text = DgvDatos.Item(13, FilaActual).Value()
-                    txtHoraEntradaViernes.Text = DgvDatos.Item(14, FilaActual).Value()
-                    txtHoraEntradaSabado.Text = DgvDatos.Item(15, FilaActual).Value()
-                    txtHoraEntradaDomingo.Text = DgvDatos.Item(16, FilaActual).Value()
+                    txtHoraEntradaLunes.Text = DgvDatos.Item(11, FilaActual).Value()
+                    txtHoraEntradaMartes.Text = DgvDatos.Item(12, FilaActual).Value()
+                    txtHoraEntradaMiercoles.Text = DgvDatos.Item(13, FilaActual).Value()
+                    txtHoraEntradaJueves.Text = DgvDatos.Item(14, FilaActual).Value()
+                    txtHoraEntradaViernes.Text = DgvDatos.Item(15, FilaActual).Value()
+                    txtHoraEntradaSabado.Text = DgvDatos.Item(16, FilaActual).Value()
+                    txtHoraEntradaDomingo.Text = DgvDatos.Item(17, FilaActual).Value()
 
                 Case "Enfermedades"
                     txtNombreEnfermedad.Text = DgvDatos.Item(1, FilaActual).Value()
@@ -100,7 +108,55 @@ Public Class FrmModificarGerente
                         sintoma.ModificarSintoma()
                     End If
                 Case "Medicos"
-                    '.....
+                    Dim medico As New Medico
+                    With medico
+                        ._ci = txtCedula.Text
+                        ._pNom = txtPNom.Text
+                        ._sNom = txtSnom.Text
+                        ._pApe = txtPape.Text
+                        ._sApe = txtSape.Text
+                        ._lugarTrabajo = txtLugarTrabajo.Text
+                        ._especialidad = cbEsp.Text
+                        ._tel_cel = txtTelefono.Text
+                        ._domicilio = txtDomicilio.Text
+                        ._sexo = cbSexo.Text
+                        ._edad = txtEdad.Text
+                    End With
+
+                    If medico.Modificar Then
+
+#Region "comprobar y guardar horarios"
+
+                        If chkLun.Checked AndAlso txtHoraEntradaLunes.Text IsNot "" Then
+                            If txtHoraEntradaLunes.Text.Length <= 30 Then medico._horario = txtHoraEntradaLunes.Text And medico.SetHorario("lun")
+                        End If
+                        If chkMar.Checked AndAlso txtHoraEntradaMartes.Text IsNot "" Then
+                            medico._horario = txtHoraEntradaMartes.Text And medico.SetHorario("mar")
+                        End If
+                        If chkMier.Checked AndAlso txtHoraEntradaMiercoles.Text IsNot "" Then
+                            medico._horario = txtHoraEntradaMiercoles.Text And medico.SetHorario("mie")
+                        End If
+                        If chkJuev.Checked AndAlso txtHoraEntradaJueves.Text IsNot "" Then
+                            medico._horario = txtHoraEntradaJueves.Text And medico.SetHorario("jue")
+                        End If
+                        If chkVier.Checked AndAlso txtHoraEntradaViernes.Text IsNot "" Then
+                            medico._horario = txtHoraEntradaViernes.Text And medico.SetHorario("vie")
+                        End If
+                        If chkSab.Checked AndAlso txtHoraEntradaSabado.Text IsNot "" Then
+                            medico._horario = txtHoraEntradaSabado.Text And medico.SetHorario("sab")
+                        End If
+                        If chkDom.Checked AndAlso txtHoraEntradaDomingo.Text IsNot "" Then
+                            medico._horario = txtHoraEntradaDomingo.Text And medico.SetHorario("dom")
+                        End If
+
+#End Region
+                        General.GetForm(Estado.Ok, "Se modifico con exito")
+                        DgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
+                    Else
+                        General.GetForm(Estado.Ok, "No se pudo modificar")
+                    End If
+
+
                 Case "Enfermedades"
                     Dim Enfermedad As New Enfermedad(txtNombreEnfermedad.Text, cbRiesgo.Text, txtDescripcion.Text)
                     Dim define As Define
@@ -130,7 +186,7 @@ Public Class FrmModificarGerente
                         End If
                     Next
 
-                    define = New Define(Enfermedad._nombre, listaSintomas)
+                    define = New Define(Enfermedad._nombre, sintomasComboBox)
 
                     If Enfermedad.ModificarEnfermedad() Then
                         define.ModifDefine(define)

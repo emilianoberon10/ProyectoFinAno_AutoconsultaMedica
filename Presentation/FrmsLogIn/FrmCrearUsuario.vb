@@ -1,7 +1,18 @@
 ﻿Imports Logic
 
 Public Class FrmCrearUsuario
-
+    Private Sub FrmCrearUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Traductor.traducirForm(Me)
+        txtCedula.MaxLength = 8
+        txtEdad.MaxLength = 3
+        txtTelefono.MaxLength = 9
+        txtPNom.MaxLength = 30
+        txtPape.MaxLength = 30
+        txtSnom.MaxLength = 30
+        txtSape.MaxLength = 30
+        txtCorreo.MaxLength = 255
+        txtDomicilio.MaxLength = 255
+    End Sub
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btn_cancelar.Click
         Me.Close()
 
@@ -30,10 +41,15 @@ Public Class FrmCrearUsuario
                 End With
 
                 If paciente.Guardar() Then
+                    General.GetForm(Estado.Critical, "Ya existe un usiario ligado a esta cedula")
+                    ErrorProvider1.SetError(Persona_ci, "Ya existe un usiario ligado a esta cedula")
+                Else
                     General.GetForm(Estado.Ok, "Usuario creado correctamente, utilice su cedula para iniciar sesion")
+                    Me.Close()
                 End If
             Catch ex As Exception
                 General.GetForm(Estado.Critical, ex.Message)
+                ErrorProvider1.SetError(llbCrearUsuario, "Error al crear usuario: " & ex.Message)
             End Try
         End If
     End Sub
@@ -41,7 +57,7 @@ Public Class FrmCrearUsuario
     Private Function ComprobarCamposUsuario() As Boolean
         If (txtCedula.Text = "" Or txtCorreo.Text = "" Or txtCedula.Text = "" Or txtTelefono.Text = "" Or
            txtEdad.Text = "" Or txtDomicilio.Text = "" Or cbSexo.Text = "" Or txtPNom.Text = "" Or
-           txtSnom.Text = "" Or txtPape.Text = "" Or txtSape.Text = "") Then
+           txtPape.Text = "" Or txtSape.Text = "") Then
             Return True
         Else
             Return False
@@ -64,7 +80,5 @@ Public Class FrmCrearUsuario
 
     End Sub
 
-    Private Sub FrmCrearUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Traductor.traducirForm(Me)
-    End Sub
+
 End Class

@@ -24,8 +24,8 @@ Public Class DBPaciente
                     Else
                         reader.Dispose()
 
-                        _command.CommandText = "INSERT INTO persona VALUES(@ci,@tel,,@edad,@domi,@sexo,@pnom,@pape,@snom,@sape);"
-                        _command.CommandText &= "INSERT INTO paciente VALUES(LAST_INSERT_ID(persona),@ci,@mail,@contraseña);"
+                        _command.CommandText = "INSERT INTO persona VALUES(@ci,@tel,@edad,@domi,@sexo,@pnom,@pape,@snom,@sape);"
+                        _command.CommandText &= "INSERT INTO paciente VALUES(@ci,@mail,@contraseña);"
 
                         _command.Parameters.AddWithValue("@tel", tel_cel)
                         _command.Parameters.AddWithValue("@domi", domicilio)
@@ -67,7 +67,9 @@ Public Class DBPaciente
                 Else
                     reader.Dispose()
 
-                    _command.CommandText = "DELETE FROM persona, paciente WHERE ci=@ci;"
+                    _command.CommandText = "DELETE FROM paciente WHERE ciP=@ci;"
+                    _command.ExecuteNonQuery()
+                    _command.CommandText = "DELETE FROM persona WHERE ci=@ci;"
                     _command.ExecuteNonQuery()
                     Return False
                 End If
@@ -116,14 +118,14 @@ Public Class DBPaciente
             Using _command = New MySqlCommand
                 Try
                     _command.Connection = _connection
-                    _command.CommandText = "SET @diagnostico = (Select nombre
-					                                            from Riesgo R,enfermedad E
-					                                            where E.riesgo=idRiesgo
-					                                            and nombre =(Select nomE
-					                                            			from diagnostico
-					                                            			where idP=@ci and fecha=CURDATE()
-					                                            			order by idDiag DESC limit 1)order by idriesgo asc);"
-                    _command.CommandText &= "INSERT INTO solicita(id,ci,nombre,diagnostico,estado) VALUES(null,@ci,@nombre,@diagnostico,'Pendiente')"
+                    _command.CommandText = "SET @diagnostico = (SELECT nombre
+					                                            FROM Riesgo R,enfermedad E
+					                                            WHERE E.riesgo=idRiesgo
+					                                            AND nombre =(SELECT nomE
+					                                            			FROM diagnostico
+					                                            			WHERE idP=@ci and fecha=CURDATE()
+					                                            			ORDER BY idDiag DESC limit 1)ORDER BY idriesgo ASC);"
+                    _command.CommandText &= "INSERT INTO solicita(id,ci,nombre,diagnostico,estado) VALUES(null,@ci,@nombre,@diagnostico,'Pendiente');"
                     _command.Parameters.AddWithValue("@ci", ci)
                     _command.Parameters.AddWithValue("@nombre", nombre)
                     _command.CommandType = CommandType.Text
@@ -144,7 +146,7 @@ Public Class DBPaciente
             Using _command = New MySqlCommand
                 _command.Connection = _connection
 
-                _command.CommandText = "SELECT estado FROM solicita WHERE ci=@ci AND estado='Atendido' ORDER BY id DESC"
+                _command.CommandText = "SELECT estado FROM solicita WHERE ci=@ci AND estado='Atendido' ORDER BY id DESC;"
                 _command.Parameters.AddWithValue("@ci", ci)
                 _command.CommandType = CommandType.Text
                 Dim reader = _command.ExecuteReader
@@ -166,7 +168,7 @@ Public Class DBPaciente
             Using _command = New MySqlCommand
                 _command.Connection = _connection
 
-                _command.CommandText = "DELETE FROM solicita WHERE ci=@ci AND estado='Atendido'"
+                _command.CommandText = "DELETE FROM solicita WHERE ci=@ci AND estado='Atendido';"
                 _command.Parameters.AddWithValue("@ci", ci)
                 _command.CommandType = CommandType.Text
                 _command.ExecuteNonQuery()
@@ -183,7 +185,7 @@ Public Class DBPaciente
 
                 _command.CommandText = "SET @med = (SELECT idMed FROM chat WHERE ciPac=@ci AND estado='Proceso');
                                         SET @chat = (SELECT idChat FROM chat WHERE ciPac=@ci AND estado='Proceso');
-                                        insert into mensaje values (null,curtime(),@chat,@ci,@med,@msj);"
+                                        INSERT INTO mensaje VALUES (null,curtime(),@chat,@ci,@med,@msj);"
                 _command.Parameters.AddWithValue("@ci", ci)
                 _command.Parameters.AddWithValue("@msj", msj)
                 _command.CommandType = CommandType.Text

@@ -52,14 +52,15 @@ Partial Class FrmDatosUso
         Me.Chart1.ChartAreas.Add(ChartArea1)
         Legend1.Name = "Legend1"
         Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(36, 221)
+        Me.Chart1.Location = New System.Drawing.Point(11, 328)
+        Me.Chart1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Chart1.Name = "Chart1"
         Series1.ChartArea = "ChartArea1"
         Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar
         Series1.Legend = "Legend1"
         Series1.Name = "Series1"
         Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(320, 261)
+        Me.Chart1.Size = New System.Drawing.Size(376, 249)
         Me.Chart1.TabIndex = 0
         Me.Chart1.Text = "Chart1"
         '
@@ -69,77 +70,84 @@ Partial Class FrmDatosUso
         Me.Chart2.ChartAreas.Add(ChartArea2)
         Legend2.Name = "Legend1"
         Me.Chart2.Legends.Add(Legend2)
-        Me.Chart2.Location = New System.Drawing.Point(408, 221)
+        Me.Chart2.Location = New System.Drawing.Point(419, 328)
+        Me.Chart2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Chart2.Name = "Chart2"
         Series2.ChartArea = "ChartArea1"
         Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
         Series2.Legend = "Legend1"
         Series2.Name = "Series1"
         Me.Chart2.Series.Add(Series2)
-        Me.Chart2.Size = New System.Drawing.Size(237, 261)
+        Me.Chart2.Size = New System.Drawing.Size(326, 249)
         Me.Chart2.TabIndex = 0
         Me.Chart2.Text = "Chart1"
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.PictureBox1.Location = New System.Drawing.Point(36, 88)
+        Me.PictureBox1.Location = New System.Drawing.Point(22, 54)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(134, 68)
+        Me.PictureBox1.Size = New System.Drawing.Size(162, 71)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.PictureBox2.Location = New System.Drawing.Point(53, 69)
+        Me.PictureBox2.Location = New System.Drawing.Point(32, 43)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(52, 41)
+        Me.PictureBox2.Size = New System.Drawing.Size(59, 54)
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.PictureBox3.Location = New System.Drawing.Point(222, 88)
+        Me.PictureBox3.Location = New System.Drawing.Point(301, 54)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(134, 68)
+        Me.PictureBox3.Size = New System.Drawing.Size(162, 71)
         Me.PictureBox3.TabIndex = 1
         Me.PictureBox3.TabStop = False
         '
         'PictureBox4
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.PictureBox4.Location = New System.Drawing.Point(239, 69)
+        Me.PictureBox4.Location = New System.Drawing.Point(311, 43)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(52, 41)
+        Me.PictureBox4.Size = New System.Drawing.Size(59, 54)
         Me.PictureBox4.TabIndex = 1
         Me.PictureBox4.TabStop = False
         '
         'PictureBox5
         '
         Me.PictureBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.PictureBox5.Location = New System.Drawing.Point(408, 88)
+        Me.PictureBox5.Location = New System.Drawing.Point(547, 54)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(134, 68)
+        Me.PictureBox5.Size = New System.Drawing.Size(162, 71)
         Me.PictureBox5.TabIndex = 1
         Me.PictureBox5.TabStop = False
         '
         'PictureBox6
         '
         Me.PictureBox6.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.PictureBox6.Location = New System.Drawing.Point(425, 69)
+        Me.PictureBox6.Location = New System.Drawing.Point(557, 43)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(52, 41)
+        Me.PictureBox6.Size = New System.Drawing.Size(66, 54)
         Me.PictureBox6.TabIndex = 1
         Me.PictureBox6.TabStop = False
         '
         'FrmDatosUso
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(668, 570)
+        Me.ClientSize = New System.Drawing.Size(775, 683)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox2)
@@ -148,9 +156,8 @@ Partial Class FrmDatosUso
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Chart2)
         Me.Controls.Add(Me.Chart1)
-        Me.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.Name = "FrmDatosUso"
         Me.Text = "FrmDatosUso"
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()

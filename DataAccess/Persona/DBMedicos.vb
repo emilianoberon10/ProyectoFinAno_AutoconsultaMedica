@@ -32,7 +32,7 @@ Public Class DBMedicos : Inherits ConexionBD
     End Function
     'Guardar medicos
     Public Function SetMedico(ciMedico As String, especialidad As String, numMedico As Integer, LugarTrabajo As String,
-                              contraseña As String, tel_cel As Object, domicilio As String, sexo As String, pNom As String,
+                              contraseña As String, tel_cel As Integer, domicilio As String, sexo As String, pNom As String,
                               sNom As String, pApe As String, sApe As String, edad As Integer) As Boolean
         Using _connection = GetConnection()
             _connection.Open()
@@ -175,8 +175,9 @@ Public Class DBMedicos : Inherits ConexionBD
     Public Function ObtenerMedicos() As DataTable
         Dim _consultaSQL As String
 
-        _consultaSQL = "SELECT ciM Cedula,pNom PrimerNombre,sNom SegundoNombre,pApe PrimerApellido,sApe SegundoApellido,
-                                lugarTrabajo,nombre Especialidad,Tel_cel,Domicilio,sexo,Lun,Mar, Mie, Jue, Vie, Sab,Dom
+        _consultaSQL = "SELECT ciM Cedula,pNom PrimerNombre,sNom SegundoNombre,pApe PrimerApellido,sApe SegundoApellido,edad,
+                                lugarTrabajo as 'Lugar de Trabajo',nombre Especialidad,Tel_cel as 'Telefono',Domicilio,sexo,Lun Lunes,
+                                Mar Martes, Mie Miercoles, Jue Jueves, Vie Viernes, Sab Sabado,Dom Domingo
                         FROM medico M
                         JOIN especialidad E ON id=idEspecialidad
                         JOIN persona ON ciM=ci"
@@ -197,11 +198,14 @@ Public Class DBMedicos : Inherits ConexionBD
                     If reader.HasRows Then
                         reader.Dispose()
 
-                        _command.CommandText = "DELETE FROM chat WHERE idMEd=@ci;DELETE FROM medico WHERE ciM=@ci;DELETE FROM persona WHERE ci=@ci;"
+                        _command.CommandText = "DELETE FROM chat WHERE idMEd=@ci;DELETE FROM medico WHERE ciM=@ci;"
                         _command.ExecuteNonQuery()
-                        Return False
-                    Else
+                        _command.CommandText = "DELETE FROM persona WHERE ci=@ci;"
+                        _command.ExecuteNonQuery()
+
                         Return True
+                    Else
+                        Return False
                     End If
                 End Using
             End Using
@@ -213,16 +217,27 @@ Public Class DBMedicos : Inherits ConexionBD
     End Function
 
     'modificar un medico
-    Public Function ModifMedico(ciMedico As String, especialidad As String, numMedico As Integer) As Boolean
+    Public Function ModifMedico(ciMedico, especialidad, LugarTrabajo,
+                              tel_cel, domicilio, sexo, pNom, sNom, pApe, sApe, edad) As Boolean
         Try
             Using _connection = GetConnection()
                 _connection.Open()
                 Using _command = New MySqlCommand()
                     _command.Connection = _connection
-                    _command.CommandText = "UPDATE medico SET numMed=@num,especialidad=@espec WHERE ciM=@ci"
+                    _command.CommandText = "UPDATE persona SET pnom=@pNom, sNom=@sNom, pApe=@pApe, sApe=@sApe, edad=@edad, Tel_cel=@tel ,domicilio=@domi,sexo=@sexo WHERE ci=@ci;              
+                                            SET @idEsp=(SELECT id FROM especialidad WHERE nombre=@especialidad);
+                                            UPDATE medico SET idEspecialidad=@idEsp WHERE ciM=@ci;"
                     _command.Parameters.AddWithValue("@ci", ciMedico)
-                    _command.Parameters.AddWithValue("@numMed", numMedico)
                     _command.Parameters.AddWithValue("@especialidad", especialidad)
+                    _command.Parameters.AddWithValue("@tel", tel_cel)
+                    _command.Parameters.AddWithValue("@edad", edad)
+                    _command.Parameters.AddWithValue("@domi", domicilio)
+                    _command.Parameters.AddWithValue("@sexo", sexo)
+                    _command.Parameters.AddWithValue("@pnom", pNom)
+                    _command.Parameters.AddWithValue("@snom", sNom)
+                    _command.Parameters.AddWithValue("@pape", pApe)
+                    _command.Parameters.AddWithValue("@sape", sApe)
+                    _command.Parameters.AddWithValue("@lugartrab", LugarTrabajo)
                     _command.CommandType = CommandType.Text
                     _command.ExecuteNonQuery()
                     Return True
@@ -244,7 +259,7 @@ Public Class DBMedicos : Inherits ConexionBD
 
     Public Function VerAgenda() As DataTable
         Dim sql As String = "SELECT concat (pNom,' ',sNom,' ',pApe,' ',sApe) as 'Nombre Completo',nombre Especialidad,
-                                    lugarTrabajo 'Clinica',lun,mar,mie,jue,vie,sab,dom FROM Persona
+                                    lugarTrabajo 'Clinica',lun,mar,mie,jue,vie,sab,dom FROM persona
                             JOIN medico ON ci=ciM
                             JOIN especialidad ON idEspecialidad=id"
         Return DevolverTabla(sql)
@@ -252,7 +267,7 @@ Public Class DBMedicos : Inherits ConexionBD
 
     Public Function VerAgendaFiltradoEsp(espe As String) As DataTable
         Dim sql As String = "SELECT concat (pNom,' ',sNom,' ',pApe,' ',sApe) as 'Nombre Completo',nombre Especialidad,
-                                    lugarTrabajo 'Clinica',lun,mar,mie,jue,vie,sab,dom FROM Persona
+                                    lugarTrabajo 'Clinica',lun,mar,mie,jue,vie,sab,dom FROM persona
                              JOIN medico ON ci=ciM
                              JOIN especialidad as e ON idEspecialidad=id
                              where e.nombre='" & espe & "';"
@@ -262,7 +277,7 @@ Public Class DBMedicos : Inherits ConexionBD
 
     Public Function VerAgendaFiltradoNombre(nom As String) As DataTable
         Dim sql As String = "SELECT concat (pNom,' ',sNom,' ',pApe,' ',sApe) as 'Nombre Completo',nombre Especialidad,
-                                    lugarTrabajo 'Clinica',lun,mar,mie,jue,vie,sab,dom FROM Persona
+                                    lugarTrabajo 'Clinica',lun,mar,mie,jue,vie,sab,dom FROM persona
                              JOIN medico as m ON ci=ciM
                              JOIN especialidad as e ON idEspecialidad=id
                              where pNom='" & nom & "';"

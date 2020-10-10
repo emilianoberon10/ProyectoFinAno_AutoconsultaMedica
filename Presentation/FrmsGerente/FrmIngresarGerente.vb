@@ -13,6 +13,7 @@ Public Class FrmIngresarGerente
         CargarComboBoxSintomas(cbSintoma6)
         CargarComboBoxSintomas(cbSintoma7)
         CargarComboBoxSintomas(cbSintoma8)
+        CargarComboBoxSintomas(comboSintoma9)
     End Sub
 
     Private Sub btnIngresarSintoma_Click(sender As Object, e As EventArgs) Handles btn_ingresar.Click
@@ -41,66 +42,69 @@ Public Class FrmIngresarGerente
 
     Private Sub btnIngresarEnfermedad_Click(sender As Object, e As EventArgs) Handles btn_ingresar2.Click
         Dim enfermedad As Enfermedad
-        Dim sintoma As Sintoma
         Dim define As Define
-        Dim listaSintomas As New List(Of Sintoma)
+
         Dim enfermedadIngresar As String = txtNombreEnfermedad.Text
         Dim riesgo As String = cbRiesgo.Text
         Dim descripcion As String = txtDescripcion.Text
         'array para guardar los sintomas de una enf
         Dim sintomasComboBox As New ArrayList
 
-        With sintomasComboBox 'agrego los sintomas de los comboBox a un array
-            .Add(cbSintoma1.Text)
-            .Add(cbSintoma2.Text)
-            .Add(cbSintoma3.Text)
-            .Add(cbSintoma4.Text)
-            .Add(cbSintoma5.Text)
-            .Add(cbSintoma6.Text)
-            .Add(cbSintoma7.Text)
-            .Add(cbSintoma8.Text)
-            .Add(cbSintoma9.Text)
-        End With
 
-        'recorro el array de sintomas
-        For Each elemet As String In sintomasComboBox
-            'comprobamos los campos vacioss para descartarlos
-            If elemet = "" Then
-                sintomasComboBox.Remove(elemet)
-            Else
-                sintoma = New Sintoma(elemet)
-                listaSintomas.Add(sintoma)
-            End If
-        Next
 
-        If enfermedadIngresar = "" Or riesgo = "Riesgo" Or descripcion = "Descripcion" Then
+        If ComprobarCamposEnf() Then
             ErrorProviderNomDesEnf.SetError(lbNomEnf, "Los campos Nombre, Riesgo y Descripcion son obligatorios")
             General.GetForm(Estado.Error, "Los campos Nombre, Riesgo y Descripcion son obligatorios")
-
-        ElseIf listaSintomas.Count = 0 Then
-            ErrorProviderSintEnf.SetError(lbNomEnf, "Debe seleccionar al menos 2 sintomas")
-            General.GetForm(Estado.Error, "Los campos Nombre, Riesgo y Descripcion son obligatoriosSe guardo con exito")
         Else
-            enfermedad = New Enfermedad(enfermedadIngresar, riesgo, descripcion)
-            enfermedad.ComprobarRiesgo()
+            If cbSintoma1.Enabled = True Then sintomasComboBox.Add(cbSintoma1.Text)
+            If cbSintoma2.Enabled = True Then sintomasComboBox.Add(cbSintoma2.Text)
+            If cbSintoma3.Enabled = True Then sintomasComboBox.Add(cbSintoma3.Text)
+            If cbSintoma4.Enabled = True Then sintomasComboBox.Add(cbSintoma4.Text)
+            If cbSintoma5.Enabled = True Then sintomasComboBox.Add(cbSintoma5.Text)
+            If cbSintoma6.Enabled = True Then sintomasComboBox.Add(cbSintoma6.Text)
+            If cbSintoma7.Enabled = True Then sintomasComboBox.Add(cbSintoma7.Text)
+            If cbSintoma8.Enabled = True Then sintomasComboBox.Add(cbSintoma8.Text)
+            If comboSintoma9.Enabled = True Then sintomasComboBox.Add(comboSintoma9.Text)
 
-            'lista de sintomas que definen una enfermedad
-            define = New Define(enfermedad._nombre, listaSintomas)
+            If sintomasComboBox.Count = 0 Then
+                ErrorProviderNomDesEnf.SetError(lbNomEnf, "Debe seleccionar al menos un sintoma")
+                General.GetForm(Estado.Error, "Debe seleccionar al menos un sintoma")
+            ElseIf sintomasComboBox.Count > 0 Then
 
-            If enfermedad.GuardarEnfermedad() Then
-                General.GetForm(Estado.Error, "Ya existe esa enfermedad")
-            Else
-                define.GuardarDefine(define)
-                General.GetForm(Estado.Ok, "Se guardo con exito")
+
+                enfermedad = New Enfermedad(enfermedadIngresar, riesgo, descripcion)
+                enfermedad.ComprobarRiesgo()
+
+                'lista de sintomas que definen una enfermedad
+                define = New Define(enfermedad._nombre, sintomasComboBox)
+
+                Try
+                    If enfermedad.GuardarEnfermedad() Then
+                        General.GetForm(Estado.Error, "Ya existe esa enfermedad")
+                    Else
+                        define.GuardarDefine()
+                        General.GetForm(Estado.Ok, "Se guardo con exito")
+                    End If
+                Catch ex As Exception
+                    ErrorProviderNomDesEnf.SetError(lbNomEnf, ex.Message)
+                    General.GetForm(Estado.Error, ex.Message)
+                End Try
+
             End If
         End If
     End Sub
-
+    Private Function ComprobarCamposEnf() As Boolean
+        If txtNombreEnfermedad.Text Is "" Or cbRiesgo.Text Is "Riesgo" Or txtDescripcion.Text Is "Descripcion" Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 #Region "Estilos"
 
 #Region "Activar sintomas"
 
-    Private Sub chb1_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb1_CheckedChanged(sender As Object, e As EventArgs) Handles chb1.CheckedChanged
         If chb1.Checked Then
             cbSintoma2.Enabled = True
         Else
@@ -108,7 +112,7 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-    Private Sub chb2_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb2_CheckedChanged(sender As Object, e As EventArgs) Handles chb2.CheckedChanged
         If chb2.Checked Then
             cbSintoma3.Enabled = True
         Else
@@ -116,7 +120,7 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-    Private Sub chb3_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb3_CheckedChanged(sender As Object, e As EventArgs) Handles chb3.CheckedChanged
         If chb3.Checked Then
             cbSintoma4.Enabled = True
         Else
@@ -124,7 +128,7 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-    Private Sub chb4_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb4_CheckedChanged(sender As Object, e As EventArgs) Handles chb4.CheckedChanged
         cbSintoma5.Enabled = True
         If chb4.Checked Then
             cbSintoma5.Enabled = True
@@ -133,7 +137,7 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-    Private Sub chb5_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb5_CheckedChanged(sender As Object, e As EventArgs) Handles chb5.CheckedChanged
         If chb5.Checked Then
             cbSintoma6.Enabled = True
         Else
@@ -141,7 +145,7 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-    Private Sub chb6_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb6_CheckedChanged(sender As Object, e As EventArgs) Handles chb6.CheckedChanged
         If chb6.Checked Then
             cbSintoma7.Enabled = True
         Else
@@ -149,7 +153,7 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-    Private Sub chb7_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb7_CheckedChanged(sender As Object, e As EventArgs) Handles chb7.CheckedChanged
         If chb7.Checked Then
             cbSintoma8.Enabled = True
         Else
@@ -157,16 +161,12 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-    Private Sub chb8_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chb8_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If chb8.Checked Then
             cbSintoma9.Enabled = True
         Else
             cbSintoma9.Enabled = False
         End If
-    End Sub
-
-    Private Sub ingGerente_Click(sender As Object, e As EventArgs) Handles ingGerente.Click
-
     End Sub
 
 #End Region

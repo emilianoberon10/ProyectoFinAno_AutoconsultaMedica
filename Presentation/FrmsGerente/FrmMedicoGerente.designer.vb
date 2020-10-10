@@ -347,10 +347,10 @@ Partial Class FrmMedicoGerente
         Me.txtHoraEntradaDomingo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaDomingo.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaDomingo.Location = New System.Drawing.Point(661, 70)
-        Me.txtHoraEntradaDomingo.MaxLength = 12
+        Me.txtHoraEntradaDomingo.MaxLength = 13
         Me.txtHoraEntradaDomingo.Name = "txtHoraEntradaDomingo"
         Me.txtHoraEntradaDomingo.Size = New System.Drawing.Size(78, 29)
-        Me.txtHoraEntradaDomingo.TabIndex = 1
+        Me.txtHoraEntradaDomingo.TabIndex = 19
         '
         'Sab
         '
@@ -369,10 +369,10 @@ Partial Class FrmMedicoGerente
         Me.txtHoraEntradaSabado.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaSabado.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaSabado.Location = New System.Drawing.Point(560, 70)
-        Me.txtHoraEntradaSabado.MaxLength = 12
+        Me.txtHoraEntradaSabado.MaxLength = 13
         Me.txtHoraEntradaSabado.Name = "txtHoraEntradaSabado"
         Me.txtHoraEntradaSabado.Size = New System.Drawing.Size(78, 29)
-        Me.txtHoraEntradaSabado.TabIndex = 1
+        Me.txtHoraEntradaSabado.TabIndex = 18
         '
         'Dom
         '
@@ -391,10 +391,10 @@ Partial Class FrmMedicoGerente
         Me.txtHoraEntradaViernes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaViernes.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaViernes.Location = New System.Drawing.Point(459, 70)
-        Me.txtHoraEntradaViernes.MaxLength = 12
+        Me.txtHoraEntradaViernes.MaxLength = 13
         Me.txtHoraEntradaViernes.Name = "txtHoraEntradaViernes"
         Me.txtHoraEntradaViernes.Size = New System.Drawing.Size(78, 29)
-        Me.txtHoraEntradaViernes.TabIndex = 1
+        Me.txtHoraEntradaViernes.TabIndex = 17
         '
         'txtHoraEntradaMiercoles
         '
@@ -402,10 +402,10 @@ Partial Class FrmMedicoGerente
         Me.txtHoraEntradaMiercoles.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaMiercoles.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaMiercoles.Location = New System.Drawing.Point(257, 70)
-        Me.txtHoraEntradaMiercoles.MaxLength = 12
+        Me.txtHoraEntradaMiercoles.MaxLength = 13
         Me.txtHoraEntradaMiercoles.Name = "txtHoraEntradaMiercoles"
         Me.txtHoraEntradaMiercoles.Size = New System.Drawing.Size(78, 29)
-        Me.txtHoraEntradaMiercoles.TabIndex = 1
+        Me.txtHoraEntradaMiercoles.TabIndex = 15
         '
         'txtHoraEntradaJueves
         '
@@ -413,10 +413,10 @@ Partial Class FrmMedicoGerente
         Me.txtHoraEntradaJueves.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaJueves.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaJueves.Location = New System.Drawing.Point(358, 70)
-        Me.txtHoraEntradaJueves.MaxLength = 12
+        Me.txtHoraEntradaJueves.MaxLength = 13
         Me.txtHoraEntradaJueves.Name = "txtHoraEntradaJueves"
         Me.txtHoraEntradaJueves.Size = New System.Drawing.Size(78, 29)
-        Me.txtHoraEntradaJueves.TabIndex = 1
+        Me.txtHoraEntradaJueves.TabIndex = 16
         '
         'Vie
         '
@@ -435,10 +435,10 @@ Partial Class FrmMedicoGerente
         Me.txtHoraEntradaMartes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaMartes.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaMartes.Location = New System.Drawing.Point(156, 70)
-        Me.txtHoraEntradaMartes.MaxLength = 12
+        Me.txtHoraEntradaMartes.MaxLength = 13
         Me.txtHoraEntradaMartes.Name = "txtHoraEntradaMartes"
         Me.txtHoraEntradaMartes.Size = New System.Drawing.Size(78, 29)
-        Me.txtHoraEntradaMartes.TabIndex = 1
+        Me.txtHoraEntradaMartes.TabIndex = 14
         '
         'txtHoraEntradaLunes
         '
@@ -446,10 +446,10 @@ Partial Class FrmMedicoGerente
         Me.txtHoraEntradaLunes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHoraEntradaLunes.ForeColor = System.Drawing.Color.Silver
         Me.txtHoraEntradaLunes.Location = New System.Drawing.Point(55, 70)
-        Me.txtHoraEntradaLunes.MaxLength = 12
+        Me.txtHoraEntradaLunes.MaxLength = 13
         Me.txtHoraEntradaLunes.Name = "txtHoraEntradaLunes"
         Me.txtHoraEntradaLunes.Size = New System.Drawing.Size(78, 29)
-        Me.txtHoraEntradaLunes.TabIndex = 1
+        Me.txtHoraEntradaLunes.TabIndex = 13
         '
         'Mie
         '
@@ -545,11 +545,11 @@ Partial Class FrmMedicoGerente
         Me.txtCedula.DisabledState.Parent = Me.txtCedula
         Me.txtCedula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtCedula.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtCedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtCedula.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtCedula.FocusedState.Parent = Me.txtCedula
         Me.txtCedula.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCedula.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtCedula.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtCedula.HoverState.Parent = Me.txtCedula
         Me.txtCedula.Location = New System.Drawing.Point(31, 70)
         Me.txtCedula.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -562,7 +562,7 @@ Partial Class FrmMedicoGerente
         Me.txtCedula.ShadowDecoration.Parent = Me.txtCedula
         Me.txtCedula.Size = New System.Drawing.Size(220, 30)
         Me.txtCedula.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtCedula.TabIndex = 56
+        Me.txtCedula.TabIndex = 1
         '
         'txtSnom
         '
@@ -575,11 +575,11 @@ Partial Class FrmMedicoGerente
         Me.txtSnom.DisabledState.Parent = Me.txtSnom
         Me.txtSnom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtSnom.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtSnom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtSnom.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtSnom.FocusedState.Parent = Me.txtSnom
         Me.txtSnom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSnom.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtSnom.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtSnom.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtSnom.HoverState.Parent = Me.txtSnom
         Me.txtSnom.Location = New System.Drawing.Point(268, 137)
         Me.txtSnom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -592,7 +592,8 @@ Partial Class FrmMedicoGerente
         Me.txtSnom.ShadowDecoration.Parent = Me.txtSnom
         Me.txtSnom.Size = New System.Drawing.Size(220, 30)
         Me.txtSnom.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtSnom.TabIndex = 56
+        Me.txtSnom.TabIndex = 5
+
         '
         'txtLugarTrabajo
         '
@@ -606,11 +607,11 @@ Partial Class FrmMedicoGerente
         Me.txtLugarTrabajo.DisabledState.Parent = Me.txtLugarTrabajo
         Me.txtLugarTrabajo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtLugarTrabajo.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtLugarTrabajo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtLugarTrabajo.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtLugarTrabajo.FocusedState.Parent = Me.txtLugarTrabajo
         Me.txtLugarTrabajo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLugarTrabajo.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtLugarTrabajo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtLugarTrabajo.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtLugarTrabajo.HoverState.Parent = Me.txtLugarTrabajo
         Me.txtLugarTrabajo.Location = New System.Drawing.Point(31, 344)
         Me.txtLugarTrabajo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -623,7 +624,8 @@ Partial Class FrmMedicoGerente
         Me.txtLugarTrabajo.ShadowDecoration.Parent = Me.txtLugarTrabajo
         Me.txtLugarTrabajo.Size = New System.Drawing.Size(461, 30)
         Me.txtLugarTrabajo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtLugarTrabajo.TabIndex = 56
+        Me.txtLugarTrabajo.TabIndex = 12
+
         '
         'txtNumMed
         '
@@ -637,11 +639,11 @@ Partial Class FrmMedicoGerente
         Me.txtNumMed.DisabledState.Parent = Me.txtNumMed
         Me.txtNumMed.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtNumMed.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtNumMed.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtNumMed.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtNumMed.FocusedState.Parent = Me.txtNumMed
         Me.txtNumMed.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNumMed.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtNumMed.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtNumMed.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtNumMed.HoverState.Parent = Me.txtNumMed
         Me.txtNumMed.Location = New System.Drawing.Point(531, 278)
         Me.txtNumMed.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -654,7 +656,8 @@ Partial Class FrmMedicoGerente
         Me.txtNumMed.ShadowDecoration.Parent = Me.txtNumMed
         Me.txtNumMed.Size = New System.Drawing.Size(220, 30)
         Me.txtNumMed.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtNumMed.TabIndex = 56
+        Me.txtNumMed.TabIndex = 11
+
         '
         'txtPNom
         '
@@ -668,11 +671,11 @@ Partial Class FrmMedicoGerente
         Me.txtPNom.DisabledState.Parent = Me.txtPNom
         Me.txtPNom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtPNom.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtPNom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtPNom.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtPNom.FocusedState.Parent = Me.txtPNom
         Me.txtPNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPNom.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtPNom.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtPNom.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtPNom.HoverState.Parent = Me.txtPNom
         Me.txtPNom.Location = New System.Drawing.Point(268, 71)
         Me.txtPNom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -685,7 +688,8 @@ Partial Class FrmMedicoGerente
         Me.txtPNom.ShadowDecoration.Parent = Me.txtPNom
         Me.txtPNom.Size = New System.Drawing.Size(220, 30)
         Me.txtPNom.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtPNom.TabIndex = 56
+        Me.txtPNom.TabIndex = 2
+
         '
         'txtSape
         '
@@ -699,11 +703,11 @@ Partial Class FrmMedicoGerente
         Me.txtSape.DisabledState.Parent = Me.txtSape
         Me.txtSape.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtSape.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtSape.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtSape.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtSape.FocusedState.Parent = Me.txtSape
         Me.txtSape.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSape.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtSape.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtSape.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtSape.HoverState.Parent = Me.txtSape
         Me.txtSape.Location = New System.Drawing.Point(535, 137)
         Me.txtSape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -716,7 +720,8 @@ Partial Class FrmMedicoGerente
         Me.txtSape.ShadowDecoration.Parent = Me.txtSape
         Me.txtSape.Size = New System.Drawing.Size(220, 30)
         Me.txtSape.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtSape.TabIndex = 56
+        Me.txtSape.TabIndex = 6
+
         '
         'txtEdad
         '
@@ -730,15 +735,15 @@ Partial Class FrmMedicoGerente
         Me.txtEdad.DisabledState.Parent = Me.txtEdad
         Me.txtEdad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtEdad.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtEdad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtEdad.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtEdad.FocusedState.Parent = Me.txtEdad
         Me.txtEdad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEdad.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtEdad.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtEdad.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtEdad.HoverState.Parent = Me.txtEdad
         Me.txtEdad.Location = New System.Drawing.Point(272, 209)
         Me.txtEdad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtEdad.MaxLength = 2
+        Me.txtEdad.MaxLength = 3
         Me.txtEdad.Name = "txtEdad"
         Me.txtEdad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtEdad.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -747,7 +752,8 @@ Partial Class FrmMedicoGerente
         Me.txtEdad.ShadowDecoration.Parent = Me.txtEdad
         Me.txtEdad.Size = New System.Drawing.Size(220, 30)
         Me.txtEdad.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtEdad.TabIndex = 56
+        Me.txtEdad.TabIndex = 8
+
         '
         'txtDomicilio
         '
@@ -761,11 +767,11 @@ Partial Class FrmMedicoGerente
         Me.txtDomicilio.DisabledState.Parent = Me.txtDomicilio
         Me.txtDomicilio.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDomicilio.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtDomicilio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtDomicilio.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtDomicilio.FocusedState.Parent = Me.txtDomicilio
         Me.txtDomicilio.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDomicilio.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtDomicilio.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtDomicilio.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtDomicilio.HoverState.Parent = Me.txtDomicilio
         Me.txtDomicilio.Location = New System.Drawing.Point(31, 282)
         Me.txtDomicilio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -778,7 +784,8 @@ Partial Class FrmMedicoGerente
         Me.txtDomicilio.ShadowDecoration.Parent = Me.txtDomicilio
         Me.txtDomicilio.Size = New System.Drawing.Size(457, 30)
         Me.txtDomicilio.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtDomicilio.TabIndex = 56
+        Me.txtDomicilio.TabIndex = 10
+
         '
         'txtPApe
         '
@@ -792,11 +799,11 @@ Partial Class FrmMedicoGerente
         Me.txtPApe.DisabledState.Parent = Me.txtPApe
         Me.txtPApe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtPApe.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtPApe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtPApe.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtPApe.FocusedState.Parent = Me.txtPApe
         Me.txtPApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPApe.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtPApe.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtPApe.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtPApe.HoverState.Parent = Me.txtPApe
         Me.txtPApe.Location = New System.Drawing.Point(531, 71)
         Me.txtPApe.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -809,7 +816,8 @@ Partial Class FrmMedicoGerente
         Me.txtPApe.ShadowDecoration.Parent = Me.txtPApe
         Me.txtPApe.Size = New System.Drawing.Size(220, 30)
         Me.txtPApe.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtPApe.TabIndex = 56
+        Me.txtPApe.TabIndex = 3
+
         '
         'txtTelefono
         '
@@ -823,11 +831,11 @@ Partial Class FrmMedicoGerente
         Me.txtTelefono.DisabledState.Parent = Me.txtTelefono
         Me.txtTelefono.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtTelefono.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtTelefono.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtTelefono.FocusedState.Parent = Me.txtTelefono
         Me.txtTelefono.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTelefono.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtTelefono.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtTelefono.HoverState.Parent = Me.txtTelefono
         Me.txtTelefono.Location = New System.Drawing.Point(531, 209)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -840,7 +848,8 @@ Partial Class FrmMedicoGerente
         Me.txtTelefono.ShadowDecoration.Parent = Me.txtTelefono
         Me.txtTelefono.Size = New System.Drawing.Size(220, 30)
         Me.txtTelefono.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtTelefono.TabIndex = 56
+        Me.txtTelefono.TabIndex = 9
+
         '
         'cbEsp
         '
@@ -851,11 +860,13 @@ Partial Class FrmMedicoGerente
         Me.cbEsp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbEsp.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.cbEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbEsp.FocusedColor = System.Drawing.Color.Empty
+        Me.cbEsp.FocusedColor = System.Drawing.Color.Cyan
+        Me.cbEsp.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.cbEsp.FocusedState.Parent = Me.cbEsp
         Me.cbEsp.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbEsp.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.cbEsp.FormattingEnabled = True
+        Me.cbEsp.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.cbEsp.HoverState.Parent = Me.cbEsp
         Me.cbEsp.ItemHeight = 30
         Me.cbEsp.Items.AddRange(New Object() {"Medicos", "Enfermedades", "Sintomas"})
@@ -865,7 +876,7 @@ Partial Class FrmMedicoGerente
         Me.cbEsp.ShadowDecoration.Parent = Me.cbEsp
         Me.cbEsp.Size = New System.Drawing.Size(220, 36)
         Me.cbEsp.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.cbEsp.TabIndex = 57
+        Me.cbEsp.TabIndex = 4
         '
         'cbSexo
         '
@@ -876,11 +887,13 @@ Partial Class FrmMedicoGerente
         Me.cbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbSexo.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.cbSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbSexo.FocusedColor = System.Drawing.Color.Empty
+        Me.cbSexo.FocusedColor = System.Drawing.Color.Cyan
+        Me.cbSexo.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSexo.FocusedState.Parent = Me.cbSexo
         Me.cbSexo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSexo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.cbSexo.FormattingEnabled = True
+        Me.cbSexo.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSexo.HoverState.Parent = Me.cbSexo
         Me.cbSexo.ItemHeight = 30
         Me.cbSexo.Items.AddRange(New Object() {"Hombre", "Mujer", "Otro"})
@@ -890,7 +903,7 @@ Partial Class FrmMedicoGerente
         Me.cbSexo.ShadowDecoration.Parent = Me.cbSexo
         Me.cbSexo.Size = New System.Drawing.Size(220, 36)
         Me.cbSexo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.cbSexo.TabIndex = 57
+        Me.cbSexo.TabIndex = 7
         '
         'Persona_sexo
         '

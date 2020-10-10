@@ -6,21 +6,25 @@ Public Class FrmEliminarGerente
         Traductor.traducirForm(Me)
     End Sub
 
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs)
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
         Try
             Select Case cbFiltro.Text
                 Case "Sintomas"
                     Dim borrar As New Sintoma
-                    If borrar.BorrarSintoma(txtFiltro.Text) Then MsgBox("Se elimino con exito") Else
-                Case "Enfemdedades"
+                    If borrar.BorrarSintoma(txtFiltro.Text) Then General.GetForm(Estado.Ok, "Eliminado con exito") Else General.GetForm(Estado.Error, "No se pudo eliminar o ya no existe")
+                    dgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
+                Case "Enfermedades"
                     Dim borrar As New Enfermedad
-                    If borrar.BorrarEnfermedad(txtFiltro.Text) Then MsgBox("Se elimino con exito") Else
+                    If borrar.BorrarEnfermedad(txtFiltro.Text) Then General.GetForm(Estado.Ok, "Eliminado con exito") Else General.GetForm(Estado.Error, "No se pudo eliminar o ya no existe")
+                    dgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
                 Case "Medicos"
                     Dim borrar As New Medico
-                    If borrar.Borrar(txtFiltro.Text) Then MsgBox("Se elimino con exito") Else
+                    If borrar.Borrar(txtFiltro.Text) Then General.GetForm(Estado.Ok, "Eliminado con exito") Else General.GetForm(Estado.Error, "No se pudo eliminar o ya no existe")
+                    dgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
             End Select
         Catch ex As Exception
-            MsgBox("ERROR::" & ex.Message)
+            ErrorProvider1.SetError(lbEliminar, ex.Message)
+            General.GetForm(Estado.Error, ex.Message)
         End Try
     End Sub
 
@@ -48,5 +52,4 @@ Public Class FrmEliminarGerente
             MsgBox("ERROR::" & ex.Message)
         End Try
     End Sub
-
 End Class

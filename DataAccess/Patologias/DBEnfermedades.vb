@@ -61,13 +61,12 @@ Public Class DBEnfermedades
 
                     If reader.HasRows Then
                         reader.Dispose()
+                        _command.CommandText = "DELETE FROM define WHERE nomEnf=@nombre;"
+                        _command.ExecuteNonQuery()
+                        _command.CommandText = "DELETE FROM enfermedad WHERE nombre=@nombre;"
+                        _command.ExecuteNonQuery()
                         Return True
                     Else
-                        reader.Dispose()
-
-                        _command.CommandText = "DELETE FROM define WHERE nomEnf=@nombre;"
-                        _command.CommandText &= "Delete FROM enfermedad WHERE nombre=@nombre;"
-                        _command.ExecuteNonQuery()
                         Return False
                     End If
                 End Using

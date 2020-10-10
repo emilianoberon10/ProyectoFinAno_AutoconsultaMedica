@@ -3,12 +3,13 @@
     Public diag As String
 
     Private Sub FrmSolicitudesChat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Traductor.traducirForm(Me)
         Timer1.Start() 'inicio el timer
         'cargo el dataGrid por primera vez
         Solicitudes()
     End Sub
 
-    Private Sub dgvSolicitudes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs)
+    Private Sub dgvSolicitudes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSolicitudes.CellDoubleClick
 
         If MessageBox.Show("Sera redireccionado al chat con, desea continuar?", "Advertencia",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
@@ -59,10 +60,4 @@
             End If
         End If
     End Sub
-
-    Private Sub panelSolicitudes_Paint(sender As Object, e As PaintEventArgs)
-        Traductor.traducirForm(Me)
-
-    End Sub
-
 End Class

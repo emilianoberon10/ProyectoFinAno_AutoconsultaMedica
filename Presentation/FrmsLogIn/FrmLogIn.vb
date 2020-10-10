@@ -57,8 +57,8 @@ Public Class FrmLogIn
 
     Private Sub FrmLogIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Traductor.traducirForm(Me)
-
-        'SetTextos()
+        txtPass.MaxLength = 255
+        txtUser.MaxLength = 8
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -195,7 +195,6 @@ Public Class FrmLogIn
 
     Private Sub txtUser_Enter(sender As Object, e As EventArgs) Handles txtUser.Enter
         With txtUser
-
             .ForeColor = Color.FromArgb(240, 240, 240)
         End With
     End Sub
@@ -215,10 +214,10 @@ Public Class FrmLogIn
         ErrorProviderUserBien.Clear()
         If txtUser.Text.Length < 4 Then
             ErrorProviderUserMal.SetError(Me.lbUsuario, "El nombre de usuario es muy corto")
-            txtUser.BackColor = Color.FromArgb(48, 63, 105)
+            txtUser.FillColor = Color.FromArgb(48, 63, 105)
         Else
             ErrorProviderUserBien.SetError(Me.lbUsuario, "El largo es correcto")
-            txtUser.BackColor = Color.FromArgb(50, 194, 77)
+            txtUser.FillColor = Color.FromArgb(50, 194, 77)
         End If
     End Sub
 

@@ -36,7 +36,9 @@ Public Class FrmPrincipalGerente
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
         OpenChildForm(New FrmEliminarGerente, PanelChildForm)
     End Sub
-
+    Private Sub btn_dashBoard_Click(sender As Object, e As EventArgs) Handles btn_dashBoard.Click
+        OpenChildForm(New FrmDatosUso, PanelChildForm)
+    End Sub
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         If MessageBox.Show("Seguro que desa salir?", "Advertencia",
          MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
@@ -112,6 +114,8 @@ Public Class FrmPrincipalGerente
 
         End If
     End Sub
+
+
 
 #End Region 'region de mover form
 

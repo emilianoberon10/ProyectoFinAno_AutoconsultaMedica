@@ -53,7 +53,8 @@ Public Class Medico
     End Function
 
     Public Overloads Function Modificar() As Boolean
-        Return cons.ModifMedico(Me._ci, Me._especialidad, Me._numMed)
+        Return cons.ModifMedico(Me._ci, Me._especialidad, Me._lugarTrabajo,
+                   Me._tel_cel, Me._domicilio, Me._sexo, Me._pNom, Me._sNom, Me._pApe, Me._sApe, Me._edad)
     End Function
 
     Public Overloads Function Borrar(ci As String) As Boolean

@@ -52,6 +52,11 @@ Presentation
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Resources.dashboard">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Resources.england">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.

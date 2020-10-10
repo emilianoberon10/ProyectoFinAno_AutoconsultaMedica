@@ -119,7 +119,7 @@ Partial Class FrmCrearUsuario
         Me.btn_cancelar.ShadowDecoration.Depth = 25
         Me.btn_cancelar.ShadowDecoration.Enabled = True
         Me.btn_cancelar.ShadowDecoration.Parent = Me.btn_cancelar
-        Me.btn_cancelar.Size = New System.Drawing.Size(94, 31)
+        Me.btn_cancelar.Size = New System.Drawing.Size(102, 31)
         Me.btn_cancelar.TabIndex = 15
         Me.btn_cancelar.Text = "CANCELAR"
         '
@@ -132,11 +132,13 @@ Partial Class FrmCrearUsuario
         Me.cbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbSexo.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.cbSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbSexo.FocusedColor = System.Drawing.Color.Empty
+        Me.cbSexo.FocusedColor = System.Drawing.Color.Cyan
+        Me.cbSexo.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSexo.FocusedState.Parent = Me.cbSexo
         Me.cbSexo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSexo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.cbSexo.FormattingEnabled = True
+        Me.cbSexo.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSexo.HoverState.Parent = Me.cbSexo
         Me.cbSexo.ItemHeight = 30
         Me.cbSexo.Items.AddRange(New Object() {"Hombre", "Mujer", "Otro"})
@@ -146,7 +148,7 @@ Partial Class FrmCrearUsuario
         Me.cbSexo.ShadowDecoration.Parent = Me.cbSexo
         Me.cbSexo.Size = New System.Drawing.Size(220, 36)
         Me.cbSexo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.cbSexo.TabIndex = 81
+        Me.cbSexo.TabIndex = 4
         '
         'txtDomicilio
         '
@@ -160,14 +162,15 @@ Partial Class FrmCrearUsuario
         Me.txtDomicilio.DisabledState.Parent = Me.txtDomicilio
         Me.txtDomicilio.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDomicilio.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtDomicilio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtDomicilio.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtDomicilio.FocusedState.Parent = Me.txtDomicilio
         Me.txtDomicilio.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDomicilio.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtDomicilio.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtDomicilio.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtDomicilio.HoverState.Parent = Me.txtDomicilio
         Me.txtDomicilio.Location = New System.Drawing.Point(530, 214)
         Me.txtDomicilio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtDomicilio.MaxLength = 255
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtDomicilio.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -176,7 +179,7 @@ Partial Class FrmCrearUsuario
         Me.txtDomicilio.ShadowDecoration.Parent = Me.txtDomicilio
         Me.txtDomicilio.Size = New System.Drawing.Size(224, 30)
         Me.txtDomicilio.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtDomicilio.TabIndex = 78
+        Me.txtDomicilio.TabIndex = 9
         '
         'txtEdad
         '
@@ -190,14 +193,15 @@ Partial Class FrmCrearUsuario
         Me.txtEdad.DisabledState.Parent = Me.txtEdad
         Me.txtEdad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtEdad.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtEdad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtEdad.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtEdad.FocusedState.Parent = Me.txtEdad
         Me.txtEdad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEdad.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtEdad.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtEdad.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtEdad.HoverState.Parent = Me.txtEdad
         Me.txtEdad.Location = New System.Drawing.Point(32, 214)
         Me.txtEdad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtEdad.MaxLength = 2
         Me.txtEdad.Name = "txtEdad"
         Me.txtEdad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtEdad.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -206,7 +210,7 @@ Partial Class FrmCrearUsuario
         Me.txtEdad.ShadowDecoration.Parent = Me.txtEdad
         Me.txtEdad.Size = New System.Drawing.Size(220, 30)
         Me.txtEdad.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtEdad.TabIndex = 77
+        Me.txtEdad.TabIndex = 7
         '
         'txtTelefono
         '
@@ -220,14 +224,15 @@ Partial Class FrmCrearUsuario
         Me.txtTelefono.DisabledState.Parent = Me.txtTelefono
         Me.txtTelefono.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtTelefono.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtTelefono.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtTelefono.FocusedState.Parent = Me.txtTelefono
         Me.txtTelefono.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTelefono.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtTelefono.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtTelefono.HoverState.Parent = Me.txtTelefono
         Me.txtTelefono.Location = New System.Drawing.Point(281, 214)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtTelefono.MaxLength = 9
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtTelefono.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -236,7 +241,7 @@ Partial Class FrmCrearUsuario
         Me.txtTelefono.ShadowDecoration.Parent = Me.txtTelefono
         Me.txtTelefono.Size = New System.Drawing.Size(220, 30)
         Me.txtTelefono.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtTelefono.TabIndex = 76
+        Me.txtTelefono.TabIndex = 8
         '
         'txtSape
         '
@@ -250,14 +255,15 @@ Partial Class FrmCrearUsuario
         Me.txtSape.DisabledState.Parent = Me.txtSape
         Me.txtSape.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtSape.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtSape.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtSape.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtSape.FocusedState.Parent = Me.txtSape
         Me.txtSape.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSape.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtSape.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtSape.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtSape.HoverState.Parent = Me.txtSape
         Me.txtSape.Location = New System.Drawing.Point(534, 149)
         Me.txtSape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSape.MaxLength = 30
         Me.txtSape.Name = "txtSape"
         Me.txtSape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSape.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -266,7 +272,7 @@ Partial Class FrmCrearUsuario
         Me.txtSape.ShadowDecoration.Parent = Me.txtSape
         Me.txtSape.Size = New System.Drawing.Size(220, 30)
         Me.txtSape.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtSape.TabIndex = 74
+        Me.txtSape.TabIndex = 6
         '
         'txtPape
         '
@@ -280,14 +286,15 @@ Partial Class FrmCrearUsuario
         Me.txtPape.DisabledState.Parent = Me.txtPape
         Me.txtPape.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtPape.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtPape.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtPape.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtPape.FocusedState.Parent = Me.txtPape
         Me.txtPape.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPape.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtPape.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtPape.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtPape.HoverState.Parent = Me.txtPape
         Me.txtPape.Location = New System.Drawing.Point(530, 86)
         Me.txtPape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPape.MaxLength = 30
         Me.txtPape.Name = "txtPape"
         Me.txtPape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPape.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -296,7 +303,7 @@ Partial Class FrmCrearUsuario
         Me.txtPape.ShadowDecoration.Parent = Me.txtPape
         Me.txtPape.Size = New System.Drawing.Size(220, 30)
         Me.txtPape.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtPape.TabIndex = 73
+        Me.txtPape.TabIndex = 3
         '
         'txtCorreo
         '
@@ -310,14 +317,15 @@ Partial Class FrmCrearUsuario
         Me.txtCorreo.DisabledState.Parent = Me.txtCorreo
         Me.txtCorreo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtCorreo.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtCorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtCorreo.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtCorreo.FocusedState.Parent = Me.txtCorreo
         Me.txtCorreo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCorreo.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtCorreo.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtCorreo.HoverState.Parent = Me.txtCorreo
         Me.txtCorreo.Location = New System.Drawing.Point(30, 278)
         Me.txtCorreo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtCorreo.MaxLength = 255
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtCorreo.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -326,7 +334,7 @@ Partial Class FrmCrearUsuario
         Me.txtCorreo.ShadowDecoration.Parent = Me.txtCorreo
         Me.txtCorreo.Size = New System.Drawing.Size(457, 30)
         Me.txtCorreo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtCorreo.TabIndex = 72
+        Me.txtCorreo.TabIndex = 10
         '
         'txtPNom
         '
@@ -340,14 +348,15 @@ Partial Class FrmCrearUsuario
         Me.txtPNom.DisabledState.Parent = Me.txtPNom
         Me.txtPNom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtPNom.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtPNom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtPNom.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtPNom.FocusedState.Parent = Me.txtPNom
         Me.txtPNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPNom.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtPNom.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtPNom.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtPNom.HoverState.Parent = Me.txtPNom
         Me.txtPNom.Location = New System.Drawing.Point(281, 86)
         Me.txtPNom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPNom.MaxLength = 30
         Me.txtPNom.Name = "txtPNom"
         Me.txtPNom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPNom.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -356,7 +365,7 @@ Partial Class FrmCrearUsuario
         Me.txtPNom.ShadowDecoration.Parent = Me.txtPNom
         Me.txtPNom.Size = New System.Drawing.Size(220, 30)
         Me.txtPNom.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtPNom.TabIndex = 71
+        Me.txtPNom.TabIndex = 2
         '
         'txtSnom
         '
@@ -369,14 +378,15 @@ Partial Class FrmCrearUsuario
         Me.txtSnom.DisabledState.Parent = Me.txtSnom
         Me.txtSnom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtSnom.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtSnom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtSnom.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtSnom.FocusedState.Parent = Me.txtSnom
         Me.txtSnom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSnom.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtSnom.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtSnom.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtSnom.HoverState.Parent = Me.txtSnom
         Me.txtSnom.Location = New System.Drawing.Point(281, 149)
         Me.txtSnom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSnom.MaxLength = 30
         Me.txtSnom.Name = "txtSnom"
         Me.txtSnom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSnom.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -385,7 +395,7 @@ Partial Class FrmCrearUsuario
         Me.txtSnom.ShadowDecoration.Parent = Me.txtSnom
         Me.txtSnom.Size = New System.Drawing.Size(220, 30)
         Me.txtSnom.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtSnom.TabIndex = 79
+        Me.txtSnom.TabIndex = 5
         '
         'txtCedula
         '
@@ -399,14 +409,15 @@ Partial Class FrmCrearUsuario
         Me.txtCedula.DisabledState.Parent = Me.txtCedula
         Me.txtCedula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtCedula.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtCedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtCedula.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.txtCedula.FocusedState.Parent = Me.txtCedula
         Me.txtCedula.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCedula.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtCedula.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtCedula.HoverState.Parent = Me.txtCedula
         Me.txtCedula.Location = New System.Drawing.Point(30, 85)
         Me.txtCedula.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtCedula.MaxLength = 8
         Me.txtCedula.Name = "txtCedula"
         Me.txtCedula.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtCedula.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -415,7 +426,7 @@ Partial Class FrmCrearUsuario
         Me.txtCedula.ShadowDecoration.Parent = Me.txtCedula
         Me.txtCedula.Size = New System.Drawing.Size(220, 30)
         Me.txtCedula.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtCedula.TabIndex = 70
+        Me.txtCedula.TabIndex = 1
         '
         'Persona_domicilio
         '

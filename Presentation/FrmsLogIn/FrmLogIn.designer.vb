@@ -27,12 +27,8 @@ Partial Class FrmLogIn
         Me.topPanel = New System.Windows.Forms.Panel()
         Me.btnClose = New System.Windows.Forms.PictureBox()
         Me.btnMinimize = New System.Windows.Forms.PictureBox()
-        Me.txtUser = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.txtPass = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ErrorProviderLogIn = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lbUsuario = New System.Windows.Forms.Label()
@@ -47,6 +43,8 @@ Partial Class FrmLogIn
         Me.btn_Iniciar = New Guna.UI2.WinForms.Guna2Button()
         Me.llbCrearUsuario = New System.Windows.Forms.LinkLabel()
         Me.llbForgotPassEs = New System.Windows.Forms.LinkLabel()
+        Me.txtUser = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtPass = New Guna.UI2.WinForms.Guna2TextBox()
         Me.topPanel.SuspendLayout()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,26 +94,12 @@ Partial Class FrmLogIn
         Me.btnMinimize.TabIndex = 0
         Me.btnMinimize.TabStop = False
         '
-        'txtUser
-        '
-        Me.txtUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtUser.CausesValidation = False
-        Me.txtUser.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUser.ForeColor = System.Drawing.Color.Silver
-        Me.txtUser.Location = New System.Drawing.Point(40, 263)
-        Me.txtUser.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtUser.MaxLength = 8
-        Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(350, 22)
-        Me.txtUser.TabIndex = 1
-        '
         'ShapeContainer1
         '
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape3, Me.LineShape2, Me.LineShape1})
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape3})
         Me.ShapeContainer1.Size = New System.Drawing.Size(430, 600)
         Me.ShapeContainer1.TabIndex = 3
         Me.ShapeContainer1.TabStop = False
@@ -128,40 +112,6 @@ Partial Class FrmLogIn
         Me.LineShape3.X2 = 390
         Me.LineShape3.Y1 = 528
         Me.LineShape3.Y2 = 528
-        '
-        'LineShape2
-        '
-        Me.LineShape2.BorderColor = System.Drawing.Color.Silver
-        Me.LineShape2.Enabled = False
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 39
-        Me.LineShape2.X2 = 390
-        Me.LineShape2.Y1 = 356
-        Me.LineShape2.Y2 = 356
-        '
-        'LineShape1
-        '
-        Me.LineShape1.BorderColor = System.Drawing.Color.Silver
-        Me.LineShape1.Enabled = False
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 39
-        Me.LineShape1.X2 = 390
-        Me.LineShape1.Y1 = 287
-        Me.LineShape1.Y2 = 287
-        '
-        'txtPass
-        '
-        Me.txtPass.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPass.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.ForeColor = System.Drawing.Color.Silver
-        Me.ErrorProviderLogIn.SetIconAlignment(Me.txtPass, System.Windows.Forms.ErrorIconAlignment.BottomRight)
-        Me.txtPass.Location = New System.Drawing.Point(41, 332)
-        Me.txtPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtPass.MaxLength = 150
-        Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(350, 22)
-        Me.txtPass.TabIndex = 2
         '
         'Panel1
         '
@@ -182,7 +132,7 @@ Partial Class FrmLogIn
         Me.lbUsuario.AutoSize = True
         Me.lbUsuario.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ErrorProviderUserBien.SetIconAlignment(Me.lbUsuario, System.Windows.Forms.ErrorIconAlignment.TopRight)
-        Me.lbUsuario.Location = New System.Drawing.Point(41, 240)
+        Me.lbUsuario.Location = New System.Drawing.Point(37, 239)
         Me.lbUsuario.Name = "lbUsuario"
         Me.lbUsuario.Size = New System.Drawing.Size(77, 21)
         Me.lbUsuario.TabIndex = 10
@@ -192,7 +142,7 @@ Partial Class FrmLogIn
         '
         Me.lbContraseña.AutoSize = True
         Me.lbContraseña.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbContraseña.Location = New System.Drawing.Point(41, 306)
+        Me.lbContraseña.Location = New System.Drawing.Point(37, 304)
         Me.lbContraseña.Name = "lbContraseña"
         Me.lbContraseña.Size = New System.Drawing.Size(111, 21)
         Me.lbContraseña.TabIndex = 10
@@ -213,7 +163,7 @@ Partial Class FrmLogIn
         '
         Me.btnVerPass.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnVerPass.Image = Global.Presentation.My.Resources.Resources.password
-        Me.btnVerPass.Location = New System.Drawing.Point(394, 334)
+        Me.btnVerPass.Location = New System.Drawing.Point(398, 340)
         Me.btnVerPass.Name = "btnVerPass"
         Me.btnVerPass.Size = New System.Drawing.Size(24, 24)
         Me.btnVerPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -318,12 +268,76 @@ Partial Class FrmLogIn
         Me.llbForgotPassEs.Text = "OLVIDO SU CONTRASEÑA ?"
         Me.llbForgotPassEs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'txtUser
+        '
+        Me.txtUser.Animated = True
+        Me.txtUser.BorderThickness = 2
+        Me.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtUser.DefaultText = ""
+        Me.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUser.DisabledState.Parent = Me.txtUser
+        Me.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUser.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtUser.FocusedState.BorderColor = System.Drawing.Color.Cyan
+        Me.txtUser.FocusedState.Parent = Me.txtUser
+        Me.txtUser.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUser.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtUser.HoverState.BorderColor = System.Drawing.Color.Cyan
+        Me.txtUser.HoverState.Parent = Me.txtUser
+        Me.txtUser.Location = New System.Drawing.Point(37, 267)
+        Me.txtUser.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtUser.MaxLength = 8
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtUser.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtUser.PlaceholderText = ""
+        Me.txtUser.SelectedText = ""
+        Me.txtUser.ShadowDecoration.Parent = Me.txtUser
+        Me.txtUser.Size = New System.Drawing.Size(351, 30)
+        Me.txtUser.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.txtUser.TabIndex = 14
+        '
+        'txtPass
+        '
+        Me.txtPass.Animated = True
+        Me.txtPass.BorderThickness = 2
+        Me.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPass.DefaultText = ""
+        Me.txtPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPass.DisabledState.Parent = Me.txtPass
+        Me.txtPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPass.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtPass.FocusedState.BorderColor = System.Drawing.Color.Cyan
+        Me.txtPass.FocusedState.Parent = Me.txtPass
+        Me.txtPass.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPass.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtPass.HoverState.BorderColor = System.Drawing.Color.Cyan
+        Me.txtPass.HoverState.Parent = Me.txtPass
+        Me.txtPass.Location = New System.Drawing.Point(37, 332)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPass.MaxLength = 255
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPass.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtPass.PlaceholderText = ""
+        Me.txtPass.SelectedText = ""
+        Me.txtPass.ShadowDecoration.Parent = Me.txtPass
+        Me.txtPass.Size = New System.Drawing.Size(352, 30)
+        Me.txtPass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.txtPass.TabIndex = 15
+        '
         'FrmLogIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(430, 600)
+        Me.Controls.Add(Me.txtPass)
+        Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.llbCrearUsuario)
         Me.Controls.Add(Me.llbForgotPassEs)
         Me.Controls.Add(Me.btn_Iniciar)
@@ -334,8 +348,6 @@ Partial Class FrmLogIn
         Me.Controls.Add(Me.btnInfo)
         Me.Controls.Add(Me.btnChangeLanguage)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.txtPass)
-        Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.topPanel)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.Cursor = System.Windows.Forms.Cursors.Default
@@ -365,11 +377,7 @@ Partial Class FrmLogIn
     Friend WithEvents topPanel As Panel
     Friend WithEvents btnMinimize As PictureBox
     Friend WithEvents btnClose As PictureBox
-    Friend WithEvents txtUser As TextBox
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
-    Friend WithEvents LineShape1 As PowerPacks.LineShape
-    Friend WithEvents txtPass As TextBox
-    Friend WithEvents LineShape2 As PowerPacks.LineShape
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LineShape3 As PowerPacks.LineShape
     Friend WithEvents Panel1 As Panel
@@ -385,4 +393,6 @@ Partial Class FrmLogIn
     Friend WithEvents btn_Iniciar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents llbCrearUsuario As LinkLabel
     Friend WithEvents llbForgotPassEs As LinkLabel
+    Friend WithEvents txtPass As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtUser As Guna.UI2.WinForms.Guna2TextBox
 End Class

@@ -13,6 +13,7 @@ Public Class FrmConsultaPaciente
         CargarComboBoxSintomas(cbSintoma6)
         CargarComboBoxSintomas(cbSintoma7)
         CargarComboBoxSintomas(cbSintoma8)
+        CargarComboBoxSintomas(cbSintoma9)
     End Sub
 
     Private Sub btnConsul_Click(sender As Object, e As EventArgs) Handles btn_consultar.Click
@@ -38,6 +39,7 @@ Public Class FrmConsultaPaciente
         If cbSintoma6.Enabled = True Then _sintomas.Add(cbSintoma6.Text)
         If cbSintoma7.Enabled = True Then _sintomas.Add(cbSintoma7.Text)
         If cbSintoma8.Enabled = True Then _sintomas.Add(cbSintoma8.Text)
+        If cbSintoma9.Enabled = True Then _sintomas.Add(cbSintoma9.Text)
 
         'agrego los sintomas seleccionados para diagnosticar
         Try

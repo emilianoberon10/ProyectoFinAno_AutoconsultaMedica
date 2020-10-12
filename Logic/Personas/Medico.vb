@@ -1,5 +1,6 @@
 ﻿Imports DataAccess
-
+Imports System.Text
+Imports System.Security.Cryptography
 Public Class Medico
     Inherits Persona
     Property _numMed As Integer
@@ -39,8 +40,12 @@ Public Class Medico
 
 #Region "ABM"
 
-    Public Overloads Function Listar() As DataTable
+    Public Function Listar() As DataTable
         Return cons.ObtenerMedicos()
+    End Function
+
+    Public Overrides Function ObtenerNombreEdad() As DataTable
+        Return MyBase.ObtenerNombreEdad()
     End Function
 
     Public Overloads Function Guardar() As Boolean
@@ -67,6 +72,27 @@ Public Class Medico
     Public Function GetCiDb() As String
         Return cons.GetCi(Me._numMed)
     End Function
+    Public Overrides Function ModificarContraseña() As Boolean
+        Return cons.ModificarContraseña(Me._ci, Me._contraseña)
+    End Function
+
+    Public Overrides Function ModificarP() As Boolean
+        Return MyBase.ModificarP()
+    End Function
+
+    Public Overrides Sub EncriptarContraseña()
+        Dim sha256 As SHA256 = sha256.Create()
+        Dim bytes As Byte() = Encoding.UTF8.GetBytes(Me._contraseña)
+        Dim hash As Byte() = sha256.ComputeHash(bytes)
+        Dim stringBuilder As New StringBuilder()
+
+        For i As Integer = 0 To hash.Length - 1
+            stringBuilder.Append(hash(i).ToString("X2"))
+        Next
+
+        Me._contraseña = stringBuilder.ToString()
+    End Sub
+
 
 #End Region
 
@@ -94,6 +120,10 @@ Public Class Medico
         Return cons.ComprobarMsjMed(Me._ci)
     End Function
 
+    Public Function ModificarDiagnostico(ci, diag) As Boolean
+        Dim c As New DBDiagnostico
+        c.UpdateDiagnostico(ci, diag)
+    End Function
 #End Region
 
 #Region "agenda"

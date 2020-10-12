@@ -1,31 +1,45 @@
+SELECT * from selec;
 -- DASHBOARD -------------------------------------------------------------------------------------------------------------------------------------
 DELIMITER $$
-CREATE PROCEDURE `MasDiagnosticados`()
+CREATE PROCEDURE `masDiagnosticados`()
 BEGIN
-SELECT nomE AS Enfermedad FROM diagnostico GROUP BY nomE ORDER BY COUNT(nomE) DESC LIMIT 10;
+SELECT nomE AS Enfermedad,COUNT(nomE) as cant FROM diagnostico GROUP BY nomE ORDER BY COUNT(nomE) DESC LIMIT 5;
 END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE PROCEDURE `SintomaMasSeleccionado`()
+CREATE PROCEDURE `sintomaMasSeleccionado`()
 BEGIN
-SELECT nomSint AS Sintoma FROM selec GROUP BY nomSInt ORDER BY COUNT(nomSint) DESC LIMIT 5;
+SELECT nomSint  AS Sintoma ,COUNT(nomSint) as cant FROM selec GROUP BY nomSInt ORDER BY COUNT(nomSint) DESC LIMIT 5;
 END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE PROCEDURE `CantidadUsuarios_chats`(
-	OUT cantPac INT,
-	OUT cantMed INT,
-	OUT cantGer INT,
-	OUT cantChats INT
-)
+CREATE PROCEDURE `cantChatsMes`()
 BEGIN
-
-SELECT COUNT(ciP) INTO cantPac FROM paciente;
-SELECT COUNT(ciM) INTO cantMed FROM medico;
-SELECT COUNT(ciG) INTO cantGer FROM gerente;
-SELECT COUNT(idChat)INTO cantChats FROM chat;
+select 'Enero' as mes,count(idChat) as 'Cantidad de consultas' from Chat where month(fecha)=1
+UNION
+	select 'Febrero',count(idChat) from Chat where month(fecha)=2
+UNION
+	select 'Marzo',count(idChat) from Chat where month(fecha)=3
+UNION
+select 'Abril',count(idChat)  from Chat where month(fecha)=4
+UNION
+	select 'Mayo',count(idChat) from Chat where month(fecha)=5
+UNION
+	select 'Junio',count(idChat) from Chat where month(fecha)=6
+UNION
+select 'Julio',count(idChat)from Chat where month(fecha)=7
+UNION
+	select 'Agosto',count(idChat) from Chat where month(fecha)=8
+UNION
+	select 'Septiembre',count(idChat) from Chat where month(fecha)=9
+UNION
+    select 'Octubre',count(idChat) from Chat where month(fecha)=10
+UNION
+	select 'Noviembre',count(idChat) from Chat where month(fecha)=11
+UNION
+	select 'Diciembre',count(idChat) from Chat where month(fecha)=12;
 
 END$$
 DELIMITER ;

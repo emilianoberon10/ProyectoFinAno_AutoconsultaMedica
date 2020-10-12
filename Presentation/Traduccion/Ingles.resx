@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Agenda_titulo" xml:space="preserve">
-    <value>MEDIC'S AGENDA</value>
+    <value>PHYSICIANS AGENDA</value>
   </data>
   <data name="app_titulo" xml:space="preserve">
     <value>MEDICAL SELF-CONSULTATION SYSTEM</value>
@@ -132,8 +132,17 @@
   <data name="btn_Agenda" xml:space="preserve">
     <value>MEDICAL AGENDA</value>
   </data>
+  <data name="btn_app" xml:space="preserve">
+    <value>APPLICATION</value>
+  </data>
+  <data name="btn_ayuda" xml:space="preserve">
+    <value>HELP</value>
+  </data>
   <data name="btn_Buscar" xml:space="preserve">
-    <value>SEARCH FOR</value>
+    <value>SEARCH</value>
+  </data>
+  <data name="btn_cambiar" xml:space="preserve">
+    <value>CHANGE</value>
   </data>
   <data name="btn_cancelar" xml:space="preserve">
     <value>CANCEL</value>
@@ -148,13 +157,16 @@
     <value>CHAT</value>
   </data>
   <data name="btn_chats" xml:space="preserve">
-    <value>CATS</value>
+    <value>CHATS</value>
   </data>
   <data name="btn_consultar" xml:space="preserve">
     <value>CONSULT</value>
   </data>
   <data name="btn_crear" xml:space="preserve">
     <value>CREATE</value>
+  </data>
+  <data name="btn_dashBoard" xml:space="preserve">
+    <value>DASHBOARD</value>
   </data>
   <data name="btn_eliminar" xml:space="preserve">
     <value>REMOVE</value>
@@ -163,13 +175,16 @@
     <value>BETWEEN</value>
   </data>
   <data name="btn_enviar" xml:space="preserve">
-    <value>SUBMIT</value>
+    <value>SEND</value>
   </data>
   <data name="btn_fichaMed" xml:space="preserve">
     <value>MEDICAL RECORD</value>
   </data>
   <data name="btn_Filtrar" xml:space="preserve">
     <value>FILTER</value>
+  </data>
+  <data name="btn_guardar" xml:space="preserve">
+    <value>SAVE</value>
   </data>
   <data name="btn_historial" xml:space="preserve">
     <value>RECORD</value>
@@ -181,10 +196,10 @@
     <value>INSERT</value>
   </data>
   <data name="btn_ingrMed" xml:space="preserve">
-    <value>DOCTORS</value>
+    <value>MEDICS</value>
   </data>
   <data name="btn_Iniciar" xml:space="preserve">
-    <value>LOG IN</value>
+    <value>START</value>
   </data>
   <data name="btn_modificar" xml:space="preserve">
     <value>MODIFY</value>
@@ -204,6 +219,9 @@
   <data name="btn_soliChat" xml:space="preserve">
     <value>REQUESTS</value>
   </data>
+  <data name="btn_usuario" xml:space="preserve">
+    <value>USER</value>
+  </data>
   <data name="consu_titulo" xml:space="preserve">
     <value>SELECT YOUR SYMPTOMS</value>
   </data>
@@ -214,7 +232,7 @@
     <value>Double click on a cell to select the item</value>
   </data>
   <data name="enfermedad" xml:space="preserve">
-    <value>Disease</value>
+    <value>Pathologies</value>
   </data>
   <data name="EsperaChat" xml:space="preserve">
     <value>Please wait</value>
@@ -238,13 +256,19 @@
     <value>Element identifier</value>
   </data>
   <data name="ingGerente" xml:space="preserve">
-    <value>INSERT SYMPTOMS / PATHOLOGIES</value>
+    <value>ENTER SYMPTOMS / PATHOLOGIES</value>
   </data>
   <data name="ingreMed" xml:space="preserve">
-    <value>INSERT A MEDICAL</value>
+    <value>ENTER MEDICAL</value>
   </data>
   <data name="Jue" xml:space="preserve">
     <value>Thursday</value>
+  </data>
+  <data name="lbActuDatos" xml:space="preserve">
+    <value>Update Personal Data</value>
+  </data>
+  <data name="lbCambiarContraseña" xml:space="preserve">
+    <value>Change Password</value>
   </data>
   <data name="lbContraseña" xml:space="preserve">
     <value>PASSWORD</value>
@@ -255,6 +279,12 @@
   <data name="lbEliminar" xml:space="preserve">
     <value>REMOVE</value>
   </data>
+  <data name="lbHechoPor" xml:space="preserve">
+    <value>Software created by VVB Software</value>
+  </data>
+  <data name="lbIconoHechos" xml:space="preserve">
+    <value>Icons Made By:</value>
+  </data>
   <data name="lbInfo_recordatorio2" xml:space="preserve">
     <value>In case you have not changed your password, this will be your ID.
 If I modify it, you can click on the following link to restore it</value>
@@ -264,6 +294,9 @@ If I modify it, you can click on the following link to restore it</value>
   </data>
   <data name="lbInfo_rocordatorio1" xml:space="preserve">
     <value>Remember that the ID must NOT contain periods or hyphens</value>
+  </data>
+  <data name="lbLinkIconos" xml:space="preserve">
+    <value>http://www.freepik.com</value>
   </data>
   <data name="lbNomEnf" xml:space="preserve">
     <value>Name</value>
@@ -295,6 +328,9 @@ If I modify it, you can click on the following link to restore it</value>
   <data name="Mhora" xml:space="preserve">
     <value>Time</value>
   </data>
+  <data name="MhoraSalida" xml:space="preserve">
+    <value>Departure time</value>
+  </data>
   <data name="Mie" xml:space="preserve">
     <value>Wednesday</value>
   </data>
@@ -314,13 +350,13 @@ If I modify it, you can click on the following link to restore it</value>
     <value>SELECT YOUR SYMPTOMS</value>
   </data>
   <data name="Persona_aclaracionCi" xml:space="preserve">
-    <value>Without periods or hyphens</value>
+    <value>(no dots or dashes)</value>
   </data>
   <data name="Persona_antece" xml:space="preserve">
     <value>Family background</value>
   </data>
   <data name="Persona_ci" xml:space="preserve">
-    <value>Personal ID</value>
+    <value>Writ identity</value>
   </data>
   <data name="Persona_correo" xml:space="preserve">
     <value>Email</value>
@@ -329,7 +365,7 @@ If I modify it, you can click on the following link to restore it</value>
     <value>Address</value>
   </data>
   <data name="Persona_domicilio" xml:space="preserve">
-    <value>Home Adress</value>
+    <value>Home</value>
   </data>
   <data name="Persona_edad" xml:space="preserve">
     <value>Age</value>
@@ -405,6 +441,12 @@ If I modify it, you can click on the following link to restore it</value>
   </data>
   <data name="sintoma" xml:space="preserve">
     <value>Symptom</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value />
   </data>
   <data name="titulo-app" xml:space="preserve">
     <value>MEDICAL SELF-CONSULTATION SYSTEM</value>

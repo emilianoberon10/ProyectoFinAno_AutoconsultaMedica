@@ -3,16 +3,18 @@
 Public Class FrmFichaMedicaPaciente
     Dim ficha As FichaMedica
 
-    Private Sub btnConsul_Paint(sender As Object, e As PaintEventArgs)
-        'ficha = New FichaMedica(FrmLogIn.paci._ci)
-        'Dim dt As New DataGridView With {
-        '    .DataSource = ficha.GetFicha()
-        '}
 
-        'txtProcedencia.Text = dt.Rows(0).Cells(0).Value
+    Private Sub FrmFichaMedicaPaciente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ficha = New FichaMedica(FrmLogIn.paci._ci)
+        'procedencia,ocup,medicacion,Motiv_Cons,antecedentesFamiliares
+        DataGridView1.DataSource = ficha.GetFicha()
 
+        txtProcedencia.Text = DataGridView1.Item(0, 0).Value
+        txtOcupacion.Text = DataGridView1.Item(1, 0).Value
+        txtMedicina.Text = DataGridView1.Item(2, 0).Value
+        txtMotivoConsulta.Text = DataGridView1.Item(3, 0).Value
+        txtAntecedentes.Text = DataGridView1.Item(4, 0).Value
     End Sub
-
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btn_aceptar.Click
 
         If txtProcedencia.Text = "" Or txtOcupacion.Text = "" Or txtMotivoConsulta.Text = "" Then
@@ -49,5 +51,6 @@ Public Class FrmFichaMedicaPaciente
     Private Sub txtMedicina_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProcedencia.KeyPress, txtOcupacion.KeyPress, txtMotivoConsulta.KeyPress, txtMedicina.KeyPress, txtAntecedentes.KeyPress
         DesecharCaracteresEspeciales(e)
     End Sub
+
 
 End Class

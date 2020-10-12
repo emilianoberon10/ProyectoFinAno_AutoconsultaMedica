@@ -43,13 +43,15 @@ Partial Class FrmFichaMedicaPaciente
         Me.chbAntecedentes = New System.Windows.Forms.CheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.btn_aceptar = New Guna.UI2.WinForms.Guna2Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PFicha_titulo
         '
         Me.PFicha_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PFicha_titulo.ForeColor = System.Drawing.Color.Silver
+        Me.PFicha_titulo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.PFicha_titulo.Location = New System.Drawing.Point(0, 9)
         Me.PFicha_titulo.Name = "PFicha_titulo"
         Me.PFicha_titulo.Size = New System.Drawing.Size(359, 40)
@@ -64,7 +66,7 @@ Partial Class FrmFichaMedicaPaciente
         Me.txtMedicina.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtMedicina.Enabled = False
         Me.txtMedicina.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMedicina.ForeColor = System.Drawing.Color.Silver
+        Me.txtMedicina.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtMedicina.Location = New System.Drawing.Point(5, 112)
         Me.txtMedicina.Name = "txtMedicina"
         Me.txtMedicina.Size = New System.Drawing.Size(144, 22)
@@ -75,7 +77,7 @@ Partial Class FrmFichaMedicaPaciente
         '
         Me.PFicha_cual.AutoSize = True
         Me.PFicha_cual.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PFicha_cual.ForeColor = System.Drawing.Color.Silver
+        Me.PFicha_cual.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.PFicha_cual.Location = New System.Drawing.Point(5, 89)
         Me.PFicha_cual.Name = "PFicha_cual"
         Me.PFicha_cual.Size = New System.Drawing.Size(41, 21)
@@ -120,7 +122,7 @@ Partial Class FrmFichaMedicaPaciente
         Me.txtOcupacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtOcupacion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtOcupacion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtOcupacion.ForeColor = System.Drawing.Color.Silver
+        Me.txtOcupacion.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtOcupacion.Location = New System.Drawing.Point(206, 112)
         Me.txtOcupacion.Name = "txtOcupacion"
         Me.txtOcupacion.Size = New System.Drawing.Size(144, 22)
@@ -131,7 +133,7 @@ Partial Class FrmFichaMedicaPaciente
         '
         Me.PFicha_ocup.AutoSize = True
         Me.PFicha_ocup.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PFicha_ocup.ForeColor = System.Drawing.Color.Silver
+        Me.PFicha_ocup.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.PFicha_ocup.Location = New System.Drawing.Point(206, 89)
         Me.PFicha_ocup.Name = "PFicha_ocup"
         Me.PFicha_ocup.Size = New System.Drawing.Size(91, 21)
@@ -154,7 +156,7 @@ Partial Class FrmFichaMedicaPaciente
         '
         Me.PFicha_tomaMed.AutoSize = True
         Me.PFicha_tomaMed.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PFicha_tomaMed.ForeColor = System.Drawing.Color.Silver
+        Me.PFicha_tomaMed.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.PFicha_tomaMed.Location = New System.Drawing.Point(1, 65)
         Me.PFicha_tomaMed.Name = "PFicha_tomaMed"
         Me.PFicha_tomaMed.Size = New System.Drawing.Size(128, 21)
@@ -167,7 +169,7 @@ Partial Class FrmFichaMedicaPaciente
         '
         Me.txtMotivoConsulta.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtMotivoConsulta.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMotivoConsulta.ForeColor = System.Drawing.Color.Silver
+        Me.txtMotivoConsulta.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtMotivoConsulta.Location = New System.Drawing.Point(3, 167)
         Me.txtMotivoConsulta.Multiline = True
         Me.txtMotivoConsulta.Name = "txtMotivoConsulta"
@@ -179,7 +181,7 @@ Partial Class FrmFichaMedicaPaciente
         '
         Me.PFicha_motCons.AutoSize = True
         Me.PFicha_motCons.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PFicha_motCons.ForeColor = System.Drawing.Color.Silver
+        Me.PFicha_motCons.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.PFicha_motCons.Location = New System.Drawing.Point(3, 147)
         Me.PFicha_motCons.Name = "PFicha_motCons"
         Me.PFicha_motCons.Size = New System.Drawing.Size(165, 21)
@@ -192,7 +194,7 @@ Partial Class FrmFichaMedicaPaciente
         '
         Me.txtProcedencia.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtProcedencia.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProcedencia.ForeColor = System.Drawing.Color.Silver
+        Me.txtProcedencia.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtProcedencia.Location = New System.Drawing.Point(206, 167)
         Me.txtProcedencia.Multiline = True
         Me.txtProcedencia.Name = "txtProcedencia"
@@ -204,7 +206,7 @@ Partial Class FrmFichaMedicaPaciente
         '
         Me.PFicha_proced.AutoSize = True
         Me.PFicha_proced.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PFicha_proced.ForeColor = System.Drawing.Color.Silver
+        Me.PFicha_proced.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.PFicha_proced.Location = New System.Drawing.Point(206, 143)
         Me.PFicha_proced.Name = "PFicha_proced"
         Me.PFicha_proced.Size = New System.Drawing.Size(101, 21)
@@ -218,7 +220,7 @@ Partial Class FrmFichaMedicaPaciente
         Me.txtAntecedentes.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtAntecedentes.Enabled = False
         Me.txtAntecedentes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAntecedentes.ForeColor = System.Drawing.Color.Silver
+        Me.txtAntecedentes.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtAntecedentes.Location = New System.Drawing.Point(3, 286)
         Me.txtAntecedentes.Multiline = True
         Me.txtAntecedentes.Name = "txtAntecedentes"
@@ -230,7 +232,7 @@ Partial Class FrmFichaMedicaPaciente
         '
         Me.PFicha_antecedentes.AutoSize = True
         Me.PFicha_antecedentes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PFicha_antecedentes.ForeColor = System.Drawing.Color.Silver
+        Me.PFicha_antecedentes.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.PFicha_antecedentes.Location = New System.Drawing.Point(2, 266)
         Me.PFicha_antecedentes.Name = "PFicha_antecedentes"
         Me.PFicha_antecedentes.Size = New System.Drawing.Size(103, 21)
@@ -282,6 +284,15 @@ Partial Class FrmFichaMedicaPaciente
         Me.btn_aceptar.Text = "ACEPTAR"
         Me.btn_aceptar.UseWaitCursor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(10, 10)
+        Me.DataGridView1.TabIndex = 38
+        Me.DataGridView1.Visible = False
+        '
         'FrmFichaMedicaPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -289,6 +300,7 @@ Partial Class FrmFichaMedicaPaciente
         Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(359, 437)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btn_aceptar)
         Me.Controls.Add(Me.chbAntecedentes)
         Me.Controls.Add(Me.PFicha_antecedentes)
@@ -311,6 +323,7 @@ Partial Class FrmFichaMedicaPaciente
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.UseWaitCursor = True
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -335,4 +348,5 @@ Partial Class FrmFichaMedicaPaciente
     Friend WithEvents chbAntecedentes As CheckBox
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents btn_aceptar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

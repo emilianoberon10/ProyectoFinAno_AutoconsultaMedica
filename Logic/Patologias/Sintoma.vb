@@ -35,9 +35,9 @@ Public Class Sintoma
         Return consu.BorrarSintoma(dato)
     End Function
 
-    Public Sub Limpiar()
+    Public Sub Limpiar(ci)
         Dim cons As New DBSintomas
-        cons.LimpiarSeleccion()
+        cons.LimpiarSeleccion(ci)
     End Sub
 
 End Class

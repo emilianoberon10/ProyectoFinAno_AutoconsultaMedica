@@ -28,6 +28,8 @@ Public Class FrmConsultaPaciente
     End Sub
 
     Private Sub guardarSintomas()
+
+
         'creo un array de los sintomas seleccionados
         Dim _sintomas As New ArrayList
         'agrego cada sintoma del comboBox al array
@@ -50,6 +52,7 @@ Public Class FrmConsultaPaciente
     End Sub
 
     Private Sub guardarEnfermedades()
+
         Try
             dgvDiagnostico.DataSource = FrmLogIn.paci.Generar()
             Try
@@ -68,6 +71,7 @@ Public Class FrmConsultaPaciente
                     Next
 
                 Next
+
             Catch ex As Exception
                 ErrorProvider1.SetError(Me.consu_titulo, ex.Message)
                 General.GetForm(Estado.Error, ex.Message)

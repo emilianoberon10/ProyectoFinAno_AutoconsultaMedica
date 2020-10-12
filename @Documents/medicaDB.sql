@@ -140,7 +140,7 @@ CREATE TABLE define(
 );
 
 CREATE TABLE chat(
-	idChat INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	idchat INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	ciPac CHAR(8) NOT NULL,
 	idMed char(8) NOT NULL,
     fecha DATE NOT NULL,
@@ -157,13 +157,13 @@ CREATE TABLE chat(
 CREATE TABLE mensaje(
 	idMsj int(4) AUTO_INCREMENT PRIMARY KEY,
     hora TIME NOT NULL,
-    idChat INT(4) NOT NULL,
+    idchat INT(4) NOT NULL,
     emisor CHAR(8),
     receptor CHAR(8),
     txt TEXT NOT NULL,
     FOREIGN KEY(emisor) REFERENCES persona(ci),
     CONSTRAINT fk_receptor FOREIGN KEY(receptor) REFERENCES persona(ci),
-    CONSTRAINT fk_idChat FOREIGN KEY(idChat) REFERENCES chat(idChat)
+    CONSTRAINT fk_idchat FOREIGN KEY(idchat) REFERENCES chat(idchat)
 );
 
 CREATE TABLE solicita(
@@ -304,13 +304,59 @@ values (CURDATE(),'Uruguay',15,null,44444444,'Ingeniero en Sistemas','Antialergi
 (CURDATE(),'Uruguay',7,null,22222222,'En paro','','Por enfermedad',''),
 (CURDATE(),'Uruguay',21,null,55555555,'En paro','Analgesicos','Por enfermedad','Hipertension'),
 (CURDATE(),'Uruguay',20,null,88888888,'Docente','','Por enfermedad',''); 
--- ----------------------------- Solicita Chat, Acepta y Chat --------------------------- --
+-- ----------------------------- Solicita chat, Acepta y chat --------------------------- --
 -- insert into solicita values (null,22222222,'Romina','alergia','Pendiente');
 -- insert into solicita values (null,44444444,'Romina','dengue','Pendiente');
 -- insert into solicita values (null,88888888,'Romina','alergia','Pendiente');
 -- insert into solicita values (null,55555555,'Agustina','gripe','Pendiente');
--- Chat --
+-- chat --
 insert into chat values (null,'22222222',66666666,CURDATE(),'covid','Finalizado');
 insert into chat values (null,'55555555',66666666,CURDATE(),'gripe','Finalizado');
 
+## ######################################################################################
+## 										DASHBOARD									   ##
+#########################################################################################
+DELIMITER $$
+CREATE PROCEDURE `masDiagnosticados`()
+BEGIN
+SELECT nomE AS Enfermedad,COUNT(nomE) as cant FROM diagnostico GROUP BY nomE ORDER BY COUNT(nomE) DESC LIMIT 5;
+END$$
+DELIMITER ;
 
+DELIMITER $$
+CREATE PROCEDURE `sintomaMasSeleccionado`()
+BEGIN
+SELECT nomSint  AS Sintoma ,COUNT(nomSint) as cant FROM selec GROUP BY nomSInt ORDER BY COUNT(nomSint) DESC LIMIT 5;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE `cantchatsMes`()
+BEGIN
+select 'Enero' as mes,count(idchat) as 'Cantidad de consultas' from chat where month(fecha)=1
+UNION
+	select 'Febrero',count(idchat) from chat where month(fecha)=2
+UNION
+	select 'Marzo',count(idchat) from chat where month(fecha)=3
+UNION
+select 'Abril',count(idchat)  from chat where month(fecha)=4
+UNION
+	select 'Mayo',count(idchat) from chat where month(fecha)=5
+UNION
+	select 'Junio',count(idchat) from chat where month(fecha)=6
+UNION
+select 'Julio',count(idchat)from chat where month(fecha)=7
+UNION
+	select 'Agosto',count(idchat) from chat where month(fecha)=8
+UNION
+	select 'Septiembre',count(idchat) from chat where month(fecha)=9
+UNION
+    select 'Octubre',count(idchat) from chat where month(fecha)=10
+UNION
+	select 'Noviembre',count(idchat) from chat where month(fecha)=11
+UNION
+	select 'Diciembre',count(idchat) from chat where month(fecha)=12;
+
+END$$
+DELIMITER ;
+-- FIN DASHBOARD -------------------------------------------------------------------------------------------------------------------------------------

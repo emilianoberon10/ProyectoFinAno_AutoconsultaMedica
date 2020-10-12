@@ -21,6 +21,7 @@
             If FrmLogIn.medic.AceptarChat(ci, diag) Then
                 Dim form As New FrmChats
                 form.txtDiagnostico.Text = diag
+                form.txtCi.Text = ci
                 form.Show()
                 form.Timer1.Start()
             End If

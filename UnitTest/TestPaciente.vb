@@ -40,7 +40,7 @@ Imports Logic
             ._contraseña = "micontraseña"
         End With
 
-        actual = paciente.Modificar
+        actual = paciente.ModificarContraseña
 
         Assert.AreEqual(actual, esperado)
 

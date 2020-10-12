@@ -101,6 +101,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmsOpciones\FrmOpcionesAyuda.Designer.vb">
+      <DependentUpon>FrmOpcionesAyuda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmsOpciones\FrmOpcionesAyuda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmsOpciones\FrmOpcionesUsuario.Designer.vb">
+      <DependentUpon>FrmOpcionesUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmsOpciones\FrmOpcionesUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MetodosCompartidos.vb" />
     <Compile Include="frmNotificacion.designer.vb">
       <DependentUpon>frmNotificacion.vb</DependentUpon>
@@ -108,10 +120,10 @@
     <Compile Include="frmNotificacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOpciones.Designer.vb">
+    <Compile Include="FrmsOpciones\FrmOpciones.Designer.vb">
       <DependentUpon>FrmOpciones.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmOpciones.vb">
+    <Compile Include="FrmsOpciones\FrmOpciones.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmsGerente\FrmDatosUso.Designer.vb">
@@ -277,8 +289,14 @@
     <EmbeddedResource Include="frmNotificacion.resx">
       <DependentUpon>frmNotificacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOpciones.resx">
+    <EmbeddedResource Include="FrmsOpciones\FrmOpciones.resx">
       <DependentUpon>FrmOpciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmsOpciones\FrmOpcionesAyuda.resx">
+      <DependentUpon>FrmOpcionesAyuda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmsOpciones\FrmOpcionesUsuario.resx">
+      <DependentUpon>FrmOpcionesUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmsGerente\FrmDatosUso.resx">
       <DependentUpon>FrmDatosUso.vb</DependentUpon>

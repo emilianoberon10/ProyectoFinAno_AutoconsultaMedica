@@ -26,7 +26,7 @@ Public MustInherit Class Persona
         _ci = ci
     End Sub
 
-    Public Sub New(ci As String, tel_cel As Object, edad As Object,
+    Public Sub New(ci As String, tel_cel As Integer, edad As Integer,
                    domicilio As String, sexo As String, pNom As String,
                    sNom As String, pApe As String, sApe As String)
         _ci = ci
@@ -52,21 +52,27 @@ Public MustInherit Class Persona
 
     End Function
 
-    Public Overridable Function Modificar() As Boolean
+    Public Overridable Function ModificarContraseña() As Boolean
 
     End Function
-
-    Public Overridable Function Listar() As Boolean
-
+    Public Overridable Function ModificarP() As Boolean
+        Dim c As New DBPersona
+        With Me
+            Return c.UpdatePersona(._ci, ._pNom, ._sNom, ._pApe, ._sApe, ._edad)
+        End With
+    End Function
+    Public Overridable Function ObtenerNombreEdad() As DataTable
+        Dim c As New DBPersona
+        Return c.GetPersonas(Me._ci)
     End Function
 
     Public Overridable Function ObtenerNombre() As String
 
     End Function
 
-    Public Overridable Function EncriptarContraseña() As String
+    Public Overridable Sub EncriptarContraseña()
 
-    End Function
+    End Sub
 
 #End Region
 

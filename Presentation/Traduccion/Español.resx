@@ -132,8 +132,17 @@
   <data name="btn_Agenda" xml:space="preserve">
     <value>AGENDA MEDICA</value>
   </data>
+  <data name="btn_app" xml:space="preserve">
+    <value>APLICACION</value>
+  </data>
+  <data name="btn_ayuda" xml:space="preserve">
+    <value>AYUDA</value>
+  </data>
   <data name="btn_Buscar" xml:space="preserve">
     <value>BUSCAR</value>
+  </data>
+  <data name="btn_cambiar" xml:space="preserve">
+    <value>CAMBIAR</value>
   </data>
   <data name="btn_cancelar" xml:space="preserve">
     <value>CANCELAR</value>
@@ -156,6 +165,9 @@
   <data name="btn_crear" xml:space="preserve">
     <value>CREAR</value>
   </data>
+  <data name="btn_dashBoard" xml:space="preserve">
+    <value>DATOS USO</value>
+  </data>
   <data name="btn_eliminar" xml:space="preserve">
     <value>ELIMINAR</value>
   </data>
@@ -170,6 +182,9 @@
   </data>
   <data name="btn_Filtrar" xml:space="preserve">
     <value>FILTRAR</value>
+  </data>
+  <data name="btn_guardar" xml:space="preserve">
+    <value>GUARDAR</value>
   </data>
   <data name="btn_historial" xml:space="preserve">
     <value>HISTORIAL</value>
@@ -203,6 +218,9 @@
   </data>
   <data name="btn_soliChat" xml:space="preserve">
     <value>SOLICITUDES</value>
+  </data>
+  <data name="btn_usuario" xml:space="preserve">
+    <value>USUARIO</value>
   </data>
   <data name="consu_titulo" xml:space="preserve">
     <value>SELECCIONE SUS SINTOMAS</value>
@@ -246,6 +264,12 @@
   <data name="Jue" xml:space="preserve">
     <value>Jueves</value>
   </data>
+  <data name="lbActuDatos" xml:space="preserve">
+    <value>Actualizar Datos Personales</value>
+  </data>
+  <data name="lbCambiarContraseña" xml:space="preserve">
+    <value>Cambiar Contraseña</value>
+  </data>
   <data name="lbContraseña" xml:space="preserve">
     <value>CONTRASEÑA</value>
   </data>
@@ -254,6 +278,12 @@
   </data>
   <data name="lbEliminar" xml:space="preserve">
     <value>ELIMINAR</value>
+  </data>
+  <data name="lbHechoPor" xml:space="preserve">
+    <value>Software creado por VVB Software</value>
+  </data>
+  <data name="lbIconoHechos" xml:space="preserve">
+    <value>Iconos Hechos por:</value>
   </data>
   <data name="lbInfo_recordatorio2" xml:space="preserve">
     <value>En caso de no haber cambiado su contraseña, esta sera su cedula. 
@@ -264,6 +294,9 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla</value>
   </data>
   <data name="lbInfo_rocordatorio1" xml:space="preserve">
     <value>Recuerde que la cedula NO debe contener puntos ni guiones</value>
+  </data>
+  <data name="lbLinkIconos" xml:space="preserve">
+    <value>http://www.freepik.com</value>
   </data>
   <data name="lbNomEnf" xml:space="preserve">
     <value>Nombre</value>

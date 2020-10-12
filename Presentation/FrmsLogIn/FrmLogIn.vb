@@ -42,7 +42,7 @@ Public Class FrmLogIn
     Private Sub Logout(sender As Object, e As FormClosedEventArgs)
         ErrorProviderUserBien.Clear()
         ErrorProviderPass.Clear()
-        txtUser.BackColor = Color.FromArgb(48, 63, 105)
+        txtUser.FillColor = Color.FromArgb(48, 63, 105)
         txtUser.Clear()
         txtPass.Clear()
         If Traductor.idioma Is "ES" Then

@@ -198,9 +198,24 @@ Presentation
   Busca una cadena traducida similar a AGENDA MEDICA.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Español.btn_app">
+<summary>
+  Busca una cadena traducida similar a APLICACION.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Español.btn_ayuda">
+<summary>
+  Busca una cadena traducida similar a AYUDA.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Español.btn_Buscar">
 <summary>
   Busca una cadena traducida similar a BUSCAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Español.btn_cambiar">
+<summary>
+  Busca una cadena traducida similar a CAMBIAR.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Español.btn_cancelar">
@@ -238,6 +253,11 @@ Presentation
   Busca una cadena traducida similar a CREAR.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Español.btn_dashBoard">
+<summary>
+  Busca una cadena traducida similar a DATOS USO.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Español.btn_eliminar">
 <summary>
   Busca una cadena traducida similar a ELIMINAR.
@@ -261,6 +281,11 @@ Presentation
 <member name="P:Presentation.My.Resources.Español.btn_Filtrar">
 <summary>
   Busca una cadena traducida similar a FILTRAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Español.btn_guardar">
+<summary>
+  Busca una cadena traducida similar a GUARDAR.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Español.btn_historial">
@@ -316,6 +341,11 @@ Presentation
 <member name="P:Presentation.My.Resources.Español.btn_soliChat">
 <summary>
   Busca una cadena traducida similar a SOLICITUDES.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Español.btn_usuario">
+<summary>
+  Busca una cadena traducida similar a USUARIO.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Español.consu_titulo">
@@ -388,6 +418,16 @@ Presentation
   Busca una cadena traducida similar a Jueves.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Español.lbActuDatos">
+<summary>
+  Busca una cadena traducida similar a Actualizar Datos Personales.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Español.lbCambiarContraseña">
+<summary>
+  Busca una cadena traducida similar a Cambiar Contraseña.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Español.lbContraseña">
 <summary>
   Busca una cadena traducida similar a CONTRASEÑA.
@@ -401,6 +441,16 @@ Presentation
 <member name="P:Presentation.My.Resources.Español.lbEliminar">
 <summary>
   Busca una cadena traducida similar a ELIMINAR.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Español.lbHechoPor">
+<summary>
+  Busca una cadena traducida similar a Software creado por VVB Software.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Español.lbIconoHechos">
+<summary>
+  Busca una cadena traducida similar a Iconos Hechos por:.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Español.lbInfo_recordatorio2">
@@ -417,6 +467,11 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
 <member name="P:Presentation.My.Resources.Español.lbInfo_rocordatorio1">
 <summary>
   Busca una cadena traducida similar a Recuerde que la cedula NO debe contener puntos ni guiones.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Español.lbLinkIconos">
+<summary>
+  Busca una cadena traducida similar a http://www.freepik.com.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Español.lbNomEnf">
@@ -687,7 +742,7 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
 </member>
 <member name="P:Presentation.My.Resources.Ingles.Agenda_titulo">
 <summary>
-  Busca una cadena traducida similar a MEDIC&apos;S AGENDA.
+  Busca una cadena traducida similar a PHYSICIANS AGENDA.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.app_titulo">
@@ -710,9 +765,24 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
   Busca una cadena traducida similar a MEDICAL AGENDA.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Ingles.btn_app">
+<summary>
+  Busca una cadena traducida similar a APPLICATION.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_ayuda">
+<summary>
+  Busca una cadena traducida similar a HELP.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Ingles.btn_Buscar">
 <summary>
-  Busca una cadena traducida similar a SEARCH FOR.
+  Busca una cadena traducida similar a SEARCH.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_cambiar">
+<summary>
+  Busca una cadena traducida similar a CHANGE.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.btn_cancelar">
@@ -737,7 +807,7 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
 </member>
 <member name="P:Presentation.My.Resources.Ingles.btn_chats">
 <summary>
-  Busca una cadena traducida similar a CATS.
+  Busca una cadena traducida similar a CHATS.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.btn_consultar">
@@ -748,6 +818,11 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
 <member name="P:Presentation.My.Resources.Ingles.btn_crear">
 <summary>
   Busca una cadena traducida similar a CREATE.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_dashBoard">
+<summary>
+  Busca una cadena traducida similar a DASHBOARD.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.btn_eliminar">
@@ -762,7 +837,7 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
 </member>
 <member name="P:Presentation.My.Resources.Ingles.btn_enviar">
 <summary>
-  Busca una cadena traducida similar a SUBMIT.
+  Busca una cadena traducida similar a SEND.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.btn_fichaMed">
@@ -773,6 +848,11 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
 <member name="P:Presentation.My.Resources.Ingles.btn_Filtrar">
 <summary>
   Busca una cadena traducida similar a FILTER.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.btn_guardar">
+<summary>
+  Busca una cadena traducida similar a SAVE.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.btn_historial">
@@ -792,12 +872,12 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
 </member>
 <member name="P:Presentation.My.Resources.Ingles.btn_ingrMed">
 <summary>
-  Busca una cadena traducida similar a DOCTORS.
+  Busca una cadena traducida similar a MEDICS.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.btn_Iniciar">
 <summary>
-  Busca una cadena traducida similar a LOG IN.
+  Busca una cadena traducida similar a START.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.btn_modificar">
@@ -830,6 +910,11 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
   Busca una cadena traducida similar a REQUESTS.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Ingles.btn_usuario">
+<summary>
+  Busca una cadena traducida similar a USER.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Ingles.consu_titulo">
 <summary>
   Busca una cadena traducida similar a SELECT YOUR SYMPTOMS.
@@ -847,7 +932,7 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
 </member>
 <member name="P:Presentation.My.Resources.Ingles.enfermedad">
 <summary>
-  Busca una cadena traducida similar a Disease.
+  Busca una cadena traducida similar a Pathologies.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.EsperaChat">
@@ -887,17 +972,27 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
 </member>
 <member name="P:Presentation.My.Resources.Ingles.ingGerente">
 <summary>
-  Busca una cadena traducida similar a INSERT SYMPTOMS / PATHOLOGIES.
+  Busca una cadena traducida similar a ENTER SYMPTOMS / PATHOLOGIES.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.ingreMed">
 <summary>
-  Busca una cadena traducida similar a INSERT A MEDICAL.
+  Busca una cadena traducida similar a ENTER MEDICAL.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.Jue">
 <summary>
   Busca una cadena traducida similar a Thursday.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.lbActuDatos">
+<summary>
+  Busca una cadena traducida similar a Update Personal Data.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.lbCambiarContraseña">
+<summary>
+  Busca una cadena traducida similar a Change Password.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.lbContraseña">
@@ -915,6 +1010,16 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
   Busca una cadena traducida similar a REMOVE.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Ingles.lbHechoPor">
+<summary>
+  Busca una cadena traducida similar a Software created by VVB Software.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.lbIconoHechos">
+<summary>
+  Busca una cadena traducida similar a Icons Made By:.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Ingles.lbInfo_recordatorio2">
 <summary>
   Busca una cadena traducida similar a In case you have not changed your password, this will be your ID.
@@ -929,6 +1034,11 @@ If I modify it, you can click on the following link to restore it.
 <member name="P:Presentation.My.Resources.Ingles.lbInfo_rocordatorio1">
 <summary>
   Busca una cadena traducida similar a Remember that the ID must NOT contain periods or hyphens.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.lbLinkIconos">
+<summary>
+  Busca una cadena traducida similar a http://www.freepik.com.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.lbNomEnf">
@@ -981,6 +1091,11 @@ If I modify it, you can click on the following link to restore it.
   Busca una cadena traducida similar a Time.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Ingles.MhoraSalida">
+<summary>
+  Busca una cadena traducida similar a Departure time.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Ingles.Mie">
 <summary>
   Busca una cadena traducida similar a Wednesday.
@@ -1013,7 +1128,7 @@ If I modify it, you can click on the following link to restore it.
 </member>
 <member name="P:Presentation.My.Resources.Ingles.Persona_aclaracionCi">
 <summary>
-  Busca una cadena traducida similar a Without periods or hyphens.
+  Busca una cadena traducida similar a (no dots or dashes).
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.Persona_antece">
@@ -1023,7 +1138,7 @@ If I modify it, you can click on the following link to restore it.
 </member>
 <member name="P:Presentation.My.Resources.Ingles.Persona_ci">
 <summary>
-  Busca una cadena traducida similar a Personal ID.
+  Busca una cadena traducida similar a Writ identity.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.Persona_correo">
@@ -1038,7 +1153,7 @@ If I modify it, you can click on the following link to restore it.
 </member>
 <member name="P:Presentation.My.Resources.Ingles.Persona_domicilio">
 <summary>
-  Busca una cadena traducida similar a Home Adress.
+  Busca una cadena traducida similar a Home.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.Persona_edad">
@@ -1164,6 +1279,16 @@ If I modify it, you can click on the following link to restore it.
 <member name="P:Presentation.My.Resources.Ingles.sintoma">
 <summary>
   Busca una cadena traducida similar a Symptom.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.String1">
+<summary>
+  Busca una cadena traducida similar a .
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.String2">
+<summary>
+  Busca una cadena traducida similar a .
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.titulo_app">

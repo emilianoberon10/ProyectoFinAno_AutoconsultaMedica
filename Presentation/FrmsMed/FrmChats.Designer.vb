@@ -33,19 +33,20 @@ Partial Class FrmChats
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.TopPanel = New System.Windows.Forms.Panel()
+        Me.btnMinimize = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.app_titulo = New System.Windows.Forms.Label()
         Me.btn_salir = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_enviar = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_modificar = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_fichaMed = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnMinimize = New System.Windows.Forms.PictureBox()
+        Me.txtCi = New System.Windows.Forms.TextBox()
         Me.DataRepeater1.ItemTemplate.SuspendLayout()
         Me.DataRepeater1.SuspendLayout()
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TopPanel.SuspendLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtDiagnostico
@@ -107,7 +108,7 @@ Partial Class FrmChats
         Me.DataRepeater1.ItemTemplate.Controls.Add(Me.Label2)
         Me.DataRepeater1.ItemTemplate.Controls.Add(Me.Guna2CirclePictureBox1)
         Me.DataRepeater1.ItemTemplate.Margin = New System.Windows.Forms.Padding(2)
-        Me.DataRepeater1.ItemTemplate.Size = New System.Drawing.Size(184, 14)
+        Me.DataRepeater1.ItemTemplate.Size = New System.Drawing.Size(184, 11)
         Me.DataRepeater1.Location = New System.Drawing.Point(586, 28)
         Me.DataRepeater1.Name = "DataRepeater1"
         Me.DataRepeater1.Size = New System.Drawing.Size(192, 731)
@@ -118,7 +119,7 @@ Partial Class FrmChats
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(14, 4)
+        Me.Label2.Location = New System.Drawing.Point(10, 3)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 21)
@@ -133,7 +134,7 @@ Partial Class FrmChats
         Me.Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
         Me.Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.Guna2CirclePictureBox1.ShadowDecoration.Parent = Me.Guna2CirclePictureBox1
-        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(12, 13)
+        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(9, 10)
         Me.Guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Guna2CirclePictureBox1.TabIndex = 0
         Me.Guna2CirclePictureBox1.TabStop = False
@@ -150,6 +151,18 @@ Partial Class FrmChats
         Me.TopPanel.Name = "TopPanel"
         Me.TopPanel.Size = New System.Drawing.Size(778, 28)
         Me.TopPanel.TabIndex = 12
+        '
+        'btnMinimize
+        '
+        Me.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMinimize.Image = Global.Presentation.My.Resources.Resources.Minimize_Icon
+        Me.btnMinimize.Location = New System.Drawing.Point(744, 5)
+        Me.btnMinimize.Name = "btnMinimize"
+        Me.btnMinimize.Padding = New System.Windows.Forms.Padding(3)
+        Me.btnMinimize.Size = New System.Drawing.Size(22, 22)
+        Me.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.btnMinimize.TabIndex = 10
+        Me.btnMinimize.TabStop = False
         '
         'PictureBox5
         '
@@ -247,24 +260,22 @@ Partial Class FrmChats
         Me.btn_fichaMed.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_fichaMed.ForeColor = System.Drawing.Color.White
         Me.btn_fichaMed.HoverState.Parent = Me.btn_fichaMed
-        Me.btn_fichaMed.Location = New System.Drawing.Point(417, 713)
+        Me.btn_fichaMed.Location = New System.Drawing.Point(380, 713)
         Me.btn_fichaMed.Name = "btn_fichaMed"
         Me.btn_fichaMed.ShadowDecoration.Parent = Me.btn_fichaMed
-        Me.btn_fichaMed.Size = New System.Drawing.Size(160, 30)
+        Me.btn_fichaMed.Size = New System.Drawing.Size(197, 30)
         Me.btn_fichaMed.TabIndex = 15
         Me.btn_fichaMed.Text = "FICHA MEDICA"
         '
-        'btnMinimize
+        'txtCi
         '
-        Me.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMinimize.Image = Global.Presentation.My.Resources.Resources.Minimize_Icon
-        Me.btnMinimize.Location = New System.Drawing.Point(744, 5)
-        Me.btnMinimize.Name = "btnMinimize"
-        Me.btnMinimize.Padding = New System.Windows.Forms.Padding(3)
-        Me.btnMinimize.Size = New System.Drawing.Size(22, 22)
-        Me.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.btnMinimize.TabIndex = 10
-        Me.btnMinimize.TabStop = False
+        Me.txtCi.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCi.Location = New System.Drawing.Point(315, 730)
+        Me.txtCi.MaxLength = 30
+        Me.txtCi.Name = "txtCi"
+        Me.txtCi.Size = New System.Drawing.Size(11, 29)
+        Me.txtCi.TabIndex = 3
+        Me.txtCi.Visible = False
         '
         'FrmChats
         '
@@ -281,6 +292,7 @@ Partial Class FrmChats
         Me.Controls.Add(Me.txtChat)
         Me.Controls.Add(Me.txtMensaje)
         Me.Controls.Add(Me.MChat_diag)
+        Me.Controls.Add(Me.txtCi)
         Me.Controls.Add(Me.txtDiagnostico)
         Me.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -294,8 +306,8 @@ Partial Class FrmChats
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TopPanel.ResumeLayout(False)
         Me.TopPanel.PerformLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -316,4 +328,5 @@ Partial Class FrmChats
     Friend WithEvents btn_modificar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btn_fichaMed As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnMinimize As PictureBox
+    Friend WithEvents txtCi As TextBox
 End Class

@@ -9,11 +9,19 @@ Public Class FrmChats
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btn_modificar.Click
-
+        If MessageBox.Show("Esta seguro de Modificar el diagnostico por: " & txtDiagnostico.Text & "", "Advertencia",
+         MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
+            If FrmLogIn.medic.ModificarDiagnostico(txtCi.Text, txtDiagnostico.Text) Then
+                GetForm(Estado.Ok, "Se modifico correctamente")
+            End If
+        End If
     End Sub
 
     Private Sub btnVerFichaMedica_Click(sender As Object, e As EventArgs) Handles btn_fichaMed.Click
 
+        FrmLogIn.paci = New Logic.Paciente(txtCi.Text)
+        Dim frm As New FrmFichaMedicaPaciente
+        frm.Show()
     End Sub
 
     Private Sub btnSalirChat_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
@@ -56,7 +64,7 @@ Public Class FrmChats
         FrmLogIn.medic.FinalizarChat()
     End Sub
 
-    Private Sub FrmChats_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown, txtMensaje.KeyDown, txtDiagnostico.KeyDown, btn_fichaMed.KeyDown, btn_modificar.KeyDown, btn_enviar.KeyDown, btn_salir.KeyDown
+    Private Sub FrmChats_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown, txtMensaje.KeyDown, txtDiagnostico.KeyDown, btn_fichaMed.KeyDown, btn_modificar.KeyDown, btn_enviar.KeyDown, btn_salir.KeyDown, txtCi.KeyDown
         DesecharAltF4(e)
     End Sub
 

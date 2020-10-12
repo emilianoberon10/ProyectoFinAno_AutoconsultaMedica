@@ -25,7 +25,21 @@ Public Class DBDiagnostico
             End Using
         End Using
     End Function
-
+    Public Function UpdateDiagnostico(ci As String, enfermedades As String) As Boolean
+        Using connection = GetConnection()
+            connection.Open()
+            Using command = New MySqlCommand()
+                command.Connection = connection
+                command.CommandText = "SET @diagnosticoAnterior=(SELECT diagnostico FROM chat WHERE ciPac=@idP ORDER BY idChat DESC LIMIT 1);
+                                       UPDATE diagnostico SET nomE=@nomE WHERE idP=@idP AND fecha=CURDATE() AND nomE=@diagnosticoAnterior;"
+                command.Parameters.AddWithValue("@idP", ci)
+                command.Parameters.AddWithValue("@nomE", enfermedades)
+                command.CommandType = CommandType.Text
+                command.ExecuteNonQuery()
+                Return True
+            End Using
+        End Using
+    End Function
     Public Function VerDiagnostico(ci As String) As DataTable
         Return DevolverTabla("SELECT nomE Diagnostico,fecha FROM diagnostico WHERE idP='" & ci & "'")
     End Function

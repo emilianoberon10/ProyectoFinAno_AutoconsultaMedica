@@ -86,8 +86,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Personas\Paciente.vb" />
-    <Compile Include="Personas\Paciente\Persona.vb" />
+    <Compile Include="Personas\Paciente\Paciente.vb" />
+    <Compile Include="Personas\Persona.vb" />
     <Compile Include="Personas\Paciente\Selecciona.vb" />
     <Compile Include="Patologias\Sintoma.vb" />
   </ItemGroup>

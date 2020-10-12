@@ -9,7 +9,6 @@ Public Class Paciente
     Inherits Persona
     Property _mail As String
     Property _contraseña As String
-    Property _edad As Integer
     Property _diagnostico As String
     Private cons As New DBPaciente
     Private consD As New DBDiagnostico
@@ -58,13 +57,19 @@ Public Class Paciente
         cons.BorrarPaciente(Me._ci)
     End Function
 
-    Public Overrides Function Modificar() As Boolean
+    Public Overrides Function ModificarContraseña() As Boolean
         cons.ModificarContraseña(Me._ci, Me._contraseña)
     End Function
 
-    Public Overrides Function Listar() As Boolean
-        Return MyBase.Listar()
+    Public Overrides Function ObtenerNombreEdad() As DataTable
+        Return MyBase.ObtenerNombreEdad()
     End Function
+
+    Public Overrides Function ModificarP() As Boolean
+        Return MyBase.ModificarP()
+    End Function
+
+
 
 #End Region
 
@@ -138,7 +143,7 @@ Public Class Paciente
     Public Overridable Function GetFicha() As DataTable
     End Function
 
-    Public Overrides Function EncriptarContraseña() As String
+    Public Overrides Sub EncriptarContraseña()
         Dim sha256 As SHA256 = SHA256.Create()
         Dim bytes As Byte() = Encoding.UTF8.GetBytes(Me._contraseña)
         Dim hash As Byte() = sha256.ComputeHash(bytes)
@@ -148,8 +153,8 @@ Public Class Paciente
             stringBuilder.Append(hash(i).ToString("X2"))
         Next
 
-        Return stringBuilder.ToString()
-    End Function
+        Me._contraseña = stringBuilder.ToString()
+    End Sub
 
 #End Region
 

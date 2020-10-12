@@ -129,9 +129,9 @@ Public Class DBSintomas
         End Try
     End Function
 
-    Public Sub LimpiarSeleccion()
+    Public Sub LimpiarSeleccion(ci)
         Dim _consultaSQL As String
-        _consultaSQL = "TRUNCATE TABLE selec"
+        _consultaSQL = "DELETE FROM selec WHERE idPac='" & ci & "';"
         EjecutarConsulta(_consultaSQL)
     End Sub
 

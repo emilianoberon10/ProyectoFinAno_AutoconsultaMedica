@@ -118,3 +118,5 @@ C:\Users\Mateo\Source\Repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug
 C:\Users\Mateo\Source\Repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.pdb
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Español.resources
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Ingles.resources
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.FrmOpcionesAyuda.resources
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.FrmOpcionesUsuario.resources

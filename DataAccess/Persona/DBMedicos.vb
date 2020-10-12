@@ -341,6 +341,7 @@ Public Class DBMedicos : Inherits ConexionBD
                     While (reader.Read())
                         msj = reader.GetString(0)
                     End While
+                    reader.Dispose()
                 End If
 
             End Using

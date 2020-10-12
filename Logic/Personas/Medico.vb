@@ -38,7 +38,7 @@ Public Class Medico
 
 #Region "Metodos"
 
-#Region "ABM"
+#Region "ABML"
 
     Public Function Listar() As DataTable
         Return cons.ObtenerMedicos()

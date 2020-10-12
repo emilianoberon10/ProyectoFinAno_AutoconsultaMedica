@@ -4,7 +4,12 @@ Public MustInherit Class ConexionBD
 
     'declaro MustInherits para que no se pueda crear una instancia(objeto) de esta clase
     'cadena de conexion a la bd
-    Private connString As String = "server=localhost;database=medicaproyecto;Uid=root;Pwd =;port=3306;AllowUserVariables=True;"
+    Private connString As String = "server=localhost;
+                                    database=mateo_vargas;
+                                    Uid=root;
+                                    Pwd =;
+                                    port=3306;
+                                    AllowUserVariables=True;"
 
     Protected conn As New MySqlConnection(connString)
 

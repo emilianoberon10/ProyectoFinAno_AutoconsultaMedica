@@ -10,18 +10,18 @@ Imports Logic
         Dim actual As Boolean
 
         With paciente
-            ._ci = "53498903"
+            ._ci = "562353343"
             ._contraseña = "micontraseña"
-            ._domicilio = "Cno.Carrasco 2671"
-            ._edad = "19"
-            ._edad = "2001-02-10"
-            ._mail = "miemail@gmail.com"
-            ._pNom = "Emiliano"
+            ._domicilio = "Emilio Ranha 2351"
+            ._edad = 13
+            ._mail = "mat.vargas2002@gmail.com"
+            ._pNom = "Mateo"
             ._sNom = ""
-            ._pApe = "Beron"
-            ._sApe = "Martinel"
-            ._sexo = "Hombre"
-            ._tel_cel = "25220455"
+            ._pApe = "Vargas"
+            ._sApe = "Girino"
+            ._sexo = "Mujer"
+            ._tel_cel = "25072542"
+            .EncriptarContraseña()
         End With
 
         actual = paciente.Guardar

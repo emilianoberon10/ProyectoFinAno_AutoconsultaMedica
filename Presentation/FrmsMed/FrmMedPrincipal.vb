@@ -105,6 +105,11 @@ Public Class FrmMedPrincipal
         End If
     End Sub
 
+    Private Sub btnOpciones_Click(sender As Object, e As EventArgs) Handles btnOpciones.Click
+        Dim frm As New FrmOpciones
+        frm.Show()
+    End Sub
+
 #End Region
 
 End Class

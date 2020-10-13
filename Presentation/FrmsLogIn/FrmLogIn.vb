@@ -19,7 +19,7 @@ Public Class FrmLogIn
     ' ----------------------------------------
     Public tipoLogin As String
 
-#Region "Froms que se abren apartid del login"
+#Region "Froms que se abren apartir del login"
 
     'forms del login
     ReadOnly frmInfo As New FrmInfo

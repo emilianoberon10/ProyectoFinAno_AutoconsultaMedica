@@ -33,21 +33,21 @@ Partial Class FrmMedPrincipal
         Me.btn_chats = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_cerrarSesion = New Guna.UI2.WinForms.Guna2Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnChangeLanguage = New System.Windows.Forms.PictureBox()
         Me.fotoPerfil = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.btnOpciones = New System.Windows.Forms.PictureBox()
         Me.lbNombre = New System.Windows.Forms.Label()
         Me.panelChildMedico = New System.Windows.Forms.Panel()
         Me.ofdFoto = New System.Windows.Forms.OpenFileDialog()
-        Me.btnChangeLanguage = New System.Windows.Forms.PictureBox()
         Me.TopPanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelMenu.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.btnChangeLanguage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fotoPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnOpciones, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnChangeLanguage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TopPanel
@@ -80,7 +80,7 @@ Partial Class FrmMedPrincipal
         Me.app_titulo.ForeColor = System.Drawing.Color.Silver
         Me.app_titulo.Location = New System.Drawing.Point(39, 8)
         Me.app_titulo.Name = "app_titulo"
-        Me.app_titulo.Size = New System.Drawing.Size(353, 25)
+        Me.app_titulo.Size = New System.Drawing.Size(448, 32)
         Me.app_titulo.TabIndex = 3
         Me.app_titulo.Text = "SISTEMA DE AUTOCONSULTA MEDICA"
         '
@@ -215,6 +215,17 @@ Partial Class FrmMedPrincipal
         Me.Panel3.Size = New System.Drawing.Size(222, 184)
         Me.Panel3.TabIndex = 0
         '
+        'btnChangeLanguage
+        '
+        Me.btnChangeLanguage.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnChangeLanguage.Image = Global.Presentation.My.Resources.Resources.spain
+        Me.btnChangeLanguage.Location = New System.Drawing.Point(8, 6)
+        Me.btnChangeLanguage.Name = "btnChangeLanguage"
+        Me.btnChangeLanguage.Size = New System.Drawing.Size(25, 25)
+        Me.btnChangeLanguage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnChangeLanguage.TabIndex = 10
+        Me.btnChangeLanguage.TabStop = False
+        '
         'fotoPerfil
         '
         Me.fotoPerfil.Cursor = System.Windows.Forms.Cursors.Hand
@@ -246,7 +257,7 @@ Partial Class FrmMedPrincipal
         Me.lbNombre.ForeColor = System.Drawing.Color.Silver
         Me.lbNombre.Location = New System.Drawing.Point(75, 157)
         Me.lbNombre.Name = "lbNombre"
-        Me.lbNombre.Size = New System.Drawing.Size(74, 19)
+        Me.lbNombre.Size = New System.Drawing.Size(94, 23)
         Me.lbNombre.TabIndex = 2
         Me.lbNombre.Text = "NOMBRE"
         '
@@ -263,20 +274,9 @@ Partial Class FrmMedPrincipal
         '
         Me.ofdFoto.FileName = "OpenFileDialog1"
         '
-        'btnChangeLanguage
-        '
-        Me.btnChangeLanguage.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnChangeLanguage.Image = Global.Presentation.My.Resources.Resources.spain
-        Me.btnChangeLanguage.Location = New System.Drawing.Point(8, 6)
-        Me.btnChangeLanguage.Name = "btnChangeLanguage"
-        Me.btnChangeLanguage.Size = New System.Drawing.Size(25, 25)
-        Me.btnChangeLanguage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btnChangeLanguage.TabIndex = 10
-        Me.btnChangeLanguage.TabStop = False
-        '
         'FrmMedPrincipal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1024, 720)
         Me.Controls.Add(Me.panelChildMedico)
@@ -297,9 +297,9 @@ Partial Class FrmMedPrincipal
         Me.PanelMenu.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.btnChangeLanguage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fotoPerfil, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnOpciones, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnChangeLanguage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

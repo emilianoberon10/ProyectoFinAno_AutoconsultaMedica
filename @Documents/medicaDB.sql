@@ -180,47 +180,43 @@ CREATE TABLE solicita(
 
 
 -- Inserts -------------------------------------------------------------------------------
--- personaS: --
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)
-    VALUES('11111111',22344568,49,'Av.Libertad','Hombre','Marco','','Aurelio','De Partabas');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)
-    VALUES('22222222',22344567,28,'Av.Libertad','mujer','Romina','','Almiron','Rodriguez');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)
-    VALUES('33333333',12345678,19,'Av.Bolivia 2446','Hombre','Martin','Marulo','Rodriguez','De Biscasua');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)
-    VALUES('44444444',096714278,32,'Gral. Flores 2345','Mujer','Roberta','','Garcia','Domginguez');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)
-    VALUES('55555555',11223366,89,'Av.Libertad 5421','Mujer','Agustina','','Mirella','Gutierrez');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)
-    VALUES('66666666',94229964,18,'Ramallo 3194','Hombre','Mateo','Matias','Beron','Alegoa');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)
-    VALUES('77777777',88888888,105,'Av.Libertad','Mujer','Mirtha','','Legrand','Suarez');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)
-    VALUES('88888888',25072542,65,'Av.Italia 6544','Hombre','Roberto','','Diaz','Garcia');
--- ------------------------------------------ gerentes, medicos y pacientes --------------------------------------------------------------- --
--- gerentes: --
-INSERT INTO gerente(ciG, contrasena)
-    VALUES('11111111', sha2('contraseña1', 256));
-INSERT INTO gerente(ciG, contrasena)
-    VALUES('33333333', sha2('contraseña2', 256));
--- pacientes: --
-INSERT INTO paciente(ciP,contrasena,mail) 
-    VALUES('22222222',sha2('paciente1', 256),'elpacientenumero1@mail.com');
-INSERT INTO paciente(ciP,contrasena,mail) 
-    VALUES('44444444',sha2('paciente2', 256),'elpacientenumero2@mail.com');
-INSERT INTO paciente(ciP,contrasena,mail) 
-    VALUES('55555555',sha2('paciente3', 256),'elpacientenumero3@mail.com');
-INSERT INTO paciente(ciP,contrasena,mail) 
-    VALUES('88888888',sha2('paciente4', 256),'elpacientenumero4@mail.com');
+-- PERSONAS: --
+INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('11111111',22344568,49,'Av.Libertad','Hombre','Marco','','Aurelio','De Partabas');
+INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('22222222',22344567,28,'Av.Libertad','Mujer','Romina','','Almiron','Rodriguez');
+INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('33333333',12345678,19,'Av.Bolivia 2446','Hombre','Martin','Marulo','Rodriguez','De Biscasua');
+INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('44444444',096714278,32,'Gral. Flores 2345','Mujer','Roberta','','Garcia','Domginguez');
+INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('55555555',11223366,89,'Av.Libertad 5421','Mujer','Agustina','','Mirella','Gutierrez');
+INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('66666666',94229964,18,'Ramallo 3194','Hombre','Mateo','Matias','Beron','Alegoa');
+INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('77777777',88888888,105,'Av.Libertad','Mujer','Mirtha','','Legrand','Suarez');
+INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('88888888',25072542,65,'Av.Italia 6544','Hombre','Roberto','','Diaz','Garcia');
+INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)	VALUES('53393343',22344565,49,'Av.Libertad','Hombre','Marco','','Aurelio','De Partabas');
+INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)	VALUES('26314278',22344563,49,'Av.Libertad','mujer','Marcela','','Aurelia','De Ruedas');
+INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)	VALUES('52525252',22344233,49,'Av.Libertad','hombre','Ave','Maria','Roberta','Garcia');
+-- ------------------------------------------ Gerentes, Medicos y Pacientes --------------------------------------------------------------- --
+-- Gerentes: --
+INSERT INTO Gerente(ciG, contrasena) VALUES('11111111', sha2('contraseña1', 256));
+INSERT INTO Gerente(ciG, contrasena) VALUES('33333333', sha2('contraseña2', 256));
+-- Pacientes: --
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('22222222',sha2('paciente1', 256),'elpacientenumero1@mail.com');
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('44444444',sha2('paciente2', 256),'elpacientenumero2@mail.com');
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('55555555',sha2('paciente3', 256),'elpacientenumero3@mail.com');
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('88888888',sha2('paciente4', 256),'elpacientenumero4@mail.com');
 -- especialidad -- 
-insert into especialidad values (null,'medico General');
+insert into especialidad values (null,'Medico General');
 insert into especialidad values (null,'Pediatra');
 insert into especialidad values (null,'Nutricionista');
--- medicos: --
+insert into especialidad values (null,'Cardiologo');
+-- Medicos: --
 INSERT INTO medico values
 	('66666666',0123,1,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',sha2('medico1', 256));
 INSERT INTO medico values 
 	('77777777',1234,3,'','07:00 a 13:00','08:20 a 16:40','','13:00 a 19:40','','','Clinica Central',sha2('medico2', 256));
+INSERT INTO medico values
+	('53393343',0112,2,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',sha2('medico3', 256));
+INSERT INTO medico values
+	('26314278',0412,4,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',sha2('medico4', 256));
+INSERT INTO medico values
+	('52525252',0712,4,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',sha2('medico5', 256));
     
 -- riesgo --
 insert into riesgo values (1,'rojo');
@@ -293,11 +289,11 @@ INSERT INTO selec values (curdate(),curtime(),'tos',55555555);
 INSERT INTO selec values (curdate(),curtime()+10,'fiebre',55555555);
 -- -------------------------- Diagnostico -------------------------- -- 
 Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'22222222','covid',CURDATE());
-Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'22222222','dengue',CURDATE());
+Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'22222222','dengue',DATE_SUB(curdate(),INTERVAL '8' day));
 Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'44444444','covid',CURDATE());
 Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'55555555','gripe',CURDATE());
 Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'55555555','covid',CURDATE());
-Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'88888888','gripe',CURDATE());
+Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'88888888','dengue',DATE_SUB(curdate(),INTERVAL '7' day));
 -- Ficha medica --
 INSERT INTO fichaMedica(Fecha,procedencia,idDiag,id,cedP,Ocup,Medicacion,Motiv_Cons,antecedentesFamiliares) 
 values (CURDATE(),'Uruguay',15,null,44444444,'Ingeniero en Sistemas','Antialergico','Por malestar','Diabetes'),
@@ -312,6 +308,18 @@ values (CURDATE(),'Uruguay',15,null,44444444,'Ingeniero en Sistemas','Antialergi
 -- chat --
 insert into chat values (null,'22222222',66666666,CURDATE(),'covid','Finalizado');
 insert into chat values (null,'55555555',66666666,CURDATE(),'gripe','Finalizado');
+-- prueba para consultas
+insert into chat values (null,'55555555',26314278,DATE_SUB(curdate(),INTERVAL '1' year),'gripe','Finalizado');
+insert into chat values (null,'55555555',26314278,DATE_SUB(curdate(),INTERVAL '1' month),'gripe','Finalizado');
+insert into chat values (null,'55555555',26314278,DATE_SUB(curdate(),INTERVAL '1' month),'gripe','Finalizado');
+insert into chat values (null,'55555555',26314278,DATE_SUB(curdate(),INTERVAL '1' month),'gripe','Finalizado');
+
+insert into chat values (null,'55555555',52525252,DATE_SUB(curdate(),INTERVAL '2' year),'tos','Finalizado');
+insert into chat values (null,'55555555',52525252,DATE_SUB(curdate(),INTERVAL '5' day),'tos','Finalizado');
+
+insert into chat values (null,'22222222',53393343,DATE_SUB(curdate(),INTERVAL '3' year),'tos','Finalizado');
+insert into chat values (null,'22222222',53393343,DATE_SUB(curdate(),INTERVAL '1' month),'tos','Finalizado');
+insert into chat values (null,'22222222',53393343,DATE_SUB(curdate(),INTERVAL '1' month),'tos','Finalizado');
 
 ## ######################################################################################
 ## 										DASHBOARD									   ##
@@ -333,29 +341,29 @@ DELIMITER ;
 DELIMITER $$
 CREATE PROCEDURE `cantchatsMes`()
 BEGIN
-select 'Enero' as mes,count(idchat) as 'Cantidad de consultas' from chat where month(fecha)=1
+select 'Enero' as mes,count(idchat) as 'Cantidad de consultas' from chat where month(fecha)=1 and year(fecha)=year(curdate())
 UNION
-	select 'Febrero',count(idchat) from chat where month(fecha)=2
+	select 'Febrero',count(idchat) from chat where month(fecha)=2 and year(fecha)=year(curdate())
 UNION
-	select 'Marzo',count(idchat) from chat where month(fecha)=3
+	select 'Marzo',count(idchat) from chat where month(fecha)=3 and year(fecha)=year(curdate())
 UNION
-select 'Abril',count(idchat)  from chat where month(fecha)=4
+select 'Abril',count(idchat)  from chat where month(fecha)=4 and year(fecha)=year(curdate())
 UNION
-	select 'Mayo',count(idchat) from chat where month(fecha)=5
+	select 'Mayo',count(idchat) from chat where month(fecha)=5 and year(fecha)=year(curdate())
 UNION
-	select 'Junio',count(idchat) from chat where month(fecha)=6
+	select 'Junio',count(idchat) from chat where month(fecha)=6 and year(fecha)=year(curdate())
 UNION
-select 'Julio',count(idchat)from chat where month(fecha)=7
+select 'Julio',count(idchat)from chat where month(fecha)=7 and year(fecha)=year(curdate())
 UNION
-	select 'Agosto',count(idchat) from chat where month(fecha)=8
+	select 'Agosto',count(idchat) from chat where month(fecha)=8 and year(fecha)=year(curdate())
 UNION
-	select 'Septiembre',count(idchat) from chat where month(fecha)=9
+	select 'Septiembre',count(idchat) from chat where month(fecha)=9 and year(fecha)=year(curdate())
 UNION
-    select 'Octubre',count(idchat) from chat where month(fecha)=10
+    select 'Octubre',count(idchat) from chat where month(fecha)=10 and year(fecha)=year(curdate())
 UNION
-	select 'Noviembre',count(idchat) from chat where month(fecha)=11
+	select 'Noviembre',count(idchat) from chat where month(fecha)=11 and year(fecha)=year(curdate())
 UNION
-	select 'Diciembre',count(idchat) from chat where month(fecha)=12;
+	select 'Diciembre',count(idchat) from chat where month(fecha)=12 and year(fecha)=year(curdate());
 
 END$$
 DELIMITER ;

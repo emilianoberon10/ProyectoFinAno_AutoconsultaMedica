@@ -54,11 +54,11 @@ Public Class Paciente
     End Function
 
     Public Overrides Function Borrar() As Boolean
-        cons.BorrarPaciente(Me._ci)
+        Return cons.BorrarPaciente(Me._ci)
     End Function
 
     Public Overrides Function ModificarContraseña() As Boolean
-        cons.ModificarContraseña(Me._ci, Me._contraseña)
+        Return cons.ModificarContraseña(Me._ci, Me._contraseña)
     End Function
 
     Public Overrides Function ObtenerNombreEdad() As DataTable

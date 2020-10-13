@@ -168,6 +168,7 @@ Partial Class FrmFichaMedicaPaciente
         'txtMotivoConsulta
         '
         Me.txtMotivoConsulta.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtMotivoConsulta.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.txtMotivoConsulta.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMotivoConsulta.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtMotivoConsulta.Location = New System.Drawing.Point(3, 167)
@@ -291,6 +292,7 @@ Partial Class FrmFichaMedicaPaciente
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(10, 10)
         Me.DataGridView1.TabIndex = 38
+        Me.DataGridView1.UseWaitCursor = True
         Me.DataGridView1.Visible = False
         '
         'FrmFichaMedicaPaciente

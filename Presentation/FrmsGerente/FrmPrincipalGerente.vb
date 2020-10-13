@@ -50,7 +50,25 @@ Public Class FrmPrincipalGerente
         GuardarImagen(FrmLogIn.gere._ci, ofdFoto, fotoPerfil)
 
     End Sub
+    Private Sub btnChangeLanguage_Click(sender As Object, e As EventArgs) Handles btnChangeLanguage.Click
+        If Traductor.idioma Is "ES" Then
+            Traductor.idioma = "EN"
+            Traductor.traducirPanel(Me.PanelMenu)
+            Traductor.traducirPanel(Me.TopPanel)
+            btnChangeLanguage.Image = My.Resources.england
+        ElseIf Traductor.idioma Is "EN" Then
+            Traductor.idioma = "ES"
+            Traductor.traducirPanel(Me.PanelMenu)
+            Traductor.traducirPanel(Me.TopPanel)
+            btnChangeLanguage.Image = My.Resources.spain
 
+        End If
+    End Sub
+
+    Private Sub btnOpciones_Click(sender As Object, e As EventArgs) Handles btnOpciones.Click
+        Dim frm As New FrmOpciones
+        frm.Show()
+    End Sub
 #Region "Hover's"
 
     Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
@@ -95,28 +113,6 @@ Public Class FrmPrincipalGerente
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
-
-    Private Sub topPanel_Paint(sender As Object, e As PaintEventArgs) Handles TopPanel.Paint
-
-    End Sub
-
-    Private Sub btnChangeLanguage_Click(sender As Object, e As EventArgs) Handles btnChangeLanguage.Click
-        If Traductor.idioma Is "ES" Then
-            Traductor.idioma = "EN"
-            Traductor.traducirPanel(Me.PanelMenu)
-            Traductor.traducirPanel(Me.TopPanel)
-            btnChangeLanguage.Image = My.Resources.england
-        ElseIf Traductor.idioma Is "EN" Then
-            Traductor.idioma = "ES"
-            Traductor.traducirPanel(Me.PanelMenu)
-            Traductor.traducirPanel(Me.TopPanel)
-            btnChangeLanguage.Image = My.Resources.spain
-
-        End If
-    End Sub
-
-
-
 #End Region 'region de mover form
 
 End Class

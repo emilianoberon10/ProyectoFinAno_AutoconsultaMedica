@@ -39,6 +39,8 @@ Partial Class FrmHistorial
         '
         'DgvHistorial
         '
+        Me.DgvHistorial.AllowUserToAddRows = False
+        Me.DgvHistorial.AllowUserToDeleteRows = False
         Me.DgvHistorial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DgvHistorial.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DgvHistorial.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
@@ -68,6 +70,7 @@ Partial Class FrmHistorial
         Me.DgvHistorial.Location = New System.Drawing.Point(268, 218)
         Me.DgvHistorial.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DgvHistorial.Name = "DgvHistorial"
+        Me.DgvHistorial.ReadOnly = True
         Me.DgvHistorial.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))

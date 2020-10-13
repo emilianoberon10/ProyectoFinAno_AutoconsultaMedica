@@ -30,8 +30,8 @@ Public Class DBDiagnostico
             connection.Open()
             Using command = New MySqlCommand()
                 command.Connection = connection
-                command.CommandText = "SET @diagnosticoAnterior=(SELECT diagnostico FROM chat WHERE ciPac=@idP ORDER BY idChat DESC LIMIT 1);
-                                       UPDATE diagnostico SET nomE=@nomE WHERE idP=@idP AND fecha=CURDATE() AND nomE=@diagnosticoAnterior;"
+                command.CommandText = "SET @diagnosticoAnterior=(SELECT idDiag FROM diagnostico WHERE idPac=@idP ORDER BY idDiag DESC LIMIT 1);
+                                       UPDATE diagnostico SET nomE=@nomE WHERE idDiag=@diagnosticoAnterior;"
                 command.Parameters.AddWithValue("@idP", ci)
                 command.Parameters.AddWithValue("@nomE", enfermedades)
                 command.CommandType = CommandType.Text
@@ -49,7 +49,7 @@ Public Class DBDiagnostico
     End Function
 
     Public Function VerDiagnosticoEntreFecha(ci As String, fecha As String, fecha2 As String) As DataTable
-        Return DevolverTabla("SELECT nomE Diagnostico,fecha FROM diagnostico WHERE idP='" & ci & "' AND fecha >'" & fecha & "' AND fecha <'" & fecha2 & "'")
+        Return DevolverTabla("SELECT nomE Diagnostico,fecha FROM diagnostico WHERE idP='" & ci & "' AND fecha between '" & fecha & "' AND '" & fecha2 & "';")
     End Function
 
 End Class

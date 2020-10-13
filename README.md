@@ -14,7 +14,7 @@ Type | id | pass
 --- | --- | ---
 Paciente | 22222222 | paciente1
 Gerente | 11111111 | contraseña1
-Medico | 66666666 | medico1
+Medico | 0123 | medico1
 
 ---
 Made by:

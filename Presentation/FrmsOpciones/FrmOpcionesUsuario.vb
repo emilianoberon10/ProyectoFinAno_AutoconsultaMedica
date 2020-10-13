@@ -23,84 +23,104 @@
 
     Private Sub btn_guardar_Click(sender As Object, e As EventArgs) Handles btn_guardar.Click
         Dim result As Boolean = False
-        Select Case FrmLogIn.tipoLogin
-            Case "Paciente"
-                With FrmLogIn.paci
-                    ._pNom = txtPnom.Text
-                    ._pApe = txtPape.Text
-                    ._sNom = txtSnom.Text
-                    ._sApe = txtSape.Text
-                    ._edad = Integer.Parse(txtEdad.Text)
-                    result = .ModificarP()
 
-                End With
-            Case "Gerente"
-                With FrmLogIn.gere
-                    ._pNom = txtPnom.Text
-                    ._pApe = txtPape.Text
-                    ._sNom = txtSnom.Text
-                    ._sApe = txtSape.Text
-                    ._edad = Integer.Parse(txtEdad.Text)
+        If (txtEdad.Text IsNot "" And txtPnom.Text IsNot "" And txtPape.Text IsNot "" And txtSape.Text IsNot "") Then
 
-                    result = .ModificarP()
+            Select Case FrmLogIn.tipoLogin
 
-                End With
-            Case "Medico"
-                With FrmLogIn.medic
-                    ._pNom = txtPnom.Text
-                    ._pApe = txtPape.Text
-                    ._sNom = txtSnom.Text
-                    ._sApe = txtSape.Text
-                    ._edad = Integer.Parse(txtEdad.Text)
-                    result = .ModificarP()
-                End With
-        End Select
+                Case "Paciente"
+                    With FrmLogIn.paci
+                        ._pNom = txtPnom.Text
+                        ._pApe = txtPape.Text
+                        ._sNom = txtSnom.Text
+                        ._sApe = txtSape.Text
+                        ._edad = Integer.Parse(txtEdad.Text)
+                        result = .ModificarP()
 
-        If result = True Then
-            txtPnom.Text = ""
-            txtPape.Text = ""
-            txtSnom.Text = ""
-            txtSape.Text = ""
-            txtEdad.Text = ""
-            GetForm(Estado.Ok, "Se modifico correctamente")
-            MsgBox("Si modifico su nombre o foto de perfil, por favor reinicie sesion")
+                    End With
+                Case "Gerente"
+                    With FrmLogIn.gere
+                        ._pNom = txtPnom.Text
+                        ._pApe = txtPape.Text
+                        ._sNom = txtSnom.Text
+                        ._sApe = txtSape.Text
+                        ._edad = Integer.Parse(txtEdad.Text)
+
+                        result = .ModificarP()
+
+                    End With
+                Case "Medico"
+                    With FrmLogIn.medic
+                        ._pNom = txtPnom.Text
+                        ._pApe = txtPape.Text
+                        ._sNom = txtSnom.Text
+                        ._sApe = txtSape.Text
+                        ._edad = Integer.Parse(txtEdad.Text)
+                        result = .ModificarP()
+                    End With
+            End Select
+
+            If result = True Then
+                txtPnom.Text = ""
+                txtPape.Text = ""
+                txtSnom.Text = ""
+                txtSape.Text = ""
+                txtEdad.Text = ""
+                GetForm(Estado.Ok, "Se modifico correctamente")
+                MsgBox("Si modifico su nombre o foto de perfil, por favor reinicie sesion")
+            Else
+                GetForm(Estado.Ok, "Se modifico correctamente")
+                ErrorProvider1.SetError(lbActuDatos, "Se modifico correctamente")
+            End If
+
         Else
-            GetForm(Estado.Ok, "Se modifico correctamente")
-            ErrorProvider1.SetError(lbActuDatos, "Se modifico correctamente")
+
+            GetForm(Estado.Error, "Todos los campos son obligatorios!")
+            ErrorProvider1.SetError(lbActuDatos, "Todos los campos son obligatorios!")
+
         End If
+
     End Sub
 
     Private Sub btn_cambiar_Click(sender As Object, e As EventArgs) Handles btn_modificar.Click
         If txtContraseña1.Text IsNot "" OrElse txtContraseña2.Text IsNot "" Then
-            If txtContraseña1.Text = txtContraseña2.Text Then
+
+            If txtContraseña1.TextLength >= 8 Then
+
+                If txtContraseña1.Text = txtContraseña2.Text Then
 
 
-                If MessageBox.Show("Seguro que desa cambiar su contraseña?", "Advertencia",
-                   MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
-                    Select Case FrmLogIn.tipoLogin
-                        Case "Paciente"
-                            FrmLogIn.paci._contraseña = txtContraseña2.Text
-                            FrmLogIn.paci.EncriptarContraseña()
-                            FrmLogIn.paci.ModificarContraseña()
-                        Case "Gerente"
-                            FrmLogIn.gere._contraseña = txtContraseña2.Text
-                            FrmLogIn.gere.EncriptarContraseña()
-                            FrmLogIn.gere.ModificarContraseña()
-                        Case "Medico"
-                            FrmLogIn.medic._contraseña = txtContraseña2.Text
-                            FrmLogIn.medic.EncriptarContraseña()
-                            FrmLogIn.medic.ModificarContraseña()
-                    End Select
-                    txtContraseña1.Text = ""
-                    txtContraseña2.Text = ""
+                    If MessageBox.Show("Seguro que desa cambiar su contraseña?", "Advertencia",
+                       MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+                        Select Case FrmLogIn.tipoLogin
+                            Case "Paciente"
+                                FrmLogIn.paci._contraseña = txtContraseña2.Text
+                                FrmLogIn.paci.EncriptarContraseña()
+                                FrmLogIn.paci.ModificarContraseña()
+                            Case "Gerente"
+                                FrmLogIn.gere._contraseña = txtContraseña2.Text
+                                FrmLogIn.gere.EncriptarContraseña()
+                                FrmLogIn.gere.ModificarContraseña()
+                            Case "Medico"
+                                FrmLogIn.medic._contraseña = txtContraseña2.Text
+                                FrmLogIn.medic.EncriptarContraseña()
+                                FrmLogIn.medic.ModificarContraseña()
+                        End Select
+                        txtContraseña1.Text = ""
+                        txtContraseña2.Text = ""
+                    Else
+                        txtContraseña1.Text = ""
+                        txtContraseña2.Text = ""
+                    End If
                 Else
-                    txtContraseña1.Text = ""
-                    txtContraseña2.Text = ""
+                    GetForm(Estado.Error, "Las contraseñas no coinciden")
+                    ErrorProvider1.SetError(lbCambiarContraseña, "Contraseña muy corta!")
                 End If
             Else
-                GetForm(Estado.Error, "Las contraseñas no coinciden")
-                ErrorProvider1.SetError(lbCambiarContraseña, "Las contraseñas no coinciden")
+                GetForm(Estado.Error, "Contraseña muy corta!")
+                ErrorProvider1.SetError(lbCambiarContraseña, "Alguno de los campos de contraseña esta vacio")
             End If
+
         Else
             GetForm(Estado.Error, "Alguno de los campos de contraseña esta vacio")
             ErrorProvider1.SetError(lbCambiarContraseña, "Alguno de los campos de contraseña esta vacio")

@@ -1,12 +1,13 @@
 ﻿Imports System.Runtime.InteropServices
-
+Imports Logic
 Public Class FrmChats
 
     Private Sub FrmChats_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Traductor.traducirForm(Me)
         Traductor.traducirPanel(TopPanel)
         Me.KeyPreview = True
-        Guna2DataGridView1.DataSource = FrmLogIn.medic.VerChatsAntiguos
+        dgvChats.DataSource = FrmLogIn.medic.VerChatsAntiguos()
+        cargarChats()
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btn_modificar.Click
@@ -96,5 +97,117 @@ Public Class FrmChats
     End Sub
 
 #End Region 'region de mover form
+#Region "ChatsAntiguos"
+    Private _CurrentContactPanelName As String = Nothing
 
+    'Used to give unique control names such as label1, label2 etc
+    Private _ContactPanelsAddedCount As Integer = 0
+
+    'Add contact panel to flow layout panel
+    Public Sub CreateContactPanel()
+
+        Dim contactPanel As Panel
+        contactPanel = New Panel()
+
+        'Set panel properties
+        With contactPanel
+            .BackColor = Color.FromArgb(37, 45, 76)
+            .Size = New Size(190, 60)
+            .Name = "pnlContact" + (_ContactPanelsAddedCount + 1).ToString
+        End With
+
+        'Add panel to flow layout panel
+        flpMain.Controls.Add(contactPanel)
+
+        'Update panel variables
+        _CurrentContactPanelName = contactPanel.Name
+        _ContactPanelsAddedCount += 1
+
+    End Sub
+
+    Public Sub createContactPictureBox(ByVal panelName As String, ByVal imagePath As Image)
+        Dim contactPicture As New Guna.UI2.WinForms.Guna2CirclePictureBox
+        With contactPicture
+            .SizeMode = PictureBoxSizeMode.Zoom
+            .Size = New Size(50, 50)
+            .Location = New Point(10, 5)
+            .Name = "picContactImage" + (_ContactPanelsAddedCount).ToString
+            .Image = imagePath
+        End With
+
+        For Each control As Control In flpMain.Controls
+            If control.Name = panelName Then
+                control.Controls.Add(contactPicture)
+            End If
+        Next
+
+    End Sub
+
+    Public Sub createNameLabel(ByVal panelName As String, ByVal textshow As String)
+        Dim label As New Label
+        With label
+            .AutoSize = True
+            .Location = New Point(60, 20)
+            .Name = "lbContactName" + _ContactPanelsAddedCount.ToString
+            .Font = New Font("Segoe UI", 10, FontStyle.Bold)
+            .ForeColor = Color.WhiteSmoke
+            .Text = textshow
+        End With
+
+        For Each control As Control In flpMain.Controls
+            If control.Name = panelName Then
+                control.Controls.Add(label)
+            End If
+        Next
+    End Sub
+    Public Sub createEstadoLabel(ByVal panelName As String, ByVal textshow As String)
+        Dim label As New Label
+        With label
+            .AutoSize = True
+            .Location = New Point(60, 40)
+            .Name = "lbContactName" + _ContactPanelsAddedCount.ToString
+            .Font = New Font("Segoe UI", 8, FontStyle.Regular)
+            .ForeColor = Color.Gainsboro
+            .Text = textshow
+        End With
+
+        For Each control As Control In flpMain.Controls
+            If control.Name = panelName Then
+                control.Controls.Add(label)
+            End If
+        Next
+    End Sub
+    Public Sub createFechaLabel(ByVal panelName As String, ByVal textshow As String)
+        Dim label As New Label
+        With label
+            .AutoSize = True
+            .Location = New Point(120, 40)
+            .Name = "lbContactName" + _ContactPanelsAddedCount.ToString
+            .Font = New Font("Segoe UI", 8, FontStyle.Regular)
+            .ForeColor = Color.Gainsboro
+            .Text = textshow
+        End With
+
+        For Each control As Control In flpMain.Controls
+            If control.Name = panelName Then
+                control.Controls.Add(label)
+            End If
+        Next
+    End Sub
+    Private Sub cargarChats()
+        Dim paciente As New Paciente
+
+        For fila As Integer = 0 To dgvChats.Rows.Count - 2
+            paciente._ci = dgvChats.Item(0, fila).Value()
+            paciente._pNom = dgvChats.Item(1, fila).Value()
+            '_ContactPanelsAddedCount = _ContactPanelsAddedCount + 1
+            CreateContactPanel()
+            createContactPictureBox(_CurrentContactPanelName, ObtenerImagen(paciente._ci))
+            createNameLabel(_CurrentContactPanelName, paciente._pNom)
+            createEstadoLabel(_CurrentContactPanelName, dgvChats.Item(2, fila).Value())
+            createFechaLabel(_CurrentContactPanelName, dgvChats.Item(3, fila).Value())
+        Next
+    End Sub
+
+#End Region
 End Class

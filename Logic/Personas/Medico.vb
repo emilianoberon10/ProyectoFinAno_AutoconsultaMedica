@@ -182,7 +182,14 @@ Public Class Medico
         Return c.UpdateDiagnostico(ciPaciente, diag)
     End Function
     Public Function VerChatsAntiguos() As DataTable
-        Return cons.VerChatsAntiguos(Me._ci)
+        Dim result
+        Try
+            result = cons.VerChatsAntiguos(Me._ci)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+
+        Return result
     End Function
 #End Region
 

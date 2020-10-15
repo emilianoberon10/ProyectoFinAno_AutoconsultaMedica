@@ -6,6 +6,7 @@ Public Class FrmChats
         Traductor.traducirForm(Me)
         Traductor.traducirPanel(TopPanel)
         Me.KeyPreview = True
+        Guna2DataGridView1.DataSource = FrmLogIn.medic.VerChatsAntiguos
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btn_modificar.Click

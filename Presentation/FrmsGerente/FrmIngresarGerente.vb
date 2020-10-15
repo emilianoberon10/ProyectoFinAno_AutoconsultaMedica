@@ -100,7 +100,6 @@ Public Class FrmIngresarGerente
             Return False
         End If
     End Function
-#Region "Estilos"
 
 #Region "Activar sintomas"
 
@@ -169,8 +168,14 @@ Public Class FrmIngresarGerente
         End If
     End Sub
 
-#End Region
 
 #End Region
+    Private Sub txtDescripcion_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombreSintoma.KeyPress, txtNombreEnfermedad.KeyPress, txtDescripcion.KeyPress
+        DesecharCaracteresEspeciales(e)
+        txtNombreEnfermedad.MaxLength = 30
+        txtNombreSintoma.MaxLength = 30
+        txtDescripcion.MaxLength = 255
+    End Sub
+
 
 End Class

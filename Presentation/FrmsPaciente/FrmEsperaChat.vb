@@ -42,4 +42,12 @@
         End If
     End Sub
 
+    Private Sub btn_cancelar_Click(sender As Object, e As EventArgs) Handles btn_cancelar.Click
+        If MessageBox.Show("Seguro que desa salir?", "Advertencia",
+         MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            If FrmLogIn.paci.CancelarSolicitud() Then
+                MessageBox.Show("Cancelado con exito", "Solicitud Cancelada", MessageBoxButtons.OK, MessageBoxIcon.None)
+            End If
+        End If
+    End Sub
 End Class

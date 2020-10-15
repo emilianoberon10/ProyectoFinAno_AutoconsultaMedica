@@ -44,13 +44,42 @@ Public Class Medico
         Return cons.ObtenerMedicos()
     End Function
 
-    Public Overrides Function ObtenerNombreEdad() As DataTable
-        Return MyBase.ObtenerNombreEdad()
+    Public Overrides Function ListarPersona() As DataTable
+        Return MyBase.ListarPersona()
     End Function
 
     Public Overloads Function Guardar() As Boolean
-        Return cons.SetMedico(Me._ci, Me._especialidad, Me._numMed, Me._lugarTrabajo, Me._contraseña,
-                   Me._tel_cel, Me._domicilio, Me._sexo, Me._pNom, Me._sNom, Me._pApe, Me._sApe, Me._edad)
+        Dim estado As Boolean
+        With Me
+            If ._ci.Length < 8 OrElse ._ci.Length > 8 Then
+                MsgBox("La cedula debe contener 8 caracteres")
+            Else
+                If ._pNom.Length > 30 OrElse ._sNom.Length > 30 OrElse ._pApe.Length > 30 OrElse ._sApe.Length > 30 Then
+                    MsgBox("Algun campo de nombre supera los 30 caracteres")
+                Else
+                    If ._tel_cel.ToString.Length > 9 OrElse ._tel_cel.ToString.Length < 8 Then
+                        MsgBox("El telefono debe contener entre 8 y 9 digitos")
+                    Else
+                        If ._domicilio.Length > 255 Then
+                            MsgBox("el domicilio no puede contener mas de 255 caracters")
+
+                        Else
+                            If ._lugarTrabajo.Length > 30 Then
+                                Try
+                                    estado = cons.SetMedico(Me._ci, Me._especialidad, Me._numMed, Me._lugarTrabajo, Me._contraseña,
+                                                                Me._tel_cel, Me._domicilio, Me._sexo, Me._pNom, Me._sNom, Me._pApe, Me._sApe, Me._edad)
+
+                                Catch ex As Exception
+                                    Throw New SystemException(ex.Message)
+                                End Try
+
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End With
+        Return estado
     End Function
 
     Public Function SetHorario(dia As String)
@@ -58,12 +87,40 @@ Public Class Medico
     End Function
 
     Public Overloads Function Modificar() As Boolean
-        Return cons.ModifMedico(Me._ci, Me._especialidad, Me._lugarTrabajo,
-                   Me._tel_cel, Me._domicilio, Me._sexo, Me._pNom, Me._sNom, Me._pApe, Me._sApe, Me._edad)
+        Dim estado As Boolean
+        With Me
+            If ._ci.Length < 8 OrElse ._ci.Length > 8 Then
+                MsgBox("La cedula debe contener 8 caracteres")
+            Else
+                If ._pNom.Length > 30 OrElse ._sNom.Length > 30 OrElse ._pApe.Length > 30 OrElse ._sApe.Length > 30 Then
+                    MsgBox("Algun campo de nombre supera los 30 caracteres")
+                Else
+                    If ._tel_cel.ToString.Length > 9 OrElse ._tel_cel.ToString.Length < 8 Then
+                        MsgBox("El telefono debe contener entre 8 y 9 digitos")
+                    Else
+                        If ._domicilio.Length > 255 OrElse ._lugarTrabajo.Length > 255 Then
+                            MsgBox("el domicilio no puede contener mas de 255 caracters")
+
+                        Else
+                            If ._lugarTrabajo.Length > 30 Then
+                                Try
+                                    cons.ModifMedico(._ci, ._especialidad, ._lugarTrabajo,
+                                ._tel_cel, ._domicilio, ._sexo, ._pNom, ._sNom, ._pApe, ._sApe, ._edad)
+
+                                Catch ex As Exception
+                                    Throw New SystemException(ex.Message)
+                                End Try
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End With
+        Return estado
     End Function
 
-    Public Overloads Function Borrar(ci As String) As Boolean
-        Return cons.BorarMedico(ci)
+    Public Overloads Function Borrar() As Boolean
+        Return cons.BorarMedico(Me._ci)
     End Function
 
     Public Function comboEspec() As DataSet
@@ -120,9 +177,12 @@ Public Class Medico
         Return cons.ComprobarMsjMed(Me._ci)
     End Function
 
-    Public Function ModificarDiagnostico(ci, diag) As Boolean
+    Public Function ModificarDiagnostico(ciPaciente, diag) As Boolean
         Dim c As New DBDiagnostico
-        c.UpdateDiagnostico(ci, diag)
+        Return c.UpdateDiagnostico(ciPaciente, diag)
+    End Function
+    Public Function VerChatsAntiguos() As DataTable
+        Return cons.VerChatsAntiguos(Me._ci)
     End Function
 #End Region
 

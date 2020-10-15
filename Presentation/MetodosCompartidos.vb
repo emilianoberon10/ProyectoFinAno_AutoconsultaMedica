@@ -167,7 +167,7 @@ Module MetodosCompartidos
     End Function
 
     Public Sub DesecharCaracteresEspeciales(e As KeyPressEventArgs)
-        Dim caracteres() As Char = {"%"c, "&"c, "$"c, "#"c, "/"c, "-"c, "_"c}
+        Dim caracteres() As Char = {"%"c, "&"c, "$"c, "#"c, "/"c, "-"c, "_"c, ","c}
 
         ' Carácter presionado
         '

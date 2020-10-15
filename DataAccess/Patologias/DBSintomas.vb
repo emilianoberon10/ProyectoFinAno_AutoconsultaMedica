@@ -113,10 +113,13 @@ Public Class DBSintomas
                     Dim reader = _command.ExecuteReader()
                     If reader.HasRows Then
                         reader.Dispose()
-                        _consultaSQL = "DELETE FROM define WHERE nomSint=@nombre;"
-                        _consultaSQL &= "DELETE FROM sintoma WHERE nombre=@nombre;"
-                        _command.CommandText = _consultaSQL
+                        _command.CommandText = "DELETE FROM selec WHERE nomSint=@nombre;"
                         _command.ExecuteNonQuery()
+                        _command.CommandText = "DELETE FROM define WHERE nomSint=@nombre;"
+                        _command.ExecuteNonQuery()
+                        _command.CommandText = "DELETE FROM sintoma WHERE nombre=@nombre;"
+                        _command.ExecuteNonQuery()
+
                         Return True
                     Else
                         Return False

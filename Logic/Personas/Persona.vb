@@ -57,11 +57,29 @@ Public MustInherit Class Persona
     End Function
     Public Overridable Function ModificarP() As Boolean
         Dim c As New DBPersona
+        Dim estado As Boolean
         With Me
-            Return c.UpdatePersona(._ci, ._pNom, ._sNom, ._pApe, ._sApe, ._edad)
+            If ._ci.Length < 8 OrElse ._ci.Length > 8 Then
+                MsgBox("La cedula debe contener 8 caracteres")
+            Else
+                If ._pNom.Length > 30 OrElse ._sNom.Length > 30 OrElse ._pApe.Length > 30 OrElse ._sApe.Length > 30 Then
+                    MsgBox("Algun campo de nombre supera los 30 caracteres")
+                Else
+                    If ._tel_cel.ToString.Length > 9 OrElse ._tel_cel.ToString.Length < 8 Then
+                        MsgBox("El telefono debe contener entre 8 y 9 digitos")
+                    Else
+                        Try
+                            estado = c.UpdatePersona(._ci, ._pNom, ._sNom, ._pApe, ._sApe, ._edad, ._tel_cel, ._domicilio)
+                        Catch ex As Exception
+                            Throw New SystemException(ex.Message)
+                        End Try
+                    End If
+                End If
+            End If
         End With
+        Return estado
     End Function
-    Public Overridable Function ObtenerNombreEdad() As DataTable
+    Public Overridable Function ListarPersona() As DataTable
         Dim c As New DBPersona
         Return c.GetPersonas(Me._ci)
     End Function

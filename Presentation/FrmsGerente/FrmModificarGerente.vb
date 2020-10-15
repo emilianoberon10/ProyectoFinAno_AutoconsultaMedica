@@ -22,11 +22,11 @@ Public Class FrmModificarGerente
     Private Sub cbFiltro_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbFiltro.SelectedIndexChanged
         Select Case cbFiltro.Text
             Case "Sintomas"
-                PanelModSintoma.Visible = True
-                PanelModifMedico.Visible = False
-                PanelModEnfermedad.Visible = False
-                DgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
-                txtNombreSintoma.Focus()
+                'PanelModSintoma.Visible = True
+                'PanelModifMedico.Visible = False
+                'PanelModEnfermedad.Visible = False
+                'DgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
+                'txtNombreSintoma.Focus()
             Case "Medicos"
                 PanelModifMedico.Visible = True
                 PanelModSintoma.Visible = False
@@ -53,7 +53,8 @@ Public Class FrmModificarGerente
         Try
             Select Case cbFiltro.Text
                 Case "Sintomas"
-                    txtNombreSintoma.Text = DgvDatos.Rows(FilaActual).Cells(columna).Value
+                    MsgBox("Esta funcion esta deshabilitada")
+                    'txtNombreSintoma.Text = DgvDatos.Rows(FilaActual).Cells(columna).Value
                 Case "Medicos"
                     'Cedula, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido,edad
                     'lugarTrabajo, Especialidad, Tel_cel, Domicilio, sexo, Lun, Mar, Mie, Jue, Vie, Sab, Dom
@@ -79,6 +80,14 @@ Public Class FrmModificarGerente
                     txtHoraEntradaSabado.Text = DgvDatos.Item(16, FilaActual).Value()
                     txtHoraEntradaDomingo.Text = DgvDatos.Item(17, FilaActual).Value()
 
+                    If txtHoraEntradaLunes.Text IsNot "" Then chb1.Checked = True Else
+                    If txtHoraEntradaMartes.Text IsNot "" Then chb1.Checked = True Else
+                    If txtHoraEntradaMiercoles.Text IsNot "" Then chb1.Checked = True
+                    If txtHoraEntradaJueves.Text IsNot "" Then chb1.Checked = True
+                    If txtHoraEntradaViernes.Text IsNot "" Then chb1.Checked = True
+                    If txtHoraEntradaSabado.Text IsNot "" Then chb1.Checked = True
+                    If txtHoraEntradaDomingo.Text IsNot "" Then chb1.Checked = True
+
                 Case "Enfermedades"
                     txtNombreEnfermedad.Text = DgvDatos.Item(1, FilaActual).Value()
                     cbRiesgo.Text = DgvDatos.Item(2, FilaActual).Value()
@@ -94,9 +103,9 @@ Public Class FrmModificarGerente
                     cbSintoma8.Text = DgvDatos.Item(12, FilaActual).Value()
             End Select
         Catch ex As Exception
-
+            GetForm(Estado.Error, ex.Message)
+            ErrorProvider1.SetError(modificar, ex.Message)
         End Try
-
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btn_modificar.Click
@@ -231,7 +240,14 @@ Public Class FrmModificarGerente
         txtHoraEntradaDomingo.Enabled = True
     End Sub
 
-    Private Sub txtHoraEntradaLunes_KeyPress(sender As Object, e As KeyPressEventArgs)
+#End Region
+    Private Sub txtCedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCedula.KeyPress, txtTelefono.KeyPress
+        e.Handled = Not Char.IsDigit(e.KeyChar)
+        If Asc(e.KeyChar) = 8 Then
+            e.Handled = Char.IsDigit(e.KeyChar)
+        End If
+    End Sub
+    Private Sub txtHoraEntradaLunes_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtHoraEntradaViernes.KeyPress, txtHoraEntradaSabado.KeyPress, txtHoraEntradaMiercoles.KeyPress, txtHoraEntradaMartes.KeyPress, txtHoraEntradaLunes.KeyPress, txtHoraEntradaJueves.KeyPress, txtHoraEntradaDomingo.KeyPress
         e.Handled = Not (Char.IsDigit(e.KeyChar) Or e.KeyChar = "a" Or e.KeyChar = ":")
         If e.KeyChar = ":" And sender.Text.IndexOf(":") > -2 OrElse e.KeyChar = "a" And sender.Text.IndexOf("a") > -1 Then
 
@@ -244,6 +260,20 @@ Public Class FrmModificarGerente
         End If
     End Sub
 
-#End Region
+    Private Sub Textos_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelefono.KeyPress, txtSnom.KeyPress, txtSape.KeyPress, txtPNom.KeyPress, txtPape.KeyPress, txtLugarTrabajo.KeyPress, txtEdad.KeyPress, txtDomicilio.KeyPress, txtCedula.KeyPress, txtDescripcion.KeyPress, txtNombreEnfermedad.KeyPress
+
+        DesecharCaracteresEspeciales(e)
+        txtCedula.MaxLength = 8
+        txtEdad.MaxLength = 3
+        txtTelefono.MaxLength = 9
+        txtPNom.MaxLength = 30
+        txtPape.MaxLength = 30
+        txtSnom.MaxLength = 30
+        txtSape.MaxLength = 30
+        txtNombreEnfermedad.MaxLength = 30
+        txtLugarTrabajo.MaxLength = 30
+        txtDescripcion.MaxLength = 255
+        txtDomicilio.MaxLength = 255
+    End Sub
 
 End Class

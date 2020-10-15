@@ -80,7 +80,7 @@ Partial Class FrmMedPrincipal
         Me.app_titulo.ForeColor = System.Drawing.Color.Silver
         Me.app_titulo.Location = New System.Drawing.Point(39, 8)
         Me.app_titulo.Name = "app_titulo"
-        Me.app_titulo.Size = New System.Drawing.Size(448, 32)
+        Me.app_titulo.Size = New System.Drawing.Size(353, 25)
         Me.app_titulo.TabIndex = 3
         Me.app_titulo.Text = "SISTEMA DE AUTOCONSULTA MEDICA"
         '
@@ -230,7 +230,7 @@ Partial Class FrmMedPrincipal
         '
         Me.fotoPerfil.Cursor = System.Windows.Forms.Cursors.Hand
         Me.fotoPerfil.Image = Global.Presentation.My.Resources.Resources.profileEmpty
-        Me.fotoPerfil.Location = New System.Drawing.Point(47, 24)
+        Me.fotoPerfil.Location = New System.Drawing.Point(47, 16)
         Me.fotoPerfil.Name = "fotoPerfil"
         Me.fotoPerfil.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.fotoPerfil.ShadowDecoration.Parent = Me.fotoPerfil
@@ -252,14 +252,14 @@ Partial Class FrmMedPrincipal
         '
         'lbNombre
         '
-        Me.lbNombre.AutoSize = True
         Me.lbNombre.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbNombre.ForeColor = System.Drawing.Color.Silver
-        Me.lbNombre.Location = New System.Drawing.Point(75, 157)
+        Me.lbNombre.Location = New System.Drawing.Point(0, 157)
         Me.lbNombre.Name = "lbNombre"
-        Me.lbNombre.Size = New System.Drawing.Size(94, 23)
+        Me.lbNombre.Size = New System.Drawing.Size(222, 19)
         Me.lbNombre.TabIndex = 2
         Me.lbNombre.Text = "NOMBRE"
+        Me.lbNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'panelChildMedico
         '
@@ -276,7 +276,7 @@ Partial Class FrmMedPrincipal
         '
         'FrmMedPrincipal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1024, 720)
         Me.Controls.Add(Me.panelChildMedico)
@@ -296,7 +296,6 @@ Partial Class FrmMedPrincipal
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelMenu.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         CType(Me.btnChangeLanguage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fotoPerfil, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnOpciones, System.ComponentModel.ISupportInitialize).EndInit()

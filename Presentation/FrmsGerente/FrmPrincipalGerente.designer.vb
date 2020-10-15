@@ -234,7 +234,7 @@ Partial Class FrmPrincipalGerente
         '
         Me.fotoPerfil.Cursor = System.Windows.Forms.Cursors.Hand
         Me.fotoPerfil.Image = Global.Presentation.My.Resources.Resources.profileEmpty
-        Me.fotoPerfil.Location = New System.Drawing.Point(46, 21)
+        Me.fotoPerfil.Location = New System.Drawing.Point(46, 13)
         Me.fotoPerfil.Name = "fotoPerfil"
         Me.fotoPerfil.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.fotoPerfil.ShadowDecoration.Parent = Me.fotoPerfil
@@ -256,13 +256,13 @@ Partial Class FrmPrincipalGerente
         '
         'lbNombre
         '
-        Me.lbNombre.AutoSize = True
         Me.lbNombre.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbNombre.Location = New System.Drawing.Point(74, 154)
+        Me.lbNombre.Location = New System.Drawing.Point(0, 154)
         Me.lbNombre.Name = "lbNombre"
-        Me.lbNombre.Size = New System.Drawing.Size(94, 23)
+        Me.lbNombre.Size = New System.Drawing.Size(222, 19)
         Me.lbNombre.TabIndex = 2
         Me.lbNombre.Text = "NOMBRE"
+        Me.lbNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btn_patologia
         '
@@ -335,7 +335,7 @@ Partial Class FrmPrincipalGerente
         Me.app_titulo.ForeColor = System.Drawing.Color.Silver
         Me.app_titulo.Location = New System.Drawing.Point(42, 8)
         Me.app_titulo.Name = "app_titulo"
-        Me.app_titulo.Size = New System.Drawing.Size(448, 32)
+        Me.app_titulo.Size = New System.Drawing.Size(353, 25)
         Me.app_titulo.TabIndex = 8
         Me.app_titulo.Text = "SISTEMA DE AUTOCONSULTA MEDICA"
         '
@@ -367,7 +367,7 @@ Partial Class FrmPrincipalGerente
         '
         'FrmPrincipalGerente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(997, 720)
@@ -384,7 +384,6 @@ Partial Class FrmPrincipalGerente
         Me.Text = " "
         Me.PanelMenu.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         CType(Me.btnChangeLanguage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fotoPerfil, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnOpciones, System.ComponentModel.ISupportInitialize).EndInit()

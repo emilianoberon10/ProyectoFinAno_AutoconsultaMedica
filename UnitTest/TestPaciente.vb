@@ -10,12 +10,12 @@ Imports Logic
         Dim actual As Boolean
 
         With paciente
-            ._ci = "562353343"
+            ._ci = "53498906"
             ._contraseña = "micontraseña"
             ._domicilio = "Emilio Ranha 2351"
             ._edad = 13
             ._mail = "mat.vargas2002@gmail.com"
-            ._pNom = "Mateo"
+            ._pNom = "Mateoasdddddddddddddddddddddddddddddddddklnaslngkksdfngknaksdfngnadfgnnsangpnsadgpsndgpnaspgnpasdngpnsdfpgnapdfngpangpngnoijnhóihngoihjaogiionhoidfhngnandfgkndaflgnkfdognsdngpna´{dpfgnpafdgmn"
             ._sNom = ""
             ._pApe = "Vargas"
             ._sApe = "Girino"

@@ -23,19 +23,39 @@ Public Class Gerente
 #Region "metodos"
 
     Public Overrides Function ObtenerNombre() As String
-        Return cons.ObtenerNombre(Me._ci)
+        Try
+            Return cons.ObtenerNombre(Me._ci)
+
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
 
-    Public Overrides Function ObtenerNombreEdad() As DataTable
-        Return MyBase.ObtenerNombreEdad()
+    Public Overrides Function ListarPersona() As DataTable
+        Try
+            Return MyBase.ListarPersona()
+
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
 
     Public Overrides Function ModificarContraseña() As Boolean
-        Return cons.ModificarContraseña(Me._ci, Me._contraseña)
+        Try
+            Return cons.ModificarContraseña(Me._ci, Me._contraseña)
+
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
 
     Public Overrides Function ModificarP() As Boolean
-        Return MyBase.ModificarP()
+        Try
+            Return MyBase.ModificarP()
+
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
 
     Public Overrides Sub EncriptarContraseña()
@@ -51,23 +71,53 @@ Public Class Gerente
         Me._contraseña = stringBuilder.ToString()
     End Sub
     Public Function NomEmasDiag() As ArrayList
-        Return cons.NomEnfMasDiag()
+        Try
+
+            Return cons.NomEnfMasDiag()
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
     Public Function CantEnfMasDiag() As ArrayList
-        Return cons.CantEnfMasDiag()
+        Try
+            Return cons.CantEnfMasDiag()
+
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
 
     Public Function NomSintMasSelec() As ArrayList
-        Return cons.NomSintMasSelec()
+        Try
+            Return cons.NomSintMasSelec()
+
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
     Public Function CantSintMasSelec() As ArrayList
-        Return cons.CantSintMasSelec()
+        Try
+
+            Return cons.CantSintMasSelec()
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
     Public Function MesesChats() As ArrayList
-        Return cons.MesesChat()
+        Try
+            Return cons.MesesChat()
+
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
     Public Function cantChatMes() As ArrayList
-        Return cons.cantChatMeses()
+        Try
+            Return cons.cantChatMeses()
+
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
 #End Region
 

@@ -89,6 +89,10 @@ Public Class FrmPrincipalPaciente
         End If
     End Sub
 
+    Private Sub PanelinfoPac_Paint(sender As Object, e As PaintEventArgs) Handles PanelinfoPac.Paint
+
+    End Sub
+
 #End Region 'region de mover form
 
 End Class

@@ -32,6 +32,7 @@ Partial Class FrmEsperaChat
         Me.TimerComprobarChatAceptado = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.btn_cancelar = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -132,12 +133,40 @@ Partial Class FrmEsperaChat
         Me.PictureBox2.TabIndex = 9
         Me.PictureBox2.TabStop = False
         '
+        'btn_cancelar
+        '
+        Me.btn_cancelar.Animated = True
+        Me.btn_cancelar.AutoRoundedCorners = True
+        Me.btn_cancelar.BackColor = System.Drawing.Color.Transparent
+        Me.btn_cancelar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_cancelar.BorderRadius = 14
+        Me.btn_cancelar.BorderThickness = 2
+        Me.btn_cancelar.CheckedState.Parent = Me.btn_cancelar
+        Me.btn_cancelar.CustomImages.Parent = Me.btn_cancelar
+        Me.btn_cancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.btn_cancelar.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
+        Me.btn_cancelar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_cancelar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btn_cancelar.HoverState.Parent = Me.btn_cancelar
+        Me.btn_cancelar.Location = New System.Drawing.Point(381, 277)
+        Me.btn_cancelar.Name = "btn_cancelar"
+        Me.btn_cancelar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btn_cancelar.ShadowDecoration.BorderRadius = 20
+        Me.btn_cancelar.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(171, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_cancelar.ShadowDecoration.Depth = 25
+        Me.btn_cancelar.ShadowDecoration.Enabled = True
+        Me.btn_cancelar.ShadowDecoration.Parent = Me.btn_cancelar
+        Me.btn_cancelar.Size = New System.Drawing.Size(102, 31)
+        Me.btn_cancelar.TabIndex = 16
+        Me.btn_cancelar.Text = "CANCELAR"
+        '
         'FrmEsperaChat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(720, 310)
+        Me.Controls.Add(Me.btn_cancelar)
         Me.Controls.Add(Me.CircularProgressBar1)
         Me.Controls.Add(Me.lbNombre)
         Me.Controls.Add(Me.EsperaChat)
@@ -165,4 +194,5 @@ Partial Class FrmEsperaChat
     Friend WithEvents Timer2 As Timer
     Friend WithEvents TimerComprobarChatAceptado As Timer
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btn_cancelar As Guna.UI2.WinForms.Guna2Button
 End Class

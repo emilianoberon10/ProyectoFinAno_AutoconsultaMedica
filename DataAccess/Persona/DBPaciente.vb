@@ -176,7 +176,20 @@ Public Class DBPaciente
             End Using
         End Using
     End Function
+    Public Function CancelarSolicitud(ci As String) As Boolean
+        Using _connection = GetConnection()
+            _connection.Open()
+            Using _command = New MySqlCommand
+                _command.Connection = _connection
 
+                _command.CommandText = "DELETE FROM solicita WHERE ci=@ci;"
+                _command.Parameters.AddWithValue("@ci", ci)
+                _command.CommandType = CommandType.Text
+                _command.ExecuteNonQuery()
+                Return True
+            End Using
+        End Using
+    End Function
     Public Function EnviarMensajePac(ci, msj) As Boolean
         Using _connection = GetConnection()
             _connection.Open()

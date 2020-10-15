@@ -22,7 +22,13 @@ Public Class Sintoma
 
     Public Function GuardarSintomas() As Boolean
         Dim consu As New DBSintomas()
-        Return consu.SetSintoma(Me._nombre)
+        Dim result As Boolean
+        Try
+            result = consu.SetSintoma(Me._nombre)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+        Return result
     End Function
 
     Public Function ModificarSintoma() As Boolean
@@ -30,9 +36,15 @@ Public Class Sintoma
         Return consu.ModifSintomas(Me._nombre)
     End Function
 
-    Public Function BorrarSintoma(dato As String) As Boolean
+    Public Function BorrarSintoma() As Boolean
         Dim consu As New DBSintomas()
-        Return consu.BorrarSintoma(dato)
+        Dim result As Boolean
+        Try
+            result = consu.BorrarSintoma(Me._nombre)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+        Return result
     End Function
 
     Public Sub Limpiar(ci)

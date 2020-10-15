@@ -46,6 +46,11 @@ Partial Class FrmOpcionesUsuario
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ofdFoto = New System.Windows.Forms.OpenFileDialog()
         Me.dgvDatosUsuario = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtTel = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Persona_tel = New System.Windows.Forms.Label()
+        Me.txtDir = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Persona_direccion = New System.Windows.Forms.Label()
         CType(Me.fotoPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvDatosUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -212,6 +217,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtPnom.HoverState.Parent = Me.txtPnom
         Me.txtPnom.Location = New System.Drawing.Point(11, 293)
         Me.txtPnom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPnom.MaxLength = 30
         Me.txtPnom.Name = "txtPnom"
         Me.txtPnom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPnom.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -242,6 +248,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtPape.HoverState.Parent = Me.txtPape
         Me.txtPape.Location = New System.Drawing.Point(11, 369)
         Me.txtPape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPape.MaxLength = 30
         Me.txtPape.Name = "txtPape"
         Me.txtPape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPape.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -272,6 +279,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtEdad.HoverState.Parent = Me.txtEdad
         Me.txtEdad.Location = New System.Drawing.Point(11, 437)
         Me.txtEdad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtEdad.MaxLength = 3
         Me.txtEdad.Name = "txtEdad"
         Me.txtEdad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtEdad.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -302,6 +310,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtSnom.HoverState.Parent = Me.txtSnom
         Me.txtSnom.Location = New System.Drawing.Point(214, 293)
         Me.txtSnom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSnom.MaxLength = 30
         Me.txtSnom.Name = "txtSnom"
         Me.txtSnom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSnom.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -332,6 +341,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtSape.HoverState.Parent = Me.txtSape
         Me.txtSape.Location = New System.Drawing.Point(214, 369)
         Me.txtSape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSape.MaxLength = 30
         Me.txtSape.Name = "txtSape"
         Me.txtSape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSape.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -452,6 +462,99 @@ Partial Class FrmOpcionesUsuario
         Me.dgvDatosUsuario.TabIndex = 20
         Me.dgvDatosUsuario.Visible = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label1.Location = New System.Drawing.Point(415, 273)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(125, 17)
+        Me.Label1.TabIndex = 17
+        Me.Label1.Text = "de click en la imagen"
+        '
+        'txtTel
+        '
+        Me.txtTel.Animated = True
+        Me.txtTel.BorderThickness = 2
+        Me.txtTel.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtTel.DefaultText = ""
+        Me.txtTel.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtTel.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtTel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtTel.DisabledState.Parent = Me.txtTel
+        Me.txtTel.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtTel.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtTel.FocusedState.BorderColor = System.Drawing.Color.Cyan
+        Me.txtTel.FocusedState.Parent = Me.txtTel
+        Me.txtTel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTel.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtTel.HoverState.BorderColor = System.Drawing.Color.Cyan
+        Me.txtTel.HoverState.Parent = Me.txtTel
+        Me.txtTel.Location = New System.Drawing.Point(213, 437)
+        Me.txtTel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtTel.Name = "txtTel"
+        Me.txtTel.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtTel.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtTel.PlaceholderText = ""
+        Me.txtTel.SelectedText = ""
+        Me.txtTel.ShadowDecoration.Parent = Me.txtTel
+        Me.txtTel.Size = New System.Drawing.Size(180, 30)
+        Me.txtTel.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.txtTel.TabIndex = 8
+        '
+        'Persona_tel
+        '
+        Me.Persona_tel.AutoSize = True
+        Me.Persona_tel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_tel.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Persona_tel.Location = New System.Drawing.Point(213, 411)
+        Me.Persona_tel.Name = "Persona_tel"
+        Me.Persona_tel.Size = New System.Drawing.Size(68, 21)
+        Me.Persona_tel.TabIndex = 17
+        Me.Persona_tel.Text = "Telefono"
+        '
+        'txtDir
+        '
+        Me.txtDir.Animated = True
+        Me.txtDir.BorderThickness = 2
+        Me.txtDir.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtDir.DefaultText = ""
+        Me.txtDir.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtDir.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtDir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtDir.DisabledState.Parent = Me.txtDir
+        Me.txtDir.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtDir.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtDir.FocusedState.BorderColor = System.Drawing.Color.Cyan
+        Me.txtDir.FocusedState.Parent = Me.txtDir
+        Me.txtDir.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDir.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtDir.HoverState.BorderColor = System.Drawing.Color.Cyan
+        Me.txtDir.HoverState.Parent = Me.txtDir
+        Me.txtDir.Location = New System.Drawing.Point(15, 505)
+        Me.txtDir.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtDir.Name = "txtDir"
+        Me.txtDir.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtDir.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtDir.PlaceholderText = ""
+        Me.txtDir.SelectedText = ""
+        Me.txtDir.ShadowDecoration.Parent = Me.txtDir
+        Me.txtDir.Size = New System.Drawing.Size(379, 30)
+        Me.txtDir.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.txtDir.TabIndex = 8
+        '
+        'Persona_direccion
+        '
+        Me.Persona_direccion.AutoSize = True
+        Me.Persona_direccion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_direccion.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Persona_direccion.Location = New System.Drawing.Point(15, 479)
+        Me.Persona_direccion.Name = "Persona_direccion"
+        Me.Persona_direccion.Size = New System.Drawing.Size(75, 21)
+        Me.Persona_direccion.TabIndex = 17
+        Me.Persona_direccion.Text = "Direccion"
+        '
         'FrmOpcionesUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -464,13 +567,18 @@ Partial Class FrmOpcionesUsuario
         Me.Controls.Add(Me.btn_modificar)
         Me.Controls.Add(Me.RecuperarPass_passNueva2)
         Me.Controls.Add(Me.Persona_sApe)
+        Me.Controls.Add(Me.Persona_direccion)
+        Me.Controls.Add(Me.Persona_tel)
         Me.Controls.Add(Me.Persona_edad)
         Me.Controls.Add(Me.Persona_pApe)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Persona_sNom)
         Me.Controls.Add(Me.Persona_pNom)
         Me.Controls.Add(Me.RecuperarPass_passNueva)
         Me.Controls.Add(Me.txtContraseña2)
         Me.Controls.Add(Me.txtSape)
+        Me.Controls.Add(Me.txtDir)
+        Me.Controls.Add(Me.txtTel)
         Me.Controls.Add(Me.txtEdad)
         Me.Controls.Add(Me.txtSnom)
         Me.Controls.Add(Me.txtPape)
@@ -513,4 +621,9 @@ Partial Class FrmOpcionesUsuario
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents ofdFoto As OpenFileDialog
     Friend WithEvents dgvDatosUsuario As DataGridView
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Persona_direccion As Label
+    Friend WithEvents Persona_tel As Label
+    Friend WithEvents txtDir As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtTel As Guna.UI2.WinForms.Guna2TextBox
 End Class

@@ -170,7 +170,6 @@ Partial Class FrmCrearUsuario
         Me.txtDomicilio.HoverState.Parent = Me.txtDomicilio
         Me.txtDomicilio.Location = New System.Drawing.Point(530, 214)
         Me.txtDomicilio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtDomicilio.MaxLength = 255
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtDomicilio.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -201,7 +200,6 @@ Partial Class FrmCrearUsuario
         Me.txtEdad.HoverState.Parent = Me.txtEdad
         Me.txtEdad.Location = New System.Drawing.Point(32, 214)
         Me.txtEdad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtEdad.MaxLength = 2
         Me.txtEdad.Name = "txtEdad"
         Me.txtEdad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtEdad.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -232,7 +230,6 @@ Partial Class FrmCrearUsuario
         Me.txtTelefono.HoverState.Parent = Me.txtTelefono
         Me.txtTelefono.Location = New System.Drawing.Point(281, 214)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtTelefono.MaxLength = 9
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtTelefono.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -263,7 +260,6 @@ Partial Class FrmCrearUsuario
         Me.txtSape.HoverState.Parent = Me.txtSape
         Me.txtSape.Location = New System.Drawing.Point(534, 149)
         Me.txtSape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtSape.MaxLength = 30
         Me.txtSape.Name = "txtSape"
         Me.txtSape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSape.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -294,7 +290,6 @@ Partial Class FrmCrearUsuario
         Me.txtPape.HoverState.Parent = Me.txtPape
         Me.txtPape.Location = New System.Drawing.Point(530, 86)
         Me.txtPape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtPape.MaxLength = 30
         Me.txtPape.Name = "txtPape"
         Me.txtPape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPape.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -325,7 +320,6 @@ Partial Class FrmCrearUsuario
         Me.txtCorreo.HoverState.Parent = Me.txtCorreo
         Me.txtCorreo.Location = New System.Drawing.Point(30, 278)
         Me.txtCorreo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtCorreo.MaxLength = 255
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtCorreo.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -356,7 +350,6 @@ Partial Class FrmCrearUsuario
         Me.txtPNom.HoverState.Parent = Me.txtPNom
         Me.txtPNom.Location = New System.Drawing.Point(281, 86)
         Me.txtPNom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtPNom.MaxLength = 30
         Me.txtPNom.Name = "txtPNom"
         Me.txtPNom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPNom.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -386,7 +379,6 @@ Partial Class FrmCrearUsuario
         Me.txtSnom.HoverState.Parent = Me.txtSnom
         Me.txtSnom.Location = New System.Drawing.Point(281, 149)
         Me.txtSnom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtSnom.MaxLength = 30
         Me.txtSnom.Name = "txtSnom"
         Me.txtSnom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSnom.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -417,7 +409,6 @@ Partial Class FrmCrearUsuario
         Me.txtCedula.HoverState.Parent = Me.txtCedula
         Me.txtCedula.Location = New System.Drawing.Point(30, 85)
         Me.txtCedula.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtCedula.MaxLength = 8
         Me.txtCedula.Name = "txtCedula"
         Me.txtCedula.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtCedula.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke

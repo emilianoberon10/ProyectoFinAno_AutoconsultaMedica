@@ -1,78 +1,93 @@
 ﻿Public Class FrmOpcionesUsuario
     Private Sub FrmOpcionesUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtContraseña1.Focus()
         Traductor.traducirForm(Me)
         Select Case FrmLogIn.tipoLogin
             Case "Paciente"
-                ObtenerImagen(FrmLogIn.paci._ci)
-                dgvDatosUsuario.DataSource = FrmLogIn.paci.ObtenerNombreEdad
+                fotoPerfil.Image = ObtenerImagen(FrmLogIn.paci._ci)
+                dgvDatosUsuario.DataSource = FrmLogIn.paci.ListarPersona
             Case "Gerente"
-                ObtenerImagen(FrmLogIn.gere._ci)
+                fotoPerfil.Image = ObtenerImagen(FrmLogIn.gere._ci)
 
-                dgvDatosUsuario.DataSource = FrmLogIn.gere.ObtenerNombreEdad
+                dgvDatosUsuario.DataSource = FrmLogIn.gere.ListarPersona
             Case "Medico"
-                ObtenerImagen(FrmLogIn.medic._ci)
+                fotoPerfil.Image = ObtenerImagen(FrmLogIn.medic._ci)
 
-                dgvDatosUsuario.DataSource = FrmLogIn.medic.ObtenerNombreEdad
+                dgvDatosUsuario.DataSource = FrmLogIn.medic.ListarPersona
         End Select
         txtPnom.Text = dgvDatosUsuario.Item(0, 0).Value()
         txtSnom.Text = dgvDatosUsuario.Item(1, 0).Value()
         txtPape.Text = dgvDatosUsuario.Item(2, 0).Value()
         txtSape.Text = dgvDatosUsuario.Item(3, 0).Value()
         txtEdad.Text = dgvDatosUsuario.Item(4, 0).Value()
+        txtTel.Text = dgvDatosUsuario.Item(5, 0).Value()
+        txtDir.Text = dgvDatosUsuario.Item(6, 0).Value()
     End Sub
 
     Private Sub btn_guardar_Click(sender As Object, e As EventArgs) Handles btn_guardar.Click
         Dim result As Boolean = False
 
         If (txtEdad.Text IsNot "" And txtPnom.Text IsNot "" And txtPape.Text IsNot "" And txtSape.Text IsNot "") Then
+            If Integer.Parse(txtEdad.Text) <= 120 AndAlso Integer.Parse(txtEdad.Text) >= 10 Then
 
-            Select Case FrmLogIn.tipoLogin
+                Select Case FrmLogIn.tipoLogin
 
-                Case "Paciente"
-                    With FrmLogIn.paci
-                        ._pNom = txtPnom.Text
-                        ._pApe = txtPape.Text
-                        ._sNom = txtSnom.Text
-                        ._sApe = txtSape.Text
-                        ._edad = Integer.Parse(txtEdad.Text)
-                        result = .ModificarP()
+                    Case "Paciente"
+                        Try
+                            With FrmLogIn.paci
+                                ._pNom = txtPnom.Text
+                                ._pApe = txtPape.Text
+                                ._sNom = txtSnom.Text
+                                ._sApe = txtSape.Text
+                                ._edad = Integer.Parse(txtEdad.Text)
+                                result = .ModificarP()
+                            End With
+                        Catch ex As Exception
+                            GetForm(Estado.Error, ex.Message)
+                            ErrorProvider1.SetError(lbActuDatos, ex.Message)
+                        End Try
+                    Case "Gerente"
+                        Try
+                            With FrmLogIn.gere
+                                ._pNom = txtPnom.Text
+                                ._pApe = txtPape.Text
+                                ._sNom = txtSnom.Text
+                                ._sApe = txtSape.Text
+                                ._edad = Integer.Parse(txtEdad.Text)
+                                result = .ModificarP()
+                            End With
 
-                    End With
-                Case "Gerente"
-                    With FrmLogIn.gere
-                        ._pNom = txtPnom.Text
-                        ._pApe = txtPape.Text
-                        ._sNom = txtSnom.Text
-                        ._sApe = txtSape.Text
-                        ._edad = Integer.Parse(txtEdad.Text)
+                        Catch ex As Exception
+                            GetForm(Estado.Error, ex.Message)
+                            ErrorProvider1.SetError(lbActuDatos, ex.Message)
+                        End Try
+                    Case "Medico"
+                        Try
+                            With FrmLogIn.medic
+                                ._pNom = txtPnom.Text
+                                ._pApe = txtPape.Text
+                                ._sNom = txtSnom.Text
+                                ._sApe = txtSape.Text
+                                ._edad = Integer.Parse(txtEdad.Text)
+                                result = .ModificarP()
+                            End With
+                        Catch ex As Exception
+                            GetForm(Estado.Error, ex.Message)
+                            ErrorProvider1.SetError(lbActuDatos, ex.Message)
+                        End Try
+                End Select
 
-                        result = .ModificarP()
-
-                    End With
-                Case "Medico"
-                    With FrmLogIn.medic
-                        ._pNom = txtPnom.Text
-                        ._pApe = txtPape.Text
-                        ._sNom = txtSnom.Text
-                        ._sApe = txtSape.Text
-                        ._edad = Integer.Parse(txtEdad.Text)
-                        result = .ModificarP()
-                    End With
-            End Select
-
-            If result = True Then
-                txtPnom.Text = ""
-                txtPape.Text = ""
-                txtSnom.Text = ""
-                txtSape.Text = ""
-                txtEdad.Text = ""
-                GetForm(Estado.Ok, "Se modifico correctamente")
-                MsgBox("Si modifico su nombre o foto de perfil, por favor reinicie sesion")
+                If result = True Then
+                    GetForm(Estado.Ok, "Se modifico correctamente")
+                    MsgBox("Si modifico su nombre o foto de perfil, por favor reinicie sesion")
+                Else
+                    GetForm(Estado.Error, "No se pudo modificar")
+                    ErrorProvider1.SetError(lbActuDatos, "No se pudo modificar")
+                End If
             Else
-                GetForm(Estado.Ok, "Se modifico correctamente")
-                ErrorProvider1.SetError(lbActuDatos, "Se modifico correctamente")
+                GetForm(Estado.Error, "Verifique que la edad sea menor o igual a 120 o mayor a 10")
+                ErrorProvider1.SetError(lbActuDatos, "Verifique que la edad sea menor o igual a 120 o mayor a 10")
             End If
-
         Else
 
             GetForm(Estado.Error, "Todos los campos son obligatorios!")

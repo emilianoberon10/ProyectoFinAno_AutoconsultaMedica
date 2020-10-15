@@ -47,102 +47,79 @@ Public Class Paciente
 #Region "AMB"
 
     Public Overrides Function Guardar() As Boolean
-        Return cons.SetPaciente(Me._ci, Me._mail, Me._contraseña,
-                   Me._tel_cel, Me._edad, Me._domicilio,
-                   Me._sexo, Me._pNom, Me._sNom,
-                   Me._pApe, Me._sApe)
+        Dim estado As Boolean
+        With Me
+            If ._ci.Length < 8 OrElse ._ci.Length > 8 Then
+                MsgBox("La cedula debe contener 8 caracteres")
+            Else
+                If ._pNom.Length > 30 OrElse ._sNom.Length > 30 OrElse ._pApe.Length > 30 OrElse ._sApe.Length > 30 Then
+                    MsgBox("Algun campo de nombre supera los 30 caracteres")
+                Else
+                    If ._tel_cel.ToString.Length > 9 OrElse ._tel_cel.ToString.Length < 8 Then
+                        MsgBox("El telefono debe contener entre 8 y 9 digitos")
+                    Else
+                        If ._domicilio.Length > 255 OrElse ._mail.Length > 255 Then
+                            MsgBox("el domicilio o mail no puede contener mas de 255 caracters")
+
+                        Else
+                            If ._mail.Contains("@gmail.com") OrElse ._mail.Contains("@hotmail.com") Then
+                                Try
+                                    estado = cons.SetPaciente(._ci, ._mail, ._contraseña,
+                                                              ._tel_cel, ._edad, ._domicilio,
+                                                              ._sexo, ._pNom, ._sNom, ._pApe, ._sApe)
+
+                                Catch ex As Exception
+                                    Throw New SystemException(ex.Message)
+                                End Try
+                            Else
+                                MsgBox("Ingrese un formato de correo correcto")
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End With
+        Return estado
     End Function
 
     Public Overrides Function Borrar() As Boolean
-        Return cons.BorrarPaciente(Me._ci)
+        Try
+            Return cons.BorrarPaciente(Me._ci)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
 
     Public Overrides Function ModificarContraseña() As Boolean
-        Return cons.ModificarContraseña(Me._ci, Me._contraseña)
+        Try
+            Return cons.ModificarContraseña(Me._ci, Me._contraseña)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
 
-    Public Overrides Function ObtenerNombreEdad() As DataTable
-        Return MyBase.ObtenerNombreEdad()
+    Public Overrides Function ListarPersona() As DataTable
+        Try
+            Return MyBase.ListarPersona()
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
 
     Public Overrides Function ModificarP() As Boolean
-        Return MyBase.ModificarP()
+        Try
+            Return MyBase.ModificarP()
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
-
-
-
-#End Region
-
-#Region "diagnostico"
-
-    Public Sub Selcciona(sintomas As ArrayList)
-        Dim cons As New DBSintomas
-        cons.GuardarSeleccion(sintomas, Me._ci)
-    End Sub
-
-    Public Function Generar() As DataTable
-        Return consD.Diagnostico(Me._ci)
-    End Function
-
-    Public Function GuardarDiagnostico() As Boolean
-        Return consD.GuardarDiagnostico(Me._ci, Me._diagnostico)
-    End Function
-
-    Public Function VerDiagnosticos() As DataTable
-        Return consD.VerDiagnostico(Me._ci)
-    End Function
-
-    Public Function VerDiagnosticosFecha(fecha As String) As DataTable
-        Return consD.VerDiagnosticoFecha(Me._ci, fecha)
-
-    End Function
-
-    Public Function VerDiagnosticosEntreFecha(fecha As String, fecha2 As String) As DataTable
-        Return consD.VerDiagnosticoEntreFecha(Me._ci, fecha, fecha2)
-
-    End Function
-
-#End Region
-
-#Region "Chat"
-
-    Public Function Solicita() As Boolean
-        Return cons.SolicitaChat(Me._ci, Me._pNom)
-    End Function
-
-    Public Function ComprobarChatAceptado()
-        Return cons.PreguntarSolicitudAceptada(Me._ci)
-    End Function
-
-    Public Function EliminarSolicitudAceptada()
-        Return cons.EliminarSolicitudAceptada(Me._ci)
-    End Function
-
-    Public Sub FinalizarChat()
-        Dim con As New DBChat
-        con.Finalizar(Me._ci)
-    End Sub
-
-    Public Function EnviarMsj(msg As String) As Boolean
-        Return cons.EnviarMensajePac(Me._ci, msg)
-    End Function
-
-    Public Function ComprobarMsj() As String
-        Return cons.ComprobarMsjPac(Me._ci)
-    End Function
-
-#End Region
-
     Public Overrides Function ObtenerNombre() As String
-        Return cons.ObtenerNombre(Me._ci)
+        Try
+            Return cons.ObtenerNombre(Me._ci)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
-
-    Public Overridable Function GuardarFicha() As Boolean
-    End Function
-
-    Public Overridable Function GetFicha() As DataTable
-    End Function
-
     Public Overrides Sub EncriptarContraseña()
         Dim sha256 As SHA256 = SHA256.Create()
         Dim bytes As Byte() = Encoding.UTF8.GetBytes(Me._contraseña)
@@ -155,6 +132,130 @@ Public Class Paciente
 
         Me._contraseña = stringBuilder.ToString()
     End Sub
+
+#End Region
+
+#Region "diagnostico"
+
+    Public Sub Selcciona(sintomas As ArrayList)
+        Try
+            Dim cons As New DBSintomas
+            cons.GuardarSeleccion(sintomas, Me._ci)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+    End Sub
+
+    Public Function Generar() As DataTable
+        Try
+            Return consD.Diagnostico(Me._ci)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+    End Function
+
+    Public Function GuardarDiagnostico() As Boolean
+        Try
+            Return consD.GuardarDiagnostico(Me._ci, Me._diagnostico)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+    End Function
+
+    Public Function VerDiagnosticos() As DataTable
+        Try
+            Return consD.VerDiagnostico(Me._ci)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+    End Function
+
+    Public Function VerDiagnosticosFecha(fecha As String) As DataTable
+        Try
+            Return consD.VerDiagnosticoFecha(Me._ci, fecha)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+
+    End Function
+
+    Public Function VerDiagnosticosEntreFecha(fecha As String, fecha2 As String) As DataTable
+        Try
+            Return consD.VerDiagnosticoEntreFecha(Me._ci, fecha, fecha2)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+
+    End Function
+
+#End Region
+
+#Region "Chat"
+
+    Public Function Solicita() As Boolean
+        Try
+            Return cons.SolicitaChat(Me._ci, Me._pNom)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+    End Function
+
+    Public Function ComprobarChatAceptado()
+        Try
+            Return cons.PreguntarSolicitudAceptada(Me._ci)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+    End Function
+
+    Public Function EliminarSolicitudAceptada()
+        Try
+            Return cons.EliminarSolicitudAceptada(Me._ci)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+    End Function
+    Public Function CancelarSolicitud()
+        Try
+            Return cons.CancelarSolicitud(Me._ci)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+    End Function
+    Public Sub FinalizarChat()
+        Try
+            Dim con As New DBChat
+            con.Finalizar(Me._ci)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+    End Sub
+
+    Public Function EnviarMsj(msg As String) As Boolean
+        Try
+            Return cons.EnviarMensajePac(Me._ci, msg)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+    End Function
+
+    Public Function ComprobarMsj() As String
+        Try
+            Return cons.ComprobarMsjPac(Me._ci)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+    End Function
+
+#End Region
+
+
+    Public Overridable Function GuardarFicha() As Boolean
+    End Function
+
+    Public Overridable Function GetFicha() As DataTable
+    End Function
+
 
 #End Region
 

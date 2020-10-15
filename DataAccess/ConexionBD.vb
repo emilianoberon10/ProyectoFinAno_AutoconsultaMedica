@@ -14,11 +14,17 @@ Public MustInherit Class ConexionBD
     Protected conn As New MySqlConnection(connString)
 
     Protected Function GetConnection() As MySqlConnection
+        Try
+            conn.Open()
+            conn.Close()
+        Catch ex As MySqlException
+            MsgBox("Error al conectar a la bd, " & ex.Message)
+        End Try
         Return New MySqlConnection(connString)
     End Function
 
     Public Function ObtenerNombre(ci) As String
-
+        Dim nombre As String = ""
         Using _connection = GetConnection()
             _connection.Open()
 
@@ -32,8 +38,7 @@ Public MustInherit Class ConexionBD
                 Dim reader As MySqlDataReader = _command.ExecuteReader()
                 If (reader.HasRows) Then
                     While (reader.Read())
-                        Dim nombre As String = reader.GetString(0)
-                        Return nombre
+                        nombre = reader.GetString(0)
                     End While
                 Else
                     MsgBox("No se pudo obtener en nombre")
@@ -41,6 +46,7 @@ Public MustInherit Class ConexionBD
 
             End Using
         End Using
+        Return nombre
     End Function
 
     ' Para ejecutar las consultas
@@ -51,7 +57,7 @@ Public MustInherit Class ConexionBD
             commandSQL.ExecuteNonQuery()
             conn.Close()
         Catch ex As Exception
-            MsgBox("ERROR::" & ex.Message)
+            MsgBox("Error al ejecutar una consulta:" & ex.Message)
             conn.Close()
         End Try
     End Sub
@@ -59,6 +65,8 @@ Public MustInherit Class ConexionBD
     'Para comprobar si el dato a ingresar existe
     Public Function ConsultaComprobarExistencia(consulta As String) As Boolean
         Dim commandSQL As New MySqlCommand(consulta, conn)
+        Dim resultado As Boolean = False
+
         Try
             conn.Open()
             commandSQL.ExecuteNonQuery()
@@ -66,17 +74,18 @@ Public MustInherit Class ConexionBD
 
             If resultadoSQL.Read() Then 'Encontro dato return true sino false
                 conn.Close()
-                Return True 'La consulta SE ejecuto correctamente
+                resultado = True 'La consulta SE ejecuto correctamente
             Else
                 conn.Close()
-                Return False 'La consulta NO se ejecuto correctamente
+                resultado = False 'La consulta NO se ejecuto correctamente
             End If
             conn.Close()
         Catch ex As Exception
             MsgBox("ERROR::" & ex.Message)
             conn.Close()
         End Try
-        Return Nothing
+
+        Return resultado
     End Function
 
     'Para obtener los datos de las tablas y mostrarlos por dataGridView

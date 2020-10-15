@@ -40,6 +40,7 @@ Public Class DBDiagnostico
             End Using
         End Using
     End Function
+
     Public Function VerDiagnostico(ci As String) As DataTable
         Return DevolverTabla("SELECT nomE Diagnostico,fecha FROM diagnostico WHERE idP='" & ci & "'")
     End Function

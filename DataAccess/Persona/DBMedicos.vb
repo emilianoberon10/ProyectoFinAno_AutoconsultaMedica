@@ -255,6 +255,8 @@ Public Class DBMedicos : Inherits ConexionBD
         Return DevolverParaComboBox(sql)
     End Function
 
+
+#End Region
 #Region "Agenda"
 
     Public Function VerAgenda() As DataTable
@@ -287,8 +289,6 @@ Public Class DBMedicos : Inherits ConexionBD
 
 #End Region
 
-#End Region
-
     Public Function AceptarChat(ciM, ciP, diagnostico) As Boolean
         Using _connection = GetConnection()
             _connection.Open()
@@ -304,6 +304,14 @@ Public Class DBMedicos : Inherits ConexionBD
                 Return True
             End Using
         End Using
+    End Function
+    Public Function VerChatsAntiguos(ci As String) As DataTable
+        Dim consulta As String
+        consulta = "SELECT ci, CONCAT(pNom,' ',pape) as 'Nombre' FROM persona
+                    JOIN chat ON ci=ciPac
+                    WHERE chat.idMed=" & ci & "
+                    ORDER BY fecha DESC;"
+        Return DevolverTabla(consulta)
     End Function
 
     Public Function EnviarMensaje(ci, msj) As Boolean

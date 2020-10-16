@@ -163,7 +163,14 @@ Public Class Medico
         Dim con As New DBChat
         con.Finalizar(Me._ci)
     End Sub
-
+    Public Function CargarChat(idchat) As DataTable
+        Dim con As New DBChat
+        Return con.DevolverChat(idchat)
+    End Function
+    Public Function CargarDiagChat(idchat) As String
+        Dim con As New DBChat
+        Return con.DevolverDiag(idchat)
+    End Function
     Public Function ComprobarSoli() As DataTable
         Dim cons As New DBChat
         Return cons.ComprobarSolicitudes()

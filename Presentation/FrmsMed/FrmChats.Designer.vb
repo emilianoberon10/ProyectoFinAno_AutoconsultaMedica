@@ -43,6 +43,7 @@ Partial Class FrmChats
         Me.txtCi = New System.Windows.Forms.TextBox()
         Me.dgvChats = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.flpMain = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.TopPanel.SuspendLayout()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,11 +74,11 @@ Partial Class FrmChats
         '
         Me.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtMensaje.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMensaje.Location = New System.Drawing.Point(5, 659)
+        Me.txtMensaje.Location = New System.Drawing.Point(5, 657)
         Me.txtMensaje.MaxLength = 255
         Me.txtMensaje.Multiline = True
         Me.txtMensaje.Name = "txtMensaje"
-        Me.txtMensaje.Size = New System.Drawing.Size(458, 30)
+        Me.txtMensaje.Size = New System.Drawing.Size(398, 30)
         Me.txtMensaje.TabIndex = 1
         '
         'txtChat
@@ -90,7 +91,7 @@ Partial Class FrmChats
         Me.txtChat.Multiline = True
         Me.txtChat.Name = "txtChat"
         Me.txtChat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtChat.Size = New System.Drawing.Size(575, 576)
+        Me.txtChat.Size = New System.Drawing.Size(517, 576)
         Me.txtChat.TabIndex = 10
         '
         'Timer1
@@ -174,7 +175,7 @@ Partial Class FrmChats
         Me.btn_enviar.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn_enviar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.btn_enviar.HoverState.Parent = Me.btn_enviar
-        Me.btn_enviar.Location = New System.Drawing.Point(464, 658)
+        Me.btn_enviar.Location = New System.Drawing.Point(409, 655)
         Me.btn_enviar.Name = "btn_enviar"
         Me.btn_enviar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.btn_enviar.ShadowDecoration.BorderRadius = 20
@@ -218,10 +219,10 @@ Partial Class FrmChats
         Me.btn_fichaMed.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_fichaMed.ForeColor = System.Drawing.Color.White
         Me.btn_fichaMed.HoverState.Parent = Me.btn_fichaMed
-        Me.btn_fichaMed.Location = New System.Drawing.Point(380, 713)
+        Me.btn_fichaMed.Location = New System.Drawing.Point(332, 718)
         Me.btn_fichaMed.Name = "btn_fichaMed"
         Me.btn_fichaMed.ShadowDecoration.Parent = Me.btn_fichaMed
-        Me.btn_fichaMed.Size = New System.Drawing.Size(197, 30)
+        Me.btn_fichaMed.Size = New System.Drawing.Size(165, 30)
         Me.btn_fichaMed.TabIndex = 15
         Me.btn_fichaMed.Text = "FICHA MEDICA"
         '
@@ -297,9 +298,9 @@ Partial Class FrmChats
         '
         Me.flpMain.AutoScroll = True
         Me.flpMain.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.flpMain.Location = New System.Drawing.Point(583, 29)
+        Me.flpMain.Location = New System.Drawing.Point(528, 29)
         Me.flpMain.Name = "flpMain"
-        Me.flpMain.Size = New System.Drawing.Size(195, 730)
+        Me.flpMain.Size = New System.Drawing.Size(250, 730)
         Me.flpMain.TabIndex = 17
         Me.flpMain.WrapContents = False
         '
@@ -352,4 +353,5 @@ Partial Class FrmChats
     Friend WithEvents txtCi As TextBox
     Friend WithEvents dgvChats As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents flpMain As FlowLayoutPanel
+    Friend WithEvents Guna2AnimateWindow1 As Guna.UI2.WinForms.Guna2AnimateWindow
 End Class

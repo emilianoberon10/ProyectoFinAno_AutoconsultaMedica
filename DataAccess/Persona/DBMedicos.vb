@@ -307,10 +307,10 @@ Public Class DBMedicos : Inherits ConexionBD
     End Function
     Public Function VerChatsAntiguos(ci As String) As DataTable
         Dim consulta As String
-        consulta = "SELECT ci, CONCAT(pNom,' ',pape) as 'Nombre',estado,fecha FROM persona
+        consulta = "SELECT ci, CONCAT(pNom,' ',pape) as 'Nombre',estado,fecha,idChat FROM persona
                     JOIN chat ON ci=ciPac
                     WHERE chat.idMed=" & ci & "
-                    ORDER BY fecha DESC;"
+                    ORDER BY idchat DESC;"
         Return DevolverTabla(consulta)
     End Function
 

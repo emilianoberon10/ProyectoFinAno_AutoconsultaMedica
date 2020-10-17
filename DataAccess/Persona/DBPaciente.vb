@@ -288,5 +288,28 @@ Public Class DBPaciente
         End Using
 
     End Function
+    Public Function ObtenerCorreo(ci) As String
+        Dim correo As String = ""
+        Using _connection = GetConnection()
+            _connection.Open()
 
+            Using _command = New MySqlCommand
+                _command.Connection = _connection
+
+                _command.CommandText = "SELECT correo FROM persona WHERE ci=@ci"
+                _command.Parameters.AddWithValue("@ci", ci)
+                _command.CommandType = CommandType.Text
+                Dim reader As MySqlDataReader = _command.ExecuteReader()
+                If (reader.HasRows) Then
+                    While (reader.Read())
+                        correo = reader.GetString(0)
+                    End While
+                Else
+                    MsgBox("No se pudo obtener su correo")
+                End If
+
+            End Using
+        End Using
+        Return correo
+    End Function
 End Class

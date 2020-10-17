@@ -469,6 +469,11 @@ Namespace My.Reso [resto de la cadena truncado]&quot;;.
   Busca una cadena traducida similar a Cambiar Contraseña.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Español.lbCambiarFoto">
+<summary>
+  Busca una cadena traducida similar a Cambiar.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Español.lbContraseña">
 <summary>
   Busca una cadena traducida similar a CONTRASEÑA.
@@ -1039,6 +1044,11 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
 <member name="P:Presentation.My.Resources.Ingles.lbCambiarContraseña">
 <summary>
   Busca una cadena traducida similar a Change Password.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.lbCambiarFoto">
+<summary>
+  Busca una cadena traducida similar a Update.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.lbContraseña">

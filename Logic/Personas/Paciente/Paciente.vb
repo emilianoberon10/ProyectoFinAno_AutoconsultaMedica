@@ -120,6 +120,9 @@ Public Class Paciente
             Throw New SystemException(ex.Message)
         End Try
     End Function
+    Public Function ObtenerCorreo() As Boolean
+        Return cons.ObtenerCorreo(Me._ci)
+    End Function
     Public Overrides Sub EncriptarContraseña()
         Dim sha256 As SHA256 = SHA256.Create()
         Dim bytes As Byte() = Encoding.UTF8.GetBytes(Me._contraseña)
@@ -246,7 +249,10 @@ Public Class Paciente
             Throw New SystemException(ex.Message)
         End Try
     End Function
-
+    Public Function EnviarChatPorCorreo() As Boolean
+        Dim c As New DBEnvioCorreo
+        Return c.EnviarCorreo(Me._ci, Me._mail)
+    End Function
 #End Region
 
 

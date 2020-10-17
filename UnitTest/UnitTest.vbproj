@@ -98,6 +98,7 @@
     </Compile>
     <Compile Include="TestMedico.vb" />
     <Compile Include="TestEnfermedadSintoma.vb" />
+    <Compile Include="UnitTest1.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -120,6 +121,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.vbproj">
+      <Project>{727615a7-b7b0-4ce7-909a-b98b07fab36c}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Logic\Logic.vbproj">
       <Project>{8670df85-7754-4262-b7fb-264d2469288a}</Project>
       <Name>Logic</Name>

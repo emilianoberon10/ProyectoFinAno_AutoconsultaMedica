@@ -29,7 +29,6 @@ Partial Class FrmPrincipalPaciente
         Me.btn_historial = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_consultar = New Guna.UI2.WinForms.Guna2Button()
         Me.PanelinfoPac = New System.Windows.Forms.Panel()
-        Me.lbCambiarFoto = New System.Windows.Forms.Label()
         Me.btnChangeLanguage = New System.Windows.Forms.PictureBox()
         Me.fotoPerfil = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.btnOpciones = New System.Windows.Forms.PictureBox()
@@ -174,7 +173,6 @@ Partial Class FrmPrincipalPaciente
         'PanelinfoPac
         '
         Me.PanelinfoPac.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(73, Byte), Integer))
-        Me.PanelinfoPac.Controls.Add(Me.lbCambiarFoto)
         Me.PanelinfoPac.Controls.Add(Me.btnChangeLanguage)
         Me.PanelinfoPac.Controls.Add(Me.fotoPerfil)
         Me.PanelinfoPac.Controls.Add(Me.btnOpciones)
@@ -185,18 +183,6 @@ Partial Class FrmPrincipalPaciente
         Me.PanelinfoPac.Name = "PanelinfoPac"
         Me.PanelinfoPac.Size = New System.Drawing.Size(222, 184)
         Me.PanelinfoPac.TabIndex = 0
-        '
-        'lbCambiarFoto
-        '
-        Me.lbCambiarFoto.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lbCambiarFoto.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCambiarFoto.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.lbCambiarFoto.Location = New System.Drawing.Point(115, 121)
-        Me.lbCambiarFoto.Name = "lbCambiarFoto"
-        Me.lbCambiarFoto.Size = New System.Drawing.Size(60, 19)
-        Me.lbCambiarFoto.TabIndex = 0
-        Me.lbCambiarFoto.Text = "Cambiar"
-        Me.lbCambiarFoto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnChangeLanguage
         '
@@ -333,5 +319,4 @@ Partial Class FrmPrincipalPaciente
     Friend WithEvents btn_cerrarSesion As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents fotoPerfil As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents btnChangeLanguage As PictureBox
-    Friend WithEvents lbCambiarFoto As Label
 End Class

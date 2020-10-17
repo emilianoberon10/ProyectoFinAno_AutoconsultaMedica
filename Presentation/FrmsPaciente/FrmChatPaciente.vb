@@ -11,7 +11,12 @@ Public Class FrmChatPaciente
     Private Sub btnSalirChat_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         If MessageBox.Show("Esta seguro de cerrar el chat?", "Advertencia",
          MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
-            FrmLogIn.paci.FinalizarChat()
+            With FrmLogIn.paci
+                ._mail = .ObtenerCorreo
+                .EnviarChatPorCorreo()
+                .FinalizarChat()
+            End With
+
             Me.Close()
         End If
     End Sub

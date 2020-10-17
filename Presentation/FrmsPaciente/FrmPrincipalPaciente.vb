@@ -50,7 +50,7 @@ Public Class FrmPrincipalPaciente
 
     Dim foto As String
 
-    Private Sub fotoPerfil_Click(sender As Object, e As EventArgs) Handles fotoPerfil.Click, lbCambiarFoto.Click
+    Private Sub fotoPerfil_Click(sender As Object, e As EventArgs) Handles fotoPerfil.Click
         GuardarImagen(FrmLogIn.paci._ci, ofdFoto, fotoPerfil)
     End Sub
 

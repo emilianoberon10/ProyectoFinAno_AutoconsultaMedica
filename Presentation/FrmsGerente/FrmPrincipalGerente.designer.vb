@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmPrincipalGerente
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmPrincipalGerente
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipalGerente))
         Me.PanelMenu = New System.Windows.Forms.Panel()
@@ -42,7 +42,6 @@ Partial Class FrmPrincipalGerente
         Me.btnMinimize = New System.Windows.Forms.PictureBox()
         Me.PanelChildForm = New System.Windows.Forms.Panel()
         Me.ofdFoto = New System.Windows.Forms.OpenFileDialog()
-        Me.lbCambiarFoto = New System.Windows.Forms.Label()
         Me.PanelMenu.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnChangeLanguage, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -209,7 +208,6 @@ Partial Class FrmPrincipalGerente
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(73, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.lbCambiarFoto)
         Me.Panel2.Controls.Add(Me.btnChangeLanguage)
         Me.Panel2.Controls.Add(Me.fotoPerfil)
         Me.Panel2.Controls.Add(Me.btnOpciones)
@@ -368,18 +366,6 @@ Partial Class FrmPrincipalGerente
         '
         Me.ofdFoto.FileName = "OpenFileDialog1"
         '
-        'lbCambiarFoto
-        '
-        Me.lbCambiarFoto.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lbCambiarFoto.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCambiarFoto.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.lbCambiarFoto.Location = New System.Drawing.Point(116, 124)
-        Me.lbCambiarFoto.Name = "lbCambiarFoto"
-        Me.lbCambiarFoto.Size = New System.Drawing.Size(60, 19)
-        Me.lbCambiarFoto.TabIndex = 309
-        Me.lbCambiarFoto.Text = "Cambiar"
-        Me.lbCambiarFoto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'FrmPrincipalGerente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -430,5 +416,4 @@ Partial Class FrmPrincipalGerente
     Friend WithEvents fotoPerfil As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents btnChangeLanguage As PictureBox
     Friend WithEvents btn_dashBoard As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents lbCambiarFoto As Label
 End Class

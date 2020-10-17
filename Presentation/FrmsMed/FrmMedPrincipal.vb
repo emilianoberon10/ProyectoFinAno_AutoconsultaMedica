@@ -41,7 +41,7 @@ Public Class FrmMedPrincipal
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub fotoPerfil_Click(sender As Object, e As EventArgs) Handles fotoPerfil.Click
+    Private Sub fotoPerfil_Click(sender As Object, e As EventArgs) Handles fotoPerfil.Click, lbCambiarFoto.Click
         GuardarImagen(FrmLogIn.medic._ci, ofdFoto, fotoPerfil)
 
     End Sub

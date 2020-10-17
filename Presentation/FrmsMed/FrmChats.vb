@@ -58,9 +58,9 @@ Public Class FrmChats
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Dim mensaje As String = FrmLogIn.medic.ComprobarMsj()
+        Dim mensaje As String = ""
+        mensaje = FrmLogIn.medic.ComprobarMsj()
         If mensaje IsNot "" Then txtChat.Text &= mensaje & vbNewLine
-        mensaje = ""
     End Sub
 
     Private Sub FrmChats_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing

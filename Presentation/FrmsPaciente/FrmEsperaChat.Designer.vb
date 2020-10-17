@@ -41,7 +41,7 @@ Partial Class FrmEsperaChat
         '
         Me.app_titulo.AutoSize = True
         Me.app_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.app_titulo.ForeColor = System.Drawing.Color.Silver
+        Me.app_titulo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.app_titulo.Location = New System.Drawing.Point(61, 7)
         Me.app_titulo.Name = "app_titulo"
         Me.app_titulo.Size = New System.Drawing.Size(521, 40)
@@ -85,7 +85,7 @@ Partial Class FrmEsperaChat
         '
         Me.lbNombre.AutoSize = True
         Me.lbNombre.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.lbNombre.ForeColor = System.Drawing.Color.Silver
+        Me.lbNombre.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lbNombre.Location = New System.Drawing.Point(503, 110)
         Me.lbNombre.Name = "lbNombre"
         Me.lbNombre.Size = New System.Drawing.Size(77, 25)
@@ -126,7 +126,7 @@ Partial Class FrmEsperaChat
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Presentation.My.Resources.Resources.isotipoProyectowhite
-        Me.PictureBox2.Location = New System.Drawing.Point(5, 7)
+        Me.PictureBox2.Location = New System.Drawing.Point(5, 1)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(50, 50)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage

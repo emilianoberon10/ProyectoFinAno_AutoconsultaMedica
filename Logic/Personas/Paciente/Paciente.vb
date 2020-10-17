@@ -256,6 +256,9 @@ Public Class Paciente
     Public Overridable Function GetFicha() As DataTable
     End Function
 
+    Public Overrides Function ComprobarContraseña() As Boolean
+        Return cons.ComprobarContraseña(Me._contraseña)
+    End Function
 
 #End Region
 

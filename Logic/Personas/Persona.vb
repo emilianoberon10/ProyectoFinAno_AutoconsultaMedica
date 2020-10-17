@@ -91,7 +91,8 @@ Public MustInherit Class Persona
     Public Overridable Sub EncriptarContraseña()
 
     End Sub
-
+    Public Overridable Function ComprobarContraseña() As Boolean
+    End Function
 #End Region
 
 End Class

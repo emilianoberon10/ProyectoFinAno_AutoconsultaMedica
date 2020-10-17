@@ -3,7 +3,7 @@
 Public Class DBPersona : Inherits ConexionBD
 
     Public Function GetPersonas(ci) As DataTable
-        Return DevolverTabla("SELECT pnom,snom,pape,sape,edad,tel_cel,direccion FROM persona WHERE ci='" & ci & "'")
+        Return DevolverTabla("SELECT pnom,snom,pape,sape,edad,tel_cel,domicilio FROM persona WHERE ci='" & ci & "'")
     End Function
     Public Function UpdatePersona(ci, pnom, snom, pape, sape, edad, tel, dir) As Boolean
         Using _connection = GetConnection()
@@ -12,7 +12,7 @@ Public Class DBPersona : Inherits ConexionBD
 
                 _command.Connection = _connection
                 _command.CommandText = "UPDATE persona SET pnom=@pnom, snom=@snom, pape=@pape, sape=@sape,
-                                        edad=@edad,tel_cel=@tel,direccion=@dir WHERE ci=@ci;"
+                                        edad=@edad,tel_cel=@tel,domicilio=@dir WHERE ci=@ci;"
                 _command.Parameters.AddWithValue("@ci", ci)
                 _command.Parameters.AddWithValue("@pnom", pnom)
                 _command.Parameters.AddWithValue("@snom", snom)

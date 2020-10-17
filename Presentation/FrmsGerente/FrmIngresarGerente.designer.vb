@@ -68,7 +68,7 @@ Partial Class FrmIngresarGerente
         'ingGerente
         '
         Me.ingGerente.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ingGerente.ForeColor = System.Drawing.Color.Silver
+        Me.ingGerente.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.ingGerente.Location = New System.Drawing.Point(1, 9)
         Me.ingGerente.Name = "ingGerente"
         Me.ingGerente.Size = New System.Drawing.Size(774, 40)
@@ -79,7 +79,7 @@ Partial Class FrmIngresarGerente
         'enfermedad
         '
         Me.enfermedad.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.enfermedad.ForeColor = System.Drawing.Color.Silver
+        Me.enfermedad.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.enfermedad.Location = New System.Drawing.Point(1, 186)
         Me.enfermedad.Name = "enfermedad"
         Me.enfermedad.Size = New System.Drawing.Size(774, 30)
@@ -90,7 +90,7 @@ Partial Class FrmIngresarGerente
         'sintoma
         '
         Me.sintoma.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.sintoma.ForeColor = System.Drawing.Color.Silver
+        Me.sintoma.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.sintoma.Location = New System.Drawing.Point(1, 55)
         Me.sintoma.Name = "sintoma"
         Me.sintoma.Size = New System.Drawing.Size(774, 30)
@@ -102,9 +102,9 @@ Partial Class FrmIngresarGerente
         '
         Me.lbNomEnf.AutoSize = True
         Me.lbNomEnf.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbNomEnf.ForeColor = System.Drawing.Color.Silver
-        Me.ErrorProviderNomDesEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
+        Me.lbNomEnf.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.ErrorProviderNomSint.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopLeft)
+        Me.ErrorProviderNomDesEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
         Me.ErrorProviderSintEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
         Me.lbNomEnf.Location = New System.Drawing.Point(22, 206)
         Me.lbNomEnf.Name = "lbNomEnf"
@@ -116,7 +116,7 @@ Partial Class FrmIngresarGerente
         '
         Me.lbNomSint.AutoSize = True
         Me.lbNomSint.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbNomSint.ForeColor = System.Drawing.Color.Silver
+        Me.lbNomSint.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lbNomSint.Location = New System.Drawing.Point(22, 90)
         Me.lbNomSint.Name = "lbNomSint"
         Me.lbNomSint.Size = New System.Drawing.Size(75, 21)
@@ -140,7 +140,7 @@ Partial Class FrmIngresarGerente
         '
         Me.lbRiesgo.AutoSize = True
         Me.lbRiesgo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbRiesgo.ForeColor = System.Drawing.Color.Silver
+        Me.lbRiesgo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lbRiesgo.Location = New System.Drawing.Point(457, 268)
         Me.lbRiesgo.Name = "lbRiesgo"
         Me.lbRiesgo.Size = New System.Drawing.Size(64, 21)
@@ -151,7 +151,7 @@ Partial Class FrmIngresarGerente
         '
         Me.lbDescripcion.AutoSize = True
         Me.lbDescripcion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbDescripcion.ForeColor = System.Drawing.Color.Silver
+        Me.lbDescripcion.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lbDescripcion.Location = New System.Drawing.Point(22, 274)
         Me.lbDescripcion.Name = "lbDescripcion"
         Me.lbDescripcion.Size = New System.Drawing.Size(109, 21)
@@ -363,7 +363,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma6.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma6.FocusedState.Parent = Me.cbSintoma6
         Me.cbSintoma6.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma6.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma6.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.cbSintoma6.FormattingEnabled = True
         Me.cbSintoma6.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma6.HoverState.Parent = Me.cbSintoma6
@@ -389,7 +389,7 @@ Partial Class FrmIngresarGerente
         Me.comboSintoma9.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.comboSintoma9.FocusedState.Parent = Me.comboSintoma9
         Me.comboSintoma9.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.comboSintoma9.ForeColor = System.Drawing.Color.White
+        Me.comboSintoma9.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.comboSintoma9.FormattingEnabled = True
         Me.comboSintoma9.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.comboSintoma9.HoverState.Parent = Me.comboSintoma9
@@ -415,7 +415,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma8.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma8.FocusedState.Parent = Me.cbSintoma8
         Me.cbSintoma8.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma8.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma8.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.cbSintoma8.FormattingEnabled = True
         Me.cbSintoma8.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma8.HoverState.Parent = Me.cbSintoma8
@@ -441,7 +441,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma5.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma5.FocusedState.Parent = Me.cbSintoma5
         Me.cbSintoma5.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma5.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma5.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.cbSintoma5.FormattingEnabled = True
         Me.cbSintoma5.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma5.HoverState.Parent = Me.cbSintoma5
@@ -467,7 +467,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma7.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma7.FocusedState.Parent = Me.cbSintoma7
         Me.cbSintoma7.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma7.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma7.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.cbSintoma7.FormattingEnabled = True
         Me.cbSintoma7.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma7.HoverState.Parent = Me.cbSintoma7
@@ -493,7 +493,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma3.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma3.FocusedState.Parent = Me.cbSintoma3
         Me.cbSintoma3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma3.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma3.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.cbSintoma3.FormattingEnabled = True
         Me.cbSintoma3.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma3.HoverState.Parent = Me.cbSintoma3
@@ -519,7 +519,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma4.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma4.FocusedState.Parent = Me.cbSintoma4
         Me.cbSintoma4.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma4.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma4.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.cbSintoma4.FormattingEnabled = True
         Me.cbSintoma4.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma4.HoverState.Parent = Me.cbSintoma4
@@ -545,7 +545,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma2.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma2.FocusedState.Parent = Me.cbSintoma2
         Me.cbSintoma2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma2.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma2.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.cbSintoma2.FormattingEnabled = True
         Me.cbSintoma2.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma2.HoverState.Parent = Me.cbSintoma2
@@ -571,7 +571,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma1.FocusedState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma1.FocusedState.Parent = Me.cbSintoma1
         Me.cbSintoma1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbSintoma1.ForeColor = System.Drawing.Color.White
+        Me.cbSintoma1.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.cbSintoma1.FormattingEnabled = True
         Me.cbSintoma1.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.cbSintoma1.HoverState.Parent = Me.cbSintoma1

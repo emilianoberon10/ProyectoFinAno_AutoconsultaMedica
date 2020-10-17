@@ -50,7 +50,7 @@ Public Class FrmPrincipalPaciente
 
     Dim foto As String
 
-    Private Sub fotoPerfil_Click(sender As Object, e As EventArgs) Handles fotoPerfil.Click
+    Private Sub fotoPerfil_Click(sender As Object, e As EventArgs) Handles fotoPerfil.Click, lbCambiarFoto.Click
         GuardarImagen(FrmLogIn.paci._ci, ofdFoto, fotoPerfil)
     End Sub
 
@@ -87,10 +87,6 @@ Public Class FrmPrincipalPaciente
             btnChangeLanguage.Image = My.Resources.spain
 
         End If
-    End Sub
-
-    Private Sub PanelinfoPac_Paint(sender As Object, e As PaintEventArgs) Handles PanelinfoPac.Paint
-
     End Sub
 
 #End Region 'region de mover form

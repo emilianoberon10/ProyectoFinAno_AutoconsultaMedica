@@ -55,7 +55,7 @@ Partial Class FrmCrearUsuario
         'llbCrearUsuario
         '
         Me.llbCrearUsuario.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llbCrearUsuario.ForeColor = System.Drawing.Color.Silver
+        Me.llbCrearUsuario.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.ErrorProvider1.SetIconAlignment(Me.llbCrearUsuario, System.Windows.Forms.ErrorIconAlignment.TopRight)
         Me.ErrorProvider1.SetIconPadding(Me.llbCrearUsuario, 5)
         Me.llbCrearUsuario.Location = New System.Drawing.Point(1, 9)
@@ -423,7 +423,7 @@ Partial Class FrmCrearUsuario
         '
         Me.Persona_domicilio.AutoSize = True
         Me.Persona_domicilio.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_domicilio.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_domicilio.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_domicilio.Location = New System.Drawing.Point(530, 188)
         Me.Persona_domicilio.Name = "Persona_domicilio"
         Me.Persona_domicilio.Size = New System.Drawing.Size(76, 21)
@@ -434,7 +434,7 @@ Partial Class FrmCrearUsuario
         '
         Me.Persona_edad.AutoSize = True
         Me.Persona_edad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_edad.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_edad.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_edad.Location = New System.Drawing.Point(32, 188)
         Me.Persona_edad.Name = "Persona_edad"
         Me.Persona_edad.Size = New System.Drawing.Size(44, 21)
@@ -445,7 +445,7 @@ Partial Class FrmCrearUsuario
         '
         Me.Persona_tel.AutoSize = True
         Me.Persona_tel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_tel.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_tel.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_tel.Location = New System.Drawing.Point(281, 184)
         Me.Persona_tel.Name = "Persona_tel"
         Me.Persona_tel.Size = New System.Drawing.Size(121, 21)
@@ -456,7 +456,7 @@ Partial Class FrmCrearUsuario
         '
         Me.Persona_sApe.AutoSize = True
         Me.Persona_sApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_sApe.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_sApe.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_sApe.Location = New System.Drawing.Point(530, 121)
         Me.Persona_sApe.Name = "Persona_sApe"
         Me.Persona_sApe.Size = New System.Drawing.Size(133, 21)
@@ -467,7 +467,7 @@ Partial Class FrmCrearUsuario
         '
         Me.Persona_sNom.AutoSize = True
         Me.Persona_sNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_sNom.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_sNom.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_sNom.Location = New System.Drawing.Point(281, 121)
         Me.Persona_sNom.Name = "Persona_sNom"
         Me.Persona_sNom.Size = New System.Drawing.Size(134, 21)
@@ -478,7 +478,7 @@ Partial Class FrmCrearUsuario
         '
         Me.Persona_sexo.AutoSize = True
         Me.Persona_sexo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_sexo.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_sexo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_sexo.Location = New System.Drawing.Point(30, 119)
         Me.Persona_sexo.Name = "Persona_sexo"
         Me.Persona_sexo.Size = New System.Drawing.Size(43, 21)
@@ -489,7 +489,7 @@ Partial Class FrmCrearUsuario
         '
         Me.Persona_correo.AutoSize = True
         Me.Persona_correo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_correo.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_correo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_correo.Location = New System.Drawing.Point(30, 256)
         Me.Persona_correo.Name = "Persona_correo"
         Me.Persona_correo.Size = New System.Drawing.Size(138, 21)
@@ -500,7 +500,7 @@ Partial Class FrmCrearUsuario
         '
         Me.Persona_pApe.AutoSize = True
         Me.Persona_pApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_pApe.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_pApe.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_pApe.Location = New System.Drawing.Point(530, 60)
         Me.Persona_pApe.Name = "Persona_pApe"
         Me.Persona_pApe.Size = New System.Drawing.Size(118, 21)
@@ -511,7 +511,7 @@ Partial Class FrmCrearUsuario
         '
         Me.Persona_pNom.AutoSize = True
         Me.Persona_pNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_pNom.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_pNom.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_pNom.Location = New System.Drawing.Point(281, 59)
         Me.Persona_pNom.Name = "Persona_pNom"
         Me.Persona_pNom.Size = New System.Drawing.Size(119, 21)
@@ -522,7 +522,7 @@ Partial Class FrmCrearUsuario
         '
         Me.Persona_ci.AutoSize = True
         Me.Persona_ci.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_ci.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_ci.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_ci.Location = New System.Drawing.Point(30, 59)
         Me.Persona_ci.Name = "Persona_ci"
         Me.Persona_ci.Size = New System.Drawing.Size(58, 21)
@@ -533,7 +533,7 @@ Partial Class FrmCrearUsuario
         '
         Me.Persona_aclaracionCi.AutoSize = True
         Me.Persona_aclaracionCi.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_aclaracionCi.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_aclaracionCi.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_aclaracionCi.Location = New System.Drawing.Point(33, 42)
         Me.Persona_aclaracionCi.Name = "Persona_aclaracionCi"
         Me.Persona_aclaracionCi.Size = New System.Drawing.Size(126, 17)

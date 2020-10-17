@@ -368,6 +368,47 @@ Presentation
   Busca una cadena traducida similar a Enfermedad.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Español.Español">
+<summary>
+  Busca una cadena traducida similar a &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;root&gt;
+  &lt;!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers &amp; schema ...
+    &lt;resheader name=&quot;resmimetype&quot;&gt;text/microsoft-resx&lt;/resheader&gt;
+    &lt;resheader n [resto de la cadena truncado]&quot;;.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Español.Español_Designer">
+<summary>
+  Busca una cadena traducida similar a &apos;------------------------------------------------------------------------------
+&apos; &lt;auto-generated&gt;
+&apos;     Este código fue generado por una herramienta.
+&apos;     Versión de runtime:4.0.30319.42000
+&apos;
+&apos;     Los cambios en este archivo podrían causar un comportamiento incorrecto y se perderán si
+&apos;     se vuelve a generar el código.
+&apos; &lt;/auto-generated&gt;
+&apos;------------------------------------------------------------------------------
+
+Option Strict On
+Option Explicit On
+
+Imports System
+
+Namespace My.Reso [resto de la cadena truncado]&quot;;.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Español.EsperaChat">
 <summary>
   Busca una cadena traducida similar a Por favor espere.
@@ -487,6 +528,11 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
 <member name="P:Presentation.My.Resources.Español.lbRiesgo">
 <summary>
   Busca una cadena traducida similar a Riesgo.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Español.lbSelecImagen">
+<summary>
+  Busca una cadena traducida similar a De click en la imagen.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Español.lbUsuario">
@@ -1056,6 +1102,11 @@ If I modify it, you can click on the following link to restore it.
   Busca una cadena traducida similar a Risk.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Ingles.lbSelecImagen">
+<summary>
+  Busca una cadena traducida similar a Click the image.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Ingles.lbUsuario">
 <summary>
   Busca una cadena traducida similar a USER.
@@ -1279,16 +1330,6 @@ If I modify it, you can click on the following link to restore it.
 <member name="P:Presentation.My.Resources.Ingles.sintoma">
 <summary>
   Busca una cadena traducida similar a Symptom.
-</summary>
-</member>
-<member name="P:Presentation.My.Resources.Ingles.String1">
-<summary>
-  Busca una cadena traducida similar a .
-</summary>
-</member>
-<member name="P:Presentation.My.Resources.Ingles.String2">
-<summary>
-  Busca una cadena traducida similar a .
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.titulo_app">

@@ -23,9 +23,9 @@ Partial Class FrmModificarGerente
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.modificar = New System.Windows.Forms.Label()
         Me.DgvDatos = New System.Windows.Forms.DataGridView()
         Me.modifAclaracion = New System.Windows.Forms.Label()
@@ -55,7 +55,7 @@ Partial Class FrmModificarGerente
         Me.lbDescripcion = New System.Windows.Forms.Label()
         Me.lbRiesgo = New System.Windows.Forms.Label()
         Me.lbNomEnf = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
+        Me.filtro = New System.Windows.Forms.Label()
         Me.cbFiltro = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.btn_modificar = New Guna.UI2.WinForms.Guna2Button()
         Me.PanelModifMedico = New System.Windows.Forms.Panel()
@@ -119,7 +119,7 @@ Partial Class FrmModificarGerente
         '
         Me.modificar.Cursor = System.Windows.Forms.Cursors.Default
         Me.modificar.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.modificar.ForeColor = System.Drawing.Color.Silver
+        Me.modificar.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.modificar.Location = New System.Drawing.Point(1, 9)
         Me.modificar.Name = "modificar"
         Me.modificar.Size = New System.Drawing.Size(775, 40)
@@ -135,37 +135,37 @@ Partial Class FrmModificarGerente
         Me.DgvDatos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(73, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvDatos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(73, Byte), Integer))
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvDatos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.DgvDatos.ColumnHeadersHeight = 30
         Me.DgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvDatos.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvDatos.DefaultCellStyle = DataGridViewCellStyle11
         Me.DgvDatos.EnableHeadersVisualStyles = False
         Me.DgvDatos.GridColor = System.Drawing.Color.SteelBlue
         Me.DgvDatos.Location = New System.Drawing.Point(12, 66)
         Me.DgvDatos.Name = "DgvDatos"
         Me.DgvDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvDatos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvDatos.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.DgvDatos.Size = New System.Drawing.Size(748, 141)
         Me.DgvDatos.TabIndex = 6
         '
@@ -173,7 +173,7 @@ Partial Class FrmModificarGerente
         '
         Me.modifAclaracion.AutoSize = True
         Me.modifAclaracion.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.modifAclaracion.ForeColor = System.Drawing.Color.Silver
+        Me.modifAclaracion.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.modifAclaracion.Location = New System.Drawing.Point(13, 46)
         Me.modifAclaracion.Name = "modifAclaracion"
         Me.modifAclaracion.Size = New System.Drawing.Size(337, 17)
@@ -228,7 +228,7 @@ Partial Class FrmModificarGerente
         '
         Me.lbNomSint.AutoSize = True
         Me.lbNomSint.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbNomSint.ForeColor = System.Drawing.Color.Silver
+        Me.lbNomSint.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lbNomSint.Location = New System.Drawing.Point(3, 5)
         Me.lbNomSint.Name = "lbNomSint"
         Me.lbNomSint.Size = New System.Drawing.Size(68, 21)
@@ -647,7 +647,7 @@ Partial Class FrmModificarGerente
         '
         Me.lbDescripcion.AutoSize = True
         Me.lbDescripcion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbDescripcion.ForeColor = System.Drawing.Color.Silver
+        Me.lbDescripcion.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lbDescripcion.Location = New System.Drawing.Point(10, 76)
         Me.lbDescripcion.Name = "lbDescripcion"
         Me.lbDescripcion.Size = New System.Drawing.Size(109, 21)
@@ -658,7 +658,7 @@ Partial Class FrmModificarGerente
         '
         Me.lbRiesgo.AutoSize = True
         Me.lbRiesgo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbRiesgo.ForeColor = System.Drawing.Color.Silver
+        Me.lbRiesgo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lbRiesgo.Location = New System.Drawing.Point(422, 8)
         Me.lbRiesgo.Name = "lbRiesgo"
         Me.lbRiesgo.Size = New System.Drawing.Size(64, 21)
@@ -669,23 +669,23 @@ Partial Class FrmModificarGerente
         '
         Me.lbNomEnf.AutoSize = True
         Me.lbNomEnf.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbNomEnf.ForeColor = System.Drawing.Color.Silver
+        Me.lbNomEnf.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lbNomEnf.Location = New System.Drawing.Point(10, 8)
         Me.lbNomEnf.Name = "lbNomEnf"
         Me.lbNomEnf.Size = New System.Drawing.Size(75, 21)
         Me.lbNomEnf.TabIndex = 61
         Me.lbNomEnf.Text = "NOMBRE"
         '
-        'Label20
+        'filtro
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.Silver
-        Me.Label20.Location = New System.Drawing.Point(16, 165)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(46, 21)
-        Me.Label20.TabIndex = 4
-        Me.Label20.Text = "Filtro"
+        Me.filtro.AutoSize = True
+        Me.filtro.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.filtro.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.filtro.Location = New System.Drawing.Point(12, 213)
+        Me.filtro.Name = "filtro"
+        Me.filtro.Size = New System.Drawing.Size(46, 21)
+        Me.filtro.TabIndex = 4
+        Me.filtro.Text = "Filtro"
         '
         'cbFiltro
         '
@@ -706,7 +706,7 @@ Partial Class FrmModificarGerente
         Me.cbFiltro.ItemHeight = 30
         Me.cbFiltro.Items.AddRange(New Object() {"Medicos", "Enfermedades", "Sintomas"})
         Me.cbFiltro.ItemsAppearance.Parent = Me.cbFiltro
-        Me.cbFiltro.Location = New System.Drawing.Point(12, 213)
+        Me.cbFiltro.Location = New System.Drawing.Point(12, 230)
         Me.cbFiltro.Name = "cbFiltro"
         Me.cbFiltro.ShadowDecoration.Parent = Me.cbFiltro
         Me.cbFiltro.Size = New System.Drawing.Size(213, 36)
@@ -776,7 +776,7 @@ Partial Class FrmModificarGerente
         '
         Me.Persona_sNom.AutoSize = True
         Me.Persona_sNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_sNom.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_sNom.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_sNom.Location = New System.Drawing.Point(524, 10)
         Me.Persona_sNom.Name = "Persona_sNom"
         Me.Persona_sNom.Size = New System.Drawing.Size(134, 21)
@@ -816,7 +816,7 @@ Partial Class FrmModificarGerente
         '
         Me.Persona_domicilio.AutoSize = True
         Me.Persona_domicilio.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_domicilio.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_domicilio.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_domicilio.Location = New System.Drawing.Point(4, 182)
         Me.Persona_domicilio.Name = "Persona_domicilio"
         Me.Persona_domicilio.Size = New System.Drawing.Size(76, 21)
@@ -827,7 +827,7 @@ Partial Class FrmModificarGerente
         '
         Me.Persona_edad.AutoSize = True
         Me.Persona_edad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_edad.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_edad.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_edad.Location = New System.Drawing.Point(266, 120)
         Me.Persona_edad.Name = "Persona_edad"
         Me.Persona_edad.Size = New System.Drawing.Size(44, 21)
@@ -838,7 +838,7 @@ Partial Class FrmModificarGerente
         '
         Me.Persona_tel.AutoSize = True
         Me.Persona_tel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_tel.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_tel.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_tel.Location = New System.Drawing.Point(524, 120)
         Me.Persona_tel.Name = "Persona_tel"
         Me.Persona_tel.Size = New System.Drawing.Size(68, 21)
@@ -849,7 +849,7 @@ Partial Class FrmModificarGerente
         '
         Me.Persona_sApe.AutoSize = True
         Me.Persona_sApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_sApe.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_sApe.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_sApe.Location = New System.Drawing.Point(524, 63)
         Me.Persona_sApe.Name = "Persona_sApe"
         Me.Persona_sApe.Size = New System.Drawing.Size(133, 21)
@@ -860,7 +860,7 @@ Partial Class FrmModificarGerente
         '
         Me.Persona_sexo.AutoSize = True
         Me.Persona_sexo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_sexo.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_sexo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_sexo.Location = New System.Drawing.Point(4, 120)
         Me.Persona_sexo.Name = "Persona_sexo"
         Me.Persona_sexo.Size = New System.Drawing.Size(43, 21)
@@ -871,7 +871,7 @@ Partial Class FrmModificarGerente
         '
         Me.Persona_lugarTrabajo.AutoSize = True
         Me.Persona_lugarTrabajo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_lugarTrabajo.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_lugarTrabajo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_lugarTrabajo.Location = New System.Drawing.Point(378, 180)
         Me.Persona_lugarTrabajo.Name = "Persona_lugarTrabajo"
         Me.Persona_lugarTrabajo.Size = New System.Drawing.Size(126, 21)
@@ -882,7 +882,7 @@ Partial Class FrmModificarGerente
         '
         Me.Persona_pApe.AutoSize = True
         Me.Persona_pApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_pApe.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_pApe.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_pApe.Location = New System.Drawing.Point(266, 63)
         Me.Persona_pApe.Name = "Persona_pApe"
         Me.Persona_pApe.Size = New System.Drawing.Size(118, 21)
@@ -893,7 +893,7 @@ Partial Class FrmModificarGerente
         '
         Me.Persona_especialidad.AutoSize = True
         Me.Persona_especialidad.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_especialidad.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_especialidad.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_especialidad.Location = New System.Drawing.Point(6, 60)
         Me.Persona_especialidad.Name = "Persona_especialidad"
         Me.Persona_especialidad.Size = New System.Drawing.Size(109, 21)
@@ -904,7 +904,7 @@ Partial Class FrmModificarGerente
         '
         Me.Persona_pNom.AutoSize = True
         Me.Persona_pNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_pNom.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_pNom.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_pNom.Location = New System.Drawing.Point(279, 4)
         Me.Persona_pNom.Name = "Persona_pNom"
         Me.Persona_pNom.Size = New System.Drawing.Size(119, 21)
@@ -915,7 +915,7 @@ Partial Class FrmModificarGerente
         '
         Me.Persona_ci.AutoSize = True
         Me.Persona_ci.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_ci.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_ci.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_ci.Location = New System.Drawing.Point(7, 1)
         Me.Persona_ci.Name = "Persona_ci"
         Me.Persona_ci.Size = New System.Drawing.Size(58, 21)
@@ -1040,7 +1040,7 @@ Partial Class FrmModificarGerente
         '
         Me.Jue.AutoSize = True
         Me.Jue.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Jue.ForeColor = System.Drawing.Color.Silver
+        Me.Jue.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Jue.Location = New System.Drawing.Point(366, 4)
         Me.Jue.Name = "Jue"
         Me.Jue.Size = New System.Drawing.Size(56, 21)
@@ -1051,7 +1051,7 @@ Partial Class FrmModificarGerente
         '
         Me.txtHoraEntradaDomingo.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtHoraEntradaDomingo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHoraEntradaDomingo.ForeColor = System.Drawing.Color.Silver
+        Me.txtHoraEntradaDomingo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtHoraEntradaDomingo.Location = New System.Drawing.Point(654, 43)
         Me.txtHoraEntradaDomingo.MaxLength = 13
         Me.txtHoraEntradaDomingo.Name = "txtHoraEntradaDomingo"
@@ -1062,7 +1062,7 @@ Partial Class FrmModificarGerente
         '
         Me.Sab.AutoSize = True
         Me.Sab.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Sab.ForeColor = System.Drawing.Color.Silver
+        Me.Sab.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Sab.Location = New System.Drawing.Point(561, 5)
         Me.Sab.Name = "Sab"
         Me.Sab.Size = New System.Drawing.Size(62, 21)
@@ -1073,7 +1073,7 @@ Partial Class FrmModificarGerente
         '
         Me.txtHoraEntradaSabado.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtHoraEntradaSabado.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHoraEntradaSabado.ForeColor = System.Drawing.Color.Silver
+        Me.txtHoraEntradaSabado.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtHoraEntradaSabado.Location = New System.Drawing.Point(556, 43)
         Me.txtHoraEntradaSabado.MaxLength = 13
         Me.txtHoraEntradaSabado.Name = "txtHoraEntradaSabado"
@@ -1084,7 +1084,7 @@ Partial Class FrmModificarGerente
         '
         Me.Dom.AutoSize = True
         Me.Dom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Dom.ForeColor = System.Drawing.Color.Silver
+        Me.Dom.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Dom.Location = New System.Drawing.Point(660, 5)
         Me.Dom.Name = "Dom"
         Me.Dom.Size = New System.Drawing.Size(75, 21)
@@ -1095,7 +1095,7 @@ Partial Class FrmModificarGerente
         '
         Me.txtHoraEntradaViernes.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtHoraEntradaViernes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHoraEntradaViernes.ForeColor = System.Drawing.Color.Silver
+        Me.txtHoraEntradaViernes.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtHoraEntradaViernes.Location = New System.Drawing.Point(458, 43)
         Me.txtHoraEntradaViernes.MaxLength = 13
         Me.txtHoraEntradaViernes.Name = "txtHoraEntradaViernes"
@@ -1106,7 +1106,7 @@ Partial Class FrmModificarGerente
         '
         Me.txtHoraEntradaMiercoles.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtHoraEntradaMiercoles.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHoraEntradaMiercoles.ForeColor = System.Drawing.Color.Silver
+        Me.txtHoraEntradaMiercoles.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtHoraEntradaMiercoles.Location = New System.Drawing.Point(262, 43)
         Me.txtHoraEntradaMiercoles.MaxLength = 13
         Me.txtHoraEntradaMiercoles.Name = "txtHoraEntradaMiercoles"
@@ -1117,7 +1117,7 @@ Partial Class FrmModificarGerente
         '
         Me.txtHoraEntradaJueves.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtHoraEntradaJueves.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHoraEntradaJueves.ForeColor = System.Drawing.Color.Silver
+        Me.txtHoraEntradaJueves.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtHoraEntradaJueves.Location = New System.Drawing.Point(360, 43)
         Me.txtHoraEntradaJueves.MaxLength = 13
         Me.txtHoraEntradaJueves.Name = "txtHoraEntradaJueves"
@@ -1128,7 +1128,7 @@ Partial Class FrmModificarGerente
         '
         Me.Vie.AutoSize = True
         Me.Vie.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Vie.ForeColor = System.Drawing.Color.Silver
+        Me.Vie.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Vie.Location = New System.Drawing.Point(463, 4)
         Me.Vie.Name = "Vie"
         Me.Vie.Size = New System.Drawing.Size(62, 21)
@@ -1139,7 +1139,7 @@ Partial Class FrmModificarGerente
         '
         Me.txtHoraEntradaMartes.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtHoraEntradaMartes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHoraEntradaMartes.ForeColor = System.Drawing.Color.Silver
+        Me.txtHoraEntradaMartes.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtHoraEntradaMartes.Location = New System.Drawing.Point(164, 43)
         Me.txtHoraEntradaMartes.MaxLength = 13
         Me.txtHoraEntradaMartes.Name = "txtHoraEntradaMartes"
@@ -1150,7 +1150,7 @@ Partial Class FrmModificarGerente
         '
         Me.txtHoraEntradaLunes.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.txtHoraEntradaLunes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHoraEntradaLunes.ForeColor = System.Drawing.Color.Silver
+        Me.txtHoraEntradaLunes.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtHoraEntradaLunes.Location = New System.Drawing.Point(66, 43)
         Me.txtHoraEntradaLunes.MaxLength = 13
         Me.txtHoraEntradaLunes.Name = "txtHoraEntradaLunes"
@@ -1161,7 +1161,7 @@ Partial Class FrmModificarGerente
         '
         Me.Mie.AutoSize = True
         Me.Mie.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Mie.ForeColor = System.Drawing.Color.Silver
+        Me.Mie.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Mie.Location = New System.Drawing.Point(251, 4)
         Me.Mie.Name = "Mie"
         Me.Mie.Size = New System.Drawing.Size(77, 21)
@@ -1172,7 +1172,7 @@ Partial Class FrmModificarGerente
         '
         Me.Mar.AutoSize = True
         Me.Mar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Mar.ForeColor = System.Drawing.Color.Silver
+        Me.Mar.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Mar.Location = New System.Drawing.Point(176, 4)
         Me.Mar.Name = "Mar"
         Me.Mar.Size = New System.Drawing.Size(58, 21)
@@ -1183,7 +1183,7 @@ Partial Class FrmModificarGerente
         '
         Me.Lun.AutoSize = True
         Me.Lun.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lun.ForeColor = System.Drawing.Color.Silver
+        Me.Lun.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Lun.Location = New System.Drawing.Point(80, 5)
         Me.Lun.Name = "Lun"
         Me.Lun.Size = New System.Drawing.Size(51, 21)
@@ -1194,7 +1194,7 @@ Partial Class FrmModificarGerente
         '
         Me.horaEjemplo.AutoSize = True
         Me.horaEjemplo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.horaEjemplo.ForeColor = System.Drawing.Color.Silver
+        Me.horaEjemplo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.horaEjemplo.Location = New System.Drawing.Point(7, 73)
         Me.horaEjemplo.Name = "horaEjemplo"
         Me.horaEjemplo.Size = New System.Drawing.Size(168, 21)
@@ -1205,7 +1205,7 @@ Partial Class FrmModificarGerente
         '
         Me.Mhora.AutoSize = True
         Me.Mhora.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Mhora.ForeColor = System.Drawing.Color.Silver
+        Me.Mhora.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Mhora.Location = New System.Drawing.Point(9, 43)
         Me.Mhora.Name = "Mhora"
         Me.Mhora.Size = New System.Drawing.Size(44, 21)
@@ -1523,7 +1523,7 @@ Partial Class FrmModificarGerente
         Me.Controls.Add(Me.cbFiltro)
         Me.Controls.Add(Me.DgvDatos)
         Me.Controls.Add(Me.modificar)
-        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.filtro)
         Me.Controls.Add(Me.modifAclaracion)
         Me.Controls.Add(Me.PanelModSintoma)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -1552,7 +1552,7 @@ Partial Class FrmModificarGerente
     Friend WithEvents PanelModSintoma As Panel
     Friend WithEvents lbNomSint As Label
     Friend WithEvents PanelModEnfermedad As Panel
-    Friend WithEvents Label20 As Label
+    Friend WithEvents filtro As Label
     Friend WithEvents cbFiltro As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents btn_modificar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtDescripcion As Guna.UI2.WinForms.Guna2TextBox

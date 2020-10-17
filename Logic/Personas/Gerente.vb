@@ -119,6 +119,10 @@ Public Class Gerente
             Throw New SystemException(ex.Message)
         End Try
     End Function
+
+    Public Overrides Function ComprobarContraseña() As Boolean
+        Return cons.ComprobarContraseña(Me._contraseña)
+    End Function
 #End Region
 
 End Class

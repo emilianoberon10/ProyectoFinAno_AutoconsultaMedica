@@ -224,7 +224,9 @@ Public Class Medico
     Public Overrides Function ObtenerNombre() As String
         Return cons.ObtenerNombre(Me._numMed)
     End Function
-
+    Public Overrides Function ComprobarContraseña() As Boolean
+        Return cons.ComprobarContraseña(Me._contraseña)
+    End Function
 #End Region
 
 End Class

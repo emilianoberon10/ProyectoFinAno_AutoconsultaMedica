@@ -416,6 +416,55 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+        '''&lt;root&gt;
+        '''  &lt;!-- 
+        '''    Microsoft ResX Schema 
+        '''    
+        '''    Version 2.0
+        '''    
+        '''    The primary goals of this format is to allow a simple XML format 
+        '''    that is mostly human readable. The generation and parsing of the 
+        '''    various data types are done through the TypeConverter classes 
+        '''    associated with the data types.
+        '''    
+        '''    Example:
+        '''    
+        '''    ... ado.net/XML headers &amp; schema ...
+        '''    &lt;resheader name=&quot;resmimetype&quot;&gt;text/microsoft-resx&lt;/resheader&gt;
+        '''    &lt;resheader n [resto de la cadena truncado]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property Español() As String
+            Get
+                Return ResourceManager.GetString("Español", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a &apos;------------------------------------------------------------------------------
+        '''&apos; &lt;auto-generated&gt;
+        '''&apos;     Este código fue generado por una herramienta.
+        '''&apos;     Versión de runtime:4.0.30319.42000
+        '''&apos;
+        '''&apos;     Los cambios en este archivo podrían causar un comportamiento incorrecto y se perderán si
+        '''&apos;     se vuelve a generar el código.
+        '''&apos; &lt;/auto-generated&gt;
+        '''&apos;------------------------------------------------------------------------------
+        '''
+        '''Option Strict On
+        '''Option Explicit On
+        '''
+        '''Imports System
+        '''
+        '''Namespace My.Reso [resto de la cadena truncado]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property Español_Designer() As String
+            Get
+                Return ResourceManager.GetString("Español_Designer", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Por favor espere.
         '''</summary>
         Friend Shared ReadOnly Property EsperaChat() As String
@@ -520,6 +569,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property lbCambiarContraseña() As String
             Get
                 Return ResourceManager.GetString("lbCambiarContraseña", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Cambiar.
+        '''</summary>
+        Friend Shared ReadOnly Property lbCambiarFoto() As String
+            Get
+                Return ResourceManager.GetString("lbCambiarFoto", resourceCulture)
             End Get
         End Property
         
@@ -629,6 +687,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property lbRiesgo() As String
             Get
                 Return ResourceManager.GetString("lbRiesgo", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a De click en la imagen.
+        '''</summary>
+        Friend Shared ReadOnly Property lbSelecImagen() As String
+            Get
+                Return ResourceManager.GetString("lbSelecImagen", resourceCulture)
             End Get
         End Property
         

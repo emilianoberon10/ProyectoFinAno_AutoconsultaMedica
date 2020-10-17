@@ -310,7 +310,7 @@ Public Class DBMedicos : Inherits ConexionBD
         consulta = "SELECT ci, CONCAT(pNom,' ',pape) as 'Nombre',estado,fecha,idChat FROM persona
                     JOIN chat ON ci=ciPac
                     WHERE chat.idMed=" & ci & "
-                    ORDER BY idchat DESC;"
+                    ORDER BY fecha DESC;"
         Return DevolverTabla(consulta)
     End Function
 
@@ -349,12 +349,34 @@ Public Class DBMedicos : Inherits ConexionBD
                     While (reader.Read())
                         msj = reader.GetString(0)
                     End While
-                    reader.Dispose()
                 End If
 
             End Using
         End Using
         Return msj
     End Function
+    Public Function ComprobarContraseña(contraseña) As Boolean
 
+        Using _connection = GetConnection()
+            _connection.Open()
+
+            Using _command = New MySqlCommand
+                _command.Connection = _connection
+
+                _command.CommandText = "SELECT * FROM paciente WHERE EXISTS (SELECT contrasena FROM paciente WHERE contrasena=@pass);"
+                _command.Parameters.AddWithValue("@pass", contraseña)
+                _command.CommandType = CommandType.Text
+                Dim reader As MySqlDataReader = _command.ExecuteReader
+
+                If reader.HasRows Then
+
+                    Return True
+                Else
+                    Return False
+                End If
+
+            End Using
+        End Using
+
+    End Function
 End Class

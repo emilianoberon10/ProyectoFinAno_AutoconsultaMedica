@@ -23,6 +23,7 @@ Partial Class FrmOpcionesUsuario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmOpcionesUsuario))
         Me.lbUsuario = New System.Windows.Forms.Label()
         Me.txtContraseña1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lbCambiarContraseña = New System.Windows.Forms.Label()
@@ -46,11 +47,13 @@ Partial Class FrmOpcionesUsuario
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ofdFoto = New System.Windows.Forms.OpenFileDialog()
         Me.dgvDatosUsuario = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lbSelecImagen = New System.Windows.Forms.Label()
         Me.txtTel = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Persona_tel = New System.Windows.Forms.Label()
         Me.txtDir = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Persona_direccion = New System.Windows.Forms.Label()
+        Me.txtContraActual = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Persona_pass = New System.Windows.Forms.Label()
         CType(Me.fotoPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvDatosUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,7 +88,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtContraseña1.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtContraseña1.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtContraseña1.HoverState.Parent = Me.txtContraseña1
-        Me.txtContraseña1.Location = New System.Drawing.Point(10, 136)
+        Me.txtContraseña1.Location = New System.Drawing.Point(10, 169)
         Me.txtContraseña1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtContraseña1.Name = "txtContraseña1"
         Me.txtContraseña1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -95,7 +98,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtContraseña1.ShadowDecoration.Parent = Me.txtContraseña1
         Me.txtContraseña1.Size = New System.Drawing.Size(180, 30)
         Me.txtContraseña1.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtContraseña1.TabIndex = 1
+        Me.txtContraseña1.TabIndex = 2
         '
         'lbCambiarContraseña
         '
@@ -124,7 +127,7 @@ Partial Class FrmOpcionesUsuario
         Me.RecuperarPass_passNueva2.AutoSize = True
         Me.RecuperarPass_passNueva2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RecuperarPass_passNueva2.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.RecuperarPass_passNueva2.Location = New System.Drawing.Point(213, 110)
+        Me.RecuperarPass_passNueva2.Location = New System.Drawing.Point(213, 143)
         Me.RecuperarPass_passNueva2.Name = "RecuperarPass_passNueva2"
         Me.RecuperarPass_passNueva2.Size = New System.Drawing.Size(180, 21)
         Me.RecuperarPass_passNueva2.TabIndex = 16
@@ -135,7 +138,7 @@ Partial Class FrmOpcionesUsuario
         Me.RecuperarPass_passNueva.AutoSize = True
         Me.RecuperarPass_passNueva.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RecuperarPass_passNueva.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.RecuperarPass_passNueva.Location = New System.Drawing.Point(10, 110)
+        Me.RecuperarPass_passNueva.Location = New System.Drawing.Point(10, 143)
         Me.RecuperarPass_passNueva.Name = "RecuperarPass_passNueva"
         Me.RecuperarPass_passNueva.Size = New System.Drawing.Size(135, 21)
         Me.RecuperarPass_passNueva.TabIndex = 17
@@ -159,7 +162,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtContraseña2.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtContraseña2.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtContraseña2.HoverState.Parent = Me.txtContraseña2
-        Me.txtContraseña2.Location = New System.Drawing.Point(213, 136)
+        Me.txtContraseña2.Location = New System.Drawing.Point(213, 169)
         Me.txtContraseña2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtContraseña2.Name = "txtContraseña2"
         Me.txtContraseña2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -169,7 +172,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtContraseña2.ShadowDecoration.Parent = Me.txtContraseña2
         Me.txtContraseña2.Size = New System.Drawing.Size(180, 30)
         Me.txtContraseña2.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtContraseña2.TabIndex = 2
+        Me.txtContraseña2.TabIndex = 3
         '
         'btn_modificar
         '
@@ -185,7 +188,7 @@ Partial Class FrmOpcionesUsuario
         Me.btn_modificar.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn_modificar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btn_modificar.HoverState.Parent = Me.btn_modificar
-        Me.btn_modificar.Location = New System.Drawing.Point(409, 130)
+        Me.btn_modificar.Location = New System.Drawing.Point(410, 163)
         Me.btn_modificar.Name = "btn_modificar"
         Me.btn_modificar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.btn_modificar.ShadowDecoration.BorderRadius = 20
@@ -217,7 +220,6 @@ Partial Class FrmOpcionesUsuario
         Me.txtPnom.HoverState.Parent = Me.txtPnom
         Me.txtPnom.Location = New System.Drawing.Point(11, 293)
         Me.txtPnom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtPnom.MaxLength = 30
         Me.txtPnom.Name = "txtPnom"
         Me.txtPnom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPnom.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -248,7 +250,6 @@ Partial Class FrmOpcionesUsuario
         Me.txtPape.HoverState.Parent = Me.txtPape
         Me.txtPape.Location = New System.Drawing.Point(11, 369)
         Me.txtPape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtPape.MaxLength = 30
         Me.txtPape.Name = "txtPape"
         Me.txtPape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPape.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -279,7 +280,6 @@ Partial Class FrmOpcionesUsuario
         Me.txtEdad.HoverState.Parent = Me.txtEdad
         Me.txtEdad.Location = New System.Drawing.Point(11, 437)
         Me.txtEdad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtEdad.MaxLength = 3
         Me.txtEdad.Name = "txtEdad"
         Me.txtEdad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtEdad.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -310,7 +310,6 @@ Partial Class FrmOpcionesUsuario
         Me.txtSnom.HoverState.Parent = Me.txtSnom
         Me.txtSnom.Location = New System.Drawing.Point(214, 293)
         Me.txtSnom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtSnom.MaxLength = 30
         Me.txtSnom.Name = "txtSnom"
         Me.txtSnom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSnom.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -341,7 +340,6 @@ Partial Class FrmOpcionesUsuario
         Me.txtSape.HoverState.Parent = Me.txtSape
         Me.txtSape.Location = New System.Drawing.Point(214, 369)
         Me.txtSape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtSape.MaxLength = 30
         Me.txtSape.Name = "txtSape"
         Me.txtSape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSape.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -448,6 +446,7 @@ Partial Class FrmOpcionesUsuario
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
+        Me.ErrorProvider1.Icon = CType(resources.GetObject("ErrorProvider1.Icon"), System.Drawing.Icon)
         '
         'ofdFoto
         '
@@ -462,16 +461,16 @@ Partial Class FrmOpcionesUsuario
         Me.dgvDatosUsuario.TabIndex = 20
         Me.dgvDatosUsuario.Visible = False
         '
-        'Label1
+        'lbSelecImagen
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label1.Location = New System.Drawing.Point(415, 273)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(125, 17)
-        Me.Label1.TabIndex = 17
-        Me.Label1.Text = "de click en la imagen"
+        Me.lbSelecImagen.AutoSize = True
+        Me.lbSelecImagen.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbSelecImagen.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.lbSelecImagen.Location = New System.Drawing.Point(413, 273)
+        Me.lbSelecImagen.Name = "lbSelecImagen"
+        Me.lbSelecImagen.Size = New System.Drawing.Size(127, 17)
+        Me.lbSelecImagen.TabIndex = 17
+        Me.lbSelecImagen.Text = "De click en la imagen"
         '
         'txtTel
         '
@@ -555,6 +554,47 @@ Partial Class FrmOpcionesUsuario
         Me.Persona_direccion.TabIndex = 17
         Me.Persona_direccion.Text = "Direccion"
         '
+        'txtContraActual
+        '
+        Me.txtContraActual.Animated = True
+        Me.txtContraActual.BorderThickness = 2
+        Me.txtContraActual.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtContraActual.DefaultText = ""
+        Me.txtContraActual.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtContraActual.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtContraActual.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtContraActual.DisabledState.Parent = Me.txtContraActual
+        Me.txtContraActual.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtContraActual.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.txtContraActual.FocusedState.BorderColor = System.Drawing.Color.Cyan
+        Me.txtContraActual.FocusedState.Parent = Me.txtContraActual
+        Me.txtContraActual.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtContraActual.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtContraActual.HoverState.BorderColor = System.Drawing.Color.Cyan
+        Me.txtContraActual.HoverState.Parent = Me.txtContraActual
+        Me.txtContraActual.Location = New System.Drawing.Point(10, 108)
+        Me.txtContraActual.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtContraActual.Name = "txtContraActual"
+        Me.txtContraActual.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtContraActual.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtContraActual.PlaceholderText = ""
+        Me.txtContraActual.SelectedText = ""
+        Me.txtContraActual.ShadowDecoration.Parent = Me.txtContraActual
+        Me.txtContraActual.Size = New System.Drawing.Size(180, 30)
+        Me.txtContraActual.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.txtContraActual.TabIndex = 1
+        '
+        'Persona_pass
+        '
+        Me.Persona_pass.AutoSize = True
+        Me.Persona_pass.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Persona_pass.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Persona_pass.Location = New System.Drawing.Point(10, 82)
+        Me.Persona_pass.Name = "Persona_pass"
+        Me.Persona_pass.Size = New System.Drawing.Size(89, 21)
+        Me.Persona_pass.TabIndex = 17
+        Me.Persona_pass.Text = "Contraseña"
+        '
         'FrmOpcionesUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -571,9 +611,10 @@ Partial Class FrmOpcionesUsuario
         Me.Controls.Add(Me.Persona_tel)
         Me.Controls.Add(Me.Persona_edad)
         Me.Controls.Add(Me.Persona_pApe)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lbSelecImagen)
         Me.Controls.Add(Me.Persona_sNom)
         Me.Controls.Add(Me.Persona_pNom)
+        Me.Controls.Add(Me.Persona_pass)
         Me.Controls.Add(Me.RecuperarPass_passNueva)
         Me.Controls.Add(Me.txtContraseña2)
         Me.Controls.Add(Me.txtSape)
@@ -583,6 +624,7 @@ Partial Class FrmOpcionesUsuario
         Me.Controls.Add(Me.txtSnom)
         Me.Controls.Add(Me.txtPape)
         Me.Controls.Add(Me.txtPnom)
+        Me.Controls.Add(Me.txtContraActual)
         Me.Controls.Add(Me.txtContraseña1)
         Me.Controls.Add(Me.lbActuDatos)
         Me.Controls.Add(Me.lbCambiarContraseña)
@@ -621,9 +663,11 @@ Partial Class FrmOpcionesUsuario
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents ofdFoto As OpenFileDialog
     Friend WithEvents dgvDatosUsuario As DataGridView
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lbSelecImagen As Label
     Friend WithEvents Persona_direccion As Label
     Friend WithEvents Persona_tel As Label
     Friend WithEvents txtDir As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtTel As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Persona_pass As Label
+    Friend WithEvents txtContraActual As Guna.UI2.WinForms.Guna2TextBox
 End Class

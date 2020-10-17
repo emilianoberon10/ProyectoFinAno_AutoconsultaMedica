@@ -39,6 +39,7 @@ Partial Class FrmMedPrincipal
         Me.lbNombre = New System.Windows.Forms.Label()
         Me.panelChildMedico = New System.Windows.Forms.Panel()
         Me.ofdFoto = New System.Windows.Forms.OpenFileDialog()
+        Me.lbCambiarFoto = New System.Windows.Forms.Label()
         Me.TopPanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,7 +78,7 @@ Partial Class FrmMedPrincipal
         '
         Me.app_titulo.AutoSize = True
         Me.app_titulo.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.app_titulo.ForeColor = System.Drawing.Color.Silver
+        Me.app_titulo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.app_titulo.Location = New System.Drawing.Point(39, 8)
         Me.app_titulo.Name = "app_titulo"
         Me.app_titulo.Size = New System.Drawing.Size(353, 25)
@@ -205,6 +206,7 @@ Partial Class FrmMedPrincipal
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(73, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.lbCambiarFoto)
         Me.Panel3.Controls.Add(Me.btnChangeLanguage)
         Me.Panel3.Controls.Add(Me.fotoPerfil)
         Me.Panel3.Controls.Add(Me.btnOpciones)
@@ -253,7 +255,7 @@ Partial Class FrmMedPrincipal
         'lbNombre
         '
         Me.lbNombre.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbNombre.ForeColor = System.Drawing.Color.Silver
+        Me.lbNombre.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lbNombre.Location = New System.Drawing.Point(0, 157)
         Me.lbNombre.Name = "lbNombre"
         Me.lbNombre.Size = New System.Drawing.Size(222, 19)
@@ -273,6 +275,18 @@ Partial Class FrmMedPrincipal
         'ofdFoto
         '
         Me.ofdFoto.FileName = "OpenFileDialog1"
+        '
+        'lbCambiarFoto
+        '
+        Me.lbCambiarFoto.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lbCambiarFoto.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbCambiarFoto.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.lbCambiarFoto.Location = New System.Drawing.Point(117, 127)
+        Me.lbCambiarFoto.Name = "lbCambiarFoto"
+        Me.lbCambiarFoto.Size = New System.Drawing.Size(60, 19)
+        Me.lbCambiarFoto.TabIndex = 3
+        Me.lbCambiarFoto.Text = "Cambiar"
+        Me.lbCambiarFoto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmMedPrincipal
         '
@@ -319,4 +333,5 @@ Partial Class FrmMedPrincipal
     Friend WithEvents btn_cerrarSesion As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents fotoPerfil As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents btnChangeLanguage As PictureBox
+    Friend WithEvents lbCambiarFoto As Label
 End Class

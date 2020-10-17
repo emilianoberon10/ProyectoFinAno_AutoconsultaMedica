@@ -46,7 +46,7 @@ Public Class FrmPrincipalGerente
         End If
     End Sub
 
-    Private Sub fotoPerfil_Click(sender As Object, e As EventArgs) Handles fotoPerfil.Click
+    Private Sub fotoPerfil_Click(sender As Object, e As EventArgs) Handles fotoPerfil.Click, lbCambiarFoto.Click
         GuardarImagen(FrmLogIn.gere._ci, ofdFoto, fotoPerfil)
 
     End Sub

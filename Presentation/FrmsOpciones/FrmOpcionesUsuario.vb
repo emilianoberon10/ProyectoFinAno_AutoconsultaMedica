@@ -98,6 +98,8 @@
     End Sub
 
     Private Sub btn_cambiar_Click(sender As Object, e As EventArgs) Handles btn_modificar.Click
+        ErrorProvider1.Clear()
+
         If txtContraseña1.Text IsNot "" OrElse txtContraseña2.Text IsNot "" Then
 
             If txtContraseña1.TextLength >= 8 Then
@@ -109,21 +111,66 @@
                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
                         Select Case FrmLogIn.tipoLogin
                             Case "Paciente"
-                                FrmLogIn.paci._contraseña = txtContraseña2.Text
-                                FrmLogIn.paci.EncriptarContraseña()
-                                FrmLogIn.paci.ModificarContraseña()
+                                With FrmLogIn.paci
+                                    ._contraseña = txtContraActual.Text
+                                    .EncriptarContraseña()
+
+                                    If .ComprobarContraseña Then
+                                        ._contraseña = txtContraseña2.Text
+                                        .EncriptarContraseña()
+                                        If .ModificarContraseña() Then
+                                            GetForm(Estado.Ok, "Se modifico con exito")
+                                        Else
+                                            GetForm(Estado.Error, "No se pudo modificar la contraseña")
+                                            ErrorProvider1.SetError(lbUsuario, "No se pudo modificar la contraseña")
+                                        End If
+                                    Else
+                                        ErrorProvider1.SetError(Persona_pass, "La contraseña actual es incorrecta")
+                                    End If
+
+                                End With
                             Case "Gerente"
-                                FrmLogIn.gere._contraseña = txtContraseña2.Text
-                                FrmLogIn.gere.EncriptarContraseña()
-                                FrmLogIn.gere.ModificarContraseña()
+                                With FrmLogIn.gere
+                                    ._contraseña = txtContraActual.Text
+                                    .EncriptarContraseña()
+
+                                    If .ComprobarContraseña Then
+                                        ._contraseña = txtContraseña2.Text
+                                        .EncriptarContraseña()
+                                        If .ModificarContraseña() Then
+                                            GetForm(Estado.Ok, "Se modifico con exito")
+                                        Else
+                                            GetForm(Estado.Error, "No se pudo modificar la contraseña")
+                                            ErrorProvider1.SetError(lbUsuario, "No se pudo modificar la contraseña")
+                                        End If
+                                    Else
+                                        ErrorProvider1.SetError(Persona_pass, "La contraseña actual es incorrecta")
+                                    End If
+                                End With
                             Case "Medico"
-                                FrmLogIn.medic._contraseña = txtContraseña2.Text
-                                FrmLogIn.medic.EncriptarContraseña()
-                                FrmLogIn.medic.ModificarContraseña()
+                                With FrmLogIn.medic
+                                    ._contraseña = txtContraActual.Text
+                                    .EncriptarContraseña()
+
+                                    If .ComprobarContraseña Then
+                                        ._contraseña = txtContraseña2.Text
+                                        .EncriptarContraseña()
+                                        If .ModificarContraseña() Then
+                                            GetForm(Estado.Ok, "Se modifico con exito")
+                                        Else
+                                            GetForm(Estado.Error, "No se pudo modificar la contraseña")
+                                            ErrorProvider1.SetError(lbUsuario, "No se pudo modificar la contraseña")
+                                        End If
+                                    Else
+                                        ErrorProvider1.SetError(Persona_pass, "La contraseña actual es incorrecta")
+                                    End If
+                                End With
                         End Select
+                        txtContraActual.Text = ""
                         txtContraseña1.Text = ""
                         txtContraseña2.Text = ""
                     Else
+                        txtContraActual.Text = ""
                         txtContraseña1.Text = ""
                         txtContraseña2.Text = ""
                     End If

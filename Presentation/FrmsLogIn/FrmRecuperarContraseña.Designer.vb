@@ -50,7 +50,8 @@ Partial Class FrmRecuperarContraseña
         '
         'RecuperarPass_titulo
         '
-        Me.RecuperarPass_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecuperarPass_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecuperarPass_titulo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.RecuperarPass_titulo.Location = New System.Drawing.Point(0, 5)
         Me.RecuperarPass_titulo.Name = "RecuperarPass_titulo"
         Me.RecuperarPass_titulo.Size = New System.Drawing.Size(454, 40)
@@ -74,7 +75,7 @@ Partial Class FrmRecuperarContraseña
         '
         Me.Persona_ci.AutoSize = True
         Me.Persona_ci.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_ci.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_ci.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_ci.Location = New System.Drawing.Point(20, 61)
         Me.Persona_ci.Name = "Persona_ci"
         Me.Persona_ci.Size = New System.Drawing.Size(127, 21)
@@ -115,7 +116,7 @@ Partial Class FrmRecuperarContraseña
         '
         Me.Persona_correo.AutoSize = True
         Me.Persona_correo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Persona_correo.ForeColor = System.Drawing.Color.Silver
+        Me.Persona_correo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Persona_correo.Location = New System.Drawing.Point(240, 62)
         Me.Persona_correo.Name = "Persona_correo"
         Me.Persona_correo.Size = New System.Drawing.Size(138, 21)
@@ -149,7 +150,7 @@ Partial Class FrmRecuperarContraseña
         '
         Me.RecuperarPass_passNueva2.AutoSize = True
         Me.RecuperarPass_passNueva2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecuperarPass_passNueva2.ForeColor = System.Drawing.Color.Silver
+        Me.RecuperarPass_passNueva2.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.RecuperarPass_passNueva2.Location = New System.Drawing.Point(28, 109)
         Me.RecuperarPass_passNueva2.Name = "RecuperarPass_passNueva2"
         Me.RecuperarPass_passNueva2.Size = New System.Drawing.Size(180, 21)
@@ -171,7 +172,7 @@ Partial Class FrmRecuperarContraseña
         '
         Me.RecuperarPass_passNueva.AutoSize = True
         Me.RecuperarPass_passNueva.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecuperarPass_passNueva.ForeColor = System.Drawing.Color.Silver
+        Me.RecuperarPass_passNueva.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.RecuperarPass_passNueva.Location = New System.Drawing.Point(28, 60)
         Me.RecuperarPass_passNueva.Name = "RecuperarPass_passNueva"
         Me.RecuperarPass_passNueva.Size = New System.Drawing.Size(135, 21)
@@ -194,7 +195,7 @@ Partial Class FrmRecuperarContraseña
         '
         Me.RecuperarPass_usuario.AutoSize = True
         Me.RecuperarPass_usuario.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecuperarPass_usuario.ForeColor = System.Drawing.Color.Silver
+        Me.RecuperarPass_usuario.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.RecuperarPass_usuario.Location = New System.Drawing.Point(28, 7)
         Me.RecuperarPass_usuario.Name = "RecuperarPass_usuario"
         Me.RecuperarPass_usuario.Size = New System.Drawing.Size(103, 21)

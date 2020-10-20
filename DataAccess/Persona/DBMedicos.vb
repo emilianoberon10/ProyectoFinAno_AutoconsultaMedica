@@ -224,7 +224,7 @@ Public Class DBMedicos : Inherits ConexionBD
                 _connection.Open()
                 Using _command = New MySqlCommand()
                     _command.Connection = _connection
-                    _command.CommandText = "UPDATE persona SET pnom=@pNom, sNom=@sNom, pApe=@pApe, sApe=@sApe, edad=@edad, Tel_cel=@tel ,domicilio=@domi,sexo=@sexo WHERE ci=@ci;              
+                    _command.CommandText = "UPDATE persona SET pnom=@pNom, sNom=@sNom, pApe=@pApe, sApe=@sApe, edad=@edad,                                                  Tel_cel=@tel ,domicilio=@domi,sexo=@sexo WHERE ci=@ci;              
                                             SET @idEsp=(SELECT id FROM especialidad WHERE nombre=@especialidad);
                                             UPDATE medico SET idEspecialidad=@idEsp WHERE ciM=@ci;"
                     _command.Parameters.AddWithValue("@ci", ciMedico)
@@ -245,7 +245,7 @@ Public Class DBMedicos : Inherits ConexionBD
             End Using
         Catch ex As Exception
             Throw New SystemException("ERROR:(ModifMedico):" & ex.Message)
-            Return Nothing
+            Return False
         End Try
     End Function
 

@@ -2,13 +2,18 @@
 
 Public Class Sintoma
     Property _nombre As String
-
+    Property _id As Integer
     Public Sub New()
     End Sub
 
     Public Sub New(nombre As String)
         _nombre = nombre
     End Sub
+    Public Sub New(nombre, id)
+        _nombre = nombre
+        _id = id
+    End Sub
+
 
     Public Function ObtenerSintomas() As DataTable
         Dim consu As New DBSintomas()
@@ -33,7 +38,7 @@ Public Class Sintoma
 
     Public Function ModificarSintoma() As Boolean
         Dim consu As New DBSintomas()
-        Return consu.ModifSintomas(Me._nombre)
+        Return consu.ModifSintomas(Me._nombre, Me._id)
     End Function
 
     Public Function BorrarSintoma() As Boolean

@@ -55,6 +55,7 @@ Public MustInherit Class ConexionBD
         Try
             conn.Open()
             commandSQL.ExecuteNonQuery()
+            commandSQL.Dispose()
             conn.Close()
         Catch ex As Exception
             MsgBox("Error al ejecutar una consulta:" & ex.Message)

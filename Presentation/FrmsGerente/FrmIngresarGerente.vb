@@ -94,7 +94,7 @@ Public Class FrmIngresarGerente
         End If
     End Sub
     Private Function ComprobarCamposEnf() As Boolean
-        If txtNombreEnfermedad.Text Is "" Or cbRiesgo.Text Is "Riesgo" Or txtDescripcion.Text Is "Descripcion" Then
+        If txtNombreEnfermedad.Text Is "" Or cbRiesgo.Text Is "Riesgo" Or txtDescripcion.Text Is "" Then
             Return True
         Else
             Return False
@@ -176,6 +176,5 @@ Public Class FrmIngresarGerente
         txtNombreSintoma.MaxLength = 30
         txtDescripcion.MaxLength = 255
     End Sub
-
 
 End Class

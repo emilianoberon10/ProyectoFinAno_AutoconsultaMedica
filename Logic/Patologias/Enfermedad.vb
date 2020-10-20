@@ -7,7 +7,9 @@ Public Class Enfermedad
 
     Public Sub New()
     End Sub
-
+    Public Sub New(nom)
+        _nombre = nom
+    End Sub
     Public Sub New(nombre As String, riesgo As String, descripcion As String)
         _nombre = nombre
         _riesgo = riesgo
@@ -18,13 +20,17 @@ Public Class Enfermedad
         Dim consu As New DBEnfermedades()
         Return consu.ObtenerEnfermedades()
     End Function
+    Public Function ObtenerSintomasEnfermedades() As ArrayList
+        Dim consu As New DBEnfermedades()
+        Return consu.ObtenerSintomasEnfermedad(Me._nombre)
+    End Function
 
     Public Function GuardarEnfermedad() As Boolean
         Dim result As Boolean = False
         Dim consu As New DBEnfermedades()
         Try
             If Me._nombre.Length <= 30 Then
-                If Me._descripcion <= 255 Then
+                If Me._descripcion.Length <= 255 Then
                     result = consu.SetEnfermedad(Me._nombre, Me._riesgo, Me._descripcion)
                 Else
                     MsgBox("La descripcion debe contener menos de 255 caracteres")
@@ -43,7 +49,7 @@ Public Class Enfermedad
         Dim consu As New DBEnfermedades()
         Try
             If Me._nombre.Length <= 30 Then
-                If Me._descripcion <= 255 Then
+                If Me._descripcion.Length <= 255 Then
 
                     result = consu.ModifEnfermedad(Me._nombre, Me._riesgo, Me._descripcion)
                 Else

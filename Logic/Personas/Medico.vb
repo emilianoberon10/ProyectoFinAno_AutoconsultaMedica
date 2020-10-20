@@ -87,7 +87,7 @@ Public Class Medico
     End Function
 
     Public Overloads Function Modificar() As Boolean
-        Dim estado As Boolean
+        Dim estado As Boolean = False
         With Me
             If ._ci.Length < 8 OrElse ._ci.Length > 8 Then
                 MsgBox("La cedula debe contener 8 caracteres")
@@ -102,9 +102,9 @@ Public Class Medico
                             MsgBox("el domicilio no puede contener mas de 255 caracters")
 
                         Else
-                            If ._lugarTrabajo.Length > 30 Then
+                            If ._lugarTrabajo.Length <= 30 Then
                                 Try
-                                    cons.ModifMedico(._ci, ._especialidad, ._lugarTrabajo,
+                                    estado = cons.ModifMedico(._ci, ._especialidad, ._lugarTrabajo,
                                 ._tel_cel, ._domicilio, ._sexo, ._pNom, ._sNom, ._pApe, ._sApe, ._edad)
 
                                 Catch ex As Exception

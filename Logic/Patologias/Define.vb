@@ -33,18 +33,19 @@ Public Class Define
         cons.BorrarDefine(def._enfermedad)
     End Function
 
-    Public Function ModifDefine(def As Define) As Boolean
+    Public Function ModifDefine() As Boolean
         Dim cons As New SintomaDefineEnfermedad
 
         'Pasar los objetos a un arrayList para convertirlo en string
         Dim sintomas As New ArrayList
-        sintomas.Add(def._sintomas)
+        sintomas.Add(Me._sintomas)
 
         For Each e As String In sintomas
             'se va a guradar tantas veces como sitomas haya
             '1 enfermedad esta definida por 1..* sintomas
-            Return cons.ModifDefine(def._enfermedad, e)
+            Return cons.ModifDefine(Me._enfermedad, e)
         Next
+
     End Function
 
 End Class

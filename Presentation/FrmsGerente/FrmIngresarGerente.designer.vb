@@ -346,7 +346,7 @@ Partial Class FrmIngresarGerente
         Me.groupBoxSintomas.Location = New System.Drawing.Point(26, 361)
         Me.groupBoxSintomas.Name = "groupBoxSintomas"
         Me.groupBoxSintomas.ShadowDecoration.Parent = Me.groupBoxSintomas
-        Me.groupBoxSintomas.Size = New System.Drawing.Size(623, 245)
+        Me.groupBoxSintomas.Size = New System.Drawing.Size(737, 245)
         Me.groupBoxSintomas.TabIndex = 57
         Me.groupBoxSintomas.Text = "RELACIONADOS"
         '
@@ -369,10 +369,10 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma6.HoverState.Parent = Me.cbSintoma6
         Me.cbSintoma6.ItemHeight = 30
         Me.cbSintoma6.ItemsAppearance.Parent = Me.cbSintoma6
-        Me.cbSintoma6.Location = New System.Drawing.Point(439, 108)
+        Me.cbSintoma6.Location = New System.Drawing.Point(489, 108)
         Me.cbSintoma6.Name = "cbSintoma6"
         Me.cbSintoma6.ShadowDecoration.Parent = Me.cbSintoma6
-        Me.cbSintoma6.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma6.Size = New System.Drawing.Size(205, 36)
         Me.cbSintoma6.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma6.TabIndex = 45
         '
@@ -395,10 +395,10 @@ Partial Class FrmIngresarGerente
         Me.comboSintoma9.HoverState.Parent = Me.comboSintoma9
         Me.comboSintoma9.ItemHeight = 30
         Me.comboSintoma9.ItemsAppearance.Parent = Me.comboSintoma9
-        Me.comboSintoma9.Location = New System.Drawing.Point(439, 169)
+        Me.comboSintoma9.Location = New System.Drawing.Point(489, 169)
         Me.comboSintoma9.Name = "comboSintoma9"
         Me.comboSintoma9.ShadowDecoration.Parent = Me.comboSintoma9
-        Me.comboSintoma9.Size = New System.Drawing.Size(170, 36)
+        Me.comboSintoma9.Size = New System.Drawing.Size(205, 36)
         Me.comboSintoma9.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.comboSintoma9.TabIndex = 46
         '
@@ -421,10 +421,10 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma8.HoverState.Parent = Me.cbSintoma8
         Me.cbSintoma8.ItemHeight = 30
         Me.cbSintoma8.ItemsAppearance.Parent = Me.cbSintoma8
-        Me.cbSintoma8.Location = New System.Drawing.Point(240, 169)
+        Me.cbSintoma8.Location = New System.Drawing.Point(265, 169)
         Me.cbSintoma8.Name = "cbSintoma8"
         Me.cbSintoma8.ShadowDecoration.Parent = Me.cbSintoma8
-        Me.cbSintoma8.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma8.Size = New System.Drawing.Size(205, 36)
         Me.cbSintoma8.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma8.TabIndex = 46
         '
@@ -447,10 +447,10 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma5.HoverState.Parent = Me.cbSintoma5
         Me.cbSintoma5.ItemHeight = 30
         Me.cbSintoma5.ItemsAppearance.Parent = Me.cbSintoma5
-        Me.cbSintoma5.Location = New System.Drawing.Point(240, 108)
+        Me.cbSintoma5.Location = New System.Drawing.Point(265, 108)
         Me.cbSintoma5.Name = "cbSintoma5"
         Me.cbSintoma5.ShadowDecoration.Parent = Me.cbSintoma5
-        Me.cbSintoma5.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma5.Size = New System.Drawing.Size(205, 36)
         Me.cbSintoma5.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma5.TabIndex = 47
         '
@@ -476,7 +476,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma7.Location = New System.Drawing.Point(35, 169)
         Me.cbSintoma7.Name = "cbSintoma7"
         Me.cbSintoma7.ShadowDecoration.Parent = Me.cbSintoma7
-        Me.cbSintoma7.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma7.Size = New System.Drawing.Size(205, 36)
         Me.cbSintoma7.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma7.TabIndex = 48
         '
@@ -499,10 +499,10 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma3.HoverState.Parent = Me.cbSintoma3
         Me.cbSintoma3.ItemHeight = 30
         Me.cbSintoma3.ItemsAppearance.Parent = Me.cbSintoma3
-        Me.cbSintoma3.Location = New System.Drawing.Point(439, 49)
+        Me.cbSintoma3.Location = New System.Drawing.Point(489, 49)
         Me.cbSintoma3.Name = "cbSintoma3"
         Me.cbSintoma3.ShadowDecoration.Parent = Me.cbSintoma3
-        Me.cbSintoma3.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma3.Size = New System.Drawing.Size(205, 36)
         Me.cbSintoma3.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma3.TabIndex = 49
         '
@@ -528,7 +528,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma4.Location = New System.Drawing.Point(35, 108)
         Me.cbSintoma4.Name = "cbSintoma4"
         Me.cbSintoma4.ShadowDecoration.Parent = Me.cbSintoma4
-        Me.cbSintoma4.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma4.Size = New System.Drawing.Size(205, 36)
         Me.cbSintoma4.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma4.TabIndex = 50
         '
@@ -551,10 +551,10 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma2.HoverState.Parent = Me.cbSintoma2
         Me.cbSintoma2.ItemHeight = 30
         Me.cbSintoma2.ItemsAppearance.Parent = Me.cbSintoma2
-        Me.cbSintoma2.Location = New System.Drawing.Point(240, 49)
+        Me.cbSintoma2.Location = New System.Drawing.Point(265, 49)
         Me.cbSintoma2.Name = "cbSintoma2"
         Me.cbSintoma2.ShadowDecoration.Parent = Me.cbSintoma2
-        Me.cbSintoma2.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma2.Size = New System.Drawing.Size(205, 36)
         Me.cbSintoma2.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma2.TabIndex = 51
         '
@@ -580,7 +580,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma1.Location = New System.Drawing.Point(35, 49)
         Me.cbSintoma1.Name = "cbSintoma1"
         Me.cbSintoma1.ShadowDecoration.Parent = Me.cbSintoma1
-        Me.cbSintoma1.Size = New System.Drawing.Size(170, 36)
+        Me.cbSintoma1.Size = New System.Drawing.Size(205, 36)
         Me.cbSintoma1.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma1.TabIndex = 52
         Me.cbSintoma1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -588,7 +588,7 @@ Partial Class FrmIngresarGerente
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(423, 180)
+        Me.CheckBox1.Location = New System.Drawing.Point(473, 180)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox1.TabIndex = 38
@@ -597,7 +597,7 @@ Partial Class FrmIngresarGerente
         'chb7
         '
         Me.chb7.AutoSize = True
-        Me.chb7.Location = New System.Drawing.Point(219, 180)
+        Me.chb7.Location = New System.Drawing.Point(244, 180)
         Me.chb7.Name = "chb7"
         Me.chb7.Size = New System.Drawing.Size(15, 14)
         Me.chb7.TabIndex = 38
@@ -615,7 +615,7 @@ Partial Class FrmIngresarGerente
         'chb5
         '
         Me.chb5.AutoSize = True
-        Me.chb5.Location = New System.Drawing.Point(423, 119)
+        Me.chb5.Location = New System.Drawing.Point(473, 119)
         Me.chb5.Name = "chb5"
         Me.chb5.Size = New System.Drawing.Size(15, 14)
         Me.chb5.TabIndex = 40
@@ -624,7 +624,7 @@ Partial Class FrmIngresarGerente
         'chb4
         '
         Me.chb4.AutoSize = True
-        Me.chb4.Location = New System.Drawing.Point(219, 119)
+        Me.chb4.Location = New System.Drawing.Point(244, 119)
         Me.chb4.Name = "chb4"
         Me.chb4.Size = New System.Drawing.Size(15, 14)
         Me.chb4.TabIndex = 41
@@ -642,7 +642,7 @@ Partial Class FrmIngresarGerente
         'chb2
         '
         Me.chb2.AutoSize = True
-        Me.chb2.Location = New System.Drawing.Point(423, 60)
+        Me.chb2.Location = New System.Drawing.Point(473, 60)
         Me.chb2.Name = "chb2"
         Me.chb2.Size = New System.Drawing.Size(15, 14)
         Me.chb2.TabIndex = 43
@@ -651,7 +651,7 @@ Partial Class FrmIngresarGerente
         'chb1
         '
         Me.chb1.AutoSize = True
-        Me.chb1.Location = New System.Drawing.Point(219, 60)
+        Me.chb1.Location = New System.Drawing.Point(244, 60)
         Me.chb1.Name = "chb1"
         Me.chb1.Size = New System.Drawing.Size(15, 14)
         Me.chb1.TabIndex = 44

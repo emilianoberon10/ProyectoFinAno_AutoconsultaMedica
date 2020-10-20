@@ -9,10 +9,11 @@
         If ConsultaComprobarExistencia(_consultaSQL) Then
             Return True
         Else
-            _consultaSQL = "INSERT INTO define(nomEnf,nomSint)"
+            _consultaSQL = "SET @idSint=(SELECT id FROM sintoma WHERE nombre='" & nombreSintoma & "');"
+            _consultaSQL &= "INSERT INTO define(nomEnf,idSint)"
             _consultaSQL &= " VALUES ( "
             _consultaSQL &= "'" & nombreEnfermedad & "',"
-            _consultaSQL &= "'" & nombreSintoma & "')"
+            _consultaSQL &= "@idSint)"
 
             EjecutarConsulta(_consultaSQL)
             Return False
@@ -36,10 +37,12 @@
     Public Function ModifDefine(nombreEnfermedad As String, nombreSintoma As String) As Boolean
         Dim _consultaSQL As String
         Try
-            _consultaSQL = "UPDATE enfermedad SET "
+            _consultaSQL = "SET @idSint=(SELECT id FROM sintoma WHERE nombre='" & nombreSintoma & "');"
+            _consultaSQL &= "UPDATE enfermedad SET"
             _consultaSQL &= "nomEnf = '" & nombreEnfermedad & "',"
-            _consultaSQL &= "nomSint = '" & nombreSintoma & "' "
-            _consultaSQL &= "where nomEnf= '" & nombreEnfermedad & "';"
+            _consultaSQL &= "idSint = @idSint"
+            _consultaSQL &= "where nomEnf='" & nombreEnfermedad & "';"
+
             EjecutarConsulta(_consultaSQL)
             Return True
         Catch ex As Exception

@@ -1,10 +1,10 @@
 DROP DATABASE IF EXISTS `mateo_vargas`;
 
-CREATE DATABASE IF NOT EXISTS `mateo_vargas` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `mateo_vargas` DEFAULT CHARACTER SET LATIN1 COLLATE LATIN1_SWEDISH_CI;
 
 USE `mateo_vargas`;
 
-CREATE TABLE persona(
+CREATE TABLE persona (
     ci CHAR(8) NOT NULL PRIMARY KEY,
     Tel_cel VARCHAR(9) NOT NULL,
     Edad INT(3) NOT NULL,
@@ -14,11 +14,8 @@ CREATE TABLE persona(
     sNom VARCHAR(30),
     pApe VARCHAR(30) NOT NULL,
     sApe VARCHAR(30) NOT NULL,
-    CONSTRAINT chk_Sexo CHECK(
-        Sexo = 'Hombre'
-        OR Sexo = 'Mujer'
-        OR Sexo = 'Otro'
-    )
+    CONSTRAINT chk_Sexo CHECK (Sexo = 'Hombre' OR Sexo = 'Mujer'
+        OR Sexo = 'Otro')
 );
 
 CREATE TABLE paciente(
@@ -38,16 +35,16 @@ CREATE TABLE especialidad(
     nombre VARCHAR(40) NOT NULL UNIQUE KEY
 );
 CREATE TABLE medico(
-    ciM CHAR(8) NOT NULL primary key,
+    ciM CHAR(8) NOT NULL PRIMARY KEY,
     numMed INT(4) UNIQUE KEY,
     idEspecialidad INT(4) NOT NULL ,
-    Lun char(15),
-    Mar char(15),
-    Mie char(15),
-    Jue char(15),
-    Vie char(15),
-    Sab char(15),
-    Dom char(15),
+    Lun CHAR(15),
+    Mar CHAR(15),
+    Mie CHAR(15),
+    Jue CHAR(15),
+    Vie CHAR(15),
+    Sab CHAR(15),
+    Dom CHAR(15),
     lugarTrabajo VARCHAR(30) NOT NULL,
     contrasena LONGTEXT NOT NULL ,
     CONSTRAINT fk_ciM FOREIGN KEY(ciM) REFERENCES persona(ci),
@@ -56,11 +53,11 @@ CREATE TABLE medico(
 
 CREATE TABLE fotoPerfil(
 ci CHAR(8) UNIQUE KEY REFERENCES persona(ci),
-foto longText
+foto LONGTEXT
 );
 CREATE TABLE riesgo (
-idriesgo int(1) primary key,
-riesgo varchar(10)
+idriesgo INT(1) PRIMARY KEY,
+riesgo VARCHAR(10)
 );
 
 CREATE TABLE sintoma(
@@ -71,9 +68,9 @@ CREATE TABLE sintoma(
 CREATE TABLE enfermedad(
     idEnf INT(4) NOT NULL AUTO_INCREMENT  PRIMARY KEY,
     nombre VARCHAR(30) NOT NULL  UNIQUE KEY,
-    riesgo int(1) NOT NULL,
+    riesgo INT(1) NOT NULL,
     descripcion TEXT,
-    constraint fk_riesgo FOREIGN KEY(riesgo) REFERENCES riesgo(idriesgo),
+    CONSTRAINT fk_riesgo FOREIGN KEY(riesgo) REFERENCES riesgo(idriesgo),
     CONSTRAINT CHK_riesgo CHECK (
         riesgo = '5'
         OR riesgo = '4'
@@ -101,27 +98,27 @@ CREATE TABLE fichaMedica(
     Ocup VARCHAR(30),
     Medicacion VARCHAR(30),
     Motiv_Cons TEXT,
-    antecedentesFamiliares char(50),
+    antecedentesFamiliares CHAR(50),
     CONSTRAINT fk_cedP FOREIGN KEY(cedP) REFERENCES paciente(ciP)
 );
 
 CREATE TABLE selec(
     dia DATE NOT NULL,
     hora TIME NOT NULL,
-    nomSint VARCHAR(30) NOT NULL,
+    idSint INT(4) NOT NULL,
     idPac CHAR(8) NOT NULL,
-    constraint pk_clav PRIMARY KEY (dia, hora, idPac),
+    CONSTRAINT pk_clav PRIMARY KEY (dia, hora, idPac),
     CONSTRAINT fk_idPac FOREIGN KEY(idPac) REFERENCES paciente(ciP),
-    CONSTRAINT fk_idSint FOREIGN KEY(nomSint) REFERENCES sintoma(nombre)
+    CONSTRAINT fk_idSint FOREIGN KEY(idSint) REFERENCES sintoma(id)
 );
-
+/*
 CREATE TABLE gestiona(
     tipo VARCHAR(10) NOT NULL,
     cigerente CHAR(8) NOT NULL,
     nomEnf VARCHAR(30),
     nomSint VARCHAR(30),
     fecha DATE NOT NULL,
-    hora time not null,
+    hora TIME NOT NULL,
     CONSTRAINT fk_nEn FOREIGN KEY(nomEnf) REFERENCES enfermedad(nombre),
     CONSTRAINT fk_cG FOREIGN KEY(cigerente) REFERENCES gerente(ciG),
     CONSTRAINT fk_Sintom FOREIGN KEY(nomSint) REFERENCES sintoma(nombre),
@@ -131,31 +128,31 @@ CREATE TABLE gestiona(
         OR tipo = 'Modificacion'
     )
 );
-
+*/
 CREATE TABLE define(
     nomEnf VARCHAR(30) NOT NULL,
-    nomSint VARCHAR(30) NOT NULL,
+    idSint INT(4) NOT NULL,
     CONSTRAINT fk_nomEnf FOREIGN KEY(nomEnf) REFERENCES enfermedad(nombre),
-    CONSTRAINT fk_sint FOREIGN KEY(nomSint) REFERENCES sintoma(nombre)
+    CONSTRAINT fk_sint FOREIGN KEY(idSint) REFERENCES sintoma(id)
 );
 
 CREATE TABLE chat(
 	idchat INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	ciPac CHAR(8) NOT NULL,
-	idMed char(8) NOT NULL,
+	idMed CHAR(8) NOT NULL,
     fecha DATE NOT NULL,
-    diagnostico text NOT NULL,
+    diagnostico TEXT NOT NULL,
     FOREIGN KEY(ciPac) REFERENCES paciente(ciP),
-    FOREIGN KEY (idMed) references medico(ciM),
+    FOREIGN KEY (idMed) REFERENCES medico(ciM),
     estado VARCHAR(10) NOT NULL,
-    constraint chk_estado CHECK(
+    CONSTRAINT chk_estado CHECK(
 		estado='Proceso' OR
 		estado='Finalizado'
     )
 );
 
 CREATE TABLE mensaje(
-	idMsj int(4) AUTO_INCREMENT PRIMARY KEY,
+	idMsj INT(4) AUTO_INCREMENT PRIMARY KEY,
     hora TIME NOT NULL,
     idchat INT(4) NOT NULL,
     emisor CHAR(8),
@@ -167,11 +164,11 @@ CREATE TABLE mensaje(
 );
 
 CREATE TABLE solicita(
-    id int(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    ci char(8) NOT NULL References paciente(ciP),
-    nombre varchar(15) NOT NULL,
-    diagnostico varchar(30) NOT NULL REferences diagnostico(nomE),
-    estado varchar(10) NOT NULL,
+    id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    ci CHAR(8) NOT NULL REFERENCES paciente(ciP),
+    nombre VARCHAR(15) NOT NULL,
+    diagnostico VARCHAR(30) NOT NULL REFERENCES diagnostico(nomE),
+    estado VARCHAR(10) NOT NULL,
     CONSTRAINT chk_Estado CHECK (
         estado = 'Pendiente'
         OR estado = 'Atendido'
@@ -194,132 +191,123 @@ INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)	VALUES('
 INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)	VALUES('52525252',22344233,49,'Av.Libertad','hombre','Ave','Maria','Roberta','Garcia');
 -- ------------------------------------------ Gerentes, Medicos y Pacientes --------------------------------------------------------------- --
 -- Gerentes: --
-INSERT INTO Gerente(ciG, contrasena) VALUES('11111111', sha2('contraseña1', 256));
-INSERT INTO Gerente(ciG, contrasena) VALUES('33333333', sha2('contraseña2', 256));
+INSERT INTO Gerente(ciG, contrasena) VALUES('11111111', SHA2('contraseña1', 256));
+INSERT INTO Gerente(ciG, contrasena) VALUES('33333333', SHA2('contraseña2', 256));
 -- Pacientes: --
-INSERT INTO paciente(ciP,contrasena,mail) VALUES('22222222',sha2('paciente1', 256),'elpacientenumero1@mail.com');
-INSERT INTO paciente(ciP,contrasena,mail) VALUES('44444444',sha2('paciente2', 256),'elpacientenumero2@mail.com');
-INSERT INTO paciente(ciP,contrasena,mail) VALUES('55555555',sha2('paciente3', 256),'elpacientenumero3@mail.com');
-INSERT INTO paciente(ciP,contrasena,mail) VALUES('88888888',sha2('paciente4', 256),'elpacientenumero4@mail.com');
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('22222222',SHA2('paciente1', 256),'elpacientenumero1@mail.com');
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('44444444',SHA2('paciente2', 256),'elpacientenumero2@mail.com');
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('55555555',SHA2('paciente3', 256),'elpacientenumero3@mail.com');
+INSERT INTO paciente(ciP,contrasena,mail) VALUES('88888888',SHA2('paciente4', 256),'elpacientenumero4@mail.com');
 -- especialidad -- 
-insert into especialidad values (null,'Medico General');
-insert into especialidad values (null,'Pediatra');
-insert into especialidad values (null,'Nutricionista');
-insert into especialidad values (null,'Cardiologo');
+INSERT INTO especialidad VALUES (NULL,'Medico General');
+INSERT INTO especialidad VALUES (NULL,'Pediatra');
+INSERT INTO especialidad VALUES (NULL,'Nutricionista');
+INSERT INTO especialidad VALUES (NULL,'Cardiologo');
 -- Medicos: --
-INSERT INTO medico values
-	('66666666',0123,1,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',sha2('medico1', 256));
-INSERT INTO medico values 
-	('77777777',1234,3,'','07:00 a 13:00','08:20 a 16:40','','13:00 a 19:40','','','Clinica Central',sha2('medico2', 256));
-INSERT INTO medico values
-	('53393343',0112,2,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',sha2('medico3', 256));
-INSERT INTO medico values
-	('26314278',0412,4,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',sha2('medico4', 256));
-INSERT INTO medico values
-	('52525252',0712,4,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',sha2('medico5', 256));
+INSERT INTO medico VALUES
+	('66666666',0123,1,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',SHA2('medico1', 256));
+INSERT INTO medico VALUES 
+	('77777777',1234,3,'','07:00 a 13:00','08:20 a 16:40','','13:00 a 19:40','','','Clinica Central',SHA2('medico2', 256));
+INSERT INTO medico VALUES
+	('53393343',0112,2,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',SHA2('medico3', 256));
+INSERT INTO medico VALUES
+	('26314278',0412,4,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',SHA2('medico4', 256));
+INSERT INTO medico VALUES
+	('52525252',0712,4,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',SHA2('medico5', 256));
     
 -- riesgo --
-insert into riesgo values (1,'rojo');
-insert into riesgo values (2,'naranja');
-insert into riesgo values (3,'amarillo');
-insert into riesgo values (4,'verde');
-insert into riesgo values (5,'azul');
+INSERT INTO riesgo VALUES (1,'rojo');
+INSERT INTO riesgo VALUES (2,'naranja');
+INSERT INTO riesgo VALUES (3,'amarillo');
+INSERT INTO riesgo VALUES (4,'verde');
+INSERT INTO riesgo VALUES (5,'azul');
 -- ------------------------------------------ sintomas, enfermedades y define  --------------------------------------------------------------- --
-INSERT INTO sintoma VALUES(null,"resfrio");
-INSERT INTO sintoma VALUES(null,"tos");
-INSERT INTO sintoma VALUES(null,"fiebre");
-INSERT INTO sintoma VALUES(null,"flemas");
+INSERT INTO enfermedad VALUES(NULL,"covid","2","tos seca");
+INSERT INTO enfermedad VALUES(NULL,"gripe","5","enfermedad infecciosa aguda de las vías respiratorias");
 
-INSERT INTO sintoma VALUES(null,"estornudos");
-INSERT INTO sintoma VALUES(null,"lagrimeo");
-INSERT INTO sintoma VALUES(null,"picor en los ojos");
+INSERT INTO enfermedad VALUES(NULL,"alergia","5","puede ser producida por hongos ambientales, los ácaros de polvo y los epitelios de algunos animales, como los perros, gatos, caballos y roedores.");
+INSERT INTO enfermedad VALUES(NULL,"dengue","1","producido por la picadura de un mosquito");
+INSERT INTO enfermedad VALUES(NULL,"leucemia","1","La leucemia es una enfermedad de la sangre en la que la médula ósea produce glóbulos blancos anómalos");
 
-INSERT INTO sintoma VALUES(null,"fiebre alta");
-INSERT INTO sintoma VALUES(null,"sangrado en encias");
-INSERT INTO sintoma VALUES(null,"dolor muscular");
-INSERT INTO sintoma VALUES(null,"debilidad general");
+INSERT INTO sintoma VALUES(NULL,"resfrio");
+INSERT INTO sintoma VALUES(NULL,"tos");
+INSERT INTO sintoma VALUES(NULL,"fiebre");
+INSERT INTO sintoma VALUES(NULL,"flemas");
 
-INSERT INTO sintoma VALUES(null,"cansancio");
-INSERT INTO sintoma VALUES(null,"perdida de apetito");
-INSERT INTO sintoma VALUES(null,"perdidad de peso");
-INSERT INTO sintoma VALUES(null,"sudores nocturnos");
+INSERT INTO sintoma VALUES(NULL,"estornudos");
+INSERT INTO sintoma VALUES(NULL,"lagrimeo");
+INSERT INTO sintoma VALUES(NULL,"picor en los ojos");
 
-INSERT INTO enfermedad VALUES(null,"covid","2","tos seca");
-INSERT INTO enfermedad VALUES(null,"gripe","5","enfermedad infecciosa aguda de las vías respiratorias");
+INSERT INTO sintoma VALUES(NULL,"fiebre alta");
+INSERT INTO sintoma VALUES(NULL,"sangrado en encias");
+INSERT INTO sintoma VALUES(NULL,"dolor muscular");
+INSERT INTO sintoma VALUES(NULL,"debilidad general");
 
-INSERT INTO enfermedad VALUES(null,"alergia","5","puede ser producida por hongos ambientales, los ácaros de polvo y los epitelios de algunos animales, como los perros, gatos, caballos y roedores.");
-INSERT INTO enfermedad VALUES(null,"dengue","1","producido por la picadura de un mosquito");
-INSERT INTO enfermedad VALUES(null,"leucemia","1","La leucemia es una enfermedad de la sangre en la que la médula ósea produce glóbulos blancos anómalos");
-
--- gestiona --
-insert into gestiona values ('alta',33333333,'covid',null,CURDATE(),CURTIME());
-INSERT INTO gestiona values ('alta',33333333,'gripe',null,CURDATE(),CURTIME());
-INSERT INTO gestiona values ('alta',33333333,null,'resfrio',CURDATE(),CURTIME());
-INSERT INTO gestiona values ('alta',33333333,null,'tos',CURDATE(),CURTIME());
-INSERT INTO gestiona values ('alta',33333333,null,'fiebre',CURDATE(),CURTIME());
-INSERT INTO gestiona values ('alta',33333333,null,'flemas',CURDATE(),CURTIME());
+INSERT INTO sintoma VALUES(NULL,"cansancio");
+INSERT INTO sintoma VALUES(NULL,"perdida de apetito");
+INSERT INTO sintoma VALUES(NULL,"perdidad de peso");
+INSERT INTO sintoma VALUES(NULL,"sudores nocturnos");
 -- define --
-INSERT INTO define VALUES("covid","tos");
-INSERT INTO define VALUES("covid","resfrio");
-INSERT INTO define VALUES("gripe","resfrio");
-INSERT INTO define VALUES("gripe","tos");
+INSERT INTO define VALUES("covid",2);
+INSERT INTO define VALUES("covid",1);
+INSERT INTO define VALUES("gripe",1);
+INSERT INTO define VALUES("gripe",2);
 
-INSERT INTO define VALUES("dengue","fiebre alta");
-INSERT INTO define VALUES("dengue","sangrado en encias");
-INSERT INTO define VALUES("dengue","dolor muscular");
-INSERT INTO define VALUES("dengue","debilidad general");
+INSERT INTO define VALUES("dengue",8);
+INSERT INTO define VALUES("dengue",9);
+INSERT INTO define VALUES("dengue",10);
+INSERT INTO define VALUES("dengue",11);
 
-INSERT INTO define VALUES("alergia","estornudos");
-INSERT INTO define VALUES("alergia","lagrimeo");
-INSERT INTO define VALUES("alergia","picor en los ojos");
+INSERT INTO define VALUES("alergia",5);
+INSERT INTO define VALUES("alergia",6);
+INSERT INTO define VALUES("alergia",7);
 
-INSERT INTO define VALUES("leucemia","cansancio");
-INSERT INTO define VALUES("leucemia","perdida de apetito");
-INSERT INTO define VALUES("leucemia","perdidad de peso");
-INSERT INTO define VALUES("leucemia","sudores nocturnos");
-
+INSERT INTO define VALUES("leucemia",12);
+INSERT INTO define VALUES("leucemia",13);
+INSERT INTO define VALUES("leucemia",14);
+INSERT INTO define VALUES("leucemia",15);
 -- paciente selecciona sintomas--
-INSERT INTO selec values (curdate(),curtime(),'resfrio',22222222);
-INSERT INTO selec values (curdate(),curtime()+1,'sangrado en encias',22222222);
-INSERT INTO selec values (curdate(),curtime()+2,'dolor muscular',22222222);
-INSERT INTO selec values (curdate(),curtime()+3,'debilidad general',22222222);
-INSERT INTO selec values (curdate(),curtime()+4,'tos',44444444);
-INSERT INTO selec values (curdate(),curtime()+5,'resfrio',55555555);
-INSERT INTO selec values (curdate(),curtime(),'tos',55555555);
-INSERT INTO selec values (curdate(),curtime()+10,'fiebre',55555555);
+INSERT INTO selec VALUES (CURDATE(),CURTIME(),1,22222222);
+INSERT INTO selec VALUES (CURDATE(),CURTIME()+1,9,22222222);
+INSERT INTO selec VALUES (CURDATE(),CURTIME()+2,10,22222222);
+INSERT INTO selec VALUES (CURDATE(),CURTIME()+3,11,22222222);
+INSERT INTO selec VALUES (CURDATE(),CURTIME()+4,2,44444444);
+INSERT INTO selec VALUES (CURDATE(),CURTIME()+5,1,55555555);
+INSERT INTO selec VALUES (CURDATE(),CURTIME(),2,55555555);
+INSERT INTO selec VALUES (CURDATE(),CURTIME()+10,3,55555555);
 -- -------------------------- Diagnostico -------------------------- -- 
-Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'22222222','covid',CURDATE());
-Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'22222222','dengue',DATE_SUB(curdate(),INTERVAL '8' day));
-Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'44444444','covid',CURDATE());
-Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'55555555','gripe',CURDATE());
-Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'55555555','covid',CURDATE());
-Insert into diagnostico(idDiag,idP,nomE,Fecha) Values(null,'88888888','dengue',DATE_SUB(curdate(),INTERVAL '7' day));
+INSERT INTO diagnostico(idDiag,idP,nomE,Fecha) VALUES(NULL,'22222222','covid',CURDATE());
+INSERT INTO diagnostico(idDiag,idP,nomE,Fecha) VALUES(NULL,'22222222','dengue',DATE_SUB(CURDATE(),INTERVAL '8' DAY));
+INSERT INTO diagnostico(idDiag,idP,nomE,Fecha) VALUES(NULL,'44444444','covid',CURDATE());
+INSERT INTO diagnostico(idDiag,idP,nomE,Fecha) VALUES(NULL,'55555555','gripe',CURDATE());
+INSERT INTO diagnostico(idDiag,idP,nomE,Fecha) VALUES(NULL,'55555555','covid',CURDATE());
+INSERT INTO diagnostico(idDiag,idP,nomE,Fecha) VALUES(NULL,'88888888','dengue',DATE_SUB(CURDATE(),INTERVAL '7' DAY));
 -- Ficha medica --
 INSERT INTO fichaMedica(Fecha,procedencia,idDiag,id,cedP,Ocup,Medicacion,Motiv_Cons,antecedentesFamiliares) 
-values (CURDATE(),'Uruguay',15,null,44444444,'Ingeniero en Sistemas','Antialergico','Por malestar','Diabetes'),
-(CURDATE(),'Uruguay',7,null,22222222,'En paro','','Por enfermedad',''),
-(CURDATE(),'Uruguay',21,null,55555555,'En paro','Analgesicos','Por enfermedad','Hipertension'),
-(CURDATE(),'Uruguay',20,null,88888888,'Docente','','Por enfermedad',''); 
+VALUES (CURDATE(),'Uruguay',15,NULL,44444444,'Ingeniero en Sistemas','Antialergico','Por malestar','Diabetes'),
+(CURDATE(),'Uruguay',7,NULL,22222222,'En paro','','Por enfermedad',''),
+(CURDATE(),'Uruguay',21,NULL,55555555,'En paro','Analgesicos','Por enfermedad','Hipertension'),
+(CURDATE(),'Uruguay',20,NULL,88888888,'Docente','','Por enfermedad',''); 
 -- ----------------------------- Solicita chat, Acepta y chat --------------------------- --
 -- insert into solicita values (null,22222222,'Romina','alergia','Pendiente');
 -- insert into solicita values (null,44444444,'Romina','dengue','Pendiente');
 -- insert into solicita values (null,88888888,'Romina','alergia','Pendiente');
 -- insert into solicita values (null,55555555,'Agustina','gripe','Pendiente');
 -- chat --
-insert into chat values (null,'22222222',66666666,CURDATE(),'covid','Finalizado');
-insert into chat values (null,'55555555',66666666,CURDATE(),'gripe','Finalizado');
+INSERT INTO chat VALUES (NULL,'22222222',66666666,CURDATE(),'covid','Finalizado');
+INSERT INTO chat VALUES (NULL,'55555555',66666666,CURDATE(),'gripe','Finalizado');
 -- prueba para consultas
-insert into chat values (null,'55555555',26314278,DATE_SUB(curdate(),INTERVAL '1' year),'gripe','Finalizado');
-insert into chat values (null,'55555555',26314278,DATE_SUB(curdate(),INTERVAL '1' month),'gripe','Finalizado');
-insert into chat values (null,'55555555',26314278,DATE_SUB(curdate(),INTERVAL '1' month),'gripe','Finalizado');
-insert into chat values (null,'55555555',26314278,DATE_SUB(curdate(),INTERVAL '1' month),'gripe','Finalizado');
+INSERT INTO chat VALUES (NULL,'55555555',26314278,DATE_SUB(CURDATE(),INTERVAL '1' YEAR),'gripe','Finalizado');
+INSERT INTO chat VALUES (NULL,'55555555',26314278,DATE_SUB(CURDATE(),INTERVAL '1' MONTH),'gripe','Finalizado');
+INSERT INTO chat VALUES (NULL,'55555555',26314278,DATE_SUB(CURDATE(),INTERVAL '1' MONTH),'gripe','Finalizado');
+INSERT INTO chat VALUES (NULL,'55555555',26314278,DATE_SUB(CURDATE(),INTERVAL '1' MONTH),'gripe','Finalizado');
 
-insert into chat values (null,'55555555',52525252,DATE_SUB(curdate(),INTERVAL '2' year),'tos','Finalizado');
-insert into chat values (null,'55555555',52525252,DATE_SUB(curdate(),INTERVAL '5' day),'tos','Finalizado');
+INSERT INTO chat VALUES (NULL,'55555555',52525252,DATE_SUB(CURDATE(),INTERVAL '2' YEAR),'tos','Finalizado');
+INSERT INTO chat VALUES (NULL,'55555555',52525252,DATE_SUB(CURDATE(),INTERVAL '5' DAY),'tos','Finalizado');
 
-insert into chat values (null,'22222222',53393343,DATE_SUB(curdate(),INTERVAL '3' year),'tos','Finalizado');
-insert into chat values (null,'22222222',53393343,DATE_SUB(curdate(),INTERVAL '1' month),'tos','Finalizado');
-insert into chat values (null,'22222222',53393343,DATE_SUB(curdate(),INTERVAL '1' month),'tos','Finalizado');
+INSERT INTO chat VALUES (NULL,'22222222',53393343,DATE_SUB(CURDATE(),INTERVAL '3' YEAR),'tos','Finalizado');
+INSERT INTO chat VALUES (NULL,'22222222',53393343,DATE_SUB(CURDATE(),INTERVAL '1' MONTH),'tos','Finalizado');
+INSERT INTO chat VALUES (NULL,'22222222',53393343,DATE_SUB(CURDATE(),INTERVAL '1' MONTH),'tos','Finalizado');
 
 ## ######################################################################################
 ## 										DASHBOARD									   ##
@@ -327,43 +315,48 @@ insert into chat values (null,'22222222',53393343,DATE_SUB(curdate(),INTERVAL '1
 DELIMITER $$
 CREATE PROCEDURE `masDiagnosticados`()
 BEGIN
-SELECT nomE AS Enfermedad,COUNT(nomE) as cant FROM diagnostico GROUP BY nomE ORDER BY COUNT(nomE) DESC LIMIT 5;
+SELECT nomE AS Enfermedad,COUNT(nomE) AS cant FROM diagnostico GROUP BY nomE ORDER BY COUNT(nomE) DESC LIMIT 5;
 END$$
 DELIMITER ;
 
 DELIMITER $$
+
 CREATE PROCEDURE `sintomaMasSeleccionado`()
 BEGIN
-SELECT nomSint  AS Sintoma ,COUNT(nomSint) as cant FROM selec GROUP BY nomSInt ORDER BY COUNT(nomSint) DESC LIMIT 5;
+SELECT nombre  AS Sintoma ,COUNT(idSint) AS cant FROM sintoma
+JOIN selec ON idSint=id
+GROUP BY nombre 
+ORDER BY COUNT(nombre) 
+DESC LIMIT 5;
 END$$
 DELIMITER ;
 
 DELIMITER $$
 CREATE PROCEDURE `cantchatsMes`()
 BEGIN
-select 'Enero' as mes,count(idchat) as 'Cantidad de consultas' from chat where month(fecha)=1 and year(fecha)=year(curdate())
+SELECT 'Enero' AS mes,COUNT(idchat) AS 'Cantidad de consultas' FROM chat WHERE MONTH(fecha)=1 AND YEAR(fecha)=YEAR(CURDATE())
 UNION
-	select 'Febrero',count(idchat) from chat where month(fecha)=2 and year(fecha)=year(curdate())
+	SELECT 'Febrero',COUNT(idchat) FROM chat WHERE MONTH(fecha)=2 AND YEAR(fecha)=YEAR(CURDATE())
 UNION
-	select 'Marzo',count(idchat) from chat where month(fecha)=3 and year(fecha)=year(curdate())
+	SELECT 'Marzo',COUNT(idchat) FROM chat WHERE MONTH(fecha)=3 AND YEAR(fecha)=YEAR(CURDATE())
 UNION
-select 'Abril',count(idchat)  from chat where month(fecha)=4 and year(fecha)=year(curdate())
+SELECT 'Abril',COUNT(idchat)  FROM chat WHERE MONTH(fecha)=4 AND YEAR(fecha)=YEAR(CURDATE())
 UNION
-	select 'Mayo',count(idchat) from chat where month(fecha)=5 and year(fecha)=year(curdate())
+	SELECT 'Mayo',COUNT(idchat) FROM chat WHERE MONTH(fecha)=5 AND YEAR(fecha)=YEAR(CURDATE())
 UNION
-	select 'Junio',count(idchat) from chat where month(fecha)=6 and year(fecha)=year(curdate())
+	SELECT 'Junio',COUNT(idchat) FROM chat WHERE MONTH(fecha)=6 AND YEAR(fecha)=YEAR(CURDATE())
 UNION
-select 'Julio',count(idchat)from chat where month(fecha)=7 and year(fecha)=year(curdate())
+SELECT 'Julio',COUNT(idchat)FROM chat WHERE MONTH(fecha)=7 AND YEAR(fecha)=YEAR(CURDATE())
 UNION
-	select 'Agosto',count(idchat) from chat where month(fecha)=8 and year(fecha)=year(curdate())
+	SELECT 'Agosto',COUNT(idchat) FROM chat WHERE MONTH(fecha)=8 AND YEAR(fecha)=YEAR(CURDATE())
 UNION
-	select 'Septiembre',count(idchat) from chat where month(fecha)=9 and year(fecha)=year(curdate())
+	SELECT 'Septiembre',COUNT(idchat) FROM chat WHERE MONTH(fecha)=9 AND YEAR(fecha)=YEAR(CURDATE())
 UNION
-    select 'Octubre',count(idchat) from chat where month(fecha)=10 and year(fecha)=year(curdate())
+    SELECT 'Octubre',COUNT(idchat) FROM chat WHERE MONTH(fecha)=10 AND YEAR(fecha)=YEAR(CURDATE())
 UNION
-	select 'Noviembre',count(idchat) from chat where month(fecha)=11 and year(fecha)=year(curdate())
+	SELECT 'Noviembre',COUNT(idchat) FROM chat WHERE MONTH(fecha)=11 AND YEAR(fecha)=YEAR(CURDATE())
 UNION
-	select 'Diciembre',count(idchat) from chat where month(fecha)=12 and year(fecha)=year(curdate());
+	SELECT 'Diciembre',COUNT(idchat) FROM chat WHERE MONTH(fecha)=12 AND YEAR(fecha)=YEAR(CURDATE());
 
 END$$
 DELIMITER ;

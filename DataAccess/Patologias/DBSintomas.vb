@@ -17,14 +17,17 @@ Public Class DBSintomas
                     _command.Connection = _connection
                     ' Realizo un bucle porque se puede guardar una enfermedad con muchos sintomas
                     For Each sintoma In sintomas
-                        _consultaSQL &= "INSERT INTO selec(dia,hora,nomSint,idPac)"
+                        _consultaSQL = "SET @idSint=(SELECT id FROM sintoma WHERE nombre='" & sintoma & "');"
+
+                        _consultaSQL &= "INSERT INTO selec(dia,hora,idSint,idPac)"
                         _consultaSQL &= " VALUES("
                         _consultaSQL &= "CURDATE(),"
                         _consultaSQL &= "CURTIME(),"
-                        _consultaSQL &= "'" & sintoma & "',"
+                        _consultaSQL &= "@idSint,"
                         _consultaSQL &= "'" & ci & "');"
                         _command.CommandText = _consultaSQL
                         _command.CommandType = CommandType.Text
+
                         Dim reader = _command.ExecuteReader()
 
                         If reader.HasRows Then
@@ -37,7 +40,7 @@ Public Class DBSintomas
                 End Using
             End Using
         Catch ex As Exception
-            MsgBox("ERROR(DBSintoma,line10)::" & ex.Message)
+            MsgBox("ERROR(DBSintoma,guardarSelec)::" & ex.Message)
             Return Nothing
         End Try
     End Function
@@ -76,7 +79,7 @@ Public Class DBSintomas
     ' Obtener sintomas
     Public Function ObtenerSintomas() As DataTable
         Dim _consultaSQL As String
-        _consultaSQL = "SELECT nombre FROM sintoma"
+        _consultaSQL = "SELECT * FROM sintoma"
         Return DevolverTabla(_consultaSQL)
         Return Nothing
     End Function
@@ -88,10 +91,10 @@ Public Class DBSintomas
     End Function
 
     'Modificar sintomas
-    Public Function ModifSintomas(nombreSintoma As String) As Boolean
+    Public Function ModifSintomas(nombreSintoma, id) As Boolean
         Dim _consultaSQL As String
         Try
-            _consultaSQL = "UPDATE sintoma SET nombre='" & nombreSintoma & "'"
+            _consultaSQL = "UPDATE sintoma SET nombre='" & nombreSintoma & "' WHERE id='" & id & "';"
             EjecutarConsulta(_consultaSQL)
             Return True
         Catch ex As Exception

@@ -12,7 +12,7 @@ Public Class FrmMedicoGerente
 	Private Function ComprobarDatos() As Boolean
 		If txtCedula.Text = "" Or cbEsp.Text = "" Or txtLugarTrabajo.Text = "" Or
 		   txtPNom.Text = "" Or txtPApe.Text = "" Or txtSnom.Text = "" Or txtSape.Text = "" Or
-		   Integer.Parse(txtTelefono.Text) = 0 Or txtDomicilio.Text = "" Or cbSexo.Text = "" Or txtNumMed.Text = "" Then
+		   Integer.Parse(txtTelefono.Text) = 0 Or txtDomicilio.Text = "" Or cbSexo.Text = "" Or Integer.Parse(txtNumMed.Text) = 0 Then
 			Return True
 		Else
 			Return False
@@ -74,9 +74,19 @@ Public Class FrmMedicoGerente
 #End Region
 
 					General.GetForm(Estado.Ok, "Se ingreso con exito")
-
+					txtCedula.Text = ""
+					cbEsp.Text = ""
+					txtLugarTrabajo.Text = ""
+					txtPNom.Text = ""
+					txtPApe.Text = ""
+					txtSnom.Text = ""
+					txtSape.Text = ""
+					txtTelefono.Text=""
+					txtDomicilio.Text = ""
+					cbSexo.Text = ""
+					txtNumMed.Text = ""
 				End If
-			Catch ex As Exception
+            Catch ex As Exception
 				ErrorProvider1.SetError(ingreMed, ex.Message)
 				General.GetForm(Estado.Error, ex.Message)
 			End Try

@@ -2,11 +2,9 @@
 Imports System.Text
 Imports System.Security.Cryptography
 
-Public Class Paciente
+Public Class Paciente : Inherits Persona
 
 #Region "Atributos"
-
-    Inherits Persona
     Property _mail As String
     Property _contraseña As String
     Property _diagnostico As String
@@ -144,6 +142,7 @@ Public Class Paciente
         Try
             Dim cons As New DBSintomas
             cons.GuardarSeleccion(sintomas, Me._ci)
+
         Catch ex As Exception
             Throw New SystemException(ex.Message)
         End Try

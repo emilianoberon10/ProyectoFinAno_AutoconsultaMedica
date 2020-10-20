@@ -41,10 +41,44 @@ Public Class DBEnfermedades
     'Obtener tabla enfermedades
     Public Function ObtenerEnfermedades() As DataTable
         Dim _consultaSQL As String
-        _consultaSQL = "select idEnf id,nombre,riesgo,descripcion,nomSint Sintomas FROM enfermedad
+        _consultaSQL = "SELECT idEnf ID,e.nombre NOMBRE,r.riesgo RIESGO,descripcion DESCRIPCION FROM enfermedad e
                         JOIN define ON nombre=nomENf
-                        Group by nomEnf;"
+                        JOIN riesgo r ON e.riesgo=idriesgo
+                        Group by nomEnf
+						ORDER by idEnf ASC;"
         Return DevolverTabla(_consultaSQL)
+    End Function
+
+    Public Function ObtenerSintomasEnfermedad(nomEnf) As ArrayList
+        Dim nomSint As New ArrayList
+        Using _connection = GetConnection()
+            _connection.Open()
+
+            Using _command = New MySqlCommand
+                _command.Connection = _connection
+
+                _command.CommandText = "SELECT nombre FROM sintoma
+                                        JOIN define d ON id=idSint
+                                        WHERE d.nomEnf=@nomE
+                                        GROUP BY nombre;"
+                _command.Parameters.AddWithValue("@nomE", nomEnf)
+                _command.CommandType = CommandType.Text
+                Dim reader As MySqlDataReader = _command.ExecuteReader
+
+                If reader.HasRows Then
+
+                    While reader.Read()
+
+                        nomSint.Add(reader.GetString(0))
+
+                    End While
+                Else
+
+                End If
+
+            End Using
+        End Using
+        Return nomSint
     End Function
 
     'borrar una enfermedad
@@ -86,7 +120,7 @@ Public Class DBEnfermedades
                 _connection.Open()
                 Using _command = New MySqlCommand()
                     _command.Connection = _connection
-                    _command.CommandText = "UPDATE enfermedad SET nombre=@nombre,riesgo=@riesgo,descripcion=@desc WHERE nombre=@nombre"
+                    _command.CommandText = "UPDATE enfermedad SET riesgo=@riesgo,descripcion=@desc WHERE nombre=@nombre;"
                     _command.Parameters.AddWithValue("@nombre", nombreEnfermedad)
                     _command.Parameters.AddWithValue("@riesgo", riesgo)
                     _command.Parameters.AddWithValue("@desc", descripcion)

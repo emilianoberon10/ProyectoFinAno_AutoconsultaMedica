@@ -199,7 +199,7 @@ Partial Class FrmPrincipalPaciente
         '
         Me.fotoPerfil.Cursor = System.Windows.Forms.Cursors.Hand
         Me.fotoPerfil.Image = Global.Presentation.My.Resources.Resources.profileEmpty
-        Me.fotoPerfil.Location = New System.Drawing.Point(45, 10)
+        Me.fotoPerfil.Location = New System.Drawing.Point(46, 27)
         Me.fotoPerfil.Name = "fotoPerfil"
         Me.fotoPerfil.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.fotoPerfil.ShadowDecoration.Parent = Me.fotoPerfil
@@ -223,7 +223,7 @@ Partial Class FrmPrincipalPaciente
         '
         Me.lbNombre.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbNombre.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.lbNombre.Location = New System.Drawing.Point(0, 152)
+        Me.lbNombre.Location = New System.Drawing.Point(0, 160)
         Me.lbNombre.Name = "lbNombre"
         Me.lbNombre.Size = New System.Drawing.Size(222, 19)
         Me.lbNombre.TabIndex = 0
@@ -266,6 +266,8 @@ Partial Class FrmPrincipalPaciente
         'PanelChildFormPac
         '
         Me.PanelChildFormPac.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelChildFormPac.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PanelChildFormPac.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.PanelChildFormPac.Location = New System.Drawing.Point(222, 37)
         Me.PanelChildFormPac.Name = "PanelChildFormPac"
         Me.PanelChildFormPac.Size = New System.Drawing.Size(802, 683)

@@ -1,39 +1,44 @@
 ﻿Imports System.Runtime.InteropServices
 Imports Logic
 Public Class FrmChats
+    Dim _diag As String
+    Dim _cipac As String
+    Dim _frmSolicitud As FrmSolicitudesChat
+
+    Public Sub New()
+        Me.InitializeComponent()
+    End Sub
+
+    Public Sub New(diag As String, cipac As String, frmSolicitud As FrmSolicitudesChat)
+        Me.New
+        _diag = diag
+        _cipac = cipac
+        _frmSolicitud = frmSolicitud
+    End Sub
 
     Private Sub FrmChats_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.KeyPreview = True
         Traductor.traducirForm(Me)
         Traductor.traducirPanel(TopPanel)
-        Me.KeyPreview = True
+
+        'cagar elementos
+        txtDiagnostico.Text = _diag
         dgvChats.DataSource = FrmLogIn.medic.VerChatsAntiguos()
         cargarChats()
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btn_modificar.Click
-        If MessageBox.Show("Esta seguro de Modificar el diagnostico por: " & txtDiagnostico.Text & "", "Advertencia",
-         MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
-            If FrmLogIn.medic.ModificarDiagnostico(txtCi.Text, txtDiagnostico.Text) Then
-                GetForm(Estado.Ok, "Se modifico correctamente")
-            End If
-        End If
+        Dim frm As New FrmModifDiagnostico(Me, _diag, _cipac)
+        frm.Show()
     End Sub
 
     Private Sub btnVerFichaMedica_Click(sender As Object, e As EventArgs) Handles btn_fichaMed.Click
-
-        FrmLogIn.paci = New Logic.Paciente(txtCi.Text)
+        FrmLogIn.paci = New Logic.Paciente(_cipac)
         Dim frm As New FrmFichaMedicaPaciente
         frm.Show()
     End Sub
 
-    Private Sub btnSalirChat_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
-        If MessageBox.Show("Esta seguro de cerrar el chat?", "Advertencia",
-         MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
-            'FrmLogIn.medic.FinalizarChat()
-            Me.Close()
-        End If
-    End Sub
-
+#Region "mensajes"
     Private Sub txtMensaje_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMensaje.KeyPress
         If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
             SendKeys.Send("{TAB}")
@@ -63,14 +68,23 @@ Public Class FrmChats
         If mensaje IsNot "" Then txtChat.Text &= mensaje & vbNewLine
     End Sub
 
+#End Region
+#Region "cerrar chat"
+    Private Sub btnSalirChat_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
+        If MessageBox.Show("Esta seguro de cerrar el chat?", "Advertencia",
+         MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
+            FrmLogIn.medic.FinalizarChat()
+            Me.Close()
+        End If
+    End Sub
     Private Sub FrmChats_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         FrmLogIn.medic.FinalizarChat()
     End Sub
 
-    Private Sub FrmChats_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown, txtMensaje.KeyDown, txtDiagnostico.KeyDown, btn_fichaMed.KeyDown, btn_modificar.KeyDown, btn_enviar.KeyDown, btn_salir.KeyDown, txtCi.KeyDown
+    Private Sub FrmChats_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown, txtMensaje.KeyDown, btn_fichaMed.KeyDown, btn_modificar.KeyDown, btn_enviar.KeyDown, btn_salir.KeyDown, txtCi.KeyDown
         DesecharAltF4(e)
     End Sub
-
+#End Region
 #Region "poder mover el form"
 
     'DLLImport,Significa que el método declarado a
@@ -86,7 +100,7 @@ Public Class FrmChats
     Private Shared Sub SendMessage(hWnd As IntPtr, wMsg As Integer, wParam As Integer, lParam As Integer)
     End Sub
 
-    Private Sub titleBar_MouseDown(sender As Object, e As MouseEventArgs) Handles TopPanel.MouseDown
+    Private Sub titleBar_MouseDown(sender As Object, e As MouseEventArgs) Handles TopPanel.MouseDown, app_titulo.MouseDown
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
@@ -112,7 +126,7 @@ Public Class FrmChats
         'Set panel properties
         With contactPanel
             .BackColor = Color.FromArgb(37, 45, 76)
-            .Size = New Size(250, 60)
+            .Size = New Size(240, 60)
             .Name = "pnlContact" + (_ContactPanelsAddedCount + 1).ToString
         End With
 
@@ -203,7 +217,7 @@ Public Class FrmChats
         Dim label As New Label
         With label
             .AutoSize = True
-            .Location = New Point(150, 40)
+            .Location = New Point(170, 40)
             .Name = "lbContactName" + _ContactPanelsAddedCount.ToString
             .Font = New Font("Segoe UI", 8, FontStyle.Regular)
             .ForeColor = Color.Gainsboro
@@ -249,4 +263,5 @@ Public Class FrmChats
 
 
 #End Region
+
 End Class

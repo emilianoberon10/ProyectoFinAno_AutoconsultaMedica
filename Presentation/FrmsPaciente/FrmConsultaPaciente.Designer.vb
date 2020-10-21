@@ -23,10 +23,10 @@ Partial Class FrmConsultaPaciente
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmConsultaPaciente))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmConsultaPaciente))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.btn_chat = New Guna.UI2.WinForms.Guna2Button()
@@ -58,7 +58,7 @@ Partial Class FrmConsultaPaciente
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(223, -126)
+        Me.Label1.Location = New System.Drawing.Point(191, -102)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(374, 39)
         Me.Label1.TabIndex = 11
@@ -82,7 +82,8 @@ Partial Class FrmConsultaPaciente
         Me.btn_chat.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn_chat.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.btn_chat.HoverState.Parent = Me.btn_chat
-        Me.btn_chat.Location = New System.Drawing.Point(533, 347)
+        Me.btn_chat.Location = New System.Drawing.Point(575, 308)
+        Me.btn_chat.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_chat.Name = "btn_chat"
         Me.btn_chat.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.btn_chat.ShadowDecoration.BorderRadius = 20
@@ -91,7 +92,7 @@ Partial Class FrmConsultaPaciente
         Me.btn_chat.ShadowDecoration.Enabled = True
         Me.btn_chat.ShadowDecoration.Parent = Me.btn_chat
         Me.btn_chat.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
-        Me.btn_chat.Size = New System.Drawing.Size(233, 50)
+        Me.btn_chat.Size = New System.Drawing.Size(215, 50)
         Me.btn_chat.TabIndex = 60
         Me.btn_chat.Text = "CHAT"
         '
@@ -109,7 +110,8 @@ Partial Class FrmConsultaPaciente
         Me.btn_consultar.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn_consultar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.btn_consultar.HoverState.Parent = Me.btn_consultar
-        Me.btn_consultar.Location = New System.Drawing.Point(12, 347)
+        Me.btn_consultar.Location = New System.Drawing.Point(31, 308)
+        Me.btn_consultar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_consultar.Name = "btn_consultar"
         Me.btn_consultar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.btn_consultar.ShadowDecoration.BorderRadius = 20
@@ -118,68 +120,72 @@ Partial Class FrmConsultaPaciente
         Me.btn_consultar.ShadowDecoration.Enabled = True
         Me.btn_consultar.ShadowDecoration.Parent = Me.btn_consultar
         Me.btn_consultar.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4)
-        Me.btn_consultar.Size = New System.Drawing.Size(233, 50)
+        Me.btn_consultar.Size = New System.Drawing.Size(215, 50)
         Me.btn_consultar.TabIndex = 59
         Me.btn_consultar.Text = "CONSULTAR"
         '
         'dgvDiagnostico
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(223, Byte), Integer), CType(CType(251, Byte), Integer))
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(208, Byte), Integer))
         Me.dgvDiagnostico.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvDiagnostico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvDiagnostico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        Me.dgvDiagnostico.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.dgvDiagnostico.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
         Me.dgvDiagnostico.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvDiagnostico.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvDiagnostico.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(99, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvDiagnostico.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvDiagnostico.ColumnHeadersHeight = 30
+        Me.dgvDiagnostico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(107, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(246, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(223, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(68, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(151, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvDiagnostico.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvDiagnostico.Enabled = False
         Me.dgvDiagnostico.EnableHeadersVisualStyles = False
-        Me.dgvDiagnostico.GridColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(205, Byte), Integer))
-        Me.dgvDiagnostico.Location = New System.Drawing.Point(315, 408)
+        Me.dgvDiagnostico.GridColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(203, Byte), Integer))
+        Me.dgvDiagnostico.Location = New System.Drawing.Point(271, 355)
+        Me.dgvDiagnostico.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvDiagnostico.Name = "dgvDiagnostico"
         Me.dgvDiagnostico.ReadOnly = True
         Me.dgvDiagnostico.RowHeadersVisible = False
-        Me.dgvDiagnostico.RowTemplate.Height = 24
+        Me.dgvDiagnostico.RowTemplate.Height = 26
         Me.dgvDiagnostico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvDiagnostico.Size = New System.Drawing.Size(163, 266)
+        Me.dgvDiagnostico.Size = New System.Drawing.Size(260, 288)
         Me.dgvDiagnostico.TabIndex = 58
-        Me.dgvDiagnostico.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue
-        Me.dgvDiagnostico.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(223, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.dgvDiagnostico.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Pink
+        Me.dgvDiagnostico.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(208, Byte), Integer))
         Me.dgvDiagnostico.ThemeStyle.AlternatingRowsStyle.Font = Nothing
         Me.dgvDiagnostico.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
         Me.dgvDiagnostico.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
         Me.dgvDiagnostico.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
         Me.dgvDiagnostico.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
-        Me.dgvDiagnostico.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(205, Byte), Integer))
-        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.dgvDiagnostico.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(203, Byte), Integer))
+        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.dgvDiagnostico.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvDiagnostico.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.Height = 23
+        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.Height = 30
         Me.dgvDiagnostico.ThemeStyle.ReadOnly = True
-        Me.dgvDiagnostico.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvDiagnostico.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.dgvDiagnostico.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvDiagnostico.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvDiagnostico.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black
-        Me.dgvDiagnostico.ThemeStyle.RowsStyle.Height = 24
-        Me.dgvDiagnostico.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(107, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(246, Byte), Integer))
-        Me.dgvDiagnostico.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
+        Me.dgvDiagnostico.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvDiagnostico.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.dgvDiagnostico.ThemeStyle.RowsStyle.Height = 26
+        Me.dgvDiagnostico.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(151, Byte), Integer))
+        Me.dgvDiagnostico.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         '
         'cbSintoma9
         '
@@ -198,10 +204,11 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma9.HoverState.Parent = Me.cbSintoma9
         Me.cbSintoma9.ItemHeight = 30
         Me.cbSintoma9.ItemsAppearance.Parent = Me.cbSintoma9
-        Me.cbSintoma9.Location = New System.Drawing.Point(536, 220)
+        Me.cbSintoma9.Location = New System.Drawing.Point(575, 227)
+        Me.cbSintoma9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbSintoma9.Name = "cbSintoma9"
         Me.cbSintoma9.ShadowDecoration.Parent = Me.cbSintoma9
-        Me.cbSintoma9.Size = New System.Drawing.Size(213, 36)
+        Me.cbSintoma9.Size = New System.Drawing.Size(215, 36)
         Me.cbSintoma9.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma9.TabIndex = 56
         '
@@ -222,10 +229,11 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma6.HoverState.Parent = Me.cbSintoma6
         Me.cbSintoma6.ItemHeight = 30
         Me.cbSintoma6.ItemsAppearance.Parent = Me.cbSintoma6
-        Me.cbSintoma6.Location = New System.Drawing.Point(536, 155)
+        Me.cbSintoma6.Location = New System.Drawing.Point(575, 162)
+        Me.cbSintoma6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbSintoma6.Name = "cbSintoma6"
         Me.cbSintoma6.ShadowDecoration.Parent = Me.cbSintoma6
-        Me.cbSintoma6.Size = New System.Drawing.Size(213, 36)
+        Me.cbSintoma6.Size = New System.Drawing.Size(215, 36)
         Me.cbSintoma6.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma6.TabIndex = 55
         '
@@ -246,10 +254,11 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma8.HoverState.Parent = Me.cbSintoma8
         Me.cbSintoma8.ItemHeight = 30
         Me.cbSintoma8.ItemsAppearance.Parent = Me.cbSintoma8
-        Me.cbSintoma8.Location = New System.Drawing.Point(296, 220)
+        Me.cbSintoma8.Location = New System.Drawing.Point(303, 227)
+        Me.cbSintoma8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbSintoma8.Name = "cbSintoma8"
         Me.cbSintoma8.ShadowDecoration.Parent = Me.cbSintoma8
-        Me.cbSintoma8.Size = New System.Drawing.Size(213, 36)
+        Me.cbSintoma8.Size = New System.Drawing.Size(215, 36)
         Me.cbSintoma8.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma8.TabIndex = 54
         '
@@ -270,10 +279,11 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma5.HoverState.Parent = Me.cbSintoma5
         Me.cbSintoma5.ItemHeight = 30
         Me.cbSintoma5.ItemsAppearance.Parent = Me.cbSintoma5
-        Me.cbSintoma5.Location = New System.Drawing.Point(296, 155)
+        Me.cbSintoma5.Location = New System.Drawing.Point(303, 156)
+        Me.cbSintoma5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbSintoma5.Name = "cbSintoma5"
         Me.cbSintoma5.ShadowDecoration.Parent = Me.cbSintoma5
-        Me.cbSintoma5.Size = New System.Drawing.Size(213, 36)
+        Me.cbSintoma5.Size = New System.Drawing.Size(215, 36)
         Me.cbSintoma5.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma5.TabIndex = 53
         '
@@ -294,10 +304,11 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma7.HoverState.Parent = Me.cbSintoma7
         Me.cbSintoma7.ItemHeight = 30
         Me.cbSintoma7.ItemsAppearance.Parent = Me.cbSintoma7
-        Me.cbSintoma7.Location = New System.Drawing.Point(37, 220)
+        Me.cbSintoma7.Location = New System.Drawing.Point(31, 227)
+        Me.cbSintoma7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbSintoma7.Name = "cbSintoma7"
         Me.cbSintoma7.ShadowDecoration.Parent = Me.cbSintoma7
-        Me.cbSintoma7.Size = New System.Drawing.Size(213, 36)
+        Me.cbSintoma7.Size = New System.Drawing.Size(215, 36)
         Me.cbSintoma7.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma7.TabIndex = 52
         '
@@ -318,10 +329,11 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma3.HoverState.Parent = Me.cbSintoma3
         Me.cbSintoma3.ItemHeight = 30
         Me.cbSintoma3.ItemsAppearance.Parent = Me.cbSintoma3
-        Me.cbSintoma3.Location = New System.Drawing.Point(536, 96)
+        Me.cbSintoma3.Location = New System.Drawing.Point(575, 86)
+        Me.cbSintoma3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbSintoma3.Name = "cbSintoma3"
         Me.cbSintoma3.ShadowDecoration.Parent = Me.cbSintoma3
-        Me.cbSintoma3.Size = New System.Drawing.Size(213, 36)
+        Me.cbSintoma3.Size = New System.Drawing.Size(215, 36)
         Me.cbSintoma3.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma3.TabIndex = 51
         '
@@ -342,10 +354,11 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma4.HoverState.Parent = Me.cbSintoma4
         Me.cbSintoma4.ItemHeight = 30
         Me.cbSintoma4.ItemsAppearance.Parent = Me.cbSintoma4
-        Me.cbSintoma4.Location = New System.Drawing.Point(37, 155)
+        Me.cbSintoma4.Location = New System.Drawing.Point(31, 162)
+        Me.cbSintoma4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbSintoma4.Name = "cbSintoma4"
         Me.cbSintoma4.ShadowDecoration.Parent = Me.cbSintoma4
-        Me.cbSintoma4.Size = New System.Drawing.Size(213, 36)
+        Me.cbSintoma4.Size = New System.Drawing.Size(215, 36)
         Me.cbSintoma4.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma4.TabIndex = 57
         '
@@ -366,10 +379,11 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma2.HoverState.Parent = Me.cbSintoma2
         Me.cbSintoma2.ItemHeight = 30
         Me.cbSintoma2.ItemsAppearance.Parent = Me.cbSintoma2
-        Me.cbSintoma2.Location = New System.Drawing.Point(296, 96)
+        Me.cbSintoma2.Location = New System.Drawing.Point(303, 86)
+        Me.cbSintoma2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbSintoma2.Name = "cbSintoma2"
         Me.cbSintoma2.ShadowDecoration.Parent = Me.cbSintoma2
-        Me.cbSintoma2.Size = New System.Drawing.Size(213, 36)
+        Me.cbSintoma2.Size = New System.Drawing.Size(215, 36)
         Me.cbSintoma2.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma2.TabIndex = 50
         '
@@ -391,10 +405,11 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma1.HoverState.Parent = Me.cbSintoma1
         Me.cbSintoma1.ItemHeight = 30
         Me.cbSintoma1.ItemsAppearance.Parent = Me.cbSintoma1
-        Me.cbSintoma1.Location = New System.Drawing.Point(37, 96)
+        Me.cbSintoma1.Location = New System.Drawing.Point(31, 86)
+        Me.cbSintoma1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbSintoma1.Name = "cbSintoma1"
         Me.cbSintoma1.ShadowDecoration.Parent = Me.cbSintoma1
-        Me.cbSintoma1.Size = New System.Drawing.Size(213, 36)
+        Me.cbSintoma1.Size = New System.Drawing.Size(215, 36)
         Me.cbSintoma1.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbSintoma1.TabIndex = 49
         Me.cbSintoma1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -402,7 +417,8 @@ Partial Class FrmConsultaPaciente
         'chb8
         '
         Me.chb8.AutoSize = True
-        Me.chb8.Location = New System.Drawing.Point(515, 227)
+        Me.chb8.Location = New System.Drawing.Point(554, 242)
+        Me.chb8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chb8.Name = "chb8"
         Me.chb8.Size = New System.Drawing.Size(15, 14)
         Me.chb8.TabIndex = 47
@@ -411,7 +427,8 @@ Partial Class FrmConsultaPaciente
         'chb7
         '
         Me.chb7.AutoSize = True
-        Me.chb7.Location = New System.Drawing.Point(275, 227)
+        Me.chb7.Location = New System.Drawing.Point(282, 242)
+        Me.chb7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chb7.Name = "chb7"
         Me.chb7.Size = New System.Drawing.Size(15, 14)
         Me.chb7.TabIndex = 46
@@ -420,7 +437,8 @@ Partial Class FrmConsultaPaciente
         'chb6
         '
         Me.chb6.AutoSize = True
-        Me.chb6.Location = New System.Drawing.Point(16, 227)
+        Me.chb6.Location = New System.Drawing.Point(10, 242)
+        Me.chb6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chb6.Name = "chb6"
         Me.chb6.Size = New System.Drawing.Size(15, 14)
         Me.chb6.TabIndex = 45
@@ -429,7 +447,8 @@ Partial Class FrmConsultaPaciente
         'chb5
         '
         Me.chb5.AutoSize = True
-        Me.chb5.Location = New System.Drawing.Point(515, 162)
+        Me.chb5.Location = New System.Drawing.Point(554, 171)
+        Me.chb5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chb5.Name = "chb5"
         Me.chb5.Size = New System.Drawing.Size(15, 14)
         Me.chb5.TabIndex = 44
@@ -438,7 +457,8 @@ Partial Class FrmConsultaPaciente
         'chb4
         '
         Me.chb4.AutoSize = True
-        Me.chb4.Location = New System.Drawing.Point(275, 162)
+        Me.chb4.Location = New System.Drawing.Point(282, 171)
+        Me.chb4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chb4.Name = "chb4"
         Me.chb4.Size = New System.Drawing.Size(15, 14)
         Me.chb4.TabIndex = 43
@@ -447,7 +467,8 @@ Partial Class FrmConsultaPaciente
         'chb3
         '
         Me.chb3.AutoSize = True
-        Me.chb3.Location = New System.Drawing.Point(16, 162)
+        Me.chb3.Location = New System.Drawing.Point(10, 171)
+        Me.chb3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chb3.Name = "chb3"
         Me.chb3.Size = New System.Drawing.Size(15, 14)
         Me.chb3.TabIndex = 42
@@ -456,7 +477,8 @@ Partial Class FrmConsultaPaciente
         'chb2
         '
         Me.chb2.AutoSize = True
-        Me.chb2.Location = New System.Drawing.Point(515, 109)
+        Me.chb2.Location = New System.Drawing.Point(554, 95)
+        Me.chb2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chb2.Name = "chb2"
         Me.chb2.Size = New System.Drawing.Size(15, 14)
         Me.chb2.TabIndex = 41
@@ -465,7 +487,8 @@ Partial Class FrmConsultaPaciente
         'chb1
         '
         Me.chb1.AutoSize = True
-        Me.chb1.Location = New System.Drawing.Point(275, 109)
+        Me.chb1.Location = New System.Drawing.Point(286, 95)
+        Me.chb1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chb1.Name = "chb1"
         Me.chb1.Size = New System.Drawing.Size(15, 14)
         Me.chb1.TabIndex = 48
@@ -474,20 +497,20 @@ Partial Class FrmConsultaPaciente
         'consu_titulo
         '
         Me.consu_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.consu_titulo.ForeColor = System.Drawing.Color.Silver
-        Me.consu_titulo.Location = New System.Drawing.Point(0, 24)
+        Me.consu_titulo.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.consu_titulo.Location = New System.Drawing.Point(0, 20)
         Me.consu_titulo.Name = "consu_titulo"
-        Me.consu_titulo.Size = New System.Drawing.Size(778, 40)
+        Me.consu_titulo.Size = New System.Drawing.Size(804, 40)
         Me.consu_titulo.TabIndex = 40
         Me.consu_titulo.Text = "SELECCIONE SUS SINTOMAS"
         Me.consu_titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmConsultaPaciente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(778, 699)
+        Me.ClientSize = New System.Drawing.Size(802, 683)
         Me.Controls.Add(Me.btn_chat)
         Me.Controls.Add(Me.btn_consultar)
         Me.Controls.Add(Me.dgvDiagnostico)
@@ -510,9 +533,9 @@ Partial Class FrmConsultaPaciente
         Me.Controls.Add(Me.chb1)
         Me.Controls.Add(Me.consu_titulo)
         Me.Controls.Add(Me.Label1)
-        Me.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmConsultaPaciente"
         Me.Text = "Consulta"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()

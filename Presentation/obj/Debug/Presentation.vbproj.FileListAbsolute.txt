@@ -186,3 +186,4 @@ C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug
 C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.FrmOpcionesUsuario.resources
 C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Español.resources
 C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Ingles.resources
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.FrmModifDiagnostico.resources

@@ -310,7 +310,7 @@ Public Class DBMedicos : Inherits ConexionBD
         consulta = "SELECT ci, CONCAT(pNom,' ',pape) as 'Nombre',estado,fecha,idChat FROM persona
                     JOIN chat ON ci=ciPac
                     WHERE chat.idMed=" & ci & "
-                    ORDER BY fecha DESC;"
+                    ORDER BY idChat DESC;"
         Return DevolverTabla(consulta)
     End Function
 

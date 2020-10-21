@@ -31,10 +31,13 @@ Public Class DBDiagnostico
             connection.Open()
             Using command = New MySqlCommand()
                 command.Connection = connection
-                command.CommandText = "SET @diagnosticoAnterior=(SELECT idDiag FROM diagnostico WHERE idPac=@idP ORDER BY idDiag DESC LIMIT 1);
-                                       UPDATE diagnostico SET nomE=@nomE WHERE idDiag=@diagnosticoAnterior;"
+                command.CommandText = "SET @diagnosticoAnterior=(SELECT idDiag FROM diagnostico WHERE idP=@idP ORDER BY idDiag DESC LIMIT 1);
+                                       UPDATE diagnostico SET nomE=@nomE WHERE idDiag=@diagnosticoAnterior;
+                                       UPDATE chat SET diagnostico=@nomE WHERE ciPac=@idP AND estado='Proceso';"
+
                 command.Parameters.AddWithValue("@idP", ci)
                 command.Parameters.AddWithValue("@nomE", enfermedades)
+
                 command.CommandType = CommandType.Text
                 command.ExecuteNonQuery()
                 Return True

@@ -1,6 +1,5 @@
 ﻿Public Class FrmSolicitudesChat
 
-    Public diag As String
 
     Private Sub FrmSolicitudesChat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Traductor.traducirForm(Me)
@@ -10,18 +9,19 @@
     End Sub
 
     Private Sub dgvSolicitudes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSolicitudes.CellDoubleClick
+        Dim FilaActual As Integer = dgvSolicitudes.CurrentRow.Index
+        Dim ci As String = dgvSolicitudes.Rows(FilaActual).Cells(0).Value
+        Dim nombre As String = dgvSolicitudes.Rows(FilaActual).Cells(1).Value
+        Dim diag As String = dgvSolicitudes.Rows(FilaActual).Cells(2).Value
 
-        If MessageBox.Show("Sera redireccionado al chat con, desea continuar?", "Advertencia",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+        If MessageBox.Show("Sera redireccionado al chat con " & nombre.ToUpper & vbNewLine &
+                            "Con diagnostico: " & diag.ToUpper & vbNewLine &
+                            "¿Desea continuar?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
 
-            Dim FilaActual As Integer = dgvSolicitudes.CurrentRow.Index
-            Dim ci As String = dgvSolicitudes.Rows(FilaActual).Cells(0).Value
-            diag = dgvSolicitudes.Rows(FilaActual).Cells(2).Value
 
             If FrmLogIn.medic.AceptarChat(ci, diag) Then
-                Dim form As New FrmChats
-                form.txtDiagnostico.Text = diag
-                form.txtCi.Text = ci
+                Dim form As New FrmChats(diag, ci, Me)
+                form.btn_modificar.Enabled = True
                 form.Show()
                 form.Timer1.Start()
             End If
@@ -40,8 +40,7 @@
         dgvSolicitudes.DataSource = FrmLogIn.medic.ComprobarSoli()
     End Sub
 
-    'Metodo para pintar la celda de riesgo segun su respectivo color
-    Private Sub dgvSolicitudes_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs)
+    Private Sub PintarCeldasSegunRiesgo(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dgvSolicitudes.CellPainting
         If Me.dgvSolicitudes.Columns(e.ColumnIndex).Name = "riesgo" Then
             If Convert.ToString(e.Value) = "rojo" Then
                 e.CellStyle.ForeColor = Color.Black
@@ -61,4 +60,5 @@
             End If
         End If
     End Sub
+
 End Class

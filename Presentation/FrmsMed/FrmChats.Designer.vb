@@ -27,7 +27,6 @@ Partial Class FrmChats
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmChats))
-        Me.txtDiagnostico = New System.Windows.Forms.TextBox()
         Me.MChat_diag = New System.Windows.Forms.Label()
         Me.txtMensaje = New System.Windows.Forms.TextBox()
         Me.txtChat = New System.Windows.Forms.TextBox()
@@ -44,26 +43,18 @@ Partial Class FrmChats
         Me.dgvChats = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.flpMain = New System.Windows.Forms.FlowLayoutPanel()
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
+        Me.txtDiagnostico = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TopPanel.SuspendLayout()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvChats, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'txtDiagnostico
-        '
-        Me.txtDiagnostico.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDiagnostico.Location = New System.Drawing.Point(5, 713)
-        Me.txtDiagnostico.MaxLength = 30
-        Me.txtDiagnostico.Name = "txtDiagnostico"
-        Me.txtDiagnostico.Size = New System.Drawing.Size(178, 29)
-        Me.txtDiagnostico.TabIndex = 3
-        '
         'MChat_diag
         '
         Me.MChat_diag.AutoSize = True
         Me.MChat_diag.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MChat_diag.ForeColor = System.Drawing.Color.Silver
+        Me.MChat_diag.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.MChat_diag.Location = New System.Drawing.Point(5, 692)
         Me.MChat_diag.Name = "MChat_diag"
         Me.MChat_diag.Size = New System.Drawing.Size(92, 21)
@@ -108,14 +99,14 @@ Partial Class FrmChats
         Me.TopPanel.Location = New System.Drawing.Point(0, 0)
         Me.TopPanel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TopPanel.Name = "TopPanel"
-        Me.TopPanel.Size = New System.Drawing.Size(778, 28)
+        Me.TopPanel.Size = New System.Drawing.Size(801, 28)
         Me.TopPanel.TabIndex = 12
         '
         'btnMinimize
         '
         Me.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnMinimize.Image = Global.Presentation.My.Resources.Resources.Minimize_Icon
-        Me.btnMinimize.Location = New System.Drawing.Point(744, 5)
+        Me.btnMinimize.Location = New System.Drawing.Point(774, 3)
         Me.btnMinimize.Name = "btnMinimize"
         Me.btnMinimize.Padding = New System.Windows.Forms.Padding(3)
         Me.btnMinimize.Size = New System.Drawing.Size(22, 22)
@@ -196,11 +187,12 @@ Partial Class FrmChats
         Me.btn_modificar.BorderThickness = 2
         Me.btn_modificar.CheckedState.Parent = Me.btn_modificar
         Me.btn_modificar.CustomImages.Parent = Me.btn_modificar
+        Me.btn_modificar.Enabled = False
         Me.btn_modificar.FillColor = System.Drawing.Color.Empty
         Me.btn_modificar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_modificar.ForeColor = System.Drawing.Color.White
         Me.btn_modificar.HoverState.Parent = Me.btn_modificar
-        Me.btn_modificar.Location = New System.Drawing.Point(189, 713)
+        Me.btn_modificar.Location = New System.Drawing.Point(189, 718)
         Me.btn_modificar.Name = "btn_modificar"
         Me.btn_modificar.ShadowDecoration.Parent = Me.btn_modificar
         Me.btn_modificar.Size = New System.Drawing.Size(120, 30)
@@ -219,7 +211,7 @@ Partial Class FrmChats
         Me.btn_fichaMed.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_fichaMed.ForeColor = System.Drawing.Color.White
         Me.btn_fichaMed.HoverState.Parent = Me.btn_fichaMed
-        Me.btn_fichaMed.Location = New System.Drawing.Point(332, 718)
+        Me.btn_fichaMed.Location = New System.Drawing.Point(357, 718)
         Me.btn_fichaMed.Name = "btn_fichaMed"
         Me.btn_fichaMed.ShadowDecoration.Parent = Me.btn_fichaMed
         Me.btn_fichaMed.Size = New System.Drawing.Size(165, 30)
@@ -300,16 +292,42 @@ Partial Class FrmChats
         Me.flpMain.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.flpMain.Location = New System.Drawing.Point(528, 29)
         Me.flpMain.Name = "flpMain"
-        Me.flpMain.Size = New System.Drawing.Size(250, 730)
+        Me.flpMain.Size = New System.Drawing.Size(268, 730)
         Me.flpMain.TabIndex = 17
         Me.flpMain.WrapContents = False
+        '
+        'txtDiagnostico
+        '
+        Me.txtDiagnostico.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtDiagnostico.DefaultText = ""
+        Me.txtDiagnostico.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtDiagnostico.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.txtDiagnostico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.txtDiagnostico.DisabledState.Parent = Me.txtDiagnostico
+        Me.txtDiagnostico.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtDiagnostico.Enabled = False
+        Me.txtDiagnostico.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtDiagnostico.FocusedState.Parent = Me.txtDiagnostico
+        Me.txtDiagnostico.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txtDiagnostico.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtDiagnostico.HoverState.Parent = Me.txtDiagnostico
+        Me.txtDiagnostico.Location = New System.Drawing.Point(5, 717)
+        Me.txtDiagnostico.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDiagnostico.Name = "txtDiagnostico"
+        Me.txtDiagnostico.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtDiagnostico.PlaceholderText = ""
+        Me.txtDiagnostico.SelectedText = ""
+        Me.txtDiagnostico.ShadowDecoration.Parent = Me.txtDiagnostico
+        Me.txtDiagnostico.Size = New System.Drawing.Size(177, 31)
+        Me.txtDiagnostico.TabIndex = 18
         '
         'FrmChats
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(778, 760)
+        Me.ClientSize = New System.Drawing.Size(801, 764)
+        Me.Controls.Add(Me.txtDiagnostico)
         Me.Controls.Add(Me.flpMain)
         Me.Controls.Add(Me.dgvChats)
         Me.Controls.Add(Me.btn_fichaMed)
@@ -321,7 +339,6 @@ Partial Class FrmChats
         Me.Controls.Add(Me.txtMensaje)
         Me.Controls.Add(Me.MChat_diag)
         Me.Controls.Add(Me.txtCi)
-        Me.Controls.Add(Me.txtDiagnostico)
         Me.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -337,7 +354,6 @@ Partial Class FrmChats
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents txtDiagnostico As TextBox
     Friend WithEvents MChat_diag As Label
     Friend WithEvents txtMensaje As TextBox
     Friend WithEvents txtChat As TextBox
@@ -354,4 +370,5 @@ Partial Class FrmChats
     Friend WithEvents dgvChats As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents flpMain As FlowLayoutPanel
     Friend WithEvents Guna2AnimateWindow1 As Guna.UI2.WinForms.Guna2AnimateWindow
+    Friend WithEvents txtDiagnostico As Guna.UI2.WinForms.Guna2TextBox
 End Class

@@ -22,6 +22,7 @@ Partial Class FrmOpcionesAyuda
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmOpcionesAyuda))
         Me.SuspendLayout()
         '
         'FrmOpcionesAyuda
@@ -31,6 +32,7 @@ Partial Class FrmOpcionesAyuda
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(557, 583)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmOpcionesAyuda"
         Me.Text = "FrmOpcionesAyuda"
         Me.ResumeLayout(False)

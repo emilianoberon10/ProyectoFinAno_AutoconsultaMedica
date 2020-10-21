@@ -47,7 +47,7 @@ Public Class FrmModificarGerente
         End Select
     End Sub
 
-    Private Sub DgvDatos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvDatos.CellClick
+    Private Sub DgvDatos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvDatos.CellDoubleClick
         chb1.Checked = False
         chb2.Checked = False
         chb3.Checked = False

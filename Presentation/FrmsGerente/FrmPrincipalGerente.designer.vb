@@ -234,7 +234,7 @@ Partial Class FrmPrincipalGerente
         '
         Me.fotoPerfil.Cursor = System.Windows.Forms.Cursors.Hand
         Me.fotoPerfil.Image = Global.Presentation.My.Resources.Resources.profileEmpty
-        Me.fotoPerfil.Location = New System.Drawing.Point(46, 13)
+        Me.fotoPerfil.Location = New System.Drawing.Point(46, 27)
         Me.fotoPerfil.Name = "fotoPerfil"
         Me.fotoPerfil.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.fotoPerfil.ShadowDecoration.Parent = Me.fotoPerfil
@@ -258,7 +258,7 @@ Partial Class FrmPrincipalGerente
         '
         Me.lbNombre.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbNombre.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.lbNombre.Location = New System.Drawing.Point(0, 154)
+        Me.lbNombre.Location = New System.Drawing.Point(0, 162)
         Me.lbNombre.Name = "lbNombre"
         Me.lbNombre.Size = New System.Drawing.Size(222, 19)
         Me.lbNombre.TabIndex = 2
@@ -303,7 +303,7 @@ Partial Class FrmPrincipalGerente
         Me.TopPanel.Location = New System.Drawing.Point(0, 0)
         Me.TopPanel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TopPanel.Name = "TopPanel"
-        Me.TopPanel.Size = New System.Drawing.Size(997, 37)
+        Me.TopPanel.Size = New System.Drawing.Size(1024, 37)
         Me.TopPanel.TabIndex = 1
         '
         'PictureBox1
@@ -320,7 +320,7 @@ Partial Class FrmPrincipalGerente
         '
         Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnClose.Image = Global.Presentation.My.Resources.Resources.Close_Icon
-        Me.btnClose.Location = New System.Drawing.Point(968, 8)
+        Me.btnClose.Location = New System.Drawing.Point(990, 8)
         Me.btnClose.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Padding = New System.Windows.Forms.Padding(3)
@@ -344,7 +344,7 @@ Partial Class FrmPrincipalGerente
         '
         Me.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnMinimize.Image = Global.Presentation.My.Resources.Resources.Minimize_Icon
-        Me.btnMinimize.Location = New System.Drawing.Point(940, 8)
+        Me.btnMinimize.Location = New System.Drawing.Point(962, 8)
         Me.btnMinimize.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnMinimize.Name = "btnMinimize"
         Me.btnMinimize.Padding = New System.Windows.Forms.Padding(3)
@@ -356,10 +356,11 @@ Partial Class FrmPrincipalGerente
         'PanelChildForm
         '
         Me.PanelChildForm.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelChildForm.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.PanelChildForm.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PanelChildForm.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.PanelChildForm.Location = New System.Drawing.Point(222, 37)
         Me.PanelChildForm.Name = "PanelChildForm"
-        Me.PanelChildForm.Size = New System.Drawing.Size(775, 683)
+        Me.PanelChildForm.Size = New System.Drawing.Size(802, 683)
         Me.PanelChildForm.TabIndex = 2
         '
         'ofdFoto
@@ -371,7 +372,7 @@ Partial Class FrmPrincipalGerente
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(997, 720)
+        Me.ClientSize = New System.Drawing.Size(1024, 720)
         Me.Controls.Add(Me.PanelChildForm)
         Me.Controls.Add(Me.PanelMenu)
         Me.Controls.Add(Me.TopPanel)

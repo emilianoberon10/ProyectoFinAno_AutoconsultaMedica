@@ -71,7 +71,7 @@ Partial Class FrmIngresarGerente
         Me.ingGerente.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.ingGerente.Location = New System.Drawing.Point(1, 9)
         Me.ingGerente.Name = "ingGerente"
-        Me.ingGerente.Size = New System.Drawing.Size(774, 40)
+        Me.ingGerente.Size = New System.Drawing.Size(804, 40)
         Me.ingGerente.TabIndex = 0
         Me.ingGerente.Text = "INGRESAR SINTOMAS/ENFERMEDADES"
         Me.ingGerente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -82,7 +82,7 @@ Partial Class FrmIngresarGerente
         Me.enfermedad.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.enfermedad.Location = New System.Drawing.Point(1, 186)
         Me.enfermedad.Name = "enfermedad"
-        Me.enfermedad.Size = New System.Drawing.Size(774, 30)
+        Me.enfermedad.Size = New System.Drawing.Size(804, 30)
         Me.enfermedad.TabIndex = 3
         Me.enfermedad.Text = "Enfermedad"
         Me.enfermedad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -103,10 +103,10 @@ Partial Class FrmIngresarGerente
         Me.lbNomEnf.AutoSize = True
         Me.lbNomEnf.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbNomEnf.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.ErrorProviderNomSint.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopLeft)
         Me.ErrorProviderNomDesEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
+        Me.ErrorProviderNomSint.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopLeft)
         Me.ErrorProviderSintEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
-        Me.lbNomEnf.Location = New System.Drawing.Point(22, 206)
+        Me.lbNomEnf.Location = New System.Drawing.Point(97, 206)
         Me.lbNomEnf.Name = "lbNomEnf"
         Me.lbNomEnf.Size = New System.Drawing.Size(75, 21)
         Me.lbNomEnf.TabIndex = 3
@@ -117,7 +117,7 @@ Partial Class FrmIngresarGerente
         Me.lbNomSint.AutoSize = True
         Me.lbNomSint.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbNomSint.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.lbNomSint.Location = New System.Drawing.Point(22, 90)
+        Me.lbNomSint.Location = New System.Drawing.Point(97, 90)
         Me.lbNomSint.Name = "lbNomSint"
         Me.lbNomSint.Size = New System.Drawing.Size(75, 21)
         Me.lbNomSint.TabIndex = 3
@@ -141,7 +141,7 @@ Partial Class FrmIngresarGerente
         Me.lbRiesgo.AutoSize = True
         Me.lbRiesgo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbRiesgo.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.lbRiesgo.Location = New System.Drawing.Point(457, 268)
+        Me.lbRiesgo.Location = New System.Drawing.Point(532, 268)
         Me.lbRiesgo.Name = "lbRiesgo"
         Me.lbRiesgo.Size = New System.Drawing.Size(64, 21)
         Me.lbRiesgo.TabIndex = 3
@@ -152,7 +152,7 @@ Partial Class FrmIngresarGerente
         Me.lbDescripcion.AutoSize = True
         Me.lbDescripcion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbDescripcion.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.lbDescripcion.Location = New System.Drawing.Point(22, 274)
+        Me.lbDescripcion.Location = New System.Drawing.Point(97, 274)
         Me.lbDescripcion.Name = "lbDescripcion"
         Me.lbDescripcion.Size = New System.Drawing.Size(109, 21)
         Me.lbDescripcion.TabIndex = 3
@@ -178,7 +178,7 @@ Partial Class FrmIngresarGerente
         Me.txtNombreSintoma.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtNombreSintoma.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtNombreSintoma.HoverState.Parent = Me.txtNombreSintoma
-        Me.txtNombreSintoma.Location = New System.Drawing.Point(22, 114)
+        Me.txtNombreSintoma.Location = New System.Drawing.Point(97, 114)
         Me.txtNombreSintoma.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNombreSintoma.Name = "txtNombreSintoma"
         Me.txtNombreSintoma.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -205,7 +205,7 @@ Partial Class FrmIngresarGerente
         Me.btn_ingresar.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn_ingresar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.btn_ingresar.HoverState.Parent = Me.btn_ingresar
-        Me.btn_ingresar.Location = New System.Drawing.Point(563, 104)
+        Me.btn_ingresar.Location = New System.Drawing.Point(575, 104)
         Me.btn_ingresar.Name = "btn_ingresar"
         Me.btn_ingresar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.btn_ingresar.ShadowDecoration.BorderRadius = 20
@@ -232,7 +232,7 @@ Partial Class FrmIngresarGerente
         Me.btn_ingresar2.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn_ingresar2.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.btn_ingresar2.HoverState.Parent = Me.btn_ingresar2
-        Me.btn_ingresar2.Location = New System.Drawing.Point(563, 612)
+        Me.btn_ingresar2.Location = New System.Drawing.Point(575, 617)
         Me.btn_ingresar2.Name = "btn_ingresar2"
         Me.btn_ingresar2.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.btn_ingresar2.ShadowDecoration.BorderRadius = 20
@@ -265,7 +265,7 @@ Partial Class FrmIngresarGerente
         Me.txtNombreEnfermedad.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtNombreEnfermedad.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtNombreEnfermedad.HoverState.Parent = Me.txtNombreEnfermedad
-        Me.txtNombreEnfermedad.Location = New System.Drawing.Point(22, 225)
+        Me.txtNombreEnfermedad.Location = New System.Drawing.Point(97, 225)
         Me.txtNombreEnfermedad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNombreEnfermedad.Name = "txtNombreEnfermedad"
         Me.txtNombreEnfermedad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -298,7 +298,7 @@ Partial Class FrmIngresarGerente
         Me.txtDescripcion.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtDescripcion.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtDescripcion.HoverState.Parent = Me.txtDescripcion
-        Me.txtDescripcion.Location = New System.Drawing.Point(22, 298)
+        Me.txtDescripcion.Location = New System.Drawing.Point(97, 298)
         Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -315,7 +315,7 @@ Partial Class FrmIngresarGerente
         '
         Me.Guna2Separator1.Location = New System.Drawing.Point(1, 173)
         Me.Guna2Separator1.Name = "Guna2Separator1"
-        Me.Guna2Separator1.Size = New System.Drawing.Size(774, 11)
+        Me.Guna2Separator1.Size = New System.Drawing.Size(804, 11)
         Me.Guna2Separator1.TabIndex = 56
         '
         'groupBoxSintomas
@@ -346,7 +346,7 @@ Partial Class FrmIngresarGerente
         Me.groupBoxSintomas.Location = New System.Drawing.Point(26, 361)
         Me.groupBoxSintomas.Name = "groupBoxSintomas"
         Me.groupBoxSintomas.ShadowDecoration.Parent = Me.groupBoxSintomas
-        Me.groupBoxSintomas.Size = New System.Drawing.Size(737, 245)
+        Me.groupBoxSintomas.Size = New System.Drawing.Size(749, 234)
         Me.groupBoxSintomas.TabIndex = 57
         Me.groupBoxSintomas.Text = "RELACIONADOS"
         '
@@ -369,7 +369,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma6.HoverState.Parent = Me.cbSintoma6
         Me.cbSintoma6.ItemHeight = 30
         Me.cbSintoma6.ItemsAppearance.Parent = Me.cbSintoma6
-        Me.cbSintoma6.Location = New System.Drawing.Point(489, 108)
+        Me.cbSintoma6.Location = New System.Drawing.Point(509, 108)
         Me.cbSintoma6.Name = "cbSintoma6"
         Me.cbSintoma6.ShadowDecoration.Parent = Me.cbSintoma6
         Me.cbSintoma6.Size = New System.Drawing.Size(205, 36)
@@ -395,7 +395,7 @@ Partial Class FrmIngresarGerente
         Me.comboSintoma9.HoverState.Parent = Me.comboSintoma9
         Me.comboSintoma9.ItemHeight = 30
         Me.comboSintoma9.ItemsAppearance.Parent = Me.comboSintoma9
-        Me.comboSintoma9.Location = New System.Drawing.Point(489, 169)
+        Me.comboSintoma9.Location = New System.Drawing.Point(509, 169)
         Me.comboSintoma9.Name = "comboSintoma9"
         Me.comboSintoma9.ShadowDecoration.Parent = Me.comboSintoma9
         Me.comboSintoma9.Size = New System.Drawing.Size(205, 36)
@@ -421,7 +421,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma8.HoverState.Parent = Me.cbSintoma8
         Me.cbSintoma8.ItemHeight = 30
         Me.cbSintoma8.ItemsAppearance.Parent = Me.cbSintoma8
-        Me.cbSintoma8.Location = New System.Drawing.Point(265, 169)
+        Me.cbSintoma8.Location = New System.Drawing.Point(285, 169)
         Me.cbSintoma8.Name = "cbSintoma8"
         Me.cbSintoma8.ShadowDecoration.Parent = Me.cbSintoma8
         Me.cbSintoma8.Size = New System.Drawing.Size(205, 36)
@@ -447,7 +447,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma5.HoverState.Parent = Me.cbSintoma5
         Me.cbSintoma5.ItemHeight = 30
         Me.cbSintoma5.ItemsAppearance.Parent = Me.cbSintoma5
-        Me.cbSintoma5.Location = New System.Drawing.Point(265, 108)
+        Me.cbSintoma5.Location = New System.Drawing.Point(285, 108)
         Me.cbSintoma5.Name = "cbSintoma5"
         Me.cbSintoma5.ShadowDecoration.Parent = Me.cbSintoma5
         Me.cbSintoma5.Size = New System.Drawing.Size(205, 36)
@@ -473,7 +473,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma7.HoverState.Parent = Me.cbSintoma7
         Me.cbSintoma7.ItemHeight = 30
         Me.cbSintoma7.ItemsAppearance.Parent = Me.cbSintoma7
-        Me.cbSintoma7.Location = New System.Drawing.Point(35, 169)
+        Me.cbSintoma7.Location = New System.Drawing.Point(55, 169)
         Me.cbSintoma7.Name = "cbSintoma7"
         Me.cbSintoma7.ShadowDecoration.Parent = Me.cbSintoma7
         Me.cbSintoma7.Size = New System.Drawing.Size(205, 36)
@@ -499,7 +499,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma3.HoverState.Parent = Me.cbSintoma3
         Me.cbSintoma3.ItemHeight = 30
         Me.cbSintoma3.ItemsAppearance.Parent = Me.cbSintoma3
-        Me.cbSintoma3.Location = New System.Drawing.Point(489, 49)
+        Me.cbSintoma3.Location = New System.Drawing.Point(509, 49)
         Me.cbSintoma3.Name = "cbSintoma3"
         Me.cbSintoma3.ShadowDecoration.Parent = Me.cbSintoma3
         Me.cbSintoma3.Size = New System.Drawing.Size(205, 36)
@@ -525,7 +525,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma4.HoverState.Parent = Me.cbSintoma4
         Me.cbSintoma4.ItemHeight = 30
         Me.cbSintoma4.ItemsAppearance.Parent = Me.cbSintoma4
-        Me.cbSintoma4.Location = New System.Drawing.Point(35, 108)
+        Me.cbSintoma4.Location = New System.Drawing.Point(55, 108)
         Me.cbSintoma4.Name = "cbSintoma4"
         Me.cbSintoma4.ShadowDecoration.Parent = Me.cbSintoma4
         Me.cbSintoma4.Size = New System.Drawing.Size(205, 36)
@@ -551,7 +551,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma2.HoverState.Parent = Me.cbSintoma2
         Me.cbSintoma2.ItemHeight = 30
         Me.cbSintoma2.ItemsAppearance.Parent = Me.cbSintoma2
-        Me.cbSintoma2.Location = New System.Drawing.Point(265, 49)
+        Me.cbSintoma2.Location = New System.Drawing.Point(285, 49)
         Me.cbSintoma2.Name = "cbSintoma2"
         Me.cbSintoma2.ShadowDecoration.Parent = Me.cbSintoma2
         Me.cbSintoma2.Size = New System.Drawing.Size(205, 36)
@@ -577,7 +577,7 @@ Partial Class FrmIngresarGerente
         Me.cbSintoma1.HoverState.Parent = Me.cbSintoma1
         Me.cbSintoma1.ItemHeight = 30
         Me.cbSintoma1.ItemsAppearance.Parent = Me.cbSintoma1
-        Me.cbSintoma1.Location = New System.Drawing.Point(35, 49)
+        Me.cbSintoma1.Location = New System.Drawing.Point(55, 49)
         Me.cbSintoma1.Name = "cbSintoma1"
         Me.cbSintoma1.ShadowDecoration.Parent = Me.cbSintoma1
         Me.cbSintoma1.Size = New System.Drawing.Size(205, 36)
@@ -588,7 +588,7 @@ Partial Class FrmIngresarGerente
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(473, 180)
+        Me.CheckBox1.Location = New System.Drawing.Point(493, 180)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox1.TabIndex = 38
@@ -597,7 +597,7 @@ Partial Class FrmIngresarGerente
         'chb7
         '
         Me.chb7.AutoSize = True
-        Me.chb7.Location = New System.Drawing.Point(244, 180)
+        Me.chb7.Location = New System.Drawing.Point(264, 180)
         Me.chb7.Name = "chb7"
         Me.chb7.Size = New System.Drawing.Size(15, 14)
         Me.chb7.TabIndex = 38
@@ -606,7 +606,7 @@ Partial Class FrmIngresarGerente
         'chb6
         '
         Me.chb6.AutoSize = True
-        Me.chb6.Location = New System.Drawing.Point(14, 180)
+        Me.chb6.Location = New System.Drawing.Point(34, 180)
         Me.chb6.Name = "chb6"
         Me.chb6.Size = New System.Drawing.Size(15, 14)
         Me.chb6.TabIndex = 39
@@ -615,7 +615,7 @@ Partial Class FrmIngresarGerente
         'chb5
         '
         Me.chb5.AutoSize = True
-        Me.chb5.Location = New System.Drawing.Point(473, 119)
+        Me.chb5.Location = New System.Drawing.Point(493, 119)
         Me.chb5.Name = "chb5"
         Me.chb5.Size = New System.Drawing.Size(15, 14)
         Me.chb5.TabIndex = 40
@@ -624,7 +624,7 @@ Partial Class FrmIngresarGerente
         'chb4
         '
         Me.chb4.AutoSize = True
-        Me.chb4.Location = New System.Drawing.Point(244, 119)
+        Me.chb4.Location = New System.Drawing.Point(264, 119)
         Me.chb4.Name = "chb4"
         Me.chb4.Size = New System.Drawing.Size(15, 14)
         Me.chb4.TabIndex = 41
@@ -633,7 +633,7 @@ Partial Class FrmIngresarGerente
         'chb3
         '
         Me.chb3.AutoSize = True
-        Me.chb3.Location = New System.Drawing.Point(14, 119)
+        Me.chb3.Location = New System.Drawing.Point(34, 119)
         Me.chb3.Name = "chb3"
         Me.chb3.Size = New System.Drawing.Size(15, 14)
         Me.chb3.TabIndex = 42
@@ -642,7 +642,7 @@ Partial Class FrmIngresarGerente
         'chb2
         '
         Me.chb2.AutoSize = True
-        Me.chb2.Location = New System.Drawing.Point(473, 60)
+        Me.chb2.Location = New System.Drawing.Point(493, 60)
         Me.chb2.Name = "chb2"
         Me.chb2.Size = New System.Drawing.Size(15, 14)
         Me.chb2.TabIndex = 43
@@ -651,7 +651,7 @@ Partial Class FrmIngresarGerente
         'chb1
         '
         Me.chb1.AutoSize = True
-        Me.chb1.Location = New System.Drawing.Point(244, 60)
+        Me.chb1.Location = New System.Drawing.Point(264, 60)
         Me.chb1.Name = "chb1"
         Me.chb1.Size = New System.Drawing.Size(15, 14)
         Me.chb1.TabIndex = 44
@@ -676,7 +676,7 @@ Partial Class FrmIngresarGerente
         Me.cbRiesgo.ItemHeight = 30
         Me.cbRiesgo.Items.AddRange(New Object() {"Azul", "verde", "amarillo", "naranja", "Rojo"})
         Me.cbRiesgo.ItemsAppearance.Parent = Me.cbRiesgo
-        Me.cbRiesgo.Location = New System.Drawing.Point(461, 292)
+        Me.cbRiesgo.Location = New System.Drawing.Point(536, 292)
         Me.cbRiesgo.Name = "cbRiesgo"
         Me.cbRiesgo.ShadowDecoration.Parent = Me.cbRiesgo
         Me.cbRiesgo.Size = New System.Drawing.Size(170, 36)
@@ -688,7 +688,7 @@ Partial Class FrmIngresarGerente
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(775, 681)
+        Me.ClientSize = New System.Drawing.Size(802, 683)
         Me.Controls.Add(Me.Guna2Separator1)
         Me.Controls.Add(Me.btn_ingresar2)
         Me.Controls.Add(Me.btn_ingresar)
@@ -704,7 +704,9 @@ Partial Class FrmIngresarGerente
         Me.Controls.Add(Me.enfermedad)
         Me.Controls.Add(Me.ingGerente)
         Me.Controls.Add(Me.groupBoxSintomas)
+        Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmIngresarGerente"
         Me.Text = "FrmIngresar"
         CType(Me.ErrorProviderNomSint, System.ComponentModel.ISupportInitialize).EndInit()

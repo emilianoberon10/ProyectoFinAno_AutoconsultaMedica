@@ -185,8 +185,12 @@ Public Class Medico
     End Function
 
     Public Function ModificarDiagnostico(ciPaciente, diag) As Boolean
-        Dim c As New DBDiagnostico
-        Return c.UpdateDiagnostico(ciPaciente, diag)
+        Try
+            Dim c As New DBDiagnostico
+            Return c.UpdateDiagnostico(ciPaciente, diag)
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
     End Function
     Public Function VerChatsAntiguos() As DataTable
         Dim result

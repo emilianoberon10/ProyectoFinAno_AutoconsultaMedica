@@ -35,7 +35,7 @@ Partial Class FrmInfo
         '
         Me.lbInfo_rocordatorio1.AutoSize = True
         Me.lbInfo_rocordatorio1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbInfo_rocordatorio1.ForeColor = System.Drawing.Color.Silver
+        Me.lbInfo_rocordatorio1.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lbInfo_rocordatorio1.Location = New System.Drawing.Point(8, 9)
         Me.lbInfo_rocordatorio1.Name = "lbInfo_rocordatorio1"
         Me.lbInfo_rocordatorio1.Size = New System.Drawing.Size(429, 21)
@@ -45,7 +45,7 @@ Partial Class FrmInfo
         'lbInfo_recordatorio2
         '
         Me.lbInfo_recordatorio2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbInfo_recordatorio2.ForeColor = System.Drawing.Color.Silver
+        Me.lbInfo_recordatorio2.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lbInfo_recordatorio2.Location = New System.Drawing.Point(8, 45)
         Me.lbInfo_recordatorio2.Name = "lbInfo_recordatorio2"
         Me.lbInfo_recordatorio2.Size = New System.Drawing.Size(405, 71)
@@ -57,7 +57,7 @@ Partial Class FrmInfo
         '
         Me.llbForgotPassEs.AutoSize = True
         Me.llbForgotPassEs.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llbForgotPassEs.ForeColor = System.Drawing.Color.Silver
+        Me.llbForgotPassEs.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.llbForgotPassEs.LinkColor = System.Drawing.Color.Silver
         Me.llbForgotPassEs.Location = New System.Drawing.Point(8, 116)
         Me.llbForgotPassEs.Name = "llbForgotPassEs"
@@ -69,7 +69,7 @@ Partial Class FrmInfo
         'lbInfo_recordatorio3
         '
         Me.lbInfo_recordatorio3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbInfo_recordatorio3.ForeColor = System.Drawing.Color.Silver
+        Me.lbInfo_recordatorio3.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lbInfo_recordatorio3.Location = New System.Drawing.Point(8, 150)
         Me.lbInfo_recordatorio3.Name = "lbInfo_recordatorio3"
         Me.lbInfo_recordatorio3.Size = New System.Drawing.Size(303, 21)
@@ -80,7 +80,7 @@ Partial Class FrmInfo
         '
         Me.llbCrearUsuario.AutoSize = True
         Me.llbCrearUsuario.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llbCrearUsuario.ForeColor = System.Drawing.Color.Silver
+        Me.llbCrearUsuario.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.llbCrearUsuario.LinkColor = System.Drawing.Color.Silver
         Me.llbCrearUsuario.Location = New System.Drawing.Point(289, 150)
         Me.llbCrearUsuario.Name = "llbCrearUsuario"

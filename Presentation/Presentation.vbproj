@@ -63,6 +63,12 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>isotipoProyectowhite.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
       <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
@@ -102,6 +108,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmsMed\FrmModifDiagnostico.Designer.vb">
+      <DependentUpon>FrmModifDiagnostico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmsMed\FrmModifDiagnostico.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmsOpciones\FrmOpcionesAyuda.Designer.vb">
       <DependentUpon>FrmOpcionesAyuda.vb</DependentUpon>
     </Compile>
@@ -290,6 +302,9 @@
     <EmbeddedResource Include="frmNotificacion.resx">
       <DependentUpon>frmNotificacion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmsMed\FrmModifDiagnostico.resx">
+      <DependentUpon>FrmModifDiagnostico.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmsOpciones\FrmOpciones.resx">
       <DependentUpon>FrmOpciones.vb</DependentUpon>
     </EmbeddedResource>
@@ -385,6 +400,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -498,6 +514,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="isotipoProyectowhite.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

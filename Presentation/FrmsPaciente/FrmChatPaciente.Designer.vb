@@ -91,7 +91,7 @@ Partial Class FrmChatPaciente
         '
         Me.lbTitulo.AutoSize = True
         Me.lbTitulo.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbTitulo.ForeColor = System.Drawing.Color.Silver
+        Me.lbTitulo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lbTitulo.Location = New System.Drawing.Point(38, 2)
         Me.lbTitulo.Name = "lbTitulo"
         Me.lbTitulo.Size = New System.Drawing.Size(344, 25)

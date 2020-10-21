@@ -230,7 +230,7 @@ Partial Class FrmMedPrincipal
         '
         Me.fotoPerfil.Cursor = System.Windows.Forms.Cursors.Hand
         Me.fotoPerfil.Image = Global.Presentation.My.Resources.Resources.profileEmpty
-        Me.fotoPerfil.Location = New System.Drawing.Point(47, 16)
+        Me.fotoPerfil.Location = New System.Drawing.Point(46, 27)
         Me.fotoPerfil.Name = "fotoPerfil"
         Me.fotoPerfil.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.fotoPerfil.ShadowDecoration.Parent = Me.fotoPerfil
@@ -254,7 +254,7 @@ Partial Class FrmMedPrincipal
         '
         Me.lbNombre.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbNombre.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.lbNombre.Location = New System.Drawing.Point(0, 157)
+        Me.lbNombre.Location = New System.Drawing.Point(0, 161)
         Me.lbNombre.Name = "lbNombre"
         Me.lbNombre.Size = New System.Drawing.Size(222, 19)
         Me.lbNombre.TabIndex = 2

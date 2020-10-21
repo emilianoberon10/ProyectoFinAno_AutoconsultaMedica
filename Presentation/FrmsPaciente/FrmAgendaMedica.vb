@@ -34,7 +34,7 @@ Public Class FrmAgendaMedica
 
     End Sub
 
-    Private Sub txtNomBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNomBuscar.KeyPress
+    Private Sub txtNomBuscar_KeyPress(sender As Object, e As KeyPressEventArgs)
         DesecharCaracteresEspeciales(e)
 
     End Sub

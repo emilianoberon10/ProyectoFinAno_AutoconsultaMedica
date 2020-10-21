@@ -60,7 +60,7 @@ idriesgo INT(1) PRIMARY KEY,
 riesgo VARCHAR(10)
 );
 
-CREATE TABLE sintoma(
+CREATE TABLE sINTOma(
     id INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
     nombre VARCHAR(30) NOT NULL UNIQUE KEY
 );
@@ -109,7 +109,7 @@ CREATE TABLE selec(
     idPac CHAR(8) NOT NULL,
     CONSTRAINT pk_clav PRIMARY KEY (dia, hora, idPac),
     CONSTRAINT fk_idPac FOREIGN KEY(idPac) REFERENCES paciente(ciP),
-    CONSTRAINT fk_idSint FOREIGN KEY(idSint) REFERENCES sintoma(id)
+    CONSTRAINT fk_idSint FOREIGN KEY(idSint) REFERENCES sINTOma(id)
 );
 /*
 CREATE TABLE gestiona(
@@ -121,7 +121,7 @@ CREATE TABLE gestiona(
     hora TIME NOT NULL,
     CONSTRAINT fk_nEn FOREIGN KEY(nomEnf) REFERENCES enfermedad(nombre),
     CONSTRAINT fk_cG FOREIGN KEY(cigerente) REFERENCES gerente(ciG),
-    CONSTRAINT fk_Sintom FOREIGN KEY(nomSint) REFERENCES sintoma(nombre),
+    CONSTRAINT fk_SINTOm FOREIGN KEY(nomSint) REFERENCES sINTOma(nombre),
     CONSTRAINT CHK_Tipo CHECK (
         tipo = 'Alta'
         OR tipo = 'Baja'
@@ -133,7 +133,7 @@ CREATE TABLE define(
     nomEnf VARCHAR(30) NOT NULL,
     idSint INT(4) NOT NULL,
     CONSTRAINT fk_nomEnf FOREIGN KEY(nomEnf) REFERENCES enfermedad(nombre),
-    CONSTRAINT fk_sint FOREIGN KEY(idSint) REFERENCES sintoma(id)
+    CONSTRAINT fk_sint FOREIGN KEY(idSint) REFERENCES sINTOma(id)
 );
 
 CREATE TABLE chat(
@@ -176,7 +176,7 @@ CREATE TABLE solicita(
 );
 
 
--- Inserts -------------------------------------------------------------------------------
+-- INSERTs -------------------------------------------------------------------------------
 -- PERSONAS: --
 INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('11111111',22344568,49,'Av.Libertad','Hombre','Marco','','Aurelio','De Partabas');
 INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('22222222',22344567,28,'Av.Libertad','Mujer','Romina','','Almiron','Rodriguez');
@@ -221,7 +221,7 @@ INSERT INTO riesgo VALUES (2,'naranja');
 INSERT INTO riesgo VALUES (3,'amarillo');
 INSERT INTO riesgo VALUES (4,'verde');
 INSERT INTO riesgo VALUES (5,'azul');
--- ------------------------------------------ sintomas, enfermedades y define  --------------------------------------------------------------- --
+-- ------------------------------------------ sINTOmas, enfermedades y define  --------------------------------------------------------------- --
 INSERT INTO enfermedad VALUES(NULL,"covid","2","tos seca");
 INSERT INTO enfermedad VALUES(NULL,"gripe","5","enfermedad infecciosa aguda de las vías respiratorias");
 
@@ -229,24 +229,24 @@ INSERT INTO enfermedad VALUES(NULL,"alergia","5","puede ser producida por hongos
 INSERT INTO enfermedad VALUES(NULL,"dengue","1","producido por la picadura de un mosquito");
 INSERT INTO enfermedad VALUES(NULL,"leucemia","1","La leucemia es una enfermedad de la sangre en la que la médula ósea produce glóbulos blancos anómalos");
 
-INSERT INTO sintoma VALUES(NULL,"resfrio");
-INSERT INTO sintoma VALUES(NULL,"tos");
-INSERT INTO sintoma VALUES(NULL,"fiebre");
-INSERT INTO sintoma VALUES(NULL,"flemas");
+INSERT INTO sINTOma VALUES(NULL,"resfrio");
+INSERT INTO sINTOma VALUES(NULL,"tos");
+INSERT INTO sINTOma VALUES(NULL,"fiebre");
+INSERT INTO sINTOma VALUES(NULL,"flemas");
 
-INSERT INTO sintoma VALUES(NULL,"estornudos");
-INSERT INTO sintoma VALUES(NULL,"lagrimeo");
-INSERT INTO sintoma VALUES(NULL,"picor en los ojos");
+INSERT INTO sINTOma VALUES(NULL,"estornudos");
+INSERT INTO sINTOma VALUES(NULL,"lagrimeo");
+INSERT INTO sINTOma VALUES(NULL,"picor en los ojos");
 
-INSERT INTO sintoma VALUES(NULL,"fiebre alta");
-INSERT INTO sintoma VALUES(NULL,"sangrado en encias");
-INSERT INTO sintoma VALUES(NULL,"dolor muscular");
-INSERT INTO sintoma VALUES(NULL,"debilidad general");
+INSERT INTO sINTOma VALUES(NULL,"fiebre alta");
+INSERT INTO sINTOma VALUES(NULL,"sangrado en encias");
+INSERT INTO sINTOma VALUES(NULL,"dolor muscular");
+INSERT INTO sINTOma VALUES(NULL,"debilidad general");
 
-INSERT INTO sintoma VALUES(NULL,"cansancio");
-INSERT INTO sintoma VALUES(NULL,"perdida de apetito");
-INSERT INTO sintoma VALUES(NULL,"perdidad de peso");
-INSERT INTO sintoma VALUES(NULL,"sudores nocturnos");
+INSERT INTO sINTOma VALUES(NULL,"cansancio");
+INSERT INTO sINTOma VALUES(NULL,"perdida de apetito");
+INSERT INTO sINTOma VALUES(NULL,"perdidad de peso");
+INSERT INTO sINTOma VALUES(NULL,"sudores nocturnos");
 -- define --
 INSERT INTO define VALUES("covid",2);
 INSERT INTO define VALUES("covid",1);
@@ -266,7 +266,7 @@ INSERT INTO define VALUES("leucemia",12);
 INSERT INTO define VALUES("leucemia",13);
 INSERT INTO define VALUES("leucemia",14);
 INSERT INTO define VALUES("leucemia",15);
--- paciente selecciona sintomas--
+-- paciente selecciona sINTOmas--
 INSERT INTO selec VALUES (CURDATE(),CURTIME(),1,22222222);
 INSERT INTO selec VALUES (CURDATE(),CURTIME()+1,9,22222222);
 INSERT INTO selec VALUES (CURDATE(),CURTIME()+2,10,22222222);
@@ -289,10 +289,10 @@ VALUES (CURDATE(),'Uruguay',15,NULL,44444444,'Ingeniero en Sistemas','Antialergi
 (CURDATE(),'Uruguay',21,NULL,55555555,'En paro','Analgesicos','Por enfermedad','Hipertension'),
 (CURDATE(),'Uruguay',20,NULL,88888888,'Docente','','Por enfermedad',''); 
 -- ----------------------------- Solicita chat, Acepta y chat --------------------------- --
--- insert into solicita values (null,22222222,'Romina','alergia','Pendiente');
--- insert into solicita values (null,44444444,'Romina','dengue','Pendiente');
--- insert into solicita values (null,88888888,'Romina','alergia','Pendiente');
--- insert into solicita values (null,55555555,'Agustina','gripe','Pendiente');
+#INSERT INTO solicita VALUES (null,22222222,'Romina','alergia','Pendiente');
+#INSERT INTO solicita VALUES (null,44444444,'Romina','dengue','Pendiente');
+#INSERT INTO solicita VALUES (null,88888888,'Romina','alergia','Pendiente');
+#INSERT INTO solicita VALUES (null,55555555,'Agustina','gripe','Pendiente');
 -- chat --
 INSERT INTO chat VALUES (NULL,'22222222',66666666,CURDATE(),'covid','Finalizado');
 INSERT INTO chat VALUES (NULL,'55555555',66666666,CURDATE(),'gripe','Finalizado');
@@ -321,9 +321,9 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE PROCEDURE `sintomaMasSeleccionado`()
+CREATE PROCEDURE `sINTOmaMasSeleccionado`()
 BEGIN
-SELECT nombre  AS Sintoma ,COUNT(idSint) AS cant FROM sintoma
+SELECT nombre  AS SINTOma ,COUNT(idSint) AS cant FROM sINTOma
 JOIN selec ON idSint=id
 GROUP BY nombre 
 ORDER BY COUNT(nombre) 

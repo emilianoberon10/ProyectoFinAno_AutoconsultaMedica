@@ -630,6 +630,7 @@ Partial Class FrmOpcionesUsuario
         Me.Controls.Add(Me.lbCambiarContraseña)
         Me.Controls.Add(Me.lbUsuario)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmOpcionesUsuario"
         Me.Text = "FrmOpcionesUsuario"
         CType(Me.fotoPerfil, System.ComponentModel.ISupportInitialize).EndInit()

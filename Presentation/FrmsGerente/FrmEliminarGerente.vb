@@ -42,7 +42,7 @@ Public Class FrmEliminarGerente
         End Select
     End Sub
 
-    Private Sub dgvDatos_CellClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDatos.CellClick
+    Private Sub dgvDatos_CellClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDatos.CellDoubleClick
         Try
             Dim columna As Integer
             columna = e.ColumnIndex

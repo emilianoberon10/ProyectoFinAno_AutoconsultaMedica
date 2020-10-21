@@ -65,6 +65,7 @@ Partial Class frmNotificacion
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmNotificacion"
         Me.ShowInTaskbar = False
         Me.Text = "frmNotificacion"

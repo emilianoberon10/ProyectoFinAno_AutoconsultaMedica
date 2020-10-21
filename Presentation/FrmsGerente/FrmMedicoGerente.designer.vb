@@ -84,7 +84,7 @@ Partial Class FrmMedicoGerente
         Me.Persona_ci.AutoSize = True
         Me.Persona_ci.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Persona_ci.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Persona_ci.Location = New System.Drawing.Point(31, 44)
+        Me.Persona_ci.Location = New System.Drawing.Point(27, 75)
         Me.Persona_ci.Name = "Persona_ci"
         Me.Persona_ci.Size = New System.Drawing.Size(58, 21)
         Me.Persona_ci.TabIndex = 0
@@ -95,7 +95,7 @@ Partial Class FrmMedicoGerente
         Me.Persona_especialidad.AutoSize = True
         Me.Persona_especialidad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Persona_especialidad.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Persona_especialidad.Location = New System.Drawing.Point(31, 111)
+        Me.Persona_especialidad.Location = New System.Drawing.Point(27, 142)
         Me.Persona_especialidad.Name = "Persona_especialidad"
         Me.Persona_especialidad.Size = New System.Drawing.Size(95, 21)
         Me.Persona_especialidad.TabIndex = 0
@@ -106,7 +106,7 @@ Partial Class FrmMedicoGerente
         Me.Persona_pNom.AutoSize = True
         Me.Persona_pNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Persona_pNom.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Persona_pNom.Location = New System.Drawing.Point(268, 44)
+        Me.Persona_pNom.Location = New System.Drawing.Point(293, 75)
         Me.Persona_pNom.Name = "Persona_pNom"
         Me.Persona_pNom.Size = New System.Drawing.Size(119, 21)
         Me.Persona_pNom.TabIndex = 0
@@ -117,7 +117,7 @@ Partial Class FrmMedicoGerente
         Me.Persona_sNom.AutoSize = True
         Me.Persona_sNom.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Persona_sNom.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Persona_sNom.Location = New System.Drawing.Point(268, 111)
+        Me.Persona_sNom.Location = New System.Drawing.Point(293, 142)
         Me.Persona_sNom.Name = "Persona_sNom"
         Me.Persona_sNom.Size = New System.Drawing.Size(134, 21)
         Me.Persona_sNom.TabIndex = 0
@@ -128,7 +128,7 @@ Partial Class FrmMedicoGerente
         Me.Persona_pApe.AutoSize = True
         Me.Persona_pApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Persona_pApe.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Persona_pApe.Location = New System.Drawing.Point(531, 45)
+        Me.Persona_pApe.Location = New System.Drawing.Point(552, 76)
         Me.Persona_pApe.Name = "Persona_pApe"
         Me.Persona_pApe.Size = New System.Drawing.Size(118, 21)
         Me.Persona_pApe.TabIndex = 0
@@ -139,7 +139,7 @@ Partial Class FrmMedicoGerente
         Me.Persona_sApe.AutoSize = True
         Me.Persona_sApe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Persona_sApe.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Persona_sApe.Location = New System.Drawing.Point(531, 111)
+        Me.Persona_sApe.Location = New System.Drawing.Point(552, 142)
         Me.Persona_sApe.Name = "Persona_sApe"
         Me.Persona_sApe.Size = New System.Drawing.Size(133, 21)
         Me.Persona_sApe.TabIndex = 0
@@ -150,7 +150,7 @@ Partial Class FrmMedicoGerente
         Me.Persona_lugarTrabajo.AutoSize = True
         Me.Persona_lugarTrabajo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Persona_lugarTrabajo.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Persona_lugarTrabajo.Location = New System.Drawing.Point(31, 322)
+        Me.Persona_lugarTrabajo.Location = New System.Drawing.Point(27, 353)
         Me.Persona_lugarTrabajo.Name = "Persona_lugarTrabajo"
         Me.Persona_lugarTrabajo.Size = New System.Drawing.Size(126, 21)
         Me.Persona_lugarTrabajo.TabIndex = 0
@@ -162,7 +162,7 @@ Partial Class FrmMedicoGerente
         Me.ingreMed.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.ingreMed.Location = New System.Drawing.Point(1, 6)
         Me.ingreMed.Name = "ingreMed"
-        Me.ingreMed.Size = New System.Drawing.Size(775, 36)
+        Me.ingreMed.Size = New System.Drawing.Size(802, 36)
         Me.ingreMed.TabIndex = 3
         Me.ingreMed.Text = "INGRESAR MEDICO"
         Me.ingreMed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -172,7 +172,7 @@ Partial Class FrmMedicoGerente
         Me.Persona_tel.AutoSize = True
         Me.Persona_tel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Persona_tel.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Persona_tel.Location = New System.Drawing.Point(530, 179)
+        Me.Persona_tel.Location = New System.Drawing.Point(551, 210)
         Me.Persona_tel.Name = "Persona_tel"
         Me.Persona_tel.Size = New System.Drawing.Size(68, 21)
         Me.Persona_tel.TabIndex = 0
@@ -183,7 +183,7 @@ Partial Class FrmMedicoGerente
         Me.Persona_domicilio.AutoSize = True
         Me.Persona_domicilio.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Persona_domicilio.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Persona_domicilio.Location = New System.Drawing.Point(31, 256)
+        Me.Persona_domicilio.Location = New System.Drawing.Point(27, 287)
         Me.Persona_domicilio.Name = "Persona_domicilio"
         Me.Persona_domicilio.Size = New System.Drawing.Size(76, 21)
         Me.Persona_domicilio.TabIndex = 0
@@ -194,7 +194,7 @@ Partial Class FrmMedicoGerente
         Me.Persona_edad.AutoSize = True
         Me.Persona_edad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Persona_edad.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Persona_edad.Location = New System.Drawing.Point(272, 183)
+        Me.Persona_edad.Location = New System.Drawing.Point(297, 214)
         Me.Persona_edad.Name = "Persona_edad"
         Me.Persona_edad.Size = New System.Drawing.Size(44, 21)
         Me.Persona_edad.TabIndex = 0
@@ -210,7 +210,7 @@ Partial Class FrmMedicoGerente
         Me.Persona_numMed.AutoSize = True
         Me.Persona_numMed.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Persona_numMed.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Persona_numMed.Location = New System.Drawing.Point(531, 253)
+        Me.Persona_numMed.Location = New System.Drawing.Point(552, 284)
         Me.Persona_numMed.Name = "Persona_numMed"
         Me.Persona_numMed.Size = New System.Drawing.Size(123, 21)
         Me.Persona_numMed.TabIndex = 0
@@ -241,9 +241,9 @@ Partial Class FrmMedicoGerente
         Me.Panel1.Controls.Add(Me.Lun)
         Me.Panel1.Controls.Add(Me.horaEjemplo)
         Me.Panel1.Controls.Add(Me.Mhora)
-        Me.Panel1.Location = New System.Drawing.Point(12, 392)
+        Me.Panel1.Location = New System.Drawing.Point(12, 435)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(756, 165)
+        Me.Panel1.Size = New System.Drawing.Size(778, 165)
         Me.Panel1.TabIndex = 48
         '
         'chkDom
@@ -520,7 +520,7 @@ Partial Class FrmMedicoGerente
         Me.btn_ingresar.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn_ingresar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.btn_ingresar.HoverState.Parent = Me.btn_ingresar
-        Me.btn_ingresar.Location = New System.Drawing.Point(563, 563)
+        Me.btn_ingresar.Location = New System.Drawing.Point(590, 606)
         Me.btn_ingresar.Name = "btn_ingresar"
         Me.btn_ingresar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.btn_ingresar.ShadowDecoration.BorderRadius = 20
@@ -551,7 +551,7 @@ Partial Class FrmMedicoGerente
         Me.txtCedula.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtCedula.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtCedula.HoverState.Parent = Me.txtCedula
-        Me.txtCedula.Location = New System.Drawing.Point(31, 70)
+        Me.txtCedula.Location = New System.Drawing.Point(27, 101)
         Me.txtCedula.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCedula.Name = "txtCedula"
         Me.txtCedula.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -580,7 +580,7 @@ Partial Class FrmMedicoGerente
         Me.txtSnom.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtSnom.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtSnom.HoverState.Parent = Me.txtSnom
-        Me.txtSnom.Location = New System.Drawing.Point(268, 137)
+        Me.txtSnom.Location = New System.Drawing.Point(293, 168)
         Me.txtSnom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSnom.Name = "txtSnom"
         Me.txtSnom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -610,7 +610,7 @@ Partial Class FrmMedicoGerente
         Me.txtLugarTrabajo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtLugarTrabajo.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtLugarTrabajo.HoverState.Parent = Me.txtLugarTrabajo
-        Me.txtLugarTrabajo.Location = New System.Drawing.Point(31, 344)
+        Me.txtLugarTrabajo.Location = New System.Drawing.Point(27, 375)
         Me.txtLugarTrabajo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLugarTrabajo.Name = "txtLugarTrabajo"
         Me.txtLugarTrabajo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -618,7 +618,7 @@ Partial Class FrmMedicoGerente
         Me.txtLugarTrabajo.PlaceholderText = ""
         Me.txtLugarTrabajo.SelectedText = ""
         Me.txtLugarTrabajo.ShadowDecoration.Parent = Me.txtLugarTrabajo
-        Me.txtLugarTrabajo.Size = New System.Drawing.Size(461, 30)
+        Me.txtLugarTrabajo.Size = New System.Drawing.Size(490, 30)
         Me.txtLugarTrabajo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.txtLugarTrabajo.TabIndex = 12
         '
@@ -640,7 +640,7 @@ Partial Class FrmMedicoGerente
         Me.txtNumMed.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtNumMed.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtNumMed.HoverState.Parent = Me.txtNumMed
-        Me.txtNumMed.Location = New System.Drawing.Point(531, 278)
+        Me.txtNumMed.Location = New System.Drawing.Point(552, 309)
         Me.txtNumMed.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNumMed.Name = "txtNumMed"
         Me.txtNumMed.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -670,7 +670,7 @@ Partial Class FrmMedicoGerente
         Me.txtPNom.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtPNom.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtPNom.HoverState.Parent = Me.txtPNom
-        Me.txtPNom.Location = New System.Drawing.Point(268, 71)
+        Me.txtPNom.Location = New System.Drawing.Point(293, 102)
         Me.txtPNom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtPNom.Name = "txtPNom"
         Me.txtPNom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -700,7 +700,7 @@ Partial Class FrmMedicoGerente
         Me.txtSape.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtSape.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtSape.HoverState.Parent = Me.txtSape
-        Me.txtSape.Location = New System.Drawing.Point(535, 137)
+        Me.txtSape.Location = New System.Drawing.Point(556, 168)
         Me.txtSape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSape.Name = "txtSape"
         Me.txtSape.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -730,7 +730,7 @@ Partial Class FrmMedicoGerente
         Me.txtEdad.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtEdad.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtEdad.HoverState.Parent = Me.txtEdad
-        Me.txtEdad.Location = New System.Drawing.Point(272, 209)
+        Me.txtEdad.Location = New System.Drawing.Point(297, 240)
         Me.txtEdad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtEdad.Name = "txtEdad"
         Me.txtEdad.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -760,7 +760,7 @@ Partial Class FrmMedicoGerente
         Me.txtDomicilio.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtDomicilio.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtDomicilio.HoverState.Parent = Me.txtDomicilio
-        Me.txtDomicilio.Location = New System.Drawing.Point(31, 282)
+        Me.txtDomicilio.Location = New System.Drawing.Point(27, 313)
         Me.txtDomicilio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -768,7 +768,7 @@ Partial Class FrmMedicoGerente
         Me.txtDomicilio.PlaceholderText = ""
         Me.txtDomicilio.SelectedText = ""
         Me.txtDomicilio.ShadowDecoration.Parent = Me.txtDomicilio
-        Me.txtDomicilio.Size = New System.Drawing.Size(457, 30)
+        Me.txtDomicilio.Size = New System.Drawing.Size(490, 30)
         Me.txtDomicilio.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.txtDomicilio.TabIndex = 10
         '
@@ -790,7 +790,7 @@ Partial Class FrmMedicoGerente
         Me.txtPApe.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtPApe.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtPApe.HoverState.Parent = Me.txtPApe
-        Me.txtPApe.Location = New System.Drawing.Point(531, 71)
+        Me.txtPApe.Location = New System.Drawing.Point(552, 102)
         Me.txtPApe.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtPApe.Name = "txtPApe"
         Me.txtPApe.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -820,7 +820,7 @@ Partial Class FrmMedicoGerente
         Me.txtTelefono.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtTelefono.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.txtTelefono.HoverState.Parent = Me.txtTelefono
-        Me.txtTelefono.Location = New System.Drawing.Point(531, 209)
+        Me.txtTelefono.Location = New System.Drawing.Point(552, 240)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -852,7 +852,7 @@ Partial Class FrmMedicoGerente
         Me.cbEsp.ItemHeight = 30
         Me.cbEsp.Items.AddRange(New Object() {"Medicos", "Enfermedades", "Sintomas"})
         Me.cbEsp.ItemsAppearance.Parent = Me.cbEsp
-        Me.cbEsp.Location = New System.Drawing.Point(31, 131)
+        Me.cbEsp.Location = New System.Drawing.Point(27, 162)
         Me.cbEsp.Name = "cbEsp"
         Me.cbEsp.ShadowDecoration.Parent = Me.cbEsp
         Me.cbEsp.Size = New System.Drawing.Size(220, 36)
@@ -879,7 +879,7 @@ Partial Class FrmMedicoGerente
         Me.cbSexo.ItemHeight = 30
         Me.cbSexo.Items.AddRange(New Object() {"Hombre", "Mujer", "Otro"})
         Me.cbSexo.ItemsAppearance.Parent = Me.cbSexo
-        Me.cbSexo.Location = New System.Drawing.Point(31, 203)
+        Me.cbSexo.Location = New System.Drawing.Point(27, 234)
         Me.cbSexo.Name = "cbSexo"
         Me.cbSexo.ShadowDecoration.Parent = Me.cbSexo
         Me.cbSexo.Size = New System.Drawing.Size(220, 36)
@@ -891,7 +891,7 @@ Partial Class FrmMedicoGerente
         Me.Persona_sexo.AutoSize = True
         Me.Persona_sexo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Persona_sexo.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Persona_sexo.Location = New System.Drawing.Point(31, 179)
+        Me.Persona_sexo.Location = New System.Drawing.Point(27, 210)
         Me.Persona_sexo.Name = "Persona_sexo"
         Me.Persona_sexo.Size = New System.Drawing.Size(43, 21)
         Me.Persona_sexo.TabIndex = 0
@@ -902,7 +902,7 @@ Partial Class FrmMedicoGerente
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(775, 681)
+        Me.ClientSize = New System.Drawing.Size(802, 683)
         Me.Controls.Add(Me.cbSexo)
         Me.Controls.Add(Me.cbEsp)
         Me.Controls.Add(Me.txtDomicilio)
@@ -930,6 +930,7 @@ Partial Class FrmMedicoGerente
         Me.Controls.Add(Me.Persona_especialidad)
         Me.Controls.Add(Me.Persona_pNom)
         Me.Controls.Add(Me.Persona_ci)
+        Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmMedicoGerente"
         Me.Text = "FrmMedico"

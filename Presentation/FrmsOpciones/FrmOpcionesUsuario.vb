@@ -109,8 +109,10 @@
 
                     If MessageBox.Show("Seguro que desa cambiar su contraseña?", "Advertencia",
                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+
                         Select Case FrmLogIn.tipoLogin
                             Case "Paciente"
+
                                 With FrmLogIn.paci
                                     ._contraseña = txtContraActual.Text
                                     .EncriptarContraseña()
@@ -129,6 +131,7 @@
                                     End If
 
                                 End With
+
                             Case "Gerente"
                                 With FrmLogIn.gere
                                     ._contraseña = txtContraActual.Text
@@ -166,6 +169,7 @@
                                     End If
                                 End With
                         End Select
+
                         txtContraActual.Text = ""
                         txtContraseña1.Text = ""
                         txtContraseña2.Text = ""
@@ -191,5 +195,22 @@
 
     Private Sub Guna2CirclePictureBox1_Click(sender As Object, e As EventArgs) Handles fotoPerfil.Click
         GuardarImagen(FrmLogIn.paci._ci, ofdFoto, fotoPerfil)
+    End Sub
+
+    Private Sub txtContraseña1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTel.KeyPress, txtSnom.KeyPress, txtSape.KeyPress, txtPnom.KeyPress, txtPape.KeyPress, txtEdad.KeyPress, txtDir.KeyPress, txtContraseña2.KeyPress, txtContraseña1.KeyPress, txtContraActual.KeyPress
+
+
+        txtTel.MaxLength = 9
+        txtSnom.MaxLength = 30
+        txtSape.MaxLength = 30
+        txtPnom.MaxLength = 30
+        txtPape.MaxLength = 30
+        txtEdad.MaxLength = 3
+        txtDir.MaxLength = 255
+        txtContraseña2.MaxLength = 100
+        txtContraseña1.MaxLength = 100
+        txtContraActual.MaxLength = 100
+
+
     End Sub
 End Class

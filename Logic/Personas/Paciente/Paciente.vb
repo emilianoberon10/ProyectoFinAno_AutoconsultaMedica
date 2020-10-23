@@ -121,6 +121,23 @@ Public Class Paciente : Inherits Persona
     Public Function ObtenerCorreo() As Boolean
         Return cons.ObtenerCorreo(Me._ci)
     End Function
+
+    Public Function RestablecerContra(contraNoEncr) As String
+        Dim res As String = "Nada"
+        Try
+            If Me._ci IsNot "" Or Me._mail IsNot "" Then
+                res = cons.RestablecerContra(Me._ci, Me._mail, Me._contraseña, contraNoEncr)
+
+            Else
+                MsgBox("Debe ingresar un correo o cedula de identidad.")
+            End If
+        Catch ex As Exception
+            Throw New SystemException(ex.Message)
+        End Try
+
+        Return res
+    End Function
+
     Public Overrides Sub EncriptarContraseña()
         Dim sha256 As SHA256 = SHA256.Create()
         Dim bytes As Byte() = Encoding.UTF8.GetBytes(Me._contraseña)

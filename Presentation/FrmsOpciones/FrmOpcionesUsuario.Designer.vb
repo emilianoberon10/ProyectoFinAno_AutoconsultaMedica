@@ -99,6 +99,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtContraseña1.Size = New System.Drawing.Size(180, 30)
         Me.txtContraseña1.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.txtContraseña1.TabIndex = 2
+        Me.txtContraseña1.UseSystemPasswordChar = True
         '
         'lbCambiarContraseña
         '
@@ -173,6 +174,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtContraseña2.Size = New System.Drawing.Size(180, 30)
         Me.txtContraseña2.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.txtContraseña2.TabIndex = 3
+        Me.txtContraseña2.UseSystemPasswordChar = True
         '
         'btn_modificar
         '
@@ -197,7 +199,7 @@ Partial Class FrmOpcionesUsuario
         Me.btn_modificar.ShadowDecoration.Enabled = True
         Me.btn_modificar.ShadowDecoration.Parent = Me.btn_modificar
         Me.btn_modificar.Size = New System.Drawing.Size(137, 36)
-        Me.btn_modificar.TabIndex = 3
+        Me.btn_modificar.TabIndex = 4
         Me.btn_modificar.Text = "MODIFICAR"
         '
         'txtPnom
@@ -228,7 +230,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtPnom.ShadowDecoration.Parent = Me.txtPnom
         Me.txtPnom.Size = New System.Drawing.Size(180, 30)
         Me.txtPnom.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtPnom.TabIndex = 4
+        Me.txtPnom.TabIndex = 5
         '
         'txtPape
         '
@@ -258,7 +260,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtPape.ShadowDecoration.Parent = Me.txtPape
         Me.txtPape.Size = New System.Drawing.Size(180, 30)
         Me.txtPape.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtPape.TabIndex = 6
+        Me.txtPape.TabIndex = 7
         '
         'txtEdad
         '
@@ -288,7 +290,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtEdad.ShadowDecoration.Parent = Me.txtEdad
         Me.txtEdad.Size = New System.Drawing.Size(180, 30)
         Me.txtEdad.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtEdad.TabIndex = 8
+        Me.txtEdad.TabIndex = 9
         '
         'txtSnom
         '
@@ -318,7 +320,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtSnom.ShadowDecoration.Parent = Me.txtSnom
         Me.txtSnom.Size = New System.Drawing.Size(180, 30)
         Me.txtSnom.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtSnom.TabIndex = 5
+        Me.txtSnom.TabIndex = 6
         '
         'txtSape
         '
@@ -348,7 +350,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtSape.ShadowDecoration.Parent = Me.txtSape
         Me.txtSape.Size = New System.Drawing.Size(180, 30)
         Me.txtSape.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtSape.TabIndex = 7
+        Me.txtSape.TabIndex = 8
         '
         'btn_guardar
         '
@@ -500,7 +502,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtTel.ShadowDecoration.Parent = Me.txtTel
         Me.txtTel.Size = New System.Drawing.Size(180, 30)
         Me.txtTel.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtTel.TabIndex = 8
+        Me.txtTel.TabIndex = 10
         '
         'Persona_tel
         '
@@ -541,7 +543,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtDir.ShadowDecoration.Parent = Me.txtDir
         Me.txtDir.Size = New System.Drawing.Size(379, 30)
         Me.txtDir.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtDir.TabIndex = 8
+        Me.txtDir.TabIndex = 11
         '
         'Persona_direccion
         '
@@ -583,6 +585,7 @@ Partial Class FrmOpcionesUsuario
         Me.txtContraActual.Size = New System.Drawing.Size(180, 30)
         Me.txtContraActual.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.txtContraActual.TabIndex = 1
+        Me.txtContraActual.UseSystemPasswordChar = True
         '
         'Persona_pass
         '

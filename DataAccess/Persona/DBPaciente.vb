@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Text
+Imports MySql.Data.MySqlClient
 
 Public Class DBPaciente
     Inherits ConexionBD
@@ -98,14 +99,51 @@ Public Class DBPaciente
                     _command.Parameters.AddWithValue("@pass", contraseña)
 
                     _command.ExecuteNonQuery()
-                    Return False
-                Else
                     Return True
+                Else
+                    Return False
                 End If
 
             End Using
         End Using
 
+    End Function
+
+    Public Function RestablecerContra(ci As String, mail As String, contra As String, contraSinEncrip As String) As String
+        Dim resultado As String = "Nada"
+        Using _connection = GetConnection()
+            _connection.Open()
+            Using _command = New MySqlCommand
+
+                _command.Connection = _connection
+                _command.CommandText = "SELECT * FROM paciente WHERE EXISTS (SELECT ciP FROM paciente WHERE ciP=@ci OR mail=@mail);"
+                _command.Parameters.AddWithValue("@ci", ci)
+                _command.Parameters.AddWithValue("@mail", mail)
+                Dim reader As MySqlDataReader = _command.ExecuteReader
+
+                If reader.HasRows Then
+                    reader.Dispose()
+
+                    _command.CommandText = "UPDATE paciente SET contrasena=@pass WHERE ciP=@ci OR mail=@mail;"
+                    _command.Parameters.AddWithValue("@pass", contra)
+                    _command.ExecuteNonQuery()
+
+                    If ci IsNot "" Then
+                        If DBEnvioCorreo.EnviarCorreoRecuperarPass(ci, contraSinEncrip, ObtenerCorreo(ci)) Then
+                        End If
+                    ElseIf mail IsNot "" Then
+                        If DBEnvioCorreo.EnviarCorreoRecuperarPass(ci, contraSinEncrip, mail) Then
+                        End If
+                    End If
+                    resultado = "Se envio un mensaje a su casilla de correo electronico con su contraseña y usuario." & vbNewLine & "Por favor al iniciar sesion modifique su contraseña"
+
+                Else
+                    resultado = "No se encotro su usuario o direccion de correo, por favor verifiquelos." & vbNewLine & "Si no posee una cuenta puede crearla en el menu del logib"
+                End If
+
+            End Using
+        End Using
+        Return resultado
     End Function
 
 #End Region
@@ -296,7 +334,7 @@ Public Class DBPaciente
             Using _command = New MySqlCommand
                 _command.Connection = _connection
 
-                _command.CommandText = "SELECT correo FROM persona WHERE ci=@ci"
+                _command.CommandText = "SELECT mail FROM paciente WHERE ciP=@ci"
                 _command.Parameters.AddWithValue("@ci", ci)
                 _command.CommandType = CommandType.Text
                 Dim reader As MySqlDataReader = _command.ExecuteReader()

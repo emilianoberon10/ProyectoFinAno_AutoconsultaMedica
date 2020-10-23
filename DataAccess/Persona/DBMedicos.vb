@@ -95,9 +95,9 @@ Public Class DBMedicos : Inherits ConexionBD
                     _command.Parameters.AddWithValue("@pass", contraseña)
 
                     _command.ExecuteNonQuery()
-                    Return False
-                Else
                     Return True
+                Else
+                    Return False
                 End If
 
             End Using

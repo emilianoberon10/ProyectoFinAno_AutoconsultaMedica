@@ -5,6 +5,7 @@ Public Class FrmAgendaMedica
     Private med As New Medico()
 
     Private Sub FrmAgendaMedica_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Traductor.traducirPanel(helpPanel)
         Traductor.traducirForm(Me)
         dgvAgenda.DataSource = med.Agenda
         With cbFiltro
@@ -39,4 +40,11 @@ Public Class FrmAgendaMedica
 
     End Sub
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        If helpPanel.Visible = True Then
+            helpPanel.Visible = False
+        Else
+            helpPanel.Visible = True
+        End If
+    End Sub
 End Class

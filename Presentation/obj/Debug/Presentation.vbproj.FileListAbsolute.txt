@@ -187,3 +187,12 @@ C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug
 C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Español.resources
 C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.Ingles.resources
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.FrmModifDiagnostico.resources
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\Zstandard.Net.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\System.Buffers.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\System.Memory.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.exe.config

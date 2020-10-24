@@ -233,7 +233,7 @@ Partial Class FrmLogIn
         Me.btn_Iniciar.ShadowDecoration.Parent = Me.btn_Iniciar
         Me.btn_Iniciar.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(6)
         Me.btn_Iniciar.Size = New System.Drawing.Size(352, 50)
-        Me.btn_Iniciar.TabIndex = 11
+        Me.btn_Iniciar.TabIndex = 3
         Me.btn_Iniciar.Text = "INICIAR"
         '
         'llbCrearUsuario
@@ -247,7 +247,7 @@ Partial Class FrmLogIn
         Me.llbCrearUsuario.Location = New System.Drawing.Point(0, 562)
         Me.llbCrearUsuario.Name = "llbCrearUsuario"
         Me.llbCrearUsuario.Size = New System.Drawing.Size(430, 21)
-        Me.llbCrearUsuario.TabIndex = 12
+        Me.llbCrearUsuario.TabIndex = 5
         Me.llbCrearUsuario.TabStop = True
         Me.llbCrearUsuario.Text = "CREAR USUARIO"
         Me.llbCrearUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -263,7 +263,7 @@ Partial Class FrmLogIn
         Me.llbForgotPassEs.Location = New System.Drawing.Point(0, 541)
         Me.llbForgotPassEs.Name = "llbForgotPassEs"
         Me.llbForgotPassEs.Size = New System.Drawing.Size(430, 21)
-        Me.llbForgotPassEs.TabIndex = 13
+        Me.llbForgotPassEs.TabIndex = 4
         Me.llbForgotPassEs.TabStop = True
         Me.llbForgotPassEs.Text = "OLVIDO SU CONTRASEÑA ?"
         Me.llbForgotPassEs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -288,7 +288,6 @@ Partial Class FrmLogIn
         Me.txtUser.HoverState.Parent = Me.txtUser
         Me.txtUser.Location = New System.Drawing.Point(37, 267)
         Me.txtUser.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtUser.MaxLength = 8
         Me.txtUser.Name = "txtUser"
         Me.txtUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtUser.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -297,7 +296,8 @@ Partial Class FrmLogIn
         Me.txtUser.ShadowDecoration.Parent = Me.txtUser
         Me.txtUser.Size = New System.Drawing.Size(351, 30)
         Me.txtUser.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtUser.TabIndex = 14
+        Me.txtUser.TabIndex = 1
+        Me.txtUser.Tag = ""
         '
         'txtPass
         '
@@ -319,7 +319,6 @@ Partial Class FrmLogIn
         Me.txtPass.HoverState.Parent = Me.txtPass
         Me.txtPass.Location = New System.Drawing.Point(37, 332)
         Me.txtPass.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtPass.MaxLength = 255
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPass.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
@@ -328,7 +327,7 @@ Partial Class FrmLogIn
         Me.txtPass.ShadowDecoration.Parent = Me.txtPass
         Me.txtPass.Size = New System.Drawing.Size(352, 30)
         Me.txtPass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
-        Me.txtPass.TabIndex = 15
+        Me.txtPass.TabIndex = 2
         '
         'FrmLogIn
         '

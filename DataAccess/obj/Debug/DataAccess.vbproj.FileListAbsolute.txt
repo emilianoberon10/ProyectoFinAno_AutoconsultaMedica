@@ -97,3 +97,11 @@ C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB-master\DataAccess\obj\
 C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB-master\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB-master\DataAccess\obj\Debug\DataAccess.xml
 C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB-master\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\DataAccess\bin\Debug\Zstandard.Net.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\DataAccess\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\DataAccess\bin\Debug\System.Buffers.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\DataAccess\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\DataAccess\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\DataAccess\bin\Debug\System.Memory.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\DataAccess\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\DataAccess\bin\Debug\System.Numerics.Vectors.dll

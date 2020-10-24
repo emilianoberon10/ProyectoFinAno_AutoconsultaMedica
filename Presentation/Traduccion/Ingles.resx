@@ -123,6 +123,21 @@
   <data name="app_titulo" xml:space="preserve">
     <value>MEDICAL SELF-CONSULTATION SYSTEM</value>
   </data>
+  <data name="ayuda_agenda" xml:space="preserve">
+    <value>En este menu podras ver y buscar los horarios
+y lugares de trabajo de los medicos, para asi poder pedir hora en la recepcion.
+Pudiendo filtrar por especialidad o buscar un medico por su primer nombre.</value>
+  </data>
+  <data name="ayuda_consulta" xml:space="preserve">
+    <value>Para realizar una consulta
+1. Seleccione sus sintomas
+2. Aprete el boton CONSULTAR
+3. Si lo desea aprete el boton chat para iniciar un chat con un medico</value>
+  </data>
+  <data name="ayuda_historial" xml:space="preserve">
+    <value>En este menu podras ver tus historial de consultas y que medico te atendio, pudiendo filtrar por fecha
+La segunda fecha debe ser mayo a la primera</value>
+  </data>
   <data name="Bienvenido" xml:space="preserve">
     <value>WELCOME</value>
   </data>

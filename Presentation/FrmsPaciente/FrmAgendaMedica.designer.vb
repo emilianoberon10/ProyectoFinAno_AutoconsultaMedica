@@ -35,7 +35,12 @@ Partial Class FrmAgendaMedica
         Me.switch = New Guna.UI2.WinForms.Guna2ToggleSwitch()
         Me.dgvAgenda = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.txtNomBuscar = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.ayuda_agenda = New System.Windows.Forms.Label()
+        Me.helpPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.dgvAgenda, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.helpPanel.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Agenda_titulo
@@ -87,7 +92,7 @@ Partial Class FrmAgendaMedica
         Me.cbFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbFiltro.FocusedColor = System.Drawing.Color.Empty
         Me.cbFiltro.FocusedState.Parent = Me.cbFiltro
-        Me.cbFiltro.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbFiltro.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbFiltro.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.cbFiltro.FormattingEnabled = True
         Me.cbFiltro.HoverState.Parent = Me.cbFiltro
@@ -171,29 +176,29 @@ Partial Class FrmAgendaMedica
         Me.dgvAgenda.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvAgenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.dgvAgenda.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
-        Me.dgvAgenda.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.dgvAgenda.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.dgvAgenda.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvAgenda.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvAgenda.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         Me.dgvAgenda.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvAgenda.ColumnHeadersHeight = 45
+        Me.dgvAgenda.ColumnHeadersHeight = 50
         Me.dgvAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvAgenda.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvAgenda.EnableHeadersVisualStyles = False
-        Me.dgvAgenda.GridColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.dgvAgenda.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvAgenda.Location = New System.Drawing.Point(15, 240)
         Me.dgvAgenda.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvAgenda.MultiSelect = False
@@ -219,18 +224,18 @@ Partial Class FrmAgendaMedica
         Me.dgvAgenda.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
         Me.dgvAgenda.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
         Me.dgvAgenda.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.dgvAgenda.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dgvAgenda.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.dgvAgenda.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.dgvAgenda.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.dgvAgenda.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvAgenda.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.dgvAgenda.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvAgenda.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvAgenda.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvAgenda.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.dgvAgenda.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvAgenda.ThemeStyle.HeaderStyle.Height = 45
+        Me.dgvAgenda.ThemeStyle.HeaderStyle.Height = 50
         Me.dgvAgenda.ThemeStyle.ReadOnly = True
         Me.dgvAgenda.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.WhiteSmoke
         Me.dgvAgenda.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvAgenda.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvAgenda.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.dgvAgenda.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.dgvAgenda.ThemeStyle.RowsStyle.Height = 50
         Me.dgvAgenda.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
@@ -266,12 +271,50 @@ Partial Class FrmAgendaMedica
         Me.txtNomBuscar.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.txtNomBuscar.TabIndex = 46
         '
+        'ayuda_agenda
+        '
+        Me.ayuda_agenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ayuda_agenda.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.ayuda_agenda.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.ayuda_agenda.Location = New System.Drawing.Point(19, 14)
+        Me.ayuda_agenda.Name = "ayuda_agenda"
+        Me.ayuda_agenda.Padding = New System.Windows.Forms.Padding(5)
+        Me.ayuda_agenda.Size = New System.Drawing.Size(161, 188)
+        Me.ayuda_agenda.TabIndex = 1
+        Me.ayuda_agenda.Text = resources.GetString("ayuda_agenda.Text")
+        '
+        'helpPanel
+        '
+        Me.helpPanel.BackColor = System.Drawing.Color.Transparent
+        Me.helpPanel.Controls.Add(Me.ayuda_agenda)
+        Me.helpPanel.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.helpPanel.Location = New System.Drawing.Point(531, 47)
+        Me.helpPanel.Name = "helpPanel"
+        Me.helpPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.helpPanel.ShadowDepth = 25
+        Me.helpPanel.ShadowShift = 10
+        Me.helpPanel.Size = New System.Drawing.Size(200, 202)
+        Me.helpPanel.TabIndex = 65
+        Me.helpPanel.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Presentation.My.Resources.Resources.information
+        Me.PictureBox1.Location = New System.Drawing.Point(531, 25)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 64
+        Me.PictureBox1.TabStop = False
+        '
         'FrmAgendaMedica
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(802, 683)
+        Me.Controls.Add(Me.helpPanel)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.txtNomBuscar)
         Me.Controls.Add(Me.dgvAgenda)
         Me.Controls.Add(Me.switch)
@@ -287,6 +330,8 @@ Partial Class FrmAgendaMedica
         Me.Name = "FrmAgendaMedica"
         Me.Text = "FrmAgendaMedica"
         CType(Me.dgvAgenda, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.helpPanel.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -300,4 +345,7 @@ Partial Class FrmAgendaMedica
     Friend WithEvents switch As Guna.UI2.WinForms.Guna2ToggleSwitch
     Friend WithEvents dgvAgenda As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents txtNomBuscar As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents ayuda_agenda As Label
+    Friend WithEvents helpPanel As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

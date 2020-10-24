@@ -29,6 +29,7 @@ Partial Class FrmConsultaPaciente
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmConsultaPaciente))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.consu_titulo = New System.Windows.Forms.Label()
         Me.btn_chat = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_consultar = New Guna.UI2.WinForms.Guna2Button()
         Me.dgvDiagnostico = New Guna.UI2.WinForms.Guna2DataGridView()
@@ -41,17 +42,21 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma4 = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.cbSintoma2 = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.cbSintoma1 = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.chb8 = New System.Windows.Forms.CheckBox()
-        Me.chb7 = New System.Windows.Forms.CheckBox()
-        Me.chb6 = New System.Windows.Forms.CheckBox()
-        Me.chb5 = New System.Windows.Forms.CheckBox()
-        Me.chb4 = New System.Windows.Forms.CheckBox()
-        Me.chb3 = New System.Windows.Forms.CheckBox()
-        Me.chb2 = New System.Windows.Forms.CheckBox()
-        Me.chb1 = New System.Windows.Forms.CheckBox()
-        Me.consu_titulo = New System.Windows.Forms.Label()
+        Me.chb1 = New Guna.UI2.WinForms.Guna2CheckBox()
+        Me.chb2 = New Guna.UI2.WinForms.Guna2CheckBox()
+        Me.chb5 = New Guna.UI2.WinForms.Guna2CheckBox()
+        Me.chb4 = New Guna.UI2.WinForms.Guna2CheckBox()
+        Me.chb3 = New Guna.UI2.WinForms.Guna2CheckBox()
+        Me.chb8 = New Guna.UI2.WinForms.Guna2CheckBox()
+        Me.chb7 = New Guna.UI2.WinForms.Guna2CheckBox()
+        Me.chb6 = New Guna.UI2.WinForms.Guna2CheckBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.helpPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.ayuda_consulta = New System.Windows.Forms.Label()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvDiagnostico, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.helpPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -68,6 +73,19 @@ Partial Class FrmConsultaPaciente
         '
         Me.ErrorProvider1.ContainerControl = Me
         Me.ErrorProvider1.Icon = CType(resources.GetObject("ErrorProvider1.Icon"), System.Drawing.Icon)
+        '
+        'consu_titulo
+        '
+        Me.consu_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.consu_titulo.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.ErrorProvider1.SetIconAlignment(Me.consu_titulo, System.Windows.Forms.ErrorIconAlignment.BottomRight)
+        Me.ErrorProvider1.SetIconPadding(Me.consu_titulo, 6)
+        Me.consu_titulo.Location = New System.Drawing.Point(0, 20)
+        Me.consu_titulo.Name = "consu_titulo"
+        Me.consu_titulo.Size = New System.Drawing.Size(804, 40)
+        Me.consu_titulo.TabIndex = 40
+        Me.consu_titulo.Text = "SELECCIONE SUS SINTOMAS"
+        Me.consu_titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btn_chat
         '
@@ -130,39 +148,39 @@ Partial Class FrmConsultaPaciente
         Me.dgvDiagnostico.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvDiagnostico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.dgvDiagnostico.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
-        Me.dgvDiagnostico.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.dgvDiagnostico.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.dgvDiagnostico.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvDiagnostico.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvDiagnostico.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(99, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvDiagnostico.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvDiagnostico.ColumnHeadersHeight = 30
+        Me.dgvDiagnostico.ColumnHeadersHeight = 50
         Me.dgvDiagnostico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(223, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(68, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(151, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvDiagnostico.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvDiagnostico.Enabled = False
         Me.dgvDiagnostico.EnableHeadersVisualStyles = False
-        Me.dgvDiagnostico.GridColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(203, Byte), Integer))
-        Me.dgvDiagnostico.Location = New System.Drawing.Point(271, 355)
+        Me.dgvDiagnostico.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvDiagnostico.Location = New System.Drawing.Point(320, 355)
         Me.dgvDiagnostico.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvDiagnostico.Name = "dgvDiagnostico"
         Me.dgvDiagnostico.ReadOnly = True
         Me.dgvDiagnostico.RowHeadersVisible = False
-        Me.dgvDiagnostico.RowTemplate.Height = 26
+        Me.dgvDiagnostico.RowTemplate.Height = 45
         Me.dgvDiagnostico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvDiagnostico.Size = New System.Drawing.Size(260, 288)
+        Me.dgvDiagnostico.Size = New System.Drawing.Size(162, 288)
         Me.dgvDiagnostico.TabIndex = 58
         Me.dgvDiagnostico.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Pink
         Me.dgvDiagnostico.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -170,22 +188,22 @@ Partial Class FrmConsultaPaciente
         Me.dgvDiagnostico.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
         Me.dgvDiagnostico.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
         Me.dgvDiagnostico.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.dgvDiagnostico.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
-        Me.dgvDiagnostico.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(203, Byte), Integer))
-        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.dgvDiagnostico.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.dgvDiagnostico.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.dgvDiagnostico.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.dgvDiagnostico.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.Height = 30
+        Me.dgvDiagnostico.ThemeStyle.HeaderStyle.Height = 50
         Me.dgvDiagnostico.ThemeStyle.ReadOnly = True
-        Me.dgvDiagnostico.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.dgvDiagnostico.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.WhiteSmoke
         Me.dgvDiagnostico.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvDiagnostico.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvDiagnostico.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(68, Byte), Integer))
-        Me.dgvDiagnostico.ThemeStyle.RowsStyle.Height = 26
-        Me.dgvDiagnostico.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(151, Byte), Integer))
-        Me.dgvDiagnostico.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.dgvDiagnostico.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvDiagnostico.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.dgvDiagnostico.ThemeStyle.RowsStyle.Height = 45
+        Me.dgvDiagnostico.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
+        Me.dgvDiagnostico.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke
         '
         'cbSintoma9
         '
@@ -198,7 +216,7 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbSintoma9.FocusedColor = System.Drawing.Color.Empty
         Me.cbSintoma9.FocusedState.Parent = Me.cbSintoma9
-        Me.cbSintoma9.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma9.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSintoma9.ForeColor = System.Drawing.Color.White
         Me.cbSintoma9.FormattingEnabled = True
         Me.cbSintoma9.HoverState.Parent = Me.cbSintoma9
@@ -223,7 +241,7 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbSintoma6.FocusedColor = System.Drawing.Color.Empty
         Me.cbSintoma6.FocusedState.Parent = Me.cbSintoma6
-        Me.cbSintoma6.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma6.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSintoma6.ForeColor = System.Drawing.Color.White
         Me.cbSintoma6.FormattingEnabled = True
         Me.cbSintoma6.HoverState.Parent = Me.cbSintoma6
@@ -248,7 +266,7 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbSintoma8.FocusedColor = System.Drawing.Color.Empty
         Me.cbSintoma8.FocusedState.Parent = Me.cbSintoma8
-        Me.cbSintoma8.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma8.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSintoma8.ForeColor = System.Drawing.Color.White
         Me.cbSintoma8.FormattingEnabled = True
         Me.cbSintoma8.HoverState.Parent = Me.cbSintoma8
@@ -273,7 +291,7 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbSintoma5.FocusedColor = System.Drawing.Color.Empty
         Me.cbSintoma5.FocusedState.Parent = Me.cbSintoma5
-        Me.cbSintoma5.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma5.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSintoma5.ForeColor = System.Drawing.Color.White
         Me.cbSintoma5.FormattingEnabled = True
         Me.cbSintoma5.HoverState.Parent = Me.cbSintoma5
@@ -298,7 +316,7 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbSintoma7.FocusedColor = System.Drawing.Color.Empty
         Me.cbSintoma7.FocusedState.Parent = Me.cbSintoma7
-        Me.cbSintoma7.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma7.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSintoma7.ForeColor = System.Drawing.Color.White
         Me.cbSintoma7.FormattingEnabled = True
         Me.cbSintoma7.HoverState.Parent = Me.cbSintoma7
@@ -323,7 +341,7 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbSintoma3.FocusedColor = System.Drawing.Color.Empty
         Me.cbSintoma3.FocusedState.Parent = Me.cbSintoma3
-        Me.cbSintoma3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma3.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSintoma3.ForeColor = System.Drawing.Color.White
         Me.cbSintoma3.FormattingEnabled = True
         Me.cbSintoma3.HoverState.Parent = Me.cbSintoma3
@@ -348,7 +366,7 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbSintoma4.FocusedColor = System.Drawing.Color.Empty
         Me.cbSintoma4.FocusedState.Parent = Me.cbSintoma4
-        Me.cbSintoma4.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma4.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSintoma4.ForeColor = System.Drawing.Color.White
         Me.cbSintoma4.FormattingEnabled = True
         Me.cbSintoma4.HoverState.Parent = Me.cbSintoma4
@@ -373,7 +391,7 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbSintoma2.FocusedColor = System.Drawing.Color.Empty
         Me.cbSintoma2.FocusedState.Parent = Me.cbSintoma2
-        Me.cbSintoma2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma2.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSintoma2.ForeColor = System.Drawing.Color.White
         Me.cbSintoma2.FormattingEnabled = True
         Me.cbSintoma2.HoverState.Parent = Me.cbSintoma2
@@ -398,7 +416,7 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbSintoma1.FocusedColor = System.Drawing.Color.Empty
         Me.cbSintoma1.FocusedState.Parent = Me.cbSintoma1
-        Me.cbSintoma1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbSintoma1.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSintoma1.ForeColor = System.Drawing.Color.White
         Me.cbSintoma1.FormattingEnabled = True
         Me.cbSintoma1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(164, Byte), Integer))
@@ -414,96 +432,194 @@ Partial Class FrmConsultaPaciente
         Me.cbSintoma1.TabIndex = 49
         Me.cbSintoma1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'chb8
+        'chb1
         '
-        Me.chb8.AutoSize = True
-        Me.chb8.Location = New System.Drawing.Point(554, 242)
-        Me.chb8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.chb8.Name = "chb8"
-        Me.chb8.Size = New System.Drawing.Size(15, 14)
-        Me.chb8.TabIndex = 47
-        Me.chb8.UseVisualStyleBackColor = True
+        Me.chb1.Animated = True
+        Me.chb1.AutoSize = True
+        Me.chb1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb1.CheckedState.BorderRadius = 50
+        Me.chb1.CheckedState.BorderThickness = 0
+        Me.chb1.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb1.CheckMarkColor = System.Drawing.Color.WhiteSmoke
+        Me.chb1.Location = New System.Drawing.Point(282, 98)
+        Me.chb1.Name = "chb1"
+        Me.chb1.Size = New System.Drawing.Size(15, 14)
+        Me.chb1.TabIndex = 61
+        Me.chb1.UncheckedState.BorderColor = System.Drawing.Color.WhiteSmoke
+        Me.chb1.UncheckedState.BorderRadius = 25
+        Me.chb1.UncheckedState.BorderThickness = 0
+        Me.chb1.UncheckedState.FillColor = System.Drawing.Color.WhiteSmoke
+        Me.chb1.UseVisualStyleBackColor = True
         '
-        'chb7
+        'chb2
         '
-        Me.chb7.AutoSize = True
-        Me.chb7.Location = New System.Drawing.Point(282, 242)
-        Me.chb7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.chb7.Name = "chb7"
-        Me.chb7.Size = New System.Drawing.Size(15, 14)
-        Me.chb7.TabIndex = 46
-        Me.chb7.UseVisualStyleBackColor = True
-        '
-        'chb6
-        '
-        Me.chb6.AutoSize = True
-        Me.chb6.Location = New System.Drawing.Point(10, 242)
-        Me.chb6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.chb6.Name = "chb6"
-        Me.chb6.Size = New System.Drawing.Size(15, 14)
-        Me.chb6.TabIndex = 45
-        Me.chb6.UseVisualStyleBackColor = True
+        Me.chb2.Animated = True
+        Me.chb2.AutoSize = True
+        Me.chb2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb2.CheckedState.BorderRadius = 50
+        Me.chb2.CheckedState.BorderThickness = 0
+        Me.chb2.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb2.CheckMarkColor = System.Drawing.Color.WhiteSmoke
+        Me.chb2.Location = New System.Drawing.Point(554, 98)
+        Me.chb2.Name = "chb2"
+        Me.chb2.Size = New System.Drawing.Size(15, 14)
+        Me.chb2.TabIndex = 61
+        Me.chb2.UncheckedState.BorderColor = System.Drawing.Color.WhiteSmoke
+        Me.chb2.UncheckedState.BorderRadius = 25
+        Me.chb2.UncheckedState.BorderThickness = 0
+        Me.chb2.UncheckedState.FillColor = System.Drawing.Color.WhiteSmoke
+        Me.chb2.UseVisualStyleBackColor = True
         '
         'chb5
         '
+        Me.chb5.Animated = True
         Me.chb5.AutoSize = True
-        Me.chb5.Location = New System.Drawing.Point(554, 171)
-        Me.chb5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.chb5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb5.CheckedState.BorderRadius = 50
+        Me.chb5.CheckedState.BorderThickness = 0
+        Me.chb5.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb5.CheckMarkColor = System.Drawing.Color.WhiteSmoke
+        Me.chb5.Location = New System.Drawing.Point(554, 174)
         Me.chb5.Name = "chb5"
         Me.chb5.Size = New System.Drawing.Size(15, 14)
-        Me.chb5.TabIndex = 44
+        Me.chb5.TabIndex = 61
+        Me.chb5.UncheckedState.BorderColor = System.Drawing.Color.WhiteSmoke
+        Me.chb5.UncheckedState.BorderRadius = 25
+        Me.chb5.UncheckedState.BorderThickness = 0
+        Me.chb5.UncheckedState.FillColor = System.Drawing.Color.WhiteSmoke
         Me.chb5.UseVisualStyleBackColor = True
         '
         'chb4
         '
+        Me.chb4.Animated = True
         Me.chb4.AutoSize = True
+        Me.chb4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb4.CheckedState.BorderRadius = 50
+        Me.chb4.CheckedState.BorderThickness = 0
+        Me.chb4.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb4.CheckMarkColor = System.Drawing.Color.WhiteSmoke
         Me.chb4.Location = New System.Drawing.Point(282, 171)
-        Me.chb4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chb4.Name = "chb4"
         Me.chb4.Size = New System.Drawing.Size(15, 14)
-        Me.chb4.TabIndex = 43
+        Me.chb4.TabIndex = 61
+        Me.chb4.UncheckedState.BorderColor = System.Drawing.Color.WhiteSmoke
+        Me.chb4.UncheckedState.BorderRadius = 25
+        Me.chb4.UncheckedState.BorderThickness = 0
+        Me.chb4.UncheckedState.FillColor = System.Drawing.Color.WhiteSmoke
         Me.chb4.UseVisualStyleBackColor = True
         '
         'chb3
         '
+        Me.chb3.Animated = True
         Me.chb3.AutoSize = True
-        Me.chb3.Location = New System.Drawing.Point(10, 171)
-        Me.chb3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.chb3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb3.CheckedState.BorderRadius = 50
+        Me.chb3.CheckedState.BorderThickness = 0
+        Me.chb3.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb3.CheckMarkColor = System.Drawing.Color.WhiteSmoke
+        Me.chb3.Location = New System.Drawing.Point(7, 171)
         Me.chb3.Name = "chb3"
         Me.chb3.Size = New System.Drawing.Size(15, 14)
-        Me.chb3.TabIndex = 42
+        Me.chb3.TabIndex = 61
+        Me.chb3.UncheckedState.BorderColor = System.Drawing.Color.WhiteSmoke
+        Me.chb3.UncheckedState.BorderRadius = 25
+        Me.chb3.UncheckedState.BorderThickness = 0
+        Me.chb3.UncheckedState.FillColor = System.Drawing.Color.WhiteSmoke
         Me.chb3.UseVisualStyleBackColor = True
         '
-        'chb2
+        'chb8
         '
-        Me.chb2.AutoSize = True
-        Me.chb2.Location = New System.Drawing.Point(554, 95)
-        Me.chb2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.chb2.Name = "chb2"
-        Me.chb2.Size = New System.Drawing.Size(15, 14)
-        Me.chb2.TabIndex = 41
-        Me.chb2.UseVisualStyleBackColor = True
+        Me.chb8.Animated = True
+        Me.chb8.AutoSize = True
+        Me.chb8.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb8.CheckedState.BorderRadius = 50
+        Me.chb8.CheckedState.BorderThickness = 0
+        Me.chb8.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb8.CheckMarkColor = System.Drawing.Color.WhiteSmoke
+        Me.chb8.Location = New System.Drawing.Point(554, 245)
+        Me.chb8.Name = "chb8"
+        Me.chb8.Size = New System.Drawing.Size(15, 14)
+        Me.chb8.TabIndex = 61
+        Me.chb8.UncheckedState.BorderColor = System.Drawing.Color.WhiteSmoke
+        Me.chb8.UncheckedState.BorderRadius = 25
+        Me.chb8.UncheckedState.BorderThickness = 0
+        Me.chb8.UncheckedState.FillColor = System.Drawing.Color.WhiteSmoke
+        Me.chb8.UseVisualStyleBackColor = True
         '
-        'chb1
+        'chb7
         '
-        Me.chb1.AutoSize = True
-        Me.chb1.Location = New System.Drawing.Point(286, 95)
-        Me.chb1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.chb1.Name = "chb1"
-        Me.chb1.Size = New System.Drawing.Size(15, 14)
-        Me.chb1.TabIndex = 48
-        Me.chb1.UseVisualStyleBackColor = True
+        Me.chb7.Animated = True
+        Me.chb7.AutoSize = True
+        Me.chb7.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb7.CheckedState.BorderRadius = 50
+        Me.chb7.CheckedState.BorderThickness = 0
+        Me.chb7.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb7.CheckMarkColor = System.Drawing.Color.WhiteSmoke
+        Me.chb7.Location = New System.Drawing.Point(282, 242)
+        Me.chb7.Name = "chb7"
+        Me.chb7.Size = New System.Drawing.Size(15, 14)
+        Me.chb7.TabIndex = 61
+        Me.chb7.UncheckedState.BorderColor = System.Drawing.Color.WhiteSmoke
+        Me.chb7.UncheckedState.BorderRadius = 25
+        Me.chb7.UncheckedState.BorderThickness = 0
+        Me.chb7.UncheckedState.FillColor = System.Drawing.Color.WhiteSmoke
+        Me.chb7.UseVisualStyleBackColor = True
         '
-        'consu_titulo
+        'chb6
         '
-        Me.consu_titulo.Font = New System.Drawing.Font("Segoe UI Semibold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.consu_titulo.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.consu_titulo.Location = New System.Drawing.Point(0, 20)
-        Me.consu_titulo.Name = "consu_titulo"
-        Me.consu_titulo.Size = New System.Drawing.Size(804, 40)
-        Me.consu_titulo.TabIndex = 40
-        Me.consu_titulo.Text = "SELECCIONE SUS SINTOMAS"
-        Me.consu_titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.chb6.Animated = True
+        Me.chb6.AutoSize = True
+        Me.chb6.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb6.CheckedState.BorderRadius = 50
+        Me.chb6.CheckedState.BorderThickness = 0
+        Me.chb6.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.chb6.CheckMarkColor = System.Drawing.Color.WhiteSmoke
+        Me.chb6.Location = New System.Drawing.Point(7, 239)
+        Me.chb6.Name = "chb6"
+        Me.chb6.Size = New System.Drawing.Size(15, 14)
+        Me.chb6.TabIndex = 61
+        Me.chb6.UncheckedState.BorderColor = System.Drawing.Color.WhiteSmoke
+        Me.chb6.UncheckedState.BorderRadius = 25
+        Me.chb6.UncheckedState.BorderThickness = 0
+        Me.chb6.UncheckedState.FillColor = System.Drawing.Color.WhiteSmoke
+        Me.chb6.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Presentation.My.Resources.Resources.information
+        Me.PictureBox1.Location = New System.Drawing.Point(590, 35)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 62
+        Me.PictureBox1.TabStop = False
+        '
+        'helpPanel
+        '
+        Me.helpPanel.BackColor = System.Drawing.Color.Transparent
+        Me.helpPanel.Controls.Add(Me.ayuda_consulta)
+        Me.helpPanel.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.helpPanel.Location = New System.Drawing.Point(590, 57)
+        Me.helpPanel.Name = "helpPanel"
+        Me.helpPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.helpPanel.ShadowDepth = 25
+        Me.helpPanel.ShadowShift = 10
+        Me.helpPanel.Size = New System.Drawing.Size(200, 216)
+        Me.helpPanel.TabIndex = 63
+        Me.helpPanel.Visible = False
+        '
+        'ayuda_consulta
+        '
+        Me.ayuda_consulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ayuda_consulta.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.ayuda_consulta.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.ayuda_consulta.Location = New System.Drawing.Point(19, 14)
+        Me.ayuda_consulta.Name = "ayuda_consulta"
+        Me.ayuda_consulta.Padding = New System.Windows.Forms.Padding(5)
+        Me.ayuda_consulta.Size = New System.Drawing.Size(161, 192)
+        Me.ayuda_consulta.TabIndex = 1
+        Me.ayuda_consulta.Text = "Para realizar una consulta" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "1. Seleccione sus sintomas" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2. Aprete el boton CONSUL" &
+    "TAR" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "3. Si lo desea aprete el boton chat para iniciar un chat con un medico"
         '
         'FrmConsultaPaciente
         '
@@ -511,6 +627,16 @@ Partial Class FrmConsultaPaciente
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(802, 683)
+        Me.Controls.Add(Me.helpPanel)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.chb6)
+        Me.Controls.Add(Me.chb3)
+        Me.Controls.Add(Me.chb7)
+        Me.Controls.Add(Me.chb4)
+        Me.Controls.Add(Me.chb8)
+        Me.Controls.Add(Me.chb5)
+        Me.Controls.Add(Me.chb2)
+        Me.Controls.Add(Me.chb1)
         Me.Controls.Add(Me.btn_chat)
         Me.Controls.Add(Me.btn_consultar)
         Me.Controls.Add(Me.dgvDiagnostico)
@@ -523,14 +649,6 @@ Partial Class FrmConsultaPaciente
         Me.Controls.Add(Me.cbSintoma4)
         Me.Controls.Add(Me.cbSintoma2)
         Me.Controls.Add(Me.cbSintoma1)
-        Me.Controls.Add(Me.chb8)
-        Me.Controls.Add(Me.chb7)
-        Me.Controls.Add(Me.chb6)
-        Me.Controls.Add(Me.chb5)
-        Me.Controls.Add(Me.chb4)
-        Me.Controls.Add(Me.chb3)
-        Me.Controls.Add(Me.chb2)
-        Me.Controls.Add(Me.chb1)
         Me.Controls.Add(Me.consu_titulo)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -540,6 +658,8 @@ Partial Class FrmConsultaPaciente
         Me.Text = "Consulta"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvDiagnostico, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.helpPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -558,13 +678,16 @@ Partial Class FrmConsultaPaciente
     Friend WithEvents cbSintoma4 As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents cbSintoma2 As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents cbSintoma1 As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents chb8 As CheckBox
-    Friend WithEvents chb7 As CheckBox
-    Friend WithEvents chb6 As CheckBox
-    Friend WithEvents chb5 As CheckBox
-    Friend WithEvents chb4 As CheckBox
-    Friend WithEvents chb3 As CheckBox
-    Friend WithEvents chb2 As CheckBox
-    Friend WithEvents chb1 As CheckBox
     Friend WithEvents consu_titulo As Label
+    Friend WithEvents chb1 As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents chb6 As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents chb3 As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents chb7 As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents chb4 As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents chb8 As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents chb5 As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents chb2 As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents helpPanel As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents ayuda_consulta As Label
 End Class

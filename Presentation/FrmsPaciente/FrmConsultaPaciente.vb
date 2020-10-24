@@ -4,6 +4,7 @@ Public Class FrmConsultaPaciente
 
     Private Sub Consulta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Traductor.traducirForm(Me)
+        Traductor.traducirPanel(helpPanel)
         btn_chat.Visible = False
         CargarComboBoxSintomas(cbSintoma1)
         CargarComboBoxSintomas(cbSintoma2)
@@ -164,6 +165,14 @@ Public Class FrmConsultaPaciente
     Private Sub btnChat_Paint(sender As Object, e As PaintEventArgs)
         'BotonRedondeado(btnConsul)
         'BotonRedondeado(btnChat)
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        If helpPanel.Visible = True Then
+            helpPanel.Visible = False
+        Else
+            helpPanel.Visible = True
+        End If
     End Sub
 
 #End Region

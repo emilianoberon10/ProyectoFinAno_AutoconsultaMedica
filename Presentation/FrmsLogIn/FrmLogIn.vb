@@ -57,8 +57,7 @@ Public Class FrmLogIn
 
     Private Sub FrmLogIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Traductor.traducirForm(Me)
-        txtPass.MaxLength = 255
-        txtUser.MaxLength = 8
+        txtUser.Focus()
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -174,7 +173,7 @@ Public Class FrmLogIn
 #Region "funcionamiento text area"
 
     Private Sub txtUser_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUser.KeyPress
-
+        txtUser.MaxLength = 8
         e.Handled = Not Char.IsDigit(e.KeyChar)
         If Asc(e.KeyChar) = 8 Then
             e.Handled = Char.IsDigit(e.KeyChar)
@@ -182,7 +181,8 @@ Public Class FrmLogIn
     End Sub
 
     Private Sub txtPass_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPass.KeyPress
-        DesecharCaracteresEspeciales(e)
+        txtPass.MaxLength = 100
+
         'al dar enter en el textBox de la contraseña genero un evento click para el boton login
         'con el if compruebo que el keypress fue un enter y no otra letra
         If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then

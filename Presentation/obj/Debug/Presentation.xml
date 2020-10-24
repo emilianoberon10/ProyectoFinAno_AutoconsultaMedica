@@ -32,6 +32,11 @@ Presentation
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Resources.arrow_down_sign_to_navigate">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Resources.chat">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -137,6 +142,11 @@ Presentation
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Resources.right_arrow">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Resources.settings">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -181,6 +191,27 @@ Presentation
 <member name="P:Presentation.My.Resources.Español.app_titulo">
 <summary>
   Busca una cadena traducida similar a SISTEMA DE AUTOCONSULTA MEDICA.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Español.ayuda_agenda">
+<summary>
+  Busca una cadena traducida similar a En este menu podras ver y buscar los horarios
+y lugares de trabajo de los medicos, para asi poder pedir hora en la recepcion.
+Pudiendo filtrar por especialidad o buscar un medico por su primer nombre..
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Español.ayuda_consulta">
+<summary>
+  Busca una cadena traducida similar a Para realizar una consulta
+1. Seleccione sus sintomas
+2. Aprete el boton CONSULTAR
+3. Si lo desea aprete el boton chat para iniciar un chat con un medico.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Español.ayuda_historial">
+<summary>
+  Busca una cadena traducida similar a En este menu podras ver tus historial de consultas y que medico te atendio, pudiendo filtrar por fecha
+La segunda fecha debe ser mayo a la primera.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Español.Bienvenido">
@@ -799,6 +830,27 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
 <member name="P:Presentation.My.Resources.Ingles.app_titulo">
 <summary>
   Busca una cadena traducida similar a MEDICAL SELF-CONSULTATION SYSTEM.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.ayuda_agenda">
+<summary>
+  Busca una cadena traducida similar a En este menu podras ver y buscar los horarios
+y lugares de trabajo de los medicos, para asi poder pedir hora en la recepcion.
+Pudiendo filtrar por especialidad o buscar un medico por su primer nombre..
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.ayuda_consulta">
+<summary>
+  Busca una cadena traducida similar a Para realizar una consulta
+1. Seleccione sus sintomas
+2. Aprete el boton CONSULTAR
+3. Si lo desea aprete el boton chat para iniciar un chat con un medico.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.ayuda_historial">
+<summary>
+  Busca una cadena traducida similar a En este menu podras ver tus historial de consultas y que medico te atendio, pudiendo filtrar por fecha
+La segunda fecha debe ser mayo a la primera.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.Bienvenido">

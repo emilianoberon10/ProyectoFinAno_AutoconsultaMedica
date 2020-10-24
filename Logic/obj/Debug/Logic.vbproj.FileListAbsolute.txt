@@ -112,3 +112,11 @@ C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB-master\Logic\obj\Debug
 C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB-master\Logic\obj\Debug\Logic.dll
 C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB-master\Logic\obj\Debug\Logic.xml
 C:\Users\Mateo\source\repos\ProyectoAutoConsultaMedicaVVB-master\Logic\obj\Debug\Logic.pdb
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\Zstandard.Net.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\System.Buffers.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\System.Memory.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\System.Numerics.Vectors.dll

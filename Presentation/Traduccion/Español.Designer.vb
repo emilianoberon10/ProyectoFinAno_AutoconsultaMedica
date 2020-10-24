@@ -83,6 +83,39 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a En este menu podras ver y buscar los horarios
+        '''y lugares de trabajo de los medicos, para asi poder pedir hora en la recepcion.
+        '''Pudiendo filtrar por especialidad o buscar un medico por su primer nombre..
+        '''</summary>
+        Friend Shared ReadOnly Property ayuda_agenda() As String
+            Get
+                Return ResourceManager.GetString("ayuda_agenda", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Para realizar una consulta
+        '''1. Seleccione sus sintomas
+        '''2. Aprete el boton CONSULTAR
+        '''3. Si lo desea aprete el boton chat para iniciar un chat con un medico.
+        '''</summary>
+        Friend Shared ReadOnly Property ayuda_consulta() As String
+            Get
+                Return ResourceManager.GetString("ayuda_consulta", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a En este menu podras ver tus historial de consultas y que medico te atendio, pudiendo filtrar por fecha
+        '''La segunda fecha debe ser mayo a la primera.
+        '''</summary>
+        Friend Shared ReadOnly Property ayuda_historial() As String
+            Get
+                Return ResourceManager.GetString("ayuda_historial", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a BIENVENIDO.
         '''</summary>
         Friend Shared ReadOnly Property Bienvenido() As String

@@ -517,6 +517,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="isotipoProyectowhite.ico" />
+    <None Include="Resources\right-arrow.png" />
+    <None Include="Resources\arrow-down-sign-to-navigate.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

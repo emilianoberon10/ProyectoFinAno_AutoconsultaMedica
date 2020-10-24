@@ -3,6 +3,7 @@
     Private Sub FrmHistorial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DgvHistorial.DataSource = FrmLogIn.paci.VerDiagnosticos
         Traductor.traducirForm(Me)
+        Traductor.traducirPanel(helpPanel)
     End Sub
 
     Private Sub btnFiltrar_Click(sender As Object, e As EventArgs) Handles btn_Filtrar.Click
@@ -25,4 +26,11 @@
 
     End Sub
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        If helpPanel.Visible = True Then
+            helpPanel.Visible = False
+        Else
+            helpPanel.Visible = True
+        End If
+    End Sub
 End Class

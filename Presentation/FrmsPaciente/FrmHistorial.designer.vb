@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmHistorial
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmHistorial
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -34,7 +34,12 @@ Partial Class FrmHistorial
         Me.DateTimePicker2 = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.DateTimePicker1 = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.DgvHistorial = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.ayuda_historial = New System.Windows.Forms.Label()
+        Me.helpPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.DgvHistorial, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.helpPanel.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Histo_titulo
@@ -52,7 +57,7 @@ Partial Class FrmHistorial
         '
         Me.Histo_aclara.AutoSize = True
         Me.Histo_aclara.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Histo_aclara.ForeColor = System.Drawing.Color.Silver
+        Me.Histo_aclara.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Histo_aclara.Location = New System.Drawing.Point(31, 112)
         Me.Histo_aclara.Name = "Histo_aclara"
         Me.Histo_aclara.Size = New System.Drawing.Size(154, 17)
@@ -143,6 +148,7 @@ Partial Class FrmHistorial
         Me.DateTimePicker2.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker2.Enabled = False
         Me.DateTimePicker2.FillColor = System.Drawing.Color.White
+        Me.DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker2.HoverState.Parent = Me.DateTimePicker2
@@ -162,6 +168,7 @@ Partial Class FrmHistorial
         Me.DateTimePicker1.CheckedState.Parent = Me.DateTimePicker1
         Me.DateTimePicker1.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker1.FillColor = System.Drawing.Color.White
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker1.HoverState.Parent = Me.DateTimePicker1
@@ -185,23 +192,23 @@ Partial Class FrmHistorial
         Me.DgvHistorial.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DgvHistorial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.DgvHistorial.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
-        Me.DgvHistorial.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DgvHistorial.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.DgvHistorial.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvHistorial.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvHistorial.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DgvHistorial.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DgvHistorial.ColumnHeadersHeight = 30
+        Me.DgvHistorial.ColumnHeadersHeight = 50
         Me.DgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke
@@ -216,9 +223,9 @@ Partial Class FrmHistorial
         Me.DgvHistorial.ReadOnly = True
         Me.DgvHistorial.RowHeadersVisible = False
         Me.DgvHistorial.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.DgvHistorial.RowTemplate.Height = 30
+        Me.DgvHistorial.RowTemplate.Height = 50
         Me.DgvHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.DgvHistorial.Size = New System.Drawing.Size(783, 323)
+        Me.DgvHistorial.Size = New System.Drawing.Size(778, 438)
         Me.DgvHistorial.TabIndex = 49
         Me.DgvHistorial.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
         Me.DgvHistorial.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.WhiteSmoke
@@ -226,22 +233,59 @@ Partial Class FrmHistorial
         Me.DgvHistorial.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
         Me.DgvHistorial.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
         Me.DgvHistorial.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.DgvHistorial.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.DgvHistorial.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.DgvHistorial.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvHistorial.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.DgvHistorial.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.DgvHistorial.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DgvHistorial.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DgvHistorial.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DgvHistorial.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.DgvHistorial.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DgvHistorial.ThemeStyle.HeaderStyle.Height = 30
+        Me.DgvHistorial.ThemeStyle.HeaderStyle.Height = 50
         Me.DgvHistorial.ThemeStyle.ReadOnly = True
         Me.DgvHistorial.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.WhiteSmoke
         Me.DgvHistorial.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvHistorial.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DgvHistorial.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DgvHistorial.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.DgvHistorial.ThemeStyle.RowsStyle.Height = 30
+        Me.DgvHistorial.ThemeStyle.RowsStyle.Height = 50
         Me.DgvHistorial.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.DgvHistorial.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke
+        '
+        'ayuda_historial
+        '
+        Me.ayuda_historial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ayuda_historial.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.ayuda_historial.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.ayuda_historial.Location = New System.Drawing.Point(19, 14)
+        Me.ayuda_historial.Name = "ayuda_historial"
+        Me.ayuda_historial.Padding = New System.Windows.Forms.Padding(5)
+        Me.ayuda_historial.Size = New System.Drawing.Size(161, 174)
+        Me.ayuda_historial.TabIndex = 1
+        Me.ayuda_historial.Text = "En este menu podras ver tus historial de consultas y que medico te atendio, pudie" &
+    "ndo filtrar por fecha" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "La segunda fecha debe ser mayo a la primera"
+        '
+        'helpPanel
+        '
+        Me.helpPanel.BackColor = System.Drawing.Color.Transparent
+        Me.helpPanel.Controls.Add(Me.ayuda_historial)
+        Me.helpPanel.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.helpPanel.Location = New System.Drawing.Point(578, 52)
+        Me.helpPanel.Name = "helpPanel"
+        Me.helpPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.helpPanel.ShadowDepth = 25
+        Me.helpPanel.ShadowShift = 10
+        Me.helpPanel.Size = New System.Drawing.Size(200, 195)
+        Me.helpPanel.TabIndex = 67
+        Me.helpPanel.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Presentation.My.Resources.Resources.information
+        Me.PictureBox1.Location = New System.Drawing.Point(578, 30)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 66
+        Me.PictureBox1.TabStop = False
         '
         'FrmHistorial
         '
@@ -249,6 +293,8 @@ Partial Class FrmHistorial
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(802, 683)
+        Me.Controls.Add(Me.helpPanel)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DgvHistorial)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.DateTimePicker2)
@@ -263,6 +309,8 @@ Partial Class FrmHistorial
         Me.Name = "FrmHistorial"
         Me.Text = "FrmHistorial"
         CType(Me.DgvHistorial, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.helpPanel.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -275,4 +323,7 @@ Partial Class FrmHistorial
     Friend WithEvents DateTimePicker2 As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents DateTimePicker1 As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents DgvHistorial As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents ayuda_historial As Label
+    Friend WithEvents helpPanel As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

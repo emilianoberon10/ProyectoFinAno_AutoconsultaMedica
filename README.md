@@ -5,7 +5,7 @@
 [ Escuela superior de informatica](https://www.esi.edu.uy/)
 ---
 * Software icon:
-![icon](https://github.com/vvbSoftware/VBBSoftwareAutoConsultaMedica/blob/master/Presentation/isotipoProyectowhite.ico)
+![icon](https://github.com/vvbSoftware/ProyectoAutoConsultaMedicaVVB/blob/master/Presentation/isotipoProyectowhite.ico)
 * Other iconos from:
 [FlatIcons](https://www.flaticon.com/search?word=info)
 ---

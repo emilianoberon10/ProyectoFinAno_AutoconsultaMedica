@@ -3,9 +3,10 @@
 Public Class Sintoma
     Property _nombre As String
     Property _id As Integer
+    Dim consu As New DBSintomas()
+
     Public Sub New()
     End Sub
-
     Public Sub New(nombre As String)
         _nombre = nombre
     End Sub
@@ -16,45 +17,59 @@ Public Class Sintoma
 
 
     Public Function ObtenerSintomas() As DataTable
-        Dim consu As New DBSintomas()
-        Return consu.ObtenerSintomas()
+        Dim result As DataTable
+        Try
+            result = consu.ObtenerSintomas()
+        Catch ex As Exception
+            Throw New SystemException("ObtenerSintomas: " + ex.Message)
+        End Try
+
+        Return result
     End Function
 
     Public Function DevolverSintomaComboBox() As DataSet
-        Dim consu As New DBSintomas()
-        Return consu.DevolverSintomaComboBox()
+        Dim result As DataSet
+        Try
+            result = consu.DevolverSintomaComboBox()
+        Catch ex As Exception
+            Throw New SystemException("ObtenerSintomasCombo: " + ex.Message)
+        End Try
+
+        Return result
     End Function
 
     Public Function GuardarSintomas() As Boolean
-        Dim consu As New DBSintomas()
         Dim result As Boolean
         Try
             result = consu.SetSintoma(Me._nombre)
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("GuardarSintomas: " + ex.Message)
         End Try
         Return result
     End Function
 
     Public Function ModificarSintoma() As Boolean
-        Dim consu As New DBSintomas()
-        Return consu.ModifSintomas(Me._nombre, Me._id)
+        Dim result As Boolean
+        Try
+            result = consu.ModifSintomas(Me._nombre, Me._id)
+        Catch ex As Exception
+            Throw New SystemException("ModificarSint: " + ex.Message)
+        End Try
+        Return result
     End Function
 
     Public Function BorrarSintoma() As Boolean
-        Dim consu As New DBSintomas()
         Dim result As Boolean
         Try
             result = consu.BorrarSintoma(Me._nombre)
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("BorrarSintomas: " + ex.Message)
         End Try
         Return result
     End Function
 
     Public Sub Limpiar(ci)
-        Dim cons As New DBSintomas
-        cons.LimpiarSeleccion(ci)
+        consu.LimpiarSeleccion(ci)
     End Sub
 
 End Class

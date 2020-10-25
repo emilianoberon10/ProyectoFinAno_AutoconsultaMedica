@@ -8,10 +8,16 @@ Public Class Login
         confirmarLogin = New DBLogin()
     End Sub
 
-    Public Function confirmarLog(ci As String, pass As String)
-        If confirmarLogin.LoginPaciente(ci, pass) = True Then Return "Paciente" Else
-        If confirmarLogin.LoginGerente(ci, pass) = True Then Return "Gerente" Else
-        If confirmarLogin.LoginMedico(ci, pass) = True Then Return "Medico" Else
+    Public Function confirmarLog(ci As String, pass As String) As String
+        Dim res As String = ""
+        Try
+            If confirmarLogin.LoginPaciente(ci, pass) = True Then res = "Paciente"
+            If confirmarLogin.LoginGerente(ci, pass) = True Then res = "Gerente"
+            If confirmarLogin.LoginMedico(ci, pass) = True Then res = "Medico"
+        Catch ex As Exception
+            Throw New SystemException("Login: " + ex.Message)
+        End Try
+        Return res
     End Function
 
 End Class

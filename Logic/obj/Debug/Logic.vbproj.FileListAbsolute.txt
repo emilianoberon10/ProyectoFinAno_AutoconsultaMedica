@@ -120,3 +120,16 @@ C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\K4os
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\System.Memory.dll
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\Logic.dll.config
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\netstandard.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\DataAccess.dll.config
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\Google.Protobuf.pdb
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\Google.Protobuf.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\Renci.SshNet.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\System.Memory.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\System.Buffers.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Logic\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

@@ -648,7 +648,7 @@ Partial Class FrmModificarGerente
         Me.cbRiesgo.HoverState.BorderColor = System.Drawing.Color.Cyan
         Me.cbRiesgo.HoverState.Parent = Me.cbRiesgo
         Me.cbRiesgo.ItemHeight = 30
-        Me.cbRiesgo.Items.AddRange(New Object() {"Azul", "verde", "amarillo", "naranja", "Rojo"})
+        Me.cbRiesgo.Items.AddRange(New Object() {"Azul", "Verde", "Amarillo", "Naranja", "Rojo"})
         Me.cbRiesgo.ItemsAppearance.Parent = Me.cbRiesgo
         Me.cbRiesgo.Location = New System.Drawing.Point(419, 32)
         Me.cbRiesgo.Name = "cbRiesgo"

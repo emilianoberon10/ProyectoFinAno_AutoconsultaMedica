@@ -60,7 +60,7 @@ idriesgo INT(1) PRIMARY KEY,
 riesgo VARCHAR(10)
 );
 
-CREATE TABLE sINTOma(
+CREATE TABLE sintoma(
     id INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
     nombre VARCHAR(30) NOT NULL UNIQUE KEY
 );
@@ -216,11 +216,11 @@ INSERT INTO medico VALUES
 	('52525252',0712,4,'08:15 a 14:00','','9:00 a 16:00','11:00 a 17:30','','','','Clinica Central',SHA2('medico5', 256));
     
 -- riesgo --
-INSERT INTO riesgo VALUES (1,'rojo');
-INSERT INTO riesgo VALUES (2,'naranja');
-INSERT INTO riesgo VALUES (3,'amarillo');
-INSERT INTO riesgo VALUES (4,'verde');
-INSERT INTO riesgo VALUES (5,'azul');
+INSERT INTO riesgo VALUES (1,'Rojo');
+INSERT INTO riesgo VALUES (2,'Naranja');
+INSERT INTO riesgo VALUES (3,'Amarillo');
+INSERT INTO riesgo VALUES (4,'Verde');
+INSERT INTO riesgo VALUES (5,'Azul');
 -- ------------------------------------------ sINTOmas, enfermedades y define  --------------------------------------------------------------- --
 INSERT INTO enfermedad VALUES(NULL,"covid","2","tos seca");
 INSERT INTO enfermedad VALUES(NULL,"gripe","5","enfermedad infecciosa aguda de las vías respiratorias");
@@ -229,24 +229,21 @@ INSERT INTO enfermedad VALUES(NULL,"alergia","5","puede ser producida por hongos
 INSERT INTO enfermedad VALUES(NULL,"dengue","1","producido por la picadura de un mosquito");
 INSERT INTO enfermedad VALUES(NULL,"leucemia","1","La leucemia es una enfermedad de la sangre en la que la médula ósea produce glóbulos blancos anómalos");
 
-INSERT INTO sINTOma VALUES(NULL,"resfrio");
-INSERT INTO sINTOma VALUES(NULL,"tos");
-INSERT INTO sINTOma VALUES(NULL,"fiebre");
-INSERT INTO sINTOma VALUES(NULL,"flemas");
-
-INSERT INTO sINTOma VALUES(NULL,"estornudos");
-INSERT INTO sINTOma VALUES(NULL,"lagrimeo");
-INSERT INTO sINTOma VALUES(NULL,"picor en los ojos");
-
-INSERT INTO sINTOma VALUES(NULL,"fiebre alta");
-INSERT INTO sINTOma VALUES(NULL,"sangrado en encias");
-INSERT INTO sINTOma VALUES(NULL,"dolor muscular");
-INSERT INTO sINTOma VALUES(NULL,"debilidad general");
-
-INSERT INTO sINTOma VALUES(NULL,"cansancio");
-INSERT INTO sINTOma VALUES(NULL,"perdida de apetito");
-INSERT INTO sINTOma VALUES(NULL,"perdidad de peso");
-INSERT INTO sINTOma VALUES(NULL,"sudores nocturnos");
+INSERT INTO sintoma VALUES(NULL,"resfrio");
+INSERT INTO sintoma VALUES(NULL,"tos");
+INSERT INTO sintoma VALUES(NULL,"fiebre");
+INSERT INTO sintoma VALUES(NULL,"flemas");
+INSERT INTO sintoma VALUES(NULL,"estornudos");
+INSERT INTO sintoma VALUES(NULL,"lagrimeo");
+INSERT INTO sintoma VALUES(NULL,"picor en los ojos");
+INSERT INTO sintoma VALUES(NULL,"fiebre alta");
+INSERT INTO sintoma VALUES(NULL,"sangrado en encias");
+INSERT INTO sintoma VALUES(NULL,"dolor muscular");
+INSERT INTO sintoma VALUES(NULL,"debilidad general");
+INSERT INTO sintoma VALUES(NULL,"cansancio");
+INSERT INTO sintoma VALUES(NULL,"perdida de apetito");
+INSERT INTO sintoma VALUES(NULL,"perdidad de peso");
+INSERT INTO sintoma VALUES(NULL,"sudores nocturnos");
 -- define --
 INSERT INTO define VALUES("covid",2);
 INSERT INTO define VALUES("covid",1);

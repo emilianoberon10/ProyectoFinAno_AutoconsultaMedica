@@ -57,21 +57,25 @@ Public Class DBPaciente
             Using _command = New MySqlCommand
                 _command.Connection = _connection
 
-                _command.CommandText = "SELECT * FROM paciente WHERE EXISTS (SELECT ciP FROM paciente WHERE ciP=@ci"
+                _command.CommandText = "SELECT * FROM paciente WHERE EXISTS (SELECT ciP FROM paciente WHERE ciP=@ci)"
                 _command.Parameters.AddWithValue("@ci", ci)
                 _command.CommandType = CommandType.Text
                 Dim reader As MySqlDataReader = _command.ExecuteReader
 
                 If reader.HasRows Then
                     reader.Dispose()
-                    Return True
-                Else
-                    reader.Dispose()
-
+                    _command.CommandText = "DELETE FROM fichamedica WHERE cedP=@ci;"
+                    _command.ExecuteNonQuery()
+                    _command.CommandText = "DELETE FROM diagnostico WHERE idP=@ci;"
+                    _command.ExecuteNonQuery()
+                    _command.CommandText = "DELETE FROM chat WHERE ciPac=@ci;"
+                    _command.ExecuteNonQuery()
                     _command.CommandText = "DELETE FROM paciente WHERE ciP=@ci;"
                     _command.ExecuteNonQuery()
                     _command.CommandText = "DELETE FROM persona WHERE ci=@ci;"
                     _command.ExecuteNonQuery()
+                    Return True
+                Else
                     Return False
                 End If
 

@@ -10,17 +10,17 @@ Imports Logic
         Dim actual As Boolean
 
         With paciente
-            ._ci = "53498906"
-            ._contraseña = "micontraseña"
+            ._ci = "53498403"
+            ._contraseña = "pacientecontraseña"
             ._domicilio = "Emilio Ranha 2351"
-            ._edad = 13
-            ._mail = "mat.vargas2002@gmail.com"
-            ._pNom = "Mateoasdddddddddddddddddddddddddddddddddklnaslngkksdfngknaksdfngnadfgnnsangpnsadgpsndgpnaspgnpasdngpnsdfpgnapdfngpangpngnoijnhóihngoihjaogiionhoidfhngnandfgkndaflgnkfdognsdngpna´{dpfgnpafdgmn"
+            ._edad = 19
+            ._mail = "beron10@gmail.com"
+            ._pNom = "Emiliano"
             ._sNom = ""
-            ._pApe = "Vargas"
-            ._sApe = "Girino"
-            ._sexo = "Mujer"
-            ._tel_cel = "25072542"
+            ._pApe = "Berón"
+            ._sApe = "Martinel"
+            ._sexo = "Hombre"
+            ._tel_cel = "25223455"
             .EncriptarContraseña()
         End With
 
@@ -29,10 +29,44 @@ Imports Logic
         Assert.AreEqual(actual, esperado)
 
     End Sub
+    <TestMethod()> Public Sub TestBorrarPaciente()
+        Dim paciente As New Logic.Paciente
+        Dim esperado As Boolean = True
+        Dim actual As Boolean
 
+        With paciente
+            ._ci = "88888888"
+        End With
+
+        actual = paciente.Borrar
+
+        Assert.AreEqual(actual, esperado)
+
+    End Sub
+    <TestMethod()> Public Sub TestModificarPersona()
+        Dim paciente As New Logic.Paciente
+        Dim esperado As Boolean = True
+        Dim actual As Boolean
+
+        With paciente
+            ._ci = "22222222"
+            ._domicilio = "Emilio Ranha 2351"
+            ._edad = 28
+            ._pNom = "Mateoasdddddd"
+            ._sNom = ""
+            ._pApe = "Vargas"
+            ._sApe = "Girino"
+            ._tel_cel = 25072542
+        End With
+
+        actual = paciente.ModificarP
+
+        Assert.AreEqual(actual, esperado)
+
+    End Sub
     <TestMethod()> Public Sub TestCambiarContraseña()
         Dim paciente As New Logic.Paciente
-        Dim esperado As Boolean = False
+        Dim esperado As Boolean = True
         Dim actual As Boolean
 
         With paciente
@@ -45,49 +79,20 @@ Imports Logic
         Assert.AreEqual(actual, esperado)
 
     End Sub
-
-    <TestMethod()> Public Sub TestConsulta()
+    <TestMethod()> Public Sub TestComprobarPassPaciente()
         Dim paciente As New Logic.Paciente
-        Dim esperado As Boolean = True
+        Dim esperado As Boolean = False
         Dim actual As Boolean
 
-        Dim _sintomas As New ArrayList
-        _sintomas.Add("tos")
-        _sintomas.Add("fiebre")
-
         With paciente
-            ._ci = "55555555"
-            ._pNom = .ObtenerNombre
-            .Selcciona(_sintomas)
+            ._ci = "22222222"
+            ._contraseña = "micontraseña"
+            .EncriptarContraseña()
         End With
 
-        Dim enfermedad As String
-        enfermedad = "Gripe"
-        paciente._diagnostico = enfermedad
-        paciente.GuardarDiagnostico()
-
-        enfermedad = "Covid"
-        paciente._diagnostico = enfermedad
-        actual = paciente.GuardarDiagnostico()
+        actual = paciente.ComprobarContraseña
 
         Assert.AreEqual(actual, esperado)
 
     End Sub
-
-    <TestMethod()> Public Sub TestSolicita()
-        Dim paciente As New Logic.Paciente
-        Dim esperado As Boolean = True
-        Dim actual As Boolean
-
-        With paciente
-            ._ci = "55555555"
-            ._pNom = .ObtenerNombre
-        End With
-
-        actual = paciente.Solicita
-
-        Assert.AreEqual(actual, esperado)
-
-    End Sub
-
 End Class

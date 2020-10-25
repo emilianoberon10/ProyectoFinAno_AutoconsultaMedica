@@ -98,7 +98,8 @@
     </Compile>
     <Compile Include="TestMedico.vb" />
     <Compile Include="TestEnfermedadSintoma.vb" />
-    <Compile Include="UnitTest1.vb" />
+    <Compile Include="TestCorreo.vb" />
+    <Compile Include="TestDiagnostico.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -109,6 +110,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

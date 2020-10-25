@@ -186,34 +186,31 @@ Public Class DBMedicos : Inherits ConexionBD
 
     'Borrar un medico
     Public Function BorarMedico(ciMedico As String) As Boolean
-        Try
-            Using _connection = GetConnection()
-                _connection.Open()
-                Using _command = New MySqlCommand()
-                    _command.Connection = _connection
-                    _command.CommandText = "SELECT * FROM medico WHERE EXISTS (SELECT ciM FROM medico WHERE ciM=@ci)"
-                    _command.Parameters.AddWithValue("@ci", ciMedico)
-                    _command.CommandType = CommandType.Text
-                    Dim reader = _command.ExecuteReader()
-                    If reader.HasRows Then
-                        reader.Dispose()
 
-                        _command.CommandText = "DELETE FROM chat WHERE idMEd=@ci;DELETE FROM medico WHERE ciM=@ci;"
-                        _command.ExecuteNonQuery()
-                        _command.CommandText = "DELETE FROM persona WHERE ci=@ci;"
-                        _command.ExecuteNonQuery()
+        Using _connection = GetConnection()
+            _connection.Open()
+            Using _command = New MySqlCommand()
+                _command.Connection = _connection
+                _command.CommandText = "SELECT * FROM medico WHERE EXISTS (SELECT ciM FROM medico WHERE ciM=@ci)"
+                _command.Parameters.AddWithValue("@ci", ciMedico)
+                _command.CommandType = CommandType.Text
+                Dim reader = _command.ExecuteReader()
 
-                        Return True
-                    Else
-                        Return False
-                    End If
-                End Using
+                If reader.HasRows Then
+                    reader.Dispose()
+
+                    _command.CommandText = "DELETE FROM chat WHERE idMEd=@ci;DELETE FROM medico WHERE ciM=@ci;"
+                    _command.ExecuteNonQuery()
+                    _command.CommandText = "DELETE FROM persona WHERE ci=@ci;"
+                    _command.ExecuteNonQuery()
+
+                    Return True
+                Else
+                    Return False
+                End If
             End Using
-        Catch ex As Exception
-            Throw New SystemException("ERROR:(BorrarMedico):" & ex.Message)
+        End Using
 
-            Return Nothing
-        End Try
     End Function
 
     'modificar un medico

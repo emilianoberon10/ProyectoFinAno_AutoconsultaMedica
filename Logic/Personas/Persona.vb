@@ -71,7 +71,7 @@ Public MustInherit Class Persona
                         Try
                             estado = c.UpdatePersona(._ci, ._pNom, ._sNom, ._pApe, ._sApe, ._edad, ._tel_cel, ._domicilio)
                         Catch ex As Exception
-                            Throw New SystemException(ex.Message)
+                            Throw New SystemException("ModificarP: " + ex.Message)
                         End Try
                     End If
                 End If
@@ -81,7 +81,13 @@ Public MustInherit Class Persona
     End Function
     Public Overridable Function ListarPersona() As DataTable
         Dim c As New DBPersona
-        Return c.GetPersonas(Me._ci)
+        Dim res As DataTable
+        Try
+            res = c.GetPersonas(Me._ci)
+        Catch ex As Exception
+            Throw New SystemException("ListarPersona: " + ex.Message)
+        End Try
+        Return res
     End Function
 
     Public Overridable Function ObtenerNombre() As String

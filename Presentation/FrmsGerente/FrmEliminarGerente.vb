@@ -16,8 +16,8 @@ Public Class FrmEliminarGerente
                         If borrar.BorrarSintoma() Then General.GetForm(Estado.Ok, "Eliminado con exito") Else General.GetForm(Estado.Error, "No se pudo eliminar o ya no existe")
                         dgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
                     Case "Enfermedades"
-                        Dim borrar As New Enfermedad
-                        If borrar.BorrarEnfermedad(txtFiltro.Text) Then General.GetForm(Estado.Ok, "Eliminado con exito") Else General.GetForm(Estado.Error, "No se pudo eliminar o ya no existe")
+                        Dim borrar As New Enfermedad(txtFiltro.Text)
+                        If borrar.BorrarEnfermedad() Then General.GetForm(Estado.Ok, "Eliminado con exito") Else General.GetForm(Estado.Error, "No se pudo eliminar o ya no existe")
                         dgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
                     Case "Medicos"
                         Dim borrar As New Medico(txtFiltro.Text)

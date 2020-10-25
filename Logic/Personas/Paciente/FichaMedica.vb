@@ -23,13 +23,24 @@ Public Class FichaMedica : Inherits Paciente
 
     Public Overrides Function GuardarFicha() As Boolean
         Dim cons As New DBPaciente
-        Return cons.SetFichaMedica(Me._ci, Me._procedencia, Me._ocupacion,
-                                   Me._medicacion, Me._motivoConsulta, Me._antecedentes)
+        Dim res As Boolean = False
+        Try
+            res = cons.SetFichaMedica(Me._ci, Me._procedencia, Me._ocupacion, Me._medicacion, Me._motivoConsulta, Me._antecedentes)
+        Catch ex As Exception
+            Throw New SystemException("GuardarFicha: " + ex.Message)
+        End Try
+        Return res
     End Function
 
     Public Overrides Function GetFicha() As DataTable
         Dim cons As New DBPaciente
-        Return cons.GetFichaMedica(Me._ci)
+        Dim res As DataTable
+        Try
+            res = cons.GetFichaMedica(Me._ci)
+        Catch ex As Exception
+            Throw New SystemException("GetFicha: " + ex.Message)
+        End Try
+        Return Res
     End Function
 
 End Class

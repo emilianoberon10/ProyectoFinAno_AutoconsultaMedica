@@ -23,43 +23,60 @@ Public Class Gerente
 #Region "metodos"
 
     Public Overrides Function ObtenerNombre() As String
+        Dim res As String = ""
         Try
-            Return cons.ObtenerNombre(Me._ci)
+            res = cons.ObtenerNombre(Me._ci)
 
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("ObtenerNombre" + ex.Message)
         End Try
+        Return res
     End Function
 
     Public Overrides Function ListarPersona() As DataTable
+        Dim res As DataTable
         Try
-            Return MyBase.ListarPersona()
+            res = MyBase.ListarPersona()
 
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("ListarPersona" + ex.Message)
         End Try
+        Return res
     End Function
 
     Public Overrides Function ModificarContraseña() As Boolean
+        Dim res As Boolean = False
         Try
-            Return cons.ModificarContraseña(Me._ci, Me._contraseña)
+            res = cons.ModificarContraseña(Me._ci, Me._contraseña)
 
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("ModificarContraseña" + ex.Message)
         End Try
+        Return res
     End Function
 
     Public Overrides Function ModificarP() As Boolean
+        Dim res As Boolean = False
         Try
-            Return MyBase.ModificarP()
+            res = MyBase.ModificarP()
 
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("ModificarP" + ex.Message)
         End Try
+        Return res
+    End Function
+    Public Overrides Function ComprobarContraseña() As Boolean
+        Dim res As Boolean = False
+        Try
+            res = cons.ComprobarContraseña(Me._contraseña)
+        Catch ex As Exception
+            Throw New SystemException("ComprobarContraseña" + ex.Message)
+        End Try
+        Return res
     End Function
 
     Public Overrides Sub EncriptarContraseña()
-        Dim sha256 As SHA256 = sha256.Create()
+        Dim sha256 As SHA256 = SHA256.Create()
         Dim bytes As Byte() = Encoding.UTF8.GetBytes(Me._contraseña)
         Dim hash As Byte() = sha256.ComputeHash(bytes)
         Dim stringBuilder As New StringBuilder()
@@ -71,58 +88,67 @@ Public Class Gerente
         Me._contraseña = stringBuilder.ToString()
     End Sub
     Public Function NomEmasDiag() As ArrayList
+        Dim res As ArrayList
         Try
 
-            Return cons.NomEnfMasDiag()
+            res = cons.NomEnfMasDiag()
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("NomEmasDiag" + ex.Message)
         End Try
+        Return res
     End Function
     Public Function CantEnfMasDiag() As ArrayList
+        Dim res As ArrayList
         Try
-            Return cons.CantEnfMasDiag()
+            res = cons.CantEnfMasDiag()
 
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("CantEnfMasDiag" + ex.Message)
         End Try
+        Return res
     End Function
 
     Public Function NomSintMasSelec() As ArrayList
+        Dim res As ArrayList
         Try
-            Return cons.NomSintMasSelec()
+            res = cons.NomSintMasSelec()
 
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("NomSintMasSelec" + ex.Message)
         End Try
+        Return res
     End Function
     Public Function CantSintMasSelec() As ArrayList
+        Dim res As ArrayList
         Try
 
-            Return cons.CantSintMasSelec()
+            res = cons.CantSintMasSelec()
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("CantSintMasSelec" + ex.Message)
         End Try
+        Return res
     End Function
     Public Function MesesChats() As ArrayList
+        Dim res As ArrayList
         Try
-            Return cons.MesesChat()
+            res = cons.MesesChat()
 
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("MesesChats" + ex.Message)
         End Try
+        Return res
     End Function
     Public Function cantChatMes() As ArrayList
+        Dim res As ArrayList
         Try
-            Return cons.cantChatMeses()
+            res = cons.cantChatMeses()
 
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("cantChatMes" + ex.Message)
         End Try
+        Return res
     End Function
 
-    Public Overrides Function ComprobarContraseña() As Boolean
-        Return cons.ComprobarContraseña(Me._contraseña)
-    End Function
 #End Region
 
 End Class

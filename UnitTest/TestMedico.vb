@@ -52,5 +52,37 @@ Imports Logic
 
         Assert.AreEqual(actual, esperado)
     End Sub
+    <TestMethod()> Public Sub TestBorrarMedico()
+        Dim medico As New Logic.Medico
+        Dim esperado As Boolean = True
+        Dim actual As Boolean
+
+        With medico
+            ._ci = "53393343"
+        End With
+        actual = medico.Borrar
+        Assert.AreEqual(actual, esperado)
+    End Sub
+    <TestMethod()> Public Sub TestModificarMedico()
+        Dim medico As New Logic.Medico
+        Dim esperado As Boolean = True
+        Dim actual As Boolean
+
+        With medico
+            ._ci = "53499903"
+            ._especialidad = "Cardiologo"
+            ._lugarTrabajo = "Medica Española"
+            ._tel_cel = "26224587"
+            ._domicilio = "Cno.Carrasco 2671"
+            ._sexo = "Mujer"
+            ._pNom = "Sandra"
+            ._sNom = ""
+            ._pApe = "Buloc"
+            ._sApe = "Martinez"
+            ._edad = "30"
+        End With
+        actual = medico.Modificar
+        Assert.AreEqual(actual, esperado)
+    End Sub
 
 End Class

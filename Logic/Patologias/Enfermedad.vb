@@ -4,10 +4,11 @@ Public Class Enfermedad
     Property _nombre As String
     Property _riesgo As String
     Property _descripcion As String
+    Dim consu As New DBEnfermedades()
 
     Public Sub New()
     End Sub
-    Public Sub New(nom)
+    Public Sub New(nom As String)
         _nombre = nom
     End Sub
     Public Sub New(nombre As String, riesgo As String, descripcion As String)
@@ -17,17 +18,26 @@ Public Class Enfermedad
     End Sub
 
     Public Function ObtenerEnfermedades() As DataTable
-        Dim consu As New DBEnfermedades()
-        Return consu.ObtenerEnfermedades()
+        Dim result As DataTable
+        Try
+            result = consu.ObtenerEnfermedades()
+        Catch ex As Exception
+            Throw New SystemException("GetEnfermedades: " + ex.Message)
+        End Try
+        Return result
     End Function
     Public Function ObtenerSintomasEnfermedades() As ArrayList
-        Dim consu As New DBEnfermedades()
-        Return consu.ObtenerSintomasEnfermedad(Me._nombre)
+        Dim result As ArrayList
+        Try
+            result = consu.ObtenerSintomasEnfermedad(Me._nombre)
+        Catch ex As Exception
+            Throw New SystemException("GetSintomasEnfermedad: " + ex.Message)
+        End Try
+        Return result
     End Function
 
     Public Function GuardarEnfermedad() As Boolean
         Dim result As Boolean = False
-        Dim consu As New DBEnfermedades()
         Try
             If Me._nombre.Length <= 30 Then
                 If Me._descripcion.Length <= 255 Then
@@ -39,14 +49,13 @@ Public Class Enfermedad
                 MsgBox("El nombre debe contener 30 caracteres o menos")
             End If
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("GuardarEnf: " + ex.Message)
         End Try
         Return result
     End Function
 
     Public Function ModificarEnfermedad() As Boolean
         Dim result As Boolean = False
-        Dim consu As New DBEnfermedades()
         Try
             If Me._nombre.Length <= 30 Then
                 If Me._descripcion.Length <= 255 Then
@@ -59,19 +68,18 @@ Public Class Enfermedad
                 MsgBox("El nombre debe contener 30 caracteres o menos")
             End If
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("ModificarEnfermedad: " + ex.Message)
         End Try
         Return result
     End Function
 
-    Public Function BorrarEnfermedad(dato As String) As Boolean
-        Dim consu As New DBEnfermedades()
+    Public Function BorrarEnfermedad() As Boolean
         Dim result As Boolean
         Try
-            result = consu.BorrarEnfermedad(dato)
+            result = consu.BorrarEnfermedad(Me._nombre)
 
         Catch ex As Exception
-            Throw New SystemException(ex.Message)
+            Throw New SystemException("BorrarEnf: " + ex.Message)
         End Try
         Return result
     End Function
@@ -80,11 +88,11 @@ Public Class Enfermedad
         Select Case Me._riesgo
             Case "Azul"
                 Me._riesgo = 5
-            Case "verde"
+            Case "Verde"
                 Me._riesgo = 4
-            Case "amarillo"
+            Case "Amarillo"
                 Me._riesgo = 3
-            Case "naranja"
+            Case "Naranja"
                 Me._riesgo = 2
             Case "Rojo"
                 Me._riesgo = 1

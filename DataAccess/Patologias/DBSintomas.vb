@@ -104,35 +104,33 @@ Public Class DBSintomas
 
     'Borrar sintomas
     Public Function BorrarSintoma(nombreSintoma As String) As Boolean
-        Try
-            Using _connection = GetConnection()
-                _connection.Open()
-                Using _command = New MySqlCommand()
-                    _command.Connection = _connection
-                    _consultaSQL = "SELECT * FROM sintoma WHERE EXISTS (SELECT nombre FROM sintoma WHERE nombre=@nombre)"
-                    _command.CommandText = _consultaSQL
-                    _command.Parameters.AddWithValue("@nombre", nombreSintoma)
-                    _command.CommandType = CommandType.Text
-                    Dim reader = _command.ExecuteReader()
-                    If reader.HasRows Then
-                        reader.Dispose()
-                        _command.CommandText = "DELETE FROM selec WHERE nomSint=@nombre;"
-                        _command.ExecuteNonQuery()
-                        _command.CommandText = "DELETE FROM define WHERE nomSint=@nombre;"
-                        _command.ExecuteNonQuery()
-                        _command.CommandText = "DELETE FROM sintoma WHERE nombre=@nombre;"
-                        _command.ExecuteNonQuery()
 
-                        Return True
-                    Else
-                        Return False
-                    End If
-                End Using
+        Using _connection = GetConnection()
+            _connection.Open()
+            Using _command = New MySqlCommand()
+                _command.Connection = _connection
+                _consultaSQL = "SELECT * FROM sintoma WHERE EXISTS (SELECT nombre FROM sintoma WHERE nombre=@nombre)"
+                _command.CommandText = _consultaSQL
+                _command.Parameters.AddWithValue("@nombre", nombreSintoma)
+                _command.CommandType = CommandType.Text
+                Dim reader = _command.ExecuteReader()
+
+                If reader.HasRows Then
+                    reader.Dispose()
+                    _command.CommandText = "SET @idSint=(SELECT id FROM sintoma WHERE nombre=@nombre);"
+                    _command.CommandText &= "DELETE FROM selec WHERE idSint=@idSint;
+                                                DELETE FROM define WHERE idSint=@idSint;"
+                    _command.ExecuteNonQuery()
+                    _command.CommandText = "DELETE FROM sintoma WHERE nombre=@nombre;"
+                    _command.ExecuteNonQuery()
+
+                    Return True
+                Else
+                    Return False
+                End If
             End Using
-        Catch ex As Exception
-            MsgBox("ERROR(DBSintoma,line98):" & ex.Message)
-            Return Nothing
-        End Try
+        End Using
+
     End Function
 
     Public Sub LimpiarSeleccion(ci)

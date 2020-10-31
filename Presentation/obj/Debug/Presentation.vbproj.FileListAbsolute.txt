@@ -208,4 +208,3 @@ C:\Users\GaaraXz\Source\Repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Deb
 C:\Users\GaaraXz\Source\Repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\GaaraXz\Source\Repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\GaaraXz\Source\Repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\GaaraXz\Source\Repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Debug\Presentation.FrmGerenteCargarBDExcel.resources

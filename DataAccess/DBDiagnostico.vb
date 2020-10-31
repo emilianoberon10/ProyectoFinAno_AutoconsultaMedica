@@ -51,7 +51,7 @@ Public Class DBDiagnostico
                               LEFT JOIN persona ON idMed=ci
                               LEFT JOIN enfermedad e ON nomE=e.nombre
                               WHERE idP='" & ci & "'
-                              GROUP BY idDiag,'Medico que lo atendio',Diag,descripcion,d.fecha;")
+                              GROUP BY idDiag,'Medico que lo atendio',nomE,descripcion,d.fecha;")
     End Function
 
     Public Function VerDiagnosticoFecha(ci As String, fecha As String) As DataTable
@@ -60,7 +60,7 @@ Public Class DBDiagnostico
                               LEFT JOIN persona ON idMed=ci
                               LEFT JOIN enfermedad e ON nomE=e.nombre 
                               WHERE idP='" & ci & "' AND d.fecha='" & fecha & "'
-                              GROUP BY idDiag,'Medico que lo atendio',Diag,descripcion,d.fecha;")
+                              GROUP BY idDiag,'Medico que lo atendio',nomE,descripcion,d.fecha;")
     End Function
 
     Public Function VerDiagnosticoEntreFecha(ci As String, fecha As String, fecha2 As String) As DataTable
@@ -69,7 +69,7 @@ Public Class DBDiagnostico
                               LEFT JOIN persona ON idMed=ci
                               LEFT JOIN enfermedad e ON nomE=e.nombre
                               WHERE idP='" & ci & "' AND d.fecha between '" & fecha & "' AND '" & fecha2 & "'
-                              GROUP BY idDiag,'Medico que lo atendio',Diag,descripcion,d.fecha;")
+                              GROUP BY idDiag,'Medico que lo atendio',nomE,descripcion,d.fecha;")
     End Function
 
 End Class

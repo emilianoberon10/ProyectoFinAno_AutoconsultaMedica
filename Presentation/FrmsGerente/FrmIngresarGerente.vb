@@ -1,4 +1,5 @@
-﻿Imports Logic
+﻿Imports System.IO
+Imports Logic
 
 Public Class FrmIngresarGerente
 
@@ -177,4 +178,40 @@ Public Class FrmIngresarGerente
         txtDescripcion.MaxLength = 255
     End Sub
 
+    Private Sub llbCargarExcel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbCargarExcel.LinkClicked
+        'OpenFileDialog1.Title = "Open CSV File"
+        'OpenFileDialog1.Filter = "CSV Files (L*.csv)|*.csv"
+
+        'If OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+
+        '    If File.Exists(OpenFileDialog1.FileName) Then
+
+        '        Dim afile As FileIO.TextFieldParser = New FileIO.TextFieldParser(OpenFileDialog1.FileName)
+        '        Dim CurrentRecord As String() ' this array will hold each line of data
+        '        'Tell the parser we are using delimited text file
+        '        afile.TextFieldType = FileIO.FieldType.Delimited
+        '        'Tell Parser how we will delimit
+        '        afile.Delimiters = New String() {","}
+        '        'For this example field will be enclosed in quotes i.e. "MyEntry","MyEntry2"
+        '        afile.HasFieldsEnclosedInQuotes = True
+
+        '        Do Until afile.EndOfData
+        '            Try
+        '                CurrentRecord = afile.ReadFields
+        '                'Now we have our line in an array CurrentRecord 
+        '                'Do what we wish with it
+        '                MsgBox(CurrentRecord.ToString)
+
+        '            Catch ex As FileIO.MalformedLineException
+        '                MsgBox("Malformed Text")
+        '                Exit Do
+        '            End Try
+
+        '        Loop
+
+        '    Else
+        '        MsgBox("File does not exist")
+        '    End If
+        'End If
+    End Sub
 End Class

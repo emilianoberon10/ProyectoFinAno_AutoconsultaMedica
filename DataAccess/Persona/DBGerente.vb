@@ -172,7 +172,7 @@ Public Class DBGerente : Inherits ConexionBD
             Using _command = New MySqlCommand
                 _command.Connection = _connection
 
-                _command.CommandText = "SELECT * FROM paciente WHERE EXISTS (SELECT contrasena FROM paciente WHERE contrasena=@pass);"
+                _command.CommandText = "SELECT * FROM gerente WHERE EXISTS (SELECT contrasena FROM gerente WHERE contrasena=@pass);"
                 _command.Parameters.AddWithValue("@pass", contraseña)
                 _command.CommandType = CommandType.Text
                 Dim reader As MySqlDataReader = _command.ExecuteReader

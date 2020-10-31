@@ -59,6 +59,8 @@ Partial Class FrmIngresarGerente
         Me.chb2 = New System.Windows.Forms.CheckBox()
         Me.chb1 = New System.Windows.Forms.CheckBox()
         Me.cbRiesgo = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.llbCargarExcel = New System.Windows.Forms.LinkLabel()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         CType(Me.ErrorProviderNomSint, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProviderNomDesEnf, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProviderSintEnf, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,8 +105,8 @@ Partial Class FrmIngresarGerente
         Me.lbNomEnf.AutoSize = True
         Me.lbNomEnf.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbNomEnf.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.ErrorProviderNomDesEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
         Me.ErrorProviderNomSint.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopLeft)
+        Me.ErrorProviderNomDesEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
         Me.ErrorProviderSintEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
         Me.lbNomEnf.Location = New System.Drawing.Point(97, 206)
         Me.lbNomEnf.Name = "lbNomEnf"
@@ -683,12 +685,33 @@ Partial Class FrmIngresarGerente
         Me.cbRiesgo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.cbRiesgo.TabIndex = 49
         '
+        'llbCargarExcel
+        '
+        Me.llbCargarExcel.AutoSize = True
+        Me.llbCargarExcel.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.llbCargarExcel.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.llbCargarExcel.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline
+        Me.llbCargarExcel.LinkColor = System.Drawing.Color.WhiteSmoke
+        Me.llbCargarExcel.Location = New System.Drawing.Point(671, 49)
+        Me.llbCargarExcel.Name = "llbCargarExcel"
+        Me.llbCargarExcel.Size = New System.Drawing.Size(119, 19)
+        Me.llbCargarExcel.TabIndex = 58
+        Me.llbCargarExcel.TabStop = True
+        Me.llbCargarExcel.Text = "Cargar desde CSV"
+        Me.llbCargarExcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.llbCargarExcel.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'FrmIngresarGerente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(802, 683)
+        Me.Controls.Add(Me.llbCargarExcel)
         Me.Controls.Add(Me.Guna2Separator1)
         Me.Controls.Add(Me.btn_ingresar2)
         Me.Controls.Add(Me.btn_ingresar)
@@ -757,4 +780,6 @@ Partial Class FrmIngresarGerente
     Friend WithEvents cbRiesgo As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents comboSintoma9 As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents llbCargarExcel As LinkLabel
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

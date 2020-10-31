@@ -161,7 +161,7 @@ Public Class DBPaciente
                 Try
                     _command.Connection = _connection
                     _command.CommandText = "SET @diagnostico = (SELECT nombre
-					                                            FROM Riesgo R,enfermedad E
+					                                            FROM riesgo R,enfermedad E
 					                                            WHERE E.riesgo=idRiesgo
 					                                            AND nombre =(SELECT nomE
 					                                            			FROM diagnostico

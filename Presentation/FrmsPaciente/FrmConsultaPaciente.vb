@@ -88,7 +88,11 @@ Public Class FrmConsultaPaciente
     Private Sub btnChat_Click(sender As Object, e As EventArgs) Handles btn_chat.Click
         FrmLogIn.paci.Solicita()
         Dim formwelcome As New FrmEsperaChat()
-        formwelcome.ShowDialog()
+        formwelcome.Show()
+        AddHandler formwelcome.FormClosed, AddressOf Me.CierreSoliChat
+    End Sub
+    Private Sub CierreSoliChat(sender As Object, e As FormClosedEventArgs)
+        Me.Refresh()
     End Sub
 
 #Region "Activar sintomas"

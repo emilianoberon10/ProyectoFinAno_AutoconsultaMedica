@@ -6,16 +6,16 @@ USE `mateo_vargas`;
 
 CREATE TABLE persona (
     ci CHAR(8) NOT NULL PRIMARY KEY,
-    Tel_cel VARCHAR(9) NOT NULL,
-    Edad INT(3) NOT NULL,
-    Domicilio TEXT,
-    Sexo VARCHAR(10) NOT NULL,
-    pNom VARCHAR(30) NOT NULL,
-    sNom VARCHAR(30),
-    pApe VARCHAR(30) NOT NULL,
-    sApe VARCHAR(30) NOT NULL,
-    CONSTRAINT chk_Sexo CHECK (Sexo = 'Hombre' OR Sexo = 'Mujer'
-        OR Sexo = 'Otro')
+    tel_cel VARCHAR(9) NOT NULL,
+    edad INT(3) NOT NULL,
+    domicilio TEXT,
+    sexo VARCHAR(10) NOT NULL,
+    pnom VARCHAR(30) NOT NULL,
+    snom VARCHAR(30),
+    pape VARCHAR(30) NOT NULL,
+    sape VARCHAR(30) NOT NULL,
+    CONSTRAINT chk_sexo CHECK (sexo = 'Hombre' OR sexo = 'Mujer'
+        OR sexo = 'Otro')
 );
 
 CREATE TABLE paciente(
@@ -109,31 +109,13 @@ CREATE TABLE selec(
     idPac CHAR(8) NOT NULL,
     CONSTRAINT pk_clav PRIMARY KEY (dia, hora, idPac),
     CONSTRAINT fk_idPac FOREIGN KEY(idPac) REFERENCES paciente(ciP),
-    CONSTRAINT fk_idSint FOREIGN KEY(idSint) REFERENCES sINTOma(id)
+    CONSTRAINT fk_idSint FOREIGN KEY(idSint) REFERENCES sintoma(id)
 );
-/*
-CREATE TABLE gestiona(
-    tipo VARCHAR(10) NOT NULL,
-    cigerente CHAR(8) NOT NULL,
-    nomEnf VARCHAR(30),
-    nomSint VARCHAR(30),
-    fecha DATE NOT NULL,
-    hora TIME NOT NULL,
-    CONSTRAINT fk_nEn FOREIGN KEY(nomEnf) REFERENCES enfermedad(nombre),
-    CONSTRAINT fk_cG FOREIGN KEY(cigerente) REFERENCES gerente(ciG),
-    CONSTRAINT fk_SINTOm FOREIGN KEY(nomSint) REFERENCES sINTOma(nombre),
-    CONSTRAINT CHK_Tipo CHECK (
-        tipo = 'Alta'
-        OR tipo = 'Baja'
-        OR tipo = 'Modificacion'
-    )
-);
-*/
 CREATE TABLE define(
     nomEnf VARCHAR(30) NOT NULL,
     idSint INT(4) NOT NULL,
     CONSTRAINT fk_nomEnf FOREIGN KEY(nomEnf) REFERENCES enfermedad(nombre),
-    CONSTRAINT fk_sint FOREIGN KEY(idSint) REFERENCES sINTOma(id)
+    CONSTRAINT fk_sint FOREIGN KEY(idSint) REFERENCES sintoma(id)
 );
 
 CREATE TABLE chat(
@@ -178,21 +160,21 @@ CREATE TABLE solicita(
 
 -- INSERTs -------------------------------------------------------------------------------
 -- PERSONAS: --
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('11111111',22344568,49,'Av.Libertad','Hombre','Marco','','Aurelio','De Partabas');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('22222222',22344567,28,'Av.Libertad','Mujer','Romina','','Almiron','Rodriguez');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('33333333',12345678,19,'Av.Bolivia 2446','Hombre','Martin','Marulo','Rodriguez','De Biscasua');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('44444444',096714278,32,'Gral. Flores 2345','Mujer','Roberta','','Garcia','Domginguez');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('55555555',11223366,89,'Av.Libertad 5421','Mujer','Agustina','','Mirella','Gutierrez');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('66666666',94229964,18,'Ramallo 3194','Hombre','Mateo','Matias','Beron','Alegoa');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('77777777',88888888,105,'Av.Libertad','Mujer','Mirtha','','Legrand','Suarez');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)VALUES('88888888',25072542,65,'Av.Italia 6544','Hombre','Roberto','','Diaz','Garcia');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)	VALUES('53393343',22344565,49,'Av.Libertad','Hombre','Marco','','Aurelio','De Partabas');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)	VALUES('26314278',22344563,49,'Av.Libertad','mujer','Marcela','','Aurelia','De Ruedas');
-INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe)	VALUES('52525252',22344233,49,'Av.Libertad','hombre','Ave','Maria','Roberta','Garcia');
--- ------------------------------------------ Gerentes, Medicos y Pacientes --------------------------------------------------------------- --
--- Gerentes: --
-INSERT INTO Gerente(ciG, contrasena) VALUES('11111111', SHA2('contraseña1', 256));
-INSERT INTO Gerente(ciG, contrasena) VALUES('33333333', SHA2('contraseña2', 256));
+INSERT INTO persona(ci,tel_cel,edad,domicilio,sexo,pnom,snom,pape,sape)VALUES('11111111',22344568,49,'Av.Libertad','Hombre','Marco','','Aurelio','De Partabas');
+INSERT INTO persona(ci,tel_cel,edad,domicilio,sexo,pnom,snom,pape,sape)VALUES('22222222',22344567,28,'Av.Libertad','Mujer','Romina','','Almiron','Rodriguez');
+INSERT INTO persona(ci,tel_cel,edad,domicilio,sexo,pnom,snom,pape,sape)VALUES('33333333',12345678,19,'Av.Bolivia 2446','Hombre','Martin','Marulo','Rodriguez','De Biscasua');
+INSERT INTO persona(ci,tel_cel,edad,domicilio,sexo,pnom,snom,pape,sape)VALUES('44444444',096714278,32,'Gral. Flores 2345','Mujer','Roberta','','Garcia','Domginguez');
+INSERT INTO persona(ci,tel_cel,edad,domicilio,sexo,pnom,snom,pape,sape)VALUES('55555555',11223366,89,'Av.Libertad 5421','Mujer','Agustina','','Mirella','Gutierrez');
+INSERT INTO persona(ci,tel_cel,edad,domicilio,sexo,pnom,snom,pape,sape)VALUES('66666666',94229964,18,'Ramallo 3194','Hombre','Mateo','Matias','Beron','Alegoa');
+INSERT INTO persona(ci,tel_cel,edad,domicilio,sexo,pnom,snom,pape,sape)VALUES('77777777',88888888,105,'Av.Libertad','Mujer','Mirtha','','Legrand','Suarez');
+INSERT INTO persona(ci,tel_cel,edad,domicilio,sexo,pnom,snom,pape,sape)VALUES('88888888',25072542,65,'Av.Italia 6544','Hombre','Roberto','','Diaz','Garcia');
+INSERT INTO persona(ci,tel_cel,edad,domicilio,sexo,pnom,snom,pape,sape)	VALUES('53393343',22344565,49,'Av.Libertad','Hombre','Marco','','Aurelio','De Partabas');
+INSERT INTO persona(ci,tel_cel,edad,domicilio,sexo,pnom,snom,pape,sape)	VALUES('26314278',22344563,49,'Av.Libertad','mujer','Marcela','','Aurelia','De Ruedas');
+INSERT INTO persona(ci,tel_cel,edad,domicilio,sexo,pnom,snom,pape,sape)	VALUES('52525252',22344233,49,'Av.Libertad','hombre','Ave','Maria','Roberta','Garcia');
+-- ------------------------------------------ gerentes, Medicos y Pacientes --------------------------------------------------------------- --
+-- gerentes: --
+INSERT INTO gerente(ciG, contrasena) VALUES('11111111', SHA2('contraseña1', 256));
+INSERT INTO gerente(ciG, contrasena) VALUES('33333333', SHA2('contraseña2', 256));
 -- Pacientes: --
 INSERT INTO paciente(ciP,contrasena,mail) VALUES('22222222',SHA2('paciente1', 256),'elpacientenumero1@mail.com');
 INSERT INTO paciente(ciP,contrasena,mail) VALUES('44444444',SHA2('paciente2', 256),'elpacientenumero2@mail.com');
@@ -221,7 +203,7 @@ INSERT INTO riesgo VALUES (2,'Naranja');
 INSERT INTO riesgo VALUES (3,'Amarillo');
 INSERT INTO riesgo VALUES (4,'Verde');
 INSERT INTO riesgo VALUES (5,'Azul');
--- ------------------------------------------ sINTOmas, enfermedades y define  --------------------------------------------------------------- --
+-- ------------------------------------------ sintomas, enfermedades y define  --------------------------------------------------------------- --
 INSERT INTO enfermedad VALUES(NULL,"covid","2","tos seca");
 INSERT INTO enfermedad VALUES(NULL,"gripe","5","enfermedad infecciosa aguda de las vías respiratorias");
 
@@ -263,7 +245,7 @@ INSERT INTO define VALUES("leucemia",12);
 INSERT INTO define VALUES("leucemia",13);
 INSERT INTO define VALUES("leucemia",14);
 INSERT INTO define VALUES("leucemia",15);
--- paciente selecciona sINTOmas--
+-- paciente selecciona sintomas--
 INSERT INTO selec VALUES (CURDATE(),CURTIME(),1,22222222);
 INSERT INTO selec VALUES (CURDATE(),CURTIME()+1,9,22222222);
 INSERT INTO selec VALUES (CURDATE(),CURTIME()+2,10,22222222);
@@ -318,9 +300,9 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE PROCEDURE `sINTOmaMasSeleccionado`()
+CREATE PROCEDURE `sintomaMasSeleccionado`()
 BEGIN
-SELECT nombre  AS SINTOma ,COUNT(idSint) AS cant FROM sINTOma
+SELECT nombre  AS sintoma ,COUNT(idSint) AS cant FROM sintoma
 JOIN selec ON idSint=id
 GROUP BY nombre 
 ORDER BY COUNT(nombre) 

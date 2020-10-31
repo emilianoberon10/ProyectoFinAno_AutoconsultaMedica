@@ -29,60 +29,68 @@
 
         If (txtEdad.Text IsNot "" And txtPnom.Text IsNot "" And txtPape.Text IsNot "" And txtSape.Text IsNot "") Then
             If Integer.Parse(txtEdad.Text) <= 120 AndAlso Integer.Parse(txtEdad.Text) >= 10 Then
+                If Integer.Parse(txtTel.Text) > 7 And Integer.Parse(txtTel.Text) <= 9 Then
 
-                Select Case FrmLogIn.tipoLogin
+                    Select Case FrmLogIn.tipoLogin
 
-                    Case "Paciente"
-                        Try
-                            With FrmLogIn.paci
-                                ._pNom = txtPnom.Text
-                                ._pApe = txtPape.Text
-                                ._sNom = txtSnom.Text
-                                ._sApe = txtSape.Text
-                                ._edad = Integer.Parse(txtEdad.Text)
-                                result = .ModificarP()
-                            End With
-                        Catch ex As Exception
-                            GetForm(Estado.Error, ex.Message)
-                            ErrorProvider1.SetError(lbActuDatos, ex.Message)
-                        End Try
-                    Case "Gerente"
-                        Try
-                            With FrmLogIn.gere
-                                ._pNom = txtPnom.Text
-                                ._pApe = txtPape.Text
-                                ._sNom = txtSnom.Text
-                                ._sApe = txtSape.Text
-                                ._edad = Integer.Parse(txtEdad.Text)
-                                result = .ModificarP()
-                            End With
+                        Case "Paciente"
+                            Try
+                                With FrmLogIn.paci
+                                    ._pNom = txtPnom.Text
+                                    ._pApe = txtPape.Text
+                                    ._sNom = txtSnom.Text
+                                    ._sApe = txtSape.Text
+                                    ._edad = Integer.Parse(txtEdad.Text)
+                                    ._tel_cel = Integer.Parse(txtTel.Text)
+                                    result = .ModificarP()
+                                End With
+                            Catch ex As Exception
+                                GetForm(Estado.Error, ex.Message)
+                                ErrorProvider1.SetError(lbActuDatos, ex.Message)
+                            End Try
+                        Case "Gerente"
+                            Try
+                                With FrmLogIn.gere
+                                    ._pNom = txtPnom.Text
+                                    ._pApe = txtPape.Text
+                                    ._sNom = txtSnom.Text
+                                    ._sApe = txtSape.Text
+                                    ._tel_cel = Integer.Parse(txtTel.Text)
+                                    ._edad = Integer.Parse(txtEdad.Text)
+                                    result = .ModificarP()
+                                End With
 
-                        Catch ex As Exception
-                            GetForm(Estado.Error, ex.Message)
-                            ErrorProvider1.SetError(lbActuDatos, ex.Message)
-                        End Try
-                    Case "Medico"
-                        Try
-                            With FrmLogIn.medic
-                                ._pNom = txtPnom.Text
-                                ._pApe = txtPape.Text
-                                ._sNom = txtSnom.Text
-                                ._sApe = txtSape.Text
-                                ._edad = Integer.Parse(txtEdad.Text)
-                                result = .ModificarP()
-                            End With
-                        Catch ex As Exception
-                            GetForm(Estado.Error, ex.Message)
-                            ErrorProvider1.SetError(lbActuDatos, ex.Message)
-                        End Try
-                End Select
+                            Catch ex As Exception
+                                GetForm(Estado.Error, ex.Message)
+                                ErrorProvider1.SetError(lbActuDatos, ex.Message)
+                            End Try
+                        Case "Medico"
+                            Try
+                                With FrmLogIn.medic
+                                    ._pNom = txtPnom.Text
+                                    ._pApe = txtPape.Text
+                                    ._sNom = txtSnom.Text
+                                    ._sApe = txtSape.Text
+                                    ._edad = Integer.Parse(txtEdad.Text)
+                                    ._tel_cel = Integer.Parse(txtTel.Text)
+                                    result = .ModificarP()
+                                End With
+                            Catch ex As Exception
+                                GetForm(Estado.Error, ex.Message)
+                                ErrorProvider1.SetError(lbActuDatos, ex.Message)
+                            End Try
+                    End Select
 
-                If result = True Then
-                    GetForm(Estado.Ok, "Se modifico correctamente")
-                    MsgBox("Si modifico su nombre o foto de perfil, por favor reinicie sesion")
+                    If result = True Then
+                        GetForm(Estado.Ok, "Se modifico correctamente")
+                        MsgBox("Si modifico su nombre o foto de perfil, por favor reinicie sesion")
+                    Else
+                        GetForm(Estado.Error, "No se pudo modificar")
+
+                    End If
                 Else
-                    GetForm(Estado.Error, "No se pudo modificar")
-                    ErrorProvider1.SetError(lbActuDatos, "No se pudo modificar")
+                    GetForm(Estado.Error, "Verifique que el numero de telefono tenga 8 o 9 digitos")
+                    ErrorProvider1.SetError(lbActuDatos, "Verifique que el numero de telefono tenga 8 o 9 digitos")
                 End If
             Else
                 GetForm(Estado.Error, "Verifique que la edad sea menor o igual a 120 o mayor a 10")

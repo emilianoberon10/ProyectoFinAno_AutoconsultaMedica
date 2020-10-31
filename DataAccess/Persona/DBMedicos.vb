@@ -175,8 +175,8 @@ Public Class DBMedicos : Inherits ConexionBD
     Public Function ObtenerMedicos() As DataTable
         Dim _consultaSQL As String
 
-        _consultaSQL = "SELECT ciM Cedula,pNom PrimerNombre,sNom SegundoNombre,pApe PrimerApellido,sApe SegundoApellido,edad,
-                                lugarTrabajo as 'Lugar de Trabajo',nombre Especialidad,Tel_cel as 'Telefono',Domicilio,sexo,Lun Lunes,
+        _consultaSQL = "SELECT ciM Cedula,pnom PrimerNombre,snom SegundoNombre,pape PrimerApellido,sape SegundoApellido,edad,
+                                lugarTrabajo as 'Lugar de Trabajo',nombre Especialidad,tel_cel as 'Telefono',Domicilio,sexo,Lun Lunes,
                                 Mar Martes, Mie Miercoles, Jue Jueves, Vie Viernes, Sab Sabado,Dom Domingo
                         FROM medico M
                         JOIN especialidad E ON id=idEspecialidad
@@ -221,7 +221,7 @@ Public Class DBMedicos : Inherits ConexionBD
                 _connection.Open()
                 Using _command = New MySqlCommand()
                     _command.Connection = _connection
-                    _command.CommandText = "UPDATE persona SET pnom=@pNom, sNom=@sNom, pApe=@pApe, sApe=@sApe, edad=@edad,                                                  Tel_cel=@tel ,domicilio=@domi,sexo=@sexo WHERE ci=@ci;              
+                    _command.CommandText = "UPDATE persona SET pnom=@pNom, snom=@sNom, pape=@pApe, sape=@sApe, edad=@edad,                                                  tel_cel=@tel ,domicilio=@domi,sexo=@sexo WHERE ci=@ci;              
                                             SET @idEsp=(SELECT id FROM especialidad WHERE nombre=@especialidad);
                                             UPDATE medico SET idEspecialidad=@idEsp WHERE ciM=@ci;"
                     _command.Parameters.AddWithValue("@ci", ciMedico)
@@ -360,7 +360,7 @@ Public Class DBMedicos : Inherits ConexionBD
             Using _command = New MySqlCommand
                 _command.Connection = _connection
 
-                _command.CommandText = "SELECT * FROM paciente WHERE EXISTS (SELECT contrasena FROM paciente WHERE contrasena=@pass);"
+                _command.CommandText = "SELECT * FROM medico WHERE EXISTS (SELECT contrasena FROM medico WHERE contrasena=@pass);"
                 _command.Parameters.AddWithValue("@pass", contraseña)
                 _command.CommandType = CommandType.Text
                 Dim reader As MySqlDataReader = _command.ExecuteReader

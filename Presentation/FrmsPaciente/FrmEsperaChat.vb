@@ -47,6 +47,7 @@
          MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
             If FrmLogIn.paci.CancelarSolicitud() Then
                 MessageBox.Show("Cancelado con exito", "Solicitud Cancelada", MessageBoxButtons.OK, MessageBoxIcon.None)
+                Me.Close()
             End If
         End If
     End Sub

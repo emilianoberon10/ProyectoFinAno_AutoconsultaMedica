@@ -9,6 +9,13 @@ Public Class FrmModificarGerente
         Traductor.traducirPanel(PanelModifMedico)
         Traductor.traducirPanel(Panel1)
         cargarCombos()
+        txtHoraEntradaLunes.Enabled = False
+        txtHoraEntradaMartes.Enabled = False
+        txtHoraEntradaMiercoles.Enabled = False
+        txtHoraEntradaJueves.Enabled = False
+        txtHoraEntradaViernes.Enabled = False
+        txtHoraEntradaSabado.Enabled = False
+        txtHoraEntradaDomingo.Enabled = False
     End Sub
     Private Sub cargarCombos()
         CargarComboBoxSintomas(cbSintoma1)
@@ -300,32 +307,66 @@ Public Class FrmModificarGerente
 
 #Region "check horarios"
 
-    Private Sub chkLun_CheckedChanged(sender As Object, e As EventArgs)
-        txtHoraEntradaLunes.Enabled = True
+    Private Sub chkLun_CheckedChanged(sender As Object, e As EventArgs) Handles chkLun.CheckedChanged
+        If chkLun.Checked Then
+            txtHoraEntradaLunes.Enabled = True
+        Else
+            txtHoraEntradaLunes.Enabled = False
+        End If
+
     End Sub
 
-    Private Sub chkMar_CheckedChanged(sender As Object, e As EventArgs)
-        txtHoraEntradaMartes.Enabled = True
+    Private Sub chkMar_CheckedChanged(sender As Object, e As EventArgs) Handles chkMar.CheckedChanged
+        If chkMar.Checked Then
+            txtHoraEntradaMartes.Enabled = True
+        Else
+            txtHoraEntradaMartes.Enabled = False
+        End If
+
     End Sub
 
-    Private Sub chkMier_CheckedChanged(sender As Object, e As EventArgs)
-        txtHoraEntradaMiercoles.Enabled = True
+    Private Sub chkMier_CheckedChanged(sender As Object, e As EventArgs) Handles chkMier.CheckedChanged
+        If chkMier.Checked Then
+            txtHoraEntradaMiercoles.Enabled = True
+        Else
+            txtHoraEntradaMiercoles.Enabled = False
+        End If
     End Sub
 
-    Private Sub chkJuev_CheckedChanged(sender As Object, e As EventArgs)
-        txtHoraEntradaJueves.Enabled = True
+    Private Sub chkJuev_CheckedChanged(sender As Object, e As EventArgs) Handles chkJuev.CheckedChanged
+
+        If chkJuev.Checked Then
+            txtHoraEntradaJueves.Enabled = True
+        Else
+            txtHoraEntradaJueves.Enabled = False
+        End If
     End Sub
 
-    Private Sub chkVier_CheckedChanged(sender As Object, e As EventArgs)
-        txtHoraEntradaViernes.Enabled = True
+    Private Sub chkVier_CheckedChanged(sender As Object, e As EventArgs) Handles chkVier.CheckedChanged
+
+        If chkVier.Checked Then
+            txtHoraEntradaViernes.Enabled = True
+        Else
+            txtHoraEntradaViernes.Enabled = False
+        End If
     End Sub
 
-    Private Sub chkSab_CheckedChanged(sender As Object, e As EventArgs)
-        txtHoraEntradaSabado.Enabled = True
+    Private Sub chkSab_CheckedChanged(sender As Object, e As EventArgs) Handles chkSab.CheckedChanged
+
+        If chkSab.Checked Then
+            txtHoraEntradaSabado.Enabled = True
+        Else
+            txtHoraEntradaSabado.Enabled = False
+        End If
     End Sub
 
-    Private Sub chkDom_CheckedChanged(sender As Object, e As EventArgs)
-        txtHoraEntradaDomingo.Enabled = True
+    Private Sub chkDom_CheckedChanged(sender As Object, e As EventArgs) Handles chkDom.CheckedChanged
+
+        If chkDom.Checked Then
+            txtHoraEntradaDomingo.Enabled = True
+        Else
+            txtHoraEntradaDomingo.Enabled = False
+        End If
     End Sub
 
 #End Region

@@ -42,12 +42,13 @@ Public Class Define
         Return result
     End Function
 
-    Public Function ModifDefine() As Boolean
+    Public Function ModifDefine(sintViejos As Array) As Boolean
         Dim res As Boolean = False
         Try
             For Each e As String In Me._sintomas
                 'se va a guradar tantas veces como sitomas haya
-                res = cons.ModifDefine(Me._enfermedad, e)
+                res = cons.ModifDefine(Me._enfermedad, e, sintViejos)
+
             Next
         Catch ex As Exception
             Throw New SystemException("ModifDefine: " + ex.Message)

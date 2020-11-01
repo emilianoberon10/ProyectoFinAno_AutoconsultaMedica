@@ -107,6 +107,7 @@ Public Class FrmModificarGerente
                     txtNombreEnfermedad.Text = DgvDatos.Item(1, FilaActual).Value()
                     cbRiesgo.Text = DgvDatos.Item(2, FilaActual).Value()
                     txtDescripcion.Text = DgvDatos.Item(3, FilaActual).Value()
+
                     Dim sintomas As ArrayList = enf.ObtenerSintomasEnfermedades
                     Dim sints(8) As String
 
@@ -247,6 +248,9 @@ Public Class FrmModificarGerente
                     enfermedad.ComprobarRiesgo()
                     Dim define As Define
                     Dim sintomasComboBox As New ArrayList
+                    Dim sintomas As ArrayList = enfermedad.ObtenerSintomasEnfermedades
+                    Dim sints(sintomas.Count) As String
+
                     With sintomasComboBox 'agrego los sintomas de los comboBox a un array
                         If cbSintoma1.Enabled = True Then .Add(cbSintoma1.Text)
                         If cbSintoma2.Enabled = True Then .Add(cbSintoma2.Text)
@@ -259,11 +263,18 @@ Public Class FrmModificarGerente
                         If cbSintoma9.Enabled = True Then .Add(cbSintoma9.Text)
                     End With
 
+
+                    Dim i As Integer = 0
+                    For Each sint As String In sintomas
+                        sints(i) = sint
+                        i = i + 1
+                    Next
+
                     define = New Define(enfermedad._nombre, sintomasComboBox)
 
                     Try
                         If enfermedad.ModificarEnfermedad() Then
-                            If define.ModifDefine() Then
+                            If define.ModifDefine(sints) Then
                                 GetForm(Estado.Ok, "Enfermedad modificado con exito")
                                 cargarCombos()
                                 txtNombreEnfermedad.Text = ""

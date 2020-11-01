@@ -112,7 +112,6 @@ CREATE TABLE selec(
     CONSTRAINT fk_idSint FOREIGN KEY(idSint) REFERENCES sintoma(id)
 );
 CREATE TABLE define(
-	idDef INT(4) PRIMARY KEY AUTO_INCREMENT,
     nomEnf VARCHAR(30) NOT NULL,
     idSint INT(4) NOT NULL,
     CONSTRAINT fk_nomEnf FOREIGN KEY(nomEnf) REFERENCES enfermedad(nombre),

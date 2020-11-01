@@ -44,11 +44,8 @@ Public Class Define
 
     Public Function ModifDefine() As Boolean
         Dim res As Boolean = False
-        'Pasar los objetos a un arrayList para convertirlo en string
-        Dim sintomas As New ArrayList
-        sintomas.Add(Me._sintomas)
         Try
-            For Each e As String In sintomas
+            For Each e As String In Me._sintomas
                 'se va a guradar tantas veces como sitomas haya
                 res = cons.ModifDefine(Me._enfermedad, e)
             Next

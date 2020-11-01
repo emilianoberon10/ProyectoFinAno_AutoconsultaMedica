@@ -8,7 +8,7 @@ Public Class FrmEliminarGerente
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
         Try
-            If MessageBox.Show("Seguro que desa salir?", "Advertencia",
+            If MessageBox.Show("Seguro que desea eliminar," & txtFiltro.Text & "?", "Advertencia",
          MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                 Select Case cbFiltro.Text
                     Case "Sintomas"
@@ -49,8 +49,15 @@ Public Class FrmEliminarGerente
             'Obtén el número de la fila que se seleccionó en el Datagridview
             Dim FilaActual As Integer
             FilaActual = dgvDatos.CurrentRow.Index
-            'Mostrar en el cuadro de texto el valor de la columna seleccionada
-            txtFiltro.Text = dgvDatos.Rows(FilaActual).Cells(columna).Value
+            Select Case cbFiltro.Text
+                Case "Sintomas"
+                    txtFiltro.Text = dgvDatos.Rows(FilaActual).Cells(1).Value
+                Case "Enfermedades"
+                    txtFiltro.Text = dgvDatos.Rows(FilaActual).Cells(1).Value
+                Case "Medicos"
+                    txtFiltro.Text = dgvDatos.Rows(FilaActual).Cells(0).Value
+            End Select
+
         Catch ex As Exception
             MsgBox("ERROR::" & ex.Message)
         End Try

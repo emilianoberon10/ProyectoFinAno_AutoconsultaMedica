@@ -121,7 +121,7 @@ Public Class DBSintomas
                     _command.CommandText &= "DELETE FROM selec WHERE idSint=@idSint;
                                                 DELETE FROM define WHERE idSint=@idSint;"
                     _command.ExecuteNonQuery()
-                    _command.CommandText = "DELETE FROM sintoma WHERE nombre=@nombre;"
+                    _command.CommandText = "DELETE FROM sintoma WHERE nombre=@nombre OR id=@nombre;"
                     _command.ExecuteNonQuery()
 
                     Return True

@@ -10,12 +10,11 @@ Public Class FrmMedicoGerente
 	End Sub
 
 	Private Function ComprobarDatos() As Boolean
-		If txtCedula.Text = "" Or cbEsp.Text = "" Or txtLugarTrabajo.Text = "" Or
-		   txtPNom.Text = "" Or txtPApe.Text = "" Or txtSnom.Text = "" Or txtSape.Text = "" Or
-		   Integer.Parse(txtTelefono.Text) = 0 Or txtDomicilio.Text = "" Or cbSexo.Text = "" Or Integer.Parse(txtNumMed.Text) = 0 Then
-			Return True
-		Else
+		If (txtCedula.Text IsNot "" Or txtLugarTrabajo.Text IsNot "" Or txtPNom.Text IsNot "" Or txtPApe.Text IsNot "" Or txtSape.Text IsNot "" Or txtTelefono.Text IsNot "" Or txtDomicilio.Text IsNot "" Or cbSexo.Text IsNot "" Or
+		   txtNumMed.Text IsNot "") Then
 			Return False
+		Else
+			Return True
 		End If
 	End Function
 
@@ -23,75 +22,102 @@ Public Class FrmMedicoGerente
 
 		If ComprobarDatos() Then
 
-			ErrorProvider1.SetError(ingreMed, "Todos los campos son obligatorios")
+			ErrorProvider1.SetError(Persona_ci, "Todos los campos son obligatorios")
 			General.GetForm(Estado.Error, "Todos los campos son obligatorios")
 		Else
-			medico = New Medico()
-			With medico
-				._ci = txtCedula.Text
-				._contraseña = EncriptarContraseña(txtCedula.Text)
-				._edad = Integer.Parse(txtEdad.Text)
-				._sexo = cbSexo.Text
-				._pNom = txtPNom.Text
-				._pApe = txtPApe.Text
-				._sNom = txtSnom.Text
-				._sApe = txtSape.Text
-				._domicilio = txtDomicilio.Text
-				._tel_cel = Integer.Parse(txtTelefono.Text)
-				._numMed = txtNumMed.Text
-				._especialidad = cbEsp.Text
-				._lugarTrabajo = txtLugarTrabajo.Text
-			End With
-			Try
-				If medico.Guardar() Then
-					General.GetForm(Estado.Error, "Ya existe un medico con esa cedula")
-				Else
+			If MessageBox.Show("Marco los checbox arriba de los horarios de trabajo?", "Advertencia",
+		 MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+				medico = New Medico()
+				With medico
+					._ci = txtCedula.Text
+					._contraseña = EncriptarContraseña(txtCedula.Text)
+					._edad = Integer.Parse(txtEdad.Text)
+					._sexo = cbSexo.Text
+					._pNom = txtPNom.Text
+					._pApe = txtPApe.Text
+					._sNom = txtSnom.Text
+					._sApe = txtSape.Text
+					._domicilio = txtDomicilio.Text
+					._tel_cel = Integer.Parse(txtTelefono.Text)
+					._numMed = txtNumMed.Text
+					._especialidad = cbEsp.Text
+					._lugarTrabajo = txtLugarTrabajo.Text
+				End With
+				Try
+					If medico.Guardar() Then
+						General.GetForm(Estado.Error, "Ya existe un medico con esa cedula")
+					Else
 
 #Region "comprobar y guardar horarios"
 
-					If chkLun.Checked AndAlso txtHoraEntradaLunes.Text IsNot "" Then
-						If txtHoraEntradaLunes.Text.Length <= 30 Then medico._horario = txtHoraEntradaLunes.Text And medico.SetHorario("lun")
-					End If
-					If chkMar.Checked AndAlso txtHoraEntradaMartes.Text IsNot "" Then
-						medico._horario = txtHoraEntradaMartes.Text And medico.SetHorario("mar")
-					End If
-					If chkMier.Checked AndAlso txtHoraEntradaMiercoles.Text IsNot "" Then
-						medico._horario = txtHoraEntradaMiercoles.Text And medico.SetHorario("mie")
-					End If
-					If chkJuev.Checked AndAlso txtHoraEntradaJueves.Text IsNot "" Then
-						medico._horario = txtHoraEntradaJueves.Text And medico.SetHorario("jue")
-					End If
-					If chkVier.Checked AndAlso txtHoraEntradaViernes.Text IsNot "" Then
-						medico._horario = txtHoraEntradaViernes.Text And medico.SetHorario("vie")
-					End If
-					If chkSab.Checked AndAlso txtHoraEntradaSabado.Text IsNot "" Then
-						medico._horario = txtHoraEntradaSabado.Text And medico.SetHorario("sab")
-					End If
-					If chkDom.Checked AndAlso txtHoraEntradaDomingo.Text IsNot "" Then
-						medico._horario = txtHoraEntradaDomingo.Text And medico.SetHorario("dom")
-					End If
+						If chkLun.Checked AndAlso txtHoraEntradaLunes.Text IsNot "" Then
+							If txtHoraEntradaLunes.Text.Length <= 30 Then
+								medico._horario = txtHoraEntradaLunes.Text
+								medico.SetHorario("lun")
+							End If
+						End If
+						If chkMar.Checked AndAlso txtHoraEntradaMartes.Text IsNot "" Then
+							medico._horario = txtHoraEntradaMartes.Text
+							medico.SetHorario("mar")
+						End If
+						If chkMier.Checked AndAlso txtHoraEntradaMiercoles.Text IsNot "" Then
+							medico._horario = txtHoraEntradaMiercoles.Text
+							medico.SetHorario("mie")
+						End If
+						If chkJuev.Checked AndAlso txtHoraEntradaJueves.Text IsNot "" Then
+							medico._horario = txtHoraEntradaJueves.Text
+							medico.SetHorario("jue")
+						End If
+						If chkVier.Checked AndAlso txtHoraEntradaViernes.Text IsNot "" Then
+							medico._horario = txtHoraEntradaViernes.Text
+							medico.SetHorario("vie")
+						End If
+						If chkSab.Checked AndAlso txtHoraEntradaSabado.Text IsNot "" Then
+							medico._horario = txtHoraEntradaSabado.Text
+							medico.SetHorario("sab")
+						End If
+						If chkDom.Checked AndAlso txtHoraEntradaDomingo.Text IsNot "" Then
+							medico._horario = txtHoraEntradaDomingo.Text
+							medico.SetHorario("dom")
+						End If
 
 #End Region
 
-					General.GetForm(Estado.Ok, "Se ingreso con exito")
-					txtCedula.Text = ""
-					cbEsp.Text = ""
-					txtLugarTrabajo.Text = ""
-					txtPNom.Text = ""
-					txtPApe.Text = ""
-					txtSnom.Text = ""
-					txtSape.Text = ""
-					txtTelefono.Text=""
-					txtDomicilio.Text = ""
-					cbSexo.Text = ""
-					txtNumMed.Text = ""
-				End If
-            Catch ex As Exception
-				ErrorProvider1.SetError(ingreMed, ex.Message)
-				General.GetForm(Estado.Error, ex.Message)
-			End Try
+						General.GetForm(Estado.Ok, "Se ingreso con exito")
+						txtCedula.Text = ""
+						cbEsp.Text = ""
+						txtLugarTrabajo.Text = ""
+						txtPNom.Text = ""
+						txtPApe.Text = ""
+						txtSnom.Text = ""
+						txtSape.Text = ""
+						txtTelefono.Text = ""
+						txtDomicilio.Text = ""
+						cbSexo.Text = ""
+						txtNumMed.Text = ""
+						txtHoraEntradaLunes.Text = ""
+						txtHoraEntradaMartes.Text = ""
+						txtHoraEntradaMiercoles.Text = ""
+						txtHoraEntradaJueves.Text = ""
+						txtHoraEntradaViernes.Text = ""
+						txtHoraEntradaSabado.Text = ""
+						txtHoraEntradaDomingo.Text = ""
+						chkLun.Checked = False
+						chkMar.Checked = False
+						chkMier.Checked = False
+						chkJuev.Checked = False
+						chkVier.Checked = False
+						chkSab.Checked = False
+						chkDom.Checked = False
+					End If
+				Catch ex As Exception
+					ErrorProvider1.SetError(ingreMed, ex.Message)
+					General.GetForm(Estado.Error, ex.Message)
+				End Try
 
+			End If
 		End If
+
 	End Sub
 
 #Region "check horarios"

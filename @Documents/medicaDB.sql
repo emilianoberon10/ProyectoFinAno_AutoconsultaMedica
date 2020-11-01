@@ -16,7 +16,7 @@ CREATE TABLE persona (
     sape VARCHAR(30) NOT NULL,
     CONSTRAINT chk_sexo CHECK (sexo = 'Hombre' OR sexo = 'Mujer'
         OR sexo = 'Otro')
-);
+); 
 
 CREATE TABLE paciente(
     ciP CHAR(8) NOT NULL,
@@ -112,6 +112,7 @@ CREATE TABLE selec(
     CONSTRAINT fk_idSint FOREIGN KEY(idSint) REFERENCES sintoma(id)
 );
 CREATE TABLE define(
+	idDef INT(4) PRIMARY KEY AUTO_INCREMENT,
     nomEnf VARCHAR(30) NOT NULL,
     idSint INT(4) NOT NULL,
     CONSTRAINT fk_nomEnf FOREIGN KEY(nomEnf) REFERENCES enfermedad(nombre),
@@ -227,24 +228,24 @@ INSERT INTO sintoma VALUES(NULL,"perdida de apetito");
 INSERT INTO sintoma VALUES(NULL,"perdidad de peso");
 INSERT INTO sintoma VALUES(NULL,"sudores nocturnos");
 -- define --
-INSERT INTO define VALUES("covid",2);
-INSERT INTO define VALUES("covid",1);
-INSERT INTO define VALUES("gripe",1);
-INSERT INTO define VALUES("gripe",2);
+INSERT INTO define(nomEnf,idSInt) VALUES("covid",2);
+INSERT INTO define(nomEnf,idSInt) VALUES("covid",1);
+INSERT INTO define(nomEnf,idSInt) VALUES("gripe",1);
+INSERT INTO define(nomEnf,idSInt) VALUES("gripe",2);
 
-INSERT INTO define VALUES("dengue",8);
-INSERT INTO define VALUES("dengue",9);
-INSERT INTO define VALUES("dengue",10);
-INSERT INTO define VALUES("dengue",11);
+INSERT INTO define(nomEnf,idSInt) VALUES("dengue",8);
+INSERT INTO define(nomEnf,idSInt) VALUES("dengue",9);
+INSERT INTO define(nomEnf,idSInt) VALUES("dengue",10);
+INSERT INTO define(nomEnf,idSInt) VALUES("dengue",11);
 
-INSERT INTO define VALUES("alergia",5);
-INSERT INTO define VALUES("alergia",6);
-INSERT INTO define VALUES("alergia",7);
+INSERT INTO define(nomEnf,idSInt) VALUES("alergia",5);
+INSERT INTO define(nomEnf,idSInt) VALUES("alergia",6);
+INSERT INTO define(nomEnf,idSInt) VALUES("alergia",7);
 
-INSERT INTO define VALUES("leucemia",12);
-INSERT INTO define VALUES("leucemia",13);
-INSERT INTO define VALUES("leucemia",14);
-INSERT INTO define VALUES("leucemia",15);
+INSERT INTO define(nomEnf,idSInt) VALUES("leucemia",12);
+INSERT INTO define(nomEnf,idSInt) VALUES("leucemia",13);
+INSERT INTO define(nomEnf,idSInt) VALUES("leucemia",14);
+INSERT INTO define(nomEnf,idSInt) VALUES("leucemia",15);
 -- paciente selecciona sintomas--
 INSERT INTO selec VALUES (CURDATE(),CURTIME(),1,22222222);
 INSERT INTO selec VALUES (CURDATE(),CURTIME()+1,9,22222222);

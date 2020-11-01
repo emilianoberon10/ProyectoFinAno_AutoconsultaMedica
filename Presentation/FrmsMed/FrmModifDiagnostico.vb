@@ -32,19 +32,16 @@ Public Class FrmModifDiagnostico
         FilaActual = dgvEnfermedades.CurrentRow.Index
         Dim diag As String
         Try
-            diag = dgvEnfermedades.Item(columna, FilaActual).Value
+            diag = dgvEnfermedades.Rows(FilaActual).Cells(1).Value
 
             If MessageBox.Show("Esta seguro de Modificar el diagnostico de " & diagAnterior & " por: " & diag & "", "Advertencia",
          MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
-
-
                 If FrmLogIn.medic.ModificarDiagnostico(ciPac, diag) Then
                     GetForm(Estado.Ok, "Se modifico correctamente")
                     frmChat.txtDiagnostico.Text = diag
                 Else
                     GetForm(Estado.Error, "No se pudo Modificar")
                 End If
-
             End If
         Catch ex As Exception
             MsgBox(ex.Message)

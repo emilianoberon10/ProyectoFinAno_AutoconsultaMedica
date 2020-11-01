@@ -1,4 +1,6 @@
-﻿Public Class SintomaDefineEnfermedad
+﻿Imports MySql.Data.MySqlClient
+
+Public Class SintomaDefineEnfermedad
     Inherits ConexionBD
 
     Public Function SetDefine(nombreEnfermedad As String, nombreSintoma As String) As Boolean
@@ -35,20 +37,26 @@
     End Function
 
     Public Function ModifDefine(nombreEnfermedad As String, nombreSintoma As String) As Boolean
-        Dim _consultaSQL As String
-        Try
-            _consultaSQL = "SET @idSint=(SELECT id FROM sintoma WHERE nombre='" & nombreSintoma & "');"
-            _consultaSQL &= "UPDATE enfermedad SET"
-            _consultaSQL &= "nomEnf = '" & nombreEnfermedad & "',"
-            _consultaSQL &= "idSint = @idSint"
-            _consultaSQL &= "where nomEnf='" & nombreEnfermedad & "';"
-
-            EjecutarConsulta(_consultaSQL)
-            Return True
-        Catch ex As Exception
-            MsgBox("ERROR::modifDefine" & ex.Message)
-            Return False
-        End Try
+        Using connection = GetConnection()
+            connection.Open()
+            Using command = New MySqlCommand()
+                command.Connection = connection
+                command.CommandText = "SET @idSint=(SELECT id FROM sintoma WHERE nombre=@sintoma);
+                                       SELECT * FROM define WHERE EXISTS (SELECT idSint FROM define WHERE idSint=@idSint AND nomEnf=@enfermedad);"
+                command.Parameters.AddWithValue("@sintoma", nombreSintoma)
+                command.Parameters.AddWithValue("@enfermedad", nombreEnfermedad)
+                command.CommandType = CommandType.Text
+                Dim reader = command.ExecuteReader()
+                If reader.HasRows Then
+                    reader.Dispose()
+                Else
+                    reader.Dispose()
+                    command.CommandText = "INSERT INTO define(nomEnf,idSint) VALUE(@enfermedad,@idSint);"
+                    command.ExecuteNonQuery()
+                End If
+            End Using
+        End Using
+        Return True
     End Function
 
 End Class

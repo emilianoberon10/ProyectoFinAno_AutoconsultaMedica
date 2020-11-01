@@ -71,6 +71,8 @@ Public Class Medico
 
                         Else
                             If ._lugarTrabajo.Length > 30 Then
+                                MsgBox("El campo Lugar de trabajo supera los 30 caracteres")
+                            Else
                                 Try
                                     estado = cons.SetMedico(Me._ci, Me._especialidad, Me._numMed, Me._lugarTrabajo, Me._contraseña,
                                                                 Me._tel_cel, Me._domicilio, Me._sexo, Me._pNom, Me._sNom, Me._pApe, Me._sApe, Me._edad)

@@ -72,7 +72,6 @@ Public Class FrmIngresarGerente
                 General.GetForm(Estado.Error, "Debe seleccionar al menos un sintoma")
             ElseIf sintomasComboBox.Count > 0 Then
 
-
                 enfermedad = New Enfermedad(enfermedadIngresar, riesgo, descripcion)
                 enfermedad.ComprobarRiesgo()
 
@@ -83,8 +82,21 @@ Public Class FrmIngresarGerente
                     If enfermedad.GuardarEnfermedad() Then
                         General.GetForm(Estado.Error, "Ya existe esa enfermedad")
                     Else
-                        define.GuardarDefine()
-                        General.GetForm(Estado.Ok, "Se guardo con exito")
+                        If define.GuardarDefine() Then
+                            General.GetForm(Estado.Ok, "Se guardo con exito")
+                            txtNombreEnfermedad.Text = ""
+                            txtDescripcion.Text = ""
+                            cbSintoma1.Enabled = False
+                            cbSintoma2.Enabled = False
+                            cbSintoma3.Enabled = False
+                            cbSintoma4.Enabled = False
+                            cbSintoma5.Enabled = False
+                            cbSintoma6.Enabled = False
+                            cbSintoma7.Enabled = False
+                            cbSintoma8.Enabled = False
+                        Else
+                            General.GetForm(Estado.Error, "No se pudo guardar")
+                        End If
                     End If
                 Catch ex As Exception
                     ErrorProviderNomDesEnf.SetError(lbNomEnf, ex.Message)

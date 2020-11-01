@@ -92,25 +92,26 @@ Public Class FrmModificarGerente
                     txtHoraEntradaSabado.Text = DgvDatos.Item(16, FilaActual).Value()
                     txtHoraEntradaDomingo.Text = DgvDatos.Item(17, FilaActual).Value()
 
-                    If txtHoraEntradaLunes.Text IsNot "" Then chb1.Checked = True Else
-                    If txtHoraEntradaMartes.Text IsNot "" Then chb1.Checked = True Else
-                    If txtHoraEntradaMiercoles.Text IsNot "" Then chb1.Checked = True
-                    If txtHoraEntradaJueves.Text IsNot "" Then chb1.Checked = True
-                    If txtHoraEntradaViernes.Text IsNot "" Then chb1.Checked = True
-                    If txtHoraEntradaSabado.Text IsNot "" Then chb1.Checked = True
-                    If txtHoraEntradaDomingo.Text IsNot "" Then chb1.Checked = True
+                    If txtHoraEntradaLunes.Text IsNot "" Then chkLun.Checked = True
+                    If txtHoraEntradaMartes.Text IsNot "" Then chkMar.Checked = True
+                    If txtHoraEntradaMiercoles.Text IsNot "" Then chkMier.Checked = True
+                    If txtHoraEntradaJueves.Text IsNot "" Then chkJuev.Checked = True
+                    If txtHoraEntradaViernes.Text IsNot "" Then chkVier.Checked = True
+                    If txtHoraEntradaSabado.Text IsNot "" Then chkSab.Checked = True
+                    If txtHoraEntradaDomingo.Text IsNot "" Then chkDom.Checked = True
 
                 Case "Enfermedades"
+
                     Dim enf As New Enfermedad(DgvDatos.Item(1, FilaActual).Value())
 
                     txtNombreEnfermedad.Text = DgvDatos.Item(1, FilaActual).Value()
                     cbRiesgo.Text = DgvDatos.Item(2, FilaActual).Value()
                     txtDescripcion.Text = DgvDatos.Item(3, FilaActual).Value()
-
+                    Dim sintomas As ArrayList = enf.ObtenerSintomasEnfermedades
                     Dim sints(8) As String
 
                     Dim i As Integer = 0
-                    For Each sint As String In enf.ObtenerSintomasEnfermedades
+                    For Each sint As String In sintomas
                         sints(i) = sint
                         i = i + 1
                     Next
@@ -128,7 +129,7 @@ Public Class FrmModificarGerente
             End Select
         Catch ex As Exception
             GetForm(Estado.Error, ex.Message)
-            ErrorProvider1.SetError(modificar, ex.Message)
+            ErrorProvider1.SetError(modifAclaracion, ex.Message)
         End Try
     End Sub
 
@@ -170,25 +171,34 @@ Public Class FrmModificarGerente
 #Region "comprobar y guardar horarios"
 
                             If chkLun.Checked AndAlso txtHoraEntradaLunes.Text IsNot "" Then
-                                If txtHoraEntradaLunes.Text.Length <= 30 Then medico._horario = txtHoraEntradaLunes.Text And medico.SetHorario("lun")
+                                If txtHoraEntradaLunes.Text.Length <= 30 Then
+                                    medico._horario = txtHoraEntradaLunes.Text
+                                    medico.SetHorario("lun")
+                                End If
                             End If
                             If chkMar.Checked AndAlso txtHoraEntradaMartes.Text IsNot "" Then
-                                medico._horario = txtHoraEntradaMartes.Text And medico.SetHorario("mar")
+                                medico._horario = txtHoraEntradaMartes.Text
+                                medico.SetHorario("mar")
                             End If
                             If chkMier.Checked AndAlso txtHoraEntradaMiercoles.Text IsNot "" Then
-                                medico._horario = txtHoraEntradaMiercoles.Text And medico.SetHorario("mie")
+                                medico._horario = txtHoraEntradaMiercoles.Text
+                                medico.SetHorario("mie")
                             End If
                             If chkJuev.Checked AndAlso txtHoraEntradaJueves.Text IsNot "" Then
-                                medico._horario = txtHoraEntradaJueves.Text And medico.SetHorario("jue")
+                                medico._horario = txtHoraEntradaJueves.Text
+                                medico.SetHorario("jue")
                             End If
                             If chkVier.Checked AndAlso txtHoraEntradaViernes.Text IsNot "" Then
-                                medico._horario = txtHoraEntradaViernes.Text And medico.SetHorario("vie")
+                                medico._horario = txtHoraEntradaViernes.Text
+                                medico.SetHorario("vie")
                             End If
                             If chkSab.Checked AndAlso txtHoraEntradaSabado.Text IsNot "" Then
-                                medico._horario = txtHoraEntradaSabado.Text And medico.SetHorario("sab")
+                                medico._horario = txtHoraEntradaSabado.Text
+                                medico.SetHorario("sab")
                             End If
                             If chkDom.Checked AndAlso txtHoraEntradaDomingo.Text IsNot "" Then
-                                medico._horario = txtHoraEntradaDomingo.Text And medico.SetHorario("dom")
+                                medico._horario = txtHoraEntradaDomingo.Text
+                                medico.SetHorario("dom")
                             End If
 
 #End Region
@@ -206,6 +216,20 @@ Public Class FrmModificarGerente
                             txtDomicilio.Text = ""
                             cbSexo.Text = ""
                             txtEdad.Text = ""
+                            txtHoraEntradaLunes.Text = ""
+                            txtHoraEntradaMartes.Text = ""
+                            txtHoraEntradaMiercoles.Text = ""
+                            txtHoraEntradaJueves.Text = ""
+                            txtHoraEntradaViernes.Text = ""
+                            txtHoraEntradaSabado.Text = ""
+                            txtHoraEntradaDomingo.Text = ""
+                            chkLun.CheckState = False
+                            chkMar.CheckState = False
+                            chkMier.CheckState = False
+                            chkJuev.CheckState = False
+                            chkVier.CheckState = False
+                            chkSab.CheckState = False
+                            chkDom.CheckState = False
                         Else
                             General.GetForm(Estado.Error, "No se pudo modificar")
                         End If
@@ -219,9 +243,9 @@ Public Class FrmModificarGerente
 
                 Case "Enfermedades"
 
-                    Dim Enfermedad As New Enfermedad(txtNombreEnfermedad.Text, cbRiesgo.Text, txtDescripcion.Text)
-                    Enfermedad.ComprobarRiesgo()
-
+                    Dim enfermedad As New Enfermedad(txtNombreEnfermedad.Text, cbRiesgo.Text, txtDescripcion.Text)
+                    enfermedad.ComprobarRiesgo()
+                    Dim define As Define
                     Dim sintomasComboBox As New ArrayList
                     With sintomasComboBox 'agrego los sintomas de los comboBox a un array
                         If cbSintoma1.Enabled = True Then .Add(cbSintoma1.Text)
@@ -235,14 +259,18 @@ Public Class FrmModificarGerente
                         If cbSintoma9.Enabled = True Then .Add(cbSintoma9.Text)
                     End With
 
+                    define = New Define(enfermedad._nombre, sintomasComboBox)
+
                     Try
-                        If Enfermedad.ModificarEnfermedad() Then
-                            GetForm(Estado.Ok, "Enfermedad modificado con exito")
-                            cargarCombos()
-                            txtNombreEnfermedad.Text = ""
-                            txtDescripcion.Text = ""
-                            cbRiesgo.Text = ""
-                            DgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
+                        If enfermedad.ModificarEnfermedad() Then
+                            If define.ModifDefine() Then
+                                GetForm(Estado.Ok, "Enfermedad modificado con exito")
+                                cargarCombos()
+                                txtNombreEnfermedad.Text = ""
+                                txtDescripcion.Text = ""
+                                cbRiesgo.Text = ""
+                                DgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
+                            End If
                         Else
                             GetForm(Estado.Error, "No se pudo modificar")
                         End If

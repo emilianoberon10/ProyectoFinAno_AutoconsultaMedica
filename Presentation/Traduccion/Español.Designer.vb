@@ -188,6 +188,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a CARGAR DESDE EXCEL.
+        '''</summary>
+        Friend Shared ReadOnly Property btn_cargarExcel() As String
+            Get
+                Return ResourceManager.GetString("btn_cargarExcel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a CERRAR.
         '''</summary>
         Friend Shared ReadOnly Property btn_cerrar() As String
@@ -738,6 +747,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property lbUsuario() As String
             Get
                 Return ResourceManager.GetString("lbUsuario", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Cargar desde CSV.
+        '''</summary>
+        Friend Shared ReadOnly Property llbCargarExcel() As String
+            Get
+                Return ResourceManager.GetString("llbCargarExcel", resourceCulture)
             End Get
         End Property
         

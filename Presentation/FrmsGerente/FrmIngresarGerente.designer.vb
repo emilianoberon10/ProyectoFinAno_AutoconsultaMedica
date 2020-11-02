@@ -95,7 +95,7 @@ Partial Class FrmIngresarGerente
         Me.sintoma.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.sintoma.Location = New System.Drawing.Point(1, 55)
         Me.sintoma.Name = "sintoma"
-        Me.sintoma.Size = New System.Drawing.Size(774, 30)
+        Me.sintoma.Size = New System.Drawing.Size(804, 30)
         Me.sintoma.TabIndex = 3
         Me.sintoma.Text = "Sintoma"
         Me.sintoma.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -105,8 +105,8 @@ Partial Class FrmIngresarGerente
         Me.lbNomEnf.AutoSize = True
         Me.lbNomEnf.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbNomEnf.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.ErrorProviderNomSint.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopLeft)
         Me.ErrorProviderNomDesEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
+        Me.ErrorProviderNomSint.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopLeft)
         Me.ErrorProviderSintEnf.SetIconAlignment(Me.lbNomEnf, System.Windows.Forms.ErrorIconAlignment.TopRight)
         Me.lbNomEnf.Location = New System.Drawing.Point(97, 206)
         Me.lbNomEnf.Name = "lbNomEnf"
@@ -692,7 +692,7 @@ Partial Class FrmIngresarGerente
         Me.llbCargarExcel.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.llbCargarExcel.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline
         Me.llbCargarExcel.LinkColor = System.Drawing.Color.WhiteSmoke
-        Me.llbCargarExcel.Location = New System.Drawing.Point(671, 49)
+        Me.llbCargarExcel.Location = New System.Drawing.Point(4, 36)
         Me.llbCargarExcel.Name = "llbCargarExcel"
         Me.llbCargarExcel.Size = New System.Drawing.Size(119, 19)
         Me.llbCargarExcel.TabIndex = 58

@@ -227,4 +227,8 @@ Public Class FrmMedicoGerente
 		txtDomicilio.MaxLength = 255
 	End Sub
 
+	Private Sub llbCargarExcel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbCargarExcel.LinkClicked
+		Dim frm As New FrmCargarDesdeExcel
+		frm.Show()
+	End Sub
 End Class

@@ -38,13 +38,13 @@ CREATE TABLE medico(
     ciM CHAR(8) NOT NULL PRIMARY KEY,
     numMed INT(4) UNIQUE KEY,
     idEspecialidad INT(4) NOT NULL ,
-    Lun CHAR(15),
-    Mar CHAR(15),
-    Mie CHAR(15),
-    Jue CHAR(15),
-    Vie CHAR(15),
-    Sab CHAR(15),
-    Dom CHAR(15),
+    lun CHAR(15),
+    mar CHAR(15),
+    mie CHAR(15),
+    jue CHAR(15),
+    vie CHAR(15),
+    sab CHAR(15),
+    dom CHAR(15),
     lugarTrabajo VARCHAR(30) NOT NULL,
     contrasena LONGTEXT NOT NULL ,
     CONSTRAINT fk_ciM FOREIGN KEY(ciM) REFERENCES persona(ci),
@@ -84,7 +84,7 @@ CREATE TABLE diagnostico(
     idDiag INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     idP CHAR(8) NOT NULL,
     nomE VARCHAR(30) NOT NULL,
-    Fecha DATE NOT NULL,
+    fecha DATE NOT NULL,
     CONSTRAINT fk_idP FOREIGN KEY(idP) REFERENCES paciente(ciP),
     CONSTRAINT fk_nomE FOREIGN KEY(nomE) REFERENCES enfermedad(nombre)
 );
@@ -92,7 +92,7 @@ CREATE TABLE diagnostico(
 CREATE TABLE fichaMedica(
 	id INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	cedP CHAR(8),
-    Fecha DATE NOT NULL,
+    fecha DATE NOT NULL,
     Procedencia VARCHAR(30) NOT NULL,
     idDiag INT(4) UNIQUE KEY,
     Ocup VARCHAR(30),
@@ -255,14 +255,14 @@ INSERT INTO selec VALUES (CURDATE(),CURTIME()+5,1,55555555);
 INSERT INTO selec VALUES (CURDATE(),CURTIME(),2,55555555);
 INSERT INTO selec VALUES (CURDATE(),CURTIME()+10,3,55555555);
 -- -------------------------- Diagnostico -------------------------- -- 
-INSERT INTO diagnostico(idDiag,idP,nomE,Fecha) VALUES(NULL,'22222222','covid',CURDATE());
-INSERT INTO diagnostico(idDiag,idP,nomE,Fecha) VALUES(NULL,'22222222','dengue',DATE_SUB(CURDATE(),INTERVAL '8' DAY));
-INSERT INTO diagnostico(idDiag,idP,nomE,Fecha) VALUES(NULL,'44444444','covid',CURDATE());
-INSERT INTO diagnostico(idDiag,idP,nomE,Fecha) VALUES(NULL,'55555555','gripe',CURDATE());
-INSERT INTO diagnostico(idDiag,idP,nomE,Fecha) VALUES(NULL,'55555555','covid',CURDATE());
-INSERT INTO diagnostico(idDiag,idP,nomE,Fecha) VALUES(NULL,'88888888','dengue',DATE_SUB(CURDATE(),INTERVAL '7' DAY));
+INSERT INTO diagnostico(idDiag,idP,nomE,fecha) VALUES(NULL,'22222222','covid',CURDATE());
+INSERT INTO diagnostico(idDiag,idP,nomE,fecha) VALUES(NULL,'22222222','dengue',DATE_SUB(CURDATE(),INTERVAL '8' DAY));
+INSERT INTO diagnostico(idDiag,idP,nomE,fecha) VALUES(NULL,'44444444','covid',CURDATE());
+INSERT INTO diagnostico(idDiag,idP,nomE,fecha) VALUES(NULL,'55555555','gripe',CURDATE());
+INSERT INTO diagnostico(idDiag,idP,nomE,fecha) VALUES(NULL,'55555555','covid',CURDATE());
+INSERT INTO diagnostico(idDiag,idP,nomE,fecha) VALUES(NULL,'88888888','dengue',DATE_SUB(CURDATE(),INTERVAL '7' DAY));
 -- Ficha medica --
-INSERT INTO fichaMedica(Fecha,procedencia,idDiag,id,cedP,Ocup,Medicacion,Motiv_Cons,antecedentesFamiliares) 
+INSERT INTO fichaMedica(fecha,procedencia,idDiag,id,cedP,Ocup,Medicacion,Motiv_Cons,antecedentesFamiliares) 
 VALUES (CURDATE(),'Uruguay',15,NULL,44444444,'Ingeniero en Sistemas','Antialergico','Por malestar','Diabetes'),
 (CURDATE(),'Uruguay',7,NULL,22222222,'En paro','','Por enfermedad',''),
 (CURDATE(),'Uruguay',21,NULL,55555555,'En paro','Analgesicos','Por enfermedad','Hipertension'),

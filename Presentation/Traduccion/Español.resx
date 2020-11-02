@@ -162,6 +162,9 @@ La segunda fecha debe ser mayo a la primera</value>
   <data name="btn_cancelar" xml:space="preserve">
     <value>CANCELAR</value>
   </data>
+  <data name="btn_cargarExcel" xml:space="preserve">
+    <value>CARGAR DESDE EXCEL</value>
+  </data>
   <data name="btn_cerrar" xml:space="preserve">
     <value>CERRAR</value>
   </data>
@@ -337,6 +340,9 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla</value>
   </data>
   <data name="lbUsuario" xml:space="preserve">
     <value>USUARIO</value>
+  </data>
+  <data name="llbCargarExcel" xml:space="preserve">
+    <value>Cargar desde CSV</value>
   </data>
   <data name="llbCrearUsuario" xml:space="preserve">
     <value>CREAR USUARIO</value>

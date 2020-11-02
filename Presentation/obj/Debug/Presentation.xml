@@ -254,6 +254,11 @@ La segunda fecha debe ser mayo a la primera.
   Busca una cadena traducida similar a CANCELAR.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Español.btn_cargarExcel">
+<summary>
+  Busca una cadena traducida similar a CARGAR DESDE EXCEL.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Español.btn_cerrar">
 <summary>
   Busca una cadena traducida similar a CERRAR.
@@ -576,6 +581,11 @@ Si la modifico puede dar click en el siguiente enlace para restablecerla.
   Busca una cadena traducida similar a USUARIO.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Español.llbCargarExcel">
+<summary>
+  Busca una cadena traducida similar a Cargar desde CSV.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Español.llbCrearUsuario">
 <summary>
   Busca una cadena traducida similar a CREAR USUARIO.
@@ -893,6 +903,11 @@ La segunda fecha debe ser mayo a la primera.
   Busca una cadena traducida similar a CANCEL.
 </summary>
 </member>
+<member name="P:Presentation.My.Resources.Ingles.btn_cargarExcel">
+<summary>
+  Busca una cadena traducida similar a UPLOAD FROM CSV.
+</summary>
+</member>
 <member name="P:Presentation.My.Resources.Ingles.btn_cerrar">
 <summary>
   Busca una cadena traducida similar a CLOSE.
@@ -1172,6 +1187,11 @@ If I modify it, you can click on the following link to restore it.
 <member name="P:Presentation.My.Resources.Ingles.lbUsuario">
 <summary>
   Busca una cadena traducida similar a USER.
+</summary>
+</member>
+<member name="P:Presentation.My.Resources.Ingles.llbCargarExcel">
+<summary>
+  Busca una cadena traducida similar a Upload from CSV.
 </summary>
 </member>
 <member name="P:Presentation.My.Resources.Ingles.llbCrearUsuario">

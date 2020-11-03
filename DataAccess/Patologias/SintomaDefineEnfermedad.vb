@@ -35,6 +35,7 @@ Public Class SintomaDefineEnfermedad
             Return False
         End If
     End Function
+
     Dim i As Integer = 0
     Public Function ModifDefine(nombreEnfermedad As String, nombreSintoma As String, nomsSntViejo As Array) As Boolean
         Using connection = GetConnection()

@@ -231,4 +231,5 @@ Public Class FrmMedicoGerente
 		Dim frm As New FrmCargarDesdeExcel
 		frm.Show()
 	End Sub
+
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmEliminarGerente
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmEliminarGerente
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -35,9 +35,9 @@ Partial Class FrmEliminarGerente
         Me.btn_eliminar = New Guna.UI2.WinForms.Guna2Button()
         Me.txtFiltro = New Guna.UI2.WinForms.Guna2TextBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.dgvDatos = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.DgvDatos = New Guna.UI2.WinForms.Guna2DataGridView()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'elimiAclara
@@ -122,7 +122,7 @@ Partial Class FrmEliminarGerente
         Me.btn_eliminar.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn_eliminar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.btn_eliminar.HoverState.Parent = Me.btn_eliminar
-        Me.btn_eliminar.Location = New System.Drawing.Point(615, 523)
+        Me.btn_eliminar.Location = New System.Drawing.Point(610, 551)
         Me.btn_eliminar.Name = "btn_eliminar"
         Me.btn_eliminar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.btn_eliminar.ShadowDecoration.BorderRadius = 20
@@ -173,30 +173,30 @@ Partial Class FrmEliminarGerente
         Me.ErrorProvider1.ContainerControl = Me
         Me.ErrorProvider1.Icon = CType(resources.GetObject("ErrorProvider1.Icon"), System.Drawing.Icon)
         '
-        'dgvDatos
+        'DgvDatos
         '
-        Me.dgvDatos.AllowUserToAddRows = False
-        Me.dgvDatos.AllowUserToDeleteRows = False
-        Me.dgvDatos.AllowUserToResizeColumns = False
-        Me.dgvDatos.AllowUserToResizeRows = False
+        Me.DgvDatos.AllowUserToAddRows = False
+        Me.DgvDatos.AllowUserToDeleteRows = False
+        Me.DgvDatos.AllowUserToResizeColumns = False
+        Me.DgvDatos.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dgvDatos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
-        Me.dgvDatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
-        Me.dgvDatos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.dgvDatos.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvDatos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        Me.DgvDatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
+        Me.DgvDatos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.DgvDatos.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DgvDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvDatos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvDatos.ColumnHeadersHeight = 30
-        Me.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DgvDatos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.DgvDatos.ColumnHeadersHeight = 40
+        Me.DgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -204,42 +204,42 @@ Partial Class FrmEliminarGerente
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvDatos.DefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvDatos.EnableHeadersVisualStyles = False
-        Me.dgvDatos.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvDatos.Location = New System.Drawing.Point(12, 183)
-        Me.dgvDatos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.dgvDatos.MultiSelect = False
-        Me.dgvDatos.Name = "dgvDatos"
-        Me.dgvDatos.ReadOnly = True
-        Me.dgvDatos.RowHeadersVisible = False
-        Me.dgvDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.dgvDatos.RowTemplate.Height = 30
-        Me.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgvDatos.Size = New System.Drawing.Size(783, 323)
-        Me.dgvDatos.TabIndex = 55
-        Me.dgvDatos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
-        Me.dgvDatos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dgvDatos.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.dgvDatos.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.dgvDatos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.dgvDatos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.dgvDatos.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.dgvDatos.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvDatos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.dgvDatos.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvDatos.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvDatos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.dgvDatos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvDatos.ThemeStyle.HeaderStyle.Height = 30
-        Me.dgvDatos.ThemeStyle.ReadOnly = True
-        Me.dgvDatos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dgvDatos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvDatos.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvDatos.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.dgvDatos.ThemeStyle.RowsStyle.Height = 30
-        Me.dgvDatos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
-        Me.dgvDatos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke
+        Me.DgvDatos.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DgvDatos.EnableHeadersVisualStyles = False
+        Me.DgvDatos.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvDatos.Location = New System.Drawing.Point(12, 183)
+        Me.DgvDatos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DgvDatos.MultiSelect = False
+        Me.DgvDatos.Name = "DgvDatos"
+        Me.DgvDatos.ReadOnly = True
+        Me.DgvDatos.RowHeadersVisible = False
+        Me.DgvDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.DgvDatos.RowTemplate.Height = 50
+        Me.DgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvDatos.Size = New System.Drawing.Size(778, 363)
+        Me.DgvDatos.TabIndex = 58
+        Me.DgvDatos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
+        Me.DgvDatos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.DgvDatos.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.DgvDatos.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.DgvDatos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.DgvDatos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.DgvDatos.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.DgvDatos.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvDatos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        Me.DgvDatos.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvDatos.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DgvDatos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.DgvDatos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DgvDatos.ThemeStyle.HeaderStyle.Height = 40
+        Me.DgvDatos.ThemeStyle.ReadOnly = True
+        Me.DgvDatos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.DgvDatos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvDatos.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DgvDatos.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.DgvDatos.ThemeStyle.RowsStyle.Height = 50
+        Me.DgvDatos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
+        Me.DgvDatos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke
         '
         'FrmEliminarGerente
         '
@@ -247,7 +247,7 @@ Partial Class FrmEliminarGerente
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(802, 683)
-        Me.Controls.Add(Me.dgvDatos)
+        Me.Controls.Add(Me.DgvDatos)
         Me.Controls.Add(Me.txtFiltro)
         Me.Controls.Add(Me.btn_eliminar)
         Me.Controls.Add(Me.cbFiltro)
@@ -261,7 +261,7 @@ Partial Class FrmEliminarGerente
         Me.Name = "FrmEliminarGerente"
         Me.Text = "FrmEliminar"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -274,5 +274,5 @@ Partial Class FrmEliminarGerente
     Friend WithEvents btn_eliminar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtFiltro As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents ErrorProvider1 As ErrorProvider
-    Friend WithEvents dgvDatos As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents DgvDatos As Guna.UI2.WinForms.Guna2DataGridView
 End Class

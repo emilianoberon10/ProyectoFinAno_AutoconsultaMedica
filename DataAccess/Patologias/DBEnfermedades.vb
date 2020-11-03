@@ -44,7 +44,7 @@ Public Class DBEnfermedades
         _consultaSQL = "SELECT idEnf ID,e.nombre NOMBRE,r.riesgo RIESGO,descripcion DESCRIPCION FROM enfermedad e
                         JOIN define ON nombre=nomENf
                         JOIN riesgo r ON e.riesgo=idriesgo
-                        Group by nomEnf
+                        Group by idEnf,nomEnf,e.nombre,r.riesgo,descripcion
 						ORDER by idEnf ASC;"
         Return DevolverTabla(_consultaSQL)
     End Function

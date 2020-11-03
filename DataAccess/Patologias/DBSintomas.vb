@@ -71,7 +71,7 @@ Public Class DBSintomas
                 End Using
             End Using
         Catch ex As Exception
-            MsgBox("ERROR(DBSintoma,line45):" & ex.Message)
+            MsgBox("ERROR(DBSintoma,setSintoma):" & ex.Message)
             Return Nothing
         End Try
     End Function

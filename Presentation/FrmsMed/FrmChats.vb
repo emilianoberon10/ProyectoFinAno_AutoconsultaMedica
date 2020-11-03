@@ -54,7 +54,7 @@ Public Class FrmChats
             Try
                 txtChat.Text &= msj & vbNewLine
                 FrmLogIn.medic.EnviarMsj(msj)
-                txtMensaje.Text = ""
+                txtMensaje.Clear()
                 txtMensaje.Focus()
             Catch ex As Exception
                 General.GetForm(Estado.Error, ex.Message)

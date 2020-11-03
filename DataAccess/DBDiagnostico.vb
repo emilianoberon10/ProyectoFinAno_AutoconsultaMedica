@@ -4,7 +4,7 @@ Public Class DBDiagnostico
     Inherits ConexionBD
 
     Public Function Diagnostico(ci As String) As DataTable
-        Dim _consultaSQL As String = "SELECT nomEnf DIAGNOSTICO FROM define e
+        Dim _consultaSQL As String = "SELECT nomEnf AS 'DIAGNOSTICO' FROM define e
                                       JOIN selec s ON s.idSint=e.idSint
                                       WHERE idPac='" & ci & "' and dia=CURDATE() AND
                                       hora BETWEEN CURTIME()-1 AND CURTIME()+1 

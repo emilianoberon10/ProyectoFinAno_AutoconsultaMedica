@@ -29,7 +29,6 @@ C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Rel
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\DataAccess.xml
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\MySql.Data.xml
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.vbprojAssemblyReference.cache
-C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.exe.config
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.frmNotificacion.resources
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.FrmModifDiagnostico.resources
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.FrmOpciones.resources
@@ -66,3 +65,19 @@ C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Rel
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.exe
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.xml
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.pdb
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\SpreadsheetLight.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\netstandard.dll
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\Logic.dll.config
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\SpreadsheetLight.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\DataAccess.dll.config
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\Google.Protobuf.pdb
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\Google.Protobuf.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\K4os.Compression.LZ4.Streams.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\Renci.SshNet.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\System.Memory.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\System.Buffers.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\K4os.Compression.LZ4.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\K4os.Hash.xxHash.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\System.Numerics.Vectors.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.FrmCargarDesdeExcel.resources

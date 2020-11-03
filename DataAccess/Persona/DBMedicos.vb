@@ -52,7 +52,7 @@ Public Class DBMedicos : Inherits ConexionBD
                         reader.Dispose()
 
                         _command.CommandText = "SET @idEspec = (SELECT id FROM especialidad WHERE nombre=@espec);"
-                        _command.CommandText &= "INSERT INTO persona(ci,Tel_cel,Edad,Domicilio,Sexo,pNom,sNom,pApe,sApe) VALUES(@ci,@tel,@edad,@domi,@sexo,@pnom,@snom,@pape,@sape);"
+                        _command.CommandText &= "INSERT INTO persona(ci,tel_cel,edad,domicilio,sexo,pnom,snom,pape,sape) VALUES(@ci,@tel,@edad,@domi,@sexo,@pnom,@snom,@pape,@sape);"
                         _command.CommandText &= "INSERT INTO medico(ciM,numMed,idEspecialidad,lugarTrabajo,contrasena) VALUES(@ci,@num,@idEspec,@lugartrab,@contraseña)"
                         _command.Parameters.AddWithValue("@tel", tel_cel)
                         _command.Parameters.AddWithValue("@edad", edad)
@@ -175,12 +175,12 @@ Public Class DBMedicos : Inherits ConexionBD
     Public Function ObtenerMedicos() As DataTable
         Dim _consultaSQL As String
 
-        _consultaSQL = "SELECT ciM Cedula,pnom PrimerNombre,snom SegundoNombre,pape PrimerApellido,sape SegundoApellido,edad,
-                                lugarTrabajo as 'Lugar de Trabajo',nombre Especialidad,tel_cel as 'Telefono',Domicilio,sexo,Lun Lunes,
-                                Mar Martes, Mie Miercoles, Jue Jueves, Vie Viernes, Sab Sabado,Dom Domingo
+        _consultaSQL = "SELECT ciM Cedula,pnom AS 'Primer Nombre',snom AS 'Segundo Nombre',pape AS 'Primer Apellido',sape AS 'Segundo Apellido',edad,
+                                lugarTrabajo AS 'Lugar de Trabajo',nombre AS 'Especialidad',tel_cel AS 'Telefono',domicilio,sexo,lun Lunes,
+                                mar AS Martes, mie AS Miercoles, jue AS Jueves, vie AS Viernes, sab AS Sabado,dom AS Domingo
                         FROM medico M
                         JOIN especialidad E ON id=idEspecialidad
-                        JOIN persona ON ciM=ci"
+                        JOIN persona ON ciM=ci;"
         Return DevolverTabla(_consultaSQL)
     End Function
 
@@ -191,7 +191,7 @@ Public Class DBMedicos : Inherits ConexionBD
             _connection.Open()
             Using _command = New MySqlCommand()
                 _command.Connection = _connection
-                _command.CommandText = "SELECT * FROM medico WHERE EXISTS (SELECT ciM FROM medico WHERE ciM=@ci)"
+                _command.CommandText = "SELECT * FROM medico WHERE EXISTS (SELECT ciM FROM medico WHERE ciM=@ci);"
                 _command.Parameters.AddWithValue("@ci", ciMedico)
                 _command.CommandType = CommandType.Text
                 Dim reader = _command.ExecuteReader()
@@ -257,7 +257,7 @@ Public Class DBMedicos : Inherits ConexionBD
 #Region "Agenda"
 
     Public Function VerAgenda() As DataTable
-        Dim sql As String = "SELECT concat (pNom,' ',sNom,' ',pApe,' ',sApe) as 'Nombre Completo',nombre Especialidad,
+        Dim sql As String = "SELECT concat (pnom,' ',snom,' ',pape,' ',sape) AS 'Nombre Completo',nombre Especialidadad,
                                     lugarTrabajo 'Clinica',lun,mar,mie,jue,vie,sab,dom FROM persona
                             JOIN medico ON ci=ciM
                             JOIN especialidad ON idEspecialidad=id"
@@ -265,7 +265,7 @@ Public Class DBMedicos : Inherits ConexionBD
     End Function
 
     Public Function VerAgendaFiltradoEsp(espe As String) As DataTable
-        Dim sql As String = "SELECT concat (pNom,' ',sNom,' ',pApe,' ',sApe) as 'Nombre Completo',nombre Especialidad,
+        Dim sql As String = "SELECT concat (pnom,' ',snom,' ',pape,' ',sape) AS 'Nombre Completo',nombre Especialidad,
                                     lugarTrabajo 'Clinica',lun,mar,mie,jue,vie,sab,dom FROM persona
                              JOIN medico ON ci=ciM
                              JOIN especialidad as e ON idEspecialidad=id
@@ -275,7 +275,7 @@ Public Class DBMedicos : Inherits ConexionBD
     End Function
 
     Public Function VerAgendaFiltradoNombre(nom As String) As DataTable
-        Dim sql As String = "SELECT concat (pNom,' ',sNom,' ',pApe,' ',sApe) as 'Nombre Completo',nombre Especialidad,
+        Dim sql As String = "SELECT concat (pnom,' ',snom,' ',pape,' ',sape) AS 'Nombre Completo',nombre Especialidad,
                                     lugarTrabajo 'Clinica',lun,mar,mie,jue,vie,sab,dom FROM persona
                              JOIN medico as m ON ci=ciM
                              JOIN especialidad as e ON idEspecialidad=id
@@ -304,7 +304,7 @@ Public Class DBMedicos : Inherits ConexionBD
     End Function
     Public Function VerChatsAntiguos(ci As String) As DataTable
         Dim consulta As String
-        consulta = "SELECT ci, CONCAT(pNom,' ',pape) as 'Nombre',estado,fecha,idChat FROM persona
+        consulta = "SELECT ci, CONCAT(pnom,' ',pape) as 'Nombre',estado,fecha,idChat FROM persona
                     JOIN chat ON ci=ciPac
                     WHERE chat.idMed=" & ci & "
                     ORDER BY idChat DESC;"

@@ -25,7 +25,6 @@ Partial Class FrmOpciones
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmOpciones))
         Me.optionPanel = New System.Windows.Forms.Panel()
         Me.btn_cerrar = New Guna.UI2.WinForms.Guna2Button()
-        Me.btn_ayuda = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_usuario = New Guna.UI2.WinForms.Guna2Button()
         Me.childPanel = New System.Windows.Forms.Panel()
         Me.lbIconoHechos = New System.Windows.Forms.Label()
@@ -41,7 +40,6 @@ Partial Class FrmOpciones
         '
         Me.optionPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
         Me.optionPanel.Controls.Add(Me.btn_cerrar)
-        Me.optionPanel.Controls.Add(Me.btn_ayuda)
         Me.optionPanel.Controls.Add(Me.btn_usuario)
         Me.optionPanel.Dock = System.Windows.Forms.DockStyle.Left
         Me.optionPanel.Location = New System.Drawing.Point(0, 0)
@@ -74,32 +72,6 @@ Partial Class FrmOpciones
         Me.btn_cerrar.TabIndex = 303
         Me.btn_cerrar.Text = "CERRAR"
         Me.btn_cerrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'btn_ayuda
-        '
-        Me.btn_ayuda.Animated = True
-        Me.btn_ayuda.BorderColor = System.Drawing.Color.Transparent
-        Me.btn_ayuda.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btn_ayuda.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.btn_ayuda.CheckedState.Parent = Me.btn_ayuda
-        Me.btn_ayuda.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btn_ayuda.CustomImages.Parent = Me.btn_ayuda
-        Me.btn_ayuda.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(76, Byte), Integer))
-        Me.btn_ayuda.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_ayuda.ForeColor = System.Drawing.Color.White
-        Me.btn_ayuda.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btn_ayuda.HoverState.Parent = Me.btn_ayuda
-        Me.btn_ayuda.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btn_ayuda.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.btn_ayuda.ImageSize = New System.Drawing.Size(24, 24)
-        Me.btn_ayuda.Location = New System.Drawing.Point(0, 100)
-        Me.btn_ayuda.Name = "btn_ayuda"
-        Me.btn_ayuda.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btn_ayuda.ShadowDecoration.Parent = Me.btn_ayuda
-        Me.btn_ayuda.Size = New System.Drawing.Size(150, 30)
-        Me.btn_ayuda.TabIndex = 303
-        Me.btn_ayuda.Text = "AYUDA"
-        Me.btn_ayuda.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'btn_usuario
         '
@@ -203,7 +175,6 @@ Partial Class FrmOpciones
     Friend WithEvents optionPanel As Panel
     Friend WithEvents childPanel As Panel
     Friend WithEvents btn_cerrar As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btn_ayuda As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btn_usuario As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lbIconoHechos As Label
     Friend WithEvents lbLinkIconos As Label

@@ -133,7 +133,6 @@ Module MetodosCompartidos
             imagen64 = img.Obtener
 
             If imagen64 = "No se encontro imagen" Then
-                General.GetForm(Estado.Error, "No se encotro una imagen cargada")
                 Return My.Resources.profileEmpty
             Else
                 'transformo de base 64 a byteArray

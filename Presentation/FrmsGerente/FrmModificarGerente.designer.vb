@@ -150,7 +150,7 @@ Partial Class FrmModificarGerente
         Me.PanelModSintoma.Controls.Add(Me.txtNombreSintoma)
         Me.PanelModSintoma.Controls.Add(Me.lbNomSint)
         Me.PanelModSintoma.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PanelModSintoma.Location = New System.Drawing.Point(30, 289)
+        Me.PanelModSintoma.Location = New System.Drawing.Point(30, 297)
         Me.PanelModSintoma.Name = "PanelModSintoma"
         Me.PanelModSintoma.Size = New System.Drawing.Size(737, 77)
         Me.PanelModSintoma.TabIndex = 10
@@ -255,7 +255,7 @@ Partial Class FrmModificarGerente
         Me.PanelModEnfermedad.Controls.Add(Me.lbRiesgo)
         Me.PanelModEnfermedad.Controls.Add(Me.lbNomEnf)
         Me.PanelModEnfermedad.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PanelModEnfermedad.Location = New System.Drawing.Point(26, 287)
+        Me.PanelModEnfermedad.Location = New System.Drawing.Point(25, 294)
         Me.PanelModEnfermedad.Name = "PanelModEnfermedad"
         Me.PanelModEnfermedad.Size = New System.Drawing.Size(748, 384)
         Me.PanelModEnfermedad.TabIndex = 11
@@ -729,7 +729,7 @@ Partial Class FrmModificarGerente
         Me.filtro.AutoSize = True
         Me.filtro.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.filtro.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.filtro.Location = New System.Drawing.Point(12, 210)
+        Me.filtro.Location = New System.Drawing.Point(26, 231)
         Me.filtro.Name = "filtro"
         Me.filtro.Size = New System.Drawing.Size(46, 21)
         Me.filtro.TabIndex = 4
@@ -754,7 +754,7 @@ Partial Class FrmModificarGerente
         Me.cbFiltro.ItemHeight = 30
         Me.cbFiltro.Items.AddRange(New Object() {"Medicos", "Enfermedades", "Sintomas"})
         Me.cbFiltro.ItemsAppearance.Parent = Me.cbFiltro
-        Me.cbFiltro.Location = New System.Drawing.Point(12, 230)
+        Me.cbFiltro.Location = New System.Drawing.Point(26, 255)
         Me.cbFiltro.Name = "cbFiltro"
         Me.cbFiltro.ShadowDecoration.Parent = Me.cbFiltro
         Me.cbFiltro.Size = New System.Drawing.Size(213, 36)
@@ -775,7 +775,7 @@ Partial Class FrmModificarGerente
         Me.btn_modificar.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn_modificar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.btn_modificar.HoverState.Parent = Me.btn_modificar
-        Me.btn_modificar.Location = New System.Drawing.Point(614, 230)
+        Me.btn_modificar.Location = New System.Drawing.Point(593, 253)
         Me.btn_modificar.Name = "btn_modificar"
         Me.btn_modificar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.btn_modificar.ShadowDecoration.BorderRadius = 20
@@ -814,7 +814,7 @@ Partial Class FrmModificarGerente
         Me.PanelModifMedico.Controls.Add(Me.txtPNom)
         Me.PanelModifMedico.Controls.Add(Me.txtCedula)
         Me.PanelModifMedico.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PanelModifMedico.Location = New System.Drawing.Point(26, 292)
+        Me.PanelModifMedico.Location = New System.Drawing.Point(26, 295)
         Me.PanelModifMedico.Name = "PanelModifMedico"
         Me.PanelModifMedico.Size = New System.Drawing.Size(751, 371)
         Me.PanelModifMedico.TabIndex = 51
@@ -1576,14 +1576,14 @@ Partial Class FrmModificarGerente
         Me.DgvDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DgvDatos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DgvDatos.ColumnHeadersHeight = 30
+        Me.DgvDatos.ColumnHeadersHeight = 40
         Me.DgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
@@ -1595,17 +1595,17 @@ Partial Class FrmModificarGerente
         Me.DgvDatos.DefaultCellStyle = DataGridViewCellStyle3
         Me.DgvDatos.EnableHeadersVisualStyles = False
         Me.DgvDatos.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvDatos.Location = New System.Drawing.Point(8, 65)
+        Me.DgvDatos.Location = New System.Drawing.Point(12, 65)
         Me.DgvDatos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DgvDatos.MultiSelect = False
         Me.DgvDatos.Name = "DgvDatos"
         Me.DgvDatos.ReadOnly = True
         Me.DgvDatos.RowHeadersVisible = False
         Me.DgvDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.DgvDatos.RowTemplate.Height = 30
-        Me.DgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.DgvDatos.Size = New System.Drawing.Size(786, 143)
-        Me.DgvDatos.TabIndex = 56
+        Me.DgvDatos.RowTemplate.Height = 50
+        Me.DgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvDatos.Size = New System.Drawing.Size(778, 164)
+        Me.DgvDatos.TabIndex = 57
         Me.DgvDatos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
         Me.DgvDatos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.WhiteSmoke
         Me.DgvDatos.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -1614,18 +1614,18 @@ Partial Class FrmModificarGerente
         Me.DgvDatos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
         Me.DgvDatos.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.DgvDatos.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvDatos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.DgvDatos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.DgvDatos.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DgvDatos.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DgvDatos.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DgvDatos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.DgvDatos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DgvDatos.ThemeStyle.HeaderStyle.Height = 30
+        Me.DgvDatos.ThemeStyle.HeaderStyle.Height = 40
         Me.DgvDatos.ThemeStyle.ReadOnly = True
         Me.DgvDatos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.WhiteSmoke
         Me.DgvDatos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvDatos.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DgvDatos.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.DgvDatos.ThemeStyle.RowsStyle.Height = 30
+        Me.DgvDatos.ThemeStyle.RowsStyle.Height = 50
         Me.DgvDatos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.DgvDatos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke
         '

@@ -8,11 +8,6 @@
         Me.Close()
     End Sub
 
-    Private Sub btn_ayuda_Click(sender As Object, e As EventArgs) Handles btn_ayuda.Click
-        OpenChildForm(New FrmOpcionesAyuda, childPanel)
-
-    End Sub
-
     Private Sub btn_usuario_Click(sender As Object, e As EventArgs) Handles btn_usuario.Click
         OpenChildForm(New FrmOpcionesUsuario, childPanel)
 

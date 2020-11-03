@@ -25,6 +25,7 @@ Public Class FrmEliminarGerente
                         dgvDatos.DataSource = CargarDataGrid(cbFiltro.Text)
                 End Select
             End If
+            txtFiltro.Enabled = True
         Catch ex As Exception
             ErrorProvider1.SetError(lbEliminar, ex.Message)
             General.GetForm(Estado.Error, ex.Message)
@@ -42,24 +43,25 @@ Public Class FrmEliminarGerente
         End Select
     End Sub
 
-    Private Sub dgvDatos_CellClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDatos.CellDoubleClick
+    Private Sub dgvDatos_CellClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DgvDatos.CellDoubleClick
         Try
             Dim columna As Integer
             columna = e.ColumnIndex
             'Obtén el número de la fila que se seleccionó en el Datagridview
             Dim FilaActual As Integer
-            FilaActual = dgvDatos.CurrentRow.Index
+            FilaActual = DgvDatos.CurrentRow.Index
             Select Case cbFiltro.Text
                 Case "Sintomas"
-                    txtFiltro.Text = dgvDatos.Rows(FilaActual).Cells(1).Value
+                    txtFiltro.Text = DgvDatos.Rows(FilaActual).Cells(1).Value
                 Case "Enfermedades"
-                    txtFiltro.Text = dgvDatos.Rows(FilaActual).Cells(1).Value
+                    txtFiltro.Text = DgvDatos.Rows(FilaActual).Cells(1).Value
                 Case "Medicos"
-                    txtFiltro.Text = dgvDatos.Rows(FilaActual).Cells(0).Value
+                    txtFiltro.Text = DgvDatos.Rows(FilaActual).Cells(0).Value
             End Select
-
+            txtFiltro.Enabled = False
         Catch ex As Exception
             MsgBox("ERROR::" & ex.Message)
         End Try
     End Sub
+
 End Class

@@ -32,7 +32,6 @@ C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Rel
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.frmNotificacion.resources
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.FrmModifDiagnostico.resources
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.FrmOpciones.resources
-C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.FrmOpcionesAyuda.resources
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.FrmOpcionesUsuario.resources
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.FrmDatosUso.resources
 C:\Users\GaaraXz\source\repos\ProyectoAutoConsultaMedicaVVB\Presentation\obj\Release\Presentation.FrmAgendaMedica.resources

@@ -340,3 +340,51 @@ UNION
 END$$
 DELIMITER ;
 -- FIN DASHBOARD -------------------------------------------------------------------------------------------------------------------------------------
+CREATE VIEW `ver_Pacientes`
+AS SELECT 
+    CONCAT(pnom, ' ', snom, ' ', pape, ' ', sape) AS 'Nombre Completo del paciente',
+    edad AS 'Edad',
+    sexo AS 'Sexo',
+    COUNT(idDIag) AS 'Cantidad de consultas realizadas'
+FROM
+    persona p
+        JOIN
+    paciente ON ciP = ci
+        JOIN
+    diagnostico ON ciP = idP
+GROUP BY 'Nombre Completo del paciente' , 'Cantidad de consultas realizadas' , edad , sexo;
+
+CREATE VIEW `datosConsultas` AS
+    SELECT 
+        CONCAT(pnom, ' ', snom, ' ', pape, ' ', sape) AS 'Nombre Completo',
+        nomE AS 'Diagnostico',
+        fecha AS 'Fecha del Diagnostico'
+    FROM
+        persona
+            JOIN
+        paciente ON ci = ciP
+            JOIN
+        diagnostico ON ciP = idP
+    WHERE
+        fecha BETWEEN DATE_SUB(CURDATE(), INTERVAL 7 DAY) AND CURDATE()
+            AND sexo = 'hombre';
+
+CREATE VIEW `veces_diag_Sintoma` AS
+    SELECT 
+        s.nombre AS 'Sintoma',
+        COUNT(idSint) 'Cantidad veces seleccionado'
+    FROM
+        sintoma s
+            JOIN
+        selec ON s.id = idSint
+    GROUP BY s.nombre , 'Cantidad veces seleccionado';
+
+CREATE VIEW `veces_diag_enfermedad` AS
+SELECT 
+    e.nombre AS 'Enfermedad',
+    COUNT(nomE) 'Cantidad veces seleccionado'
+FROM
+    enfermedad e
+        JOIN
+    diagnostico ON e.nombre = nomE
+    GROUP BY e.nombre,'Cantidad veces seleccionado';

@@ -21,7 +21,7 @@ Public Class FrmChats
         Traductor.traducirForm(Me)
         Traductor.traducirPanel(TopPanel)
 
-        'cagar elementos
+        'cargar elementos
         txtDiagnostico.Text = _diag
         dgvChats.DataSource = FrmLogIn.medic.VerChatsAntiguos()
         cargarChats()
@@ -45,6 +45,7 @@ Public Class FrmChats
             e.Handled = True
             'aqui genero el evento click
             btn_enviar.PerformClick()
+            txtMensaje.Focus()
         End If
     End Sub
 
@@ -66,6 +67,15 @@ Public Class FrmChats
         Dim mensaje As String = ""
         mensaje = FrmLogIn.medic.ComprobarMsj()
         If mensaje IsNot "" Then txtChat.Text &= mensaje & vbNewLine
+
+        If FrmLogIn.medic.ComprobarChatFinalizado() = False Then
+            btn_enviar.Enabled = False
+            Timer1.Stop()
+            txtMensaje.Enabled = False
+            dgvChats.DataSource = FrmLogIn.medic.VerChatsAntiguos()
+            cargarChats()
+            MsgBox("El paciente ha abandonado el chat.")
+        End If
     End Sub
 
 #End Region

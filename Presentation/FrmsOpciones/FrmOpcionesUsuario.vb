@@ -29,7 +29,7 @@
 
         If (txtEdad.Text IsNot "" And txtPnom.Text IsNot "" And txtPape.Text IsNot "" And txtSape.Text IsNot "") Then
             If Integer.Parse(txtEdad.Text) <= 120 AndAlso Integer.Parse(txtEdad.Text) >= 10 Then
-                If Integer.Parse(txtTel.Text) > 7 And Integer.Parse(txtTel.Text) <= 9 Then
+                If Integer.Parse(txtTel.Text) <= 9 OrElse Integer.Parse(txtTel.Text) >= 8 Then
 
                     Select Case FrmLogIn.tipoLogin
 
@@ -42,6 +42,7 @@
                                     ._sApe = txtSape.Text
                                     ._edad = Integer.Parse(txtEdad.Text)
                                     ._tel_cel = Integer.Parse(txtTel.Text)
+                                    ._domicilio = txtDir.Text
                                     result = .ModificarP()
                                 End With
                             Catch ex As Exception

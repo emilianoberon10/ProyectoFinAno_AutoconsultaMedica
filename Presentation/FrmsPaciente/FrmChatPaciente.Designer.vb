@@ -94,7 +94,7 @@ Partial Class FrmChatPaciente
         Me.lbTitulo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.lbTitulo.Location = New System.Drawing.Point(38, 2)
         Me.lbTitulo.Name = "lbTitulo"
-        Me.lbTitulo.Size = New System.Drawing.Size(344, 25)
+        Me.lbTitulo.Size = New System.Drawing.Size(347, 25)
         Me.lbTitulo.TabIndex = 8
         Me.lbTitulo.Text = "SISTEMA DE AUTOCONSULTA MEDICA"
         '

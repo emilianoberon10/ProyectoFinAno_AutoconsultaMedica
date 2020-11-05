@@ -23,6 +23,7 @@ Imports Logic
             ._especialidad = "Medico General"
             ._lugarTrabajo = "Medica Uruguaya"
             ._numMed = "956"
+            .EncriptarContraseña()
         End With
         actual = medico.Guardar
         Assert.AreEqual(actual, esperado)

@@ -4,10 +4,10 @@ Public MustInherit Class ConexionBD
 
     'declaro MustInherits para que no se pueda crear una instancia(objeto) de esta clase
     'cadena de conexion a la bd
-    Private connString As String = "server=localhost;
+    Private connString As String = "server=192.168.5.50;
                                     database=mateo_vargas;
-                                    Uid=root;
-                                    Pwd =;
+                                    Uid=mateo.vargas;
+                                    Pwd=53393343;
                                     port=3306;
                                     AllowUserVariables=True;"
 

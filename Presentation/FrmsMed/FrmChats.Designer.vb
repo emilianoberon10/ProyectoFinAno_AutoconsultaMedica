@@ -55,7 +55,7 @@ Partial Class FrmChats
         Me.MChat_diag.AutoSize = True
         Me.MChat_diag.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MChat_diag.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.MChat_diag.Location = New System.Drawing.Point(5, 692)
+        Me.MChat_diag.Location = New System.Drawing.Point(5, 593)
         Me.MChat_diag.Name = "MChat_diag"
         Me.MChat_diag.Size = New System.Drawing.Size(92, 21)
         Me.MChat_diag.TabIndex = 8
@@ -65,7 +65,7 @@ Partial Class FrmChats
         '
         Me.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtMensaje.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMensaje.Location = New System.Drawing.Point(5, 657)
+        Me.txtMensaje.Location = New System.Drawing.Point(5, 558)
         Me.txtMensaje.MaxLength = 255
         Me.txtMensaje.Multiline = True
         Me.txtMensaje.Name = "txtMensaje"
@@ -82,7 +82,7 @@ Partial Class FrmChats
         Me.txtChat.Multiline = True
         Me.txtChat.Name = "txtChat"
         Me.txtChat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtChat.Size = New System.Drawing.Size(517, 576)
+        Me.txtChat.Size = New System.Drawing.Size(517, 475)
         Me.txtChat.TabIndex = 10
         '
         'Timer1
@@ -131,7 +131,7 @@ Partial Class FrmChats
         Me.app_titulo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.app_titulo.Location = New System.Drawing.Point(38, 2)
         Me.app_titulo.Name = "app_titulo"
-        Me.app_titulo.Size = New System.Drawing.Size(344, 25)
+        Me.app_titulo.Size = New System.Drawing.Size(347, 25)
         Me.app_titulo.TabIndex = 8
         Me.app_titulo.Text = "SISTEMA DE AUTOCONSULTA MEDICA"
         '
@@ -166,7 +166,7 @@ Partial Class FrmChats
         Me.btn_enviar.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn_enviar.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.btn_enviar.HoverState.Parent = Me.btn_enviar
-        Me.btn_enviar.Location = New System.Drawing.Point(409, 655)
+        Me.btn_enviar.Location = New System.Drawing.Point(409, 556)
         Me.btn_enviar.Name = "btn_enviar"
         Me.btn_enviar.PressedColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.btn_enviar.ShadowDecoration.BorderRadius = 20
@@ -192,7 +192,7 @@ Partial Class FrmChats
         Me.btn_modificar.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_modificar.ForeColor = System.Drawing.Color.White
         Me.btn_modificar.HoverState.Parent = Me.btn_modificar
-        Me.btn_modificar.Location = New System.Drawing.Point(189, 718)
+        Me.btn_modificar.Location = New System.Drawing.Point(189, 619)
         Me.btn_modificar.Name = "btn_modificar"
         Me.btn_modificar.ShadowDecoration.Parent = Me.btn_modificar
         Me.btn_modificar.Size = New System.Drawing.Size(120, 30)
@@ -211,7 +211,7 @@ Partial Class FrmChats
         Me.btn_fichaMed.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_fichaMed.ForeColor = System.Drawing.Color.White
         Me.btn_fichaMed.HoverState.Parent = Me.btn_fichaMed
-        Me.btn_fichaMed.Location = New System.Drawing.Point(357, 718)
+        Me.btn_fichaMed.Location = New System.Drawing.Point(357, 619)
         Me.btn_fichaMed.Name = "btn_fichaMed"
         Me.btn_fichaMed.ShadowDecoration.Parent = Me.btn_fichaMed
         Me.btn_fichaMed.Size = New System.Drawing.Size(165, 30)
@@ -221,7 +221,7 @@ Partial Class FrmChats
         'txtCi
         '
         Me.txtCi.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCi.Location = New System.Drawing.Point(315, 730)
+        Me.txtCi.Location = New System.Drawing.Point(315, 631)
         Me.txtCi.MaxLength = 30
         Me.txtCi.Name = "txtCi"
         Me.txtCi.Size = New System.Drawing.Size(11, 29)
@@ -292,7 +292,7 @@ Partial Class FrmChats
         Me.flpMain.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.flpMain.Location = New System.Drawing.Point(528, 29)
         Me.flpMain.Name = "flpMain"
-        Me.flpMain.Size = New System.Drawing.Size(268, 730)
+        Me.flpMain.Size = New System.Drawing.Size(268, 631)
         Me.flpMain.TabIndex = 17
         Me.flpMain.WrapContents = False
         '
@@ -311,7 +311,7 @@ Partial Class FrmChats
         Me.txtDiagnostico.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtDiagnostico.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtDiagnostico.HoverState.Parent = Me.txtDiagnostico
-        Me.txtDiagnostico.Location = New System.Drawing.Point(5, 717)
+        Me.txtDiagnostico.Location = New System.Drawing.Point(5, 618)
         Me.txtDiagnostico.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDiagnostico.Name = "txtDiagnostico"
         Me.txtDiagnostico.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -326,7 +326,7 @@ Partial Class FrmChats
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(801, 764)
+        Me.ClientSize = New System.Drawing.Size(801, 656)
         Me.Controls.Add(Me.txtDiagnostico)
         Me.Controls.Add(Me.flpMain)
         Me.Controls.Add(Me.dgvChats)

@@ -28,6 +28,7 @@ Public Class FrmChatPaciente
             e.Handled = True
             'aqui genero el evento click
             btnEnviarMensaje.PerformClick()
+            txtMensaje.Focus()
         End If
     End Sub
 
@@ -49,8 +50,13 @@ Public Class FrmChatPaciente
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Dim mensaje As String = FrmLogIn.paci.ComprobarMsj()
         If mensaje IsNot "" Then txtChat.Text &= mensaje & vbNewLine
+        If FrmLogIn.paci.ComprobarChatFinalizado() = False Then
+            btnEnviarMensaje.Enabled = False
+            Timer1.Stop()
+            txtMensaje.Enabled = False
+            MsgBox("El medico ha abandonado el chat." & vbNewLine & "Gracias por usar el sistema")
+        End If
     End Sub
-
 #Region "poder mover el form"
 
     'DLLImport,Significa que el método declarado a
@@ -74,6 +80,7 @@ Public Class FrmChatPaciente
     Private Sub btnEnviarMensaje_KeyDown(sender As Object, e As KeyEventArgs) Handles txtMensaje.KeyDown, btnEnviarMensaje.KeyDown, btnCerrar.KeyDown
         DesecharAltF4(e)
     End Sub
+
 
 #End Region 'region de mover form
 

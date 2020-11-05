@@ -16,6 +16,27 @@ Public Class DBChat : Inherits ConexionBD
     Public Function DevolverChat(idchat) As DataTable
         Return DevolverTabla("SELECT txt FROM mensaje WHERE mensaje.idChat=" & idchat & ";")
     End Function
+    Public Function ComrpobarChatFinalizado(ci) As Boolean
+        Using _connection = GetConnection()
+            _connection.Open()
+            Using _command = New MySqlCommand
+                _command.Connection = _connection
+
+                _command.CommandText = "SELECT estado FROM chat WHERE ciPac=@ci OR idMed=@ci ORDER BY idChat DESC LIMIT 1;"
+                _command.Parameters.AddWithValue("@ci", ci)
+                _command.CommandType = CommandType.Text
+                Dim reader = _command.ExecuteReader
+                While (reader.Read())
+                    If reader.GetString(0) = "Proceso" Then
+                        Return True
+                    Else
+                        Return False
+                    End If
+                End While
+            End Using
+        End Using
+    End Function
+
     Public Function DevolverDiag(idchat) As String
         Dim nombre As String = ""
         Using _connection = GetConnection()

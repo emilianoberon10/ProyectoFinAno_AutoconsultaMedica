@@ -72,6 +72,7 @@ Imports Logic
         With paciente
             ._ci = "22222222"
             ._contraseña = "micontraseña"
+            .EncriptarContraseña()
         End With
 
         actual = paciente.ModificarContraseña

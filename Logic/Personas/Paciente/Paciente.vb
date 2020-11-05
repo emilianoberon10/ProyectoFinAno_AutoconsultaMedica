@@ -158,6 +158,7 @@ Public Class Paciente : Inherits Persona
 
         Me._contraseña = stringBuilder.ToString()
     End Sub
+
     Public Overrides Function ComprobarContraseña() As Boolean
         Dim res As Boolean
         Try
@@ -318,6 +319,16 @@ Public Class Paciente : Inherits Persona
     Public Overridable Function GetFicha() As DataTable
     End Function
 
+    Public Function ComprobarChatFinalizado() As Boolean
+        Dim res As Boolean = True
+        Dim ch As New DBChat
+        Try
+            res = ch.ComrpobarChatFinalizado(Me._ci)
+        Catch ex As Exception
+            Throw New SystemException("EstadoChat: " + ex.Message)
+        End Try
+        Return res
+    End Function
 
 
 #End Region

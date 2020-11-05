@@ -64,7 +64,7 @@ Public Class DBPaciente
 
                 If reader.HasRows Then
                     reader.Dispose()
-                    _command.CommandText = "DELETE FROM fichamedica WHERE cedP=@ci;"
+                    _command.CommandText = "DELETE FROM fichaMedica WHERE cedP=@ci;"
                     _command.ExecuteNonQuery()
                     _command.CommandText = "DELETE FROM diagnostico WHERE idP=@ci;"
                     _command.ExecuteNonQuery()

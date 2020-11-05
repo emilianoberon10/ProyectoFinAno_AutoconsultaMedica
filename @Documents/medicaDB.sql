@@ -8,7 +8,7 @@ CREATE TABLE persona (
     ci CHAR(8) NOT NULL PRIMARY KEY,
     tel_cel VARCHAR(9) NOT NULL,
     edad INT(3) NOT NULL,
-    domicilio TEXT,
+    domicilio TEXT NOT NULL,
     sexo VARCHAR(10) NOT NULL,
     pnom VARCHAR(30) NOT NULL,
     snom VARCHAR(30),

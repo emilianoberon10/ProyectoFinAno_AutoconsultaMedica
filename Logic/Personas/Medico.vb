@@ -335,7 +335,7 @@ Public Class Medico
         Try
             res = cons.ObtenerNombre(Me._numMed)
         Catch ex As Exception
-            Throw New SystemException("GetNombre: " + ex.Message)
+            Throw New SystemException("ObtenerNombre: " + ex.Message)
         End Try
         Return res
     End Function
@@ -344,10 +344,21 @@ Public Class Medico
         Try
             res = cons.ComprobarContraseña(Me._contraseña)
         Catch ex As Exception
-            Throw New SystemException("GetNombre: " + ex.Message)
+            Throw New SystemException("ComprobarContraseña: " + ex.Message)
         End Try
         Return Res
     End Function
+    Public Function ComprobarChatFinalizado() As Boolean
+        Dim res As Boolean = True
+        Dim ch As New DBChat
+        Try
+            res = ch.ComrpobarChatFinalizado(Me._ci)
+        Catch ex As Exception
+            Throw New SystemException("estadoChat: " + ex.Message)
+        End Try
+        Return res
+    End Function
+
 #End Region
 
 End Class
